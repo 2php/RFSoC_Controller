@@ -1,0 +1,105 @@
+#include "rfsoc_driver.h"
+
+u8 gpio_1_last_write;
+u16 gpio_2_last_write;
+
+#define samples_per_word 16
+#define num_words 10
+
+void rfsoc_init()
+{
+	gpio_1_last_write = 0;
+	XIOModule_Initialize(&gpo, XPAR_IOMODULE_0_DEVICE_ID);
+	XIOModule_Start(&gpo);
+}
+
+void write_wave(u16* wave_array, u32 wave_length)
+{
+	u16 sample_count = 0;
+	for(int i = 0; i < wave_length; i++)
+	{
+		write_sample(wave_array[i]);
+		//If we need to shift in that 256 bit word
+		if(sample_count == samples_per_word - 1)
+		{
+			cycle_wave_pclk();
+			sample_count = 0;
+		}
+		else{
+			sample_count++;
+		}
+
+	}
+}
+
+void cycle_wave_pclk(){}
+
+void cycle_wave_sclk(){}
+
+void cycle_delay_sclk(){}
+
+void write_sample(u8 b)
+{
+	for(int i = 0; i < 8; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (b & (1 << i)) == 0 ? 0 : 1;
+
+
+		//cycle wave_sclk
+		cycle_wave_sclk();
+	}
+}
+
+void write_delay(u32 value)
+{
+	for(int i = 0; i < 64; i++){
+		//Set the output to the correct bit
+		u8 current_bit = (value & (1 << i)) == 0 ? 0 : 1;
+
+		//cycle delay_sclk
+		cycle_delay_sclk();
+	}
+}
+
+void gpio_1_write_pin(u8 number, u8 value)
+{
+	u8 gpio_next_write;
+	if(value == 1){
+		gpio_next_write = gpio_1_last_write | (1 << number);
+	}
+	else{
+		gpio_next_write = gpio_1_last_write & (~(1 << number));
+	}
+	XIOModule_DiscreteWrite(&gpo, 1, gpio_next_write);
+
+	//Save the state
+	gpio_1_last_write = gpio_next_write;
+}
+
+void gpio_1_block_write(u8 value)
+{
+	gpio_1_last_write = value;
+	XIOModule_DiscreteWrite(&gpo, 1, value);
+}
+
+void gpio_2_write_pin(u8 number, u8 value)
+{
+	u8 gpio_next_write;
+	if(value == 1){
+		gpio_next_write = gpio_2_last_write | (1 << number);
+	}
+	else{
+		gpio_next_write = gpio_2_last_write & (~(1 << number));
+	}
+	XIOModule_DiscreteWrite(&gpo, 2, gpio_next_write);
+
+	//Save the state
+	gpio_2_last_write = gpio_next_write;
+}
+
+void gpio_2_block_write(u16 value)
+{
+	gpio_2_last_write = value;
+	XIOModule_DiscreteWrite(&gpo, 2, value);
+}

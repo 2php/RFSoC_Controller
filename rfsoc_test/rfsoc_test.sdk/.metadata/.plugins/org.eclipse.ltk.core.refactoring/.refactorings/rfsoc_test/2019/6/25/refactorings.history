@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;rfsoc_test/src/rfsoc_driver/rfsoc_driver&apos; to &apos;rfsoc_driver.c&apos;" description="Rename resource &apos;rfsoc_driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/rfsoc_driver/rfsoc_driver" name="rfsoc_driver.c" stamp="1561138038334" updateReferences="true"/>
+</session>

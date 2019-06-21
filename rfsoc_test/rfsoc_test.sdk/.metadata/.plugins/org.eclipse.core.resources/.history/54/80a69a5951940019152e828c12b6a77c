@@ -1,0 +1,49 @@
+/*
+ * rfsoc_driver.h
+ *
+ *  Created on: Jun 21, 2019
+ *      Author: Marandi Group B241
+ */
+
+#ifndef SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_
+#define SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_
+
+#include "xiomodule.h"
+#include "../platform.h"
+#include "xparameters.h"
+#include "xbasic_types.h"
+#include <sleep.h>
+
+//variables
+XIOModule gpo;
+
+//definitions
+
+//pins
+#define wave_pclk_pin 0
+#define wave_sclk_pin 1
+#define delay_sclk_pin 2
+#define idle_sclk_pin 3
+#define arm_pin 4
+#define fire_pin 5
+
+//other
+#define clocl_delay 1 //in us
+
+
+//functions
+void rfsoc_init();
+void write_wave(u16* wave_array, u32 wave_length);
+void cycle_wave_pclk();
+void cycle_wave_sclk();
+void cycle_delay_sclk();
+void write_sample(u8 b);
+void write_delay(u32 value);
+void gpio_1_write_pin(u8 number, u8 value);
+void gpio_1_block_write(u8 value);
+void gpio_2_write_pin(u8 number, u8 value);
+void gpio_2_block_write(u16 value);
+
+
+
+#endif /* SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_ */

@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"microblaze_test_top": {
-			"proto_instances": {
-			}
-		}
-	}
-}

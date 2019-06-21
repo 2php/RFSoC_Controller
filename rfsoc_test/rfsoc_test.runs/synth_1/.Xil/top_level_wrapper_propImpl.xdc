@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/constrs_1/new/elab_design.xdc rfile:../../../rfsoc_test.srcs/constrs_1/new/elab_design.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AP22 [get_ports diff_clock_rtl_clk_p]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AM22 [get_ports reset_rtl]

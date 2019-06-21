@@ -1,0 +1,25 @@
+/*
+ * rfsoc_driver.h
+ *
+ *  Created on: Jun 21, 2019
+ *      Author: Marandi Group B241
+ */
+
+#ifndef SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_
+#define SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_
+
+#include "xiomodule.h"
+#include "../platform.h"
+#include "xparameters.h"
+#include "xbasic_types.h"
+
+//variables
+XIOModule gpo;
+
+
+//functions
+void gpio_1_block_write(u8 value);
+
+
+
+#endif /* SRC_RFSOC_DRIVER_RFSOC_DRIVER_H_ */
