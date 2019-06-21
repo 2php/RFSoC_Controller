@@ -1,0 +1,38 @@
+10:43:24 **** Auto Build of configuration Debug for project uart_test_bsp_xiomodule_low_level_example_1 ****
+make all 
+'Building file: ../src/xiomodule_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiomodule_low_level_example.o" -I../../uart_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiomodule_low_level_example.d" -MT"src/xiomodule_low_level_example.o" -o "src/xiomodule_low_level_example.o" "../src/xiomodule_low_level_example.c"
+../src/xiomodule_low_level_example.c:94:17: error: unknown type name 'Xunit32'
+ volatile static Xunit32 InterruptsProcessed = 0;
+                 ^~~~~~~
+../src/xiomodule_low_level_example.c: In function 'IOModuleLowLevelExample':
+../src/xiomodule_low_level_example.c:151:52: error: 'IOMODULE_DEVICE_INTR_ID' undeclared (first use in this function); did you mean 'IOMODULE_DEVICE_ID'?
+     XIOModule_RegisterHandler(IOModuleBaseAddress, IOMODULE_DEVICE_INTR_ID,
+                                                    ^~~~~~~~~~~~~~~~~~~~~~~
+                                                    IOMODULE_DEVICE_ID
+../src/xiomodule_low_level_example.c:151:52: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/xiomodule_low_level_example.c:58:
+../src/xiomodule_low_level_example.c:157:47: error: 'IOMODULE_DEVICE_INT_MASK' undeclared (first use in this function); did you mean 'IOMODULE_DEVICE_ID'?
+     XIOModule_EnableIntr(IOModuleBaseAddress, IOMODULE_DEVICE_INT_MASK);
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~
+../../uart_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule_l.h:246:51: note: in definition of macro 'XIOModule_EnableIntr'
+  XIomodule_Out32((BaseAddress) + XIN_IER_OFFSET, (EnableMask))
+                                                   ^~~~~~~~~~
+../src/xiomodule_low_level_example.c:169:5: warning: implicit declaration of function 'XIOModule_Out32'; did you mean 'XIomodule_Out32'? [-Wimplicit-function-declaration]
+     XIOModule_Out32(IOModuleBaseAddress + XIN_ISR_OFFSET,
+     ^~~~~~~~~~~~~~~
+     XIomodule_Out32
+../src/xiomodule_low_level_example.c:183:13: error: 'InterruptProcessed' undeclared (first use in this function); did you mean 'InterruptsProcessed'?
+         if (InterruptProcessed > 0)
+             ^~~~~~~~~~~~~~~~~~
+             InterruptsProcessed
+../src/xiomodule_low_level_example.c: In function 'DeviceDriverHandler':
+../src/xiomodule_low_level_example.c:245:5: error: 'InterruptProcessed' undeclared (first use in this function); did you mean 'InterruptsProcessed'?
+     InterruptProcessed++;
+     ^~~~~~~~~~~~~~~~~~
+     InterruptsProcessed
+make: *** [src/subdir.mk:23: src/xiomodule_low_level_example.o] Error 1
+
+10:43:24 Build Finished (took 423ms)
+

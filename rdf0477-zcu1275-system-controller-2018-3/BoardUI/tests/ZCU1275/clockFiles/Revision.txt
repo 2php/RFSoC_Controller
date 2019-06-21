@@ -1,0 +1,9 @@
+BoardUI_PLL files 
+[20180717]: 
+Power level calibrated for PLL B&C. 
+
+[20180530]:
+CHDIV_DIST_PD on if CHDIV is not used. 
+
+[20180516]: 
+Original from SD_20180112, added frequency value in the file name. 

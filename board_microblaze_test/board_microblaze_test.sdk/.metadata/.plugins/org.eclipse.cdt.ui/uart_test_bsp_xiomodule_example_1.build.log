@@ -1,0 +1,32 @@
+10:43:22 **** Build of configuration Debug for project uart_test_bsp_xiomodule_example_1 ****
+make all 
+'Building file: ../src/xiomodule_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiomodule_example.o" -I../../uart_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiomodule_example.d" -MT"src/xiomodule_example.o" -o "src/xiomodule_example.o" "../src/xiomodule_example.c"
+../src/xiomodule_example.c: In function 'main':
+../src/xiomodule_example.c:118:14: warning: implicit declaration of function 'IOModuleExample'; did you mean 'IoModuleExample'? [-Wimplicit-function-declaration]
+     Status = IOModuleExample(IOMODULE_DEVICE_ID);
+              ^~~~~~~~~~~~~~~
+              IoModuleExample
+../src/xiomodule_example.c: At top level:
+../src/xiomodule_example.c:147:9: error: conflicting types for 'IOModuleExample'
+ XStatus IOModuleExample(u16 DeviceId)
+         ^~~~~~~~~~~~~~~
+../src/xiomodule_example.c:118:14: note: previous implicit declaration of 'IOModuleExample' was here
+     Status = IOModuleExample(IOMODULE_DEVICE_ID);
+              ^~~~~~~~~~~~~~~
+../src/xiomodule_example.c: In function 'IOModuleExample':
+../src/xiomodule_example.c:181:14: warning: implicit declaration of function 'XOModule_GenerateIntr'; did you mean 'XIOModule_EnableIntr'? [-Wimplicit-function-declaration]
+     Status = XOModule_GenerateIntr(&IOModule);
+              ^~~~~~~~~~~~~~~~~~~~~
+              XIOModule_EnableIntr
+../src/xiomodule_example.c: In function 'DeviceDriverHandler':
+../src/xiomodule_example.c:304:5: error: 'InterruptsProcessed' undeclared (first use in this function); did you mean 'InterruptProcessed'?
+     InterruptsProcessed++;
+     ^~~~~~~~~~~~~~~~~~~
+     InterruptProcessed
+../src/xiomodule_example.c:304:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/xiomodule_example.o] Error 1
+
+10:43:23 Build Finished (took 579ms)
+

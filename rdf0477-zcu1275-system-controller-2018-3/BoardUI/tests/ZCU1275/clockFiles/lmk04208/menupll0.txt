@@ -1,0 +1,5 @@
+# LMK04208
+12.8_3072 MHz pll0_000.txt
+12.8_2949 MHz pll0_001.txt
+10.0_3072 MHz pll0_002.txt
+10.0_2949 MHz pll0_003.txt

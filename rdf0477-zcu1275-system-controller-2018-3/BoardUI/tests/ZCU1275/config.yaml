@@ -1,0 +1,28 @@
+system controller port: COM11
+vivado path: none
+EXE Checksum: 29fbfdfeb6d8f8774325535997a20332
+BIT Checksum: a8789bc5647dbfc0f7b090e53bc9e341
+SC Checksum: 39765a1592ac43ffbe80a371b27e9a33
+Firmware Checksum: 78a83808128e57e11849b38470a2f1df
+Variables:
+  # Reserved Variable names: name, rev, ser, mac, sil, sysc
+  reset mux: <setmux:{main iic port}:75:00>
+  reset secondary mux: <setmux:{main iic port}:75:00>
+  path to system monitor: <setmux:{main iic port}:74:04>
+  path to fmc: <setmux:{main iic port}:74:01>
+  path to fmc1: <setmux:{main iic port}:75:08>
+  path to fmc2: <setmux:{main iic port}:75:10>
+  path to fmc3: <setmux:{main iic port}:75:80>
+  path to user si570: <setmux:{main iic port}:74:04>
+  path to clk-101: <setmux:{main iic port}:75:02>
+  path to clk-102: <setmux:{main iic port}:75:40>
+  # Board can have a clk-102 OR a clk-103 mezzanine, but not both.
+  path to clk-103: <setmux:{main iic port}:75:40>
+  path to mgt si570: <setmux:{main iic port}:74:08>
+  path to si5382: <setmux:{main iic port}:74:10>
+  path to pmbus: <setmux:{main iic port}:75:01>
+  path to analog pmbus: <setmux:{secondary iic port}:75:20>
+  path to ina226: <setmux:{main iic port}:75:01>
+  path to i2c spi bridge: <setmux:{main iic port}:75:40>
+  main iic port: '0'
+  secondary iic port: '1'

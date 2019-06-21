@@ -1,0 +1,13 @@
+10:43:24 **** Build of configuration Debug for project uart_test_bsp_xuartlite_intr_example_1 ****
+make all 
+'Building file: ../src/xuartlite_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_example.o" -I../../uart_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_example.d" -MT"src/xuartlite_intr_example.o" -o "src/xuartlite_intr_example.o" "../src/xuartlite_intr_example.c"
+../src/xuartlite_intr_example.c:61:10: fatal error: xintc.h: No such file or directory
+ #include "xintc.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/xuartlite_intr_example.o] Error 1
+
+10:43:25 Build Finished (took 430ms)
+

@@ -1,0 +1,635 @@
+19:41:42 **** Build of project rfsoc_test_bsp ****
+make -k all 
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling iomodule"
+xiomodule.c: In function 'XIOModule_Initialize':
+xiomodule.c:169:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                  ^
+xiomodule.c:215:19: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                   ^
+In file included from ../../../include/xstatus.h:51,
+                 from xiomodule.h:263,
+                 from xiomodule.c:59:
+xiomodule.c: In function 'XIOModule_Connect':
+xiomodule.c:352:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disconnect':
+xiomodule.c:392:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Enable':
+xiomodule.c:442:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disable':
+xiomodule.c:488:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Acknowledge':
+xiomodule.c:532:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_ConnectFastHandler':
+xiomodule.c:637:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_SetNormalIntrMode':
+xiomodule.c:719:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule_l.c: In function 'XIOModule_DeviceInterruptHandler':
+xiomodule_l.c:165:35: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+  for (IntrNumber = 0U; IntrNumber < XPAR_IOMODULE_INTC_MAX_INTR_SIZE;
+                                   ^
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+19:41:53 **** Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rfsoc_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_test.elf  |tee "rfsoc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4844	    360	   3196	   8400	   20d0	rfsoc_test.elf
+'Finished building: rfsoc_test.elf.size'
+' '
+19:41:55 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:42:10 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:87:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0x00000055);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rfsoc_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_test.elf  |tee "rfsoc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4876	    360	   3196	   8432	   20f0	rfsoc_test.elf
+'Finished building: rfsoc_test.elf.size'
+' '
+20:05:53 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:84:28: error: 'str_buff' undeclared (first use in this function); did you mean 'strupr'?
+   XIOModule_Send(iomodule, str_buff, 16);
+                            ^~~~~~~~
+                            strupr
+../src/helloworld.c:84:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:84:18: warning: passing argument 1 of 'XIOModule_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_Send(iomodule, str_buff, 16);
+                  ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:506:40: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ unsigned int XIOModule_Send(XIOModule *InstancePtr, u8 *DataBufferPtr,
+                             ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:87:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0x00000055);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+20:06:10 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:83:18: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+   u8* str_buff = "Hello squirls!\r\n";
+                  ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:84:18: warning: passing argument 1 of 'XIOModule_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_Send(iomodule, str_buff, 16);
+                  ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:506:40: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ unsigned int XIOModule_Send(XIOModule *InstancePtr, u8 *DataBufferPtr,
+                             ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:87:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0x00000055);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rfsoc_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_test.elf  |tee "rfsoc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5468	    360	   3196	   9024	   2340	rfsoc_test.elf
+'Finished building: rfsoc_test.elf.size'
+' '
+20:07:59 **** Incremental Build of configuration Debug for project rfsoc_test ****
+make all 
+make: Nothing to be done for 'all'.
+20:46:08 **** Auto Build of project rfsoc_test_bsp ****
+make -k all 
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling iomodule"
+xiomodule.c: In function 'XIOModule_Initialize':
+xiomodule.c:169:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                  ^
+xiomodule.c:215:19: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                   ^
+In file included from ../../../include/xstatus.h:51,
+                 from xiomodule.h:263,
+                 from xiomodule.c:59:
+xiomodule.c: In function 'XIOModule_Connect':
+xiomodule.c:352:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disconnect':
+xiomodule.c:392:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Enable':
+xiomodule.c:442:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disable':
+xiomodule.c:488:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Acknowledge':
+xiomodule.c:532:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_ConnectFastHandler':
+xiomodule.c:637:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_SetNormalIntrMode':
+xiomodule.c:719:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule_l.c: In function 'XIOModule_DeviceInterruptHandler':
+xiomodule_l.c:165:35: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+  for (IntrNumber = 0U; IntrNumber < XPAR_IOMODULE_INTC_MAX_INTR_SIZE;
+                                   ^
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+20:46:23 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:83:18: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+   u8* str_buff = "Hello squirls!\r\n";
+                  ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:84:18: warning: passing argument 1 of 'XIOModule_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_Send(iomodule, str_buff, 16);
+                  ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:506:40: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ unsigned int XIOModule_Send(XIOModule *InstancePtr, u8 *DataBufferPtr,
+                             ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:87:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0x00000055);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rfsoc_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_test.elf  |tee "rfsoc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5468	    360	   3196	   9024	   2340	rfsoc_test.elf
+'Finished building: rfsoc_test.elf.size'
+' '
+20:47:49 **** Incremental Build of configuration Debug for project rfsoc_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:28:28 **** Auto Build of project rfsoc_test_bsp ****
+make -k all 
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/iomodule_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling iomodule"
+xiomodule.c: In function 'XIOModule_Initialize':
+xiomodule.c:169:18: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                  ^
+xiomodule.c:215:19: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   for (Id = 0; Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE; Id++) {
+                   ^
+In file included from ../../../include/xstatus.h:51,
+                 from xiomodule.h:263,
+                 from xiomodule.c:59:
+xiomodule.c: In function 'XIOModule_Connect':
+xiomodule.c:352:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disconnect':
+xiomodule.c:392:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Enable':
+xiomodule.c:442:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Disable':
+xiomodule.c:488:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_Acknowledge':
+xiomodule.c:532:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_ConnectFastHandler':
+xiomodule.c:637:23: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertNonvoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                       ^
+../../../include/xil_assert.h:128:9: note: in definition of macro 'Xil_AssertNonvoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule.c: In function 'XIOModule_SetNormalIntrMode':
+xiomodule.c:719:20: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  Xil_AssertVoid(Id < XPAR_IOMODULE_INTC_MAX_INTR_SIZE);
+                    ^
+../../../include/xil_assert.h:103:9: note: in definition of macro 'Xil_AssertVoid'
+     if (Expression) {                              \
+         ^~~~~~~~~~
+xiomodule_l.c: In function 'XIOModule_DeviceInterruptHandler':
+xiomodule_l.c:165:35: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+  for (IntrNumber = 0U; IntrNumber < XPAR_IOMODULE_INTC_MAX_INTR_SIZE;
+                                   ^
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src"
+make -C microblaze_mcs_0_microblaze_I/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+21:28:41 **** Auto Build of configuration Debug for project rfsoc_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:26: warning: passing argument 1 of 'XIOModule_Initialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(XIOModule_Initialize(iomodule, IOMODULE_DEVICE_ID) != XST_SUCCESS){
+                          ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:457:38: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ int XIOModule_Initialize(XIOModule * InstancePtr, u16 DeviceId);
+                          ~~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:79:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+../src/helloworld.c:83:18: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+   u8* str_buff = "Hello squirls!\r\n";
+                  ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:84:18: warning: passing argument 1 of 'XIOModule_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_Send(iomodule, str_buff, 16);
+                  ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:506:40: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ unsigned int XIOModule_Send(XIOModule *InstancePtr, u8 *DataBufferPtr,
+                             ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:85:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0xAA);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c:87:27: warning: passing argument 1 of 'XIOModule_DiscreteWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+   XIOModule_DiscreteWrite(iomodule, 2, 0x00000055);
+                           ^~~~~~~~
+In file included from ../src/helloworld.c:55:
+../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include/xiomodule.h:484:41: note: expected 'XIOModule *' {aka 'struct <anonymous> *'} but argument is of type 'XIOModule_Config *' {aka 'struct <anonymous> *'}
+ void XIOModule_DiscreteWrite(XIOModule *InstancePtr,
+                              ~~~~~~~~~~~^~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:95:6: warning: conflicting types for 'debug_print'
+ void debug_print(char* s)
+      ^~~~~~~~~~~
+../src/helloworld.c:79:3: note: previous implicit declaration of 'debug_print' was here
+   debug_print("Error initializing IO Module!");
+   ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/include -mno-xl-reorder -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rfsoc_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_test_bsp/microblaze_mcs_0_microblaze_I/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_test.elf  |tee "rfsoc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5468	    360	   3196	   9024	   2340	rfsoc_test.elf
+'Finished building: rfsoc_test.elf.size'
+' '
+21:29:50 **** Incremental Build of configuration Debug for project rfsoc_test ****
+make all 
+make: Nothing to be done for 'all'.

@@ -1,0 +1,22 @@
+# LMX2592 PLL 2 / PLL B 
+1474.56 MHz pll2_000.txt
+1966.08 MHz pll2_001.txt
+2048    MHz pll2_002.txt
+2457.6  MHz pll2_003.txt
+2949.12 MHz pll2_004.txt
+3072    MHz pll2_005.txt
+3276.8  MHz pll2_006.txt
+3686.4  MHz pll2_007.txt
+3932.16 MHz pll2_008.txt
+4000    MHz pll2_009.txt
+4096    MHz pll2_010.txt
+4423.68 MHz pll2_011.txt
+4669.44 MHz pll2_012.txt
+4915.2  MHz pll2_013.txt 
+5734.4  MHz pll2_014.txt
+5898.24 MHz pll2_015.txt
+6144    MHz pll2_016.txt
+6389.76 MHz pll2_017.txt
+6400    MHz pll2_018.txt
+6553.6  MHz pll2_019.txt
+200.00	MHz pll2_040.txt

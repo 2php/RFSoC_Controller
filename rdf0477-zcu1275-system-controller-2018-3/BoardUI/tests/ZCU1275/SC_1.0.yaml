@@ -1,0 +1,2980 @@
+# Version 1.5 ZCU1275 08-27-18 Bradw Fix checksum error. Fix Revision not displaying correctly. Add Analogue Power rails. Reorder Power rails displayed.
+# Version 1.4 ZCU1275 08-13-18 Bradw Board Rev 1.0 Changes. CLK-102 tab is hidden as 1275 is not intended to be used with CLK-102. HPC1-JA2 is hidden as it is unstuffed. Uncheck EEPROM Tab "Set*" buttons so values are not reset. Change FMC tab name from HPC3- JA4 to LPC3- JA4. Fix CLK-101 not saving boot value on free-running button.
+# Version ZCU1275-1.3 06-13-18 Bradw Make clock file selection use dedicated folders by part and by letter: e.g., clockFiles\lmx2592b
+# Version ZCU1275-1.4 06-13-18 Bradw Slight change in syntax for last fix: "/" to ":" for file directory selection.
+tabs:
+  Clocks:
+    tabs:
+      CLK-101:
+        tabs:
+          Set:
+            buttons:
+              # CM_I2C: path to clk-101 = I2C mux: 75, port = 02, main icc port = 0, Si570 = 55            
+              # Si570 doesn't need a save value for last frequency setting as the current frequency 
+              # setting can be read from the part. 
+              Set Si570 User Frequency:
+                steps:
+                - command: '{path to clk-101}<readsi570:{main iic port}:55><calcsi570:{main
+                    iic port}:55:156.25:<1>:00>{reset mux}'
+                  type: sysc
+                  timeout: 4
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+                  - label_left: (between 10 and 810 MHz)
+              # CM_I2C: path to clk-101 = I2C mux: 75, port = 02, main icc port = 0,  Si5368 = 68  
+              # Reg01 = D8 for Auto Select. This is calcsi5368 with var3 = 01  
+              # Cannot read current frequency setting so save in "02"              
+              Set Si5368 Frequency (Auto Select):
+                steps:
+                - command: '{path to clk-101}<calcsi5368:{main iic port}:68:<1>:01><saveval:02:<1>><setmux:{main
+                    iic port}:75:02><setmux:0:75:00>{reset mux}'
+                  type: sysc
+                  timeout: 4
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+                  - label_right: (between 0.008 and 808MHz)
+              # Reg01 = E1 for Free Running: This is calcsi5368 with var3 = 00       
+              # Cannot read current frequency setting so save in "02"               
+              Set Si5368 Frequency (Free Running):
+                steps:
+                - command: '{path to clk-101}<calcsi5368:{main iic port}:68:<1>:00><saveval:02:<1>><setmux:{main
+                    iic port}:75:02><setmux:0:75:00>{reset mux}'
+                  type: sysc
+                  timeout: 4
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+                  - label_right: (between 0.008 and 808MHz)
+          Last Set:
+            buttons:
+              Read Si570 User Frequency:
+                steps:
+                - command: '{path to clk-101}<recallsi570:{main iic port}:55:00><interpsi570:156.25>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_large: .*FREQUENCY\[(.*)\]
+              Last Set Si5368 User Frequency:
+                steps:
+                - command: <getval:02><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_large: .*VALUE\[(.*)\]
+          Set Boot Frequency:
+            buttons:
+              # Recorded register settings saved in recordrunonboot "01"
+              # Don't need a saveval as the frequency set can be read from the part.
+              Set Si570 User Boot Frequency:
+                steps:
+                - command: '{path to clk-101}<readsi570:{main iic port}:55><recordrunonboot:01>{path
+                    to clk-101}<calcsi570:{main iic port}:55:156.25:<1>:00>{reset
+                    mux}<stoprecord> # <calcsi570:{path to clk-101}:55:156.25:<1>:00>'
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+                  - label_left: (between 10 and 810 MHz)
+              # Recorded register settings saved in recordrunonboot "02"  
+              # Frequency set saved in saveval 02              
+              Set Si5368 User Boot Frequency (Auto Select):
+                steps:
+                - command: <recordrunonboot:02>{path to clk-101}<calcsi5368:{main
+                    iic port}:68:<1>:01>><setmux:{main iic port}:75:02><setmux:0:75:00>{reset
+                    mux}<stoprecord><saveval:02:<1>>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+                  - label_right: (between 0.008 and 808MHz)
+              # Recorded register settings saved in recordrunonboot "02"  
+              # Frequency set saved in saveval 02              
+              Set Si5368 User Boot Frequency (Free Running):
+                steps:
+                - command: <recordrunonboot:02>{path to clk-101}<calcsi5368:{main
+                    iic port}:68:<1>:00>><setmux:{main iic port}:75:02><setmux:0:75:00>{reset
+                    mux}<stoprecord><saveval:02:<1>>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 3
+                  content:
+                  - label_right: 'Frequency: '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+                  - label_right: (between 0.008 and 808MHz)
+          Restore Device Defaults:
+            buttons:
+              Restore Si570 User:
+                steps:
+                - command: "MDB\r00\r\t{path to clk-101}<readsi570:{main iic port}:55><calcsi570:{main\
+                    \ iic port}:55:156.25:156.25:00>{reset mux}"
+                  type: sysc
+                  timeout: 4
+                ui:
+                  rows: 1
+                  columns: 1
+              Restore Si5368 User:
+                steps:
+                - command: "MDB\r01\r\t{path to clk-101}<calcsi5368:{main iic port}:68:0:01><saveval:01:0.0000001>{reset\
+                    \ mux}"
+                  type: sysc
+                  timeout: 5
+                ui:
+                  rows: 1
+                  columns: 1
+      #            
+      # Analog CM_I2C: path to clk-102 = I2C mux = 75, port = 40, main icc port = 0, SPI Bridge = 2F, Port 02, 04, and 08
+      # Once SPI Bridge is set up, all writes occur through that: i.e., Address = 2F, needs a mode (F0<port>) and a separate 
+      # write of data with the port (02, 04, 08) perpended to the data.       
+      # The Data contains the register number in upper or lower byte.
+      #                                                   Register Data --+
+      #                                                                   v
+      #                                Port ----------+ Port ---------+|<---->|
+      #                                               |               ||      |
+      # Example:                                      v               v|      v
+      #   LMM04208 port 04, register R00: IW0\r2F\rF004\r\tIW0\r2F\r\0400020000\r\t
+      #                                                                       ^
+      #                                     Register num in low 5 bits--------+
+      #
+      # Cannot read values from LMK04208 or LMX2592-s (pins for reading data are not connected).    
+      #
+      # SetFileVal is a 64 byte number that is used here to save a frequency value (floating point format). 
+      # Last Set Screen:
+      #   4208: 03, 2592A: 04, and 2592B: 05 
+      # Boot Set Screen:
+      #   4208: 06, 2592A: 07, and 2592B: 08 
+      #   "Last Set" frequency values are also saved.
+      #      
+      # Boot recording of the register set up uses recordrunonboot numbers:       
+      #   4208: 03, 2592A: 04, and 2592B: 05 
+      #
+      # Save values for frequency are parsed from file name, looking for pattern dddd.dddMHz                  
+      #
+      # Should be hidden tab for Revision 1.0 boards.
+#     CLK-102:
+#       tabs:
+#         Set:
+#           buttons:
+#             #
+#             # LMK04208 has 6 output clocks. Each has its own Divisor (bits 15:5) and an enable (bit 31) of 
+#             # each 32 bit register (R0-R5). Enable is called "Power Down", so is opposite polarity (1 = 
+#             # Powered down, 0 = Powered up). Divisor can be 1 to 1045. Register
+#             # number is in bits 4:0. Most recording files leave Clock outputs 0, 1, 2, and sometimes 5 
+#             # disabled. These must be enabled as button options. Characterization group also wants the
+#             # option of changing the Divisor. The Divisor and Enable cannot be changed unless there
+#             # is a Clock File in the first box. The current Divisor and Enable are shown, and the user
+#             # can change the value by writing in the boxes. If an output is enabled/disabled or Divisor changed, 
+#             # the outputs must be synced. This happens by re-writing all the registers. 
+#             # For this implementation, once the big button is pressed, all the registers are re-programed
+#             # (R0-R31). The new new Divisor and Powered Down values are put in R0, R1, R2, and R5 before
+#             # programming.
+#             # 
+#             Set LMK04208 Frequency:
+#               steps:
+#               # For determining numbers in <xx>, these correspond to the row-column entries below. Rows
+#               # start at 1, count to 6 for the last item in row 1, then row 2 starts at 7, etc. These
+#               # numbers are NOT row-column values. A ":::" means 2 return values are not used.
+#               # writeLMK04208FromFile takes 3 parms and returns 13:
+#               # < write LMK04209FromFile : iicnum : iic_spi_address : port_on_spi_chip : en_0 : en_1 : en_2 : en_3 : en_4 : en_5 : div_0 : div_1 : div_2 : div_3 : div_4 : div_5 : the:file:path:file.txt >
+#               #                                0        1                2                3      4      5      6       7     8      9       10      11      12      13      14        15
+#               - command: '{path to i2c spi bridge}<writeLMK04208FromFile:{main iic
+#                   port}:2F:02:<31>:<37>:<43>:::<49>:<7>:<13>:<19>:::<25>:clockFiles:lmk04208:<1>><saveFileVal:03>{reset
+#                   mux}'
+#                 type: sysc
+#                 timeout: 5
+#               ui:
+#                 rows: 9
+#                 columns: 6
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmk04208 folder:'
+#                 - input: ^(.*)$
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - output_right_small: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#                 - label_left: 'Output Divsor 0 (FPGA_REF_CLK):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 #- input: ((?:^0$)|(?:^0*(?:(?:^[0-9]$)|(?:[0-9][0-9]$)|(?:[0-9][0-9][0-9]$)|(?:[0-1][0-9][0-9][0-9]$)|(?:20[0-3][0-9]$)|(?:204[0-7]$))))
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_0\[(.*?)\]
+#                 - output_right_small: .*freq_0\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 1 (SYS_REF_1):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_1\[(.*?)\]
+#                 - output_right_small: .*freq_1\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 2 (SYS_REF_2):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_2\[(.*?)\]
+#                 - output_right_small: .*freq_2\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 5 (OUTPUT_REF):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_5\[(.*?)\]
+#                 - output_right_small: .*freq_5\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output PwrDwn 0 (FPGA_REF_CLK):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_0\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 1 (SYS_REF_1):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_1\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 2 (SYS_REF_2):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_2\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 5 (OUTPUT_REF):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_5\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#             Set LMX2592_A Frequency:
+#               steps:
+#               - command: '{path to i2c spi bridge}<writeTIClockFromFile:{main iic
+#                   port}:2F:08:clockFiles:lmx2592a:<1>><saveFileVal:04>{reset mux}'
+#                 type: sysc
+#                 timeout: 5
+#               ui:
+#                 rows: 1
+#                 columns: 5
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmx2592a folder:'
+#                 - input: ^(.*)$
+#                 - output_right_medium: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#             Set LMX2592_B Frequency:
+#               steps:
+#               - command: '{path to i2c spi bridge}<writeTIClockFromFile:{main iic
+#                   port}:2F:04:clockFiles:lmx2592b:<1>><saveFileVal:05>{reset mux}'
+#                 type: sysc
+#                 timeout: 5
+#               ui:
+#                 rows: 1
+#                 columns: 5
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmx2592b folder:'
+#                 - input: ^(.*)$
+#                 - output_right_medium: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#         Last Set:
+#           buttons:
+#             Last Set LMK04208 Frequency:
+#               steps:
+#               - command: <getval:03><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#             Last Set LMX2592_A Frequency:
+#               steps:
+#               - command: <getval:04><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#             Last Set LMX2592_B Frequency:
+#               steps:
+#               - command: <getval:05><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#         # Set Boot changes the PLLs to the setting entered, AND remembers the register settings
+#         # to be re-applied at boot time. Writing to the QSPI EEPROM takes time, thus the reason for
+#         # the long timeout. Frequency is parsed from the file name: dddd.dddMHz       
+#         # Boot Frequencies are saved in saveFileVal: 06, 07, 08
+#         # Register settings are saved in recordrunonboot: 03, 04, 05
+#         Set Boot Frequency:
+#           buttons:
+#             Get LMK04208 Boot Frequency:
+#               steps:
+#               - command: <getval:06><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#             # See big comment for same part in CLK-102 Set Tab above.    
+#             Set LMK04208 Boot Frequency:
+#               steps:
+#               - command: <recordrunonboot:03>{path to i2c spi bridge}<writeLMK04208FromFile:{main
+#                   iic port}:2F:02:<31>:<37>:<43>:::<49>:<7>:<13>:<19>:::<25>:clockFiles:lmk04208:<1>>{reset
+#                   mux}<stoprecord><saveFileVal:03><saveFileVal:06>
+#                 type: sysc
+#                 timeout: 10
+#               ui:
+#                 rows: 9
+#                 columns: 6
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmk04208 folder:'
+#                 - input: ^(.*)$
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - output_right_small: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#                 - label_left: 'Output Divsor 0 (FPGA_REF_CLK):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 #- input: ((?:^0$)|(?:^0*(?:(?:^[0-9]$)|(?:[0-9][0-9]$)|(?:[0-9][0-9][0-9]$)|(?:[0-1][0-9][0-9][0-9]$)|(?:20[0-3][0-9]$)|(?:204[0-7]$))))
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_0\[(.*?)\]
+#                 - output_right_small: .*freq_0\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 1 (SYS_REF_1):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_1\[(.*?)\]
+#                 - output_right_small: .*freq_1\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 2 (SYS_REF_2):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_2\[(.*?)\]
+#                 - output_right_small: .*freq_2\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output Divsor 5 (OUTPUT_REF):'
+#                 - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+#                 - label_right: '1 to 1045   Current:'
+#                 - output_left_small: .*div_5\[(.*?)\]
+#                 - output_right_small: .*freq_5\[(.*?)\]
+#                 - label_left: Mhz
+#                 - label_left: 'Output PwrDwn 0 (FPGA_REF_CLK):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_0\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 1 (SYS_REF_1):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_1\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 2 (SYS_REF_2):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_2\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#                 - label_left: 'Output PwrDwn 5 (OUTPUT_REF):'
+#                 - input: (?<!-)^[0-1]$|^$
+#                 - label_right: ' 1 = Down, 0 = Up    Current:'
+#                 - output_left_small: .*en_5\[(.*?)\]
+#                 - label_left: ''
+#                 - label_left: ''
+#             Get LMX2592_A Boot Frequency:
+#               steps:
+#               - command: <getval:07><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#             Set LMX2592_A Boot Frequency:
+#               steps:
+#               - command: <recordrunonboot:04>{path to i2c spi bridge}<writeTIClockFromFile:{main
+#                   iic port}:2F:08:clockFiles:lmx2592a:<1>>{reset mux}<stoprecord><saveFileVal:04><saveFileVal:07>
+#                 type: sysc
+#                 timeout: 10
+#               ui:
+#                 rows: 1
+#                 columns: 5
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmx2592a folder:'
+#                 - input: ^(.*)$
+#                 - output_right_medium: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#             Get LMX2592_B Boot Frequency:
+#               steps:
+#               - command: <getval:08><interpval>
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 4
+#                 content:
+#                 - label_right: 'Frequency: '
+#                 - output_left_medium: .*VALUE\[(.*)\]
+#                 - label_left: MHz
+#             Set LMX2592_B Boot Frequency:
+#               steps:
+#               - command: <recordrunonboot:05>{path to i2c spi bridge}<writeTIClockFromFile:{main
+#                   iic port}:2F:04:clockFiles:lmx2592b:<1>>{reset mux}<stoprecord><saveFileVal:05><saveFileVal:08>
+#                 type: sysc
+#                 timeout: 10
+#               ui:
+#                 rows: 1
+#                 columns: 5
+#                 content:
+#                 - label_right: 'Type file name in the clockFiles/lmx2592b folder:'
+#                 - input: ^(.*)$
+#                 - output_right_medium: .*FILE_FREQ\[(.*?)\]
+#                 - label_left: MHz
+#             Reset Boot Frequencies:
+#               steps:
+#               - command: "MDB\r03\r\tMDB\r04\r\tMDB\r05\r\t<saveval:06:0.0000001><saveval:07:0.0000001><saveval:08:0.0000001>"
+#                 type: sysc
+#                 timeout: 10
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_left: (Needed when switching CLK-102 with CLK-103)
+#             Set Some Canned Boot Frequencies:
+#               steps:
+#               - command: <recordrunonboot:03>{path to i2c spi bridge}<writeLMK04208FromFile:{main
+#                   iic port}:2F:02:::::::::::::clockFiles:lmk04208\LMK04208_CLKin1_12M8_2949MHz.txt>{reset
+#                   mux}<stoprecord><saveFileVal:03><saveFileVal:06>
+#                 type: sysc
+#                 timeout: 10
+#               - command: <recordrunonboot:04>{path to i2c spi bridge}<writeTIClockFromFile:{main
+#                   iic port}:2F:08:clockFiles:lmx2592a\LMX2592a_1474.56MHz.txt>{reset
+#                   mux}<stoprecord><saveFileVal:04><saveFileVal:07>
+#                 type: sysc
+#                 timeout: 10
+#               - command: <recordrunonboot:05>{path to i2c spi bridge}<writeTIClockFromFile:{main
+#                   iic port}:2F:04:clockFiles:lmx2592b\LMX2592b_1966.08MHz.txt>{reset
+#                   mux}<stoprecord><saveFileVal:05><saveFileVal:08>
+#                 type: sysc
+#                 timeout: 10
+#               ui:
+#                 hidden: true
+#                 rows: 3
+#                 columns: 1
+#                 content:
+#                 - label_left: 'LMK04208:  lmk04208\LMK04208_CLKin1_12M8_2949MHz.txt'
+#                 - label_left: 'LMX2592_A: lmx2592a\LMX2592a_1474.56MHz.txt'
+#                 - label_left: 'LMX2592_B: lmx2592b\LMX2592b_1966.08MHz.txt'
+#         Reset Device For New Input:
+#           buttons:
+#             Reset LMK04208:
+#               steps:
+#               # R0 = 0x20000 is a hard reset. 32 bit regis. Register address is in the low 5 bits. 
+#               # All values return to their defaults.
+#               # Reset is de-asserted with subsequent write to any register. 
+#               - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF002\r\tIW0\r2F\r\
+#                   0200020000\r\t<saveval:03:0.0000001>{reset mux}"
+#                 type: sysc
+#                 timeout: 5
+#                 fail condition:
+#                 - "(.*)\r:N"
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#             Reset LMX2592_A:
+#               steps:
+#               # R0 = 1 is a soft reset (power down). 24 bit regis. High bit is read (0) or write (1). Next 7 high bits are 
+#               # the register number. It is not clear from data sheet what exactly is reset.
+#               - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF008\r\tIW0\r2F\r\
+#                   08000002\r\t<saveval:04:0.0000001>{reset mux}"
+#                 type: sysc
+#                 timeout: 5
+#                 fail condition:
+#                 - "(.*)\r:N"
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#             Reset LMX2592_B:
+#               steps:
+#               - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF004\r\tIW0\r2F\r\
+#                   04000002\r\t<saveval:05:0.0000001>{reset mux}"
+#                 type: sysc
+#                 timeout: 5
+#                 fail condition:
+#                 - "(.*)\r:N"
+#               ui:
+#                 rows: 1
+#                 columns: 1
+      #            
+      # Analog CM_I2C: path to clk-103 = I2C mux = 75, port = 40, main icc port = 0, SPI Bridge = 2F, Port 02, 04, and 08
+      # Once SPI Bridge is set up, all writes occur through that: i.e., Address = 2F, Needs a mode F002 and a separate 
+      # write with a port (02, 04, 08, 01) pre-pended to the data.       
+      # The Data is then the register value to write. Example for port 04: IW0\r2F\rF002\r\tIW0\r2F\r\0400020000\r\t
+      # Register number is encoded in the Register data. Cannot read values from LMK04208 or LMX2592-s (pins for reading
+      # data are not connected).                      
+      #
+      # SetFileVal is a 64 byte number that is used here to save a frequency value (floating point format). 
+      # Last Set Screen:
+      #   4208: 0A, 2592A: 0B, 2592B: 0C, 2592C: 0D 
+      # Boot Set Screen:
+      #   4208: 0E, 2592A: 0F, 2592B: 10, 2592D: 11
+      #   "Last Set" frequency values are also saved.
+      #      
+      # Boot recording of the register set up uses recordrunonboot numbers:       
+      #   4208: 06, 2592A: 07, 2592B: 08, 2592C: 09
+      #
+      # Save values for frequency are parsed from file name, looking for pattern dddd.ddddMHz   
+      #      
+      CLK-103:
+        tabs:
+          Set:
+            buttons:
+              # See note for same part under CLK-102.
+              Set LMK04208 Frequency:
+                steps:
+                - command: '{path to i2c spi bridge}<writeLMK04208FromFile:{main iic
+                    port}:2F:02:<31>:<37>:<43>:::<49>:<7>:<13>:<19>:::<25>:clockFiles:lmk04208:<1>><saveFileVal:0A>{reset
+                    mux}'
+                  type: sysc
+                  timeout: 5
+                ui:
+                  rows: 9
+                  columns: 6
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmk04208 folder:'
+                  - input: ^(.*)$
+                  - label_left: ''
+                  - label_left: ''
+                  - output_right_small: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+                  - label_left: 'Output Divsor 0 (FPGA_REF_CLK):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  #- input: ((?:^0$)|(?:^0*(?:(?:^[0-9]$)|(?:[0-9][0-9]$)|(?:[0-9][0-9][0-9]$)|(?:[0-1][0-9][0-9][0-9]$)|(?:20[0-3][0-9]$)|(?:204[0-7]$))))
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_0\[(.*?)\]
+                  - output_right_small: .*freq_0\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 1 (SYS_REF_1):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_1\[(.*?)\]
+                  - output_right_small: .*freq_1\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 2 (SYS_REF_2):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_2\[(.*?)\]
+                  - output_right_small: .*freq_2\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 5 (OUTPUT_REF):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_5\[(.*?)\]
+                  - output_right_small: .*freq_5\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output PwrDwn 0 (FPGA_REF_CLK):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_0\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 1 (SYS_REF_1):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_1\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 2 (SYS_REF_2):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_2\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 5 (OUTPUT_REF):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_5\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+              Set LMX2592_A Frequency:
+                steps:
+                - command: '{path to i2c spi bridge}<writeTIClockFromFile:{main iic
+                    port}:2F:08:clockFiles:lmx2592a:<1>><saveFileVal:0B>{reset mux}'
+                  type: sysc
+                  timeout: 5
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592a folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+              Set LMX2592_B Frequency:
+                steps:
+                - command: '{path to i2c spi bridge}<writeTIClockFromFile:{main iic
+                    port}:2F:04:clockFiles:lmx2592b:<1>><saveFileVal:0C>{reset mux}'
+                  type: sysc
+                  timeout: 5
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592b folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+              Set LMX2592_C Frequency:
+                steps:
+                - command: '{path to i2c spi bridge}<writeTIClockFromFile:{main iic
+                    port}:2F:01:clockFiles:lmx2592c:<1>><saveFileVal:0D>{reset mux}'
+                  type: sysc
+                  timeout: 5
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592c folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+          Last Set:
+            buttons:
+              Last Set LMK04208 Frequency:
+                steps:
+                - command: <getval:0A><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Last Set LMX2592_A Frequency:
+                steps:
+                - command: <getval:0B><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Last Set LMX2592_B Frequency:
+                steps:
+                - command: <getval:0C><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Last Set LMX2592_C Frequency:
+                steps:
+                - command: <getval:0D><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+          #        
+          # Set Boot changes the PLLs to the setting entered, AND remembers the register settings
+          # to be re-applied at boot time. Writing to the QSPI EEPROM takes time, thus the reason for
+          # the long timeout. Frequency is parsed from the file name: dddd.dddMHz   
+          # Boot frequency save values are 0E, 0F, 10, 11
+          # Boot save files are 06, 07, 08, 09          
+          Set Boot Frequency:
+            buttons:
+              Get LMK04208 Boot Frequency:
+                steps:
+                - command: <getval:0E><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Set LMK04208 Boot Frequency:
+                steps:
+                - command: <recordrunonboot:06>{path to i2c spi bridge}<writeLMK04208FromFile:{main
+                    iic port}:2F:02:<31>:<37>:<43>:::<49>:<7>:<13>:<19>:::<25>:clockFiles::lmk04208:<1>>{reset
+                    mux}<stoprecord><saveFileVal:0A><saveFileVal:0E>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 9
+                  columns: 6
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmk04208 folder:'
+                  - input: ^(.*)$
+                  - label_left: ''
+                  - label_left: ''
+                  - output_right_small: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+                  - label_left: 'Output Divsor 0 (FPGA_REF_CLK):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  #- input: ((?:^0$)|(?:^0*(?:(?:^[0-9]$)|(?:[0-9][0-9]$)|(?:[0-9][0-9][0-9]$)|(?:[0-1][0-9][0-9][0-9]$)|(?:20[0-3][0-9]$)|(?:204[0-7]$))))
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_0\[(.*?)\]
+                  - output_right_small: .*freq_0\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 1 (SYS_REF_1):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_1\[(.*?)\]
+                  - output_right_small: .*freq_1\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 2 (SYS_REF_2):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_2\[(.*?)\]
+                  - output_right_small: .*freq_2\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output Divsor 5 (OUTPUT_REF):'
+                  - input: (?<!-)^(104[0-5]|10[0-3][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[1-9])$|^$
+                  - label_right: '1 to 1045   Current:'
+                  - output_left_small: .*div_5\[(.*?)\]
+                  - output_right_small: .*freq_5\[(.*?)\]
+                  - label_left: Mhz
+                  - label_left: 'Output PwrDwn 0 (FPGA_REF_CLK):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_0\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 1 (SYS_REF_1):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_1\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 2 (SYS_REF_2):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_2\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+                  - label_left: 'Output PwrDwn 5 (OUTPUT_REF):'
+                  - input: (?<!-)^[0-1]$|^$
+                  - label_right: ' 1 = Down, 0 = Up    Current:'
+                  - output_left_small: .*en_5\[(.*?)\]
+                  - label_left: ''
+                  - label_left: ''
+              Get LMX2592_A Boot Frequency:
+                steps:
+                - command: <getval:0F><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Set LMX2592_A Boot Frequency:
+                steps:
+                - command: <recordrunonboot:07>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:08:clockFiles:lmx2592a:<1>>{reset mux}<stoprecord><saveFileVal:0B><saveFileVal:0F>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592a folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+              Get LMX2592_B Boot Frequency:
+                steps:
+                - command: <getval:10><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Set LMX2592_B Boot Frequency:
+                steps:
+                - command: <recordrunonboot:08>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:04:clockFiles:lmx2592b:<1>>{reset mux}<stoprecord><saveFileVal:0C><saveFileVal:10>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592b folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+              Get LMX2592_C Boot Frequency:
+                steps:
+                - command: <getval:11><interpval>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 4
+                  content:
+                  - label_right: 'Frequency: '
+                  - output_left_medium: .*VALUE\[(.*)\]
+                  - label_left: MHz
+              Set LMX2592_C Boot Frequency:
+                steps:
+                - command: <recordrunonboot:09>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:01:clockFiles:lmx2592c:<1>>{reset mux}<stoprecord><saveFileVal:0D><saveFileVal:11>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 5
+                  content:
+                  - label_right: 'Type file name in the clockFiles/lmx2592c folder:'
+                  - input: ^(.*)$
+                  - output_right_medium: .*FILE_FREQ\[(.*?)\]
+                  - label_left: MHz
+              Reset Boot Frequencies:
+                steps:
+                - command: "MDB\r06\r\tMDB\r07\r\tMDB\r08\r\tMDB\r09\r\t<saveval:0E:0.0000001><saveval:0F:0.0000001><saveval:10:0.0000001><saveval:11:0.0000001>"
+                  type: sysc
+                  timeout: 10
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  # (Needed when switching CLK-102 with CLK-103)
+                  - label_left: (Resets saved values)
+              Set Some Canned Boot Frequencies:
+                steps:
+                - command: <recordrunonboot:06>{path to i2c spi bridge}<writeLMK04208FromFile:{main
+                    iic port}:2F:02:::::::::::::clockFiles:lmk04208\LMK04208_CLKin1_12M8_2949MHz.txt>{reset
+                    mux}<stoprecord><saveFileVal:0A><saveFileVal:0E>
+                  type: sysc
+                  timeout: 10
+                - command: <recordrunonboot:07>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:08:clockFiles:lmx2592a\LMX2592a_0200MHz.txt>{reset
+                    mux}<stoprecord><saveFileVal:0B><saveFileVal:0F>
+                  type: sysc
+                  timeout: 10
+                - command: <recordrunonboot:08>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:04:clockFiles:lmx2592b\LMX2592b_0200MHz.txt>{reset
+                    mux}<stoprecord><saveFileVal:0C><saveFileVal:10>
+                  type: sysc
+                  timeout: 10
+                - command: <recordrunonboot:09>{path to i2c spi bridge}<writeTIClockFromFile:{main
+                    iic port}:2F:01:clockFiles:lmx2592c\LMX2592c_0200MHz.txt>{reset
+                    mux}<stoprecord><saveFileVal:0D><saveFileVal:11>
+                  type: sysc
+                  timeout: 10
+                ui:
+                  hidden: true
+                  rows: 4
+                  columns: 1
+                  content:
+                  - label_left: 'LMK04208:  lmk04208\LMK04208_CLKin1_12M8_2949MHz.txt'
+                  - label_left: 'LMX2592_A: lmx2592a\LMX2592a_0200MHz.txt'
+                  - label_left: 'LMX2592_B: lmx2592b\LMX2592b_0200MHz.txt'
+                  - label_left: 'LMX2592_C: lmx2592c\LMX2592c_0200MHz.txt'
+          Reset Device For New Input:
+            buttons:
+              Reset LMK04208:
+                steps:
+                # R0 = 0x20000 is a hard reset. 32 bit regis. All values return to their defaults.
+                # Reset is de-asserted with subsequent write to any register. 
+                - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF002\r\tIW0\r2F\r\
+                    0200020000\r\t<saveval:09:0.0000001>{reset mux}"
+                  type: sysc
+                  timeout: 5
+                  fail condition:
+                  - "(.*)\r:N"
+                ui:
+                  rows: 1
+                  columns: 1
+              Reset LMX2592_A:
+                steps:
+                # R0 = 1 is a soft reset (power down). 24 bit regis. High bit is read (0) or write (1). Next 7 high bits are 
+                # the register number. It is not clear from data sheet what exactly is reset.
+                - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF002\r\tIW0\r2F\r\
+                    08000002\r\t"
+                  type: sysc
+                  timeout: 5
+                  fail condition:
+                  - "(.*)\r:N"
+                ui:
+                  rows: 1
+                  columns: 1
+              Reset LMX2592_B:
+                steps:
+                - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF002\r\tIW0\r2F\r\
+                    04000002\r\t<saveval:0B:0.0000001>{reset mux}"
+                  type: sysc
+                  timeout: 5
+                  fail condition:
+                  - "(.*)\r:N"
+                ui:
+                  rows: 1
+                  columns: 1
+              Reset LMX2592_C:
+                steps:
+                - command: "<setmux:{main iic port}:75:40>IW0\r2F\rF002\r\tIW0\r2F\r\
+                    01000002\r\t<saveval:0C:0.0000001>{reset mux}"
+                  type: sysc
+                  timeout: 5
+                  fail condition:
+                  - "(.*)\r:N"
+                ui:
+                  rows: 1
+                  columns: 1
+      Debug:
+        buttons:
+          #-------------------------------------------------------------------------------------- 
+          # HIDDEN  Button 
+          # Resets all recorded values and clock file boot playback settings in the event there
+          # is a bug in the YAML and the user wants to get back to a known state to continue
+          # using the CLK-10x boards.          
+          #--------------------------------------------------------------------------------------   
+          Reset All Boot Recorded Settings:
+            steps:
+            - command: <saveval:01:0.0000001><saveval:02:0.0000001><saveval:03:0.0000001><saveval:04:0.0000001><saveval:05:0.0000001><saveval:06:0.0000001><saveval:07:0.0000001><saveval:08:0.0000001><saveval:09:0.0000001><saveval:0A:0.0000001><saveval:0B:0.0000001><saveval:0C:0.0000001><saveval:0D:0.0000001><saveval:0E:0.0000001><saveval:0F:0.0000001>
+              type: sysc
+              timeout: 10
+            - command: "MDB\r01\r\tMDB\r02\r\tMDB\r03\r\tMDB\r04\r\tMDB\r05\r\tMDB\r\
+                06\r\tMDB\r07\r\tMDB\r08\r\tMDB\r09\r\tMDB\r0A\r\tMDB\r0B\r\tMDB\r\
+                0C\r\tMDB\r0D\r\tMDB\r0E\r\tMDB\r0F\r\t"
+              type: sysc
+              timeout: 10
+            ui:
+              hidden: true
+              rows: 1
+              columns: 1
+  Power:
+    tabs:
+      Use Default Calibration:
+        buttons:
+          Run All:
+            runchecked: true
+          # Order dictated by Ryan Hansen  
+          # 0x49 VCCINT 60a max .0005R 0.85v     
+          VCCINT (0x49):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:49:60:0.005><getINA226:{main
+                iic port}:49><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.85): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (60 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4A VCCBRAM        6a max    .005R 0.85v   
+          VCCBRAM (0x4a):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4a:6:0.005><getINA226:{main
+                iic port}:4a><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.85): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4b VCCAUX          6a max    .005R 1.80v     
+          VCCAUX (0x4b):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4b:6:0.005><getINA226:{main
+                iic port}:4b><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (6 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4d VCCO_HP         6a max    .005R 1.80v    
+          VCCO_HP (0x4d):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4d:6:0.005><getINA226:{main
+                iic port}:4d><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (6 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4c VCCO_HD         6a max    .005R 1.80v      
+          VCCO_HD (FMC3 0x4c):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4c:6:0.005><getINA226:{main
+                iic port}:4c><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (6 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x40 VCCPINT         12a max   .005R .85v   
+          VCCPINT (0x40):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:40:12:0.005><getINA226:{main
+                iic port}:40><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.85): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (12 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          #0x42 VCCPAUX         3a max    .005R 1.80v 
+          VCCPAUX (0x42):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:42:3:0.005><getINA226:{main
+                iic port}:42><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (3 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x43 VCC_PSPLL       3a max    .005R 1.20v     
+          VCC_PSPLL (0x43):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:43:3:0.005><getINA226:{main
+                iic port}:43><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.2): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (3 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x47 VCCO_MIO        6a max    .005R 1.80v     
+          VCCO_MIO (0x47):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:47:6:0.005><getINA226:{main
+                iic port}:47><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (6 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          #0x46 VCCO_DDR        6a max    .005R 1.5v
+          VCCO_DDR (0x46):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:46:6:0.005><getINA226:{main
+                iic port}:46><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.5): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (0.5 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x48 MGTAVCC       12.0a max .001R 0.9v      
+          MGTAVCC (0x48):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:48:12:0.001><getINA226:{main
+                iic port}:48><interpINA226:0.001>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.9): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (12.0 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4e MGTAVTT         20.0a max .001R 1.2v   
+          MGTAVTT (0x4e):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4e:20:0.001><getINA226:{main
+                iic port}:4e><interpINA226:0.001>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.2): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (20 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x45 MGTVCCAUX       2.5a max  .005R 1.8v      
+          MGTVCCAUX (0x45):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:45:2.5:0.005><getINA226:{main
+                iic port}:45><interpINA226:0.005>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2.5 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x41 MGTRAVCC       12a max   .001R .85v      
+          MGTRAVCC (0x41):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:41:12:0.001><getINA226:{main
+                iic port}:41><interpINA226:0.001>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.85): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (12 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x44 MGTARVTT        2.5a max  .001R 1.80v     
+          MGTRAVTT (0x44):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:44:2.5:0.001><getINA226:{main
+                iic port}:44><interpINA226:0.001>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current ((2.5 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x4f VCCINT_AMS      20a max   .001R 0.85v     
+          VCCINT_AMS (0x4f):
+            steps:
+            - command: '{path to ina226}<calINA226:{main iic port}:4F:20:0.001><getINA226:{main
+                iic port}:4F><interpINA226:0.001>{reset main mux}'
+              type: sysc
+              timeout: 5
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.85): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (20 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x40 ADC_AVCC         2.00a max   .001R .925v   
+          ADC_AVCC (0x40):
+            steps:
+            - command: <setmux:{main iic port}:75:20><calINA226:{main iic port}:40:2:0.001><getINA226:{main
+                iic port}:40><interpINA226:0.001>{reset main mux}
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.925): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x41 ADC_AVCCAUX         2.00a max   .001R 1.8v                 
+          ADC_AVCCAUX (0x41):
+            steps:
+            - command: <setmux:{main iic port}:75:20><calINA226:{main iic port}:41:2:0.001><getINA226:{main
+                iic port}:41><interpINA226:0.001>{reset main mux}
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x42 DAC_AVCC         3.5a max   .001R .925v                 
+          DAC_AVCC (0x42):
+            steps:
+            - command: <setmux:{main iic port}:75:20><calINA226:{main iic port}:42:3.5:0.001><getINA226:{main
+                iic port}:42><interpINA226:0.001>{reset main mux}
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (0.925): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (3.5 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x44 DAC_AVTT         2.00a max   .001R 2.5 or 3.0v                 
+          DAC_AVTT (0x44):
+            steps:
+            - command: <setmux:{main iic port}:75:20><calINA226:{main iic port}:44:2:0.001><getINA226:{main
+                iic port}:44><interpINA226:0.001>{reset main mux}
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (2.5, or 3.0): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          # 0x43 DAC_AVCCAUX         2.00a max   .001R 1.8v                 
+          DAC_AVCCAUX (0x43):
+            steps:
+            - command: <setmux:{main iic port}:75:20><calINA226:{main iic port}:43:2:0.001><getINA226:{main
+                iic port}:43><interpINA226:0.001>{reset main mux}
+              type: sysc
+              timeout: 4
+            ui:
+              rows: 1
+              columns: 6
+              content:
+              - label_right: 'Power: '
+              - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+              - label_right: '  Voltage (1.8): '
+              - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+              - label_right: '  Current (2 max): '
+              - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#     Use Custom Calibration:
+#       buttons:
+#         Run All:
+#           runchecked: true
+#         VCCINT_IO_BRAM_PS_SDFEC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:41:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.85): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (10 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         VCC1V8:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:42:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.8): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (2 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         VCCINT_AMS:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:49:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.85): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (7 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         MGT1V2:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:47:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.2): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (6 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         VCC1V2:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:43:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.2): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (6 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         DAC_AVTT:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4a:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (2.5 ÷ 2): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current ((0.5 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         VADJ_FMC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:45:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.8): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (5 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         MGT1V8:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:48:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.8): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (0.5 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         VCCINT:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:40:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.85): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (30 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         MGTAVCC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:46:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.9): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (3 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         DAC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4b:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.8): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (0.5 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         ADC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4d:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (1.8): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (2 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         ADC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4c:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.925): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (2 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#         DAC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<calINA226:{main iic port}:4e:{main iic port}:0.005:00><getINA226:{main
+#               iic port}:4e:00><interpINA226:0>{reset main mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 6
+#             content:
+#             - label_right: 'Power: '
+#             - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+#             - label_right: '  Voltage (0.925): '
+#             - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+#             - label_right: '  Current (1 max): '
+#             - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+#     Get INA226 Registers:
+#       buttons:
+#         Run All:
+#           runchecked: true
+#         VCCINT_IO_BRAM_PS_SDFEC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:41:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         VCC1V8:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:42:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         VCCINT_AMS:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:49:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         MGT1V2:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:47:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         VCC1V2:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:43:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         DAC_AVTT:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4a:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         VADJ_FMC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:45:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         MGT1V8:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:48:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         VCCINT:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:40:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         MGTAVCC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:46:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         DAC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4b:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         ADC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4d:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         ADC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<getINA226:{main iic port}:4c:00><interpINA226:0>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#         DAC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<calINA226:{main iic port}:4e:{main iic port}:0.005:00><getINA226:{main
+#               iic port}:4e:00><interpINA226:0>{reset main mux}'
+#             type: sysc
+#           ui:
+#             rows: 3
+#             columns: 6
+#             content:
+#             - label_right: 'Configuration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+#             - label_right: 'Shunt Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+#             - label_right: 'Bus Voltage: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Power: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Current: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Calibration: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Mask/Enable: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Alert Limit: '
+#             - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#             - label_right: 'Die ID: '
+#             - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+#     Set INA226 Registers:
+#       buttons:
+#         Run All:
+#           runchecked: true
+#         VCCINT_IO_BRAM_PS_SDFEC:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:41:<1>:<3>:<5>:<7>:00:0.005>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         VCC1V8:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:42:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         VCCINT_AMS:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:49:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         MGT1V2:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:47:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         VCC1V2:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:43:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         DAC_AVTT:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:4a:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         VADJ_FMC:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:45:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         MGT1V8:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:48:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         VCCINT:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:40:<1>:<3>:<5>:<7>:00:0.002:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         MGTAVCC:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:46:<1>:<3>:<5>:<7>:00:0.002:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         DAC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:4b:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         ADC_AVCCAUX:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:4d:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         ADC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:4c:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#         DAC_AVCC:
+#           steps:
+#           - command: '{path to ina226}<setINA226:{main iic port}:4e:<1>:<3>:<5>:<7>:00:0.005:00>{reset
+#               main mux}'
+#             type: sysc
+#           ui:
+#             rows: 2
+#             columns: 4
+#             content:
+#             - label_right: 'Configuration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Calibration: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right": 'Mask/Enable: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+#             - label_right: '  Alert Limit: '
+#             - input: (^[0-9a-fA-F]{4}$)|(^$)
+  FMC:
+    tabs:
+      # Hidden for REV 1.0 Board (Socket not populated) 
+#     HPC1- JA2:
+#       tabs:
+#         EEPROM:
+#           buttons:
+#             Get EEPROM Data:
+#               steps:
+#               - command: '{path to fmc1}<readeeprom:{main iic port}:50:00:FF><literaleeprom:T><interpeeprom>{reset
+#                   mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#         # MAX15303: I2C Addr = 0x0F        
+#         Set VCCO_MIO:
+#           buttons:
+#             Set VADJ to 0.0 V:
+#               steps:
+#               - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:0F:0>{reset
+#                   mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#             Set VADJ to 1.2 V:
+#               steps:
+#               - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:0F:1.2>{reset
+#                   mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#             Set VADJ to 1.6 V:
+#               steps:
+#               - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:0F:1.6>{reset
+#                   mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#             Set VADJ to 1.8 V:
+#               steps:
+#               - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:0F:1.8>{reset
+#                   mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 1
+#         XM101:
+#           buttons:
+#             Set SI570_0:
+#               steps:
+#               - command: '{path to fmc1}<setmux:{main iic port}:70:01><readsi570:{main
+#                   iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+#                   iic port}:70:00>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (10-800MHz): '
+#                 - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+#             Set SI570_1:
+#               steps:
+#               - command: '{path to fmc1}<setmux:{main iic port}:70:02><readsi570:{main
+#                   iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+#                   iic port}:70:00>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (10-800MHz): '
+#                 - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+#         XM104:
+#           buttons:
+#             Set SI570:
+#               steps:
+#               - command: '{path to fmc1}<setmux:{main iic port}:70:01><readsi570:{main
+#                   iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+#                   iic port}:70:00>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (10-800MHz): '
+#                 - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+#             Set SI5368:
+#               steps:
+#               - command: '{path to fmc1}<setmux:{main iic port}:70:01><calcsi5368:{main
+#                   iic port}:68:<1>><setmux:{main iic port}:70:00><setmux:{main iic
+#                   port}:75:00>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (0.008-808MHz): '
+#                 - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+#         XM105:
+#           buttons:
+#             Set SI570:
+#               steps:
+#               - command: '{path to fmc1}<readsi570:{main iic port}:5d><calcsi570:{main
+#                   iic port}:5d:156.25:<1>>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (10-800MHz): '
+#                 - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+#         XM107:
+#           buttons:
+#             Set SI570:
+#               steps:
+#               - command: '{path to fmc1}<setmux:{main iic port}:70:01><readsi570:{main
+#                   iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+#                   iic port}:70:00>{reset mux}'
+#                 type: sysc
+#               ui:
+#                 rows: 1
+#                 columns: 2
+#                 content:
+#                 - label_right: 'Frequency (10-800MHz): '
+#                 - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+      HPC2- JA3:
+        tabs:
+          EEPROM:
+            buttons:
+              Get EEPROM Data:
+                steps:
+                - command: '{path to fmc2}<readeeprom:{main iic port}:50:00:FF><literaleeprom:T><interpeeprom>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+          # MAX15303: I2C Addr = 0x13        
+          Set VCC_HP:
+            buttons:
+              Set VADJ to 0.0 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:13:0>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.2 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:13:1.2>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.6 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:13:1.6>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.8 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:13:1.8>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+          XM101:
+            buttons:
+              Set SI570_0:
+                steps:
+                - command: '{path to fmc2}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI570_1:
+                steps:
+                - command: '{path to fmc2}<setmux:{main iic port}:70:02><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM104:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc2}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI5368:
+                steps:
+                - command: '{path to fmc2}<setmux:{main iic port}:70:01><calcsi5368:{main
+                    iic port}:68:<1>><setmux:{main iic port}:70:00><setmux:{main iic
+                    port}:75:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (0.008-808MHz): '
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+          XM105:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc2}<readsi570:{main iic port}:5d><calcsi570:{main
+                    iic port}:5d:156.25:<1>>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM107:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc2}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:1:70:00>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+      # This socket is not connected beyond the LA pins.           
+      LPC3- JA4:
+        tabs:
+          EEPROM:
+            buttons:
+              Get EEPROM Data:
+                steps:
+                - command: '{path to fmc3}<readeeprom:{main iic port}:50:00:FF><literaleeprom:T><interpeeprom>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+          # MAX15303: I2C Addr = 0x18        
+          Set VCC_HD:
+            buttons:
+              Set VADJ to 0.0 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:18:0>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.2 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:18:1.2>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.6 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:18:1.6>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+              Set VADJ to 1.8 V:
+                steps:
+                - command: '{path to pmbus}<setMAX15303voltage:{main iic port}:18:1.8>{reset
+                    mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 1
+          XM101:
+            buttons:
+              Set SI570_0:
+                steps:
+                - command: '{path to fmc3}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI570_1:
+                steps:
+                - command: '{path to fmc3}<setmux:{main iic port}:70:02><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM104:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc3}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI5368:
+                steps:
+                - command: '{path to fmc3}<setmux:{main iic port}:70:01><calcsi5368:{main
+                    iic port}:68:<1>><setmux:{main iic port}:70:00><setmux:{main iic
+                    port}:75:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (0.008-808MHz): '
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+          XM105:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc3}<readsi570:{main iic port}:5d><calcsi570:{main
+                    iic port}:5d:156.25:<1>>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM107:
+            buttons:
+              Set SI570:
+                steps:
+                - command: '{path to fmc3}<setmux:{main iic port}:70:01><readsi570:{main
+                    iic port}:5d><calcsi570:{main iic port}:5d:156.25:<1>><setmux:{main
+                    iic port}:70:00>{reset mux}'
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz): '
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+# Board ID EEPROM, 24LC32A, 4K x 8bit I2C Mux 75:04, I2C addr 50, set address of EEPROM to read/write.
+# Address offsets used from 1283 code.    
+# read/writeeeprom needs to know the size of the EEPROM when larger than 256 bytes. 
+# A 4th parameter of 1000 (4K hex) is passed to these functions. The address of the byte to start reading and writing
+# is 2 bytes instead of one for 256 byte eeprom parts.               
+  EEPROM Data:
+    buttons:
+      Run All:
+        runchecked: true
+      Get Board Name:
+        steps:
+        - command: <setmux:0:75:04><readeeprom:{main iic port}:50:00C0:10:1000><interpeeprom>{reset
+            mux}
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Name 0xC0: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]L
+      Get Board Revision:
+        steps:
+        - command: <setmux:0:75:04><readeeprom:{main iic port}:50:00D0:03:1000><interpeeprom>{reset
+            mux}
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Revision 0xD0: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]L
+#     # Board Type is unknown to Characterization Boards group. Leftover from ZCU1254 code.          
+#     Get Board Type:
+#       steps:
+#       - command: <setmux:0:75:04><readeeprom:{main iic port}:50:00D8:02:1000><interpeeprom>{reset
+#           mux}
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 2
+#         content:
+#         - label_right: 'Board TYPE 0xD8: '
+#         - output_huge_left: .*INTERP\[([\x00-\x7F]{2}).*?\]
+      Get Board Serial Numnber:
+        steps:
+        - command: <setmux:0:75:04><readeeprom:{main iic port}:50:0000:0F:1000><literaleeprom:F>{reset
+            mux}
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Serial Number 0x00: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]
+#     No MAC Address in ZCU1275                
+#     Get MAC Address:
+#       steps:
+#       - command: <setmux:0:75:04><readeeprom:{main iic port}:50:0010:06:1000><literaleeprom:F>{reset
+#           mux}
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 2
+#         content:
+#         - label_right: 'MAC Address 0x10: '
+#         - output_huge_left: .*LITERAL\[(.*?)\]
+      Get EEPROM Data:
+        steps:
+        - command: <setmux:0:75:04><readeeprom:{main iic port}:50:0000:100:1000><literaleeprom:T><interpeeprom>{reset
+            mux}
+          type: sysc
+        ui:
+          checked: false
+          rows: 1
+          columns: 1
+      #---------------    
+      # HIDDEN  Button  
+      #---------------   
+      Erase EEPROM  (1st 256 bytes):
+        steps:
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0000:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0020:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0040:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0080:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00A0:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00C0:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00E0:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000>{reset
+            mux}
+          type: sysc
+        ui:
+          checked: false
+          hidden: true
+          rows: 1
+          columns: 1
+      Set Board Name:
+        steps:
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00C0:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000><writeeepromascii:{main
+            iic port}:50:00C0:{name}:1000>{reset mux}
+          type: sysc
+        ui:
+          checked: false
+          rows: 1
+          columns: 1
+#     Set Board Type:
+#       steps:
+#       - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00D8:FFFF:1000><writeeepromascii:{main
+#           iic port}:50:00D8:<1>:1000>{reset mux}
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 2
+#         content:
+#         - label_right: '2 hex digits:'
+#         - input: ([[0-9]*?|[A-F]*?})
+      Set Board Revision:
+        steps:
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:00D0:FFFFFF:1000><writeeepromascii:{main
+            iic port}:50:00D0:{rev}:1000>{reset mux}
+          type: sysc
+        ui:
+          checked: false
+          rows: 1
+          columns: 1
+      Set Board Serial:
+        steps:
+        - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0000:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF:1000><writeeepromascii:{main
+            iic port}:50:0000:{ser}:1000>{reset mux}
+          type: sysc
+        ui:
+          checked: false
+          rows: 1
+          columns: 1
+#     No MAC Address in ZCU1275          
+#     Set Board MAC:
+#       steps:
+#       - command: <setmux:0:75:04><writeeeprom:{main iic port}:50:0010:FFFFFFFFFFFF:1000><writeeeprom:{main
+#           iic port}:50:0010:{mac}:1000>{reset mux}
+#         type: sysc
+#       ui:
+#         checked: false        
+#         rows: 1
+#         columns: 1
+# GPIO Commands:
+#   buttons:
+#     Blink LEDs:
+#       steps:
+#       - command: <mspblinkled:6>
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 1
+#     Get DIP Switch:
+#       steps:
+#       - command: <mspgpiostate:10><mspinterpstate>
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 2
+#         content:
+#         - label_right: 'State: '
+#         - output_large_left: .*GPIO\[...(.....)\]
+#     Get PMU Bits:
+#       steps:
+#       - command: <mspgpiostate:11><mspinterpstate>
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 2
+#         content:
+#         - label_right: 'State: '
+#         - output_large_left: .*GPIO\[..(......)\]
+#     Get PS GPIO:
+#       steps:
+#       - command: <mspgpioset:24:00><mspgpioset:25:00><mspgpiostate:24><mspgpiostate:25>
+#         type: sysc
+#       ui:
+#         rows: 1
+#         columns: 4
+#         content:
+#         - label_right: 'PS_0 State: '
+#         - output_medium_left: ".*GPR\r..\r:P\r.(.)\r.*GPR"
+#         - label_right: 'PS_1 State: '
+#         - output_medium_left: ".*GPR.*GPR\r..\r:P\r.(.)\r"
+#     Get PL GPIO:
+#       steps:
+#       - command: <mspgpioset:20:00><mspgpioset:21:00><mspgpioset:22:00><mspgpioset:23:00><mspgpiostate:20><mspgpiostate:21><mspgpiostate:22><mspgpiostate:23>
+#         type: sysc
+#       ui:
+#         rows: 2
+#         columns: 4
+#         content:
+#         - label_right: 'PL_0 State: '
+#         - output_medium_left: ".*GPR\r..\r:P\r.(.)\r.*GPR.*GPR.*GPR"
+#         - label_right: 'PL_1 State: '
+#         - output_medium_left: ".*GPR.*GPR\r..\r:P\r.(.)\r.*GPR.*GPR"
+#         - label_right: 'PL_2 State: '
+#         - output_medium_left: ".*GPR.*GPR.*GPR\r..\r:P\r.(.)\r.*GPR"
+#         - label_right: 'PL_4 State: '
+#         - output_medium_left: ".*GPR.*GPR.*GPR.*GPR\r..\r:P\r.(.)\r"
+# System Monitor:
+#   tabs:
+#     Temperatures:
+#       buttons:
+#         Run All:
+#           runchecked: true
+#         Get Current Temp:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:00><sysmoninterptemp>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*TEMP\[(.*)\]
+#             - label_left: ' °C'
+#         Get Max Temp:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:20><sysmoninterptemp>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*TEMP\[(.*)\]
+#             - label_left: ' °C'
+#         Get Min Temp:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:24><sysmoninterptemp>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*TEMP\[(.*)\]
+#             - label_left: ' °C'
+#     Voltages:
+#       buttons:
+#         Run All:
+#           runchecked: true
+#         Get Current VCCINT:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:01><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Max VCCINT:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:21><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Min VCCINT:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:25><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Current VCCBRAM:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:06><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Max VCCBRAM:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:23><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Min VCCBRAM:
+#           steps:
+#           - command: <setmux:1:75:07><sysmoninit:0:32><sysmonget:0:32:27><sysmoninterpvolt>{reset
+#               secondary mux}
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Current VCCAUX:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:02><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Max VCCAUX:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:22><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get Min VCCAUX:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:26><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get VPVN:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:03><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get VREFP:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:04><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+#         Get VREFN:
+#           steps:
+#           - command: '{path to system monitor}<sysmoninit:0:32><sysmonget:0:32:05><sysmoninterpvolt>{reset
+#               secondary mux}'
+#             type: sysc
+#           ui:
+#             rows: 1
+#             columns: 2
+#             content:
+#             - output_medium_right: .*VOLTS\[(.*)\]
+#             - label_left: ' Volts'
+  About:
+    buttons:
+      Get Version:
+        steps:
+        - command: "VRN\r\t"
+          type: sysc
+        ui:
+          rows: 2
+          columns: 2
+          content:
+          - label_right: Firmware Version
+          - output_huge_left: ".*VRN\r:P\r(.*?)\r"
+          - label_right: 'UI Version: '
+          - label_left: SCUI v1.1

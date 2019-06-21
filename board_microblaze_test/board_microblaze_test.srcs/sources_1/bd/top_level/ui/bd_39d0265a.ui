@@ -1,0 +1,25 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port diff_clock_rtl -pg 1 -lvl 0 -x -20 -y -140 -defaultsOSRD
+preplace port app_leds -pg 1 -lvl 3 -x 800 -y -140 -defaultsOSRD
+preplace port uart2_pl -pg 1 -lvl 3 -x 800 -y 10 -defaultsOSRD
+preplace port reset_rtl -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
+preplace inst microblaze_mcs_0 -pg 1 -lvl 2 -x 530 -y 70 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 530 -y -70 -defaultsOSRD
+preplace inst not_0 -pg 1 -lvl 1 -x 150 -y 60 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 1 2 310 -140 730J
+preplace netloc not_0_Res 1 1 1 300 60n
+preplace netloc reset_rtl_1 1 0 2 0 -60 N
+preplace netloc diff_clock_rtl_1 1 0 2 NJ -140 300J
+preplace netloc microblaze_mcs_0_UART 1 2 1 750 10n
+preplace netloc microblaze_mcs_0_GPIO1 1 2 1 740 -140n
+levelinfo -pg 1 -20 150 530 800
+pagesize -pg 1 -db -bbox -sgen -150 -160 910 260
+"
+}
+{
+   "da_board_cnt":"24",
+   "da_mb_cnt":"2"
+}

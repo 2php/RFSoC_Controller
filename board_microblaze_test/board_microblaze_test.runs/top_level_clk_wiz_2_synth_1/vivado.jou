@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun 18 12:06:07 2019
+# Process ID: 10148
+# Current directory: C:/fpga_projects/board_microblaze_test/board_microblaze_test.runs/top_level_clk_wiz_2_synth_1
+# Command line: vivado.exe -log top_level_clk_wiz_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_clk_wiz_2.tcl
+# Log file: C:/fpga_projects/board_microblaze_test/board_microblaze_test.runs/top_level_clk_wiz_2_synth_1/top_level_clk_wiz_2.vds
+# Journal file: C:/fpga_projects/board_microblaze_test/board_microblaze_test.runs/top_level_clk_wiz_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level_clk_wiz_2.tcl -notrace

@@ -1,0 +1,22 @@
+# LMX2592 PLL 1 / PLL A 
+1474.56 MHz pll1_000.txt
+1966.08 MHz pll1_001.txt
+2048    MHz pll1_002.txt
+2457.6  MHz pll1_003.txt
+2949.12 MHz pll1_004.txt
+3072    MHz pll1_005.txt
+3276.8  MHz pll1_006.txt
+3686.4  MHz pll1_007.txt
+3932.16 MHz pll1_008.txt
+4000    MHz pll1_009.txt
+4096    MHz pll1_010.txt
+4423.68 MHz pll1_011.txt
+4669.44 MHz pll1_012.txt
+4915.2  MHz pll1_013.txt 
+5734.4  MHz pll1_014.txt
+5898.24 MHz pll1_015.txt
+6144    MHz pll1_016.txt
+6389.76 MHz pll1_017.txt
+6400    MHz pll1_018.txt
+6553.6  MHz pll1_019.txt
+200.00	MHz pll1_040.txt

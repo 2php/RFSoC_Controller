@@ -1,0 +1,46 @@
+folders:
+    ZCU1275:
+        - board: ZCU1275
+          revision: A
+          silicon: prod
+          bit config: BIT.yaml
+          sc config: SC.yaml
+          main config: config.yaml
+          information: zcu1275.html
+        - board: ZCU1275
+          revision: B
+          silicon: prod
+          bit config: BIT.yaml
+          sc config: SC.yaml
+          main config: config.yaml
+          information: zcu1275.html
+        - board: ZCU1275
+          revision: C
+          silicon: prod
+          bit config: BIT.yaml
+          sc config: SC.yaml
+          main config: config.yaml
+          information: zcu1275.html
+        - board: ZCU1275
+          revision: D
+          silicon: prod
+          bit config: BIT.yaml
+          sc config: SC.yaml
+          main config: config.yaml
+          information: zcu1275.html      
+        - board: ZCU1275
+          revision: 1.0
+          silicon: prod
+          bit config: BIT.yaml
+          sc config: SC_1.0.yaml
+          main config: config_1.0.yaml
+          information: zcu1275.html       
+application options:
+    show autodetect button: False
+    show qr button: False
+    show mac: False
+    log level: info 
+    sc window: True
+    bit window: False
+    bottom pane: True
+    right pane: True

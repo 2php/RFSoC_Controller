@@ -1,0 +1,195 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x62D2BFB79F2A4FE4",
+      "device": "xczu29dr-ffvf1760-2-e",
+      "name": "microblaze_test_top",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "microblaze_mcs_0": "",
+      "clk_wiz": "",
+      "util_vector_logic_0": ""
+    },
+    "interface_ports": {
+      "uart2_pl": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+      },
+      "app_leds": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+      },
+      "diff_clock_rtl": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          }
+        }
+      }
+    },
+    "ports": {
+      "reset_rtl": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "microblaze_mcs_0": {
+        "vlnv": "xilinx.com:ip:microblaze_mcs:3.0",
+        "xci_name": "microblaze_test_top_microblaze_mcs_0_0",
+        "parameters": {
+          "DEBUG_ENABLED": {
+            "value": "2"
+          },
+          "GPIO1_BOARD_INTERFACE": {
+            "value": "app_leds"
+          },
+          "JTAG_CHAIN": {
+            "value": "1"
+          },
+          "MEMSIZE": {
+            "value": "131072"
+          },
+          "UART_BAUDRATE": {
+            "value": "115200"
+          },
+          "UART_BOARD_INTERFACE": {
+            "value": "uart2_pl"
+          },
+          "UART_ERROR_INTERRUPT": {
+            "value": "1"
+          },
+          "UART_RX_INTERRUPT": {
+            "value": "1"
+          },
+          "UART_TX_INTERRUPT": {
+            "value": "1"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        },
+        "interface_ports": {
+          "UART": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+          },
+          "GPIO1": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "microblaze_test_top_clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "33.330000000000005"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "101.475"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "77.836"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "4.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "3.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "300.000"
+          },
+          "PRIM_SOURCE": {
+            "value": "Differential_clock_capable_pin"
+          },
+          "RESET_PORT": {
+            "value": "reset"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_HIGH"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "microblaze_test_top_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "diff_clock_rtl_1": {
+        "interface_ports": [
+          "diff_clock_rtl",
+          "clk_wiz/CLK_IN1_D"
+        ]
+      },
+      "microblaze_mcs_0_UART": {
+        "interface_ports": [
+          "uart2_pl",
+          "microblaze_mcs_0/UART"
+        ]
+      },
+      "microblaze_mcs_0_GPIO1": {
+        "interface_ports": [
+          "app_leds",
+          "microblaze_mcs_0/GPIO1"
+        ]
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "microblaze_mcs_0/Clk"
+        ]
+      },
+      "reset_rtl_1": {
+        "ports": [
+          "reset_rtl",
+          "util_vector_logic_0/Op1",
+          "clk_wiz/reset"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "microblaze_mcs_0/Reset"
+        ]
+      }
+    }
+  }
+}
