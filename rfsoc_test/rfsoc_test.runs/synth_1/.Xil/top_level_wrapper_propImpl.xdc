@@ -3,3 +3,5 @@ set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN AP22 [get_ports diff_clock_rtl_clk_p]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AM22 [get_ports reset_rtl]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B3 [get_ports dac0_clk_clk_p]

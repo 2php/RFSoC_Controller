@@ -57,6 +57,7 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out1___100.000______0.000______50.0______101.475_____77.836
+// clk_out2___300.000______0.000______50.0_______81.814_____77.836
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,8 +71,7 @@ module top_level_clk_wiz_0_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        clk_out1,
-  // Status and control signals
-  input         reset,
+  output        clk_out2,
   input         clk_in1_p,
   input         clk_in1_n
  );
@@ -109,7 +109,6 @@ wire clk_in2_top_level_clk_wiz_0;
   wire        clkfbout_top_level_clk_wiz_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
-   wire clkout1_unused;
    wire clkout1b_unused;
    wire clkout2_unused;
    wire clkout2b_unused;
@@ -120,7 +119,6 @@ wire clk_in2_top_level_clk_wiz_0;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
-  wire        reset_high;
 
 
   
@@ -138,6 +136,10 @@ wire clk_in2_top_level_clk_wiz_0;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
+    .CLKOUT1_DIVIDE       (4),
+    .CLKOUT1_PHASE        (0.000),
+    .CLKOUT1_DUTY_CYCLE   (0.500),
+    .CLKOUT1_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (3.333))
   
   mmcme4_adv_inst
@@ -147,7 +149,7 @@ wire clk_in2_top_level_clk_wiz_0;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk_out1_top_level_clk_wiz_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clkout1_unused),
+    .CLKOUT1             (clk_out2_top_level_clk_wiz_0),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -182,8 +184,7 @@ wire clk_in2_top_level_clk_wiz_0;
     .CLKINSTOPPED        (clkinstopped_unused),
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
-    .RST                 (reset_high));
-  assign reset_high = reset; 
+    .RST                 (1'b0));
 
 // Clock Monitor clock assigning
 //--------------------------------------
@@ -199,6 +200,10 @@ wire clk_in2_top_level_clk_wiz_0;
    (.O   (clk_out1),
     .I   (clk_out1_top_level_clk_wiz_0));
 
+
+  BUFG clkout2_buf
+   (.O   (clk_out2),
+    .I   (clk_out2_top_level_clk_wiz_0));
 
 
 

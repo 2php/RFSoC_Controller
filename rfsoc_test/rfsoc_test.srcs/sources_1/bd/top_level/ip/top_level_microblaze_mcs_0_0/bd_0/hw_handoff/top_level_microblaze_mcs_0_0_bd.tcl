@@ -166,6 +166,16 @@ proc create_root_design { parentCell } {
    CONFIG.C_USE_GPO1 {1} \
    ] $GPIO1
 
+  set GPIO2 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO2 ]
+  set_property -dict [ list \
+   CONFIG.C_GPI2_INTERRUPT {0} \
+   CONFIG.C_GPI2_SIZE {32} \
+   CONFIG.C_GPO2_INIT {0x00000000} \
+   CONFIG.C_GPO2_SIZE {16} \
+   CONFIG.C_USE_GPI2 {0} \
+   CONFIG.C_USE_GPO2 {1} \
+   ] $GPIO2
+
 
   # Create ports
   set Clk [ create_bd_port -dir I -type clk Clk ]
@@ -199,6 +209,7 @@ proc create_root_design { parentCell } {
   set iomodule_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:iomodule:3.1 iomodule_0 ]
   set_property -dict [ list \
    CONFIG.C_GPO1_SIZE {8} \
+   CONFIG.C_GPO2_SIZE {16} \
    CONFIG.C_INSTANCE {iomodule} \
    CONFIG.C_INTC_ADDR_WIDTH {17} \
    CONFIG.C_INTC_HAS_FAST {1} \
@@ -206,6 +217,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_IO_MASK {0x00000000C0000000} \
    CONFIG.C_MASK {0x00000000C0000000} \
    CONFIG.C_USE_GPO1 {1} \
+   CONFIG.C_USE_GPO2 {1} \
  ] $iomodule_0
 
   # Create instance: lmb_bram_I, and set properties
@@ -248,6 +260,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ilmb_port [get_bd_intf_pins ilmb_cntlr/BRAM_PORT] [get_bd_intf_pins lmb_bram_I/BRAM_PORTB]
   connect_bd_intf_net -intf_net ilmb_sl_0 [get_bd_intf_pins ilmb/LMB_Sl_0] [get_bd_intf_pins ilmb_cntlr/SLMB]
   connect_bd_intf_net -intf_net iomodule_0_GPIO1 [get_bd_intf_ports GPIO1] [get_bd_intf_pins iomodule_0/GPIO1]
+  connect_bd_intf_net -intf_net iomodule_0_GPIO2 [get_bd_intf_ports GPIO2] [get_bd_intf_pins iomodule_0/GPIO2]
   connect_bd_intf_net -intf_net mdm_0_s_axi [get_bd_intf_pins mdm_0/S_AXI] [get_bd_intf_pins microblaze_I/M_AXI_DP]
   connect_bd_intf_net -intf_net microblaze_I_mdm_bus [get_bd_intf_pins mdm_0/MBDEBUG_0] [get_bd_intf_pins microblaze_I/DEBUG]
 

@@ -1,0 +1,280 @@
+17:06:13 INFO  : Registering command handlers for SDK TCF services
+17:06:14 INFO  : Launching XSCT server: xsct.bat -interactive C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\temp_xsdb_launch_script.tcl
+17:06:16 INFO  : XSCT server has started successfully.
+17:06:16 INFO  : Successfully done setting XSCT server connection channel  
+17:06:16 INFO  : Successfully done setting SDK workspace  
+17:06:16 INFO  : Processing command line option -hwspec C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/top_level_wrapper.hdf.
+17:07:20 INFO  : Refreshed build settings on project microblaze_axi_test
+17:08:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:08:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:09:11 INFO  : FPGA configured successfully with bitstream "C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/top_level_wrapper_hw_platform_0/download.bit"
+17:09:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:09:22 INFO  : 'fpga -state' command is executed.
+17:09:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:23 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:09:23 INFO  : 'jtag frequency' command is executed.
+17:09:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:09:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:23 INFO  : Processor reset is completed for 'microblaze_0'.
+17:09:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:23 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:09:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:09:23 INFO  : Memory regions updated for context MicroBlaze #0
+17:09:23 INFO  : Memory regions updated for context MicroBlaze #0
+17:09:23 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:23 INFO  : 'con' command is executed.
+17:09:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:09:23 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:09:58 INFO  : Disconnected from the channel tcfchan#1.
+17:09:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:09:59 INFO  : 'fpga -state' command is executed.
+17:09:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:10:00 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:10:00 INFO  : 'jtag frequency' command is executed.
+17:10:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:10:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:00 INFO  : Processor reset is completed for 'microblaze_0'.
+17:10:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:00 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:10:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:10:00 INFO  : Memory regions updated for context MicroBlaze #0
+17:10:00 INFO  : Memory regions updated for context MicroBlaze #0
+17:10:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:10:00 INFO  : 'con' command is executed.
+17:10:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:10:00 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:11:33 INFO  : Disconnected from the channel tcfchan#2.
+17:11:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:11:34 INFO  : 'fpga -state' command is executed.
+17:11:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:35 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:11:35 INFO  : 'jtag frequency' command is executed.
+17:11:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:11:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:35 INFO  : Processor reset is completed for 'microblaze_0'.
+17:11:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:35 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:11:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:11:35 INFO  : Memory regions updated for context MicroBlaze #0
+17:11:35 INFO  : Memory regions updated for context MicroBlaze #0
+17:11:35 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:35 INFO  : 'con' command is executed.
+17:11:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:11:35 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:13:26 INFO  : Disconnected from the channel tcfchan#3.
+17:13:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:13:27 INFO  : 'fpga -state' command is executed.
+17:13:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:13:27 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:13:27 INFO  : 'jtag frequency' command is executed.
+17:13:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:13:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:13:27 INFO  : Processor reset is completed for 'microblaze_0'.
+17:13:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:13:27 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:13:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:13:27 INFO  : Memory regions updated for context MicroBlaze #0
+17:13:27 INFO  : Memory regions updated for context MicroBlaze #0
+17:13:27 INFO  : Context for processor 'microblaze_0' is selected.
+17:13:28 INFO  : 'con' command is executed.
+17:13:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:13:28 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:14:09 INFO  : Disconnected from the channel tcfchan#4.
+17:14:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:14:10 INFO  : 'fpga -state' command is executed.
+17:14:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:10 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:14:10 INFO  : 'jtag frequency' command is executed.
+17:14:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:14:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:10 INFO  : Processor reset is completed for 'microblaze_0'.
+17:14:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:11 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:14:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:14:11 INFO  : Memory regions updated for context MicroBlaze #0
+17:14:11 INFO  : Memory regions updated for context MicroBlaze #0
+17:14:11 INFO  : Context for processor 'microblaze_0' is selected.
+17:14:11 INFO  : 'con' command is executed.
+17:14:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:14:11 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:15:53 INFO  : Disconnected from the channel tcfchan#5.
+17:15:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:15:54 INFO  : 'fpga -state' command is executed.
+17:15:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:15:55 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:15:55 INFO  : 'jtag frequency' command is executed.
+17:15:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:15:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:55 INFO  : Processor reset is completed for 'microblaze_0'.
+17:15:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:55 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:15:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:15:55 INFO  : Memory regions updated for context MicroBlaze #0
+17:15:55 INFO  : Memory regions updated for context MicroBlaze #0
+17:15:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:15:55 INFO  : 'con' command is executed.
+17:15:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:15:55 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:18:07 INFO  : Disconnected from the channel tcfchan#6.
+17:18:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:18:09 INFO  : 'fpga -state' command is executed.
+17:18:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:18:09 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:18:09 INFO  : 'jtag frequency' command is executed.
+17:18:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:09 INFO  : Processor reset is completed for 'microblaze_0'.
+17:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:09 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:18:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:18:09 INFO  : Memory regions updated for context MicroBlaze #0
+17:18:09 INFO  : Memory regions updated for context MicroBlaze #0
+17:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:09 INFO  : 'con' command is executed.
+17:18:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:18:09 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:18:44 INFO  : Disconnected from the channel tcfchan#7.
+17:18:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:18:45 INFO  : 'fpga -state' command is executed.
+17:18:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:18:45 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:18:45 INFO  : 'jtag frequency' command is executed.
+17:18:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:18:45 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:45 INFO  : Processor reset is completed for 'microblaze_0'.
+17:18:45 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:46 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:18:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:18:46 INFO  : Memory regions updated for context MicroBlaze #0
+17:18:46 INFO  : Memory regions updated for context MicroBlaze #0
+17:18:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:18:46 INFO  : 'con' command is executed.
+17:18:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:18:46 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:19:23 INFO  : Disconnected from the channel tcfchan#8.
+17:19:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+17:19:24 INFO  : 'fpga -state' command is executed.
+17:19:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:19:24 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+17:19:24 INFO  : 'jtag frequency' command is executed.
+17:19:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:19:24 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:24 INFO  : Processor reset is completed for 'microblaze_0'.
+17:19:24 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:24 INFO  : The application 'C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf' is downloaded to processor 'microblaze_0'.
+17:19:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test/Debug/microblaze_axi_test.elf
+----------------End of Script----------------
+
+17:19:24 INFO  : Memory regions updated for context MicroBlaze #0
+17:19:24 INFO  : Memory regions updated for context MicroBlaze #0
+17:19:24 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:24 INFO  : 'con' command is executed.
+17:19:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+17:19:24 INFO  : Launch script is exported to file 'C:\james\fpga_projects\microblaze_axi_test\microblaze_axi_test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_microblaze_axi_test.elf_on_local.tcl'
+17:21:24 INFO  : Disconnected from the channel tcfchan#9.

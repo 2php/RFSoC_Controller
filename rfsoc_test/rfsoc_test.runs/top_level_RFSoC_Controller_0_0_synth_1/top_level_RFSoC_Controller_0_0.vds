@@ -1,0 +1,502 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jun 21 11:55:09 2019
+# Process ID: 4328
+# Current directory: C:/james/fpga_projects/rfsoc_test/rfsoc_test.runs/top_level_RFSoC_Controller_0_0_synth_1
+# Command line: vivado.exe -log top_level_RFSoC_Controller_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_RFSoC_Controller_0_0.tcl
+# Log file: C:/james/fpga_projects/rfsoc_test/rfsoc_test.runs/top_level_RFSoC_Controller_0_0_synth_1/top_level_RFSoC_Controller_0_0.vds
+# Journal file: C:/james/fpga_projects/rfsoc_test/rfsoc_test.runs/top_level_RFSoC_Controller_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level_RFSoC_Controller_0_0.tcl -notrace
+Command: synth_design -top top_level_RFSoC_Controller_0_0 -part xczu29dr-ffvf1760-2-e -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'top_level_RFSoC_Controller_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29dr'
+INFO: [Common 17-86] Your Synthesis license expires in 26 day(s)
+INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11864 
+load diablo GTM unisim library
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1458.313 ; gain = 178.262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_level_RFSoC_Controller_0_0' [c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_RFSoC_Controller_0_0/synth/top_level_RFSoC_Controller_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'RFSoC_Controller' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/RFSoC_Controller.v:23]
+	Parameter width bound to: 256 - type: integer 
+	Parameter depth bound to: 2 - type: integer 
+	Parameter channels bound to: 1 - type: integer 
+	Parameter delay_width bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'shift_register' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:23]
+	Parameter width bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift_register' (1#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:23]
+INFO: [Synth 8-6157] synthesizing module 'reg_module' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/reg_module.v:23]
+	Parameter width bound to: 256 - type: integer 
+	Parameter depth bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'register' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:60]
+	Parameter width bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (2#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'reg_module' (3#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/reg_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fire_controller' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/fire_controller.v:23]
+	Parameter depth bound to: 2 - type: integer 
+	Parameter delay_width bound to: 64 - type: integer 
+	Parameter state_wait_fire bound to: 2'b00 
+	Parameter state_fire bound to: 2'b01 
+	Parameter state_cleanup bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/counter.v:23]
+	Parameter width bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:23]
+	Parameter width bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (3#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/register.v:23]
+WARNING: [Synth 8-5788] Register count_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/counter.v:50]
+WARNING: [Synth 8-5788] Register done_reg in module counter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/counter.v:51]
+WARNING: [Synth 8-3848] Net reset in module/entity counter does not have driver. [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/counter.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (4#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/counter.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/fire_controller.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'fire_controller' (5#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/fire_controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RFSoC_Controller' (6#1) [C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/RFSoC_Controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_RFSoC_Controller_0_0' (7#1) [c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_RFSoC_Controller_0_0/synth/top_level_RFSoC_Controller_0_0.v:58]
+WARNING: [Synth 8-3331] design RFSoC_Controller has unconnected port wave_reg_cycle
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1522.086 ; gain = 242.035
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.832 ; gain = 247.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.832 ; gain = 247.781
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1647.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1668.203 ; gain = 20.867
+load diablo GTM unisim library
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1668.203 ; gain = 388.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu29dr-ffvf1760-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1668.203 ; gain = 388.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1668.203 ; gain = 388.152
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fire_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+         state_wait_fire |                               00 |                               00
+              state_fire |                               01 |                               01
+           state_cleanup |                               10 |                               10
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fire_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1668.203 ; gain = 388.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
++---Registers : 
+	              256 Bit    Registers := 4     
+	               64 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module shift_register__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+Module fire_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 7     
+Module shift_register 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+Module register 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+Module reg_module 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design RFSoC_Controller has unconnected port wave_reg_cycle
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1668.203 ; gain = 388.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2058.738 ; gain = 778.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2060.105 ; gain = 780.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[24] )
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[0]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[61] )
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[62]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[2]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[3]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[4]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[5]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[6]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[7]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[8]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[9]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[10]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[11]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[12]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[13]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[14]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[15]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[16]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[17]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[18]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[19]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[20]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[21]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[22]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[23]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[24]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[25]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[26]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[27]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[28]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[29]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[30]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[31]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[32]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[33]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[34]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[35]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[36]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[37]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[38]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[39]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[40]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[41]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[42]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[43]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[44]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[45]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[46]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[47]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[48]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[49]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[50]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[51]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[52]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[53]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[54]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[55]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[56]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[57]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[58]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[59]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/fc/cnt/sr/data_out_reg[60]' (FDC) to 'inst/fc/cnt/sr/data_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/fc/cnt/sr/data_out_reg[1] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2083.426 ; gain = 803.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    13|
+|2     |LUT1   |     2|
+|3     |LUT2   |    59|
+|4     |LUT3   |   518|
+|5     |LUT4   |    25|
+|6     |LUT5   |     9|
+|7     |LUT6   |    10|
+|8     |FDCE   |  1092|
+|9     |FDPE   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------+-----------------+------+
+|      |Instance               |Module           |Cells |
++------+-----------------------+-----------------+------+
+|1     |top                    |                 |  1730|
+|2     |  inst                 |RFSoC_Controller |  1730|
+|3     |    \chns[0].idle_reg  |shift_register   |   256|
+|4     |    \chns[0].wave_reg  |reg_module       |  1282|
+|5     |      \chain[0].r      |register         |   256|
+|6     |      \chain[1].r      |register_0       |   257|
+|7     |      sr               |shift_register_1 |   257|
+|8     |    fc                 |fire_controller  |   192|
+|9     |      cnt              |counter          |   184|
++------+-----------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.781 ; gain = 808.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2088.781 ; gain = 668.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2088.781 ; gain = 808.730
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+156 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2140.148 ; gain = 1743.852
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.148 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/rfsoc_test/rfsoc_test.runs/top_level_RFSoC_Controller_0_0_synth_1/top_level_RFSoC_Controller_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.148 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/rfsoc_test/rfsoc_test.runs/top_level_RFSoC_Controller_0_0_synth_1/top_level_RFSoC_Controller_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_RFSoC_Controller_0_0_utilization_synth.rpt -pb top_level_RFSoC_Controller_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 21 11:55:54 2019...

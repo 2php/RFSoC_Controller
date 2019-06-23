@@ -56,7 +56,8 @@
 module top_level_microblaze_mcs_0_0 (
   Clk,
   Reset,
-  GPIO1_tri_o
+  GPIO1_tri_o,
+  GPIO2_tri_o
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.Clk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_0_clk_out1, INSERT_VIP 0, ASSOCIATED_ASYNC_RESET Reset, BOARD.ASSOCIATED_PARAM CLK_BOARD_INTERFACE" *)
@@ -68,10 +69,14 @@ input wire Reset;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME GPIO1, C_USE_GPO1 1, C_GPO1_SIZE 8, C_GPO1_INIT 0x00000000, C_USE_GPI1 0, C_GPI1_SIZE 32, C_GPI1_INTERRUPT 0, BOARD.ASSOCIATED_PARAM GPIO1_BOARD_INTERFACE" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO1 TRI_O" *)
 output wire [7 : 0] GPIO1_tri_o;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME GPIO2, C_USE_GPO2 1, C_GPO2_SIZE 16, C_GPO2_INIT 0x00000000, C_USE_GPI2 0, C_GPI2_SIZE 32, C_GPI2_INTERRUPT 0, BOARD.ASSOCIATED_PARAM GPIO2_BOARD_INTERFACE" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO2 TRI_O" *)
+output wire [15 : 0] GPIO2_tri_o;
 
   bd_04f1 inst (
     .Clk(Clk),
     .Reset(Reset),
-    .GPIO1_tri_o(GPIO1_tri_o)
+    .GPIO1_tri_o(GPIO1_tri_o),
+    .GPIO2_tri_o(GPIO2_tri_o)
   );
 endmodule

@@ -1,0 +1,31 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 3 -x 640 -y 360 -defaultsOSRD
+preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 2 -x 470 -y 420 -defaultsOSRD
+preplace inst dummy_controller_0 -pg 1 -lvl 1 -x 140 -y 180 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -x 470 -y 110 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 140 -y 60 -defaultsOSRD
+preplace netloc usp_rf_data_converter_0_clk_dac0 1 1 2 320 580 620
+preplace netloc dummy_controller_0_reset 1 1 1 280 110n
+preplace netloc clk_wiz_clk_out1 1 1 1 320J 60n
+preplace netloc usp_rf_data_converter_0_s00_axis_tready 1 1 1 310 90n
+preplace netloc dummy_controller_0_dummy_data 1 1 1 290 160n
+preplace netloc dummy_controller_0_t_valid 1 1 1 300 130n
+preplace netloc sysref_in_1 1 0 2 NJ 400 260J
+preplace netloc usp_rf_data_converter_0_vout00 1 2 1 620 360n
+preplace netloc dac0_clk_1 1 0 2 NJ 380 270J
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 60
+levelinfo -pg 1 0 140 470 640
+pagesize -pg 1 -db -bbox -sgen -130 0 740 590
+"
+}
+{
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_rf_converter_usp_cnt":"1"
+}

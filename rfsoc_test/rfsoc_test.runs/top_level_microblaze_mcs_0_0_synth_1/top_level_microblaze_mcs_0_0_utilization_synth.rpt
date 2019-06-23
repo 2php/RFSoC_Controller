@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Jun 21 10:06:18 2019
+| Date         : Fri Jun 21 11:54:41 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_microblaze_mcs_0_0_utilization_synth.rpt -pb top_level_microblaze_mcs_0_0_utilization_synth.pb
 | Design       : top_level_microblaze_mcs_0_0
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  | 1055 |     0 |    425280 |  0.25 |
-|   LUT as Logic             |  832 |     0 |    425280 |  0.20 |
+| CLB LUTs*                  | 1083 |     0 |    425280 |  0.25 |
+|   LUT as Logic             |  860 |     0 |    425280 |  0.20 |
 |   LUT as Memory            |  223 |     0 |    213600 |  0.10 |
 |     LUT as Distributed RAM |  128 |     0 |           |       |
 |     LUT as Shift Register  |   95 |     0 |           |       |
-| CLB Registers              | 1389 |     0 |    850560 |  0.16 |
-|   Register as Flip Flop    | 1389 |     0 |    850560 |  0.16 |
+| CLB Registers              | 1433 |     0 |    850560 |  0.17 |
+|   Register as Flip Flop    | 1433 |     0 |    850560 |  0.17 |
 |   Register as Latch        |    0 |     0 |    850560 |  0.00 |
 | CARRY8                     |   15 |     0 |     53160 |  0.03 |
 | F7 Muxes                   |   35 |     0 |    212640 |  0.02 |
@@ -60,9 +60,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 7     |          Yes |           - |          Set |
-| 262   |          Yes |           - |        Reset |
-| 32    |          Yes |         Set |            - |
-| 1088  |          Yes |       Reset |            - |
+| 263   |          Yes |           - |        Reset |
+| 31    |          Yes |         Set |            - |
+| 1132  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -161,19 +161,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1088 |            Register |
-| LUT6     |  299 |                 CLB |
-| LUT4     |  282 |                 CLB |
-| FDCE     |  262 |            Register |
-| LUT5     |  229 |                 CLB |
+| FDRE     | 1132 |            Register |
+| LUT6     |  305 |                 CLB |
+| LUT4     |  289 |                 CLB |
+| FDCE     |  263 |            Register |
+| LUT5     |  234 |                 CLB |
 | RAMD32   |  128 |                 CLB |
-| LUT3     |  113 |                 CLB |
-| LUT2     |  100 |                 CLB |
+| LUT3     |  124 |                 CLB |
+| LUT2     |  110 |                 CLB |
 | SRL16E   |   87 |                 CLB |
 | MUXF7    |   35 |                 CLB |
 | RAMB36E2 |   32 |           Block Ram |
-| FDSE     |   32 |            Register |
-| LUT1     |   16 |                 CLB |
+| FDSE     |   31 |            Register |
+| LUT1     |   15 |                 CLB |
 | CARRY8   |   15 |                 CLB |
 | SRLC16E  |    8 |                 CLB |
 | FDPE     |    7 |            Register |

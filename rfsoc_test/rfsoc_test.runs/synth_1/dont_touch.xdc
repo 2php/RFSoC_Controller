@@ -15,4 +15,19 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_clk_w
 # IP: bd/top_level/ip/top_level_util_vector_logic_0_0/top_level_util_vector_logic_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_util_vector_logic_0_0 || ORIG_REF_NAME==top_level_util_vector_logic_0_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_RFSoC_Controller_0_0/top_level_RFSoC_Controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_RFSoC_Controller_0_0 || ORIG_REF_NAME==top_level_RFSoC_Controller_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_gpio_split_0_0/top_level_gpio_split_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_gpio_split_0_0 || ORIG_REF_NAME==top_level_gpio_split_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_util_ds_buf_0_0/top_level_util_ds_buf_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_util_ds_buf_0_0 || ORIG_REF_NAME==top_level_util_ds_buf_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_usp_rf_data_converter_0_0 || ORIG_REF_NAME==top_level_usp_rf_data_converter_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_ila_0_0/top_level_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_ila_0_0 || ORIG_REF_NAME==top_level_ila_0_0} -quiet] -quiet
+
 # XDC: bd/top_level/top_level_ooc.xdc

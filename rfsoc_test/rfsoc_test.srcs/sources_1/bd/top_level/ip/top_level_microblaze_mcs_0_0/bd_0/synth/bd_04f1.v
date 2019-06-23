@@ -6,13 +6,15 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bd_04f1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_04f1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}" *) (* HW_HANDOFF = "top_level_microblaze_mcs_0_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "bd_04f1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_04f1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level_microblaze_mcs_0_0.hwdef" *) 
 module bd_04f1
    (Clk,
     GPIO1_tri_o,
+    GPIO2_tri_o,
     Reset);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_ASYNC_RESET Reset, CLK_DOMAIN top_level_clk_wiz_0_clk_out1, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.0" *) input Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_ASYNC_RESET Reset, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input Clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO1 TRI_O" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME GPIO1, C_GPI1_INTERRUPT 0, C_GPI1_SIZE 32, C_GPO1_INIT 0x00000000, C_GPO1_SIZE 8, C_USE_GPI1 0, C_USE_GPO1 1" *) output [7:0]GPIO1_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO2 TRI_O" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME GPIO2, C_GPI2_INTERRUPT 0, C_GPI2_SIZE 32, C_GPO2_INIT 0x00000000, C_GPO2_SIZE 16, C_USE_GPI2 0, C_USE_GPO2 1" *) output [15:0]GPIO2_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input Reset;
 
   wire Clk3;
@@ -84,6 +86,7 @@ module bd_04f1
   wire [0:31]ilmb_sl_0_WRITEDBUS;
   wire ilmb_sl_0_WRITESTROBE;
   wire [7:0]iomodule_0_GPIO1_TRI_O;
+  wire [15:0]iomodule_0_GPIO2_TRI_O;
   wire [0:0]mdm_0_ARESETN;
   wire [31:0]mdm_0_s_axi_ARADDR;
   wire mdm_0_s_axi_ARREADY;
@@ -114,6 +117,7 @@ module bd_04f1
 
   assign Clk3 = Clk;
   assign GPIO1_tri_o[7:0] = iomodule_0_GPIO1_TRI_O;
+  assign GPIO2_tri_o[15:0] = iomodule_0_GPIO2_TRI_O;
   bd_04f1_dlmb_0 dlmb
        (.LMB_ABus(dlmb_sl_0_ABUS),
         .LMB_AddrStrobe(dlmb_sl_0_ADDRSTROBE),
@@ -211,6 +215,7 @@ module bd_04f1
   bd_04f1_iomodule_0_0 iomodule_0
        (.Clk(Clk3),
         .GPO1(iomodule_0_GPIO1_TRI_O),
+        .GPO2(iomodule_0_GPIO2_TRI_O),
         .LMB_ABus(dlmb_sl_0_ABUS),
         .LMB_AddrStrobe(dlmb_sl_0_ADDRSTROBE),
         .LMB_BE(dlmb_sl_0_BE),

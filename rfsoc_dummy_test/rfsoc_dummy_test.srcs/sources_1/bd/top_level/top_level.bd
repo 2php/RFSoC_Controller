@@ -1,0 +1,226 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3C5A11160308A8F2",
+      "device": "xczu29dr-ffvf1760-2-e",
+      "name": "top_level",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1"
+    },
+    "design_tree": {
+      "usp_rf_data_converter_0": "",
+      "dummy_controller_0": "",
+      "ila_0": "",
+      "clk_wiz": ""
+    },
+    "interface_ports": {
+      "sysref_in": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:display_usp_rf_data_converter:diff_pins_rtl:1.0"
+      },
+      "dac0_clk": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "200000000.0"
+          }
+        }
+      },
+      "vout00": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+      },
+      "diff_clock_rtl": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "300000000"
+          }
+        }
+      }
+    },
+    "components": {
+      "usp_rf_data_converter_0": {
+        "vlnv": "xilinx.com:ip:usp_rf_data_converter:2.1",
+        "xci_name": "top_level_usp_rf_data_converter_0_0",
+        "parameters": {
+          "ADC_Slice00_Enable": {
+            "value": "false"
+          },
+          "DAC0_Outclk_Freq": {
+            "value": "31.250"
+          },
+          "DAC0_PLL_Enable": {
+            "value": "true"
+          },
+          "DAC0_Refclk_Freq": {
+            "value": "300.000"
+          },
+          "DAC0_Sampling_Rate": {
+            "value": "0.5"
+          },
+          "DAC_Interpolation_Mode00": {
+            "value": "1"
+          },
+          "DAC_Mixer_Type00": {
+            "value": "0"
+          },
+          "DAC_RTS": {
+            "value": "false"
+          },
+          "DAC_Slice00_Enable": {
+            "value": "true"
+          }
+        }
+      },
+      "dummy_controller_0": {
+        "vlnv": "xilinx.com:module_ref:dummy_controller:1.0",
+        "xci_name": "top_level_dummy_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dummy_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "dummy_data": {
+            "direction": "O",
+            "left": "255",
+            "right": "0"
+          },
+          "t_valid": {
+            "direction": "O"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "top_level_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_level_clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "33.330000000000005"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "101.475"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "77.836"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "4.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "3.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "300.000"
+          },
+          "PRIM_SOURCE": {
+            "value": "Differential_clock_capable_pin"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "usp_rf_data_converter_0_vout00": {
+        "interface_ports": [
+          "vout00",
+          "usp_rf_data_converter_0/vout00"
+        ]
+      },
+      "dac0_clk_1": {
+        "interface_ports": [
+          "dac0_clk",
+          "usp_rf_data_converter_0/dac0_clk"
+        ]
+      },
+      "sysref_in_1": {
+        "interface_ports": [
+          "sysref_in",
+          "usp_rf_data_converter_0/sysref_in"
+        ]
+      },
+      "diff_clock_rtl_1": {
+        "interface_ports": [
+          "diff_clock_rtl",
+          "clk_wiz/CLK_IN1_D"
+        ]
+      }
+    },
+    "nets": {
+      "usp_rf_data_converter_0_clk_dac0": {
+        "ports": [
+          "usp_rf_data_converter_0/clk_dac0",
+          "usp_rf_data_converter_0/s0_axis_aclk",
+          "usp_rf_data_converter_0/s_axi_aclk",
+          "ila_0/probe3"
+        ]
+      },
+      "dummy_controller_0_reset": {
+        "ports": [
+          "dummy_controller_0/reset",
+          "usp_rf_data_converter_0/s_axi_aresetn",
+          "usp_rf_data_converter_0/s0_axis_aresetn",
+          "ila_0/probe1"
+        ]
+      },
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "ila_0/clk"
+        ]
+      },
+      "usp_rf_data_converter_0_s00_axis_tready": {
+        "ports": [
+          "usp_rf_data_converter_0/s00_axis_tready",
+          "ila_0/probe0"
+        ]
+      },
+      "dummy_controller_0_dummy_data": {
+        "ports": [
+          "dummy_controller_0/dummy_data",
+          "usp_rf_data_converter_0/s00_axis_tdata"
+        ]
+      },
+      "dummy_controller_0_t_valid": {
+        "ports": [
+          "dummy_controller_0/t_valid",
+          "usp_rf_data_converter_0/s00_axis_tvalid",
+          "ila_0/probe2"
+        ]
+      }
+    }
+  }
+}

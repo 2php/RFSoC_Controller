@@ -18,10 +18,11 @@ proc create_report { reportName command } {
   }
 }
 set_param power.BramSDPPropagationFix 1
+set_param chipscope.maxJobs 3
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
-set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group B241/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10160-DESKTOP-6ILET8A/incrSyn}
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {[BD 41-1306]}  -suppress 
@@ -42,6 +43,8 @@ set_property ip_output_repo c:/james/fpga_projects/rfsoc_test/rfsoc_test.cache/i
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
 add_files C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/top_level.bd
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/top_level_microblaze_mcs_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/top_level_microblaze_mcs_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_0/bd_04f1_microblaze_I_0.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_0/bd_04f1_microblaze_I_0_ooc_debug.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_1/bd_04f1_rst_0_0_board.xdc]
@@ -53,14 +56,22 @@ set_property used_in_implementation false [get_files -all c:/james/fpga_projects
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_7/bd_04f1_mdm_0_0_ooc_trace.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_9/bd_04f1_iomodule_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/bd_04f1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/top_level_microblaze_mcs_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/top_level_microblaze_mcs_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0/top_level_clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0/top_level_clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0/top_level_clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_util_ds_buf_0_0/top_level_util_ds_buf_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_util_ds_buf_0_0/top_level_util_ds_buf_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_ila_0_0/top_level_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/top_level_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_0/data/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/mb_bootloop_le.elf]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_mcs_0_0/bd_0/ip/ip_0/data/mb_bootloop_le.elf]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_test/rfsoc_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/data/startup.elf]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

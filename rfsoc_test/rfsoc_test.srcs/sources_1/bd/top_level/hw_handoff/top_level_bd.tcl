@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source top_level_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# RFSoC_Controller, gpio_split
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -158,10 +165,19 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set app_leds [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 app_leds ]
 
+  set dac0_clk [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 dac0_clk ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {200000000.0} \
+   ] $dac0_clk
+
   set diff_clock_rtl [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 diff_clock_rtl ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {300000000} \
    ] $diff_clock_rtl
+
+  set sysref_in [ create_bd_intf_port -mode Slave -vlnv xilinx.com:display_usp_rf_data_converter:diff_pins_rtl:1.0 sysref_in ]
+
+  set vout00 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 vout00 ]
 
 
   # Create ports
@@ -170,30 +186,95 @@ proc create_root_design { parentCell } {
    CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $reset_rtl
 
+  # Create instance: RFSoC_Controller_0, and set properties
+  set block_name RFSoC_Controller
+  set block_cell_name RFSoC_Controller_0
+  if { [catch {set RFSoC_Controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $RFSoC_Controller_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {33.330000000000005} \
    CONFIG.CLKOUT1_JITTER {101.475} \
    CONFIG.CLKOUT1_PHASE_ERROR {77.836} \
+   CONFIG.CLKOUT2_JITTER {81.814} \
+   CONFIG.CLKOUT2_PHASE_ERROR {77.836} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {300.000} \
+   CONFIG.CLKOUT2_USED {true} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {4.000} \
    CONFIG.MMCM_CLKIN1_PERIOD {3.333} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
+   CONFIG.NUM_OUT_CLKS {2} \
    CONFIG.PRIM_IN_FREQ {300.000} \
    CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} \
    CONFIG.RESET_PORT {reset} \
    CONFIG.RESET_TYPE {ACTIVE_HIGH} \
    CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_RESET {false} \
  ] $clk_wiz
+
+  # Create instance: gpio_split_0, and set properties
+  set block_name gpio_split
+  set block_cell_name gpio_split_0
+  if { [catch {set gpio_split_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $gpio_split_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {3} \
+ ] $ila_0
 
   # Create instance: microblaze_mcs_0, and set properties
   set microblaze_mcs_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze_mcs:3.0 microblaze_mcs_0 ]
   set_property -dict [ list \
    CONFIG.DEBUG_ENABLED {2} \
    CONFIG.GPIO1_BOARD_INTERFACE {app_leds} \
+   CONFIG.GPO2_SIZE {16} \
    CONFIG.MEMSIZE {131072} \
    CONFIG.USE_BOARD_FLOW {true} \
+   CONFIG.USE_GPO2 {1} \
  ] $microblaze_mcs_0
+
+  # Create instance: usp_rf_data_converter_0, and set properties
+  set usp_rf_data_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:usp_rf_data_converter:2.1 usp_rf_data_converter_0 ]
+  set_property -dict [ list \
+   CONFIG.ADC0_Enable {0} \
+   CONFIG.ADC0_Fabric_Freq {0.0} \
+   CONFIG.ADC_Decimation_Mode00 {0} \
+   CONFIG.ADC_Mixer_Type00 {3} \
+   CONFIG.ADC_Slice00_Enable {false} \
+   CONFIG.Axiclk_Freq {31.25} \
+   CONFIG.DAC0_Enable {1} \
+   CONFIG.DAC0_Fabric_Freq {31.250} \
+   CONFIG.DAC0_Outclk_Freq {31.250} \
+   CONFIG.DAC0_PLL_Enable {true} \
+   CONFIG.DAC0_Refclk_Freq {200.000} \
+   CONFIG.DAC0_Sampling_Rate {0.5} \
+   CONFIG.DAC_Interpolation_Mode00 {1} \
+   CONFIG.DAC_Mixer_Type00 {0} \
+   CONFIG.DAC_Slice00_Enable {true} \
+ ] $usp_rf_data_converter_0
+
+  # Create instance: util_ds_buf_0, and set properties
+  set util_ds_buf_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 ]
+  set_property -dict [ list \
+   CONFIG.C_BUF_TYPE {BUFG} \
+ ] $util_ds_buf_0
 
   # Create instance: util_vector_logic_0, and set properties
   set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
@@ -204,13 +285,33 @@ proc create_root_design { parentCell } {
  ] $util_vector_logic_0
 
   # Create interface connections
+  connect_bd_intf_net -intf_net dac0_clk_1 [get_bd_intf_ports dac0_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac0_clk]
   connect_bd_intf_net -intf_net diff_clock_rtl_1 [get_bd_intf_ports diff_clock_rtl] [get_bd_intf_pins clk_wiz/CLK_IN1_D]
   connect_bd_intf_net -intf_net microblaze_mcs_0_GPIO1 [get_bd_intf_ports app_leds] [get_bd_intf_pins microblaze_mcs_0/GPIO1]
+  connect_bd_intf_net -intf_net sysref_in_1 [get_bd_intf_ports sysref_in] [get_bd_intf_pins usp_rf_data_converter_0/sysref_in]
+  connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout00 [get_bd_intf_ports vout00] [get_bd_intf_pins usp_rf_data_converter_0/vout00]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins clk_wiz/clk_out1] [get_bd_pins microblaze_mcs_0/Clk]
-  connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz/reset] [get_bd_pins util_vector_logic_0/Op1]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins microblaze_mcs_0/Reset] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net RFSoC_Controller_0_ch_0_data [get_bd_pins RFSoC_Controller_0/ch_0_data] [get_bd_pins usp_rf_data_converter_0/s00_axis_tdata]
+  connect_bd_net -net RFSoC_Controller_0_fire_clk_out [get_bd_pins RFSoC_Controller_0/fire_clk_out] [get_bd_pins util_ds_buf_0/BUFG_I]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins clk_wiz/clk_out1] [get_bd_pins ila_0/probe0] [get_bd_pins microblaze_mcs_0/Clk]
+  connect_bd_net -net clk_wiz_clk_out2 [get_bd_pins clk_wiz/clk_out2] [get_bd_pins ila_0/clk]
+  connect_bd_net -net gpio_split_0_a_tv [get_bd_pins gpio_split_0/a_tv] [get_bd_pins usp_rf_data_converter_0/s00_axis_tvalid]
+  connect_bd_net -net gpio_split_0_arm [get_bd_pins RFSoC_Controller_0/arm] [get_bd_pins gpio_split_0/arm]
+  connect_bd_net -net gpio_split_0_delay_reg_data_in [get_bd_pins RFSoC_Controller_0/delay_reg_data_in] [get_bd_pins gpio_split_0/delay_reg_data_in]
+  connect_bd_net -net gpio_split_0_delay_reg_sclk [get_bd_pins RFSoC_Controller_0/delay_reg_sclk] [get_bd_pins gpio_split_0/delay_reg_sclk]
+  connect_bd_net -net gpio_split_0_fire [get_bd_pins RFSoC_Controller_0/fire] [get_bd_pins gpio_split_0/fire]
+  connect_bd_net -net gpio_split_0_idle_reg_data_in [get_bd_pins RFSoC_Controller_0/idle_reg_data_in] [get_bd_pins gpio_split_0/idle_reg_data_in]
+  connect_bd_net -net gpio_split_0_idle_reg_sclk [get_bd_pins RFSoC_Controller_0/idle_reg_sclk] [get_bd_pins gpio_split_0/idle_reg_sclk]
+  connect_bd_net -net gpio_split_0_wave_reg_cycle [get_bd_pins RFSoC_Controller_0/wave_reg_cycle] [get_bd_pins gpio_split_0/wave_reg_cycle]
+  connect_bd_net -net gpio_split_0_wave_reg_data_in [get_bd_pins RFSoC_Controller_0/wave_reg_data_in] [get_bd_pins gpio_split_0/wave_reg_data_in]
+  connect_bd_net -net gpio_split_0_wave_reg_pclk [get_bd_pins RFSoC_Controller_0/wave_reg_pclk] [get_bd_pins gpio_split_0/wave_reg_pclk]
+  connect_bd_net -net gpio_split_0_wave_reg_sclk [get_bd_pins RFSoC_Controller_0/wave_reg_sclk] [get_bd_pins gpio_split_0/wave_reg_sclk]
+  connect_bd_net -net microblaze_mcs_0_GPIO2_tri_o [get_bd_pins gpio_split_0/gpio_in] [get_bd_pins microblaze_mcs_0/GPIO2_tri_o]
+  connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins ila_0/probe2] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net usp_rf_data_converter_0_clk_dac0 [get_bd_pins RFSoC_Controller_0/clk_in] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk]
+  connect_bd_net -net util_ds_buf_0_BUFG_O [get_bd_pins RFSoC_Controller_0/fire_clk_in] [get_bd_pins util_ds_buf_0/BUFG_O]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins RFSoC_Controller_0/reset] [get_bd_pins ila_0/probe1] [get_bd_pins microblaze_mcs_0/Reset] [get_bd_pins usp_rf_data_converter_0/s0_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s_axi_aresetn] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
 
