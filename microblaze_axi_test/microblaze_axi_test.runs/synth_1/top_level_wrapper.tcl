@@ -18,16 +18,8 @@ proc create_report { reportName command } {
   }
 }
 set_param tcl.collectionResultDisplayLimit 0
-set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 3
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
-set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group B241/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16852-DESKTOP-6ILET8A/incrSyn}
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,7 +28,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.cache/wt [current_project]
 set_property parent.project_path C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
@@ -69,6 +61,26 @@ set_property used_in_implementation false [get_files -all c:/james/fpga_projects
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_axis_dwidth_converter_0_1/top_level_axis_dwidth_converter_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/top_level_system_ila_0_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/bd_0/ip/ip_0/bd_5a3c_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_2/bd_0/bd_5a3c_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_2/top_level_rst_top_level_31M_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_2/top_level_rst_top_level_31M_2.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_2/top_level_rst_top_level_31M_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/top_level_system_ila_1_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/bd_0/ip/ip_0/bd_9a6d_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_2/bd_0/bd_9a6d_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/top_level_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_0_0/data/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/data/startup.elf]

@@ -1,0 +1,21 @@
+18:09:57 **** Auto Build of configuration Debug for project arm_axi_test_bsp_xaxidma_example_simple_poll_1 ****
+make all 
+'Building file: ../src/xaxidma_example_simple_poll.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xaxidma_example_simple_poll.o" -I../../arm_axi_test_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/xaxidma_example_simple_poll.d" -MT"src/xaxidma_example_simple_poll.o" -o "src/xaxidma_example_simple_poll.o" "../src/xaxidma_example_simple_poll.c"
+'Finished building: ../src/xaxidma_example_simple_poll.c'
+' '
+'Building target: arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arm_axi_test_bsp/psu_cortexa53_0/lib -o "arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf"  ./src/xaxidma_example_simple_poll.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf  |tee "arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  45276	   4632	  23680	  73588	  11f74	arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf
+'Finished building: arm_axi_test_bsp_xaxidma_example_simple_poll_1.elf.size'
+' '
+
+18:09:58 Build Finished (took 1s.736ms)
+

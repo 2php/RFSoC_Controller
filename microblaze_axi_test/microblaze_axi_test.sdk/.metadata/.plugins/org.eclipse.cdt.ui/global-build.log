@@ -1,127 +1,99 @@
-17:06:46 **** Build of project microblaze_axi_test_bsp ****
+10:57:30 **** Clean-only build of configuration Debug for project microblaze_axi_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_axi_test.elf.size  microblaze_axi_test.elf
+' '
+10:57:30 **** Clean-only build of project microblaze_axi_test_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s clean 
+make[3]: CMakeFiles/Makefile2: No such file or directory
+make[3]: *** No rule to make target 'CMakeFiles/Makefile2'.
+make[3]: Failed to remake makefile 'CMakeFiles/Makefile2'.
+make[3]: *** No rule to make target 'clean'.
+make[2]: *** [Makefile:148: clean] Error 2
+make[1]: *** [Makefile:11: clean] Error 2
+make: *** [Makefile:33: microblaze_0/libsrc/libmetal_v2_0/src/make.clean] Error 2
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s clean 
+rm: cannot lstat `*.o': Invalid argument
+make[1]: *** [Makefile:28: clean] Error 1
+make: *** [Makefile:33: microblaze_0/libsrc/rfdc_v6_0/src/make.clean] Error 2
+make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Target 'clean' not remade because of errors.
+10:57:34 **** Build of project microblaze_axi_test_bsp ****
 make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: cannot stat `../build_libmetal/lib/include/metal': No such file or directory
+make[1]: *** [Makefile:7: include] Error 1
+make: *** [Makefile:26: microblaze_0/libsrc/libmetal_v2_0/src/make.include] Error 2
 "Running Make include in microblaze_0/libsrc/rfdc_v6_0/src"
-make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [Makefile:25: include] Error 1
+make: *** [Makefile:26: microblaze_0/libsrc/rfdc_v6_0/src/make.include] Error 2
 "Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [Makefile:67: standalone_includes] Error 1
+cp: target `../../../../include' is not a directory
+make[2]: *** [Makefile:71: include] Error 1
+make[1]: *** [Makefile:70: profile_includes] Error 2
+make[1]: Target 'include' not remade because of errors.
+make: *** [Makefile:26: microblaze_0/libsrc/standalone_v7_0/src/make.include] Error 2
 "Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/rfdc_v6_0/src"
-make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling rfdc"
-In file included from xrfdc.c:168:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_clock.c:56:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_g.c:37:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_intr.c:66:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_mb.c:50:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_mixer.c:55:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_mts.h:67,
-                 from xrfdc_mts.c:62:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from xrfdc_sinit.c:58:
-xrfdc.h:246:10: fatal error: metal/sys.h: No such file or directory
- #include <metal/sys.h>
-          ^~~~~~~~~~~~~
-compilation terminated.
-make[1]: *** [Makefile:20: libs] Error 1
-make: *** [Makefile:30: microblaze_0/libsrc/rfdc_v6_0/src/make.libs] Error 2
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [Makefile:25: include] Error 1
+make: *** [Makefile:26: microblaze_0/libsrc/uartlite_v3_2/src/make.include] Error 2
 make: Target 'all' not remade because of errors.
-17:06:55 **** Build of configuration Debug for project microblaze_axi_test ****
+10:57:35 **** Build of configuration Debug for project microblaze_axi_test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2696	    268	   3108	   6072	   17b8	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:06:57 **** Auto Build of configuration Debug for project microblaze_axi_test ****
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:10: fatal error: xil_printf.h: No such file or directory
+ #include "xil_printf.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+10:57:36 **** Auto Build of configuration Debug for project microblaze_axi_test ****
 make all 
-make: Nothing to be done for 'all'.
-17:07:21 **** Auto Build of project microblaze_axi_test_bsp ****
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:10: fatal error: xil_printf.h: No such file or directory
+ #include "xil_printf.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+10:58:01 **** Auto Build of project microblaze_axi_test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/libmetal_v2_0/src"
-make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/rfdc_v6_0/src"
-make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling bram"
 mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
 "Running Make libs in microblaze_0/libsrc/libmetal_v2_0/src"
-make -C microblaze_0/libsrc/libmetal_v2_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 Scanning dependencies of target metal-static
 [  5%] Building C object lib/CMakeFiles/metal-static.dir/dma.c.obj
 [ 10%] Building C object lib/CMakeFiles/metal-static.dir/device.c.obj
@@ -192,507 +164,89 @@ Install the project...
 -- Installing: ../../../include/metal/system/generic/xlnx_common/sys.h
 -- Installing: ../../../lib/libmetal.a
 "Running Make libs in microblaze_0/libsrc/rfdc_v6_0/src"
-make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling rfdc"
 "Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling standalone";
 microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
  #pragma message ("For the sleep routines, assembly instructions are used")
          ^~~~~~~
 "Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-17:07:40 **** Clean-only build of configuration Debug for project microblaze_axi_test ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  microblaze_axi_test.elf.size  microblaze_axi_test.elf
-' '
-17:07:41 **** Auto Build of configuration Debug for project microblaze_axi_test ****
+10:58:27 **** Auto Build of configuration Debug for project microblaze_axi_test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:118:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:120:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,strlen(buff));
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
 'Building target: microblaze_axi_test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
 'Finished building target: microblaze_axi_test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  72874	   3344	   9942	  86160	  15090	microblaze_axi_test.elf
+   2504	    268	   3108	   5880	   16f8	microblaze_axi_test.elf
 'Finished building: microblaze_axi_test.elf.size'
 ' '
-17:08:03 **** Auto Build of configuration Debug for project microblaze_axi_test ****
+10:58:56 **** Auto Build of configuration Debug for project microblaze_axi_test ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
+../src/helloworld.c:147:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
 ../src/helloworld.c: At top level:
-../src/helloworld.c:118:6: warning: conflicting types for 'debug_print'
+../src/helloworld.c:191:6: warning: conflicting types for 'debug_print'
  void debug_print(char* buff)
       ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:120:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,strlen(buff));
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
+../src/helloworld.c:147:2: note: previous implicit declaration of 'debug_print' was here
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: microblaze_axi_test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mxl-pattern-compare -mcpu=v11.0 -mxl-soft-mul -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
 'Finished building target: microblaze_axi_test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  72874	   3344	   9942	  86160	  15090	microblaze_axi_test.elf
+  61654	   3344	   9938	  74936	  124b8	microblaze_axi_test.elf
 'Finished building: microblaze_axi_test.elf.size'
 ' '
-17:09:22 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+10:59:00 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:09:54 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+11:00:51 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:11:29 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:118:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:120:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,strlen(buff));
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72858	   3344	   9942	  86144	  15080	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:11:33 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+11:01:16 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:13:18 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:121:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,strlen(buff));
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72858	   3344	   9942	  86144	  15080	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:13:25 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+11:02:34 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:14:05 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:121:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,strlen(buff));
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72878	   3344	   9938	  86160	  15090	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:14:08 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+15:06:33 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:15:33 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:121:2: error: 'str_len' undeclared (first use in this function); did you mean 'strnlen'?
-  str_len = strlen(buff);
-  ^~~~~~~
-  strnlen
-../src/helloworld.c:121:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/helloworld.c:122:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,str_len);
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
-17:15:43 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?\n\r");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:122:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,str_len);
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72886	   3344	   9938	  86168	  15098	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:15:53 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+15:08:06 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:17:46 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:122:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,str_len);
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-../src/helloworld.c:124:16: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
-  u8* lineend = "\n\r";
-                ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72934	   3344	   9938	  86216	  150c8	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:18:04 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:100:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:120:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:100:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:123:28: warning: pointer targets in passing argument 2 of 'XUartLite_Send' differ in signedness [-Wpointer-sign]
-  XUartLite_Send(&UartLite, buff,str_len);
-                            ^~~~
-In file included from ../src/helloworld.c:51:
-../../microblaze_axi_test_bsp/microblaze_0/include/xuartlite.h:252:14: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
- unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
-              ^~~~~~~~~~~~~~
-../src/helloworld.c:125:16: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
-  u8* lineend = "\n\r";
-                ^~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72966	   3344	   9938	  86248	  150e8	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:18:07 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
+15:08:14 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
 make: Nothing to be done for 'all'.
-17:18:40 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72202	   3344	   9942	  85488	  14df0	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:18:43 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
-make all 
-make: Nothing to be done for 'all'.
-17:19:15 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-../src/helloworld.c: In function 'debug_print':
-../src/helloworld.c:122:15: error: expected ';' before '}' token
-  print("\n\r")
-               ^
-               ;
- }
- ~              
-make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
-17:19:19 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...?");
-   ^~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72226	   3344	   9942	  85512	  14e08	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
-17:19:22 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
-make all 
-make: Nothing to be done for 'all'.
-17:19:40 **** Auto Build of configuration Debug for project microblaze_axi_test ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...");
-   ^~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72222	   3344	   9938	  85504	  14e00	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '

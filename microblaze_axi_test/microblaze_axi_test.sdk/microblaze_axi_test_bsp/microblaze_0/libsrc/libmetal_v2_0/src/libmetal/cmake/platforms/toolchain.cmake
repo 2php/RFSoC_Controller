@@ -1,7 +1,7 @@
 set (CMAKE_SYSTEM_PROCESSOR "microblaze" CACHE STRING "")
 set (MACHINE "microblaze_generic")
 set (CROSS_PREFIX "mb-" CACHE STRING "")
-set (CMAKE_C_FLAGS " -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test_bsp/microblaze_0/include" CACHE STRING "")
+set (CMAKE_C_FLAGS " -mlittle-endian -mxl-pattern-compare -mxl-soft-mul -mhard-float -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test_bsp/microblaze_0/include" CACHE STRING "")
 set (CMAKE_SYSTEM_NAME "Generic" CACHE STRING "")
 include (CMakeForceCompiler)
 CMAKE_FORCE_C_COMPILER ("${CROSS_PREFIX}gcc" GNU)

@@ -42,13 +42,28 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_micro
 # IP: bd/top_level/ip/top_level_util_vector_logic_0_0/top_level_util_vector_logic_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_util_vector_logic_0_0 || ORIG_REF_NAME==top_level_util_vector_logic_0_0} -quiet] -quiet
 
-# IP: bd/top_level/ip/top_level_dummy_controller_0_0/top_level_dummy_controller_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_dummy_controller_0_0 || ORIG_REF_NAME==top_level_dummy_controller_0_0} -quiet] -quiet
-
 # IP: bd/top_level/ip/top_level_xbar_0/top_level_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_xbar_0 || ORIG_REF_NAME==top_level_xbar_0} -quiet] -quiet
 
 # IP: bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_usp_rf_data_converter_0_0 || ORIG_REF_NAME==top_level_usp_rf_data_converter_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_data_fifo_0_0 || ORIG_REF_NAME==top_level_axis_data_fifo_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axis_dwidth_converter_0_1/top_level_axis_dwidth_converter_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_dwidth_converter_0_1 || ORIG_REF_NAME==top_level_axis_dwidth_converter_0_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axi_gpio_0_0 || ORIG_REF_NAME==top_level_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_system_ila_0_2/top_level_system_ila_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_0_2 || ORIG_REF_NAME==top_level_system_ila_0_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_rst_top_level_31M_2/top_level_rst_top_level_31M_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_rst_top_level_31M_2 || ORIG_REF_NAME==top_level_rst_top_level_31M_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_system_ila_1_2/top_level_system_ila_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_1_2 || ORIG_REF_NAME==top_level_system_ila_1_2} -quiet] -quiet
 
 # XDC: bd/top_level/top_level_ooc.xdc

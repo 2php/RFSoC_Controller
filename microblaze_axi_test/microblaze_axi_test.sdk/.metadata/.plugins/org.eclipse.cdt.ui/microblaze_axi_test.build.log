@@ -1,33 +1,6 @@
-17:19:40 **** Auto Build of configuration Debug for project microblaze_axi_test ****
+15:08:14 **** Incremental Build of configuration Debug for project microblaze_axi_test ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_axi_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:99:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
-   debug_print("Running RF self test...");
-   ^~~~~~~~~~~
-   xdbg_printf
-../src/helloworld.c: At top level:
-../src/helloworld.c:119:6: warning: conflicting types for 'debug_print'
- void debug_print(char* buff)
-      ^~~~~~~~~~~
-../src/helloworld.c:99:3: note: previous implicit declaration of 'debug_print' was here
-   debug_print("Running RF self test...");
-   ^~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: microblaze_axi_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_axi_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_axi_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: microblaze_axi_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size microblaze_axi_test.elf  |tee "microblaze_axi_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  72222	   3344	   9938	  85504	  14e00	microblaze_axi_test.elf
-'Finished building: microblaze_axi_test.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-17:19:41 Build Finished (took 1s.291ms)
+15:08:15 Build Finished (took 238ms)
 

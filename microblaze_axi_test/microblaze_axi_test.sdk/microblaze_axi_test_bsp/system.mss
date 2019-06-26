@@ -15,7 +15,7 @@ BEGIN PROCESSOR
  PARAMETER DRIVER_NAME = cpu
  PARAMETER DRIVER_VER = 2.9
  PARAMETER HW_INSTANCE = microblaze_0
- PARAMETER compiler_flags =  -mlittle-endian -mxl-soft-mul -mcpu=v11.0
+ PARAMETER compiler_flags =  -mlittle-endian -mxl-pattern-compare -mxl-soft-mul -mhard-float -mcpu=v11.0
 END
 
 
@@ -41,6 +41,12 @@ BEGIN DRIVER
  PARAMETER DRIVER_NAME = rfdc
  PARAMETER DRIVER_VER = 6.0
  PARAMETER HW_INSTANCE = usp_rf_data_converter_0
+END
+
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = gpio
+ PARAMETER DRIVER_VER = 4.4
+ PARAMETER HW_INSTANCE = axi_gpio_0
 END
 
 

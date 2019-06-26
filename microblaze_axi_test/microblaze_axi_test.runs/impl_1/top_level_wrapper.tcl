@@ -60,21 +60,13 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
-  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 3
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
-  set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group B241/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16852-DESKTOP-6ILET8A/incrSyn}
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
@@ -84,7 +76,7 @@ set rc [catch {
   set_property parent.project_path C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.xpr [current_project]
   set_property ip_output_repo C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files -quiet C:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.runs/synth_1/top_level_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
@@ -173,7 +165,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force top_level_wrapper.mmi }
   write_bitstream -force top_level_wrapper.bit 
   catch { write_sysdef -hwdef top_level_wrapper.hwdef -bitfile top_level_wrapper.bit -meminfo top_level_wrapper.mmi -file top_level_wrapper.sysdef }

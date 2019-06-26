@@ -2,55 +2,65 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
-preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
-preplace port vout00 -pg 1 -lvl 6 -x 1930 -y 180 -defaultsOSRD
-preplace port reset_rtl -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
-preplace port uart_rx -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
-preplace port uart_tx -pg 1 -lvl 6 -x 1930 -y 530 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 3 -x 960 -y 250 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -x 1400 -y 260 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 2 -x 510 -y 70 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 170 -y 70 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 510 -y 260 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 5 -x 1760 -y 520 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 4 -x 1400 -y 510 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 240 -defaultsOSRD
-preplace inst usp_rf_data_converter_0 -pg 1 -lvl 5 -x 1760 -y 200 -defaultsOSRD
-preplace inst dummy_controller_0 -pg 1 -lvl 4 -x 1400 -y 80 -defaultsOSRD
-preplace netloc microblaze_0_Clk 1 1 4 330 160 700 140 1220 340 1590
-preplace netloc clk_wiz_1_locked 1 1 1 320 80n
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 680 220n
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 710J 160 1210
-preplace netloc mdm_1_debug_sys_rst 1 0 3 20 140 340 140 680
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 690J 130 1230 350 1600
-preplace netloc reset_rtl_1 1 0 1 NJ 240
-preplace netloc util_vector_logic_0_Res 1 1 1 NJ 240
-preplace netloc axi_uartlite_0_tx 1 5 1 NJ 530
-preplace netloc uart_rx_1 1 0 6 NJ 390 NJ 390 NJ 390 1250J 370 NJ 370 1910
-preplace netloc dummy_controller_0_dummy_data 1 4 1 1600 60n
-preplace netloc dummy_controller_0_t_valid 1 4 1 1590 80n
-preplace netloc usp_rf_data_converter_0_s00_axis_tready 1 3 2 1250 160 NJ
-preplace netloc usp_rf_data_converter_0_clk_dac0 1 4 2 1610 40 1910
-preplace netloc dummy_controller_0_reset 1 4 1 1560 100n
-preplace netloc microblaze_0_dlmb_1 1 3 1 N 230
-preplace netloc microblaze_0_ilmb_1 1 3 1 N 250
-preplace netloc microblaze_0_debug 1 2 1 720 60n
-preplace netloc diff_clock_rtl_1 1 0 1 NJ 60
-preplace netloc microblaze_0_M_AXI_DP 1 3 1 1200 270n
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 4 1 N 500
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 4 1 1570 100n
-preplace netloc sysref_in_1 1 0 5 NJ 360 NJ 360 NJ 360 NJ 360 1580J
-preplace netloc dac0_clk_1 1 0 5 NJ 150 NJ 150 NJ 150 1240J 170 1550J
-preplace netloc usp_rf_data_converter_0_vout00 1 5 1 NJ 180
-levelinfo -pg 1 0 170 510 960 1400 1760 1930
-pagesize -pg 1 -db -bbox -sgen -130 0 2030 650
+preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 850 -defaultsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 7 -x 2330 -y 570 -defaultsOSRD
+preplace port app_leds -pg 1 -lvl 7 -x 2330 -y 800 -defaultsOSRD
+preplace port reset_rtl -pg 1 -lvl 0 -x 0 -y 750 -defaultsOSRD
+preplace port uart_rx -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port uart_tx -pg 1 -lvl 7 -x 2330 -y 1040 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 3 -x 960 -y 810 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -x 1420 -y 810 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 2 -x 510 -y 1020 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 170 -y 860 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 510 -y 830 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 2160 -y 1030 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1790 -y 780 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 750 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 6 -x 2160 -y 590 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 5 -x 1790 -y 290 -defaultsOSRD
+preplace inst axis_dwidth_converter_0 -pg 1 -lvl 4 -x 1420 -y 570 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2160 -y 820 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2160 -y 120 -defaultsOSRD
+preplace inst rst_top_level_31M -pg 1 -lvl 5 -x 1790 -y 100 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 5 -x 1790 -y 460 -defaultsOSRD
+preplace netloc microblaze_0_Clk 1 1 5 330 930 710 920 1250 720 1570 600 1980
+preplace netloc clk_wiz_1_locked 1 1 1 N 870
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 690 790n
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 680J 710 1220
+preplace netloc mdm_1_debug_sys_rst 1 0 3 20 930 340 950 680
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 680 910 1260 890 1580 620 1970
+preplace netloc reset_rtl_1 1 0 1 NJ 750
+preplace netloc util_vector_logic_0_Res 1 1 4 320 80 NJ 80 NJ 80 NJ
+preplace netloc axi_uartlite_0_tx 1 6 1 NJ 1040
+preplace netloc uart_rx_1 1 0 7 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 NJ 940 2300
+preplace netloc usp_rf_data_converter_0_clk_dac0 1 4 3 1600 0 2010 720 2300
+preplace netloc axi_gpio_0_gpio2_io_o 1 4 3 1600 590 1960 730 2300
+preplace netloc rst_top_level_31M_peripheral_aresetn 1 5 1 N 140
+preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 800
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 N 800
+preplace netloc microblaze_0_M0_AXIS 1 3 2 1200 440 NJ
+preplace netloc dac0_clk_1 1 0 6 20J 200 NJ 200 NJ 200 NJ 200 NJ 200 2000J
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1990 520n
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 5 1 1960 760n
+preplace netloc microblaze_0_ilmb_1 1 3 1 1210 790n
+preplace netloc microblaze_0_debug 1 2 1 700 810n
+preplace netloc sysref_in_1 1 0 6 NJ 690 NJ 690 NJ 690 NJ 690 1590J 580 NJ
+preplace netloc microblaze_0_dlmb_1 1 3 1 1240 770n
+preplace netloc usp_rf_data_converter_0_vout00 1 6 1 NJ 570
+preplace netloc microblaze_0_M_AXI_DP 1 3 2 1230J 710 1600
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 850
+preplace netloc axis_data_fifo_0_M_AXIS 1 5 1 2020 100n
+preplace netloc axis_dwidth_converter_0_M_AXIS 1 4 1 1560 260n
+levelinfo -pg 1 0 170 510 960 1420 1790 2160 2330
+pagesize -pg 1 -db -bbox -sgen -130 -70 2440 1120
 "
 }
 {
-   "da_axi4_cnt":"2",
-   "da_board_cnt":"4",
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"5",
+   "da_clkrst_cnt":"1",
    "da_mb_cnt":"1",
    "da_rf_converter_usp_cnt":"1"
 }

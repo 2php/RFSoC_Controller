@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561247508">
+<GenRun Id="impl_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561483766">
   <File Type="BITSTR-BMM" Name="top_level_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="top_level_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="top_level_wrapper_timing_summary_init.rpt"/>
@@ -71,13 +71,6 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../hw_testing_files/dummy_controller.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -87,6 +80,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../hw_testing_files/dummy_controller.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,9 +118,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -130,8 +129,15 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_dummy_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rst_top_level_31M_2"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_2"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_dwidth_converter_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_0_2"/>
 </GenRun>

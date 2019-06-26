@@ -24,7 +24,7 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-CMAKE_C_FLAGS:STRING= -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test_bsp/microblaze_0/include
+CMAKE_C_FLAGS:STRING= -mlittle-endian -mxl-pattern-compare -mxl-soft-mul -mhard-float -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_axi_test/microblaze_axi_test.sdk/microblaze_axi_test_bsp/microblaze_0/include
 
 //Flags used by the compiler during debug builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
