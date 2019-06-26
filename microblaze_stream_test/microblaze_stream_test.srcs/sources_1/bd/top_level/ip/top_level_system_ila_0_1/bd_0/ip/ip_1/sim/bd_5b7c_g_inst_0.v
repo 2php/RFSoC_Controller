@@ -67,7 +67,6 @@ module bd_5b7c_g_inst_0 (
   slot_2_axis_tvalid,
   slot_2_axis_tready,
   slot_2_axis_tdata,
-  slot_2_axis_tkeep,
   slot_2_axis_tlast,
   m_slot_0_axis_tvalid,
   m_slot_0_axis_tready,
@@ -80,7 +79,6 @@ module bd_5b7c_g_inst_0 (
   m_slot_2_axis_tvalid,
   m_slot_2_axis_tready,
   m_slot_2_axis_tdata,
-  m_slot_2_axis_tkeep,
   m_slot_2_axis_tlast
 );
 
@@ -116,9 +114,7 @@ input wire slot_2_axis_tvalid;
 input wire slot_2_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_2_axis TDATA" *)
 input wire [255 : 0] slot_2_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_2_axis TKEEP" *)
-input wire [31 : 0] slot_2_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_2_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_2_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_2_axis TLAST" *)
 input wire slot_2_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TVALID" *)
@@ -145,9 +141,7 @@ output wire m_slot_2_axis_tvalid;
 output wire m_slot_2_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_2_axis TDATA" *)
 output wire [255 : 0] m_slot_2_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_2_axis TKEEP" *)
-output wire [31 : 0] m_slot_2_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_2_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_2_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_2_axis TLAST" *)
 output wire m_slot_2_axis_tlast;
 
@@ -277,7 +271,7 @@ output wire m_slot_2_axis_tlast;
     .C_SLOT_2_HAS_BURST(1),
     .C_SLOT_2_HAS_WSTRB(1),
     .C_SLOT_2_HAS_TSTRB(0),
-    .C_SLOT_2_HAS_TKEEP(1),
+    .C_SLOT_2_HAS_TKEEP(0),
     .C_SLOT_3_HAS_BRESP(1),
     .C_SLOT_3_HAS_RRESP(1),
     .C_SLOT_3_HAS_LOCK(1),
@@ -2328,7 +2322,7 @@ output wire m_slot_2_axis_tlast;
     .slot_2_axis_tready(slot_2_axis_tready),
     .slot_2_axis_tdata(slot_2_axis_tdata),
     .slot_2_axis_tstrb(32'B0),
-    .slot_2_axis_tkeep(slot_2_axis_tkeep),
+    .slot_2_axis_tkeep(32'B0),
     .slot_2_axis_tlast(slot_2_axis_tlast),
     .slot_2_axis_tid(1'B0),
     .slot_2_axis_tdest(1'B0),
@@ -3032,7 +3026,7 @@ output wire m_slot_2_axis_tlast;
     .m_slot_2_axis_tready(m_slot_2_axis_tready),
     .m_slot_2_axis_tdata(m_slot_2_axis_tdata),
     .m_slot_2_axis_tstrb(),
-    .m_slot_2_axis_tkeep(m_slot_2_axis_tkeep),
+    .m_slot_2_axis_tkeep(),
     .m_slot_2_axis_tlast(m_slot_2_axis_tlast),
     .m_slot_2_axis_tid(),
     .m_slot_2_axis_tdest(),

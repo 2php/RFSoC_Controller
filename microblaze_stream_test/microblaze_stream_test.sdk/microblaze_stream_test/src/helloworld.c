@@ -52,6 +52,9 @@
 #include <sleep.h>
 #include "xrfdc.h"
 #include "mb_interface.h"
+#include "xgpio.h"
+
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
 
 
 /*
@@ -76,18 +79,17 @@
 
 static int SelfTestExample(u16 SysMonDeviceId);
 static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+void write_sample_stream(u16* samples, u16 length, u8 reverse);
+void debug_print(char* buff);
+int init_uartlite(u16 DeviceId);
 
 /************************** Variable Definitions ****************************/
 
-static XRFdc RFdcInst;      /* RFdc driver instance */
-
 #define UARTLITE_DEVICE_ID	XPAR_UARTLITE_0_DEVICE_ID
 
+static XRFdc RFdcInst;      /* RFdc driver instance */
 XUartLite UartLite;		/* Instance of the UartLite Device */
-
-int init_uartlite(u16 DeviceId);
-
-
+XGpio Gpio; /* The Instance of the GPIO Driver */
 
 #define MAX_COUNT 1000
 #define BUFFER_SIZE 16
@@ -164,18 +166,51 @@ int main()
 		debug_print("Data path not available!");
 	}
 
+	if (XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID) == XST_SUCCESS)
+	{
+		debug_print("GPIO init success!");
+	}
+	else
+	{
+		debug_print("GPIO init failed!");
+	}
+
+	//set channel 1 and 2 to be all outputs
+	XGpio_SetDataDirection(&Gpio, 1, 0x00);
+	XGpio_SetDataDirection(&Gpio, 2, 0x00);
+
+	//assert valid and ready
+	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
+
+
 	debug_print("Writing test data over AXIS...");
 
-	volatile unsigned int *data = malloc(sizeof(volatile unsigned int) * 16);
+	//volatile unsigned int *data = malloc(sizeof(volatile unsigned int) * 16);
 
 	//for(int i = 0; i < 16; i++){
 	//	data[i] = i;
 	//}
 
-	u16 *sine_wave = {0x8000, 0xB0FC, 0xDA82, 0xF642, 0x10000, 0xF642, 0xDA82, 0xB0FC, 0x8000, 0x4F04, 0x257E, 0x9BE, 0x0, 0x9BE, 0x257E, 0x4F04};
-	volatile unsigned int *t_wave = {0x0, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000, 0xC000, 0xA000, 0x8000, 0x6000, 0x4000, 0x2000, 0x0, 0x2000};
-	volatile unsigned int *pulse = {0x0, 0x7FFFFFFF, 0xFFFF7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,0x0};
+	u16 sine_wave[16] = {0x8000, 0xB0FC, 0xDA82, 0xF642, 0xFFFF, 0xF642, 0xDA82, 0xB0FC, 0x8000, 0x4F04, 0x257E, 0x9BE, 0x0, 0x9BE, 0x257E, 0x4F04};
+	u16 t_wave[16] = {0x0, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000, 0xC000, 0xA000, 0x8000, 0x6000, 0x4000, 0x2000, 0x0, 0x0};
 	//volatile unsigned int *sine_wave = {0x10000, 0x161F8, 0x1B505, 0x1EC83, 0x20000, 0x1EC83, 0x1B505, 0x161F8, 0x10000, 0x9E08, 0x4AFB, 0x137D, 0x0, 0x137D, 0x4AFB, 0x9E08};
+	u16 pulse[16] = {0x0, 0x7FFF, 0xFFFF, 0x7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
+	u16 zeros [16];
+
+	u16 test_train[256];
+
+	for(u16 i = 0; i <256; i++)
+	{
+		test_train[i] = i;
+	}
+
+	for(int i = 0; i < 16; i++)
+	{
+		t_wave[i] = t_wave[i] >> 1;
+		sine_wave[i] = sine_wave[i] >> 1;
+		pulse[i] = pulse[i] >> 1;
+		zeros[i] = 0;
+	}
 
 	//write_axis(sine_wave);
 
@@ -183,20 +218,86 @@ int main()
 
 	while(1)
 	{
-		write_sample_stream(sine_wave, 16);
+		//turn off ready
+		XGpio_DiscreteWrite(&Gpio, 2, 0x01);
+		//write wave data
+		write_sample_stream(zeros, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(sine_wave, 16,1);
+		write_sample_stream(zeros, 16,1);
+		//turn on ready
+		XGpio_DiscreteWrite(&Gpio, 2, 0x03);
+		usleep(1000000);
+
+		//rf_trigger();
+
+		//XGpio_DiscreteWrite(&Gpio, 1, 0xFF);
+		//usleep(250000);
+		//XGpio_DiscreteWrite(&Gpio, 1, 0x00);
+		//usleep(250000);
+
 	}
 
 	cleanup_platform();
 	return 0;
 }
 
-void write_sample_stream(u16* samples, u16 length)
+void rf_trigger()
 {
-	for(int i = 0; i < (length>>1); i++)
+	//take the module out of reset and assert tlast
+	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
+	//wait for a bit
+	usleep(250000);
+	//put the module back into reset and disable tlast
+	XGpio_DiscreteWrite(&Gpio, 2, 0x02);
+}
+
+
+void write_sample_stream(u16* samples, u16 length, u8 reverse)
+{
+#define sample_0 0
+#define sample_1 1
+
+	register int sample;
+	volatile unsigned int word;
+
+
+	if(reverse){
+		for(int i = 0; i < length; i+=2)
+		{
+			word = (samples[i+sample_1] << 16) | (samples[i+sample_0]);
+			sample = word;
+			putfsl(sample,  0);
+		}
+	}
+	else
 	{
-		volatile unsigned int word = (samples[i] << 16) | (samples[i+1]);
-		register int sample = word;
-		putfsl(sample,  0);
+		for(int i = 0; i < (length>>1); i+=4)
+		{
+
+
+			word = (samples[i+sample_1] << 16) | (samples[i+sample_0]);
+			sample = word;
+			putfsl(sample,  0);
+
+			word = (samples[i+sample_1+2] << 16) | (samples[i+sample_0+2]);
+			sample = word;
+			putfsl(sample,  0);
+
+			word = (samples[i+sample_1+4] << 16) | (samples[i+sample_0+4]);
+			sample = word;
+			putfsl(sample,  0);
+
+			word = (samples[i+sample_1+6] << 16) | (samples[i+sample_0+6]);
+			sample = word;
+			putfsl(sample,  0);
+
+		}
 	}
 }
 

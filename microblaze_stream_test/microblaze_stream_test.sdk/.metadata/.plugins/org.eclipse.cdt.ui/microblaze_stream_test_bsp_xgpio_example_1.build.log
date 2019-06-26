@@ -1,0 +1,13 @@
+14:26:11 **** Auto Build of configuration Debug for project microblaze_stream_test_bsp_xgpio_example_1 ****
+make all 
+'Building file: ../src/xgpio_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_example.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_example.d" -MT"src/xgpio_example.o" -o "src/xgpio_example.o" "../src/xgpio_example.c"
+../src/xgpio_example.c:62:10: fatal error: xgpio.h: No such file or directory
+ #include "xgpio.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/xgpio_example.o] Error 1
+
+14:26:11 Build Finished (took 549ms)
+

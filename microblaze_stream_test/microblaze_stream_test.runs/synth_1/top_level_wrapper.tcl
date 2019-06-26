@@ -17,6 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,6 +33,8 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
+set_property ip_repo_paths c:/james/fpga_projects/ip_repo/axis_trigger_1.0 [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
@@ -80,6 +86,9 @@ set_property used_in_implementation false [get_files -all c:/james/fpga_projects
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0_0/top_level_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0_0/top_level_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_0_0/top_level_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/top_level_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_microblaze_0_1/data/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/data/startup.elf]

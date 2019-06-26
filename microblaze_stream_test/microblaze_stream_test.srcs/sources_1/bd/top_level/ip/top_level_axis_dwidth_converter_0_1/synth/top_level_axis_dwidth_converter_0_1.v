@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "top_level_axis_dwidth_converter_0_1,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *)
-(* CORE_GENERATION_INFO = "top_level_axis_dwidth_converter_0_1,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_dwidth_converter,x_ipVersion=1.1,x_ipCoreRevision=18,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_S_AXIS_TDATA_WIDTH=32,C_M_AXIS_TDATA_WIDTH=256,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_S_AXIS_TUSER_WIDTH=1,C_M_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011}" *)
+(* CORE_GENERATION_INFO = "top_level_axis_dwidth_converter_0_1,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_dwidth_converter,x_ipVersion=1.1,x_ipCoreRevision=18,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_S_AXIS_TDATA_WIDTH=32,C_M_AXIS_TDATA_WIDTH=256,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_S_AXIS_TUSER_WIDTH=1,C_M_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000000011}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_axis_dwidth_converter_0_1 (
   aclk,
@@ -60,12 +60,9 @@ module top_level_axis_dwidth_converter_0_1 (
   s_axis_tvalid,
   s_axis_tready,
   s_axis_tdata,
-  s_axis_tlast,
   m_axis_tvalid,
   m_axis_tready,
-  m_axis_tdata,
-  m_axis_tkeep,
-  m_axis_tlast
+  m_axis_tdata
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN aclken" *)
@@ -78,22 +75,16 @@ input wire aresetn;
 input wire s_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *)
 output wire s_axis_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *)
 input wire [31 : 0] s_axis_tdata;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
-input wire s_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
 input wire m_axis_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 output wire [255 : 0] m_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TKEEP" *)
-output wire [31 : 0] m_axis_tkeep;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-output wire m_axis_tlast;
 
   axis_dwidth_converter_v1_1_18_axis_dwidth_converter #(
     .C_FAMILY("zynquplus"),
@@ -103,7 +94,7 @@ output wire m_axis_tlast;
     .C_AXIS_TDEST_WIDTH(1),
     .C_S_AXIS_TUSER_WIDTH(1),
     .C_M_AXIS_TUSER_WIDTH(1),
-    .C_AXIS_SIGNAL_SET('B00000000000000000000000000010011)
+    .C_AXIS_SIGNAL_SET('B00000000000000000000000000000011)
   ) inst (
     .aclk(aclk),
     .aresetn(aresetn),
@@ -113,7 +104,7 @@ output wire m_axis_tlast;
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tstrb(4'HF),
     .s_axis_tkeep(4'HF),
-    .s_axis_tlast(s_axis_tlast),
+    .s_axis_tlast(1'H1),
     .s_axis_tid(1'H0),
     .s_axis_tdest(1'H0),
     .s_axis_tuser(1'H0),
@@ -121,8 +112,8 @@ output wire m_axis_tlast;
     .m_axis_tready(m_axis_tready),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tstrb(),
-    .m_axis_tkeep(m_axis_tkeep),
-    .m_axis_tlast(m_axis_tlast),
+    .m_axis_tkeep(),
+    .m_axis_tlast(),
     .m_axis_tid(),
     .m_axis_tdest(),
     .m_axis_tuser()

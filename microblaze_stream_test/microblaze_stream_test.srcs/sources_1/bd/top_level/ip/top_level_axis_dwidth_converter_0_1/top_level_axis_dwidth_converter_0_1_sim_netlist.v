@@ -1,18 +1,115 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Jun 25 16:39:04 2019
+// Date        : Wed Jun 26 13:59:38 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top top_level_axis_dwidth_converter_0_1 -prefix
-//               top_level_axis_dwidth_converter_0_1_ top_level_axis_dwidth_converter_0_0_sim_netlist.v
-// Design      : top_level_axis_dwidth_converter_0_0
+// Command     : write_verilog -force -mode funcsim
+//               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_dwidth_converter_0_1/top_level_axis_dwidth_converter_0_1_sim_netlist.v
+// Design      : top_level_axis_dwidth_converter_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* C_AXIS_SIGNAL_SET = "32'b00000000000000000000000000010011" *) (* C_AXIS_TDEST_WIDTH = "1" *) (* C_AXIS_TID_WIDTH = "1" *) 
+(* CHECK_LICENSE_TYPE = "top_level_axis_dwidth_converter_0_1,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
+(* NotValidForBitStream *)
+module top_level_axis_dwidth_converter_0_1
+   (aclk,
+    aresetn,
+    s_axis_tvalid,
+    s_axis_tready,
+    s_axis_tdata,
+    m_axis_tvalid,
+    m_axis_tready,
+    m_axis_tdata);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN aclken" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTIF RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input s_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [31:0]s_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output [255:0]m_axis_tdata;
+
+  wire aclk;
+  wire aresetn;
+  wire [255:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire [31:0]s_axis_tdata;
+  wire s_axis_tready;
+  wire s_axis_tvalid;
+  wire NLW_inst_m_axis_tlast_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axis_tdest_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axis_tid_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axis_tkeep_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axis_tstrb_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axis_tuser_UNCONNECTED;
+
+  (* C_AXIS_SIGNAL_SET = "32'b00000000000000000000000000000011" *) 
+  (* C_AXIS_TDEST_WIDTH = "1" *) 
+  (* C_AXIS_TID_WIDTH = "1" *) 
+  (* C_FAMILY = "zynquplus" *) 
+  (* C_M_AXIS_TDATA_WIDTH = "256" *) 
+  (* C_M_AXIS_TUSER_WIDTH = "1" *) 
+  (* C_S_AXIS_TDATA_WIDTH = "32" *) 
+  (* C_S_AXIS_TUSER_WIDTH = "1" *) 
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  (* G_INDX_SS_TDATA = "1" *) 
+  (* G_INDX_SS_TDEST = "6" *) 
+  (* G_INDX_SS_TID = "5" *) 
+  (* G_INDX_SS_TKEEP = "3" *) 
+  (* G_INDX_SS_TLAST = "4" *) 
+  (* G_INDX_SS_TREADY = "0" *) 
+  (* G_INDX_SS_TSTRB = "2" *) 
+  (* G_INDX_SS_TUSER = "7" *) 
+  (* G_MASK_SS_TDATA = "2" *) 
+  (* G_MASK_SS_TDEST = "64" *) 
+  (* G_MASK_SS_TID = "32" *) 
+  (* G_MASK_SS_TKEEP = "8" *) 
+  (* G_MASK_SS_TLAST = "16" *) 
+  (* G_MASK_SS_TREADY = "1" *) 
+  (* G_MASK_SS_TSTRB = "4" *) 
+  (* G_MASK_SS_TUSER = "128" *) 
+  (* G_TASK_SEVERITY_ERR = "2" *) 
+  (* G_TASK_SEVERITY_INFO = "0" *) 
+  (* G_TASK_SEVERITY_WARNING = "1" *) 
+  (* P_AXIS_SIGNAL_SET = "32'b00000000000000000000000000000011" *) 
+  (* P_D1_REG_CONFIG = "0" *) 
+  (* P_D1_TUSER_WIDTH = "4" *) 
+  (* P_D2_TDATA_WIDTH = "256" *) 
+  (* P_D2_TUSER_WIDTH = "32" *) 
+  (* P_D3_REG_CONFIG = "0" *) 
+  (* P_D3_TUSER_WIDTH = "32" *) 
+  (* P_M_RATIO = "1" *) 
+  (* P_SS_TKEEP_REQUIRED = "0" *) 
+  (* P_S_RATIO = "8" *) 
+  top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axis_dwidth_converter inst
+       (.aclk(aclk),
+        .aclken(1'b1),
+        .aresetn(aresetn),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tdest(NLW_inst_m_axis_tdest_UNCONNECTED[0]),
+        .m_axis_tid(NLW_inst_m_axis_tid_UNCONNECTED[0]),
+        .m_axis_tkeep(NLW_inst_m_axis_tkeep_UNCONNECTED[31:0]),
+        .m_axis_tlast(NLW_inst_m_axis_tlast_UNCONNECTED),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tstrb(NLW_inst_m_axis_tstrb_UNCONNECTED[31:0]),
+        .m_axis_tuser(NLW_inst_m_axis_tuser_UNCONNECTED[0]),
+        .m_axis_tvalid(m_axis_tvalid),
+        .s_axis_tdata(s_axis_tdata),
+        .s_axis_tdest(1'b0),
+        .s_axis_tid(1'b0),
+        .s_axis_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_tlast(1'b1),
+        .s_axis_tready(s_axis_tready),
+        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_tuser(1'b0),
+        .s_axis_tvalid(s_axis_tvalid));
+endmodule
+
+(* C_AXIS_SIGNAL_SET = "32'b00000000000000000000000000000011" *) (* C_AXIS_TDEST_WIDTH = "1" *) (* C_AXIS_TID_WIDTH = "1" *) 
 (* C_FAMILY = "zynquplus" *) (* C_M_AXIS_TDATA_WIDTH = "256" *) (* C_M_AXIS_TUSER_WIDTH = "1" *) 
 (* C_S_AXIS_TDATA_WIDTH = "32" *) (* C_S_AXIS_TUSER_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* G_INDX_SS_TDATA = "1" *) (* G_INDX_SS_TDEST = "6" *) (* G_INDX_SS_TID = "5" *) 
@@ -21,10 +118,10 @@
 (* G_MASK_SS_TDEST = "64" *) (* G_MASK_SS_TID = "32" *) (* G_MASK_SS_TKEEP = "8" *) 
 (* G_MASK_SS_TLAST = "16" *) (* G_MASK_SS_TREADY = "1" *) (* G_MASK_SS_TSTRB = "4" *) 
 (* G_MASK_SS_TUSER = "128" *) (* G_TASK_SEVERITY_ERR = "2" *) (* G_TASK_SEVERITY_INFO = "0" *) 
-(* G_TASK_SEVERITY_WARNING = "1" *) (* P_AXIS_SIGNAL_SET = "32'b00000000000000000000000000011011" *) (* P_D1_REG_CONFIG = "0" *) 
-(* P_D1_TUSER_WIDTH = "4" *) (* P_D2_TDATA_WIDTH = "256" *) (* P_D2_TUSER_WIDTH = "32" *) 
-(* P_D3_REG_CONFIG = "0" *) (* P_D3_TUSER_WIDTH = "32" *) (* P_M_RATIO = "1" *) 
-(* P_SS_TKEEP_REQUIRED = "8" *) (* P_S_RATIO = "8" *) 
+(* G_TASK_SEVERITY_WARNING = "1" *) (* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter" *) (* P_AXIS_SIGNAL_SET = "32'b00000000000000000000000000000011" *) 
+(* P_D1_REG_CONFIG = "0" *) (* P_D1_TUSER_WIDTH = "4" *) (* P_D2_TDATA_WIDTH = "256" *) 
+(* P_D2_TUSER_WIDTH = "32" *) (* P_D3_REG_CONFIG = "0" *) (* P_D3_TUSER_WIDTH = "32" *) 
+(* P_M_RATIO = "1" *) (* P_SS_TKEEP_REQUIRED = "0" *) (* P_S_RATIO = "8" *) 
 module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axis_dwidth_converter
    (aclk,
     aresetn,
@@ -77,49 +174,47 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axis_dw
   wire areset_r_i_1_n_0;
   wire aresetn;
   wire [255:0]m_axis_tdata;
-  wire [30:6]\^m_axis_tkeep ;
-  wire m_axis_tlast;
   wire m_axis_tready;
   wire m_axis_tvalid;
   wire [31:0]s_axis_tdata;
-  wire s_axis_tlast;
   wire s_axis_tready;
   wire s_axis_tvalid;
 
   assign m_axis_tdest[0] = \<const0> ;
   assign m_axis_tid[0] = \<const0> ;
-  assign m_axis_tkeep[31] = \^m_axis_tkeep [30];
-  assign m_axis_tkeep[30] = \^m_axis_tkeep [30];
-  assign m_axis_tkeep[29] = \^m_axis_tkeep [30];
-  assign m_axis_tkeep[28] = \^m_axis_tkeep [30];
-  assign m_axis_tkeep[27] = \^m_axis_tkeep [26];
-  assign m_axis_tkeep[26] = \^m_axis_tkeep [26];
-  assign m_axis_tkeep[25] = \^m_axis_tkeep [26];
-  assign m_axis_tkeep[24] = \^m_axis_tkeep [26];
-  assign m_axis_tkeep[23] = \^m_axis_tkeep [22];
-  assign m_axis_tkeep[22] = \^m_axis_tkeep [22];
-  assign m_axis_tkeep[21] = \^m_axis_tkeep [22];
-  assign m_axis_tkeep[20] = \^m_axis_tkeep [22];
-  assign m_axis_tkeep[19] = \^m_axis_tkeep [18];
-  assign m_axis_tkeep[18] = \^m_axis_tkeep [18];
-  assign m_axis_tkeep[17] = \^m_axis_tkeep [18];
-  assign m_axis_tkeep[16] = \^m_axis_tkeep [18];
-  assign m_axis_tkeep[15] = \^m_axis_tkeep [14];
-  assign m_axis_tkeep[14] = \^m_axis_tkeep [14];
-  assign m_axis_tkeep[13] = \^m_axis_tkeep [14];
-  assign m_axis_tkeep[12] = \^m_axis_tkeep [14];
-  assign m_axis_tkeep[11] = \^m_axis_tkeep [10];
-  assign m_axis_tkeep[10] = \^m_axis_tkeep [10];
-  assign m_axis_tkeep[9] = \^m_axis_tkeep [10];
-  assign m_axis_tkeep[8] = \^m_axis_tkeep [10];
-  assign m_axis_tkeep[7] = \^m_axis_tkeep [6];
-  assign m_axis_tkeep[6] = \^m_axis_tkeep [6];
-  assign m_axis_tkeep[5] = \^m_axis_tkeep [6];
-  assign m_axis_tkeep[4] = \^m_axis_tkeep [6];
+  assign m_axis_tkeep[31] = \<const1> ;
+  assign m_axis_tkeep[30] = \<const1> ;
+  assign m_axis_tkeep[29] = \<const1> ;
+  assign m_axis_tkeep[28] = \<const1> ;
+  assign m_axis_tkeep[27] = \<const1> ;
+  assign m_axis_tkeep[26] = \<const1> ;
+  assign m_axis_tkeep[25] = \<const1> ;
+  assign m_axis_tkeep[24] = \<const1> ;
+  assign m_axis_tkeep[23] = \<const1> ;
+  assign m_axis_tkeep[22] = \<const1> ;
+  assign m_axis_tkeep[21] = \<const1> ;
+  assign m_axis_tkeep[20] = \<const1> ;
+  assign m_axis_tkeep[19] = \<const1> ;
+  assign m_axis_tkeep[18] = \<const1> ;
+  assign m_axis_tkeep[17] = \<const1> ;
+  assign m_axis_tkeep[16] = \<const1> ;
+  assign m_axis_tkeep[15] = \<const1> ;
+  assign m_axis_tkeep[14] = \<const1> ;
+  assign m_axis_tkeep[13] = \<const1> ;
+  assign m_axis_tkeep[12] = \<const1> ;
+  assign m_axis_tkeep[11] = \<const1> ;
+  assign m_axis_tkeep[10] = \<const1> ;
+  assign m_axis_tkeep[9] = \<const1> ;
+  assign m_axis_tkeep[8] = \<const1> ;
+  assign m_axis_tkeep[7] = \<const1> ;
+  assign m_axis_tkeep[6] = \<const1> ;
+  assign m_axis_tkeep[5] = \<const1> ;
+  assign m_axis_tkeep[4] = \<const1> ;
   assign m_axis_tkeep[3] = \<const1> ;
   assign m_axis_tkeep[2] = \<const1> ;
   assign m_axis_tkeep[1] = \<const1> ;
   assign m_axis_tkeep[0] = \<const1> ;
+  assign m_axis_tlast = \<const0> ;
   assign m_axis_tstrb[31] = \<const0> ;
   assign m_axis_tstrb[30] = \<const0> ;
   assign m_axis_tstrb[29] = \<const0> ;
@@ -176,70 +271,49 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axis_dw
         .aclk(aclk),
         .aclken(aclken),
         .m_axis_tdata(m_axis_tdata),
-        .m_axis_tkeep({\^m_axis_tkeep [30],\^m_axis_tkeep [26],\^m_axis_tkeep [22],\^m_axis_tkeep [18],\^m_axis_tkeep [14],\^m_axis_tkeep [10],\^m_axis_tkeep [6]}),
-        .m_axis_tlast(m_axis_tlast),
         .m_axis_tready(m_axis_tready),
         .s_axis_tdata(s_axis_tdata),
-        .s_axis_tlast(s_axis_tlast),
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axisc_upsizer" *) 
 module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_upsizer
-   (m_axis_tkeep,
-    m_axis_tlast,
-    Q,
+   (Q,
     m_axis_tdata,
-    s_axis_tlast,
-    aclk,
-    aclken,
-    SR,
+    s_axis_tvalid,
     m_axis_tready,
-    s_axis_tdata,
-    s_axis_tvalid);
-  output [6:0]m_axis_tkeep;
-  output m_axis_tlast;
+    SR,
+    aclken,
+    aclk,
+    s_axis_tdata);
   output [1:0]Q;
   output [255:0]m_axis_tdata;
-  input s_axis_tlast;
-  input aclk;
-  input aclken;
-  input [0:0]SR;
-  input m_axis_tready;
-  input [31:0]s_axis_tdata;
   input s_axis_tvalid;
+  input m_axis_tready;
+  input [0:0]SR;
+  input aclken;
+  input aclk;
+  input [31:0]s_axis_tdata;
 
   wire [1:0]Q;
   wire [0:0]SR;
   wire acc_data;
   wire \acc_data[255]_i_1_n_0 ;
-  wire \acc_keep[31]_i_1_n_0 ;
-  wire \acc_keep[31]_i_2_n_0 ;
-  wire acc_last_i_1_n_0;
-  wire acc_last_i_2_n_0;
   wire aclk;
   wire aclken;
   wire \gen_data_accumulator[1].acc_data[63]_i_1_n_0 ;
-  wire \gen_data_accumulator[1].acc_keep[7]_i_1_n_0 ;
   wire \gen_data_accumulator[2].acc_data[95]_i_1_n_0 ;
-  wire \gen_data_accumulator[2].acc_keep[11]_i_1_n_0 ;
   wire \gen_data_accumulator[3].acc_data[127]_i_1_n_0 ;
-  wire \gen_data_accumulator[3].acc_keep[15]_i_1_n_0 ;
   wire \gen_data_accumulator[4].acc_data[159]_i_1_n_0 ;
-  wire \gen_data_accumulator[4].acc_keep[19]_i_1_n_0 ;
   wire \gen_data_accumulator[5].acc_data[191]_i_1_n_0 ;
-  wire \gen_data_accumulator[5].acc_keep[23]_i_1_n_0 ;
   wire \gen_data_accumulator[6].acc_data[223]_i_1_n_0 ;
-  wire \gen_data_accumulator[6].acc_keep[27]_i_1_n_0 ;
   wire [255:0]m_axis_tdata;
-  wire [6:0]m_axis_tkeep;
-  wire m_axis_tlast;
   wire m_axis_tready;
   wire [7:7]p_0_in;
   wire [7:7]p_1_in;
   wire p_1_in2_in;
   wire [31:0]r0_data;
-  wire r0_last;
-  wire r0_last_reg_n_0;
+  wire r0_data_0;
   wire \r0_reg_sel[0]_i_1_n_0 ;
   wire \r0_reg_sel_reg_n_0_[0] ;
   wire \r0_reg_sel_reg_n_0_[1] ;
@@ -249,11 +323,10 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
   wire \r0_reg_sel_reg_n_0_[5] ;
   wire \r0_reg_sel_reg_n_0_[6] ;
   wire [31:0]s_axis_tdata;
-  wire s_axis_tlast;
   wire s_axis_tvalid;
   wire [2:0]state;
+  wire \state[1]_i_1_n_0 ;
   wire \state[1]_i_2_n_0 ;
-  wire \state[2]_i_2_n_0 ;
   wire \state_reg_n_0_[2] ;
 
   LUT3 #(
@@ -264,12 +337,12 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .I2(aclken),
         .O(\acc_data[255]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00800000)) 
+    .INIT(32'h20000000)) 
     \acc_data[31]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
+       (.I0(\state_reg_n_0_[2] ),
+        .I1(Q[1]),
         .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[0] ),
         .O(acc_data));
   FDRE \acc_data_reg[0] 
@@ -657,62 +730,12 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .Q(m_axis_tdata[9]),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h8A888888)) 
-    \acc_keep[31]_i_1 
-       (.I0(\acc_keep[31]_i_2_n_0 ),
-        .I1(m_axis_tkeep[6]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(aclken),
-        .O(\acc_keep[31]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCFFFDFFFFFFFFFFF)) 
-    \acc_keep[31]_i_2 
-       (.I0(\r0_reg_sel_reg_n_0_[0] ),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(r0_last_reg_n_0),
-        .I5(aclken),
-        .O(\acc_keep[31]_i_2_n_0 ));
-  FDRE \acc_keep_reg[31] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\acc_keep[31]_i_1_n_0 ),
-        .Q(m_axis_tkeep[6]),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00008000)) 
-    acc_last_i_1
-       (.I0(aclken),
-        .I1(r0_last_reg_n_0),
-        .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(Q[1]),
-        .I5(acc_last_i_2_n_0),
-        .O(acc_last_i_1_n_0));
-  LUT5 #(
-    .INIT(32'hAEFFA200)) 
-    acc_last_i_2
-       (.I0(s_axis_tlast),
-        .I1(Q[1]),
-        .I2(\state_reg_n_0_[2] ),
-        .I3(aclken),
-        .I4(m_axis_tlast),
-        .O(acc_last_i_2_n_0));
-  FDRE acc_last_reg
-       (.C(aclk),
-        .CE(1'b1),
-        .D(acc_last_i_1_n_0),
-        .Q(m_axis_tlast),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'h00800000)) 
+    .INIT(32'h20000000)) 
     \gen_data_accumulator[1].acc_data[63]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
+       (.I0(\state_reg_n_0_[2] ),
+        .I1(Q[1]),
         .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[1] ),
         .O(\gen_data_accumulator[1].acc_data[63]_i_1_n_0 ));
   FDRE \gen_data_accumulator[1].acc_data_reg[32] 
@@ -907,29 +930,13 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[31]),
         .Q(m_axis_tdata[63]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20000000)) 
-    \gen_data_accumulator[1].acc_keep[7]_i_1 
-       (.I0(\r0_reg_sel_reg_n_0_[1] ),
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \gen_data_accumulator[2].acc_data[95]_i_1 
+       (.I0(\state_reg_n_0_[2] ),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(aclken),
-        .I5(m_axis_tkeep[0]),
-        .O(\gen_data_accumulator[1].acc_keep[7]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[1].acc_keep_reg[7] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[1].acc_keep[7]_i_1_n_0 ),
-        .Q(m_axis_tkeep[0]),
-        .R(acc_data));
-  LUT5 #(
-    .INIT(32'h00800000)) 
-    \gen_data_accumulator[2].acc_data[95]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
-        .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[2] ),
         .O(\gen_data_accumulator[2].acc_data[95]_i_1_n_0 ));
   FDRE \gen_data_accumulator[2].acc_data_reg[64] 
@@ -1124,29 +1131,13 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[31]),
         .Q(m_axis_tdata[95]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20000000)) 
-    \gen_data_accumulator[2].acc_keep[11]_i_1 
-       (.I0(\r0_reg_sel_reg_n_0_[2] ),
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \gen_data_accumulator[3].acc_data[127]_i_1 
+       (.I0(\state_reg_n_0_[2] ),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(aclken),
-        .I5(m_axis_tkeep[1]),
-        .O(\gen_data_accumulator[2].acc_keep[11]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[2].acc_keep_reg[11] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[2].acc_keep[11]_i_1_n_0 ),
-        .Q(m_axis_tkeep[1]),
-        .R(acc_data));
-  LUT5 #(
-    .INIT(32'h00800000)) 
-    \gen_data_accumulator[3].acc_data[127]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
-        .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[3] ),
         .O(\gen_data_accumulator[3].acc_data[127]_i_1_n_0 ));
   FDRE \gen_data_accumulator[3].acc_data_reg[100] 
@@ -1341,29 +1332,13 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[3]),
         .Q(m_axis_tdata[99]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20000000)) 
-    \gen_data_accumulator[3].acc_keep[15]_i_1 
-       (.I0(\r0_reg_sel_reg_n_0_[3] ),
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \gen_data_accumulator[4].acc_data[159]_i_1 
+       (.I0(\state_reg_n_0_[2] ),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(aclken),
-        .I5(m_axis_tkeep[2]),
-        .O(\gen_data_accumulator[3].acc_keep[15]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[3].acc_keep_reg[15] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[3].acc_keep[15]_i_1_n_0 ),
-        .Q(m_axis_tkeep[2]),
-        .R(acc_data));
-  LUT5 #(
-    .INIT(32'h00800000)) 
-    \gen_data_accumulator[4].acc_data[159]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
-        .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[4] ),
         .O(\gen_data_accumulator[4].acc_data[159]_i_1_n_0 ));
   FDRE \gen_data_accumulator[4].acc_data_reg[128] 
@@ -1558,29 +1533,13 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[31]),
         .Q(m_axis_tdata[159]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20000000)) 
-    \gen_data_accumulator[4].acc_keep[19]_i_1 
-       (.I0(\r0_reg_sel_reg_n_0_[4] ),
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \gen_data_accumulator[5].acc_data[191]_i_1 
+       (.I0(\state_reg_n_0_[2] ),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(aclken),
-        .I5(m_axis_tkeep[3]),
-        .O(\gen_data_accumulator[4].acc_keep[19]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[4].acc_keep_reg[19] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[4].acc_keep[19]_i_1_n_0 ),
-        .Q(m_axis_tkeep[3]),
-        .R(acc_data));
-  LUT5 #(
-    .INIT(32'h00800000)) 
-    \gen_data_accumulator[5].acc_data[191]_i_1 
-       (.I0(aclken),
-        .I1(\state_reg_n_0_[2] ),
-        .I2(Q[0]),
-        .I3(Q[1]),
+        .I3(aclken),
         .I4(\r0_reg_sel_reg_n_0_[5] ),
         .O(\gen_data_accumulator[5].acc_data[191]_i_1_n_0 ));
   FDRE \gen_data_accumulator[5].acc_data_reg[160] 
@@ -1775,30 +1734,14 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[31]),
         .Q(m_axis_tdata[191]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20000000)) 
-    \gen_data_accumulator[5].acc_keep[23]_i_1 
-       (.I0(\r0_reg_sel_reg_n_0_[5] ),
+  LUT5 #(
+    .INIT(32'h20000000)) 
+    \gen_data_accumulator[6].acc_data[223]_i_1 
+       (.I0(\state_reg_n_0_[2] ),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(aclken),
-        .I5(m_axis_tkeep[4]),
-        .O(\gen_data_accumulator[5].acc_keep[23]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[5].acc_keep_reg[23] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[5].acc_keep[23]_i_1_n_0 ),
-        .Q(m_axis_tkeep[4]),
-        .R(acc_data));
-  LUT5 #(
-    .INIT(32'h40000000)) 
-    \gen_data_accumulator[6].acc_data[223]_i_1 
-       (.I0(Q[1]),
-        .I1(\state_reg_n_0_[2] ),
-        .I2(Q[0]),
-        .I3(\r0_reg_sel_reg_n_0_[6] ),
-        .I4(aclken),
+        .I3(aclken),
+        .I4(\r0_reg_sel_reg_n_0_[6] ),
         .O(\gen_data_accumulator[6].acc_data[223]_i_1_n_0 ));
   FDRE \gen_data_accumulator[6].acc_data_reg[192] 
        (.C(aclk),
@@ -1992,225 +1935,203 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(r0_data[31]),
         .Q(m_axis_tdata[223]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00008000)) 
-    \gen_data_accumulator[6].acc_keep[27]_i_1 
-       (.I0(aclken),
-        .I1(\r0_reg_sel_reg_n_0_[6] ),
-        .I2(Q[0]),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(Q[1]),
-        .I5(m_axis_tkeep[5]),
-        .O(\gen_data_accumulator[6].acc_keep[27]_i_1_n_0 ));
-  FDRE \gen_data_accumulator[6].acc_keep_reg[27] 
-       (.C(aclk),
-        .CE(1'b1),
-        .D(\gen_data_accumulator[6].acc_keep[27]_i_1_n_0 ),
-        .Q(m_axis_tkeep[5]),
-        .R(acc_data));
   LUT2 #(
     .INIT(4'h8)) 
     \r0_data[31]_i_1 
-       (.I0(Q[0]),
-        .I1(aclken),
-        .O(r0_last));
+       (.I0(aclken),
+        .I1(Q[0]),
+        .O(r0_data_0));
   FDRE \r0_data_reg[0] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[0]),
         .Q(r0_data[0]),
         .R(1'b0));
   FDRE \r0_data_reg[10] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[10]),
         .Q(r0_data[10]),
         .R(1'b0));
   FDRE \r0_data_reg[11] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[11]),
         .Q(r0_data[11]),
         .R(1'b0));
   FDRE \r0_data_reg[12] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[12]),
         .Q(r0_data[12]),
         .R(1'b0));
   FDRE \r0_data_reg[13] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[13]),
         .Q(r0_data[13]),
         .R(1'b0));
   FDRE \r0_data_reg[14] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[14]),
         .Q(r0_data[14]),
         .R(1'b0));
   FDRE \r0_data_reg[15] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[15]),
         .Q(r0_data[15]),
         .R(1'b0));
   FDRE \r0_data_reg[16] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[16]),
         .Q(r0_data[16]),
         .R(1'b0));
   FDRE \r0_data_reg[17] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[17]),
         .Q(r0_data[17]),
         .R(1'b0));
   FDRE \r0_data_reg[18] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[18]),
         .Q(r0_data[18]),
         .R(1'b0));
   FDRE \r0_data_reg[19] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[19]),
         .Q(r0_data[19]),
         .R(1'b0));
   FDRE \r0_data_reg[1] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[1]),
         .Q(r0_data[1]),
         .R(1'b0));
   FDRE \r0_data_reg[20] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[20]),
         .Q(r0_data[20]),
         .R(1'b0));
   FDRE \r0_data_reg[21] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[21]),
         .Q(r0_data[21]),
         .R(1'b0));
   FDRE \r0_data_reg[22] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[22]),
         .Q(r0_data[22]),
         .R(1'b0));
   FDRE \r0_data_reg[23] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[23]),
         .Q(r0_data[23]),
         .R(1'b0));
   FDRE \r0_data_reg[24] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[24]),
         .Q(r0_data[24]),
         .R(1'b0));
   FDRE \r0_data_reg[25] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[25]),
         .Q(r0_data[25]),
         .R(1'b0));
   FDRE \r0_data_reg[26] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[26]),
         .Q(r0_data[26]),
         .R(1'b0));
   FDRE \r0_data_reg[27] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[27]),
         .Q(r0_data[27]),
         .R(1'b0));
   FDRE \r0_data_reg[28] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[28]),
         .Q(r0_data[28]),
         .R(1'b0));
   FDRE \r0_data_reg[29] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[29]),
         .Q(r0_data[29]),
         .R(1'b0));
   FDRE \r0_data_reg[2] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[2]),
         .Q(r0_data[2]),
         .R(1'b0));
   FDRE \r0_data_reg[30] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[30]),
         .Q(r0_data[30]),
         .R(1'b0));
   FDRE \r0_data_reg[31] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[31]),
         .Q(r0_data[31]),
         .R(1'b0));
   FDRE \r0_data_reg[3] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[3]),
         .Q(r0_data[3]),
         .R(1'b0));
   FDRE \r0_data_reg[4] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[4]),
         .Q(r0_data[4]),
         .R(1'b0));
   FDRE \r0_data_reg[5] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[5]),
         .Q(r0_data[5]),
         .R(1'b0));
   FDRE \r0_data_reg[6] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[6]),
         .Q(r0_data[6]),
         .R(1'b0));
   FDRE \r0_data_reg[7] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[7]),
         .Q(r0_data[7]),
         .R(1'b0));
   FDRE \r0_data_reg[8] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[8]),
         .Q(r0_data[8]),
         .R(1'b0));
   FDRE \r0_data_reg[9] 
        (.C(aclk),
-        .CE(r0_last),
+        .CE(r0_data_0),
         .D(s_axis_tdata[9]),
         .Q(r0_data[9]),
-        .R(1'b0));
-  FDRE r0_last_reg
-       (.C(aclk),
-        .CE(r0_last),
-        .D(s_axis_tlast),
-        .Q(r0_last_reg_n_0),
         .R(1'b0));
   LUT6 #(
     .INIT(64'hFFF4F4F4F4F4F4F4)) 
@@ -2218,25 +2139,25 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
        (.I0(p_1_in),
         .I1(\r0_reg_sel_reg_n_0_[0] ),
         .I2(SR),
-        .I3(Q[1]),
-        .I4(m_axis_tready),
+        .I3(m_axis_tready),
+        .I4(Q[1]),
         .I5(aclken),
         .O(\r0_reg_sel[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFF80)) 
     \r0_reg_sel[7]_i_1 
        (.I0(aclken),
-        .I1(m_axis_tready),
-        .I2(Q[1]),
+        .I1(Q[1]),
+        .I2(m_axis_tready),
         .I3(SR),
         .O(p_0_in));
   LUT4 #(
-    .INIT(16'h4000)) 
+    .INIT(16'h0800)) 
     \r0_reg_sel[7]_i_2 
-       (.I0(Q[1]),
+       (.I0(aclken),
         .I1(Q[0]),
-        .I2(\state_reg_n_0_[2] ),
-        .I3(aclken),
+        .I2(Q[1]),
+        .I3(\state_reg_n_0_[2] ),
         .O(p_1_in));
   FDRE #(
     .INIT(1'b1)) 
@@ -2302,54 +2223,42 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(\r0_reg_sel_reg_n_0_[6] ),
         .Q(p_1_in2_in),
         .R(p_0_in));
-  LUT6 #(
-    .INIT(64'hCFBFFFBBFFBFFFBB)) 
+  LUT5 #(
+    .INIT(32'hEFEFFFEF)) 
     \state[0]_i_1 
        (.I0(m_axis_tready),
-        .I1(Q[1]),
-        .I2(s_axis_tvalid),
-        .I3(\state_reg_n_0_[2] ),
-        .I4(Q[0]),
-        .I5(r0_last_reg_n_0),
-        .O(state[0]));
-  LUT4 #(
-    .INIT(16'h1F10)) 
-    \state[1]_i_1 
-       (.I0(\state_reg_n_0_[2] ),
-        .I1(m_axis_tready),
+        .I1(\state_reg_n_0_[2] ),
         .I2(Q[1]),
-        .I3(\state[1]_i_2_n_0 ),
-        .O(state[1]));
-  LUT6 #(
-    .INIT(64'hFA00C000EA00C000)) 
-    \state[1]_i_2 
-       (.I0(r0_last_reg_n_0),
-        .I1(p_1_in2_in),
-        .I2(s_axis_tvalid),
         .I3(Q[0]),
-        .I4(\state_reg_n_0_[2] ),
-        .I5(\r0_reg_sel_reg_n_0_[6] ),
-        .O(\state[1]_i_2_n_0 ));
+        .I4(s_axis_tvalid),
+        .O(state[0]));
   LUT6 #(
-    .INIT(64'h5100FFFF51000000)) 
-    \state[2]_i_1 
-       (.I0(\state_reg_n_0_[2] ),
+    .INIT(64'h000000FF80808080)) 
+    \state[1]_i_1 
+       (.I0(\state[1]_i_2_n_0 ),
         .I1(Q[0]),
         .I2(s_axis_tvalid),
         .I3(m_axis_tready),
-        .I4(Q[1]),
-        .I5(\state[2]_i_2_n_0 ),
-        .O(state[2]));
-  LUT6 #(
-    .INIT(64'h000000000040C0C0)) 
-    \state[2]_i_2 
-       (.I0(r0_last_reg_n_0),
-        .I1(s_axis_tvalid),
-        .I2(Q[0]),
-        .I3(\r0_reg_sel_reg_n_0_[6] ),
         .I4(\state_reg_n_0_[2] ),
-        .I5(p_1_in2_in),
-        .O(\state[2]_i_2_n_0 ));
+        .I5(Q[1]),
+        .O(\state[1]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hEA)) 
+    \state[1]_i_2 
+       (.I0(p_1_in2_in),
+        .I1(\state_reg_n_0_[2] ),
+        .I2(\r0_reg_sel_reg_n_0_[6] ),
+        .O(\state[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h3530003005000000)) 
+    \state[2]_i_1 
+       (.I0(\state[1]_i_2_n_0 ),
+        .I1(\state_reg_n_0_[2] ),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(s_axis_tvalid),
+        .I5(m_axis_tready),
+        .O(state[2]));
   (* FSM_ENCODING = "none" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -2365,7 +2274,7 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
     \state_reg[1] 
        (.C(aclk),
         .CE(aclken),
-        .D(state[1]),
+        .D(\state[1]_i_1_n_0 ),
         .Q(Q[1]),
         .R(SR));
   (* FSM_ENCODING = "none" *) 
@@ -2377,110 +2286,6 @@ module top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axisc_u
         .D(state[2]),
         .Q(\state_reg_n_0_[2] ),
         .R(SR));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "top_level_axis_dwidth_converter_0_0,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
-(* NotValidForBitStream *)
-module top_level_axis_dwidth_converter_0_1
-   (aclk,
-    aresetn,
-    s_axis_tvalid,
-    s_axis_tready,
-    s_axis_tdata,
-    s_axis_tlast,
-    m_axis_tvalid,
-    m_axis_tready,
-    m_axis_tdata,
-    m_axis_tkeep,
-    m_axis_tlast);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIF, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, ASSOCIATED_BUSIF S_AXIS:M_AXIS, ASSOCIATED_RESET aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN aclken" *) input aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RSTIF RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input s_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]s_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input m_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [255:0]m_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TKEEP" *) output [31:0]m_axis_tkeep;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_tlast;
-
-  wire aclk;
-  wire aresetn;
-  wire [255:0]m_axis_tdata;
-  wire [31:0]m_axis_tkeep;
-  wire m_axis_tlast;
-  wire m_axis_tready;
-  wire m_axis_tvalid;
-  wire [31:0]s_axis_tdata;
-  wire s_axis_tlast;
-  wire s_axis_tready;
-  wire s_axis_tvalid;
-  wire [0:0]NLW_inst_m_axis_tdest_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axis_tid_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axis_tstrb_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axis_tuser_UNCONNECTED;
-
-  (* C_AXIS_SIGNAL_SET = "32'b00000000000000000000000000010011" *) 
-  (* C_AXIS_TDEST_WIDTH = "1" *) 
-  (* C_AXIS_TID_WIDTH = "1" *) 
-  (* C_FAMILY = "zynquplus" *) 
-  (* C_M_AXIS_TDATA_WIDTH = "256" *) 
-  (* C_M_AXIS_TUSER_WIDTH = "1" *) 
-  (* C_S_AXIS_TDATA_WIDTH = "32" *) 
-  (* C_S_AXIS_TUSER_WIDTH = "1" *) 
-  (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* G_INDX_SS_TDATA = "1" *) 
-  (* G_INDX_SS_TDEST = "6" *) 
-  (* G_INDX_SS_TID = "5" *) 
-  (* G_INDX_SS_TKEEP = "3" *) 
-  (* G_INDX_SS_TLAST = "4" *) 
-  (* G_INDX_SS_TREADY = "0" *) 
-  (* G_INDX_SS_TSTRB = "2" *) 
-  (* G_INDX_SS_TUSER = "7" *) 
-  (* G_MASK_SS_TDATA = "2" *) 
-  (* G_MASK_SS_TDEST = "64" *) 
-  (* G_MASK_SS_TID = "32" *) 
-  (* G_MASK_SS_TKEEP = "8" *) 
-  (* G_MASK_SS_TLAST = "16" *) 
-  (* G_MASK_SS_TREADY = "1" *) 
-  (* G_MASK_SS_TSTRB = "4" *) 
-  (* G_MASK_SS_TUSER = "128" *) 
-  (* G_TASK_SEVERITY_ERR = "2" *) 
-  (* G_TASK_SEVERITY_INFO = "0" *) 
-  (* G_TASK_SEVERITY_WARNING = "1" *) 
-  (* P_AXIS_SIGNAL_SET = "32'b00000000000000000000000000011011" *) 
-  (* P_D1_REG_CONFIG = "0" *) 
-  (* P_D1_TUSER_WIDTH = "4" *) 
-  (* P_D2_TDATA_WIDTH = "256" *) 
-  (* P_D2_TUSER_WIDTH = "32" *) 
-  (* P_D3_REG_CONFIG = "0" *) 
-  (* P_D3_TUSER_WIDTH = "32" *) 
-  (* P_M_RATIO = "1" *) 
-  (* P_SS_TKEEP_REQUIRED = "8" *) 
-  (* P_S_RATIO = "8" *) 
-  top_level_axis_dwidth_converter_0_1_axis_dwidth_converter_v1_1_18_axis_dwidth_converter inst
-       (.aclk(aclk),
-        .aclken(1'b1),
-        .aresetn(aresetn),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tdest(NLW_inst_m_axis_tdest_UNCONNECTED[0]),
-        .m_axis_tid(NLW_inst_m_axis_tid_UNCONNECTED[0]),
-        .m_axis_tkeep(m_axis_tkeep),
-        .m_axis_tlast(m_axis_tlast),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tstrb(NLW_inst_m_axis_tstrb_UNCONNECTED[31:0]),
-        .m_axis_tuser(NLW_inst_m_axis_tuser_UNCONNECTED[0]),
-        .m_axis_tvalid(m_axis_tvalid),
-        .s_axis_tdata(s_axis_tdata),
-        .s_axis_tdest(1'b0),
-        .s_axis_tid(1'b0),
-        .s_axis_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_tlast(s_axis_tlast),
-        .s_axis_tready(s_axis_tready),
-        .s_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_tuser(1'b0),
-        .s_axis_tvalid(s_axis_tvalid));
 endmodule
 `ifndef GLBL
 `define GLBL

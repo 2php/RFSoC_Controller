@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jun 25 17:44:02 2019
+-- Date        : Tue Jun 25 17:43:49 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axi_uartlite_0_1/top_level_axi_uartlite_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_level_axi_uartlite_0_1 -prefix
+--               top_level_axi_uartlite_0_1_ top_level_axi_uartlite_0_1_sim_netlist.vhdl
 -- Design      : top_level_axi_uartlite_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity top_level_axi_uartlite_0_1_baudrate is
     EN_16x_Baud_reg_0 : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_baudrate : entity is "baudrate";
 end top_level_axi_uartlite_0_1_baudrate;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_baudrate is
@@ -200,8 +198,6 @@ entity top_level_axi_uartlite_0_1_cdc_sync is
     rx : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_cdc_sync : entity is "cdc_sync";
 end top_level_axi_uartlite_0_1_cdc_sync;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_cdc_sync is
@@ -349,8 +345,6 @@ entity top_level_axi_uartlite_0_1_cntr_incr_decr_addn_f is
     s_axi_aresetn : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end top_level_axi_uartlite_0_1_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_cntr_incr_decr_addn_f is
@@ -779,8 +773,6 @@ entity top_level_axi_uartlite_0_1_dynshreg_f is
     serial_Data_reg_0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_dynshreg_f : entity is "dynshreg_f";
 end top_level_axi_uartlite_0_1_dynshreg_f;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_dynshreg_f is
@@ -1152,8 +1144,6 @@ entity top_level_axi_uartlite_0_1_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_pselect_f : entity is "pselect_f";
 end top_level_axi_uartlite_0_1_pselect_f;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_pselect_f is
@@ -1242,8 +1232,6 @@ entity top_level_axi_uartlite_0_1_address_decoder is
     bus2ip_rnw_i : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_address_decoder : entity is "address_decoder";
 end top_level_axi_uartlite_0_1_address_decoder;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_address_decoder is
@@ -1756,8 +1744,6 @@ entity top_level_axi_uartlite_0_1_srl_fifo_rbu_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end top_level_axi_uartlite_0_1_srl_fifo_rbu_f;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_srl_fifo_rbu_f is
@@ -1950,8 +1936,6 @@ entity top_level_axi_uartlite_0_1_slave_attachment is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_slave_attachment : entity is "slave_attachment";
 end top_level_axi_uartlite_0_1_slave_attachment;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_slave_attachment is
@@ -2377,8 +2361,6 @@ entity top_level_axi_uartlite_0_1_srl_fifo_f is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_srl_fifo_f : entity is "srl_fifo_f";
 end top_level_axi_uartlite_0_1_srl_fifo_f;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_srl_fifo_f is
@@ -2499,8 +2481,6 @@ entity top_level_axi_uartlite_0_1_axi_lite_ipif is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_axi_lite_ipif : entity is "axi_lite_ipif";
 end top_level_axi_uartlite_0_1_axi_lite_ipif;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_axi_lite_ipif is
@@ -2569,8 +2549,6 @@ entity top_level_axi_uartlite_0_1_uartlite_rx is
     \INFERRED_GEN.cnt_i_reg[0]_0\ : in STD_LOGIC;
     rx : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_uartlite_rx : entity is "uartlite_rx";
 end top_level_axi_uartlite_0_1_uartlite_rx;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_uartlite_rx is
@@ -3217,8 +3195,6 @@ entity top_level_axi_uartlite_0_1_uartlite_tx is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_uartlite_tx : entity is "uartlite_tx";
 end top_level_axi_uartlite_0_1_uartlite_tx;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_uartlite_tx is
@@ -3525,8 +3501,6 @@ entity top_level_axi_uartlite_0_1_uartlite_core is
     fifo_wr : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_uartlite_core : entity is "uartlite_core";
 end top_level_axi_uartlite_0_1_uartlite_core;
 
 architecture STRUCTURE of top_level_axi_uartlite_0_1_uartlite_core is
@@ -3720,8 +3694,6 @@ entity top_level_axi_uartlite_0_1_axi_uartlite is
   attribute C_S_AXI_DATA_WIDTH of top_level_axi_uartlite_0_1_axi_uartlite : entity is 32;
   attribute C_USE_PARITY : integer;
   attribute C_USE_PARITY of top_level_axi_uartlite_0_1_axi_uartlite : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_axi_uartlite_0_1_axi_uartlite : entity is "axi_uartlite";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of top_level_axi_uartlite_0_1_axi_uartlite : entity is "yes";
 end top_level_axi_uartlite_0_1_axi_uartlite;

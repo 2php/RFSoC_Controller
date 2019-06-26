@@ -64,7 +64,6 @@ module top_level_system_ila_0_1 (
   SLOT_1_AXIS_tvalid,
   SLOT_1_AXIS_tready,
   SLOT_2_AXIS_tdata,
-  SLOT_2_AXIS_tkeep,
   SLOT_2_AXIS_tlast,
   SLOT_2_AXIS_tvalid,
   SLOT_2_AXIS_tready,
@@ -94,13 +93,11 @@ input wire SLOT_1_AXIS_tvalid;
 input wire SLOT_1_AXIS_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TDATA" *)
 input wire [255 : 0] SLOT_2_AXIS_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TKEEP" *)
-input wire [31 : 0] SLOT_2_AXIS_tkeep;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TLAST" *)
 input wire SLOT_2_AXIS_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TVALID" *)
 input wire SLOT_2_AXIS_tvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_2_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_2_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TREADY" *)
 input wire SLOT_2_AXIS_tready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -118,7 +115,6 @@ input wire resetn;
     .SLOT_1_AXIS_tvalid(SLOT_1_AXIS_tvalid),
     .SLOT_1_AXIS_tready(SLOT_1_AXIS_tready),
     .SLOT_2_AXIS_tdata(SLOT_2_AXIS_tdata),
-    .SLOT_2_AXIS_tkeep(SLOT_2_AXIS_tkeep),
     .SLOT_2_AXIS_tlast(SLOT_2_AXIS_tlast),
     .SLOT_2_AXIS_tvalid(SLOT_2_AXIS_tvalid),
     .SLOT_2_AXIS_tready(SLOT_2_AXIS_tready),

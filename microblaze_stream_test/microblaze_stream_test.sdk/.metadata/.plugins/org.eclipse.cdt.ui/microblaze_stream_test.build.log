@@ -1,6 +1,6 @@
-19:04:43 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+15:45:34 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
 make all 
 make: Nothing to be done for 'all'.
 
-19:04:43 Build Finished (took 218ms)
+15:45:34 Build Finished (took 228ms)
 

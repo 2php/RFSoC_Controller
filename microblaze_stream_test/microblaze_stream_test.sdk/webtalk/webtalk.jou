@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # 
-# Start of session at: Tue Jun 25 16:14:50 2019
-# Process ID: 15400
+# Start of session at: Tue Jun 25 19:16:23 2019
+# Process ID: 1332
 # Current directory: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
 # Log file: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/webtalk/webtalk.log

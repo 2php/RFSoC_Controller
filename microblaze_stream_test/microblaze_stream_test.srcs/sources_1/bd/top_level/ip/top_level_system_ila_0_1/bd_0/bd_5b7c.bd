@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF074A3017B5A751A",
+      "boundary_crc": "0xDB9A460AED6DACB6",
       "design_src": "SBD",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "bd_5b7c",
@@ -144,12 +144,12 @@
             "value_src": "default"
           },
           "HAS_TKEEP": {
-            "value": "1",
+            "value": "0",
             "value_src": "default"
           },
           "HAS_TLAST": {
-            "value": "1",
-            "value_src": "default_prop"
+            "value": "0",
+            "value_src": "default"
           },
           "HAS_TREADY": {
             "value": "1",
@@ -267,7 +267,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "13"
+            "value": "12"
           },
           "C_PROBE0_TYPE": {
             "value": "0"
@@ -285,12 +285,6 @@
             "value": "0"
           },
           "C_PROBE11_WIDTH": {
-            "value": "1"
-          },
-          "C_PROBE12_TYPE": {
-            "value": "0"
-          },
-          "C_PROBE12_WIDTH": {
             "value": "1"
           },
           "C_PROBE1_TYPE": {
@@ -345,7 +339,7 @@
             "value": "0"
           },
           "C_PROBE9_WIDTH": {
-            "value": "32"
+            "value": "1"
           },
           "C_TRIGIN_EN": {
             "value": "false"
@@ -441,7 +435,7 @@
             "value": "AXI4S"
           },
           "C_SLOT_2_HAS_TKEEP": {
-            "value": "1"
+            "value": "0"
           },
           "C_SLOT_2_HAS_TREADY": {
             "value": "1"
@@ -543,28 +537,22 @@
           "ila_lib/probe8"
         ]
       },
-      "net_slot_2_axis_tkeep": {
-        "ports": [
-          "g_inst/m_slot_2_axis_tkeep",
-          "ila_lib/probe9"
-        ]
-      },
       "net_slot_2_axis_tvalid": {
         "ports": [
           "g_inst/m_slot_2_axis_tvalid",
-          "ila_lib/probe10"
+          "ila_lib/probe9"
         ]
       },
       "net_slot_2_axis_tready": {
         "ports": [
           "g_inst/m_slot_2_axis_tready",
-          "ila_lib/probe11"
+          "ila_lib/probe10"
         ]
       },
       "net_slot_2_axis_tlast": {
         "ports": [
           "g_inst/m_slot_2_axis_tlast",
-          "ila_lib/probe12"
+          "ila_lib/probe11"
         ]
       }
     }
