@@ -58,4 +58,4 @@ create_clock -period 5.000 -name top_level_usp_rf_data_converter_0_1_dac0_clk [g
 
 
 #AXI Streaming Clock for DAC0
-create_clock -period 32.000 -name top_level_usp_rf_data_converter_0_1_s0_axis_aclk [get_ports s0_axis_aclk]
+create_clock -period 10.000 -name top_level_usp_rf_data_converter_0_1_s0_axis_aclk [get_ports s0_axis_aclk]

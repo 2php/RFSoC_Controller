@@ -383,11 +383,11 @@ proc create_root_design { parentCell } {
    CONFIG.ADC_Mixer_Type00 {3} \
    CONFIG.ADC_Slice00_Enable {false} \
    CONFIG.DAC0_Enable {1} \
-   CONFIG.DAC0_Fabric_Freq {31.250} \
-   CONFIG.DAC0_Outclk_Freq {31.250} \
+   CONFIG.DAC0_Fabric_Freq {100.000} \
+   CONFIG.DAC0_Outclk_Freq {100.000} \
    CONFIG.DAC0_PLL_Enable {true} \
    CONFIG.DAC0_Refclk_Freq {200.000} \
-   CONFIG.DAC0_Sampling_Rate {0.5} \
+   CONFIG.DAC0_Sampling_Rate {1.6} \
    CONFIG.DAC_Interpolation_Mode00 {1} \
    CONFIG.DAC_Mixer_Type00 {0} \
    CONFIG.DAC_Slice00_Enable {true} \

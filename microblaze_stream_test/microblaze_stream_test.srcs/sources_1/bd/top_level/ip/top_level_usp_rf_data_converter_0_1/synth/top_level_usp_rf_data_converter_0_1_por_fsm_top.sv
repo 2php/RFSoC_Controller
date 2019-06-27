@@ -1727,7 +1727,7 @@ module top_level_usp_rf_data_converter_0_1_por_fsm_top (
     );
 
     //DAC0 DRP Arbiter
-    top_level_usp_rf_data_converter_0_1_drp_arbiter #(.DRP_WRITE_DELAY(12))
+    top_level_usp_rf_data_converter_0_1_drp_arbiter #(.DRP_WRITE_DELAY(4))
     drp_arbiter_dac0 (
       .clk(aux_clk),
       .reset(dac0_reset_i),

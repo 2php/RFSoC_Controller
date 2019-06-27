@@ -2303,7 +2303,7 @@ module top_level_usp_rf_data_converter_0_1_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac0_sample_rate <= 32'd500000;
+      dac0_sample_rate <= 32'd1600000;
     end
     else if (bank1_write[193])
     begin

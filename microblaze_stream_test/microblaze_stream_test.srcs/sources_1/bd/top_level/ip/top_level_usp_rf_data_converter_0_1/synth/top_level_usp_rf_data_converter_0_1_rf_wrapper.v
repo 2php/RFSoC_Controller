@@ -1563,7 +1563,7 @@ module top_level_usp_rf_data_converter_0_1_rf_wrapper (
 
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
-    .XPA_SAMPLE_RATE_MSPS (500.0),
+    .XPA_SAMPLE_RATE_MSPS (1600.0),
     .XPA_NUM_DACS         (1),
     .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),

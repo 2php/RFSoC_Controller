@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Jun 26 17:15:40 2019
+-- Date        : Wed Jun 26 17:36:31 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1_sim_netlist.vhdl
@@ -9555,8 +9555,8 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_rst is
   signal \power_on_rst_reg_n_0_[0]\ : STD_LOGIC;
   signal \^wrst_busy\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \/i_\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \/i_\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \FSM_onehot_gen_rst_ic.curr_wrst_state[3]_i_1\ : label is "soft_lutpair39";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_rst_ic.curr_wrst_state_reg[0]\ : label is "WRST_OUT:00100,WRST_IN:00010,WRST_GO2IDLE:10000,WRST_EXIT:01000,WRST_IDLE:00001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_rst_ic.curr_wrst_state_reg[1]\ : label is "WRST_OUT:00100,WRST_IN:00010,WRST_GO2IDLE:10000,WRST_EXIT:01000,WRST_IDLE:00001";
@@ -9568,7 +9568,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_rst is
   attribute SOFT_HLUTNM of \__0/i_\ : label is "soft_lutpair42";
   attribute SOFT_HLUTNM of \gen_pf_ic_rc.gaf_ic.ram_afull_i_i_3\ : label is "soft_lutpair41";
   attribute SOFT_HLUTNM of \gen_rst_ic.fifo_rd_rst_ic_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_2\ : label is "soft_lutpair39";
   attribute SOFT_HLUTNM of \gen_rst_ic.fifo_wr_rst_ic_i_3\ : label is "soft_lutpair40";
   attribute DEF_VAL : string;
   attribute DEF_VAL of \gen_rst_ic.rrst_wr_inst\ : label is "1'b0";
@@ -9586,8 +9586,8 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_rst is
   attribute XPM_CDC of \gen_rst_ic.rrst_wr_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \gen_rst_ic.rrst_wr_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_2\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \gen_rst_ic.wr_rst_busy_ic_i_2\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \gen_rst_ic.rst_seq_reentered_i_2\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \gen_rst_ic.wr_rst_busy_ic_i_2\ : label is "soft_lutpair40";
   attribute DEF_VAL of \gen_rst_ic.wrst_rd_inst\ : label is "1'b0";
   attribute DEST_SYNC_FF of \gen_rst_ic.wrst_rd_inst\ : label is 3;
   attribute INIT of \gen_rst_ic.wrst_rd_inst\ : label is "0";
@@ -11208,18 +11208,18 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_axis is
   attribute XPM_CDC of \gaxis_pkt_fifo_ic.af_axis_cdc_inst\ : label is "SINGLE";
   attribute XPM_MODULE of \gaxis_pkt_fifo_ic.af_axis_cdc_inst\ : label is "TRUE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[1]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[2]_i_1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[3]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[4]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[6]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[7]_i_1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[8]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[9]_i_2\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[1]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[2]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[3]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[4]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[1]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[2]_i_1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[3]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[4]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[6]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[7]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[8]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_rpkt_cnt[9]_i_2\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[1]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[2]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[3]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[4]_i_1\ : label is "soft_lutpair47";
   attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[6]_i_1\ : label is "soft_lutpair51";
   attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[7]_i_1\ : label is "soft_lutpair51";
   attribute SOFT_HLUTNM of \gaxis_pkt_fifo_ic.axis_wpkt_cnt[8]_i_1\ : label is "soft_lutpair45";
@@ -11246,7 +11246,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_axis is
   attribute VERSION of \gaxis_rst_sync.xpm_cdc_sync_rst_inst\ : label is 0;
   attribute XPM_CDC of \gaxis_rst_sync.xpm_cdc_sync_rst_inst\ : label is "SYNC_RST";
   attribute XPM_MODULE of \gaxis_rst_sync.xpm_cdc_sync_rst_inst\ : label is "TRUE";
-  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair52";
   attribute CDC_DEST_SYNC_FF : integer;
   attribute CDC_DEST_SYNC_FF of xpm_fifo_base_inst : label is 3;
   attribute COMMON_CLOCK : integer;
@@ -11356,7 +11356,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1_xpm_fifo_axis is
   attribute stage1_valid of xpm_fifo_base_inst : label is 2;
   attribute stage2_valid : integer;
   attribute stage2_valid of xpm_fifo_base_inst : label is 1;
-  attribute SOFT_HLUTNM of xpm_fifo_base_inst_i_1 : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of xpm_fifo_base_inst_i_1 : label is "soft_lutpair52";
 begin
   almost_full_axis <= \^almost_full_axis\;
   dbiterr_axis <= \<const0>\;
@@ -12866,9 +12866,9 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_1 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of m_axis_aclk : signal is "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 31250000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_aclk : signal is "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
-  attribute X_INTERFACE_PARAMETER of m_axis_tlast : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 31250000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_tlast : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 S_CLKIF CLK";

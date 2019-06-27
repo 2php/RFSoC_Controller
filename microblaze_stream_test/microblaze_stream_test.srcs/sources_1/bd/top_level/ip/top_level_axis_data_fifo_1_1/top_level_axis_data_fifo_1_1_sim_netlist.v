@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jun 26 17:15:40 2019
+// Date        : Wed Jun 26 17:36:30 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1_sim_netlist.v
@@ -32,11 +32,11 @@ module top_level_axis_data_fifo_1_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [255:0]s_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 31250000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, INSERT_VIP 0" *) input m_axis_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, INSERT_VIP 0" *) input m_axis_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input m_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [255:0]m_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 31250000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_tlast;
 
   wire m_axis_aclk;
   wire [255:0]m_axis_tdata;
@@ -5618,14 +5618,14 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[0]_i_1 
        (.I0(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [0]),
         .O(\gaxis_pkt_fifo_ic.rpkt_inv_pad ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[1]_i_1 
        (.I0(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [0]),
         .I1(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[2]_i_1 
@@ -5633,7 +5633,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I1(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [0]),
         .I2(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[3]_i_1 
@@ -5642,7 +5642,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I2(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [1]),
         .I3(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [3]),
         .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[4]_i_1 
@@ -5662,14 +5662,14 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I4(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [3]),
         .I5(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [5]),
         .O(p_0_in__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[6]_i_1 
        (.I0(\gaxis_pkt_fifo_ic.axis_rpkt_cnt[9]_i_3_n_0 ),
         .I1(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [6]),
         .O(p_0_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[7]_i_1 
@@ -5677,7 +5677,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I1(\gaxis_pkt_fifo_ic.axis_rpkt_cnt[9]_i_3_n_0 ),
         .I2(\gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg [7]),
         .O(p_0_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[8]_i_1 
@@ -5694,7 +5694,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I2(data_valid_axis),
         .I3(m_axis_tready),
         .O(p_2_in));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'hF7FF0800)) 
     \gaxis_pkt_fifo_ic.axis_rpkt_cnt[9]_i_2 
@@ -5799,14 +5799,14 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
     \gaxis_pkt_fifo_ic.axis_wpkt_cnt[0]_i_1 
        (.I0(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [0]),
         .O(p_0_in__1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gaxis_pkt_fifo_ic.axis_wpkt_cnt[1]_i_1 
        (.I0(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [0]),
         .I1(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [1]),
         .O(p_0_in__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \gaxis_pkt_fifo_ic.axis_wpkt_cnt[2]_i_1 
@@ -5814,7 +5814,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I1(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [1]),
         .I2(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [2]),
         .O(p_0_in__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \gaxis_pkt_fifo_ic.axis_wpkt_cnt[3]_i_1 
@@ -5823,7 +5823,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .I2(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [2]),
         .I3(\gaxis_pkt_fifo_ic.axis_wpkt_cnt_reg [3]),
         .O(p_0_in__1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \gaxis_pkt_fifo_ic.axis_wpkt_cnt[4]_i_1 
@@ -6167,7 +6167,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
     \gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1 
        (.I0(s_aresetn),
         .O(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT2 #(
     .INIT(4'h8)) 
     m_axis_tvalid_INST_0
@@ -6261,7 +6261,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_axis
         .wr_data_count(NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED[10:0]),
         .wr_en(s_axis_tvalid),
         .wr_rst_busy(NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'h80)) 
     xpm_fifo_base_inst_i_1
@@ -7434,7 +7434,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
   wire wr_en;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h00010116)) 
     \/i_ 
@@ -7484,6 +7484,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
         .I4(\FSM_onehot_gen_rst_ic.curr_wrst_state_reg_n_0_[1] ),
         .I5(\FSM_onehot_gen_rst_ic.curr_wrst_state_reg_n_0_[2] ),
         .O(\FSM_onehot_gen_rst_ic.curr_wrst_state[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'h00000200)) 
     \FSM_onehot_gen_rst_ic.curr_wrst_state[3]_i_1 
@@ -7493,7 +7494,6 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
         .I3(\FSM_onehot_gen_rst_ic.curr_wrst_state_reg_n_0_[2] ),
         .I4(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .O(\FSM_onehot_gen_rst_ic.curr_wrst_state[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h00000200)) 
     \FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 
@@ -7622,7 +7622,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -7667,7 +7667,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
         .I2(p_0_in),
         .I3(rst),
         .O(\gen_rst_ic.rst_seq_reentered_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h00000100)) 
     \gen_rst_ic.rst_seq_reentered_i_2 
@@ -7694,7 +7694,7 @@ module top_level_axis_data_fifo_1_1_xpm_fifo_rst
         .I3(\gen_rst_ic.wr_rst_busy_ic_i_2_n_0 ),
         .I4(wrst_busy),
         .O(\gen_rst_ic.wr_rst_busy_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'h00000116)) 
     \gen_rst_ic.wr_rst_busy_ic_i_2 

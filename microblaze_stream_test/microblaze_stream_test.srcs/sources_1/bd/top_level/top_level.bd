@@ -667,24 +667,6 @@
           }
         },
         "interface_nets": {
-          "microblaze_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "m00_couplers_to_microblaze_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
@@ -725,6 +707,24 @@
             "interface_ports": [
               "xbar/M03_AXI",
               "m03_couplers/S_AXI"
+            ]
+          },
+          "microblaze_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_microblaze_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           }
         },
@@ -919,7 +919,7 @@
             "value": "false"
           },
           "DAC0_Outclk_Freq": {
-            "value": "31.250"
+            "value": "100.000"
           },
           "DAC0_PLL_Enable": {
             "value": "true"
@@ -928,7 +928,7 @@
             "value": "200.000"
           },
           "DAC0_Sampling_Rate": {
-            "value": "0.5"
+            "value": "1.6"
           },
           "DAC_Interpolation_Mode00": {
             "value": "1"
@@ -959,7 +959,7 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "FREQ_HZ": {
-                "value": "31250000"
+                "value": "100000000"
               },
               "HAS_TKEEP": {
                 "value": "0",
@@ -1016,7 +1016,7 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "FREQ_HZ": {
-                "value": "31250000"
+                "value": "100000000"
               },
               "HAS_TKEEP": {
                 "value": "0",
