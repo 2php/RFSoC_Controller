@@ -1472,3 +1472,291 @@ mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
 17:09:14 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
 make all 
 make: Nothing to be done for 'all'.
+17:25:56 **** Auto Build of project microblaze_stream_test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Scanning dependencies of target metal-static
+[  5%] Building C object lib/CMakeFiles/metal-static.dir/dma.c.obj
+[ 10%] Building C object lib/CMakeFiles/metal-static.dir/device.c.obj
+[ 15%] Building C object lib/CMakeFiles/metal-static.dir/init.c.obj
+[ 21%] Building C object lib/CMakeFiles/metal-static.dir/io.c.obj
+[ 26%] Building C object lib/CMakeFiles/metal-static.dir/irq.c.obj
+[ 31%] Building C object lib/CMakeFiles/metal-static.dir/log.c.obj
+[ 36%] Building C object lib/CMakeFiles/metal-static.dir/shmem.c.obj
+[ 42%] Building C object lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj
+[ 47%] Building C object lib/CMakeFiles/metal-static.dir/softirq.c.obj
+[ 52%] Building C object lib/CMakeFiles/metal-static.dir/version.c.obj
+[ 57%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj
+[ 63%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj
+[ 68%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj
+[ 73%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj
+[ 78%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj
+[ 84%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj
+[ 89%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj
+[ 94%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj
+[100%] Linking C static library libmetal.a
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-ar.exe cq libmetal.a  CMakeFiles/metal-static.dir/dma.c.obj CMakeFiles/metal-static.dir/device.c.obj CMakeFiles/metal-static.dir/init.c.obj CMakeFiles/metal-static.dir/io.c.obj CMakeFiles/metal-static.dir/irq.c.obj CMakeFiles/metal-static.dir/log.c.obj CMakeFiles/metal-static.dir/shmem.c.obj CMakeFiles/metal-static.dir/shmem-provider.c.obj CMakeFiles/metal-static.dir/softirq.c.obj CMakeFiles/metal-static.dir/version.c.obj CMakeFiles/metal-static.dir/system/generic/condition.c.obj CMakeFiles/metal-static.dir/system/generic/device.c.obj CMakeFiles/metal-static.dir/system/generic/init.c.obj CMakeFiles/metal-static.dir/system/generic/io.c.obj CMakeFiles/metal-static.dir/system/generic/irq.c.obj CMakeFiles/metal-static.dir/system/generic/time.c.obj CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-ranlib.exe libmetal.a
+[100%] Built target metal-static
+Install the project...
+-- Install configuration: "Debug"
+-- Installing: ../../../include/metal/alloc.h
+-- Installing: ../../../include/metal/assert.h
+-- Installing: ../../../include/metal/atomic.h
+-- Installing: ../../../include/metal/cache.h
+-- Installing: ../../../include/metal/compiler.h
+-- Installing: ../../../include/metal/condition.h
+-- Installing: ../../../include/metal/config.h
+-- Installing: ../../../include/metal/cpu.h
+-- Installing: ../../../include/metal/device.h
+-- Installing: ../../../include/metal/dma.h
+-- Installing: ../../../include/metal/io.h
+-- Installing: ../../../include/metal/irq.h
+-- Installing: ../../../include/metal/irq_controller.h
+-- Installing: ../../../include/metal/list.h
+-- Installing: ../../../include/metal/log.h
+-- Installing: ../../../include/metal/mutex.h
+-- Installing: ../../../include/metal/scatterlist.h
+-- Installing: ../../../include/metal/shmem.h
+-- Installing: ../../../include/metal/shmem-provider.h
+-- Installing: ../../../include/metal/sleep.h
+-- Installing: ../../../include/metal/softirq.h
+-- Installing: ../../../include/metal/spinlock.h
+-- Installing: ../../../include/metal/sys.h
+-- Installing: ../../../include/metal/time.h
+-- Installing: ../../../include/metal/utilities.h
+-- Installing: ../../../include/metal/version.h
+-- Installing: ../../../include/metal/compiler/gcc/atomic.h
+-- Installing: ../../../include/metal/compiler/gcc/compiler.h
+-- Installing: ../../../include/metal/compiler/iar/compiler.h
+-- Installing: ../../../include/metal/processor/microblaze/atomic.h
+-- Installing: ../../../include/metal/processor/microblaze/cpu.h
+-- Installing: ../../../include/metal/system/generic/alloc.h
+-- Installing: ../../../include/metal/system/generic/assert.h
+-- Installing: ../../../include/metal/system/generic/cache.h
+-- Installing: ../../../include/metal/system/generic/condition.h
+-- Installing: ../../../include/metal/system/generic/io.h
+-- Installing: ../../../include/metal/system/generic/irq.h
+-- Installing: ../../../include/metal/system/generic/log.h
+-- Installing: ../../../include/metal/system/generic/mutex.h
+-- Installing: ../../../include/metal/system/generic/sleep.h
+-- Installing: ../../../include/metal/system/generic/sys.h
+-- Installing: ../../../include/metal/system/generic/microblaze_generic/sys.h
+-- Installing: ../../../include/metal/system/generic/xlnx_common/sys.h
+-- Installing: ../../../lib/libmetal.a
+"Running Make libs in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling rfdc"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+17:26:23 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:15:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_wave_test':
+../src/drivers/rf.c:42:6: warning: variable 'test_train' set but not used [-Wunused-but-set-variable]
+  u16 test_train[256];
+      ^~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:123:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_wave_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building file: ../src/drivers/uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/uart.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/uart.d" -MT"src/drivers/uart.o" -o "src/drivers/uart.o" "../src/drivers/uart.c"
+../src/drivers/uart.c: In function 'debug_print':
+../src/drivers/uart.c:12:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print(buff);
+  ^~~~~
+'Finished building: ../src/drivers/uart.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: implicit declaration of function 'rf_init'; did you mean 'uart_init'? [-Wimplicit-function-declaration]
+  rf_init();
+  ^~~~~~~
+  uart_init
+../src/helloworld.c: At top level:
+../src/helloworld.c:59:12: warning: 'CompareFabricRate' declared 'static' but never defined [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+            ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:58:12: warning: 'SelfTestExample' declared 'static' but never defined [-Wunused-function]
+ static int SelfTestExample(u16 SysMonDeviceId);
+            ^~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:53:
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73066	   3376	   9958	  86400	  15180	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+17:26:46 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+17:28:13 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+17:29:37 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:15:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_wave_test':
+../src/drivers/rf.c:42:6: warning: variable 'test_train' set but not used [-Wunused-but-set-variable]
+  u16 test_train[256];
+      ^~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:125:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_wave_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73102	   3376	   9954	  86432	  151a0	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+17:29:42 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+17:30:37 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:15:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_wave_test':
+../src/drivers/rf.c:42:6: warning: variable 'test_train' set but not used [-Wunused-but-set-variable]
+  u16 test_train[256];
+      ^~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:125:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_wave_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73094	   3376	   9954	  86424	  15198	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+17:30:40 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+17:31:30 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:15:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_wave_test':
+../src/drivers/rf.c:42:6: warning: variable 'test_train' set but not used [-Wunused-but-set-variable]
+  u16 test_train[256];
+      ^~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:123:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_wave_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73018	   3376	   9958	  86352	  15150	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+17:31:35 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.

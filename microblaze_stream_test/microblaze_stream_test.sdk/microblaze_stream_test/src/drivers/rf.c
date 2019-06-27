@@ -57,13 +57,13 @@ void rf_wave_test()
 	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
 	//write wave data
 	write_sample_stream(zeros, 16);
-	write_sample_stream(pulse, 16);
-	write_sample_stream(pulse, 16);
-	write_sample_stream(pulse, 16);
-	write_sample_stream(zeros, 16);
-	write_sample_stream(zeros, 16);
-	write_sample_stream(zeros, 16);
-	write_sample_stream(zeros, 16);
+
+	for(int i = 0; i < 25; i++){
+		write_sample_stream(pulse, 16);
+	}
+	for(int i = 0; i < 10; i++){
+		write_sample_stream(zeros, 16);
+	}
 	//turn on ready
 	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
 	usleep(1000000);

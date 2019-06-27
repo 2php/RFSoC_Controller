@@ -10349,3 +10349,3257 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-15
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:10:21.094
 !MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-1730
+!SESSION 2019-06-26 17:24:25.141 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk
+
+!ENTRY org.eclipse.ui 2 0 2019-06-26 17:25:02.068
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-06-26 17:25:02.069
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-06-26 17:25:03.339
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-06-26 17:25:03.339
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:21.314
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:21.317
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:22.972
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:22.975
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:22.978
+!MESSAGE XSCT Command: [setws C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:22.981
+!MESSAGE XSCT command with result: [setws C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:23.001
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.336
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.380
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.385
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.388
+!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.404
+!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Result: [null, top_level.hwh top_level_bd.tcl top_level_system_ila_1_1.hwh top_level_system_ila_1_1_bd.tcl top_level_system_ila_0_1.hwh top_level_system_ila_0_1_bd.tcl top_level_wrapper.bit top_level_wrapper.mmi]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.545
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.566
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:29.570
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:30.088
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:30.094
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:32.291
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:32.297
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:32.305
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_data_fifo_0": {"hier_name": "axis_data_fifo_0",
+"type": "axis_data_fifo",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_data_fifo_1": {"hier_name": "axis_data_fifo_1",
+"type": "axis_data_fifo",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_dwidth_converter_0": {"hier_name": "axis_dwidth_converter_0",
+"type": "axis_dwidth_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_tready_slice_0": {"hier_name": "axis_tready_slice_0",
+"type": "axis_tready_slice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_top_level_31M": {"hier_name": "rst_top_level_31M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"usp_rf_data_converter_0": {"hier_name": "usp_rf_data_converter_0",
+"type": "usp_rf_data_converter",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:32.310
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:32.319
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_data_fifo_0": {"hier_name": "axis_data_fifo_0",
+"type": "axis_data_fifo",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_data_fifo_1": {"hier_name": "axis_data_fifo_1",
+"type": "axis_data_fifo",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_dwidth_converter_0": {"hier_name": "axis_dwidth_converter_0",
+"type": "axis_dwidth_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_tready_slice_0": {"hier_name": "axis_tready_slice_0",
+"type": "axis_tready_slice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_top_level_31M": {"hier_name": "rst_top_level_31M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "MONITOR",
+},
+"system_ila_1": {"hier_name": "system_ila_1",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"usp_rf_data_converter_0": {"hier_name": "usp_rf_data_converter_0",
+"type": "usp_rf_data_converter",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_g_inst": {"hier_name": "system_ila_0/system_ila_0_g_inst",
+"type": "gigantic_mux",
+"version": "1.0",
+"ip_type": "MONITOR",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_1_ila_lib": {"hier_name": "system_ila_1/system_ila_1_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:33.086
+!MESSAGE XSCT Command: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf -sw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/system.mss -dir C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:54.749
+!MESSAGE XSCT command with result: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/MARAND~1/AppData/Local/Temp/system7978836121461215003.hdf -sw C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/system.mss -dir C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.789
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.793
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.797
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.801
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.805
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.810
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.813
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.819
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.823
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.827
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.831
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.835
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.838
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.843
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.846
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:25:55.850
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:56.480
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.core.CommandLauncher.printCommandLine(CommandLauncher.java:287)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:250)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:56.599
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:56.605
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:56.913
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:56.919
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.154
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.159
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.369
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.373
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.791
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:57.796
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.080
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.086
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.758
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.762
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.971
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:58.975
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:25:59.137
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.368
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.538
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.543
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.638
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.975
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:00.979
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:01.100
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:02.343
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:02.347
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:02.834
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:02.961
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:03.425
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:03.729
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:04.057
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:04.474
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:04.783
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:05.180
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:05.569
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:05.992
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:06.322
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:06.694
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:07.109
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:07.493
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:07.840
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:08.178
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:08.533
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:08.823
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:09.263
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:09.615
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:09.828
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:09.957
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.188
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.343
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.386
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.389
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.392
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.396
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.400
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.404
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.406
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.409
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.412
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.416
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.420
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.423
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.426
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.431
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.435
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.438
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.442
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.447
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.455
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.460
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.465
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.469
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.472
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.476
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.481
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.486
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.490
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.495
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.500
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.504
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.509
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.515
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.519
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.524
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.528
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.533
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.538
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.542
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.549
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.553
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.556
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.560
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.565
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.569
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.573
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.668
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.672
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:10.760
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:14.931
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:14.935
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:15.097
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:18.518
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:18.521
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:18.524
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:21.671
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:21.675
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:21.754
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:23.086
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-06-26 17:26:23.128
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:46.415
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:46.420
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "xczu29dr",
+"family": "zynquplusRFSOC",
+"timestamp": "Wed Jun 26 17:14:42 2019",
+"vivado_version": "2019.1",
+"part": "xczu29dr-ffvf1760-2-e",
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-06-26 17:26:47.395
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.402
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.408
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, {}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.412
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.433
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, {"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "3",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "3",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "3",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "3",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GIER": {"description": "Global Interrupt Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global Interrupt Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"axis_data_fifo_0": {},
+"mdm_1": {"UART Receive": {"description": "JTAG UART Receive Data",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"UART_RX": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data.",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "modify",
+},
+},
+},
+"UART Transmit": {"description": "JTAG UART Transmit Data",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"UART_TX": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data.",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"UART Status": {"description": "JTAG UART Status Register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"RX FIFO Valid Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has valid data:
+  0 - Receive FIFO is empty.
+  1 - Receive FIFO has valid data.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX FIFO Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full:
+  0 - Receive FIFO is not full.
+  1 - Receive FIFO is full.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX FIFO Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty:
+  0 - Transmit FIFO is not empty.
+  1 - Transmit FIFO is empty.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX FIFO Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full:
+  0 - Transmit FIFO is not full.
+  1 - Transmit FIFO is full.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Interrupt Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupt is enabled:
+  0 - Interrupt is disabled.
+  1 - Interrupt is enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"UART Control": {"description": "JTAG UART Control Register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"Reset TX FIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO:
+  0 - Do nothing.
+  1 - Clear the transmit FIFO.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Reset RX FIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO:
+  0 - Do nothing.
+  1 - Clear the receive FIFO.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Clear EXT_BRK": {"access": "write-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Clear the EXT_BRK signal set by JTAG:
+  0 - Do nothing.
+  1 - Clear the signal.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Interrupt Enabled": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates interrupt for the MDM JTAG UART:
+  0 - Disable interrupt interrupt.
+  1 - Enable interrupt signal.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+"usp_rf_data_converter_0": {},
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.437
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.445
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"mdm_1_S_AXI": {"name": "mdm_1",
+"base": "0x41400000",
+"high": "0x41400FFF",
+"size": "4096",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"usp_rf_data_converter_0_s_axi": {"name": "usp_rf_data_converter_0",
+"base": "0x44A00000",
+"high": "0x44A3FFFF",
+"size": "262144",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x0001FFFF",
+"size": "131072",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.448
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.453
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.458
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.463
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Result: [null, {}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.466
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.472
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.475
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.479
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf mdm_1], Result: [null, microblaze_0]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.482
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_ENABLED], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.487
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.490
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.495
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.499
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.503
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.506
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_FREQ], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.510
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_FREQ], Result: [null, 100000000]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.514
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.523
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.527
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.714
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.718
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.726
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.728
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.745
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.749
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.777
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.780
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.787
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.791
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.794
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.797
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.806
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.809
+!MESSAGE XSCT Command: [version -server], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.813
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.817
+!MESSAGE XSCT Command: [version], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.821
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.825
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.832
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.835
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.853
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.856
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.863
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.866
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.883
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.886
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.893
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.897
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.914
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.917
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.925
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.929
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.946
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.950
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.967
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.971
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.977
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.980
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.986
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, {"Clk": "100000000",
+"Dbg_Clk": "",
+}]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.989
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.993
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:47.997
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.026
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.038
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.066
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.070
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.100
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.103
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.457
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.527
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.577
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.581
+!MESSAGE XSCT Command: [con], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:26:48.591
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:08.035
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:08.040
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Result: [null, {"microblaze_0": "top_level_i/microblaze_0:top_level_i/microblaze_0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:09.605
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:09.614
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:09.618
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:09.629
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Result: [null, 0x0000000000000000]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.185
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.190
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.193
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.202
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.206
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.215
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.218
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.235
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.239
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.259
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:27:45.263
+!MESSAGE XSCT Command: [fpga -file C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:06.378
+!MESSAGE XSCT command with result: [fpga -file C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:07.182
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:07.188
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/top_level_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:14.182
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:14.198
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-107
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-06-26 17:28:15.208
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.211
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.219
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.223
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.234
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.238
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.245
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.249
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.266
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.269
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.295
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.299
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.303
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.306
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.310
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.313
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.321
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.324
+!MESSAGE XSCT Command: [version -server], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.328
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.331
+!MESSAGE XSCT Command: [version], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.334
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.337
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.344
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.347
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.364
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.367
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.377
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.380
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.397
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.400
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.408
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.411
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.428
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.432
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.439
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.442
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.459
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.462
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.479
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.482
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.486
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.489
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.492
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.495
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.523
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.527
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.545
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.549
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.578
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.580
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:15.994
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:16.046
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:16.084
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:16.087
+!MESSAGE XSCT Command: [con], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:28:16.093
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:43.328
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-161
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:43.332
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-161
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-06-26 17:29:44.329
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.333
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.340
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.342
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.353
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.356
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.364
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.367
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.384
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.388
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.414
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.418
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.423
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.426
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.430
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.433
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.440
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.443
+!MESSAGE XSCT Command: [version -server], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.451
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.454
+!MESSAGE XSCT Command: [version], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.457
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.460
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.467
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.470
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.487
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.490
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.497
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.508
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.525
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.529
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.537
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.540
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.557
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.560
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.567
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.570
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.587
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.591
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.608
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.611
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.618
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.621
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.625
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.628
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.658
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.661
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.690
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.693
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.722
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:44.725
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:45.095
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:45.140
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:45.179
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:45.183
+!MESSAGE XSCT Command: [con], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:29:45.190
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:41.018
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-210
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:41.025
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-210
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-06-26 17:30:42.020
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.023
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.030
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.033
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.045
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.049
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.057
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.060
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.077
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.080
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.106
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.110
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.115
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.118
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.122
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.125
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.133
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.136
+!MESSAGE XSCT Command: [version -server], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.139
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.142
+!MESSAGE XSCT Command: [version], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.145
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.148
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.155
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.158
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.174
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.178
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.185
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.188
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.206
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.210
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.217
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.220
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.238
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.241
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.248
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.251
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.267
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.271
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.287
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.290
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.294
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.297
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.301
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.304
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.333
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.337
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.361
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.364
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.393
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.397
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.782
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.829
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.867
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.870
+!MESSAGE XSCT Command: [con], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:30:42.877
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:36.549
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-265
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:36.555
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-265
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-06-26 17:31:37.551
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.554
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.559
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.562
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.573
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.577
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.584
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.587
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.604
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.608
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.635
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.638
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.644
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.648
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.651
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.654
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.661
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.664
+!MESSAGE XSCT Command: [version -server], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.668
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.670
+!MESSAGE XSCT Command: [version], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.674
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.677
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.684
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.687
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.704
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.707
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.714
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.717
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.734
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.737
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.745
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.748
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.765
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.769
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.777
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.780
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.797
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.800
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.817
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.820
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.824
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.827
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.831
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.834
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.868
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.871
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.894
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.897
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.926
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:37.929
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:38.317
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test/Debug/microblaze_stream_test.elf], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:38.363
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:38.412
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:38.416
+!MESSAGE XSCT Command: [con], Thread: Worker-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-06-26 17:31:38.422
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-9

@@ -60,17 +60,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_
 # IP: bd/top_level/ip/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_usp_rf_data_converter_0_1 || ORIG_REF_NAME==top_level_usp_rf_data_converter_0_1} -quiet] -quiet
 
-# IP: bd/top_level/ip/top_level_system_ila_0_1/top_level_system_ila_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_0_1 || ORIG_REF_NAME==top_level_system_ila_0_1} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_system_ila_1_1/top_level_system_ila_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_1_1 || ORIG_REF_NAME==top_level_system_ila_1_1} -quiet] -quiet
-
 # IP: bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_rst_top_level_31M_1 || ORIG_REF_NAME==top_level_rst_top_level_31M_1} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_clk_wiz_0_0/top_level_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_clk_wiz_0_0 || ORIG_REF_NAME==top_level_clk_wiz_0_0} -quiet] -quiet
 
 # IP: bd/top_level/ip/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_tready_slice_0_0 || ORIG_REF_NAME==top_level_axis_tready_slice_0_0} -quiet] -quiet
