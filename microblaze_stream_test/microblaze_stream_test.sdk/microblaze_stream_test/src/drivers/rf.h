@@ -31,9 +31,12 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 #define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
 
 void rf_wave_test();
-void write_sample_stream(u16* samples, u16 length);
+void write_sample_stream(u16* samples, u16 length, u8 channel);
 static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
 void gpio_init();
+
+
+
 
 
 #endif /* SRC_DRIVERS_RF_H_ */

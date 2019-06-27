@@ -21,8 +21,11 @@
 
 
 module axis_tready_slice(
+
+    input wire clk,
+    input wire reset,
     input wire s_axis_tvalid,
-    output wire s_axis_tready,
+    output reg s_axis_tready,
     input wire [255:0] s_axis_tdata,
     input wire s_axis_tlast,
     
@@ -32,13 +35,27 @@ module axis_tready_slice(
     
     
     output wire [255:0] m_axis_tdata,
-    output wire m_axis_tvalid,
+    output reg m_axis_tvalid,
     input wire m_axis_tready    
     );
     
-    assign m_axis_tvalid = gpio_in[0];
-    assign s_axis_tready = gpio_in[1];
+    
     assign m_axis_tdata = s_axis_tdata;
+    
+    always @ (posedge clk or negedge reset) begin
+        if(reset == 1'b0) begin
+             m_axis_tvalid <= 1'b1;
+             s_axis_tready <= 1'b0;
+        end
+        
+        else begin
+            m_axis_tvalid <= gpio_in[0];
+            s_axis_tready <= gpio_in[1];
+        end
+    
+    
+    end
+    
     
     
 endmodule

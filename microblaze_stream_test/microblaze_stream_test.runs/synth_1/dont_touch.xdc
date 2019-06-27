@@ -66,4 +66,22 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_rst_t
 # IP: bd/top_level/ip/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_tready_slice_0_0 || ORIG_REF_NAME==top_level_axis_tready_slice_0_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_axis_data_fifo_0_2/top_level_axis_data_fifo_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_data_fifo_0_2 || ORIG_REF_NAME==top_level_axis_data_fifo_0_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axis_dwidth_converter_0_2/top_level_axis_dwidth_converter_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_dwidth_converter_0_2 || ORIG_REF_NAME==top_level_axis_dwidth_converter_0_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axis_data_fifo_1_2/top_level_axis_data_fifo_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_data_fifo_1_2 || ORIG_REF_NAME==top_level_axis_data_fifo_1_2} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_axis_tready_slice_0_1/top_level_axis_tready_slice_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_tready_slice_0_1 || ORIG_REF_NAME==top_level_axis_tready_slice_0_1} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_system_ila_0_0/top_level_system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_0_0 || ORIG_REF_NAME==top_level_system_ila_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_1_0 || ORIG_REF_NAME==top_level_system_ila_1_0} -quiet] -quiet
+
 # XDC: bd/top_level/top_level_ooc.xdc

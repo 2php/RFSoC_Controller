@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jun 26 15:18:21 2019
+// Date        : Thu Jun 27 11:52:06 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0_sim_netlist.v
@@ -16,7 +16,9 @@
 (* X_CORE_INFO = "axis_tready_slice,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module top_level_axis_tready_slice_0_0
-   (s_axis_tvalid,
+   (clk,
+    reset,
+    s_axis_tvalid,
     s_axis_tready,
     s_axis_tdata,
     s_axis_tlast,
@@ -24,21 +26,70 @@ module top_level_axis_tready_slice_0_0
     m_axis_tdata,
     m_axis_tvalid,
     m_axis_tready);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m_axis:s_axis, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) input s_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TREADY" *) output s_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *) input [255:0]s_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tlast;
   input [2:0]gpio_in;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [255:0]m_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_1_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
 
+  wire clk;
   wire [2:0]gpio_in;
+  wire m_axis_tvalid;
+  wire reset;
   wire [255:0]s_axis_tdata;
+  wire s_axis_tready;
 
   assign m_axis_tdata[255:0] = s_axis_tdata;
-  assign m_axis_tvalid = gpio_in[0];
-  assign s_axis_tready = gpio_in[1];
+  top_level_axis_tready_slice_0_0_axis_tready_slice inst
+       (.clk(clk),
+        .gpio_in(gpio_in[1:0]),
+        .m_axis_tvalid(m_axis_tvalid),
+        .reset(reset),
+        .s_axis_tready(s_axis_tready));
+endmodule
+
+(* ORIG_REF_NAME = "axis_tready_slice" *) 
+module top_level_axis_tready_slice_0_0_axis_tready_slice
+   (s_axis_tready,
+    m_axis_tvalid,
+    gpio_in,
+    clk,
+    reset);
+  output s_axis_tready;
+  output m_axis_tvalid;
+  input [1:0]gpio_in;
+  input clk;
+  input reset;
+
+  wire clk;
+  wire [1:0]gpio_in;
+  wire m_axis_tvalid;
+  wire reset;
+  wire s_axis_tready;
+  wire s_axis_tready_i_1_n_0;
+
+  FDPE m_axis_tvalid_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(gpio_in[0]),
+        .PRE(s_axis_tready_i_1_n_0),
+        .Q(m_axis_tvalid));
+  LUT1 #(
+    .INIT(2'h1)) 
+    s_axis_tready_i_1
+       (.I0(reset),
+        .O(s_axis_tready_i_1_n_0));
+  FDCE s_axis_tready_reg
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(s_axis_tready_i_1_n_0),
+        .D(gpio_in[1]),
+        .Q(s_axis_tready));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed Jun 26 17:35:10 2019
+//Date        : Thu Jun 27 13:44:53 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -21,7 +21,9 @@ module top_level_wrapper
     uart_rx,
     uart_tx,
     vout00_v_n,
-    vout00_v_p);
+    vout00_v_p,
+    vout01_v_n,
+    vout01_v_p);
   output [7:0]app_leds_tri_o;
   input dac0_clk_clk_n;
   input dac0_clk_clk_p;
@@ -34,6 +36,8 @@ module top_level_wrapper
   output uart_tx;
   output vout00_v_n;
   output vout00_v_p;
+  output vout01_v_n;
+  output vout01_v_p;
 
   wire [7:0]app_leds_tri_o;
   wire dac0_clk_clk_n;
@@ -47,6 +51,8 @@ module top_level_wrapper
   wire uart_tx;
   wire vout00_v_n;
   wire vout00_v_p;
+  wire vout01_v_n;
+  wire vout01_v_p;
 
   top_level top_level_i
        (.app_leds_tri_o(app_leds_tri_o),
@@ -60,5 +66,7 @@ module top_level_wrapper
         .uart_rx(uart_rx),
         .uart_tx(uart_tx),
         .vout00_v_n(vout00_v_n),
-        .vout00_v_p(vout00_v_p));
+        .vout00_v_p(vout00_v_p),
+        .vout01_v_n(vout01_v_n),
+        .vout01_v_p(vout01_v_p));
 endmodule

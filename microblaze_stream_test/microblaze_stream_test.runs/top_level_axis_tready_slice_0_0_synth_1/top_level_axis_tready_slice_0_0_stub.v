@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jun 26 15:18:19 2019
+// Date        : Thu Jun 27 11:52:03 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_level_axis_tready_slice_0_0_stub.v
@@ -14,9 +14,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "axis_tready_slice,Vivado 2019.1" *)
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(s_axis_tvalid, s_axis_tready, s_axis_tdata, 
-  s_axis_tlast, gpio_in, m_axis_tdata, m_axis_tvalid, m_axis_tready)
-/* synthesis syn_black_box black_box_pad_pin="s_axis_tvalid,s_axis_tready,s_axis_tdata[255:0],s_axis_tlast,gpio_in[2:0],m_axis_tdata[255:0],m_axis_tvalid,m_axis_tready" */;
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, reset, s_axis_tvalid, s_axis_tready, 
+  s_axis_tdata, s_axis_tlast, gpio_in, m_axis_tdata, m_axis_tvalid, m_axis_tready)
+/* synthesis syn_black_box black_box_pad_pin="clk,reset,s_axis_tvalid,s_axis_tready,s_axis_tdata[255:0],s_axis_tlast,gpio_in[2:0],m_axis_tdata[255:0],m_axis_tvalid,m_axis_tready" */;
+  input clk;
+  input reset;
   input s_axis_tvalid;
   output s_axis_tready;
   input [255:0]s_axis_tdata;

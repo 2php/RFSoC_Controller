@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Jun 26 17:38:41 2019
+| Date         : Thu Jun 27 13:46:24 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
 | Design       : top_level_wrapper
@@ -173,6 +173,8 @@ Table of Contents
 | top_level_xbar_1                    |    1 |
 | top_level_util_vector_logic_0_1     |    1 |
 | top_level_usp_rf_data_converter_0_1 |    1 |
+| top_level_system_ila_1_0            |    1 |
+| top_level_system_ila_0_0            |    1 |
 | top_level_rst_top_level_31M_1       |    1 |
 | top_level_rst_clk_wiz_1_100M_1      |    1 |
 | top_level_microblaze_0_1            |    1 |
@@ -183,9 +185,13 @@ Table of Contents
 | top_level_dlmb_v10_1                |    1 |
 | top_level_dlmb_bram_if_cntlr_1      |    1 |
 | top_level_clk_wiz_1_1               |    1 |
+| top_level_axis_tready_slice_0_1     |    1 |
 | top_level_axis_tready_slice_0_0     |    1 |
+| top_level_axis_dwidth_converter_0_2 |    1 |
 | top_level_axis_dwidth_converter_0_1 |    1 |
+| top_level_axis_data_fifo_1_2        |    1 |
 | top_level_axis_data_fifo_1_1        |    1 |
+| top_level_axis_data_fifo_0_2        |    1 |
 | top_level_axis_data_fifo_0_1        |    1 |
 | top_level_axi_uartlite_0_1          |    1 |
 | top_level_axi_gpio_0_1              |    1 |

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561595726">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561668310">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -70,8 +70,14 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_dwidth_converter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_microblaze_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_0"/>
 </GenRun>

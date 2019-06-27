@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Wed Jun 26 17:42:05 2019
+| Date                      : Thu Jun 27 13:56:52 2019
 | Host                      : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_level_wrapper_io_placed.rpt
 | Design                    : top_level_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            19 |
+|            21 |
 +---------------+
 
 
@@ -1753,8 +1753,8 @@ Table of Contents
 | W40        |                      |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | W41        |                      |                  | MGTYRXP0_129                       | Gigabit       |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | W42        |                      |                  | MGTYRXN0_129                       | Gigabit       |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| Y1         |                      | DAC              | DAC_VOUT1_N_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| Y2         |                      | DAC              | DAC_VOUT1_P_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| Y1         | vout01_v_n           | DAC              | DAC_VOUT1_N_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| Y2         | vout01_v_p           | DAC              | DAC_VOUT1_P_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y3         |                      |                  | DAC_GND                            | DAC           |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | Y4         | vout00_v_n           | DAC              | DAC_VOUT0_N_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y5         | vout00_v_p           | DAC              | DAC_VOUT0_P_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |

@@ -109,10 +109,18 @@ module top_level_usp_rf_data_converter_0_1_block (
   output            vout00_p,
   output            vout00_n,
 
+  output            vout01_p,
+  output            vout01_n,
+
   // DAC AXI Streaming Data for DAC00
   input  [255:0]    s00_axis_tdata,
   input             s00_axis_tvalid,
   output            s00_axis_tready,
+
+  // DAC AXI Streaming Data for DAC01
+  input  [255:0]    s01_axis_tdata,
+  input             s01_axis_tvalid,
+  output            s01_axis_tready,
 
   // DAC Debug Ports
   // DAC0
@@ -311,9 +319,9 @@ module top_level_usp_rf_data_converter_0_1_block (
   localparam [2:0] dac00_interpolation = 3'd1;
   localparam [1:0] dac00_mixer         = 2'd2;
   localparam       dac00_sinc          = 1'b0;
-  localparam       dac01_enable        = 1'b0;
+  localparam       dac01_enable        = 1'b1;
   localparam       dac01_data_type     = 1'b0;
-  localparam [2:0] dac01_interpolation = 3'd0;
+  localparam [2:0] dac01_interpolation = 3'd1;
   localparam [1:0] dac01_mixer         = 2'd2;
   localparam       dac01_sinc          = 1'b0;
   localparam       dac02_enable        = 1'b0;
@@ -1112,9 +1120,11 @@ module top_level_usp_rf_data_converter_0_1_block (
   reg              dac33_irq_en;
 
   wire  [255:0]    dac00_data_i;
+  wire  [255:0]    dac01_data_i;
 
 
   assign  dac00_data_i  =  s00_axis_tdata;
+  assign  dac01_data_i  =  s01_axis_tdata;
 
   top_level_usp_rf_data_converter_0_1_rf_wrapper
   top_level_usp_rf_data_converter_0_1_rf_wrapper_i(
@@ -1314,15 +1324,18 @@ module top_level_usp_rf_data_converter_0_1_block (
     .vout00_p              (vout00_p),
     .vout00_n              (vout00_n),
 
+    .vout01_p              (vout01_p),
+    .vout01_n              (vout01_n),
+
     // DAC data for DAC00
     .dac00_data_in         (dac00_data_i),
     .dac00_valid_in        (s00_axis_tvalid),
     .dac00_ready_out       (s00_axis_tready),
 
     // DAC data for DAC01
-    .dac01_data_in         (256'b0),
-    .dac01_valid_in        (1'b0),
-    .dac01_ready_out       (),
+    .dac01_data_in         (dac01_data_i),
+    .dac01_valid_in        (s01_axis_tvalid),
+    .dac01_ready_out       (s01_axis_tready),
 
     // DAC data for DAC02
     .dac02_data_in         (256'b0),

@@ -19,10 +19,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29d
 INFO: [Common 17-86] Your Synthesis license expires in 21 day(s)
 INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14000 
+INFO: Helper process launched with PID 5888 
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1464.906 ; gain = 177.910
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1465.160 ; gain = 178.445
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1' [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1.v:52]
 INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1_block' [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:56]
@@ -31,9 +31,9 @@ INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1_bl
 	Parameter dac00_interpolation bound to: 3'b001 
 	Parameter dac00_mixer bound to: 2'b10 
 	Parameter dac00_sinc bound to: 1'b0 
-	Parameter dac01_enable bound to: 1'b0 
+	Parameter dac01_enable bound to: 1'b1 
 	Parameter dac01_data_type bound to: 1'b0 
-	Parameter dac01_interpolation bound to: 3'b000 
+	Parameter dac01_interpolation bound to: 3'b001 
 	Parameter dac01_mixer bound to: 2'b10 
 	Parameter dac01_sinc bound to: 1'b0 
 	Parameter dac02_enable bound to: 1'b0 
@@ -293,20 +293,20 @@ INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1_po
 	Parameter finish bound to: 4'b1011 
 WARNING: [Synth 8-6014] Unused sequential element por_timer_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_disabled.sv:123]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1_por_fsm_disabled__parameterized0' (7#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_disabled.sv:47]
-WARNING: [Synth 8-6014] Unused sequential element adc0_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2295]
-WARNING: [Synth 8-6014] Unused sequential element adc0_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2296]
-WARNING: [Synth 8-6014] Unused sequential element adc1_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2297]
-WARNING: [Synth 8-6014] Unused sequential element adc1_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2298]
-WARNING: [Synth 8-6014] Unused sequential element adc2_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2299]
-WARNING: [Synth 8-6014] Unused sequential element adc2_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2300]
-WARNING: [Synth 8-6014] Unused sequential element adc3_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2301]
-WARNING: [Synth 8-6014] Unused sequential element adc3_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2302]
-WARNING: [Synth 8-6014] Unused sequential element dac1_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2305]
-WARNING: [Synth 8-6014] Unused sequential element dac1_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2306]
-WARNING: [Synth 8-6014] Unused sequential element dac2_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2307]
-WARNING: [Synth 8-6014] Unused sequential element dac2_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2308]
-WARNING: [Synth 8-6014] Unused sequential element dac3_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2309]
-WARNING: [Synth 8-6014] Unused sequential element dac3_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2310]
+WARNING: [Synth 8-6014] Unused sequential element adc0_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2306]
+WARNING: [Synth 8-6014] Unused sequential element adc0_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2307]
+WARNING: [Synth 8-6014] Unused sequential element adc1_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2308]
+WARNING: [Synth 8-6014] Unused sequential element adc1_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2309]
+WARNING: [Synth 8-6014] Unused sequential element adc2_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2310]
+WARNING: [Synth 8-6014] Unused sequential element adc2_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2311]
+WARNING: [Synth 8-6014] Unused sequential element adc3_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2312]
+WARNING: [Synth 8-6014] Unused sequential element adc3_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2313]
+WARNING: [Synth 8-6014] Unused sequential element dac1_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2316]
+WARNING: [Synth 8-6014] Unused sequential element dac1_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2317]
+WARNING: [Synth 8-6014] Unused sequential element dac2_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2318]
+WARNING: [Synth 8-6014] Unused sequential element dac2_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2319]
+WARNING: [Synth 8-6014] Unused sequential element dac3_start_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2320]
+WARNING: [Synth 8-6014] Unused sequential element dac3_end_stage_r_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:2321]
 WARNING: [Synth 8-3848] Net adc0_pll_error in module/entity top_level_usp_rf_data_converter_0_1_por_fsm_top does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:480]
 WARNING: [Synth 8-3848] Net adc0_sm_reset in module/entity top_level_usp_rf_data_converter_0_1_por_fsm_top does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:481]
 WARNING: [Synth 8-3848] Net adc1_pll_error in module/entity top_level_usp_rf_data_converter_0_1_por_fsm_top does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_por_fsm_top.sv:484]
@@ -330,7 +330,7 @@ INFO: [Synth 8-6157] synthesizing module 'HSDAC' [C:/Xilinx/Vivado/2019.1/script
 	Parameter SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
 	Parameter XPA_CFG0 bound to: 1 - type: integer 
 	Parameter XPA_CFG1 bound to: 0 - type: integer 
-	Parameter XPA_NUM_DACS bound to: 1 - type: integer 
+	Parameter XPA_NUM_DACS bound to: 2 - type: integer 
 	Parameter XPA_NUM_DUCS bound to: 0 - type: integer 
 	Parameter XPA_PLL_USED bound to: Yes - type: string 
 	Parameter XPA_SAMPLE_RATE_MSPS bound to: 1600 - type: integer 
@@ -439,61 +439,61 @@ INFO: [Synth 8-6155] done synthesizing module 'BUFG_GT' (24#1) [C:/Xilinx/Vivado
 INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1_bufg_gt_ctrl' (25#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1bufg_gt_ctrl.v:49]
 INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1_reset_count' [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_rst_cnt.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1_reset_count' (26#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_rst_cnt.v:49]
-WARNING: [Synth 8-6014] Unused sequential element adc00_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3043]
-WARNING: [Synth 8-6014] Unused sequential element adc00_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3044]
-WARNING: [Synth 8-6014] Unused sequential element adc01_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3056]
-WARNING: [Synth 8-6014] Unused sequential element adc01_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3057]
-WARNING: [Synth 8-6014] Unused sequential element adc02_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3069]
-WARNING: [Synth 8-6014] Unused sequential element adc02_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3070]
-WARNING: [Synth 8-6014] Unused sequential element adc03_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3082]
-WARNING: [Synth 8-6014] Unused sequential element adc03_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3083]
-WARNING: [Synth 8-6014] Unused sequential element adc10_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3284]
-WARNING: [Synth 8-6014] Unused sequential element adc10_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3285]
-WARNING: [Synth 8-6014] Unused sequential element adc11_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3297]
-WARNING: [Synth 8-6014] Unused sequential element adc11_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3298]
-WARNING: [Synth 8-6014] Unused sequential element adc12_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3310]
-WARNING: [Synth 8-6014] Unused sequential element adc12_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3311]
-WARNING: [Synth 8-6014] Unused sequential element adc13_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3323]
-WARNING: [Synth 8-6014] Unused sequential element adc13_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3324]
-WARNING: [Synth 8-6014] Unused sequential element adc20_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3525]
-WARNING: [Synth 8-6014] Unused sequential element adc20_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3526]
-WARNING: [Synth 8-6014] Unused sequential element adc21_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3538]
-WARNING: [Synth 8-6014] Unused sequential element adc21_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3539]
-WARNING: [Synth 8-6014] Unused sequential element adc22_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3551]
-WARNING: [Synth 8-6014] Unused sequential element adc22_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3552]
-WARNING: [Synth 8-6014] Unused sequential element adc23_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3564]
-WARNING: [Synth 8-6014] Unused sequential element adc23_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3565]
-WARNING: [Synth 8-6014] Unused sequential element adc30_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3766]
-WARNING: [Synth 8-6014] Unused sequential element adc30_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3767]
-WARNING: [Synth 8-6014] Unused sequential element adc31_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3779]
-WARNING: [Synth 8-6014] Unused sequential element adc31_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3780]
-WARNING: [Synth 8-6014] Unused sequential element adc32_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3792]
-WARNING: [Synth 8-6014] Unused sequential element adc32_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3793]
-WARNING: [Synth 8-6014] Unused sequential element adc33_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3805]
-WARNING: [Synth 8-6014] Unused sequential element adc33_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3806]
-WARNING: [Synth 8-3848] Net dac1_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:739]
-WARNING: [Synth 8-3848] Net dac2_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:770]
-WARNING: [Synth 8-3848] Net dac3_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:801]
-WARNING: [Synth 8-3848] Net adc0_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:839]
-WARNING: [Synth 8-3848] Net adc1_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:874]
-WARNING: [Synth 8-3848] Net adc2_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:909]
-WARNING: [Synth 8-3848] Net adc3_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:944]
-WARNING: [Synth 8-3848] Net adc00_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:511]
-WARNING: [Synth 8-3848] Net adc01_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:512]
-WARNING: [Synth 8-3848] Net adc02_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:513]
-WARNING: [Synth 8-3848] Net adc03_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:514]
-WARNING: [Synth 8-3848] Net adc10_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:531]
-WARNING: [Synth 8-3848] Net adc11_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:532]
-WARNING: [Synth 8-3848] Net adc12_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:533]
-WARNING: [Synth 8-3848] Net adc13_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:534]
-WARNING: [Synth 8-3848] Net adc20_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:551]
-WARNING: [Synth 8-3848] Net adc21_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:552]
-WARNING: [Synth 8-3848] Net adc22_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:553]
-WARNING: [Synth 8-3848] Net adc23_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:554]
-WARNING: [Synth 8-3848] Net adc30_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:571]
-WARNING: [Synth 8-3848] Net adc31_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:572]
-WARNING: [Synth 8-3848] Net adc32_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:573]
-WARNING: [Synth 8-3848] Net adc33_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:574]
+WARNING: [Synth 8-6014] Unused sequential element adc00_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3056]
+WARNING: [Synth 8-6014] Unused sequential element adc00_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3057]
+WARNING: [Synth 8-6014] Unused sequential element adc01_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3069]
+WARNING: [Synth 8-6014] Unused sequential element adc01_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3070]
+WARNING: [Synth 8-6014] Unused sequential element adc02_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3082]
+WARNING: [Synth 8-6014] Unused sequential element adc02_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3083]
+WARNING: [Synth 8-6014] Unused sequential element adc03_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3095]
+WARNING: [Synth 8-6014] Unused sequential element adc03_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3096]
+WARNING: [Synth 8-6014] Unused sequential element adc10_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3297]
+WARNING: [Synth 8-6014] Unused sequential element adc10_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3298]
+WARNING: [Synth 8-6014] Unused sequential element adc11_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3310]
+WARNING: [Synth 8-6014] Unused sequential element adc11_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3311]
+WARNING: [Synth 8-6014] Unused sequential element adc12_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3323]
+WARNING: [Synth 8-6014] Unused sequential element adc12_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3324]
+WARNING: [Synth 8-6014] Unused sequential element adc13_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3336]
+WARNING: [Synth 8-6014] Unused sequential element adc13_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3337]
+WARNING: [Synth 8-6014] Unused sequential element adc20_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3538]
+WARNING: [Synth 8-6014] Unused sequential element adc20_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3539]
+WARNING: [Synth 8-6014] Unused sequential element adc21_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3551]
+WARNING: [Synth 8-6014] Unused sequential element adc21_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3552]
+WARNING: [Synth 8-6014] Unused sequential element adc22_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3564]
+WARNING: [Synth 8-6014] Unused sequential element adc22_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3565]
+WARNING: [Synth 8-6014] Unused sequential element adc23_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3577]
+WARNING: [Synth 8-6014] Unused sequential element adc23_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3578]
+WARNING: [Synth 8-6014] Unused sequential element adc30_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3779]
+WARNING: [Synth 8-6014] Unused sequential element adc30_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3780]
+WARNING: [Synth 8-6014] Unused sequential element adc31_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3792]
+WARNING: [Synth 8-6014] Unused sequential element adc31_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3793]
+WARNING: [Synth 8-6014] Unused sequential element adc32_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3805]
+WARNING: [Synth 8-6014] Unused sequential element adc32_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3806]
+WARNING: [Synth 8-6014] Unused sequential element adc33_cal_freeze_reg_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3818]
+WARNING: [Synth 8-6014] Unused sequential element adc33_disable_cal_freeze_input_reg was removed.  [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:3819]
+WARNING: [Synth 8-3848] Net dac1_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:747]
+WARNING: [Synth 8-3848] Net dac2_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:778]
+WARNING: [Synth 8-3848] Net dac3_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:809]
+WARNING: [Synth 8-3848] Net adc0_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:847]
+WARNING: [Synth 8-3848] Net adc1_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:882]
+WARNING: [Synth 8-3848] Net adc2_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:917]
+WARNING: [Synth 8-3848] Net adc3_reset_cnt in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:952]
+WARNING: [Synth 8-3848] Net adc00_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:519]
+WARNING: [Synth 8-3848] Net adc01_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:520]
+WARNING: [Synth 8-3848] Net adc02_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:521]
+WARNING: [Synth 8-3848] Net adc03_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:522]
+WARNING: [Synth 8-3848] Net adc10_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:539]
+WARNING: [Synth 8-3848] Net adc11_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:540]
+WARNING: [Synth 8-3848] Net adc12_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:541]
+WARNING: [Synth 8-3848] Net adc13_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:542]
+WARNING: [Synth 8-3848] Net adc20_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:559]
+WARNING: [Synth 8-3848] Net adc21_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:560]
+WARNING: [Synth 8-3848] Net adc22_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:561]
+WARNING: [Synth 8-3848] Net adc23_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:562]
+WARNING: [Synth 8-3848] Net adc30_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:579]
+WARNING: [Synth 8-3848] Net adc31_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:580]
+WARNING: [Synth 8-3848] Net adc32_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:581]
+WARNING: [Synth 8-3848] Net adc33_signal_lost_i in module/entity top_level_usp_rf_data_converter_0_1_block does not have driver. [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:582]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1_block' (27#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v:56]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1' (28#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1.v:52]
 WARNING: [Synth 8-3331] design xpm_cdc_single__parameterized0 has unconnected port src_clk
@@ -598,7 +598,7 @@ WARNING: [Synth 8-3331] design top_level_usp_rf_data_converter_0_1_por_fsm has u
 WARNING: [Synth 8-3331] design top_level_usp_rf_data_converter_0_1_por_fsm has unconnected port adc3_status[5]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1634.918 ; gain = 347.922
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1634.422 ; gain = 347.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -611,10 +611,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1634.918 ; gain = 347.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1655.273 ; gain = 368.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1634.918 ; gain = 347.922
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1655.273 ; gain = 368.559
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -864,14 +864,14 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_usp_rf_data_converter_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1779.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1786.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1789.070 ; gain = 9.738
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1793.035 ; gain = 6.871
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1789.070 ; gain = 502.074
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1793.035 ; gain = 506.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -879,7 +879,7 @@ Start Loading Part and Timing Information
 Loading part: xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1789.070 ; gain = 502.074
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1793.035 ; gain = 506.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -999,7 +999,7 @@ Applied set_property DONT_TOUCH = true for inst/i_top_level_usp_rf_data_converte
 Applied set_property DONT_TOUCH = true for inst/i_top_level_usp_rf_data_converter_0_1_irq_sync/sync_dac33_data_irq. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/i_top_level_usp_rf_data_converter_0_1_irq_sync/sync_dac33_fifo_irq. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1789.070 ; gain = 502.074
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1793.035 ; gain = 506.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "data_array". This will be implemented in logic
 INFO: [Synth 8-4471] merging register 'drp_wen_reg' into 'drp_den_reg' [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_tile_config.sv:256]
@@ -1173,7 +1173,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'access_cs_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top_level_usp_rf_data_converter_0_1_drp_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1789.070 ; gain = 502.074
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1793.035 ; gain = 506.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1182,7 +1182,7 @@ Report RTL Partitions:
 +------+-----------------------------------------------------------------+------------+----------+
 |1     |muxpart__234_top_level_usp_rf_data_converter_0_1_register_decode |           1|     41213|
 |2     |top_level_usp_rf_data_converter_0_1_register_decode__GB1         |           1|      5616|
-|3     |top_level_usp_rf_data_converter_0_1_block__GC0                   |           1|     27850|
+|3     |top_level_usp_rf_data_converter_0_1_block__GC0                   |           1|     28254|
 +------+-----------------------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1204,7 +1204,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 18    
-	               28 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
 	               18 Bit    Registers := 1     
 	               16 Bit    Registers := 69    
@@ -1342,7 +1342,7 @@ Detailed RTL Component Info :
 Module top_level_usp_rf_data_converter_0_1_device_rom 
 Detailed RTL Component Info : 
 +---Registers : 
-	               28 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
 Module top_level_usp_rf_data_converter_0_1_tile_config 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2509,7 +2509,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/i_0/
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/i_0/\top_level_usp_rf_data_converter_0_1_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\por_timer_start_val_reg[23] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/i_0/\top_level_usp_rf_data_converter_0_1_rf_wrapper_i/por_state_machine_i /por_fsm_dac0/\signal_lost_r_reg[0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 1789.070 ; gain = 502.074
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:06 . Memory (MB): peak = 1793.035 ; gain = 506.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2519,8 +2519,8 @@ ROM:
 +------------------------------------------------+------------+---------------+----------------+
 |Module Name                                     | RTL Object | Depth x Width | Implemented As | 
 +------------------------------------------------+------------+---------------+----------------+
-|top_level_usp_rf_data_converter_0_1_device_rom  | p_0_out    | 64x28         | LUT            | 
-|top_level_usp_rf_data_converter_0_1_tile_config | p_0_out    | 64x28         | LUT            | 
+|top_level_usp_rf_data_converter_0_1_device_rom  | p_0_out    | 64x29         | LUT            | 
+|top_level_usp_rf_data_converter_0_1_tile_config | p_0_out    | 64x29         | LUT            | 
 +------------------------------------------------+------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -2533,32 +2533,32 @@ Report RTL Partitions:
 +------+-----------------------------------------------------------------+------------+----------+
 |1     |muxpart__234_top_level_usp_rf_data_converter_0_1_register_decode |           1|        82|
 |2     |top_level_usp_rf_data_converter_0_1_register_decode__GB1         |           1|       389|
-|3     |top_level_usp_rf_data_converter_0_1_block__GC0                   |           1|     13762|
+|3     |top_level_usp_rf_data_converter_0_1_block__GC0                   |           1|     13862|
 +------+-----------------------------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 2141.246 ; gain = 854.250
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:25 . Memory (MB): peak = 2142.953 ; gain = 856.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:28 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:53 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+----------------------------------------------+------------+----------+
 |      |RTL Partition                                 |Replication |Instances |
 +------+----------------------------------------------+------------+----------+
-|1     |top_level_usp_rf_data_converter_0_1_block_GT0 |           1|     13588|
+|1     |top_level_usp_rf_data_converter_0_1_block_GT0 |           1|     13645|
 +------+----------------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:32 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:58 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2582,7 +2582,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:02:00 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2595,7 +2595,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:02:00 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2607,25 +2607,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:02:00 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2645,14 +2645,14 @@ Report Cell Usage:
 |2     |CARRY8  |    29|
 |3     |HSADC   |     4|
 |4     |HSDAC   |     4|
-|5     |LUT1    |    22|
-|6     |LUT2    |   525|
-|7     |LUT3    |   422|
-|8     |LUT4    |   684|
-|9     |LUT5    |   539|
-|10    |LUT6    |  1343|
+|5     |LUT1    |    23|
+|6     |LUT2    |   526|
+|7     |LUT3    |   432|
+|8     |LUT4    |   661|
+|9     |LUT5    |   500|
+|10    |LUT6    |  1383|
 |11    |MUXF7   |     2|
-|12    |FDRE    |  2626|
+|12    |FDRE    |  2627|
 |13    |FDSE    |   246|
 +------+--------+------+
 
@@ -2660,27 +2660,27 @@ Report Instance Areas:
 +------+------------------------------------------------------------+------------------------------------------------------------------------+------+
 |      |Instance                                                    |Module                                                                  |Cells |
 +------+------------------------------------------------------------+------------------------------------------------------------------------+------+
-|1     |top                                                         |                                                                        |  6447|
-|2     |  inst                                                      |top_level_usp_rf_data_converter_0_1_block                               |  6447|
+|1     |top                                                         |                                                                        |  6438|
+|2     |  inst                                                      |top_level_usp_rf_data_converter_0_1_block                               |  6438|
 |3     |    cdc_dac0_clk_valid_i                                    |xpm_cdc_single                                                          |     4|
-|4     |    i_axi_lite_ipif                                         |top_level_usp_rf_data_converter_0_1_axi_lite_ipif                       |  1599|
-|5     |      I_SLAVE_ATTACHMENT                                    |top_level_usp_rf_data_converter_0_1_slave_attachment                    |  1599|
+|4     |    i_axi_lite_ipif                                         |top_level_usp_rf_data_converter_0_1_axi_lite_ipif                       |  1591|
+|5     |      I_SLAVE_ATTACHMENT                                    |top_level_usp_rf_data_converter_0_1_slave_attachment                    |  1591|
 |6     |        \DATA_PHASE_WDT.I_DPTO_COUNTER                      |top_level_usp_rf_data_converter_0_1_counter_f                           |    45|
-|7     |        I_DECODER                                           |top_level_usp_rf_data_converter_0_1_address_decoder                     |  1380|
-|8     |    i_dac0_reset_count                                      |top_level_usp_rf_data_converter_0_1_reset_count                         |    25|
-|9     |    i_drp_control_top                                       |top_level_usp_rf_data_converter_0_1_drp_control_top                     |    95|
+|7     |        I_DECODER                                           |top_level_usp_rf_data_converter_0_1_address_decoder                     |  1368|
+|8     |    i_dac0_reset_count                                      |top_level_usp_rf_data_converter_0_1_reset_count                         |    27|
+|9     |    i_drp_control_top                                       |top_level_usp_rf_data_converter_0_1_drp_control_top                     |    97|
 |10    |      i_adc0_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control                         |    11|
 |11    |      i_adc1_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_36                      |    10|
 |12    |      i_adc2_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_37                      |    11|
 |13    |      i_adc3_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_38                      |    16|
-|14    |      i_dac0_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_39                      |    11|
+|14    |      i_dac0_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_39                      |    13|
 |15    |      i_dac1_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_40                      |    11|
 |16    |      i_dac2_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_41                      |    13|
 |17    |      i_dac3_drp_control                                    |top_level_usp_rf_data_converter_0_1_drp_control_42                      |    12|
-|18    |    i_register_decode                                       |top_level_usp_rf_data_converter_0_1_register_decode                     |    36|
+|18    |    i_register_decode                                       |top_level_usp_rf_data_converter_0_1_register_decode                     |    32|
 |19    |    i_top_level_usp_rf_data_converter_0_1_bufg_gt_ctrl      |top_level_usp_rf_data_converter_0_1_bufg_gt_ctrl                        |     1|
 |20    |    i_top_level_usp_rf_data_converter_0_1_irq_req_ack       |top_level_usp_rf_data_converter_0_1_irq_req_ack                         |     7|
-|21    |    i_top_level_usp_rf_data_converter_0_1_irq_sync          |top_level_usp_rf_data_converter_0_1_irq_sync                            |   560|
+|21    |    i_top_level_usp_rf_data_converter_0_1_irq_sync          |top_level_usp_rf_data_converter_0_1_irq_sync                            |   563|
 |22    |      sync_dac00_data_irq                                   |xpm_cdc_single__parameterized0__96                                      |     5|
 |23    |      sync_dac00_fifo_irq                                   |xpm_cdc_single__parameterized0__97                                      |     5|
 |24    |      sync_dac01_data_irq                                   |xpm_cdc_single__parameterized0__98                                      |     5|
@@ -2780,30 +2780,30 @@ Report Instance Areas:
 |118   |    i_top_level_usp_rf_data_converter_0_1_overvol_irq       |top_level_usp_rf_data_converter_0_1_overvol_irq                         |   128|
 |119   |      i_adc00_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_20                      |     6|
 |120   |      i_adc01_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_21                      |     6|
-|121   |      i_adc02_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_22                      |     7|
+|121   |      i_adc02_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_22                      |     6|
 |122   |      i_adc03_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_23                      |     7|
-|123   |      i_adc10_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_24                      |     7|
-|124   |      i_adc11_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_25                      |     7|
+|123   |      i_adc10_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_24                      |     6|
+|124   |      i_adc11_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_25                      |     6|
 |125   |      i_adc12_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_26                      |     7|
 |126   |      i_adc13_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_27                      |     7|
-|127   |      i_adc20_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_28                      |     8|
-|128   |      i_adc21_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_29                      |     6|
-|129   |      i_adc22_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_30                      |     6|
-|130   |      i_adc23_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_31                      |     7|
-|131   |      i_adc30_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_32                      |     6|
+|127   |      i_adc20_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_28                      |     6|
+|128   |      i_adc21_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_29                      |     7|
+|129   |      i_adc22_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_30                      |     7|
+|130   |      i_adc23_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_31                      |     6|
+|131   |      i_adc30_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_32                      |     7|
 |132   |      i_adc31_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_33                      |     7|
 |133   |      i_adc32_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_34                      |     6|
-|134   |      i_adc33_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_35                      |     8|
-|135   |    i_top_level_usp_rf_data_converter_0_1_powerup_state_irq |top_level_usp_rf_data_converter_0_1_powerup_state_irq                   |    44|
-|136   |      i_adc0_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_12                      |     5|
-|137   |      i_adc1_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_13                      |     6|
-|138   |      i_adc2_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_14                      |     5|
+|134   |      i_adc33_overvol_ack                                   |top_level_usp_rf_data_converter_0_1_irq_req_ack_35                      |     7|
+|135   |    i_top_level_usp_rf_data_converter_0_1_powerup_state_irq |top_level_usp_rf_data_converter_0_1_powerup_state_irq                   |    47|
+|136   |      i_adc0_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_12                      |     6|
+|137   |      i_adc1_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_13                      |     5|
+|138   |      i_adc2_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_14                      |     6|
 |139   |      i_adc3_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_15                      |     5|
-|140   |      i_dac0_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_16                      |     6|
+|140   |      i_dac0_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_16                      |     7|
 |141   |      i_dac1_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_17                      |     5|
-|142   |      i_dac2_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_18                      |     5|
+|142   |      i_dac2_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_18                      |     6|
 |143   |      i_dac3_powerup_state_ack                              |top_level_usp_rf_data_converter_0_1_irq_req_ack_19                      |     6|
-|144   |    top_level_usp_rf_data_converter_0_1_rf_wrapper_i        |top_level_usp_rf_data_converter_0_1_rf_wrapper                          |  2975|
+|144   |    top_level_usp_rf_data_converter_0_1_rf_wrapper_i        |top_level_usp_rf_data_converter_0_1_rf_wrapper                          |  2968|
 |145   |      cdc_dac0_done_i                                       |xpm_cdc_single__21                                                      |     4|
 |146   |      cdc_adc0_supplies_up_i                                |xpm_cdc_single__22                                                      |     4|
 |147   |      cdc_adc1_supplies_up_i                                |xpm_cdc_single__23                                                      |     4|
@@ -2816,16 +2816,16 @@ Report Instance Areas:
 |154   |      cdc_dac1_supplies_up_i                                |xpm_cdc_single__30                                                      |     4|
 |155   |      cdc_dac2_supplies_up_i                                |xpm_cdc_single__31                                                      |     4|
 |156   |      cdc_dac3_supplies_up_i                                |xpm_cdc_single__32                                                      |     4|
-|157   |      por_state_machine_i                                   |top_level_usp_rf_data_converter_0_1_por_fsm_top                         |  2906|
+|157   |      por_state_machine_i                                   |top_level_usp_rf_data_converter_0_1_por_fsm_top                         |  2902|
 |158   |        bgt_fsm_dac                                         |top_level_usp_rf_data_converter_0_1_bgt_fsm                             |   151|
-|159   |        drp_arbiter_adc0                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter                         |    77|
-|160   |        drp_arbiter_adc1                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_0                       |    74|
-|161   |        drp_arbiter_adc2                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_1                       |    75|
-|162   |        drp_arbiter_adc3                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_2                       |    74|
-|163   |        drp_arbiter_dac0                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_3                       |   107|
-|164   |        drp_arbiter_dac1                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_4                       |    74|
-|165   |        drp_arbiter_dac2                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_5                       |    75|
-|166   |        drp_arbiter_dac3                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_6                       |    74|
+|159   |        drp_arbiter_adc0                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter                         |    76|
+|160   |        drp_arbiter_adc1                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_0                       |    73|
+|161   |        drp_arbiter_adc2                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_1                       |    74|
+|162   |        drp_arbiter_adc3                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_2                       |    73|
+|163   |        drp_arbiter_dac0                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_3                       |   108|
+|164   |        drp_arbiter_dac1                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_4                       |    73|
+|165   |        drp_arbiter_dac2                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_5                       |    74|
+|166   |        drp_arbiter_dac3                                    |top_level_usp_rf_data_converter_0_1_drp_arbiter_6                       |    73|
 |167   |        por_fsm_adc0                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled                    |   169|
 |168   |        por_fsm_adc1                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled_7                  |   169|
 |169   |        por_fsm_adc2                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled_8                  |   169|
@@ -2838,41 +2838,41 @@ Report Instance Areas:
 |176   |        por_fsm_dac1                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled__parameterized0    |   169|
 |177   |        por_fsm_dac2                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled__parameterized0_10 |   169|
 |178   |        por_fsm_dac3                                        |top_level_usp_rf_data_converter_0_1_por_fsm_disabled__parameterized0_11 |   169|
-|179   |        tile_config                                         |top_level_usp_rf_data_converter_0_1_tile_config                         |   274|
-|180   |          ram                                               |top_level_usp_rf_data_converter_0_1_device_rom                          |   183|
+|179   |        tile_config                                         |top_level_usp_rf_data_converter_0_1_tile_config                         |   277|
+|180   |          ram                                               |top_level_usp_rf_data_converter_0_1_device_rom                          |   185|
 +------+------------------------------------------------------------+------------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:26 . Memory (MB): peak = 2370.871 ; gain = 929.723
-Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.871 ; gain = 1083.875
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:47 . Memory (MB): peak = 2376.324 ; gain = 951.848
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 2376.324 ; gain = 1089.609
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-441] Inserted BUFG_GT_SYNC inst/top_level_usp_rf_data_converter_0_1_rf_wrapper_i/BUFG_GT_SYNC for BUFG_GT inst/i_top_level_usp_rf_data_converter_0_1_bufg_gt_ctrl/dac0_bufg_gt
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2395.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2401.184 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 306 Infos, 195 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 2395.730 ; gain = 1990.012
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:02:15 . Memory (MB): peak = 2401.184 ; gain = 1997.262
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2395.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2401.184 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_usp_rf_data_converter_0_1_synth_1/top_level_usp_rf_data_converter_0_1.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_level_usp_rf_data_converter_0_1, cache-ID = f1fd76b328109580
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_level_usp_rf_data_converter_0_1, cache-ID = 78646ffefbd81f10
 INFO: [Coretcl 2-1174] Renamed 179 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2395.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2401.184 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_usp_rf_data_converter_0_1_synth_1/top_level_usp_rf_data_converter_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_usp_rf_data_converter_0_1_utilization_synth.rpt -pb top_level_usp_rf_data_converter_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 26 17:37:32 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 26 17:59:52 2019...

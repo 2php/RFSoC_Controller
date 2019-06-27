@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Jun 26 17:44:11 2019
+| Date         : Thu Jun 27 14:01:36 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,18 +23,17 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 90
+             Violations found: 16
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
 | TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
 | TIMING-7  | Critical Warning | No common node between related clocks          | 1          |
 | TIMING-8  | Critical Warning | No common period between related clocks        | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                   | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 7          |
 | TIMING-9  | Warning          | Unknown CDC Logic                              | 1          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
-| TIMING-16 | Warning          | Large setup violation                          | 82         |
-| TIMING-18 | Warning          | Missing input or output delay                  | 1          |
+| TIMING-16 | Warning          | Large setup violation                          | 4          |
 +-----------+------------------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -56,10 +55,35 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
@@ -76,417 +100,22 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.861 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.empty_fwft_i_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.019 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.903 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.062 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.928 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.068 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.933 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[1]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -2.947 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[1]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -2.950 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_pkt_read_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -2.960 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[1]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -2.961 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[3]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -2.961 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[6]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -2.961 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[8]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#11 Warning
-Large setup violation  
-There is a large setup violation of -2.962 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_fwft.gdvld_fwft.data_valid_fwft_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#12 Warning
-Large setup violation  
-There is a large setup violation of -2.963 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[4]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#13 Warning
-Large setup violation  
-There is a large setup violation of -2.963 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[7]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#14 Warning
-Large setup violation  
-There is a large setup violation of -2.963 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[9]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#15 Warning
-Large setup violation  
-There is a large setup violation of -2.969 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[2]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#16 Warning
-Large setup violation  
-There is a large setup violation of -2.969 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[3]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#17 Warning
-Large setup violation  
-There is a large setup violation of -2.973 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[4]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#18 Warning
-Large setup violation  
-There is a large setup violation of -2.974 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/FSM_sequential_gen_fwft.curr_fwft_state_reg[0]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#19 Warning
-Large setup violation  
-There is a large setup violation of -2.975 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#20 Warning
-Large setup violation  
-There is a large setup violation of -2.978 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[0]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#21 Warning
-Large setup violation  
-There is a large setup violation of -2.992 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[6]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#22 Warning
-Large setup violation  
-There is a large setup violation of -2.994 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[0]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#23 Warning
-Large setup violation  
-There is a large setup violation of -2.994 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[2]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#24 Warning
-Large setup violation  
-There is a large setup violation of -2.995 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[1]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#25 Warning
-Large setup violation  
-There is a large setup violation of -2.995 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.axis_rpkt_cnt_reg[5]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#26 Warning
-Large setup violation  
-There is a large setup violation of -3.004 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[3]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#27 Warning
-Large setup violation  
-There is a large setup violation of -3.022 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[2]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#28 Warning
-Large setup violation  
-There is a large setup violation of -3.028 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[5]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#29 Warning
-Large setup violation  
-There is a large setup violation of -3.031 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[5]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#30 Warning
-Large setup violation  
-There is a large setup violation of -3.048 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[4]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#31 Warning
-Large setup violation  
-There is a large setup violation of -3.049 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[5]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#32 Warning
-Large setup violation  
-There is a large setup violation of -3.052 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[7]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#33 Warning
-Large setup violation  
-There is a large setup violation of -3.063 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[6]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#34 Warning
-Large setup violation  
-There is a large setup violation of -3.067 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[8]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#35 Warning
-Large setup violation  
-There is a large setup violation of -3.072 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#36 Warning
-Large setup violation  
-There is a large setup violation of -3.078 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[9]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#37 Warning
-Large setup violation  
-There is a large setup violation of -3.085 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[3]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#38 Warning
-Large setup violation  
-There is a large setup violation of -3.098 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_pkt_fifo_ic.diff_pkt_cnt_pad_reg[10]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#39 Warning
-Large setup violation  
-There is a large setup violation of -3.105 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[4]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#40 Warning
-Large setup violation  
-There is a large setup violation of -3.105 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[5]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#41 Warning
-Large setup violation  
-There is a large setup violation of -3.105 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[1]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#42 Warning
-Large setup violation  
-There is a large setup violation of -3.105 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[2]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#43 Warning
-Large setup violation  
-There is a large setup violation of -3.105 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[3]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#44 Warning
-Large setup violation  
-There is a large setup violation of -3.106 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[2]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#45 Warning
-Large setup violation  
-There is a large setup violation of -3.117 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[8]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#46 Warning
-Large setup violation  
-There is a large setup violation of -3.124 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[9]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#47 Warning
-Large setup violation  
-There is a large setup violation of -3.126 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[7]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#48 Warning
-Large setup violation  
-There is a large setup violation of -3.126 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[0]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#49 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[2]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#50 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[3]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#51 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[6]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#52 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[7]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#53 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[8]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#54 Warning
-Large setup violation  
-There is a large setup violation of -3.152 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[9]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#55 Warning
-Large setup violation  
-There is a large setup violation of -3.161 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[0]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#56 Warning
-Large setup violation  
-There is a large setup violation of -3.161 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdp_inst/count_value_i_reg[1]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#57 Warning
-Large setup violation  
-There is a large setup violation of -3.179 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#58 Warning
-Large setup violation  
-There is a large setup violation of -3.196 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[8]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#59 Warning
-Large setup violation  
-There is a large setup violation of -3.197 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#60 Warning
-Large setup violation  
-There is a large setup violation of -3.197 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[5]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#61 Warning
-Large setup violation  
-There is a large setup violation of -3.197 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[7]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#62 Warning
-Large setup violation  
-There is a large setup violation of -3.197 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[9]/CE (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#63 Warning
-Large setup violation  
-There is a large setup violation of -3.207 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[8]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#64 Warning
-Large setup violation  
-There is a large setup violation of -3.220 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[7]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#65 Warning
-Large setup violation  
-There is a large setup violation of -3.265 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[9]/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#66 Warning
-Large setup violation  
-There is a large setup violation of -3.274 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_pf_ic_rc.ram_empty_i_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#67 Warning
-Large setup violation  
-There is a large setup violation of -3.370 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_6/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#68 Warning
-Large setup violation  
-There is a large setup violation of -3.384 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#69 Warning
-Large setup violation  
-There is a large setup violation of -3.396 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#70 Warning
-Large setup violation  
-There is a large setup violation of -3.399 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_4/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#71 Warning
-Large setup violation  
-There is a large setup violation of -3.416 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_3/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#72 Warning
-Large setup violation  
-There is a large setup violation of -3.422 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_5/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#73 Warning
-Large setup violation  
-There is a large setup violation of -3.439 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_2/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#74 Warning
-Large setup violation  
-There is a large setup violation of -3.440 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/REGCEB (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#75 Warning
-Large setup violation  
-There is a large setup violation of -3.472 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_6/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#76 Warning
-Large setup violation  
-There is a large setup violation of -3.479 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_1/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#77 Warning
-Large setup violation  
-There is a large setup violation of -3.491 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#78 Warning
-Large setup violation  
-There is a large setup violation of -3.502 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_3/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#79 Warning
-Large setup violation  
-There is a large setup violation of -3.503 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_4/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#80 Warning
-Large setup violation  
-There is a large setup violation of -3.521 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_5/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#81 Warning
-Large setup violation  
-There is a large setup violation of -3.529 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_2/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#82 Warning
-Large setup violation  
-There is a large setup violation of -3.529 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/ENBWREN (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-18#1 Warning
-Missing input or output delay  
-An input delay is missing on reset_in relative to clock(s) RFDAC0_CLK
+There is a large setup violation of -1.073 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

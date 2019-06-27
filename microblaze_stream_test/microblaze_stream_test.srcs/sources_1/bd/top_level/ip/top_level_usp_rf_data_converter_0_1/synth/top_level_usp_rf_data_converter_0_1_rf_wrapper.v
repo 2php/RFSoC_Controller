@@ -223,6 +223,9 @@ module top_level_usp_rf_data_converter_0_1_rf_wrapper (
   output            vout00_p,
   output            vout00_n,
 
+  output            vout01_p,
+  output            vout01_n,
+
   // DAC AXI Streaming Data for DAC33
   input  [255:0]    dac00_data_in,
   input             dac00_valid_in,
@@ -984,7 +987,7 @@ module top_level_usp_rf_data_converter_0_1_rf_wrapper (
   // Data from Slice 3 in all Tiles
   assign data_dac3        = {dac33_data_in, dac23_data_in, dac13_data_in, dac03_data_in};
   assign dac00_ready_out = dac0_done_sync;
-  assign dac01_ready_out = 1'b0;
+  assign dac01_ready_out = dac0_done_sync;
   assign dac02_ready_out = 1'b0;
   assign dac03_ready_out = 1'b0;
   assign dac10_ready_out = 1'b0;
@@ -1564,7 +1567,7 @@ module top_level_usp_rf_data_converter_0_1_rf_wrapper (
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
     .XPA_SAMPLE_RATE_MSPS (1600.0),
-    .XPA_NUM_DACS         (1),
+    .XPA_NUM_DACS         (2),
     .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
     .XPA_CFG0             (1),
@@ -1616,8 +1619,8 @@ module top_level_usp_rf_data_converter_0_1_rf_wrapper (
     .DATA_DAC3          ( data_dac3[255:0] ),            // input  [255:0]
     .VOUT0_N            (vout00_n),                      // output
     .VOUT0_P            (vout00_p),                      // output
-    .VOUT1_N            (),                               // output
-    .VOUT1_P            (),                               // output
+    .VOUT1_N            (vout01_n),                      // output
+    .VOUT1_P            (vout01_p),                      // output
     .VOUT2_N            (),                               // output
     .VOUT2_P            (),                               // output
     .VOUT3_N            (),                               // output

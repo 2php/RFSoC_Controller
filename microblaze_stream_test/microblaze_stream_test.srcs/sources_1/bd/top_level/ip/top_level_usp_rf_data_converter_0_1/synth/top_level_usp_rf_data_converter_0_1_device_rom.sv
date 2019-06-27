@@ -66,7 +66,7 @@ module top_level_usp_rf_data_converter_0_1_device_rom (
     // 29:27 |  26:24  |    23:16    |    15:0
     // Tile  |  Slice  | DRP Address |  DRP Data
 
-    (* rom_style = "distributed" *) reg [29:0] data_array [0:39] = '{
+    (* rom_style = "distributed" *) reg [29:0] data_array [0:52] = '{
        30'h07280280,  // SYSREF Distribution (ADC0)
        30'h0f280600,  // SYSREF Distribution (ADC1)
        30'h17288880,  // SYSREF Distribution (ADC2)
@@ -103,6 +103,19 @@ module top_level_usp_rf_data_converter_0_1_device_rom (
        30'h2006000f,  // DAC00 FABRIC_IMR
        30'h200f0fff,  // DAC00 DATAPATH_IMR
        30'h20070008,  // DAC00 FABRIC_DEBUG
+       30'h21020810,  // DAC01 Data Width
+       30'h21100001,  // DAC01 Interpolation Control
+       30'h21110000,  // DAC01 Interpolation Data
+       30'h21300000,  // DAC01 Inv Sinc Filter
+       30'h21310040,  // DAC01 Multiband Config
+       30'h21600001,  // DAC01 Decoder Control
+       30'h21610001,  // DAC01 Decoder Clock Enable
+       30'h21710000,  // DAC01 MC_CONFIG0
+       30'h21734858,  // DAC01 MC_CONFIG2
+       30'h217487c0,  // DAC01 MC_CONFIG3
+       30'h2106000f,  // DAC01 FABRIC_IMR
+       30'h210f0fff,  // DAC01 DATAPATH_IMR
+       30'h21070008,  // DAC01 FABRIC_DEBUG
        30'h2f282400,  // SYSREF Distribution (DAC1)
        30'h37280980,  // SYSREF Distribution (DAC2)
        30'h3f280100,  // SYSREF Distribution (DAC3)

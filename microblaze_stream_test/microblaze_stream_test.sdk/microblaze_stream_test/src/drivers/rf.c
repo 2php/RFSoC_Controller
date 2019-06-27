@@ -7,6 +7,13 @@
 
 #include "rf.h"
 
+#define RF_VALID_TIME 250000
+
+u16 sine_wave[16] = {0x8000, 0xB0FC, 0xDA82, 0xF642, 0xFFFF, 0xF642, 0xDA82, 0xB0FC, 0x8000, 0x4F04, 0x257E, 0x9BE, 0x0, 0x9BE, 0x257E, 0x4F04};
+u16 t_wave[16] = {0x0, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000, 0xC000, 0xA000, 0x8000, 0x6000, 0x4000, 0x2000, 0x0, 0x0};
+//volatile unsigned int *sine_wave = {0x10000, 0x161F8, 0x1B505, 0x1EC83, 0x20000, 0x1EC83, 0x1B505, 0x161F8, 0x10000, 0x9E08, 0x4AFB, 0x137D, 0x0, 0x137D, 0x4AFB, 0x9E08};
+u16 pulse[16] = {0x0, 0x7FFF, 0xFFFF, 0x7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
+u16 zeros [16];
 
 void gpio_init()
 {
@@ -28,24 +35,8 @@ void gpio_init()
 
 	//turn LEDs on
 	XGpio_DiscreteWrite(&Gpio, 1, 0xFF);
-}
 
-void rf_wave_test()
-{
-
-	u16 sine_wave[16] = {0x8000, 0xB0FC, 0xDA82, 0xF642, 0xFFFF, 0xF642, 0xDA82, 0xB0FC, 0x8000, 0x4F04, 0x257E, 0x9BE, 0x0, 0x9BE, 0x257E, 0x4F04};
-	u16 t_wave[16] = {0x0, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000, 0xC000, 0xA000, 0x8000, 0x6000, 0x4000, 0x2000, 0x0, 0x0};
-	//volatile unsigned int *sine_wave = {0x10000, 0x161F8, 0x1B505, 0x1EC83, 0x20000, 0x1EC83, 0x1B505, 0x161F8, 0x10000, 0x9E08, 0x4AFB, 0x137D, 0x0, 0x137D, 0x4AFB, 0x9E08};
-	u16 pulse[16] = {0x0, 0x7FFF, 0xFFFF, 0x7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
-	u16 zeros [16];
-
-	u16 test_train[256];
-
-	for(u16 i = 0; i <256; i++)
-	{
-		test_train[i] = i;
-	}
-
+	//fx the test data
 	for(int i = 0; i < 16; i++)
 	{
 		t_wave[i] = t_wave[i] >> 1;
@@ -53,24 +44,49 @@ void rf_wave_test()
 		pulse[i] = pulse[i] >> 1;
 		zeros[i] = 0;
 	}
+}
+
+void rf_sine_test()
+{
+	//Just write the sine wave to each channel
+	write_sample_stream(sine_wave, 16,0);
+	write_sample_stream(sine_wave, 16,1);
+	//turn on ready
+	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
+	usleep(RF_VALID_TIME);
+	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
+}
+
+void rf_pulse_test()
+{
+
+
 	//turn off ready
 	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
 	//write wave data
-	write_sample_stream(zeros, 16);
 
-	for(int i = 0; i < 25; i++){
-		write_sample_stream(pulse, 16);
+
+	for(int i = 0; i < 1; i++){
+		write_sample_stream(zeros, 16,0);
+		write_sample_stream(zeros, 16,1);
 	}
-	for(int i = 0; i < 10; i++){
-		write_sample_stream(zeros, 16);
+
+	for(int i = 0; i < 5; i++){
+		write_sample_stream(pulse, 16,0);
+		write_sample_stream(pulse, 16,1);
+	}
+	for(int i = 0; i < 1; i++){
+		write_sample_stream(zeros, 16,0);
+		write_sample_stream(zeros, 16,1);
 	}
 	//turn on ready
 	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
-	usleep(1000000);
+	usleep(RF_VALID_TIME);
+	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
 }
 
 
-void write_sample_stream(u16* samples, u16 length)
+void write_sample_stream(u16* samples, u16 length, u8 channel)
 {
 #define sample_0 0
 #define sample_1 1
@@ -84,7 +100,15 @@ void write_sample_stream(u16* samples, u16 length)
 	{
 		word = (samples[i+sample_1] << 16) | (samples[i+sample_0]);
 		sample = word;
-		putfsl(sample,  0);
+		if(channel == 0)
+		{
+			putfsl(sample,  0);
+		}
+		else
+		{
+			putfsl(sample,  1);
+		}
+
 	}
 
 }
@@ -246,6 +270,7 @@ int rf_self_test()
 	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_DAC_TILE, Tile);
 	if (Status != XRFDC_SUCCESS) {
 		//return XRFDC_FAILURE;
+		debug_print("Failed to reset DAC tile");
 	}
 
 	for (Block = 0; Block <4; Block++) {

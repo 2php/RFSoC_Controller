@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jun 26 17:37:31 2019
+// Date        : Wed Jun 26 17:59:51 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1_stub.v
@@ -18,9 +18,10 @@ module top_level_usp_rf_data_converter_0_1(s_axi_aclk, s_axi_aresetn, s_axi_awad
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, s_axi_arready, 
   s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, sysref_in_p, sysref_in_n, dac0_clk_p, 
-  dac0_clk_n, clk_dac0, s0_axis_aclk, s0_axis_aresetn, vout00_p, vout00_n, s00_axis_tdata, 
-  s00_axis_tvalid, s00_axis_tready, irq)
-/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[17:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[17:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,sysref_in_p,sysref_in_n,dac0_clk_p,dac0_clk_n,clk_dac0,s0_axis_aclk,s0_axis_aresetn,vout00_p,vout00_n,s00_axis_tdata[255:0],s00_axis_tvalid,s00_axis_tready,irq" */;
+  dac0_clk_n, clk_dac0, s0_axis_aclk, s0_axis_aresetn, vout00_p, vout00_n, vout01_p, vout01_n, 
+  s00_axis_tdata, s00_axis_tvalid, s00_axis_tready, s01_axis_tdata, s01_axis_tvalid, 
+  s01_axis_tready, irq)
+/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[17:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[17:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,sysref_in_p,sysref_in_n,dac0_clk_p,dac0_clk_n,clk_dac0,s0_axis_aclk,s0_axis_aresetn,vout00_p,vout00_n,vout01_p,vout01_n,s00_axis_tdata[255:0],s00_axis_tvalid,s00_axis_tready,s01_axis_tdata[255:0],s01_axis_tvalid,s01_axis_tready,irq" */;
   input s_axi_aclk;
   input s_axi_aresetn;
   input [17:0]s_axi_awaddr;
@@ -49,8 +50,13 @@ module top_level_usp_rf_data_converter_0_1(s_axi_aclk, s_axi_aresetn, s_axi_awad
   input s0_axis_aresetn;
   output vout00_p;
   output vout00_n;
+  output vout01_p;
+  output vout01_n;
   input [255:0]s00_axis_tdata;
   input s00_axis_tvalid;
   output s00_axis_tready;
+  input [255:0]s01_axis_tdata;
+  input s01_axis_tvalid;
+  output s01_axis_tready;
   output irq;
 endmodule
