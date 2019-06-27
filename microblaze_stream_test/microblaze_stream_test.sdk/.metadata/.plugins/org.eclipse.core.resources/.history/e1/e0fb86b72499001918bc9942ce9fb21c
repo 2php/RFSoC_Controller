@@ -51,7 +51,6 @@
 #include <sleep.h>
 #include "drivers/uart.h"
 #include "drivers/rf.h"
-#include "drivers/cmd_handler.h"
 
 
 /************************** Function Prototypes *****************************/
@@ -70,7 +69,10 @@ int main()
 
 	while(1)
 	{
-		handle_cmd();
+		debug_print("Performing RF wave test...");
+		rf_pulse_test();
+		//rf_sine_test();
+		usleep(1000000);
 
 	}
 

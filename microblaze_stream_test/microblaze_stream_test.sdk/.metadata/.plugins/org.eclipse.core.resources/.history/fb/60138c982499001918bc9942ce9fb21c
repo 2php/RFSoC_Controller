@@ -32,10 +32,8 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 
 void rf_wave_test();
 void write_sample_stream(u16* samples, u16 length, u8 channel);
-int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
 void gpio_init();
-void rf_pulse_test();
-void rf_sine_test();
 
 
 

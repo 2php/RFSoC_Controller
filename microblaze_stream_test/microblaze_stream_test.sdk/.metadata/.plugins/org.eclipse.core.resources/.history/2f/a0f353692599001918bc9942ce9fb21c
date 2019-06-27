@@ -57,18 +57,6 @@ void rf_sine_test()
 	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
 }
 
-rf_flush_buffer()
-{
-	for(int i = 0; i < 10; i++){
-		write_sample_stream(zeros, 16, 0);
-		write_sample_stream(zeros, 16, 1);
-	}
-	//turn on ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
-	usleep(RF_VALID_TIME);
-	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
-}
-
 void rf_pulse_test()
 {
 

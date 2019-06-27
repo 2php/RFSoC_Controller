@@ -302,3 +302,455 @@ mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
 14:13:15 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
 make all 
 make: Nothing to be done for 'all'.
+14:19:17 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:19:26 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:19:41 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:21:58 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/uart.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/uart.d" -MT"src/drivers/uart.o" -o "src/drivers/uart.o" "../src/drivers/uart.c"
+../src/drivers/uart.c: In function 'debug_print':
+../src/drivers/uart.c:12:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print(buff);
+  ^~~~~
+'Finished building: ../src/drivers/uart.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:22:11 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/uart.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/uart.d" -MT"src/drivers/uart.o" -o "src/drivers/uart.o" "../src/drivers/uart.c"
+../src/drivers/uart.c: In function 'debug_print':
+../src/drivers/uart.c:12:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print(buff);
+  ^~~~~
+'Finished building: ../src/drivers/uart.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:2: warning: implicit declaration of function 'rf_init'; did you mean 'uart_init'? [-Wimplicit-function-declaration]
+  rf_init();
+  ^~~~~~~
+  uart_init
+../src/helloworld.c:73:3: warning: implicit declaration of function 'rf_pulse_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+   rf_pulse_test();
+   ^~~~~~~~~~~~~
+   rf_wave_test
+In file included from ../src/helloworld.c:53:
+../src/helloworld.c: At top level:
+../src/drivers/rf.h:35:12: warning: 'CompareFabricRate' declared 'static' but never defined [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+            ^~~~~~~~~~~~~~~~~
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:22:26 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:31:37 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:41:34 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:22:3: warning: implicit declaration of function 'cmd_pulse_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+   cmd_pulse_test();
+   ^~~~~~~~~~~~~~
+   rf_wave_test
+../src/drivers/cmd_handler.c:25:3: warning: implicit declaration of function 'cmd_sine_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+   cmd_sine_test();
+   ^~~~~~~~~~~~~
+   rf_wave_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:32:6: warning: conflicting types for 'cmd_pulse_test'
+ void cmd_pulse_test()
+      ^~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:22:3: note: previous implicit declaration of 'cmd_pulse_test' was here
+   cmd_pulse_test();
+   ^~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c: In function 'cmd_pulse_test':
+../src/drivers/cmd_handler.c:38:3: warning: implicit declaration of function 'rf_pulse_test'; did you mean 'cmd_pulse_test'? [-Wimplicit-function-declaration]
+   rf_pulse_test();
+   ^~~~~~~~~~~~~
+   cmd_pulse_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:44:6: warning: conflicting types for 'cmd_sine_test'
+ void cmd_sine_test()
+      ^~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:25:3: note: previous implicit declaration of 'cmd_sine_test' was here
+   cmd_sine_test();
+   ^~~~~~~~~~~~~
+../src/drivers/cmd_handler.c: In function 'cmd_sine_test':
+../src/drivers/cmd_handler.c:47:2: warning: implicit declaration of function 'rf_sine_test'; did you mean 'cmd_sine_test'? [-Wimplicit-function-declaration]
+  rf_sine_test();
+  ^~~~~~~~~~~~
+  cmd_sine_test
+In file included from ../src/drivers/cmd_handler.c:9:
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/rf.h:35:12: warning: 'CompareFabricRate' declared 'static' but never defined [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+            ^~~~~~~~~~~~~~~~~
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:42:26 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+../src/drivers/cmd_handler.c: In function 'cmd_pulse_test':
+../src/drivers/cmd_handler.c:38:3: warning: implicit declaration of function 'rf_pulse_test'; did you mean 'cmd_pulse_test'? [-Wimplicit-function-declaration]
+   rf_pulse_test();
+   ^~~~~~~~~~~~~
+   cmd_pulse_test
+../src/drivers/cmd_handler.c: In function 'cmd_sine_test':
+../src/drivers/cmd_handler.c:47:2: warning: implicit declaration of function 'rf_sine_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  rf_sine_test();
+  ^~~~~~~~~~~~
+  rf_wave_test
+In file included from ../src/drivers/cmd_handler.c:9:
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/rf.h:35:12: warning: 'CompareFabricRate' declared 'static' but never defined [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+            ^~~~~~~~~~~~~~~~~
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:42:28 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+../src/drivers/cmd_handler.c: In function 'cmd_pulse_test':
+../src/drivers/cmd_handler.c:39:3: warning: implicit declaration of function 'rf_pulse_test'; did you mean 'cmd_pulse_test'? [-Wimplicit-function-declaration]
+   rf_pulse_test();
+   ^~~~~~~~~~~~~
+   cmd_pulse_test
+../src/drivers/cmd_handler.c: In function 'cmd_sine_test':
+../src/drivers/cmd_handler.c:48:2: warning: implicit declaration of function 'rf_sine_test'; did you mean 'rf_wave_test'? [-Wimplicit-function-declaration]
+  rf_sine_test();
+  ^~~~~~~~~~~~
+  rf_wave_test
+In file included from ../src/drivers/cmd_handler.c:9:
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/rf.h:35:12: warning: 'CompareFabricRate' declared 'static' but never defined [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+            ^~~~~~~~~~~~~~~~~
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:43:27 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/cmd_handler.c:9:
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:22:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:147:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:326:12: error: static declaration of 'CompareFabricRate' follows non-static declaration
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate)
+            ^~~~~~~~~~~~~~~~~
+In file included from ../src/drivers/rf.c:8:
+../src/drivers/rf.h:35:5: note: previous declaration of 'CompareFabricRate' was here
+ int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
+     ^~~~~~~~~~~~~~~~~
+../src/drivers/rf.c:326:12: warning: 'CompareFabricRate' defined but not used [-Wunused-function]
+ static int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate)
+            ^~~~~~~~~~~~~~~~~
+make: *** [src/drivers/subdir.mk:26: src/drivers/rf.o] Error 1
+14:43:29 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:22:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:147:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:2: warning: implicit declaration of function 'rf_init'; did you mean 'uart_init'? [-Wimplicit-function-declaration]
+  rf_init();
+  ^~~~~~~
+  uart_init
+In file included from ../src/helloworld.c:53:
+At top level:
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72790	   3472	   9986	  86248	  150e8	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:43:40 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:44:19 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:2: warning: implicit declaration of function 'rf_init'; did you mean 'uart_init'? [-Wimplicit-function-declaration]
+  rf_init();
+  ^~~~~~~
+  uart_init
+In file included from ../src/helloworld.c:53:
+At top level:
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74134	   3472	   9986	  87592	  15628	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:44:29 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:49:17 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+../src/drivers/rf.c: In function 'gpio_init':
+../src/drivers/rf.c:22:3: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+   xdbg_printf
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:60:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ rf_flush_buffer()
+ ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:159:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+../src/drivers/rf.c: In function 'rf_flush_buffer':
+../src/drivers/rf.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74134	   3472	   9986	  87592	  15628	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:49:36 **** Auto Build of configuration Debug for project microblaze_stream_test ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../microblaze_stream_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+../src/drivers/cmd_handler.c: In function 'cmd_sine_test':
+../src/drivers/cmd_handler.c:51:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+In file included from ../src/drivers/cmd_handler.c:9:
+At top level:
+../src/drivers/rf.h:17:14: warning: 'RFdcInst' defined but not used [-Wunused-variable]
+ static XRFdc RFdcInst;      /* RFdc driver instance */
+              ^~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: microblaze_stream_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_stream_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze_stream_test.elf"  ./src/drivers/cmd_handler.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: microblaze_stream_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size microblaze_stream_test.elf  |tee "microblaze_stream_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  74458	   3472	   9990	  87920	  15770	microblaze_stream_test.elf
+'Finished building: microblaze_stream_test.elf.size'
+' '
+14:49:40 **** Incremental Build of configuration Debug for project microblaze_stream_test ****
+make all 
+make: Nothing to be done for 'all'.
