@@ -36,6 +36,7 @@ int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
 void gpio_init();
 void rf_pulse_test();
 void rf_sine_test();
+void rf_ext_trigger_test();
 
 
 

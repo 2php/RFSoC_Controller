@@ -25,6 +25,9 @@ void handle_cmd()
 	case SINE_TEST:
 		cmd_sine_test();
 		break;
+	case EXT_TRIGGER_TEST:
+		cmd_ext_trigger_test();
+		break;
 	default:
 		debug_print("Invalid command!");
 	}
@@ -50,5 +53,13 @@ void cmd_sine_test()
 	while(uart_cmd_available(cmd_buff) == 0);
 	rf_flush_buffer();
 	debug_print("Sine test ended");
+
+}
+
+void cmd_ext_trigger_test()
+{
+	debug_print("Loading 5 pulses into fifos...");
+	rf_ext_trigger_test();
+	debug_print("Pulses loaded");
 
 }

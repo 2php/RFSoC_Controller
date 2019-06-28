@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jun 27 13:44:53 2019
+//Date        : Thu Jun 27 17:15:23 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,13 +917,14 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=32,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=8,da_clkrst_cnt=4,da_mb_cnt=2,da_rf_converter_usp_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=33,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=8,da_clkrst_cnt=4,da_mb_cnt=2,da_rf_converter_usp_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (app_leds_tri_o,
     dac0_clk_clk_n,
     dac0_clk_clk_p,
     diff_clock_rtl_clk_n,
     diff_clock_rtl_clk_p,
+    ext_trigger,
     reset_in,
     sysref_in_diff_n,
     sysref_in_diff_p,
@@ -934,10 +935,11 @@ module top_level
     vout01_v_n,
     vout01_v_p);
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 app_leds TRI_O" *) output [7:0]app_leds_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac0_clk, CAN_DEBUG false, FREQ_HZ 200000000.0" *) input dac0_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac0_clk, CAN_DEBUG false, FREQ_HZ 4000000000" *) input dac0_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_P" *) input dac0_clk_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_clock_rtl, CAN_DEBUG false, FREQ_HZ 300000000" *) input diff_clock_rtl_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl CLK_P" *) input diff_clock_rtl_clk_p;
+  input ext_trigger;
   input reset_in;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_n" *) input sysref_in_diff_n;
   (* X_INTERFACE_INFO = "xilinx.com:display_usp_rf_data_converter:diff_pins:1.0 sysref_in diff_p" *) input sysref_in_diff_p;
@@ -980,6 +982,7 @@ module top_level
   wire dac0_clk_1_CLK_P;
   wire diff_clock_rtl_1_CLK_N;
   wire diff_clock_rtl_1_CLK_P;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire ext_trigger_1;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   (* CONN_BUS_INFO = "microblaze_0_M0_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]microblaze_0_M0_AXIS_TDATA;
@@ -1111,6 +1114,7 @@ module top_level
   wire [0:0]rst_top_level_31M_peripheral_aresetn;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
+  wire trigger_buffer_0_trigger_out;
   wire uart_rx_1;
   wire usp_rf_data_converter_0_clk_dac0;
   wire usp_rf_data_converter_0_vout00_V_N;
@@ -1124,6 +1128,7 @@ module top_level
   assign dac0_clk_1_CLK_P = dac0_clk_clk_p;
   assign diff_clock_rtl_1_CLK_N = diff_clock_rtl_clk_n;
   assign diff_clock_rtl_1_CLK_P = diff_clock_rtl_clk_p;
+  assign ext_trigger_1 = ext_trigger;
   assign reset_in_1 = reset_in;
   assign sysref_in_1_diff_n = sysref_in_diff_n;
   assign sysref_in_1_diff_p = sysref_in_diff_p;
@@ -1235,6 +1240,7 @@ module top_level
         .s_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID));
   top_level_axis_tready_slice_0_0 axis_tready_slice_0
        (.clk(usp_rf_data_converter_0_clk_dac0),
+        .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(axi_gpio_0_gpio2_io_o),
         .m_axis_tdata(axis_tready_slice_0_m_axis_TDATA),
         .m_axis_tready(axis_tready_slice_0_m_axis_TREADY),
@@ -1246,6 +1252,7 @@ module top_level
         .s_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID));
   top_level_axis_tready_slice_0_1 axis_tready_slice_1
        (.clk(usp_rf_data_converter_0_clk_dac0),
+        .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(axi_gpio_0_gpio2_io_o),
         .m_axis_tdata(axis_tready_slice_1_m_axis_TDATA),
         .m_axis_tready(axis_tready_slice_1_m_axis_TREADY),
@@ -1492,8 +1499,8 @@ module top_level
   top_level_rst_top_level_31M_1 rst_top_level_31M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
-        .ext_reset_in(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .mb_debug_sys_rst(1'b0),
+        .ext_reset_in(util_vector_logic_0_Res),
+        .mb_debug_sys_rst(mdm_1_debug_sys_rst),
         .peripheral_aresetn(rst_top_level_31M_peripheral_aresetn),
         .slowest_sync_clk(usp_rf_data_converter_0_clk_dac0));
   top_level_system_ila_0_0 system_ila_0
@@ -1514,6 +1521,7 @@ module top_level
         .SLOT_3_AXIS_tready(axis_tready_slice_1_m_axis_TREADY),
         .SLOT_3_AXIS_tvalid(axis_tready_slice_1_m_axis_TVALID),
         .clk(usp_rf_data_converter_0_clk_dac0),
+        .probe0(ext_trigger_1),
         .resetn(rst_top_level_31M_peripheral_aresetn));
   top_level_system_ila_1_0 system_ila_1
        (.SLOT_0_AXIS_tdata(axis_data_fifo_0_M_AXIS_TDATA),
@@ -1530,6 +1538,11 @@ module top_level
         .SLOT_2_AXIS_tvalid(microblaze_0_M0_AXIS_TVALID),
         .clk(microblaze_0_Clk),
         .resetn(rst_clk_wiz_1_100M_peripheral_aresetn));
+  top_level_trigger_buffer_0_0 trigger_buffer_0
+       (.clk(usp_rf_data_converter_0_clk_dac0),
+        .reset(rst_top_level_31M_peripheral_aresetn),
+        .trigger_in(ext_trigger_1),
+        .trigger_out(trigger_buffer_0_trigger_out));
   top_level_usp_rf_data_converter_0_1 usp_rf_data_converter_0
        (.clk_dac0(usp_rf_data_converter_0_clk_dac0),
         .dac0_clk_n(dac0_clk_1_CLK_N),

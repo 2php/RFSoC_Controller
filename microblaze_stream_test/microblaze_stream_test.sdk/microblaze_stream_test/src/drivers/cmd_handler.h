@@ -11,11 +11,13 @@
 
 #define PULSE_TEST '0'
 #define SINE_TEST '1'
+#define EXT_TRIGGER_TEST '2'
 
 
 void cmd_pulse_test();
 void cmd_sine_test();
 void handle_cmd();
+void cmd_ext_trigger_test();
 
 
 

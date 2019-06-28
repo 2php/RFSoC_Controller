@@ -2,18 +2,19 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jun 27 13:45:15 2019
-# Process ID: 4764
+# Start of session at: Thu Jun 27 17:27:02 2019
+# Process ID: 7852
 # Current directory: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1
 # Command line: vivado.exe -log top_level_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl
 # Log file: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/top_level_wrapper.vds
 # Journal file: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top_level_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 357.004 ; gain = 72.172
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo/axis_trigger_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 481.789 ; gain = 85.262
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 481.934 ; gain = 85.543
 Command: synth_design -top top_level_wrapper -part xczu29dr-ffvf1760-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
@@ -21,43 +22,43 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29d
 INFO: [Common 17-86] Your Synthesis license expires in 20 day(s)
 INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7260 
+INFO: Helper process launched with PID 11660 
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1552.855 ; gain = 178.289
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1550.980 ; gain = 178.938
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_wrapper' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'top_level' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:921]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axi_gpio_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_gpio_0_1' (1#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axi_uartlite_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_uartlite_0_1' (2#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_level_axi_uartlite_0_1' has 22 connections declared, but only 21 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1158]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_0_1' (3#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_1_1' (4#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_0_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_0_2' (5#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_1_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_1_2' (6#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_dwidth_converter_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_dwidth_converter_0_1' (7#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_dwidth_converter_0_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_dwidth_converter_0_2' (8#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_tready_slice_0_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_tready_slice_0_0' (9#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_tready_slice_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_tready_slice_0_1' (10#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_clk_wiz_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_clk_wiz_1_1' (11#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_level_mdm_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_mdm_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_mdm_1_1' (12#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_mdm_1_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'top_level_mdm_1_1' has 30 connections declared, but only 29 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1264]
-INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_1' (13#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'top_level_microblaze_0_1' has 68 connections declared, but only 64 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1296]
-INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_axi_periph_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1575]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_gpio_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_gpio_0_1' (1#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_uartlite_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_uartlite_0_1' (2#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_level_axi_uartlite_0_1' has 22 connections declared, but only 21 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1163]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_0_1' (3#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_1_1' (4#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_0_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_0_2' (5#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_1_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_1_2' (6#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_dwidth_converter_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_dwidth_converter_0_1' (7#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_dwidth_converter_0_2' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_dwidth_converter_0_2' (8#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_dwidth_converter_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_tready_slice_0_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_tready_slice_0_0' (9#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axis_tready_slice_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_tready_slice_0_1' (10#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_axis_tready_slice_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_clk_wiz_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_clk_wiz_1_1' (11#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_level_mdm_1_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_mdm_1_1' (12#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_mdm_1_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'top_level_mdm_1_1' has 30 connections declared, but only 29 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1271]
+INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_1' (13#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'top_level_microblaze_0_1' has 68 connections declared, but only 64 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1303]
+INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_axi_periph_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1588]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_RMQ2WX' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_RMQ2WX' (14#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1E2MCK9' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:144]
@@ -68,53 +69,56 @@ INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1HHG8VC' [C:/james/fp
 INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1HHG8VC' (17#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:408]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1XULX5P' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:774]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1XULX5P' (18#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:774]
-INFO: [Synth 8-6157] synthesizing module 'top_level_xbar_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_xbar_1' (19#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_xbar_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'top_level_xbar_1' has 40 connections declared, but only 38 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:2240]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_axi_periph_1' (20#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1575]
+INFO: [Synth 8-6157] synthesizing module 'top_level_xbar_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_xbar_1' (19#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_xbar_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'top_level_xbar_1' has 40 connections declared, but only 38 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:2253]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_axi_periph_1' (20#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1588]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_598ZMX' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:540]
-INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_bram_if_cntlr_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_bram_if_cntlr_1' (21#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_v10_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_v10_1' (22#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_bram_if_cntlr_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_bram_if_cntlr_1' (21#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_v10_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_v10_1' (22#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_1_stub.v:6]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'top_level_dlmb_v10_1' has 25 connections declared, but only 24 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:686]
-INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_bram_if_cntlr_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_bram_if_cntlr_1' (23#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_v10_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_v10_1' (24#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_bram_if_cntlr_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_bram_if_cntlr_1' (23#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_v10_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_v10_1' (24#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_1_stub.v:6]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'top_level_ilmb_v10_1' has 25 connections declared, but only 24 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:732]
-INFO: [Synth 8-6157] synthesizing module 'top_level_lmb_bram_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_lmb_bram_1' (25#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_lmb_bram_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_lmb_bram_1' (25#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_1_stub.v:6]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'top_level_lmb_bram_1' has 16 connections declared, but only 14 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:757]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_598ZMX' (26#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:540]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rst_clk_wiz_1_100M_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_clk_wiz_1_100M_1' (27#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'top_level_rst_clk_wiz_1_100M_1' has 10 connections declared, but only 8 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1483]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rst_top_level_31M_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_rst_top_level_31M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_top_level_31M_1' (28#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_rst_top_level_31M_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_top_level_31M' of module 'top_level_rst_top_level_31M_1' has 10 connections declared, but only 6 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1492]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1499]
-INFO: [Synth 8-6157] synthesizing module 'top_level_system_ila_0_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_system_ila_0_0' (29#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_system_ila_0_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1518]
-INFO: [Synth 8-6157] synthesizing module 'top_level_system_ila_1_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_system_ila_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_system_ila_1_0' (30#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_system_ila_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1' (31#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'top_level_usp_rf_data_converter_0_1' has 37 connections declared, but only 36 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1533]
-INFO: [Synth 8-6157] synthesizing module 'top_level_util_vector_logic_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_util_vector_logic_0_1' (32#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-4764-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_1_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1180]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1518]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_dwidth_converter_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1218]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1189]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1499]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_tready_slice_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1236]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_3'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1208]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_tready_slice_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1247]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'usp_rf_data_converter_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1533]
-INFO: [Synth 8-6155] done synthesizing module 'top_level' (33#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:921]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (34#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rst_clk_wiz_1_100M_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_clk_wiz_1_100M_1' (27#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'top_level_rst_clk_wiz_1_100M_1' has 10 connections declared, but only 8 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1490]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rst_top_level_31M_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_rst_top_level_31M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_top_level_31M_1' (28#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_rst_top_level_31M_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_top_level_31M' of module 'top_level_rst_top_level_31M_1' has 10 connections declared, but only 6 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1499]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1506]
+INFO: [Synth 8-6157] synthesizing module 'top_level_system_ila_0_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_system_ila_0_0' (29#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_system_ila_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1526]
+INFO: [Synth 8-6157] synthesizing module 'top_level_system_ila_1_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_system_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_system_ila_1_0' (30#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_system_ila_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_trigger_buffer_0_0' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_trigger_buffer_0_0' (31#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_1' (32#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'top_level_usp_rf_data_converter_0_1' has 37 connections declared, but only 36 given [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1546]
+INFO: [Synth 8-6157] synthesizing module 'top_level_util_vector_logic_0_1' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_util_vector_logic_0_1' (33#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/.Xil/Vivado-7852-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1185]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1526]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_dwidth_converter_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1223]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1194]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1506]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_tready_slice_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1241]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_3'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1213]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_tready_slice_1'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1253]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'usp_rf_data_converter_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1546]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'trigger_buffer_0'. This will prevent further optimization [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:1541]
+INFO: [Synth 8-6155] done synthesizing module 'top_level' (34#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/synth/top_level.v:921]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (35#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port S_ACLK
@@ -146,7 +150,7 @@ WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnect
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1620.691 ; gain = 246.125
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1618.125 ; gain = 246.082
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -159,10 +163,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1626.406 ; gain = 251.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1623.656 ; gain = 251.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1626.406 ; gain = 251.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1623.656 ; gain = 251.613
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -202,8 +206,8 @@ Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_strea
 Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1_in_context.xdc] for cell 'top_level_i/axis_data_fifo_1'
 Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1_in_context.xdc] for cell 'top_level_i/usp_rf_data_converter_0'
 Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1/top_level_usp_rf_data_converter_0_1_in_context.xdc] for cell 'top_level_i/usp_rf_data_converter_0'
-Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1/top_level_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'top_level_i/rst_top_level_31M'
-Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1/top_level_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'top_level_i/rst_top_level_31M'
+Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1_in_context.xdc] for cell 'top_level_i/rst_top_level_31M'
+Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1/top_level_rst_top_level_31M_1_in_context.xdc] for cell 'top_level_i/rst_top_level_31M'
 Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0_in_context.xdc] for cell 'top_level_i/axis_tready_slice_0'
 Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0/top_level_axis_tready_slice_0_0_in_context.xdc] for cell 'top_level_i/axis_tready_slice_0'
 Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_0_2/top_level_axis_data_fifo_0_2/top_level_axis_data_fifo_0_1_in_context.xdc] for cell 'top_level_i/axis_data_fifo_2'
@@ -218,6 +222,8 @@ Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_strea
 Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_0_0/top_level_system_ila_0_0/top_level_system_ila_0_0_in_context.xdc] for cell 'top_level_i/system_ila_0'
 Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0/top_level_system_ila_1_0_in_context.xdc] for cell 'top_level_i/system_ila_1'
 Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0/top_level_system_ila_1_0_in_context.xdc] for cell 'top_level_i/system_ila_1'
+Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_in_context.xdc] for cell 'top_level_i/trigger_buffer_0'
+Finished Parsing XDC File [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_in_context.xdc] for cell 'top_level_i/trigger_buffer_0'
 Parsing XDC File [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/constrs_1/new/elab_design.xdc]
 Finished Parsing XDC File [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/constrs_1/new/elab_design.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/constrs_1/new/elab_design.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_wrapper_propImpl.xdc].
@@ -226,15 +232,15 @@ Parsing XDC File [C:/james/fpga_projects/microblaze_stream_test/microblaze_strea
 Finished Parsing XDC File [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1752.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1746.184 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1752.129 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1746.184 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'top_level_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1759.012 ; gain = 384.445
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1754.730 ; gain = 382.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -242,7 +248,7 @@ Start Loading Part and Timing Information
 Loading part: xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1759.012 ; gain = 384.445
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1754.730 ; gain = 382.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -294,11 +300,12 @@ Applied set_property DONT_TOUCH = true for top_level_i/axis_data_fifo_3. (constr
 Applied set_property DONT_TOUCH = true for top_level_i/axis_tready_slice_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/system_ila_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/system_ila_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/trigger_buffer_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1759.012 ; gain = 384.445
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1754.730 ; gain = 382.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1759.012 ; gain = 384.445
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1754.730 ; gain = 382.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -344,7 +351,7 @@ WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnect
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_1 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1759.012 ; gain = 384.445
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1754.730 ; gain = 382.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,13 +370,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/clk_wiz_1/clk
 INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/usp_rf_data_converter_0/clk_dac0' to pin 'top_level_i/usp_rf_data_converter_0/bbstub_clk_dac0/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2148.352 ; gain = 773.785
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2143.660 ; gain = 771.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2149.121 ; gain = 774.555
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2144.359 ; gain = 772.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -381,7 +388,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2161.652 ; gain = 787.086
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2156.246 ; gain = 784.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -405,7 +412,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -418,7 +425,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -430,25 +437,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -476,13 +483,14 @@ Report BlackBoxes:
 |16    |top_level_rst_top_level_31M_1       |         1|
 |17    |top_level_system_ila_0_0            |         1|
 |18    |top_level_system_ila_1_0            |         1|
-|19    |top_level_usp_rf_data_converter_0_1 |         1|
-|20    |top_level_util_vector_logic_0_1     |         1|
-|21    |top_level_dlmb_bram_if_cntlr_1      |         1|
-|22    |top_level_dlmb_v10_1                |         1|
-|23    |top_level_ilmb_bram_if_cntlr_1      |         1|
-|24    |top_level_ilmb_v10_1                |         1|
-|25    |top_level_lmb_bram_1                |         1|
+|19    |top_level_trigger_buffer_0_0        |         1|
+|20    |top_level_usp_rf_data_converter_0_1 |         1|
+|21    |top_level_util_vector_logic_0_1     |         1|
+|22    |top_level_dlmb_bram_if_cntlr_1      |         1|
+|23    |top_level_dlmb_v10_1                |         1|
+|24    |top_level_ilmb_bram_if_cntlr_1      |         1|
+|25    |top_level_ilmb_v10_1                |         1|
+|26    |top_level_lmb_bram_1                |         1|
 +------+------------------------------------+----------+
 
 Report Cell Usage: 
@@ -511,47 +519,46 @@ Report Cell Usage:
 |20    |top_level_rst_top_level_31M_1       |     1|
 |21    |top_level_system_ila_0_0            |     1|
 |22    |top_level_system_ila_1_0            |     1|
-|23    |top_level_usp_rf_data_converter_0_1 |     1|
-|24    |top_level_util_vector_logic_0_1     |     1|
-|25    |top_level_xbar_1                    |     1|
-|26    |IBUF                                |     2|
-|27    |OBUF                                |     9|
+|23    |top_level_trigger_buffer_0_0        |     1|
+|24    |top_level_usp_rf_data_converter_0_1 |     1|
+|25    |top_level_util_vector_logic_0_1     |     1|
+|26    |top_level_xbar_1                    |     1|
+|27    |IBUF                                |     3|
+|28    |OBUF                                |     9|
 +------+------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+-------------------------------------+------+
 |      |Instance                      |Module                               |Cells |
 +------+------------------------------+-------------------------------------+------+
-|1     |top                           |                                     |  3112|
-|2     |  top_level_i                 |top_level                            |  3101|
+|1     |top                           |                                     |  3114|
+|2     |  top_level_i                 |top_level                            |  3102|
 |3     |    microblaze_0_axi_periph   |top_level_microblaze_0_axi_periph_1  |   485|
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_598ZMX |   496|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 2174.465 ; gain = 667.293
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2174.465 ; gain = 799.898
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2171.047 ; gain = 667.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2171.047 ; gain = 799.004
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2231.711 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2226.617 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  A total of 3 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-101 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+104 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2231.711 ; gain = 1749.922
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2231.711 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2226.617 ; gain = 1744.684
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2226.617 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/synth_1/top_level_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 27 13:46:24 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 27 17:28:15 2019...

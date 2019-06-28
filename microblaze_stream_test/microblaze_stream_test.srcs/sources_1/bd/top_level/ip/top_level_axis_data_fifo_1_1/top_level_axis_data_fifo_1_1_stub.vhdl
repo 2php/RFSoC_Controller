@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Jun 27 12:43:19 2019
+-- Date        : Thu Jun 27 16:41:03 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top top_level_axis_data_fifo_1_1 -prefix
+--               top_level_axis_data_fifo_1_1_ top_level_axis_data_fifo_1_1_stub.vhdl
 -- Design      : top_level_axis_data_fifo_1_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu29dr-ffvf1760-2-e

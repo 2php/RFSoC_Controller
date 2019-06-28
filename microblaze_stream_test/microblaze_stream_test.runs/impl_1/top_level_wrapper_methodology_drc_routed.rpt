@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Jun 27 14:01:36 2019
+| Date         : Thu Jun 27 17:46:43 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 16
+             Violations found: 18
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
@@ -34,6 +34,7 @@ Table of Contents
 | TIMING-9  | Warning          | Unknown CDC Logic                              | 1          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
 | TIMING-16 | Warning          | Large setup violation                          | 4          |
+| TIMING-18 | Warning          | Missing input or output delay                  | 2          |
 +-----------+------------------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -100,22 +101,32 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.019 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.094 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.062 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.099 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_0/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.068 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.104 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[2]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/m_axis_tvalid_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.073 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.145 ns between top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[1]/C (clocked by clk_out1_top_level_clk_wiz_1_1) and top_level_i/axis_tready_slice_1/inst/s_axis_tready_reg/D (clocked by RFDAC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ext_trigger relative to clock(s) RFDAC0_CLK
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on reset_in relative to clock(s) RFDAC0_CLK
 Related violations: <none>
 
 

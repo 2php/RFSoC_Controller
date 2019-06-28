@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jun 27 13:44:53 2019
+//Date        : Thu Jun 27 17:15:23 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -15,6 +15,7 @@ module top_level_wrapper
     dac0_clk_clk_p,
     diff_clock_rtl_clk_n,
     diff_clock_rtl_clk_p,
+    ext_trigger,
     reset_in,
     sysref_in_diff_n,
     sysref_in_diff_p,
@@ -29,6 +30,7 @@ module top_level_wrapper
   input dac0_clk_clk_p;
   input diff_clock_rtl_clk_n;
   input diff_clock_rtl_clk_p;
+  input ext_trigger;
   input reset_in;
   input sysref_in_diff_n;
   input sysref_in_diff_p;
@@ -44,6 +46,7 @@ module top_level_wrapper
   wire dac0_clk_clk_p;
   wire diff_clock_rtl_clk_n;
   wire diff_clock_rtl_clk_p;
+  wire ext_trigger;
   wire reset_in;
   wire sysref_in_diff_n;
   wire sysref_in_diff_p;
@@ -60,6 +63,7 @@ module top_level_wrapper
         .dac0_clk_clk_p(dac0_clk_clk_p),
         .diff_clock_rtl_clk_n(diff_clock_rtl_clk_n),
         .diff_clock_rtl_clk_p(diff_clock_rtl_clk_p),
+        .ext_trigger(ext_trigger),
         .reset_in(reset_in),
         .sysref_in_diff_n(sysref_in_diff_n),
         .sysref_in_diff_p(sysref_in_diff_p),

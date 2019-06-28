@@ -1,18 +1,18 @@
 Determining if files xintc.h exist failed with the following output:
 Change Dir: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe" "cmTC_2a8fb/fast"
-C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_2a8fb.dir/build.make CMakeFiles/cmTC_2a8fb.dir/build
+Run Build Command:"C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe" "cmTC_e59d2/fast"
+C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_e59d2.dir/build.make CMakeFiles/cmTC_e59d2.dir/build
 make.exe[1]: Entering directory 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2a8fb.dir/CheckIncludeFiles.c.obj
-C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/include    -o CMakeFiles/cmTC_2a8fb.dir/CheckIncludeFiles.c.obj   -c C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Building C object CMakeFiles/cmTC_e59d2.dir/CheckIncludeFiles.c.obj
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/include    -o CMakeFiles/cmTC_e59d2.dir/CheckIncludeFiles.c.obj   -c C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
 C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:10: fatal error: xintc.h: No such file or directory
  #include <xintc.h>
           ^~~~~~~~~
 compilation terminated.
-make.exe[1]: *** [CMakeFiles/cmTC_2a8fb.dir/build.make:66: CMakeFiles/cmTC_2a8fb.dir/CheckIncludeFiles.c.obj] Error 1
+make.exe[1]: *** [CMakeFiles/cmTC_e59d2.dir/build.make:66: CMakeFiles/cmTC_e59d2.dir/CheckIncludeFiles.c.obj] Error 1
 make.exe[1]: Leaving directory 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.sdk/microblaze_stream_test_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
-make.exe: *** [Makefile:126: cmTC_2a8fb/fast] Error 2
+make.exe: *** [Makefile:126: cmTC_e59d2/fast] Error 2
 
 Source:
 /* */

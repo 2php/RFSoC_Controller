@@ -31,7 +31,7 @@ module axis_tready_slice(
     
     
     input wire [2:0] gpio_in,
-    //input wire ext_trigger,
+    input wire ext_trigger,
     
     
     output wire [255:0] m_axis_tdata,
@@ -50,7 +50,7 @@ module axis_tready_slice(
         
         else begin
             m_axis_tvalid <= gpio_in[0];
-            s_axis_tready <= gpio_in[1];
+            s_axis_tready <= gpio_in[1] | ext_trigger;
         end
     
     

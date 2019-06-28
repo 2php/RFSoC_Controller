@@ -9,3 +9,5 @@ set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN BB23 [get_ports uart_tx]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A3 [get_ports dac0_clk_clk_n]
+set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AM22 [get_ports ext_trigger]

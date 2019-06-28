@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 27 13:45:04 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 27 17:15:31 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -17,6 +17,22 @@
     <PORT DIR="O" NAME="uart_tx" SIGIS="undef" SIGNAME="axi_uartlite_0_tx">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_uartlite_0" PORT="tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_in"/>
+        <CONNECTION INSTANCE="system_ila_0" PORT="probe0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_n" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_p" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="vout00_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_n">
@@ -39,16 +55,6 @@
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="sysref_in_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_p"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="7" NAME="app_leds_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
@@ -64,14 +70,14 @@
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout01_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_n" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_n">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_n"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_p" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_p">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_p"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_p"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -90,7 +96,7 @@
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="External_Interface_dac0_clk" NAME="dac0_clk" TYPE="TARGET">
       <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-      <PARAMETER NAME="FREQ_HZ" VALUE="200000000.0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="4000000000"/>
       <PORTMAPS>
         <PORTMAP LOGICAL="CLK_N" PHYSICAL="dac0_clk_clk_n"/>
         <PORTMAP LOGICAL="CLK_P" PHYSICAL="dac0_clk_clk_p"/>
@@ -1060,7 +1066,7 @@
             <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -1111,7 +1117,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1331,7 +1337,7 @@
             <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -1382,7 +1388,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1626,7 +1632,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -1657,6 +1663,11 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="255" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_tready_slice_0_m_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s00_axis_tdata"/>
@@ -1683,7 +1694,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1703,7 +1714,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1724,7 +1735,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -1755,6 +1766,11 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="255" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_tready_slice_1_m_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s01_axis_tdata"/>
@@ -1781,7 +1797,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -1801,7 +1817,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -3271,6 +3287,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="mb_debug_sys_rst"/>
             <CONNECTION INSTANCE="clk_wiz_1" PORT="reset"/>
+            <CONNECTION INSTANCE="rst_top_level_31M" PORT="mb_debug_sys_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="S_AXI_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="mdm_1_S_AXI_AWADDR">
@@ -6182,7 +6199,6 @@
             <CONNECTION INSTANCE="axis_data_fifo_3" PORT="s_axis_aresetn"/>
             <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_data_fifo_2" PORT="s_axis_aresetn"/>
-            <CONNECTION INSTANCE="rst_top_level_31M" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="system_ila_1" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
@@ -6209,18 +6225,22 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
-        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst" SIGNAME="mdm_1_Debug_SYS_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mdm_1" PORT="Debug_SYS_Rst"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
         <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
@@ -6232,6 +6252,7 @@
             <CONNECTION INSTANCE="system_ila_0" PORT="resetn"/>
             <CONNECTION INSTANCE="axis_tready_slice_0" PORT="reset"/>
             <CONNECTION INSTANCE="axis_tready_slice_1" PORT="reset"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6485,7 +6506,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
-        <PARAMETER NAME="C_BRAM_CNT" VALUE="39.5"/>
+        <PARAMETER NAME="C_BRAM_CNT" VALUE="922"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AW_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_W_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_B_SEL_DATA" VALUE="1"/>
@@ -9887,7 +9908,7 @@
         <PARAMETER NAME="C_SLOT_13_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_14_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_15_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
-        <PARAMETER NAME="C_MON_TYPE" VALUE="INTERFACE"/>
+        <PARAMETER NAME="C_MON_TYPE" VALUE="MIX"/>
         <PARAMETER NAME="C_SLOT_2_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_2_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_2_AXI_AWUSER_WIDTH" VALUE="1"/>
@@ -10075,7 +10096,7 @@
         <PARAMETER NAME="EDK_SPECIAL" VALUE="MONITOR"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -10101,6 +10122,11 @@
             <CONNECTION INSTANCE="rst_top_level_31M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="0" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axis_tready_slice_0_m_axis" NAME="SLOT_0_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
@@ -10112,7 +10138,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -10133,7 +10159,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -10154,7 +10180,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -10175,7 +10201,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -14116,6 +14142,38 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/trigger_buffer_0" HWVERSION="1.0" INSTANCE="trigger_buffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_buffer" VLNV="xilinx.com:module_ref:trigger_buffer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="count_cycles" VALUE="2000"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_level_trigger_buffer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="rst_top_level_31M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_top_level_31M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_out" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="ext_trigger"/>
+            <CONNECTION INSTANCE="axis_tready_slice_1" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="2" FULLNAME="/usp_rf_data_converter_0" HWVERSION="2.1" INSTANCE="usp_rf_data_converter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="usp_rf_data_converter" VLNV="xilinx.com:ip:usp_rf_data_converter:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=usp_rf_data_converter;v=v2_1;d=pg269-rf-data-converter.pdf"/>
@@ -14468,15 +14526,15 @@
         <PARAMETER NAME="C_ADC_LM33" VALUE="0"/>
         <PARAMETER NAME="C_ADC33_Dig_Port" VALUE="0"/>
         <PARAMETER NAME="C_DAC0_Enable" VALUE="1"/>
-        <PARAMETER NAME="C_DAC0_PLL_Enable" VALUE="true"/>
-        <PARAMETER NAME="C_DAC0_Sampling_Rate" VALUE="1.6"/>
+        <PARAMETER NAME="C_DAC0_PLL_Enable" VALUE="false"/>
+        <PARAMETER NAME="C_DAC0_Sampling_Rate" VALUE="4"/>
         <PARAMETER NAME="C_DAC0_Fs_Max" VALUE="6.554"/>
-        <PARAMETER NAME="C_DAC0_Refclk_Freq" VALUE="200.000"/>
-        <PARAMETER NAME="C_DAC0_Outclk_Freq" VALUE="100.000"/>
-        <PARAMETER NAME="C_DAC0_FBDIV" VALUE="48"/>
-        <PARAMETER NAME="C_DAC0_OutDiv" VALUE="6"/>
-        <PARAMETER NAME="C_DAC0_Vco" VALUE="9600.0"/>
-        <PARAMETER NAME="C_DAC0_Fabric_Freq" VALUE="100.000"/>
+        <PARAMETER NAME="C_DAC0_Refclk_Freq" VALUE="4000.000"/>
+        <PARAMETER NAME="C_DAC0_Outclk_Freq" VALUE="250.000"/>
+        <PARAMETER NAME="C_DAC0_FBDIV" VALUE="60"/>
+        <PARAMETER NAME="C_DAC0_OutDiv" VALUE="3"/>
+        <PARAMETER NAME="C_DAC0_Vco" VALUE="12000"/>
+        <PARAMETER NAME="C_DAC0_Fabric_Freq" VALUE="250.000"/>
         <PARAMETER NAME="C_DAC0_Multi_Tile_Sync" VALUE="false"/>
         <PARAMETER NAME="C_DAC0_Band" VALUE="0"/>
         <PARAMETER NAME="C_DAC0_Refclk_Div" VALUE="1"/>
@@ -15173,12 +15231,12 @@
         <PARAMETER NAME="mADC_Bypass_BG_Cal03" VALUE="false"/>
         <PARAMETER NAME="mADC_LM03" VALUE="0"/>
         <PARAMETER NAME="DAC0_Enable" VALUE="1"/>
-        <PARAMETER NAME="DAC0_PLL_Enable" VALUE="true"/>
-        <PARAMETER NAME="DAC0_Sampling_Rate" VALUE="1.6"/>
-        <PARAMETER NAME="DAC0_Refclk_Freq" VALUE="200.000"/>
-        <PARAMETER NAME="DAC0_Outclk_Freq" VALUE="100.000"/>
-        <PARAMETER NAME="DAC0_Outdiv" VALUE="6"/>
-        <PARAMETER NAME="DAC0_Fabric_Freq" VALUE="100.000"/>
+        <PARAMETER NAME="DAC0_PLL_Enable" VALUE="false"/>
+        <PARAMETER NAME="DAC0_Sampling_Rate" VALUE="4"/>
+        <PARAMETER NAME="DAC0_Refclk_Freq" VALUE="4000.000"/>
+        <PARAMETER NAME="DAC0_Outclk_Freq" VALUE="250.000"/>
+        <PARAMETER NAME="DAC0_Outdiv" VALUE="3"/>
+        <PARAMETER NAME="DAC0_Fabric_Freq" VALUE="250.000"/>
         <PARAMETER NAME="DAC0_Multi_Tile_Sync" VALUE="false"/>
         <PARAMETER NAME="DAC0_Band" VALUE="0"/>
         <PARAMETER NAME="DAC0_Refclk_Div" VALUE="1"/>
@@ -15548,7 +15606,7 @@
             <CONNECTION INSTANCE="top_level_imp" PORT="dac0_clk_clk_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_dac0" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="O" NAME="clk_dac0" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s0_axis_aclk"/>
             <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_aclk"/>
@@ -15557,6 +15615,7 @@
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="axis_tready_slice_0" PORT="clk"/>
             <CONNECTION INSTANCE="axis_tready_slice_1" PORT="clk"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
@@ -15690,7 +15749,7 @@
             <CONNECTION INSTANCE="rst_top_level_31M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s0_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="s0_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
           </CONNECTIONS>
@@ -15788,7 +15847,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -15808,7 +15867,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_1_clk_dac0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -15821,7 +15880,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="External_Interface_dac0_clk" NAME="dac0_clk" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
           <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="200000000.0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="4000000000"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="dac0_clk_n"/>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="dac0_clk_p"/>
@@ -15865,6 +15924,7 @@
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="ext_reset_in"/>
+            <CONNECTION INSTANCE="rst_top_level_31M" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

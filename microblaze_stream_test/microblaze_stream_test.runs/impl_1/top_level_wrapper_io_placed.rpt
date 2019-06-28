@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Thu Jun 27 13:56:52 2019
+| Date                      : Thu Jun 27 17:41:16 2019
 | Host                      : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_level_wrapper_io_placed.rpt
 | Design                    : top_level_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            21 |
+|            22 |
 +---------------+
 
 
@@ -558,7 +558,7 @@ Table of Contents
 | AM19       |                      | High Performance | VCCO_65                            | VCCO          |             |      65 |            |                         |      |                   |                      | 0.00-1.80 |            |           |          |      |                  |              |                   |              |
 | AM20       |                      | High Performance | IO_L17N_T2U_N9_AD10N_65            | User IO       |             |      65 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | AM21       |                      | High Performance | IO_L17P_T2U_N8_AD10P_65            | User IO       |             |      65 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| AM22       |                      | High Performance | IO_T2U_N12_66                      | User IO       |             |      66 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| AM22       | ext_trigger          | High Performance | IO_T2U_N12_66                      | INPUT         | LVCMOS18    |      66 |            |                         |      |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | AM23       | app_leds_tri_o[6]    | High Performance | IO_L17N_T2U_N9_AD10N_66            | OUTPUT        | LVCMOS18    |      66 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | AM24       |                      |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | AM25       | app_leds_tri_o[0]    | High Performance | IO_L20N_T3L_N3_AD1N_66             | OUTPUT        | LVCMOS18    |      66 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |

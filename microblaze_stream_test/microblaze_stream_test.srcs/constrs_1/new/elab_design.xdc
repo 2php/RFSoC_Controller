@@ -8,3 +8,6 @@ set_property IOSTANDARD LVCMOS18 [get_ports uart_rx]
 set_property IOSTANDARD LVCMOS18 [get_ports uart_tx]
 
 set_property PACKAGE_PIN A3 [get_ports dac0_clk_clk_n]
+
+set_property PACKAGE_PIN AM22 [get_ports ext_trigger]
+set_property IOSTANDARD LVCMOS18 [get_ports ext_trigger]
