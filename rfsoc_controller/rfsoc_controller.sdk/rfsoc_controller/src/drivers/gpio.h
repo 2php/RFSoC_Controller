@@ -17,8 +17,6 @@
 #define TRIGGER_OVERRIDE_PIN 0
 #define FIFO_TREADY_PIN 1
 #define FIFO_MUX_PIN 2
-#define SCLK_PIN 3
-#define SDATA_PIN 4
 #define BUFFER_FLUSH_PIN 5
 
 #define RF_BANK 2

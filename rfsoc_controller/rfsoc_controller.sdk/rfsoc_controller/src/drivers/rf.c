@@ -59,14 +59,12 @@ void rf_repeat_test()
 
 void rf_single_pulse_test()
 {
-	//Turn off trigger override and buffer flush
+	//Turn on trigger override and buffer flush off
 	gpio_set_pin(RF_BANK, TRIGGER_OVERRIDE_PIN, 0x01);
 	gpio_set_pin(RF_BANK, BUFFER_FLUSH_PIN, 0x00);
 	//turn off ready
 	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
 
-	//write the cycle count (5 cycles times 3 clocks per cycle)
-	gpio_write_repeat_cycles(15);
 
 	//write the data
 	for(int i = 0; i < 1; i++){
@@ -96,11 +94,16 @@ void rf_single_pulse_test()
 
 	//flush the buffer of the remaining waveform
 	//rf_flush_buffer();
+	//turn off trigger override
 	gpio_set_pin(RF_BANK, TRIGGER_OVERRIDE_PIN, 0x00);
 }
 
 void rf_sine_test()
 {
+
+	rf_flush_buffer();
+
+
 	//Just write the sine wave to each channel
 	for(int i = 0; i < 5; i++){
 		write_sample_stream(sine_wave, 16,0);
@@ -128,39 +131,19 @@ void rf_sine_test()
 void rf_flush_buffer()
 {
 	//Turn off trigger override and buffer flush
+	gpio_set_pin(RF_BANK, TRIGGER_OVERRIDE_PIN, 0x01);
+	gpio_set_pin(RF_BANK, BUFFER_FLUSH_PIN, 0x01);
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0x01);
+	//turn on ready
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x01);
+	usleep(250000);
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0x00);
+	usleep(250000);
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x00);
 	gpio_set_pin(RF_BANK, TRIGGER_OVERRIDE_PIN, 0x00);
 	gpio_set_pin(RF_BANK, BUFFER_FLUSH_PIN, 0x00);
-	//turn off ready
-	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0x00);
 
-	//write the cycle count (5 cycles times 3 clocks per cycle)
-	gpio_write_repeat_cycles(15);
-
-	//write the data
-	for(int i = 0; i < 1; i++){
-		write_sample_stream(zeros, 16,0);
-		write_sample_stream(zeros, 16,1);
-	}
-
-	for(int i = 0; i < 1; i++){
-		write_sample_stream(zeros, 16,0);
-		write_sample_stream(zeros, 16,1);
-	}
-	for(int i = 0; i < 1; i++){
-		write_sample_stream(zeros, 16,0);
-		write_sample_stream(zeros, 16,1);
-	}
-
-	//Turn on the MUX
-	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 1);
-	//Turn on the ready pin
-	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 1);
-	//let it run for 10 seconds
-	usleep(100);
-	//turn off the ready pin
-	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
-	//turn off the mux pin
-	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0);
 }
 
 void rf_ext_trigger_test()

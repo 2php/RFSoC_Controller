@@ -229,3 +229,756 @@ mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
 15:30:18 **** Incremental Build of configuration Debug for project rfsoc_controller ****
 make all 
 make: Nothing to be done for 'all'.
+15:44:49 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:44:53 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:47:40 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:47:42 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:48:09 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:48:12 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:48:56 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:48:59 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:53:16 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:53:19 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:57:16 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:58:19 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:123:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:128:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:123:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:277:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:279:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+15:58:22 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:59:29 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:122:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:127:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:122:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:276:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:278:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76770	   3472	   9998	  90240	  16080	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:02:57 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76710	   3472	   9994	  90176	  16040	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:03:01 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:33 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:104:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:131:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:104:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:280:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:282:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76722	   3472	   9998	  90192	  16050	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:06:24 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:33:3: warning: implicit declaration of function 'cmd_flush_buffer_test'; did you mean 'cmd_led_test'? [-Wimplicit-function-declaration]
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+   cmd_led_test
+../src/drivers/cmd_handler.c: In function 'cmd_flush_buffer':
+../src/drivers/cmd_handler.c:85:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean 'cmd_flush_buffer'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  cmd_flush_buffer
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/drivers/cmd_handler.o: in function `handle_cmd':
+C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.sdk\rfsoc_controller\Debug/../src/drivers/cmd_handler.c:33: undefined reference to `cmd_flush_buffer_test'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:39: rfsoc_controller.elf] Error 1
+16:06:36 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:33:3: warning: implicit declaration of function 'cmd_flush_buffer_test'; did you mean 'cmd_led_test'? [-Wimplicit-function-declaration]
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+   cmd_led_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:82:6: warning: conflicting types for 'cmd_flush_buffer_test'
+ void cmd_flush_buffer_test()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:33:3: note: previous implicit declaration of 'cmd_flush_buffer_test' was here
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c: In function 'cmd_flush_buffer_test':
+../src/drivers/cmd_handler.c:85:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76838	   3472	   9994	  90304	  160c0	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:08:11 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:104:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:131:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:104:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:256:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:258:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76550	   3472	   9994	  90016	  15fa0	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:08:20 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+16:09:34 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:104:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:131:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:104:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:258:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:260:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76598	   3472	   9994	  90064	  15fd0	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:09:36 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+16:16:50 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:104:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:131:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:104:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:260:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:262:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76642	   3472	   9998	  90112	  16000	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:17:11 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:33:3: warning: implicit declaration of function 'cmd_flush_buffer_test'; did you mean 'cmd_led_test'? [-Wimplicit-function-declaration]
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+   cmd_led_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:82:6: warning: conflicting types for 'cmd_flush_buffer_test'
+ void cmd_flush_buffer_test()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:33:3: note: previous implicit declaration of 'cmd_flush_buffer_test' was here
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c: In function 'cmd_flush_buffer_test':
+../src/drivers/cmd_handler.c:85:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building file: ../src/drivers/gpio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/gpio.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/gpio.d" -MT"src/drivers/gpio.o" -o "src/drivers/gpio.o" "../src/drivers/gpio.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/gpio.c:8:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/gpio.c: In function 'gpio_init':
+../src/drivers/gpio.c:17:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+'Finished building: ../src/drivers/gpio.c'
+' '
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/rf.c: In function 'rf_sine_test':
+../src/drivers/rf.c:104:2: warning: implicit declaration of function 'rf_flush_buffer'; did you mean '_fflush_r'? [-Wimplicit-function-declaration]
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+  _fflush_r
+../src/drivers/rf.c: At top level:
+../src/drivers/rf.c:131:6: warning: conflicting types for 'rf_flush_buffer'
+ void rf_flush_buffer()
+      ^~~~~~~~~~~~~~~
+../src/drivers/rf.c:104:2: note: previous implicit declaration of 'rf_flush_buffer' was here
+  rf_flush_buffer();
+  ^~~~~~~~~~~~~~~
+../src/drivers/rf.c: In function 'rf_init':
+../src/drivers/rf.c:260:2: warning: implicit declaration of function 'debug_print'; did you mean 'xdbg_printf'? [-Wimplicit-function-declaration]
+  debug_print("Running RF self test...");
+  ^~~~~~~~~~~
+  xdbg_printf
+../src/drivers/rf.c:262:5: warning: implicit declaration of function 'rf_self_test'; did you mean 'rf_sine_test'? [-Wimplicit-function-declaration]
+  if(rf_self_test() == XRFDC_SUCCESS)
+     ^~~~~~~~~~~~
+     rf_sine_test
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76642	   3472	   9998	  90112	  16000	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:21:26 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+16:25:03 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.

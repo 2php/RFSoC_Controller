@@ -29,8 +29,8 @@ void handle_cmd()
 	case EXT_TRIGGER_TEST:
 		cmd_ext_trigger_test();
 		break;
-	case LED_TEST:
-		cmd_led_test();
+	case FLUSH_BUFFER:
+		cmd_flush_buffer_test();
 		break;
 	case REPEAT_TEST:
 		cmd_repeat_test();
@@ -62,11 +62,11 @@ void cmd_pulse_test()
 
 void cmd_sine_test()
 {
-	debug_print("Performing sine test until new character received...");
+	debug_print("Performing sine test for 10 seconds...");
 	rf_sine_test();
-	u8 cmd_buff[1] = {0};
-	while(uart_cmd_available(cmd_buff) == 0);
-	rf_flush_buffer();
+	//u8 cmd_buff[1] = {0};
+	//while(uart_cmd_available(cmd_buff) == 0);
+	//rf_flush_buffer();
 	debug_print("Sine test ended");
 
 }
@@ -79,7 +79,9 @@ void cmd_ext_trigger_test()
 
 }
 
-void cmd_led_test()
+void cmd_flush_buffer_test()
 {
-
+	debug_print("Flushing buffer for all channels");
+	rf_flush_buffer();
+	debug_print("Flush finished...");
 }

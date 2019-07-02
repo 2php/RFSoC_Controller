@@ -67,7 +67,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe1[255:0]"/>
+        <Option Id="MAP" value="probe3[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -343,7 +343,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -364,7 +364,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -385,7 +385,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -406,7 +406,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe5[255:0]"/>
+        <Option Id="MAP" value="probe7[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -682,7 +682,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="MAP" value="probe10[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -703,7 +703,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="MAP" value="probe9[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -724,7 +724,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -745,7 +745,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe9[255:0]"/>
+        <Option Id="MAP" value="probe11[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1021,7 +1021,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="MAP" value="probe14[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1042,7 +1042,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="MAP" value="probe13[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1063,7 +1063,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="MAP" value="probe12[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1084,7 +1084,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe13[255:0]"/>
+        <Option Id="MAP" value="probe15[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1360,7 +1360,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="MAP" value="probe18[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1381,7 +1381,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="MAP" value="probe17[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1402,7 +1402,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="MAP" value="probe16[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1467,6 +1467,28 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[1:0]"/>
+        <Option Id="NAME.CUSTOM" value="state_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe1_1[1]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe1_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -1515,6 +1537,58 @@
         <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe1_1[2]"/>
         <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe1_1[1]"/>
         <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe1_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="count_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[31]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[30]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[29]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[28]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[27]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[26]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[25]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[24]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[23]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[22]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[21]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[20]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[19]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[18]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[17]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[16]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[15]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[14]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[13]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[12]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[11]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[10]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[9]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[8]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[7]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[6]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[5]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[4]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[3]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[2]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[1]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/probe2_1[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -2124,7 +2198,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe1[255:0]"/>
+        <Option Id="MAP" value="probe3[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2400,7 +2474,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2421,7 +2495,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2442,7 +2516,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : axis_data_fifo_2_M_AXIS : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2463,7 +2537,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe5[255:0]"/>
+        <Option Id="MAP" value="probe7[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2739,7 +2813,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="MAP" value="probe10[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2760,7 +2834,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="MAP" value="probe9[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2781,7 +2855,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : axis_data_fifo_1_M_AXIS : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2802,7 +2876,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe9[255:0]"/>
+        <Option Id="MAP" value="probe11[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3078,7 +3152,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="MAP" value="probe14[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3099,7 +3173,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="MAP" value="probe13[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3120,7 +3194,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="MAP" value="probe12[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_2 : axis_mux_0_m_axis : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3141,7 +3215,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe13[255:0]"/>
+        <Option Id="MAP" value="probe15[255:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3417,7 +3491,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="MAP" value="probe18[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3438,7 +3512,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="MAP" value="probe17[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3459,7 +3533,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="MAP" value="probe16[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_3 : axis_tready_slice_0_m_axis : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3524,6 +3598,28 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[1:0]"/>
+        <Option Id="NAME.CUSTOM" value="state_out_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe1_1[1]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe1_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -3572,6 +3668,58 @@
         <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe1_1[2]"/>
         <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe1_1[1]"/>
         <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe1_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="count_out_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[31]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[30]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[29]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[28]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[27]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[26]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[25]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[24]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[23]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[22]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[21]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[20]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[19]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[18]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[17]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[16]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[15]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[14]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[13]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[12]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[11]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[10]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[9]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[8]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[7]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[6]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[5]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[4]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[3]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[2]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[1]"/>
+        <net name="top_level_i/rfsoc_data_pipeline_1/inst/system_ila_fast/inst/probe2_1[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">

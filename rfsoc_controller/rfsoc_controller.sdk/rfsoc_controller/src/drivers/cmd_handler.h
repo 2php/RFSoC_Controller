@@ -12,7 +12,7 @@
 #define PULSE_TEST '0'
 #define SINE_TEST '1'
 #define EXT_TRIGGER_TEST '2'
-#define LED_TEST '3'
+#define FLUSH_BUFFER '3'
 #define REPEAT_TEST '4'
 
 
