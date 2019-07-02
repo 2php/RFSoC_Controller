@@ -108,24 +108,7 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/top_level/ip/top_level_axi_gpio_0_1/sim/top_level_axi_gpio_0_1.vhd" \
 -endlib
--makelib xcelium_lib/axis_infrastructure_v1_1_0 \
-  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axis_data_fifo_v2_0_1 \
-  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ipshared/e1b1/hdl/axis_data_fifo_v2_0_vl_rfs.v" \
--endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/top_level/ip/top_level_axis_data_fifo_0_1/sim/top_level_axis_data_fifo_0_1.v" \
--endlib
--makelib xcelium_lib/axis_register_slice_v1_1_19 \
-  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ipshared/635c/hdl/axis_register_slice_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axis_dwidth_converter_v1_1_18 \
-  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ipshared/7d46/hdl/axis_dwidth_converter_v1_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/top_level/ip/top_level_axis_dwidth_converter_0_1/sim/top_level_axis_dwidth_converter_0_1.v" \
-  "../../../bd/top_level/ip/top_level_axis_data_fifo_1_1/sim/top_level_axis_data_fifo_1_1.v" \
   "../../../bd/top_level/ip/top_level_usp_rf_data_converter_0_1/synth/top_level_usp_rf_data_converter_0_1_block.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
@@ -164,27 +147,66 @@
   "../../../bd/top_level/ip/top_level_rst_top_level_31M_1/sim/top_level_rst_top_level_31M_1.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/top_level/ip/top_level_axis_tready_slice_0_0/sim/top_level_axis_tready_slice_0_0.v" \
-  "../../../bd/top_level/ip/top_level_axis_data_fifo_0_2/sim/top_level_axis_data_fifo_0_2.v" \
-  "../../../bd/top_level/ip/top_level_axis_dwidth_converter_0_2/sim/top_level_axis_dwidth_converter_0_2.v" \
-  "../../../bd/top_level/ip/top_level_axis_data_fifo_1_2/sim/top_level_axis_data_fifo_1_2.v" \
-  "../../../bd/top_level/ip/top_level_axis_tready_slice_0_1/sim/top_level_axis_tready_slice_0_1.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_0_0/bd_0/ip/ip_0/sim/bd_9bbd_ila_lib_0.v" \
+  "../../../bd/top_level/ip/top_level_trigger_buffer_0_0/sim/top_level_trigger_buffer_0_0.v" \
+  "../../../bd/top_level/ip/top_level_system_ila_0_1/bd_0/sim/bd_5b7c.v" \
+  "../../../bd/top_level/ip/top_level_system_ila_0_1/bd_0/ip/ip_0/sim/bd_5b7c_ila_lib_0.v" \
 -endlib
 -makelib xcelium_lib/gigantic_mux \
   "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ipshared/d322/hdl/gigantic_mux_v1_0_cntr.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/top_level/ip/top_level_system_ila_0_0/bd_0/ip/ip_1/bd_9bbd_g_inst_0_gigantic_mux.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_0_0/bd_0/ip/ip_1/sim/bd_9bbd_g_inst_0.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_0_0/bd_0/sim/bd_9bbd.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_0_0/sim/top_level_system_ila_0_0.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_1_0/bd_0/ip/ip_0/sim/bd_5bec_ila_lib_0.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_1_0/bd_0/ip/ip_1/bd_5bec_g_inst_0_gigantic_mux.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_1_0/bd_0/ip/ip_1/sim/bd_5bec_g_inst_0.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_1_0/bd_0/sim/bd_5bec.v" \
-  "../../../bd/top_level/ip/top_level_system_ila_1_0/sim/top_level_system_ila_1_0.v" \
-  "../../../bd/top_level/ip/top_level_trigger_buffer_0_0/sim/top_level_trigger_buffer_0_0.v" \
+  "../../../bd/top_level/ip/top_level_system_ila_0_1/bd_0/ip/ip_1/bd_5b7c_g_inst_0_gigantic_mux.v" \
+  "../../../bd/top_level/ip/top_level_system_ila_0_1/bd_0/ip/ip_1/sim/bd_5b7c_g_inst_0.v" \
+  "../../../bd/top_level/ip/top_level_system_ila_0_1/sim/top_level_system_ila_0_1.v" \
+-endlib
+-makelib xcelium_lib/axis_infrastructure_v1_1_0 \
+  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rf_data_pipeline_0_3/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axis_data_fifo_v2_0_1 \
+  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rf_data_pipeline_0_3/ipshared/e1b1/hdl/axis_data_fifo_v2_0_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_0_0/sim/rf_data_pipeline_axis_data_fifo_0_0.v" \
+-endlib
+-makelib xcelium_lib/axis_register_slice_v1_1_19 \
+  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rf_data_pipeline_0_3/ipshared/635c/hdl/axis_register_slice_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axis_dwidth_converter_v1_1_18 \
+  "../../../../microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_rf_data_pipeline_0_3/ipshared/7d46/hdl/axis_dwidth_converter_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_dwidth_converter_0_0/sim/rf_data_pipeline_axis_dwidth_converter_0_0.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_1_0/sim/rf_data_pipeline_axis_data_fifo_1_0.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_2_0/sim/rf_data_pipeline_axis_data_fifo_2_0.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_3_0/sim/rf_data_pipeline_axis_data_fifo_3_0.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_0_1/sim/rf_data_pipeline_axis_data_fifo_0_1.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_dwidth_converter_0_1/sim/rf_data_pipeline_axis_dwidth_converter_0_1.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_1_1/sim/rf_data_pipeline_axis_data_fifo_1_1.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_2_1/sim/rf_data_pipeline_axis_data_fifo_2_1.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/src/rf_data_pipeline_axis_data_fifo_3_1/sim/rf_data_pipeline_axis_data_fifo_3_1.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_axis_mux_0_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_axis_tready_slice_0_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_0c61_ila_lib_0.v" \
+  "../../../bd/top_level/ipshared/4d78/src/bd_0c61_g_inst_0_gigantic_mux.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_0c61_g_inst_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_0c61.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_system_ila_0_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_gpio_buffer_0_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_cc30_ila_lib_0.v" \
+  "../../../bd/top_level/ipshared/4d78/src/bd_cc30_g_inst_0_gigantic_mux.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_cc30_g_inst_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_cc30.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_system_ila_1_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_ccc0_ila_lib_0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/bd_ccc0.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline_system_ila_2_0.v" \
+  "../../../bd/top_level/ipshared/4d78/src/axis_mux.v" \
+  "../../../bd/top_level/ipshared/4d78/src/shift_register.v" \
+  "../../../bd/top_level/ipshared/4d78/src/axis_tready_slice.v" \
+  "../../../bd/top_level/ipshared/4d78/src/gpio_buffer.v" \
+  "../../../bd/top_level/ipshared/4d78/sim/rf_data_pipeline.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_0_3/sim/top_level_rf_data_pipeline_0_3.v" \
+  "../../../bd/top_level/ip/top_level_rf_data_pipeline_1_1/sim/top_level_rf_data_pipeline_1_1.v" \
   "../../../bd/top_level/sim/top_level.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

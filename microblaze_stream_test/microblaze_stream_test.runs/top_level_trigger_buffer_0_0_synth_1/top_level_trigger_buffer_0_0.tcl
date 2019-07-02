@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 3
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
 
@@ -31,7 +31,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
-set_property ip_repo_paths c:/james/fpga_projects/ip_repo/axis_trigger_1.0 [current_project]
+set_property ip_repo_paths {
+  {c:/Users/Marandi Group B241/AppData/Roaming/Xilinx/ip_repo}
+  c:/james/fpga_projects/ip_repo/axis_trigger_1.0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

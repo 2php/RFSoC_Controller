@@ -553,10 +553,10 @@
 /******************************************************************/
 
 
-/* Definitions for peripheral AXIS_DATA_FIFO_0 */
+/* Definitions for peripheral RF_DATA_PIPELINE_0 */
 
 
-/* Definitions for peripheral AXIS_DATA_FIFO_2 */
+/* Definitions for peripheral RF_DATA_PIPELINE_1 */
 
 
 /******************************************************************/

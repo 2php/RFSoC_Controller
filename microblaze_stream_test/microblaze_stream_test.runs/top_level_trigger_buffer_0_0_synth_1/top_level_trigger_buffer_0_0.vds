@@ -2,32 +2,33 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jun 27 17:02:19 2019
-# Process ID: 1624
+# Start of session at: Sat Jun 29 12:16:18 2019
+# Process ID: 16376
 # Current directory: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_trigger_buffer_0_0_synth_1
 # Command line: vivado.exe -log top_level_trigger_buffer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_trigger_buffer_0_0.tcl
 # Log file: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_trigger_buffer_0_0_synth_1/top_level_trigger_buffer_0_0.vds
 # Journal file: C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_trigger_buffer_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source top_level_trigger_buffer_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 355.531 ; gain = 59.555
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 358.113 ; gain = 63.070
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Marandi Group B241/AppData/Roaming/Xilinx/ip_repo'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo/axis_trigger_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 395.969 ; gain = 40.438
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 395.730 ; gain = 37.617
 Command: synth_design -top top_level_trigger_buffer_0_0 -part xczu29dr-ffvf1760-2-e -mode out_of_context
 Starting synth_design
 WARNING: [IP_Flow 19-3571] IP 'top_level_trigger_buffer_0_0' is restricted:
 * Module reference is stale and needs refreshing.
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29dr'
-INFO: [Common 17-86] Your Synthesis license expires in 20 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 18 day(s)
 INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7128 
+INFO: Helper process launched with PID 15124 
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1458.867 ; gain = 179.191
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1459.230 ; gain = 178.629
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_trigger_buffer_0_0' [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/synth/top_level_trigger_buffer_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'trigger_buffer' [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/new/trigger_buffer.v:23]
@@ -39,7 +40,7 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/james/fpga
 INFO: [Synth 8-6155] done synthesizing module 'trigger_buffer' (1#1) [C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/new/trigger_buffer.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_trigger_buffer_0_0' (2#1) [c:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/synth/top_level_trigger_buffer_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1524.207 ; gain = 244.531
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.332 ; gain = 243.730
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -52,10 +53,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1524.207 ; gain = 244.531
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1524.332 ; gain = 243.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 1524.207 ; gain = 244.531
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1524.332 ; gain = 243.730
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -63,16 +64,16 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1590.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1586.617 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.304 . Memory (MB): peak = 1608.840 ; gain = 18.102
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.775 . Memory (MB): peak = 1609.656 ; gain = 23.039
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1608.840 ; gain = 329.164
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 1609.656 ; gain = 329.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -80,13 +81,13 @@ Start Loading Part and Timing Information
 Loading part: xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1608.840 ; gain = 329.164
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 1609.656 ; gain = 329.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1608.840 ; gain = 329.164
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 1609.656 ; gain = 329.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'trigger_buffer'
 ---------------------------------------------------------------------------------------------------
@@ -99,7 +100,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'trigg
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'trigger_buffer'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1608.840 ; gain = 329.164
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:27 . Memory (MB): peak = 1609.656 ; gain = 329.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -169,7 +170,7 @@ INFO: [Synth 8-3886] merging instance 'insti_2/inst/count_reg[29]' (FDCE) to 'in
 INFO: [Synth 8-3886] merging instance 'insti_2/inst/count_reg[28]' (FDCE) to 'insti_2/inst/count_reg[25]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_2/\inst/count_reg[25] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1608.840 ; gain = 329.164
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1609.656 ; gain = 329.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -181,13 +182,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 2054.273 ; gain = 774.598
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 2053.262 ; gain = 772.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 2054.273 ; gain = 774.598
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 2053.262 ; gain = 772.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,7 +200,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 2073.844 ; gain = 794.168
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 2072.953 ; gain = 792.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,7 +224,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -236,7 +237,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -248,25 +249,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -300,32 +301,32 @@ Report Instance Areas:
 |2     |  inst   |trigger_buffer |    38|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2079.730 ; gain = 799.129
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 2080.617 ; gain = 716.309
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 2080.617 ; gain = 800.941
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:41 . Memory (MB): peak = 2079.730 ; gain = 713.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:51 . Memory (MB): peak = 2079.730 ; gain = 799.129
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2134.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2133.797 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:01:00 . Memory (MB): peak = 2134.461 ; gain = 1738.492
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2134.461 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 2133.797 ; gain = 1738.066
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2133.797 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_trigger_buffer_0_0_synth_1/top_level_trigger_buffer_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2134.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2133.797 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/microblaze_stream_test/microblaze_stream_test.runs/top_level_trigger_buffer_0_0_synth_1/top_level_trigger_buffer_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_trigger_buffer_0_0_utilization_synth.rpt -pb top_level_trigger_buffer_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 27 17:04:23 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 29 12:18:28 2019...

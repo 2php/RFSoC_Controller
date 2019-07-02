@@ -6,75 +6,85 @@
  */
 
 #include "rf.h"
+#include "gpio.h"
 
 #define RF_VALID_TIME 250000
 
 u16 sine_wave[16] = {0x8000, 0xB0FC, 0xDA82, 0xF642, 0xFFFF, 0xF642, 0xDA82, 0xB0FC, 0x8000, 0x4F04, 0x257E, 0x9BE, 0x0, 0x9BE, 0x257E, 0x4F04};
 u16 t_wave[16] = {0x0, 0x2000, 0x4000, 0x6000, 0x8000, 0xA000, 0xC000, 0xE000, 0xC000, 0xA000, 0x8000, 0x6000, 0x4000, 0x2000, 0x0, 0x0};
-//volatile unsigned int *sine_wave = {0x10000, 0x161F8, 0x1B505, 0x1EC83, 0x20000, 0x1EC83, 0x1B505, 0x161F8, 0x10000, 0x9E08, 0x4AFB, 0x137D, 0x0, 0x137D, 0x4AFB, 0x9E08};
-u16 pulse[16] = {0x0, 0x7FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
+u16 pulse[16] = {0x0, 0x7FFF, 0xFFFF, 0xFFFF, 0x7FFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
 u16 zeros [16];
 
-void gpio_init()
+void rf_repeat_test()
 {
-	if (XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID) == XST_SUCCESS)
-	{
-		debug_print("GPIO init success!");
+	//turn off ready
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
+
+	//write the cycle count (5 cycles times 3 clocks per cycle)
+	gpio_write_repeat_cycles(15);
+
+	//write the data
+	for(int i = 0; i < 1; i++){
+		write_sample_stream(zeros, 16,0);
+		write_sample_stream(zeros, 16,1);
 	}
-	else
-	{
-		debug_print("GPIO init failed!");
+
+	for(int i = 0; i < 1; i++){
+		write_sample_stream(pulse, 16,0);
+		write_sample_stream(pulse, 16,1);
+	}
+	for(int i = 0; i < 1; i++){
+		write_sample_stream(zeros, 16,0);
+		write_sample_stream(zeros, 16,1);
 	}
 
-	//set channel 1 and 2 to be all outputs
-	XGpio_SetDataDirection(&Gpio, 1, 0x00);
-	XGpio_SetDataDirection(&Gpio, 2, 0x00);
+	//Turn on the MUX
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 1);
+	//Turn on the ready pin
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 1);
+	//let it run for 10 seconds
+	usleep(100);
+	//turn off the mux pin
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0);
+	//turn off the ready pin
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
 
-	//assert valid and ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
-
-	//turn LEDs on
-	XGpio_DiscreteWrite(&Gpio, 1, 0xFF);
-
-	//fx the test data
-	for(int i = 0; i < 16; i++)
-	{
-		t_wave[i] = t_wave[i] >> 1;
-		sine_wave[i] = sine_wave[i] >> 1;
-		pulse[i] = pulse[i] >> 1;
-		zeros[i] = 0;
-	}
 }
 
 void rf_sine_test()
 {
+	//write the cycle count (irrelivent here as we're in steady state)
+	gpio_write_repeat_cycles(15);
 	//Just write the sine wave to each channel
 	write_sample_stream(sine_wave, 16,0);
 	write_sample_stream(sine_wave, 16,1);
 	//turn on ready
 	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
-	usleep(RF_VALID_TIME);
+	usleep(100);
 	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
 }
 
 void rf_flush_buffer()
 {
-	for(int i = 0; i < 10; i++){
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0);
+	//turn on ready
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 1);
+	for(int i = 0; i < 1000; i++){
 		write_sample_stream(zeros, 16, 0);
 		write_sample_stream(zeros, 16, 1);
 	}
-	//turn on ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
+
 	usleep(RF_VALID_TIME);
-	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
 }
 
 void rf_ext_trigger_test()
 {
-	//turn off ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
-	//write wave data
 
+	//turn off ready
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
+	//write wave data
+	gpio_write_repeat_cycles(7);
 
 	for(int i = 0; i < 1; i++){
 		write_sample_stream(zeros, 16,0);
@@ -96,9 +106,9 @@ void rf_pulse_test()
 
 
 	//turn off ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
 	//write wave data
-
+	gpio_write_repeat_cycles(7);
 
 	for(int i = 0; i < 1; i++){
 		write_sample_stream(zeros, 16,0);
@@ -113,10 +123,12 @@ void rf_pulse_test()
 		write_sample_stream(zeros, 16,0);
 		write_sample_stream(zeros, 16,1);
 	}
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 1);
 	//turn on ready
-	XGpio_DiscreteWrite(&Gpio, 2, 0x03);
-	usleep(RF_VALID_TIME);
-	XGpio_DiscreteWrite(&Gpio, 2, 0x01);
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 1);
+	usleep(100);
+	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0);
+	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0);
 }
 
 
@@ -199,6 +211,15 @@ void rf_init()
 	}
 
 	gpio_init();
+
+	//fx the test data
+	for(int i = 0; i < 16; i++)
+	{
+		t_wave[i] = t_wave[i] >> 1;
+		sine_wave[i] = sine_wave[i] >> 1;
+		pulse[i] = pulse[i] >> 1;
+		zeros[i] = 0;
+	}
 }
 
 int rf_self_test()

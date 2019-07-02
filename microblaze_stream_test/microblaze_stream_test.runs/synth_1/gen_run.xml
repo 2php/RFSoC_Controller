@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561680935">
-  <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="top_level_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="top_level_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="top_level_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="top_level_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_level_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561997242">
+  <File Type="PA-TCL" Name="axis_tready_slice.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="axis_tready_slice_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="axis_tready_slice_reports.tcl"/>
+  <File Type="RDS-RDS" Name="axis_tready_slice.vds"/>
+  <File Type="RDS-UTIL" Name="axis_tready_slice_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="axis_tready_slice_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="axis_tready_slice.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="axis_tready_slice_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="axis_tready_slice_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/shift_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/axis_tready_slice.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -20,6 +27,23 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/trigger_buffer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/axis_mux.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gpio_buffer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,13 +51,15 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/rf_data_pipeline/rf_data_pipeline.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,9 +73,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="top_level_wrapper"/>
+      <Option Name="TopModule" Val="axis_tready_slice"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/axis_tready_slice.v"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -73,13 +109,12 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rst_top_level_31M_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rf_data_pipeline_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_buffer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rf_data_pipeline_1_1"/>
 </GenRun>

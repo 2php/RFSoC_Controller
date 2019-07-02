@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561680937">
-  <File Type="BITSTR-BMM" Name="top_level_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="top_level_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="top_level_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="top_level_wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="top_level_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="top_level_wrapper_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="top_level_wrapper_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
-  <File Type="OPT-DRC" Name="top_level_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="top_level_wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="top_level_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="top_level_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="top_level_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="top_level_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="top_level_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="top_level_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="top_level_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="top_level_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="top_level_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="top_level_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="top_level_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="top_level_wrapper.bgn"/>
-  <File Type="PLACE-TIMING" Name="top_level_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="top_level_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="top_level_wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_level_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="top_level_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="top_level_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="top_level_wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="top_level_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="top_level_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="top_level_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="top_level_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="top_level_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="top_level_wrapper_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1561997242">
+  <File Type="BITSTR-BMM" Name="axis_tready_slice_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="axis_tready_slice_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="axis_tready_slice_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="axis_tready_slice_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="axis_tready_slice.tcl"/>
+  <File Type="OPT-TIMING" Name="axis_tready_slice_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="axis_tready_slice_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="axis_tready_slice_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="axis_tready_slice_reports.tcl"/>
+  <File Type="OPT-DRC" Name="axis_tready_slice_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="axis_tready_slice.hwdef"/>
+  <File Type="PWROPT-DCP" Name="axis_tready_slice_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="axis_tready_slice_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="axis_tready_slice_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="axis_tready_slice_placed.dcp"/>
+  <File Type="PLACE-IO" Name="axis_tready_slice_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="axis_tready_slice_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="axis_tready_slice_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="axis_tready_slice_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="axis_tready_slice_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="axis_tready_slice_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="axis_tready_slice_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="axis_tready_slice.bgn"/>
+  <File Type="PLACE-TIMING" Name="axis_tready_slice_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="axis_tready_slice_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="axis_tready_slice.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="axis_tready_slice_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="axis_tready_slice_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="axis_tready_slice_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="axis_tready_slice.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="axis_tready_slice_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="axis_tready_slice_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="axis_tready_slice_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="axis_tready_slice_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="axis_tready_slice_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="axis_tready_slice_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="top_level_wrapper.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="top_level_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="top_level_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_level_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_level_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="top_level_wrapper.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_level_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="top_level_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="top_level_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="top_level_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="top_level_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="top_level_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="top_level_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="top_level_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="top_level_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="top_level_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_level_wrapper_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_level_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_level_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_level_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_level_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_level_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_level_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_level_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="top_level_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_level_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="top_level_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="top_level_wrapper.nky"/>
-  <File Type="BG-DRC" Name="top_level_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="top_level_wrapper.vdi"/>
+  <File Type="BITSTR-LTX" Name="axis_tready_slice.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="axis_tready_slice_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="axis_tready_slice.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="axis_tready_slice_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="axis_tready_slice_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="axis_tready_slice.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="axis_tready_slice_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="axis_tready_slice_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="axis_tready_slice_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="axis_tready_slice_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="axis_tready_slice_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="axis_tready_slice_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="axis_tready_slice_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="axis_tready_slice_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="axis_tready_slice_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="axis_tready_slice_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="axis_tready_slice_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="axis_tready_slice_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="axis_tready_slice_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="axis_tready_slice_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="axis_tready_slice_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="axis_tready_slice_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="axis_tready_slice_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="axis_tready_slice_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="axis_tready_slice_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="axis_tready_slice.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="axis_tready_slice_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="axis_tready_slice.rbt"/>
+  <File Type="BITSTR-NKY" Name="axis_tready_slice.nky"/>
+  <File Type="BG-DRC" Name="axis_tready_slice.drc"/>
+  <File Type="RDI-RDI" Name="axis_tready_slice.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/shift_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/axis_tready_slice.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -80,6 +87,23 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/trigger_buffer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/axis_mux.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gpio_buffer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -87,13 +111,15 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/rf_data_pipeline/rf_data_pipeline.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -107,9 +133,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="top_level_wrapper"/>
+      <Option Name="TopModule" Val="axis_tready_slice"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/axis_tready_slice.v"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -133,7 +169,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -144,10 +182,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rst_top_level_31M_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rf_data_pipeline_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_buffer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tready_slice_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rf_data_pipeline_1_1"/>
 </GenRun>

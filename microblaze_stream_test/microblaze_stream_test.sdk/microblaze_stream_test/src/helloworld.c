@@ -68,6 +68,9 @@ int main()
 
 	rf_init();
 
+	debug_print("Flushing RF buffer...");
+	rf_flush_buffer();
+
 	while(1)
 	{
 		handle_cmd();

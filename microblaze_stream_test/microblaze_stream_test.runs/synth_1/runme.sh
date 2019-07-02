@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl
+EAStep vivado -log axis_tready_slice.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_tready_slice.tcl
