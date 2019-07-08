@@ -5,46 +5,38 @@ Created on Thu May  2 14:07:21 2019
 @author: James Williams
 """
 
-import math
+import init_board as ib
 import RFSoC_Board as rf
-import pickle
-#import init_board
-import matplotlib.pyplot as plt
+#initialize the board object and get the board back
+board = ib.init_board_object("COM4")
 
-#initialize the board
-#init_board.init("COM10")
+#add a channel and set the period to 2 over the main frequency
+wf = rf.WaveFile("sine_wave.txt", 1*rf.DAC_WORD_PERIOD)
+c0 = rf.Channel(0, wf)
+c1 = rf.Channel(1, wf)
 
-#Generate a 1MHz sine wave 
-sine_wave = []
-time = []
-omega = 1.18
-t = 0
-t_step = 0.001
-#generate the required number of words
-for i in range (rf.CHANNEL_DEPTH*rf.WORDS_PER_REG):
-    time.append(t)
-    sine_wave.append((2**(rf.WORD_LEN*8))*math.sin(omega*t))
-    t = t + t_step
-   
+#flush the bord buffers
+board.flush_buffer()
 
-#plot the wave
-plt.plot(time, sine_wave)
-plt.show()
+#upload the waveform
+board.add_channel(c0)
+board.add_channel(c1)
+
+board.write_channel(0)
+board.write_channel(1)
+
+#set the trigger mode
+board.set_trigger_mode(rf.TRIGGER_CONTINUOUS)
 
 
-#create a board device
-f = open("database.txt", "rb")
-board = pickle.load(f)
-for i in range(16):
-    #create a waveform
-    wf = rf.WaveFile(None, sine_wave)
-    c = rf.Channel(i, 50, wf)
-    board.add_channel(c)
+#set the loopback mode
+board.set_loopback(rf.YES)
 
-#load the waveform
-board.write_bytestream()
+#trigger until console anything is recived
+board.set_trigger(rf.ON)
 
-#arm the board
-while(1)
-    board.arm()
-    
+print("Trigger active until input recieved...")
+portname = input()
+
+board.set_trigger(rf.OFF)
+board.flush_buffer()

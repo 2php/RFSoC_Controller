@@ -23,6 +23,18 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+void rf_set_trigger(u8 option)
+{
+	if(option == ON)
+	{
+		gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x01);
+	}
+	else
+	{
+		gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x00);
+	}
+}
+
 void rf_load_bitstream(u8* stream, u32 length, u8 channel)
 {
 	//Make sure the length is correct

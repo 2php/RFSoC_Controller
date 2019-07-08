@@ -46,7 +46,8 @@ void rf_repeat_test();
 #define YES 0x00
 #define NO 0x01
 #define NUM_CHANNELS 2
-
+#define ON 0x01
+#define OFF 0x00
 
 //Core functions
 void rf_load_bitstream(u8* stream, u32 length, u8 channel);
@@ -54,6 +55,7 @@ void rf_set_repeat_cycles(u32 cycles);
 void rf_flush_buffer();
 void rf_set_trigger_mode(u8 mode);
 void rf_set_loopback(u8 option);
+void rf_set_trigger(u8 option);
 void rf_trigger();
 
 

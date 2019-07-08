@@ -22,10 +22,37 @@ void handle_cmd()
 	{
 
 	//Python command cases
-	case WAVEFORM_OVER_UART:
+	case PING_BOARD:
+		uart_send_ack();
+		break;
+	case RF_LOAD_WAVEFORM:
 		//Send an ack back to Python
 		uart_send_ack();
-		cmd_waveform_over_uart();
+		cmd_load_waveform();
+		break;
+	case RF_TRIGGER:
+		uart_send_ack();
+		rf_trigger();
+		break;
+	case RF_SET_TRIGGER_MODE:
+		uart_send_ack();
+		cmd_set_trigger_mode();
+		break;
+	case RF_SET_LOOPBACK:
+		uart_send_ack();
+		cmd_set_loopback();
+		break;
+	case RF_SET_REPEAT_CYCLES:
+		uart_send_ack();
+		cmd_set_repeat_cycles();
+		break;
+	case RF_FLUSH_BUFFER:
+		uart_send_ack();
+		rf_flush_buffer();
+		break;
+	case RF_SET_TRIGGER:
+		uart_send_ack();
+		cmd_set_trigger();
 		break;
 
 		//Test command cases
@@ -56,7 +83,7 @@ void handle_cmd()
 //Python command implementations////////////
 ////////////////////////////////////////////
 
-void cmd_receive_repeat_cycles()
+void cmd_set_repeat_cycles()
 {
 	//Recieve the repeat cycles in 4 bytes with MSB first
 	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
@@ -67,7 +94,7 @@ void cmd_receive_repeat_cycles()
 	rf_set_repeat_cycles(final_repeat);
 }
 
-void cmd_waveform_over_uart()
+void cmd_load_waveform()
 {
 	//Get the channel number first
 	u8 cn[1] = {0x00};
@@ -87,13 +114,56 @@ void cmd_waveform_over_uart()
 	//Get the bitstream
 	u8* bitstream = malloc(final_size);
 	uart_recieve(bitstream, final_size);
-	//Send an ack back to Python
-	uart_send_ack();
+
 
 	//write the bitstream to the selected channel
 	rf_load_bitstream(bitstream, final_size, channel);
+	//Send an ack back to Python
+	uart_send_ack();
+	free(bitstream);
 
 }
+
+void cmd_set_trigger_mode()
+{
+	//Recieve the trigger mode as a single byte
+	u8 tm[1] = {0x00};
+	uart_recieve(tm, 1);
+	//Send an ack back to Python
+	uart_send_ack();
+
+	//Set the trigger mode
+	rf_set_trigger_mode(tm[0]);
+}
+
+void cmd_set_loopback()
+{
+	//Recieve the loopback mode as a single byte
+	u8 tm[1] = {0x00};
+	uart_recieve(tm, 1);
+	//Send an ack back to Python
+	uart_send_ack();
+
+	//Set the trigger mode
+	rf_set_loopback(tm[0]);
+}
+
+void cmd_set_trigger()
+{
+	//Recieve the trigger setting in one byte
+	u8 tm[1] = {0x00};
+	uart_recieve(tm, 1);
+	//Send an ack back to Python
+	uart_send_ack();
+
+	//Set the trigger mode
+	rf_set_trigger(tm[0]);
+}
+
+
+//////////////////////////////////////////////////////////////////
+//Testing Commands////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 
 void cmd_trigger_detect_test()
 {

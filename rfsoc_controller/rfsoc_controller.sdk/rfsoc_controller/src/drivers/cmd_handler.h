@@ -19,10 +19,19 @@
 
 //Python command defines
 #define PING_BOARD 0x00
-#define WAVEFORM_OVER_UART 0x01
+#define RF_LOAD_WAVEFORM 0x01
+#define RF_TRIGGER 0x02
+#define RF_SET_TRIGGER_MODE 0x03
+#define RF_FLUSH_BUFFER 0x04
+#define RF_SET_LOOPBACK 0x05
+#define RF_SET_REPEAT_CYCLES 0x06
+#define RF_SET_TRIGGER 0x07
 
 //Python commands
-void cmd_waveform_over_uart();
+void cmd_set_repeat_cycles();
+void cmd_load_waveform();
+void cmd_set_trigger_mode();
+void cmd_set_loopback();
 
 //Test case commands
 void cmd_pulse_test();

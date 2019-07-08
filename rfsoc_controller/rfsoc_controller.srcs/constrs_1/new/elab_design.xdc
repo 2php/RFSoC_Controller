@@ -7,5 +7,6 @@ set_property PACKAGE_PIN BB23 [get_ports tx_0]
 set_property PACKAGE_PIN BB22 [get_ports rx_0]
 set_property IOSTANDARD LVCMOS18 [get_ports rx_0]
 set_property IOSTANDARD LVCMOS18 [get_ports tx_0]
-set_property PACKAGE_PIN AM22 [get_ports ext_trigger_0_0]
+set_property PACKAGE_PIN AY22 [get_ports ext_trigger_0_0]
 set_property IOSTANDARD LVCMOS18 [get_ports ext_trigger_0_0]
+
