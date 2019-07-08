@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Jul  2 15:11:01 2019
+| Date         : Tue Jul  2 17:23:00 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
 | Design       : top_level_wrapper
@@ -183,6 +183,7 @@ Table of Contents
 | top_level_lmb_bram_0                |    1 |
 | top_level_ilmb_v10_0                |    1 |
 | top_level_ilmb_bram_if_cntlr_0      |    1 |
+| top_level_gpio_trigger_breakin_0_0  |    1 |
 | top_level_dlmb_v10_0                |    1 |
 | top_level_dlmb_bram_if_cntlr_0      |    1 |
 | top_level_count_buffer_0_0          |    1 |

@@ -23,6 +23,7 @@ int uart_init();
 void uart_recieve(u8* buff, u16 num_char);
 //returns 1 if cmd is availabe, also writes command to first position of buffer
 u8 uart_cmd_available(u8* cmd_buff);
+void uart_send_ack();
 
 
 #endif /* SRC_DRIVERS_UART_H_ */

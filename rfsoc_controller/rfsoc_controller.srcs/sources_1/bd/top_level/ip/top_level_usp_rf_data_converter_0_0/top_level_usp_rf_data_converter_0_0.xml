@@ -17223,11 +17223,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:02 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 02 23:30:24 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ac3fa049</spirit:value>
+            <spirit:value>9:70f678e2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17238,7 +17238,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ac3fa049</spirit:value>
+            <spirit:value>9:70f678e2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17254,11 +17254,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:02 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 02 23:30:24 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ac3fa049</spirit:value>
+            <spirit:value>9:70f678e2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17273,11 +17273,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:02 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 02 23:30:25 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:10837072</spirit:value>
+            <spirit:value>9:5d8d4313</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17293,11 +17293,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:02 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 02 23:30:24 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:10837072</spirit:value>
+            <spirit:value>9:5d8d4313</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17311,11 +17311,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:17 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 02 23:32:11 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ac3fa049</spirit:value>
+            <spirit:value>9:70f678e2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -38996,7 +38996,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>C_DAC0_PLL_Enable</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_PLL_Enable">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_PLL_Enable">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DAC0_Sampling_Rate</spirit:name>
@@ -39008,7 +39008,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DAC0_Refclk_Freq</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_Refclk_Freq">4000.000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_Refclk_Freq">250.000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DAC0_Outclk_Freq</spirit:name>
@@ -39016,15 +39016,15 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_DAC0_FBDIV</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_FBDIV">10</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_FBDIV">48</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_DAC0_OutDiv</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_OutDiv">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_OutDiv">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DAC0_Vco</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_Vco">8500.0</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DAC0_Vco">12000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_DAC0_Fabric_Freq</spirit:name>
@@ -40281,10 +40281,6 @@
       <spirit:enumeration>16</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_22ed5366</spirit:name>
-      <spirit:enumeration>4000.000</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_43b6ede9</spirit:name>
       <spirit:enumeration>2000.000</spirit:enumeration>
     </spirit:choice>
@@ -40313,6 +40309,114 @@
       <spirit:enumeration>2</spirit:enumeration>
       <spirit:enumeration>3</spirit:enumeration>
       <spirit:enumeration>4</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_c002c6cb</spirit:name>
+      <spirit:enumeration>102.564</spirit:enumeration>
+      <spirit:enumeration>103.448</spirit:enumeration>
+      <spirit:enumeration>104.348</spirit:enumeration>
+      <spirit:enumeration>105.263</spirit:enumeration>
+      <spirit:enumeration>106.195</spirit:enumeration>
+      <spirit:enumeration>107.143</spirit:enumeration>
+      <spirit:enumeration>108.108</spirit:enumeration>
+      <spirit:enumeration>109.091</spirit:enumeration>
+      <spirit:enumeration>110.092</spirit:enumeration>
+      <spirit:enumeration>111.111</spirit:enumeration>
+      <spirit:enumeration>112.150</spirit:enumeration>
+      <spirit:enumeration>113.208</spirit:enumeration>
+      <spirit:enumeration>114.286</spirit:enumeration>
+      <spirit:enumeration>115.385</spirit:enumeration>
+      <spirit:enumeration>116.505</spirit:enumeration>
+      <spirit:enumeration>117.647</spirit:enumeration>
+      <spirit:enumeration>118.812</spirit:enumeration>
+      <spirit:enumeration>120.000</spirit:enumeration>
+      <spirit:enumeration>121.212</spirit:enumeration>
+      <spirit:enumeration>122.449</spirit:enumeration>
+      <spirit:enumeration>123.711</spirit:enumeration>
+      <spirit:enumeration>125.000</spirit:enumeration>
+      <spirit:enumeration>126.316</spirit:enumeration>
+      <spirit:enumeration>127.660</spirit:enumeration>
+      <spirit:enumeration>129.032</spirit:enumeration>
+      <spirit:enumeration>130.435</spirit:enumeration>
+      <spirit:enumeration>131.868</spirit:enumeration>
+      <spirit:enumeration>133.333</spirit:enumeration>
+      <spirit:enumeration>134.832</spirit:enumeration>
+      <spirit:enumeration>136.364</spirit:enumeration>
+      <spirit:enumeration>137.931</spirit:enumeration>
+      <spirit:enumeration>139.535</spirit:enumeration>
+      <spirit:enumeration>141.177</spirit:enumeration>
+      <spirit:enumeration>142.857</spirit:enumeration>
+      <spirit:enumeration>144.578</spirit:enumeration>
+      <spirit:enumeration>146.342</spirit:enumeration>
+      <spirit:enumeration>148.148</spirit:enumeration>
+      <spirit:enumeration>150.000</spirit:enumeration>
+      <spirit:enumeration>151.899</spirit:enumeration>
+      <spirit:enumeration>153.846</spirit:enumeration>
+      <spirit:enumeration>155.844</spirit:enumeration>
+      <spirit:enumeration>157.895</spirit:enumeration>
+      <spirit:enumeration>160.000</spirit:enumeration>
+      <spirit:enumeration>162.162</spirit:enumeration>
+      <spirit:enumeration>164.384</spirit:enumeration>
+      <spirit:enumeration>166.667</spirit:enumeration>
+      <spirit:enumeration>169.014</spirit:enumeration>
+      <spirit:enumeration>171.429</spirit:enumeration>
+      <spirit:enumeration>173.913</spirit:enumeration>
+      <spirit:enumeration>176.471</spirit:enumeration>
+      <spirit:enumeration>179.105</spirit:enumeration>
+      <spirit:enumeration>181.818</spirit:enumeration>
+      <spirit:enumeration>184.615</spirit:enumeration>
+      <spirit:enumeration>187.500</spirit:enumeration>
+      <spirit:enumeration>190.476</spirit:enumeration>
+      <spirit:enumeration>193.548</spirit:enumeration>
+      <spirit:enumeration>196.721</spirit:enumeration>
+      <spirit:enumeration>200.000</spirit:enumeration>
+      <spirit:enumeration>203.390</spirit:enumeration>
+      <spirit:enumeration>206.897</spirit:enumeration>
+      <spirit:enumeration>210.526</spirit:enumeration>
+      <spirit:enumeration>214.286</spirit:enumeration>
+      <spirit:enumeration>218.182</spirit:enumeration>
+      <spirit:enumeration>222.222</spirit:enumeration>
+      <spirit:enumeration>226.415</spirit:enumeration>
+      <spirit:enumeration>230.769</spirit:enumeration>
+      <spirit:enumeration>235.294</spirit:enumeration>
+      <spirit:enumeration>240.000</spirit:enumeration>
+      <spirit:enumeration>244.898</spirit:enumeration>
+      <spirit:enumeration>250.000</spirit:enumeration>
+      <spirit:enumeration>255.319</spirit:enumeration>
+      <spirit:enumeration>260.870</spirit:enumeration>
+      <spirit:enumeration>266.667</spirit:enumeration>
+      <spirit:enumeration>272.727</spirit:enumeration>
+      <spirit:enumeration>279.070</spirit:enumeration>
+      <spirit:enumeration>285.714</spirit:enumeration>
+      <spirit:enumeration>292.683</spirit:enumeration>
+      <spirit:enumeration>300.000</spirit:enumeration>
+      <spirit:enumeration>307.692</spirit:enumeration>
+      <spirit:enumeration>315.790</spirit:enumeration>
+      <spirit:enumeration>324.324</spirit:enumeration>
+      <spirit:enumeration>333.333</spirit:enumeration>
+      <spirit:enumeration>342.857</spirit:enumeration>
+      <spirit:enumeration>352.941</spirit:enumeration>
+      <spirit:enumeration>363.636</spirit:enumeration>
+      <spirit:enumeration>375.000</spirit:enumeration>
+      <spirit:enumeration>387.097</spirit:enumeration>
+      <spirit:enumeration>400.000</spirit:enumeration>
+      <spirit:enumeration>413.793</spirit:enumeration>
+      <spirit:enumeration>428.571</spirit:enumeration>
+      <spirit:enumeration>444.444</spirit:enumeration>
+      <spirit:enumeration>461.539</spirit:enumeration>
+      <spirit:enumeration>480.000</spirit:enumeration>
+      <spirit:enumeration>500.000</spirit:enumeration>
+      <spirit:enumeration>521.739</spirit:enumeration>
+      <spirit:enumeration>545.455</spirit:enumeration>
+      <spirit:enumeration>571.429</spirit:enumeration>
+      <spirit:enumeration>600.000</spirit:enumeration>
+      <spirit:enumeration>631.579</spirit:enumeration>
+      <spirit:enumeration>666.667</spirit:enumeration>
+      <spirit:enumeration>705.882</spirit:enumeration>
+      <spirit:enumeration>750.000</spirit:enumeration>
+      <spirit:enumeration>800.000</spirit:enumeration>
+      <spirit:enumeration>857.143</spirit:enumeration>
+      <spirit:enumeration>923.077</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_cb070d77</spirit:name>
@@ -40739,6 +40843,18 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>top_level_usp_rf_data_converter_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_level_usp_rf_data_converter_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>top_level_usp_rf_data_converter_0_0_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -40750,18 +40866,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>top_level_usp_rf_data_converter_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>top_level_usp_rf_data_converter_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -45363,7 +45467,7 @@
     <spirit:parameter>
       <spirit:name>DAC0_PLL_Enable</spirit:name>
       <spirit:displayName>Enable PLL</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_PLL_Enable" spirit:order="390">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_PLL_Enable" spirit:order="390">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -45385,7 +45489,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DAC0_Refclk_Freq</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_Refclk_Freq" spirit:choiceRef="choice_list_22ed5366" spirit:order="392">4000.000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_Refclk_Freq" spirit:choiceRef="choice_list_c002c6cb" spirit:order="392">250.000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -45408,7 +45512,7 @@
     <spirit:parameter>
       <spirit:name>DAC0_Outdiv</spirit:name>
       <spirit:displayName>Output Divider Value</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_Outdiv" spirit:order="394">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DAC0_Outdiv" spirit:order="394">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -45459,7 +45563,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.DAC0_Refclk_Div">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.DAC0_Refclk_Div">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -49770,6 +49874,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_Enable" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_Fabric_Freq" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_Outclk_Freq" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_PLL_Enable" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_Refclk_Freq" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC0_Sampling_Rate" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DAC_Interpolation_Mode00" xilinx:valueSource="user"/>

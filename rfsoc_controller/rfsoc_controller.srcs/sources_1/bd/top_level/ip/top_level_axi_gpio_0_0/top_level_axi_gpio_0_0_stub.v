@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jul  1 22:14:54 2019
+// Date        : Tue Jul  2 17:22:02 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top top_level_axi_gpio_0_0 -prefix
-//               top_level_axi_gpio_0_0_ top_level_axi_gpio_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_stub.v
 // Design      : top_level_axi_gpio_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu29dr-ffvf1760-2-e
@@ -17,8 +17,9 @@
 module top_level_axi_gpio_0_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr, 
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, s_axi_arready, 
-  s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, gpio_io_o, gpio2_io_o)
-/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,gpio_io_o[31:0],gpio2_io_o[7:0]" */;
+  s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, gpio_io_o, gpio2_io_i, gpio2_io_o, 
+  gpio2_io_t)
+/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,gpio_io_o[31:0],gpio2_io_i[7:0],gpio2_io_o[7:0],gpio2_io_t[7:0]" */;
   input s_axi_aclk;
   input s_axi_aresetn;
   input [8:0]s_axi_awaddr;
@@ -39,5 +40,7 @@ module top_level_axi_gpio_0_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr,
   output s_axi_rvalid;
   input s_axi_rready;
   output [31:0]gpio_io_o;
+  input [7:0]gpio2_io_i;
   output [7:0]gpio2_io_o;
+  output [7:0]gpio2_io_t;
 endmodule

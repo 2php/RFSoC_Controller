@@ -1,2 +1,2 @@
 
-2018.1’Bus skew results˜¥WØM@
+2018.1’Bus skew results˜¥GM@

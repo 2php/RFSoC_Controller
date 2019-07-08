@@ -1568,7 +1568,7 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
     .XPA_SAMPLE_RATE_MSPS (4000.0),
     .XPA_NUM_DACS         (2),
-    .XPA_PLL_USED         ("No"),
+    .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
     .XPA_CFG0             (1),
     .XPA_CFG1             (0)

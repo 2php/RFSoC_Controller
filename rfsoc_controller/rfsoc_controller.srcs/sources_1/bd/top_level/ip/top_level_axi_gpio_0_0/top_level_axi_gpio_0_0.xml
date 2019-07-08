@@ -965,7 +965,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c32e21c8</spirit:value>
+            <spirit:value>9:c0189931</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -976,7 +976,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c32e21c8</spirit:value>
+            <spirit:value>9:c0189931</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -992,11 +992,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:06:54 UTC 2019</spirit:value>
+            <spirit:value>Wed Jul 03 00:21:01 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c32e21c8</spirit:value>
+            <spirit:value>9:c0189931</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1025,7 +1025,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b05e87e6</spirit:value>
+            <spirit:value>9:97ccaf5d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1041,11 +1041,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:06:54 UTC 2019</spirit:value>
+            <spirit:value>Wed Jul 03 00:21:01 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b05e87e6</spirit:value>
+            <spirit:value>9:97ccaf5d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1059,11 +1059,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:06:54 UTC 2019</spirit:value>
+            <spirit:value>Wed Jul 03 00:21:01 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c32e21c8</spirit:value>
+            <spirit:value>9:c0189931</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1077,11 +1077,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jul 02 17:07:16 UTC 2019</spirit:value>
+            <spirit:value>Wed Jul 03 00:22:02 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c32e21c8</spirit:value>
+            <spirit:value>9:c0189931</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1512,7 +1512,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gpio2_io_i" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IS_DUAL&apos;))= 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_OUTPUTS_2&apos;))= 0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gpio2_io_i" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IS_DUAL&apos;))= 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_OUTPUTS_2&apos;))= 0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1560,7 +1560,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gpio2_io_t" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IS_DUAL&apos;))= 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_OUTPUTS_2&apos;)) =0) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_INPUTS_2&apos;))=0)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gpio2_io_t" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_IS_DUAL&apos;))= 1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_OUTPUTS_2&apos;)) =0) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_ALL_INPUTS_2&apos;))=0)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1609,7 +1609,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ALL_OUTPUTS_2</spirit:name>
         <spirit:displayName>All Outputs</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ALL_OUTPUTS_2" spirit:minimum="0" spirit:maximum="1" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ALL_OUTPUTS_2" spirit:minimum="0" spirit:maximum="1" spirit:rangeType="long">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_INTERRUPT_PRESENT</spirit:name>
@@ -1814,6 +1814,18 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>top_level_axi_gpio_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_level_axi_gpio_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>top_level_axi_gpio_0_0_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -1825,18 +1837,6 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>top_level_axi_gpio_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>top_level_axi_gpio_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -1910,7 +1910,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_TRI_DEFAULT_2">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_TRI_DEFAULT_2">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -2023,7 +2023,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
     <spirit:parameter>
       <spirit:name>C_ALL_OUTPUTS_2</spirit:name>
       <spirit:displayName>All Outputs</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ALL_OUTPUTS_2" spirit:choiceRef="choice_pairs_4873554b" spirit:order="2200">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ALL_OUTPUTS_2" spirit:choiceRef="choice_pairs_4873554b" spirit:order="2200">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

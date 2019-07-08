@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1562104961">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1562113268">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -18,6 +18,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/gpio_trigger_breakin.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -27,14 +34,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/sr_gpio_breakout.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -124,10 +123,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rfsoc_data_pipeline_axis_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rfsoc_data_pipeline_system_ila_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rfsoc_data_pipeline_gpio_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_count_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_gpio_trigger_breakin_0_0"/>
 </GenRun>

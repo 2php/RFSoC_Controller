@@ -73,3 +73,9 @@ u8 uart_cmd_available(u8* cmd_buff)
 		return 0;
 	}
 }
+
+void uart_send_ack()
+{
+	u8 buff[1] = {0x00};
+	XUartLite_Send(&UartLite, buff,1);
+}

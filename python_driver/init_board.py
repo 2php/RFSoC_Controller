@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 24 11:59:59 2019
+
+@author: James Williams
+"""
+import sys
+import getPorts as gp
+import RFSoC_Board as rf
+import pickle
+
+#define our database file
+f = None
+
+#try to open it
+try:
+    f = open("database.txt", "wb")
+except FileNotFoundError:
+    #create the file if it doesn't exist
+    f = open("database.txt","wb+")
+    
+#clear the file contense if there's anything in there
+f.truncate(0)
+
+portname = ""
+#if we weren't passed any arguments
+if(len(sys.argv) == 1):
+    print("Type the name of the port used to access the board:")
+    portname = input()
+else:
+    portname = sys.argv[1]
+
+
+#make sure the provided port name is correct
+if portname not in gp.get_port_list():
+    print("Invalid port name: " + sys.argv[1])
+    quit()
+
+#make a new RFSoC object
+board = rf.RFSoC_Board(portname)
+
+#test the connection
+print("Connection to board is " + ("up!" if board.ping_board() else "down!"))
+
+#write the board object to file
+pickle.dump(board, f)
+f.flush()
+
+f.close()
+f = open("database.txt", "rb")
+#try loading the object back
+board_cpy = pickle.load(f)
+
+if board_cpy.port.port == portname:
+    print("Successfully wrote database!")
+else:
+    print("Unable to load database!")
+

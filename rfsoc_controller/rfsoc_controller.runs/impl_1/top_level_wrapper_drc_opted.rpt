@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Jul  2 15:16:32 2019
+| Date         : Tue Jul  2 17:28:25 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_level_wrapper_drc_opted.rpt -pb top_level_wrapper_drc_opted.pb -rpx top_level_wrapper_drc_opted.rpx
 | Design       : top_level_wrapper
@@ -24,12 +24,48 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 7
++-----------+----------+-------------+------------+
+| Rule      | Severity | Description | Violations |
++-----------+----------+-------------+------------+
+| REQP-1571 | Warning  | connects_D  | 7          |
++-----------+----------+-------------+------------+
 
 2. REPORT DETAILS
 -----------------
+REQP-1571#1 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#2 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#3 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#4 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#5 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[4].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#6 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[5].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
+REQP-1571#7 Warning
+connects_D  
+The FDRE cell top_level_i/axi_gpio_0/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[6].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to has no driver for the D input pin. To protect against unwanted transitions in all flows, the D input pin is required to have a driver. To resolve this violation, modify the design so that the D input pin has an active signal or constant logic-level tie-off.
+Related violations: <none>
+
 

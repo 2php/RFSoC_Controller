@@ -2305,7 +2305,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac0_ref_clk_freq <= 32'd4000000;
+      dac0_ref_clk_freq <= 32'd250000;
     end
     else if (bank1_write[192])
     begin
@@ -4187,7 +4187,7 @@ module top_level_usp_rf_data_converter_0_0_block (
                                bank0_read[2] ? {16'b0, startup_delay} :
                                bank0_read[8] ? {16'b0, 8'd228, 7'b0, 1'b1} :
                                // DAC Tile Config Bit 0:DAC Tile 0 Enable, Bit 1 Tile 0 PLL Enable Bits 3:2 Reserved, Bit 4: DAC Tile 1 Enabled, Bit 5: Tile 1 PLL Enable Bits 7:6 Reserved...
-                               bank0_read[9] ? {4'h0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b1} :
+                               bank0_read[9] ? {4'h0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b1, 1'b1} :
                                bank0_read[10] ? {3'b000, dac01_sinc, 2'b00, dac01_mixer, 1'b0, dac01_interpolation, 2'b0, dac01_data_type, dac01_enable,  3'b000, dac00_sinc, 2'b00, dac00_mixer, 1'b0, dac00_interpolation, 2'b00, dac00_data_type, dac00_enable} :
                                bank0_read[11] ? {3'b000, dac03_sinc, 2'b00, dac03_mixer, 1'b0, dac03_interpolation, 2'b00, dac03_data_type, dac03_enable,  3'b000, dac02_sinc, 2'b00, dac02_mixer, 1'b0, dac02_interpolation, 2'b00, dac02_data_type, dac02_enable} :
                                bank0_read[12] ? {3'b000, dac11_sinc, 2'b00, dac11_mixer, 1'b0, dac11_interpolation, 2'b0, dac11_data_type, dac11_enable,  3'b000, dac10_sinc, 2'b00, dac10_mixer, 1'b0, dac10_interpolation, 2'b00, dac10_data_type, dac10_enable} :

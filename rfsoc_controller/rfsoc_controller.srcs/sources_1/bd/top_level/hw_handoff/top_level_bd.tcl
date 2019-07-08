@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# count_buffer
+# count_buffer, gpio_trigger_breakin
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -278,7 +278,7 @@ proc create_root_design { parentCell } {
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
    CONFIG.C_ALL_OUTPUTS {1} \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {0} \
    CONFIG.C_GPIO2_WIDTH {8} \
    CONFIG.C_GPIO_WIDTH {32} \
    CONFIG.C_IS_DUAL {1} \
@@ -322,6 +322,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $count_buffer_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: gpio_trigger_breakin_0, and set properties
+  set block_name gpio_trigger_breakin
+  set block_cell_name gpio_trigger_breakin_0
+  if { [catch {set gpio_trigger_breakin_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $gpio_trigger_breakin_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -385,7 +396,8 @@ proc create_root_design { parentCell } {
    CONFIG.DAC0_Enable {1} \
    CONFIG.DAC0_Fabric_Freq {250.000} \
    CONFIG.DAC0_Outclk_Freq {250.000} \
-   CONFIG.DAC0_Refclk_Freq {4000.000} \
+   CONFIG.DAC0_PLL_Enable {true} \
+   CONFIG.DAC0_Refclk_Freq {250.000} \
    CONFIG.DAC0_Sampling_Rate {4} \
    CONFIG.DAC_Interpolation_Mode00 {1} \
    CONFIG.DAC_Interpolation_Mode01 {1} \
@@ -431,7 +443,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins count_buffer_0/gpio_in]
   connect_bd_net -net axi_uartlite_0_tx [get_bd_ports tx_0] [get_bd_pins axi_uartlite_0/tx]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
-  connect_bd_net -net ext_trigger_0_0_1 [get_bd_ports ext_trigger_0_0] [get_bd_pins rfsoc_data_pipeline_0/ext_trigger_0] [get_bd_pins rfsoc_data_pipeline_1/ext_trigger_0]
+  connect_bd_net -net ext_trigger_0_0_1 [get_bd_ports ext_trigger_0_0] [get_bd_pins gpio_trigger_breakin_0/trigger_in] [get_bd_pins rfsoc_data_pipeline_0/ext_trigger_0] [get_bd_pins rfsoc_data_pipeline_1/ext_trigger_0]
+  connect_bd_net -net gpio_trigger_breakin_0_gpio_out [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins gpio_trigger_breakin_0/gpio_out]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins clk_wiz_1/reset] [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins count_buffer_0/m_axis_clk] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rfsoc_data_pipeline_0/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_1/microblaze_clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk]
   connect_bd_net -net resetn_1 [get_bd_ports resetn] [get_bd_pins util_vector_logic_0/Op1]

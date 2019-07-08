@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Jul  2 15:02:30 2019
+//Date        : Tue Jul  2 17:21:00 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,7 +917,7 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (dac0_clk_clk_n,
     dac0_clk_clk_p,
@@ -965,6 +965,7 @@ module top_level
   wire diff_clock_rtl_1_CLK_N;
   wire diff_clock_rtl_1_CLK_P;
   wire ext_trigger_0_0_1;
+  wire [7:0]gpio_trigger_breakin_0_gpio_out;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M0_AXIS_TDATA;
@@ -1123,7 +1124,8 @@ module top_level
   assign vout01_v_n = usp_rf_data_converter_0_vout01_V_N;
   assign vout01_v_p = usp_rf_data_converter_0_vout01_V_P;
   top_level_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_o(Net),
+       (.gpio2_io_i(gpio_trigger_breakin_0_gpio_out),
+        .gpio2_io_o(Net),
         .gpio_io_o(axi_gpio_0_gpio_io_o),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M02_AXI_ARADDR[8:0]),
@@ -1194,6 +1196,9 @@ module top_level
         .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+  top_level_gpio_trigger_breakin_0_0 gpio_trigger_breakin_0
+       (.gpio_out(gpio_trigger_breakin_0_gpio_out),
+        .trigger_in(ext_trigger_0_0_1));
   top_level_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),

@@ -28,6 +28,7 @@ XGpio Gpio; /* The Instance of the GPIO Driver */
 void gpio_set_pin(u8 bank, u8 bit, u8 value);
 void gpio_set_bank(u8 bank, u8 value);
 void gpio_write_repeat_cycles(u32 cycles);
+u8 gpio_read_trigger();
 
 
 #endif /* SRC_DRIVERS_GPIO_H_ */
