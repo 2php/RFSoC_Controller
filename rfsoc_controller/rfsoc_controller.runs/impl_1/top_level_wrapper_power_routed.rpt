@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Jul  2 17:37:39 2019
+| Date             : Mon Jul  8 17:05:53 2019
 | Host             : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_wrapper_power_routed.rpt -pb top_level_wrapper_power_summary_routed.pb -rpx top_level_wrapper_power_routed.rpx
 | Design           : top_level_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.167        |
+| Total On-Chip Power (W)  | 1.783        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.049        |
-| Device Static (W)        | 1.118        |
+| Dynamic (W)              | 0.668        |
+| Device Static (W)        | 1.114        |
 | Effective TJA (C/W)      | 0.8          |
-| Max Ambient (C)          | 98.3         |
-| Junction Temperature (C) | 26.7         |
+| Max Ambient (C)          | 98.6         |
+| Junction Temperature (C) | 26.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.138 |       48 |       --- |             --- |
-| CLB Logic                |     0.081 |    57110 |       --- |             --- |
-|   LUT as Shift Register  |     0.048 |     3656 |    213600 |            1.71 |
-|   LUT as Logic           |     0.016 |    12829 |    425280 |            3.02 |
-|   LUT as Distributed RAM |     0.008 |      488 |    213600 |            0.23 |
-|   Register               |     0.008 |    29569 |    850560 |            3.48 |
-|   CARRY8                 |    <0.001 |      379 |     53160 |            0.71 |
-|   Others                 |    <0.001 |     3147 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      831 |    425280 |            0.20 |
+| Clocks                   |     0.038 |       47 |       --- |             --- |
+| CLB Logic                |     0.025 |    16525 |       --- |             --- |
+|   LUT as Logic           |     0.015 |     5821 |    425280 |            1.37 |
+|   LUT as Distributed RAM |     0.008 |      456 |    213600 |            0.21 |
+|   Register               |     0.002 |     7143 |    850560 |            0.84 |
+|   CARRY8                 |    <0.001 |       68 |     53160 |            0.13 |
+|   LUT as Shift Register  |    <0.001 |      102 |    213600 |            0.05 |
+|   Others                 |    <0.001 |      940 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      113 |    425280 |            0.03 |
 |   BUFG                   |     0.000 |        1 |        64 |            1.56 |
-| Signals                  |     0.106 |    44649 |       --- |             --- |
-| Block RAM                |     0.197 |      155 |      1080 |           14.35 |
+| Signals                  |     0.032 |    13904 |       --- |             --- |
+| Block RAM                |     0.046 |       40 |      1080 |            3.70 |
 | RFAMS                    |     0.427 |        8 |       --- |             --- |
 |   RFDAC                  |     0.427 |        4 |         4 |          100.00 |
 |   RFADC                  |     0.000 |        4 |         4 |          100.00 |
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.003 |        6 |       408 |            1.47 |
-| Static Power             |     1.118 |          |           |                 |
-| Total                    |     2.167 |          |           |                 |
+| Static Power             |     1.114 |          |           |                 |
+| Total                    |     1.783 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,9 +80,9 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.862 |       0.577 |      0.284 |
+| Vccint          |       0.850 |     0.441 |       0.161 |      0.280 |
 | Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |
-| Vccbram         |       0.850 |     0.068 |       0.036 |      0.031 |
+| Vccbram         |       0.850 |     0.035 |       0.005 |      0.031 |
 | Vccaux          |       1.800 |     0.335 |       0.054 |      0.281 |
 | Vccaux_io       |       1.800 |     0.059 |       0.001 |      0.058 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
@@ -112,7 +112,7 @@ Table of Contents
 | DACAVCC         |       0.925 |     0.223 |       0.207 |      0.015 |
 | DACAVCCAUX      |       1.800 |     0.062 |       0.061 |      0.001 |
 | DACAVTT         |       2.500 |     0.061 |       0.050 |      0.011 |
-| ADCAVCC         |       0.925 |     0.011 |       0.000 |      0.011 |
+| ADCAVCC         |       0.925 |     0.010 |       0.000 |      0.010 |
 | ADCAVCCAUX      |       1.800 |     0.050 |       0.000 |      0.050 |
 | MGTYAVcc        |       0.900 |     0.000 |       0.000 |      0.000 |
 | MGTYAVtt        |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -157,16 +157,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
-| Clock                                                                                               | Domain                                                                                               | Constraint (ns) |
-+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
-| RFDAC0_CLK                                                                                          | top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/clk_dac0_i |             4.0 |
-| clk_out1_top_level_clk_wiz_1_0                                                                      | top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0                                            |            10.0 |
-| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0                                    |            50.0 |
-| diff_clock_rtl_clk_p                                                                                | diff_clock_rtl_clk_p                                                                                 |             3.3 |
-| top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                           | top_level_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                             |            33.3 |
-| top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                         | top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Ext_JTAG_UPDATE                                                  |            66.7 |
-+-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
++-------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                       | Domain                                                                                               | Constraint (ns) |
++-------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
+| RFDAC0_CLK                                                  | top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/clk_dac0_i |             4.0 |
+| clk_out1_top_level_clk_wiz_1_0                              | top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0                                            |            10.0 |
+| diff_clock_rtl_clk_p                                        | diff_clock_rtl_clk_p                                                                                 |             3.3 |
+| top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | top_level_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                             |            33.3 |
+| top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | top_level_i/mdm_1/U0/Use_E2.BSCAN_I/Ext_JTAG_UPDATE                                                  |            66.7 |
++-------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -178,27 +177,22 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_level_wrapper             |     1.049 |
-|   dbg_hub                     |     0.002 |
-|     inst                      |     0.002 |
-|       BSCANID.u_xsdbm_id      |     0.002 |
-|   top_level_i                 |     1.046 |
-|     axis_data_fifo_0          |     0.004 |
-|       inst                    |     0.004 |
+| top_level_wrapper             |     0.668 |
+|   top_level_i                 |     0.668 |
+|     axis_data_fifo_0          |     0.003 |
+|       inst                    |     0.003 |
 |     clk_wiz_1                 |     0.101 |
 |       inst                    |     0.101 |
-|     microblaze_0              |     0.010 |
-|       U0                      |     0.010 |
+|     microblaze_0              |     0.011 |
+|       U0                      |     0.011 |
 |     microblaze_0_local_memory |     0.015 |
 |       lmb_bram                |     0.015 |
-|     rfsoc_data_pipeline_0     |     0.235 |
-|       inst                    |     0.235 |
-|     rfsoc_data_pipeline_1     |     0.230 |
-|       inst                    |     0.230 |
-|     system_ila_0              |     0.005 |
-|       inst                    |     0.005 |
-|     usp_rf_data_converter_0   |     0.444 |
-|       inst                    |     0.444 |
+|     rfsoc_data_pipeline_0     |     0.045 |
+|       inst                    |     0.045 |
+|     rfsoc_data_pipeline_1     |     0.041 |
+|       inst                    |     0.041 |
+|     usp_rf_data_converter_0   |     0.448 |
+|       inst                    |     0.448 |
 +-------------------------------+-----------+
 
 

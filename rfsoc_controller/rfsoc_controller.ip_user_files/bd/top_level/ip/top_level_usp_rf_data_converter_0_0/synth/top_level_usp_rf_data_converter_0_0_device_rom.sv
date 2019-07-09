@@ -66,15 +66,30 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
     // 29:27 |  26:24  |    23:16    |    15:0
     // Tile  |  Slice  | DRP Address |  DRP Data
 
-    (* rom_style = "distributed" *) reg [29:0] data_array [0:37] = '{
+    (* rom_style = "distributed" *) reg [29:0] data_array [0:52] = '{
        30'h07280280,  // SYSREF Distribution (ADC0)
        30'h0f280600,  // SYSREF Distribution (ADC1)
        30'h17288880,  // SYSREF Distribution (ADC2)
        30'h1f280700,  // SYSREF Distribution (ADC3)
        30'h27230000,  // Clock Network Control 0 (DAC0)
-       30'h27240000,  // Clock Network Control 1 (DAC0)
+       30'h27240001,  // Clock Network Control 1 (DAC0)
+       30'h2717002e,  // PLL FB Div (DAC0)
+       30'h270c0081,  // PLL Output Divide (DAC0)
+       30'h27100010,  // PLL Ref clock divide (DAC0)
+       30'h27000080,  // PLL SDM CONFIG0 (DAC0)
+       30'h27060111,  // PLL SDM seed (DAC0)
+       30'h27070011,  // PLL SDM seed setup (DAC0)
+       30'h270e0507,  // PLL ChargePump setup (DAC0)
+       30'h2712ffff,  // PLL ChargePump setup (DAC0)
+       30'h27137f9c,  // PLL loop filter setup (DAC0)
+       30'h27140006,  // PLL loop filter setup (DAC0)
+       30'h27155800,  // PLL VCO setup (DAC0)
+       30'h27160008,  // PLL VCO setup (DAC0)
+       30'h270a7a3e,  // PLL Coarse Frequency setup (DAC0)
+       30'h270b7008,  // PLL Coarse Frequency setup (DAC0)
+       30'h2711003d,  // PLL Voltage Regulator setup (DAC0)
        30'h2728ca80,  // SYSREF Distribution (DAC0)
-       30'h272df240,  // HSCOM_PWR_MASK (DAC0)
+       30'h272dffc0,  // HSCOM_PWR_MASK (DAC0)
        30'h20020810,  // DAC00 Data Width
        30'h20100001,  // DAC00 Interpolation Control
        30'h20110000,  // DAC00 Interpolation Data

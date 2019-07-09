@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Jul  2 17:21:00 2019
+//Date        : Mon Jul  8 16:57:34 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,7 +917,7 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=28,numReposBlks=21,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (dac0_clk_clk_n,
     dac0_clk_clk_p,
@@ -1100,7 +1100,7 @@ module top_level
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
   wire rx_0_1;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]shift_register_0_data_out;
+  wire [31:0]shift_register_0_data_out;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
   wire usp_rf_data_converter_0_vout00_V_N;
@@ -1461,9 +1461,6 @@ module top_level
         .mb_reset(rst_clk_wiz_1_100M_mb_reset),
         .peripheral_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .slowest_sync_clk(microblaze_0_Clk));
-  top_level_system_ila_0_0 system_ila_0
-       (.clk(microblaze_0_Clk),
-        .probe0(shift_register_0_data_out));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.clk_dac0(Net3),
         .dac0_clk_n(dac0_clk_1_CLK_N),

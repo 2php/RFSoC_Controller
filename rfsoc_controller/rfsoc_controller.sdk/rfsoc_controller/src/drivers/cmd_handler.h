@@ -40,6 +40,7 @@ void handle_cmd();
 void cmd_ext_trigger_test();
 void cmd_led_test();
 void cmd_repeat_test();
+void cmd_trigger_detect_test();
 
 
 #endif /* SRC_DRIVERS_CMD_HANDLER_H_ */

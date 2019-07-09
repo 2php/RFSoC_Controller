@@ -49,43 +49,24 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipe
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_1_3/rfsoc_data_pipeline_axis_data_fifo_1_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/ila.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_0_3/rfsoc_data_pipeline_axis_data_fifo_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_9af0_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_dwidth_converter_0_3/rfsoc_data_pipeline_axis_dwidth_converter_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_9af0_ooc.xdc
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_0_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_waveform_2/rfsoc_data_pipeline_axis_data_fifo_waveform_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_2} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5aa1_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5aa1_ooc.xdc
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_1_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5a51_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5a51_ooc.xdc
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_2_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_1_4/rfsoc_data_pipeline_axis_data_fifo_1_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_4 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_4} -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0.xci
 # IP: The module: 'top_level_rfsoc_data_pipeline_1_0' is the root of the design. Do not add the DONT_TOUCH constraint.
@@ -135,39 +116,20 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_1_3/rfsoc_data_pipeline_axis_data_fifo_1_3.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/ila.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_0_3/rfsoc_data_pipeline_axis_data_fifo_0_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_9af0_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_dwidth_converter_0_3/rfsoc_data_pipeline_axis_dwidth_converter_0_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_3 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_3} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_9af0_ooc.xdc
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_0_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_waveform_2/rfsoc_data_pipeline_axis_data_fifo_waveform_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_2} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5aa1_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5aa1_ooc.xdc
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_1_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5a51_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/bd_5a51_ooc.xdc
-
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_system_ila_2_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_axis_data_fifo_1_4/rfsoc_data_pipeline_axis_data_fifo_1_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_4 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_4} -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/src/rfsoc_data_pipeline_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_1_0'. Do not add the DONT_TOUCH constraint.

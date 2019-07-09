@@ -1590,7 +1590,7 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     // DAC0
     //-------------------------------------------------------------------------
     // Instruction sequence for DAC0
-    reg [0:44][32:0] instr_dac0 = '{
+    reg [0:53][32:0] instr_dac0 = '{
     // Reset digital clocks
     {4'h1, 2'b11, 11'h000, 16'h000F},
     {4'h1, 2'b11, 11'h100, 16'h000F},
@@ -1619,14 +1619,31 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     {4'h4, 2'b00, 11'h072, 16'h0100},
     {4'h4, 2'b00, 11'h170, 16'h0001},
     {4'h4, 2'b00, 11'h172, 16'h0100},
-    // Write to HSCOM_PWR[13:12]
-    {4'h5, 2'b00, 11'h725, 16'h3000},
+    // Write to HSCOM_PWR[13:10]
+    {4'h5, 2'b00, 11'h725, 16'h3C00},
     // Wait for 2 ms
     {4'h5, 2'b01, 3'b000, 24'h000000},
     // Wait for clock detection
     {4'h6, 2'b01, 3'b011, 24'h000000},
     // Write to HSCOM_PWR[9]
     {4'h6, 2'b00, 11'h725, 16'h0200},
+    // Write to PLL_CRS1
+    {4'h7, 2'b00, 11'h70A, 16'h8000},
+    // Write to HSCOM_PWR[8:7]
+    {4'h7, 2'b00, 11'h725, 16'h0180},
+    // Wait for PLL lock
+    {4'h7, 2'b01, 3'b100, 24'h000000},
+    // Read from PLL_SPARE_OUT0
+    {4'h7, 2'b00, 11'h740, 16'h0000},
+    // Write to PLL_CRS1
+    {4'h7, 2'b00, 11'h70A, 16'h8001},
+    // Toggle HSCOM_PWR[7]
+    {4'h7, 2'b00, 11'h725, 16'h0080},
+    {4'h7, 2'b00, 11'h725, 16'h0080},
+    // Wait for PLL lock
+    {4'h7, 2'b01, 3'b100, 24'h000000},
+    // Write to PLL_VREG[7]
+    {4'h7, 2'b00, 11'h711, 16'h0080},
     // Write to HSCOM_PWR[6]
     {4'h8, 2'b00, 11'h725, 16'h0040},
     // Write to DAC_MC_CONFIG
@@ -1668,7 +1685,7 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
 
     // DAC0 POR State machine
     top_level_usp_rf_data_converter_0_0_por_fsm #(.ADC(0),
-                               .PLL(0))
+                               .PLL(1))
     por_fsm_dac0 (
       .reset(dac0_reset_i),
       .aux_clk(aux_clk),

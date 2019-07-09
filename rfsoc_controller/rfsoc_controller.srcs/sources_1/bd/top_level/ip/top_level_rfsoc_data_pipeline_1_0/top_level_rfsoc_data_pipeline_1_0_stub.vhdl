@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jul  2 15:09:43 2019
+-- Date        : Mon Jul  8 16:59:01 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top top_level_rfsoc_data_pipeline_1_0 -prefix
 --               top_level_rfsoc_data_pipeline_1_0_ top_level_rfsoc_data_pipeline_0_0_stub.vhdl
