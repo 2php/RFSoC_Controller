@@ -59,7 +59,10 @@ module top_level_trigger_buffer_0_0 (
   clk,
   reset,
   trigger_in,
-  pipeline_active_in,
+  pipeline_active_in_0,
+  pipeline_active_in_1,
+  pipeline_active_in_2,
+  pipeline_active_in_3,
   trigger_out
 );
 
@@ -70,7 +73,10 @@ input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
 input wire trigger_in;
-input wire pipeline_active_in;
+input wire pipeline_active_in_0;
+input wire pipeline_active_in_1;
+input wire pipeline_active_in_2;
+input wire pipeline_active_in_3;
 output wire trigger_out;
 
   trigger_buffer #(
@@ -79,7 +85,10 @@ output wire trigger_out;
     .clk(clk),
     .reset(reset),
     .trigger_in(trigger_in),
-    .pipeline_active_in(pipeline_active_in),
+    .pipeline_active_in_0(pipeline_active_in_0),
+    .pipeline_active_in_1(pipeline_active_in_1),
+    .pipeline_active_in_2(pipeline_active_in_2),
+    .pipeline_active_in_3(pipeline_active_in_3),
     .trigger_out(trigger_out)
   );
 endmodule

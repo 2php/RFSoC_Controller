@@ -66,7 +66,7 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
     // 29:27 |  26:24  |    23:16    |    15:0
     // Tile  |  Slice  | DRP Address |  DRP Data
 
-    (* rom_style = "distributed" *) reg [29:0] data_array [0:52] = '{
+    (* rom_style = "distributed" *) reg [29:0] data_array [0:78] = '{
        30'h07280280,  // SYSREF Distribution (ADC0)
        30'h0f280600,  // SYSREF Distribution (ADC1)
        30'h17288880,  // SYSREF Distribution (ADC2)
@@ -116,6 +116,32 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h2106000f,  // DAC01 FABRIC_IMR
        30'h210f0fff,  // DAC01 DATAPATH_IMR
        30'h21070008,  // DAC01 FABRIC_DEBUG
+       30'h22020810,  // DAC02 Data Width
+       30'h22100001,  // DAC02 Interpolation Control
+       30'h22110000,  // DAC02 Interpolation Data
+       30'h22300000,  // DAC02 Inv Sinc Filter
+       30'h22310040,  // DAC02 Multiband Config
+       30'h22600001,  // DAC02 Decoder Control
+       30'h22610001,  // DAC02 Decoder Clock Enable
+       30'h22710000,  // DAC02 MC_CONFIG0
+       30'h22734858,  // DAC02 MC_CONFIG2
+       30'h227487c0,  // DAC02 MC_CONFIG3
+       30'h2206000f,  // DAC02 FABRIC_IMR
+       30'h220f0fff,  // DAC02 DATAPATH_IMR
+       30'h22070008,  // DAC02 FABRIC_DEBUG
+       30'h23020810,  // DAC03 Data Width
+       30'h23100001,  // DAC03 Interpolation Control
+       30'h23110000,  // DAC03 Interpolation Data
+       30'h23300000,  // DAC03 Inv Sinc Filter
+       30'h23310040,  // DAC03 Multiband Config
+       30'h23600001,  // DAC03 Decoder Control
+       30'h23610001,  // DAC03 Decoder Clock Enable
+       30'h23710000,  // DAC03 MC_CONFIG0
+       30'h23734858,  // DAC03 MC_CONFIG2
+       30'h237487c0,  // DAC03 MC_CONFIG3
+       30'h2306000f,  // DAC03 FABRIC_IMR
+       30'h230f0fff,  // DAC03 DATAPATH_IMR
+       30'h23070008,  // DAC03 FABRIC_DEBUG
        30'h2f282400,  // SYSREF Distribution (DAC1)
        30'h37280980,  // SYSREF Distribution (DAC2)
        30'h3f280100,  // SYSREF Distribution (DAC3)

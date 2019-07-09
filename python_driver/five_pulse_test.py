@@ -14,6 +14,8 @@ board = ib.init_board_object("COM4")
 wf = rf.WaveFile("five_pulses.txt", 3*rf.DAC_WORD_PERIOD)
 c0 = rf.Channel(0, wf)
 c1 = rf.Channel(1, wf)
+c2 = rf.Channel(2, wf)
+c3 = rf.Channel(3, wf)
 
 #flush the bord buffers
 board.flush_buffer()
@@ -21,9 +23,11 @@ board.flush_buffer()
 #upload the waveform
 board.add_channel(c0)
 board.add_channel(c1)
+board.add_channel(c2)
+board.add_channel(c3)
 
-board.write_channel(0)
-board.write_channel(1)
+
+board.write_all_channels()
 
 #set the trigger mode
 board.set_trigger_mode(rf.TRIGGER_CYCLES)

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jul  8 18:09:30 2019
+// Date        : Tue Jul  9 15:17:23 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_sim_netlist.v
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_sim_netlist.v
 // Design      : top_level_trigger_buffer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,23 +19,35 @@ module top_level_trigger_buffer_0_0
    (clk,
     reset,
     trigger_in,
-    pipeline_active_in,
+    pipeline_active_in_0,
+    pipeline_active_in_1,
+    pipeline_active_in_2,
+    pipeline_active_in_3,
     trigger_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
   input trigger_in;
-  input pipeline_active_in;
+  input pipeline_active_in_0;
+  input pipeline_active_in_1;
+  input pipeline_active_in_2;
+  input pipeline_active_in_3;
   output trigger_out;
 
   wire clk;
-  wire pipeline_active_in;
+  wire pipeline_active_in_0;
+  wire pipeline_active_in_1;
+  wire pipeline_active_in_2;
+  wire pipeline_active_in_3;
   wire reset;
   wire trigger_in;
   wire trigger_out;
 
   top_level_trigger_buffer_0_0_trigger_buffer inst
        (.clk(clk),
-        .pipeline_active_in(pipeline_active_in),
+        .pipeline_active_in_0(pipeline_active_in_0),
+        .pipeline_active_in_1(pipeline_active_in_1),
+        .pipeline_active_in_2(pipeline_active_in_2),
+        .pipeline_active_in_3(pipeline_active_in_3),
         .reset(reset),
         .trigger_in(trigger_in),
         .trigger_out(trigger_out));
@@ -45,16 +57,24 @@ endmodule
 module top_level_trigger_buffer_0_0_trigger_buffer
    (trigger_out,
     clk,
-    pipeline_active_in,
     trigger_in,
+    pipeline_active_in_2,
+    pipeline_active_in_3,
+    pipeline_active_in_1,
+    pipeline_active_in_0,
     reset);
   output trigger_out;
   input clk;
-  input pipeline_active_in;
   input trigger_in;
+  input pipeline_active_in_2;
+  input pipeline_active_in_3;
+  input pipeline_active_in_1;
+  input pipeline_active_in_0;
   input reset;
 
   wire \FSM_onehot_state[2]_i_1_n_0 ;
+  wire \FSM_onehot_state[2]_i_2_n_0 ;
+  wire \FSM_onehot_state[2]_i_3_n_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
   wire \FSM_onehot_state_reg_n_0_[2] ;
   wire clk;
@@ -71,7 +91,10 @@ module top_level_trigger_buffer_0_0_trigger_buffer
   wire \count_reg[0]_i_1_n_6 ;
   wire \count_reg[0]_i_1_n_7 ;
   wire \count_reg_n_0_[0] ;
-  wire pipeline_active_in;
+  wire pipeline_active_in_0;
+  wire pipeline_active_in_1;
+  wire pipeline_active_in_2;
+  wire pipeline_active_in_3;
   wire reset;
   wire trigger_in;
   wire trigger_out;
@@ -82,15 +105,30 @@ module top_level_trigger_buffer_0_0_trigger_buffer
   wire [7:3]\NLW_count_reg[0]_i_1_O_UNCONNECTED ;
 
   LUT6 #(
-    .INIT(64'h22F222F222FF2222)) 
+    .INIT(64'hF2FFF22222222222)) 
     \FSM_onehot_state[2]_i_1 
        (.I0(count),
-        .I1(trigger_out_i_3_n_0),
+        .I1(\FSM_onehot_state[2]_i_2_n_0 ),
         .I2(\FSM_onehot_state_reg_n_0_[0] ),
-        .I3(pipeline_active_in),
+        .I3(trigger_in),
         .I4(\FSM_onehot_state_reg_n_0_[2] ),
-        .I5(trigger_in),
+        .I5(\FSM_onehot_state[2]_i_3_n_0 ),
         .O(\FSM_onehot_state[2]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h15)) 
+    \FSM_onehot_state[2]_i_2 
+       (.I0(count_reg[3]),
+        .I1(count_reg[2]),
+        .I2(count_reg[1]),
+        .O(\FSM_onehot_state[2]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \FSM_onehot_state[2]_i_3 
+       (.I0(pipeline_active_in_0),
+        .I1(pipeline_active_in_1),
+        .I2(pipeline_active_in_3),
+        .I3(pipeline_active_in_2),
+        .O(\FSM_onehot_state[2]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "state_wait_trigger:001,state_trigger:010,state_cleanup:100," *) 
   FDPE #(
     .INIT(1'b1)) 
@@ -187,12 +225,12 @@ module top_level_trigger_buffer_0_0_trigger_buffer
         .D(\count_reg[0]_i_1_n_4 ),
         .Q(count_reg[3]));
   LUT6 #(
-    .INIT(64'hFF40FFFF40404040)) 
+    .INIT(64'hABBBFFFFAAAAAAAA)) 
     trigger_out_i_1
-       (.I0(pipeline_active_in),
-        .I1(trigger_in),
-        .I2(\FSM_onehot_state_reg_n_0_[0] ),
-        .I3(trigger_out_i_3_n_0),
+       (.I0(trigger_out_i_3_n_0),
+        .I1(count_reg[3]),
+        .I2(count_reg[2]),
+        .I3(count_reg[1]),
         .I4(count),
         .I5(trigger_out),
         .O(trigger_out_i_1_n_0));
@@ -201,12 +239,15 @@ module top_level_trigger_buffer_0_0_trigger_buffer
     trigger_out_i_2
        (.I0(reset),
         .O(trigger_out_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h15)) 
+  LUT6 #(
+    .INIT(64'h0001000000000000)) 
     trigger_out_i_3
-       (.I0(count_reg[3]),
-        .I1(count_reg[2]),
-        .I2(count_reg[1]),
+       (.I0(pipeline_active_in_2),
+        .I1(pipeline_active_in_3),
+        .I2(pipeline_active_in_1),
+        .I3(pipeline_active_in_0),
+        .I4(\FSM_onehot_state_reg_n_0_[0] ),
+        .I5(trigger_in),
         .O(trigger_out_i_3_n_0));
   FDCE #(
     .INIT(1'b0)) 

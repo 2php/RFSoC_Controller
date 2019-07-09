@@ -28,13 +28,19 @@ module trigger_buffer
     input wire clk,
     input wire reset,
     input wire trigger_in,
-    input wire pipeline_active_in,
+    input wire pipeline_active_in_0,
+    input wire pipeline_active_in_1,
+    input wire pipeline_active_in_2,
+    input wire pipeline_active_in_3,
     output reg trigger_out
     );
     
     reg [31:0] count;
     reg [1:0] state;
     
+    wire pipeline_active_in;
+    assign pipeline_active_in = pipeline_active_in_0 | pipeline_active_in_1 | pipeline_active_in_2 | pipeline_active_in_3;
+        
      localparam [1:0] state_wait_trigger = 2'b00,
 		              state_trigger = 2'b01,
 		              state_cleanup = 2'b10; 

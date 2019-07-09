@@ -17,14 +17,12 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 3
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
-set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6284-DESKTOP-6ILET8A/incrSyn}
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11720-DESKTOP-6ILET8A/incrSyn}
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -81,6 +79,8 @@ set_property used_in_implementation false [get_files -all c:/james/fpga_projects
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_0_0/top_level_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/src/rfsoc_data_pipeline_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_microblaze_0_0/data/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/data/startup.elf]

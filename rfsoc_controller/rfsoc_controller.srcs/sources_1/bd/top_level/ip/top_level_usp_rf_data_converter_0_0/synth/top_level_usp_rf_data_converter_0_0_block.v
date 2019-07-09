@@ -112,6 +112,12 @@ module top_level_usp_rf_data_converter_0_0_block (
   output            vout01_p,
   output            vout01_n,
 
+  output            vout02_p,
+  output            vout02_n,
+
+  output            vout03_p,
+  output            vout03_n,
+
   // DAC AXI Streaming Data for DAC00
   input  [255:0]    s00_axis_tdata,
   input             s00_axis_tvalid,
@@ -121,6 +127,16 @@ module top_level_usp_rf_data_converter_0_0_block (
   input  [255:0]    s01_axis_tdata,
   input             s01_axis_tvalid,
   output            s01_axis_tready,
+
+  // DAC AXI Streaming Data for DAC02
+  input  [255:0]    s02_axis_tdata,
+  input             s02_axis_tvalid,
+  output            s02_axis_tready,
+
+  // DAC AXI Streaming Data for DAC03
+  input  [255:0]    s03_axis_tdata,
+  input             s03_axis_tvalid,
+  output            s03_axis_tready,
 
   // DAC Debug Ports
   // DAC0
@@ -324,14 +340,14 @@ module top_level_usp_rf_data_converter_0_0_block (
   localparam [2:0] dac01_interpolation = 3'd1;
   localparam [1:0] dac01_mixer         = 2'd2;
   localparam       dac01_sinc          = 1'b0;
-  localparam       dac02_enable        = 1'b0;
+  localparam       dac02_enable        = 1'b1;
   localparam       dac02_data_type     = 1'b0;
-  localparam [2:0] dac02_interpolation = 3'd0;
+  localparam [2:0] dac02_interpolation = 3'd1;
   localparam [1:0] dac02_mixer         = 2'd2;
   localparam       dac02_sinc          = 1'b0;
-  localparam       dac03_enable        = 1'b0;
+  localparam       dac03_enable        = 1'b1;
   localparam       dac03_data_type     = 1'b0;
-  localparam [2:0] dac03_interpolation = 3'd0;
+  localparam [2:0] dac03_interpolation = 3'd1;
   localparam [1:0] dac03_mixer         = 2'd2;
   localparam       dac03_sinc          = 1'b0;
   localparam       dac10_enable        = 1'b0;
@@ -1121,10 +1137,14 @@ module top_level_usp_rf_data_converter_0_0_block (
 
   wire  [255:0]    dac00_data_i;
   wire  [255:0]    dac01_data_i;
+  wire  [255:0]    dac02_data_i;
+  wire  [255:0]    dac03_data_i;
 
 
   assign  dac00_data_i  =  s00_axis_tdata;
   assign  dac01_data_i  =  s01_axis_tdata;
+  assign  dac02_data_i  =  s02_axis_tdata;
+  assign  dac03_data_i  =  s03_axis_tdata;
 
   top_level_usp_rf_data_converter_0_0_rf_wrapper
   top_level_usp_rf_data_converter_0_0_rf_wrapper_i(
@@ -1327,6 +1347,12 @@ module top_level_usp_rf_data_converter_0_0_block (
     .vout01_p              (vout01_p),
     .vout01_n              (vout01_n),
 
+    .vout02_p              (vout02_p),
+    .vout02_n              (vout02_n),
+
+    .vout03_p              (vout03_p),
+    .vout03_n              (vout03_n),
+
     // DAC data for DAC00
     .dac00_data_in         (dac00_data_i),
     .dac00_valid_in        (s00_axis_tvalid),
@@ -1338,14 +1364,14 @@ module top_level_usp_rf_data_converter_0_0_block (
     .dac01_ready_out       (s01_axis_tready),
 
     // DAC data for DAC02
-    .dac02_data_in         (256'b0),
-    .dac02_valid_in        (1'b0),
-    .dac02_ready_out       (),
+    .dac02_data_in         (dac02_data_i),
+    .dac02_valid_in        (s02_axis_tvalid),
+    .dac02_ready_out       (s02_axis_tready),
 
     // DAC data for DAC03
-    .dac03_data_in         (256'b0),
-    .dac03_valid_in        (1'b0),
-    .dac03_ready_out       (),
+    .dac03_data_in         (dac03_data_i),
+    .dac03_valid_in        (s03_axis_tvalid),
+    .dac03_ready_out       (s03_axis_tready),
 
     // DAC data for DAC10
     .dac10_data_in         (256'b0),

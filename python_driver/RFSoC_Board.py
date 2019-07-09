@@ -282,7 +282,8 @@ class RFSoC_Board:
         
         
     def write_all_channels(self):
-        #TODO
+        for c in self.channels:
+            self.write_channel(c.number)
         return
     
     #returns ACK_RESPONSE if ack successfully recieved

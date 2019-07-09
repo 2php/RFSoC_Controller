@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jul  1 13:43:28 2019
+// Date        : Tue Jul  9 15:16:41 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top top_level_microblaze_0_0 -prefix
-//               top_level_microblaze_0_0_ top_level_microblaze_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_microblaze_0_0/top_level_microblaze_0_0_stub.v
 // Design      : top_level_microblaze_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu29dr-ffvf1760-2-e
@@ -23,9 +23,12 @@ module top_level_microblaze_0_0(Clk, Reset, Interrupt, Interrupt_Address,
   M_AXI_DP_RRESP, M_AXI_DP_RVALID, M_AXI_DP_RREADY, Dbg_Clk, Dbg_TDI, Dbg_TDO, Dbg_Reg_En, 
   Dbg_Shift, Dbg_Capture, Dbg_Update, Debug_Rst, Dbg_Disable, M0_AXIS_TLAST, M0_AXIS_TDATA, 
   M0_AXIS_TVALID, M0_AXIS_TREADY, M1_AXIS_TLAST, M1_AXIS_TDATA, M1_AXIS_TVALID, 
-  M1_AXIS_TREADY, S0_AXIS_TLAST, S0_AXIS_TDATA, S0_AXIS_TVALID, S0_AXIS_TREADY, 
-  S1_AXIS_TLAST, S1_AXIS_TDATA, S1_AXIS_TVALID, S1_AXIS_TREADY)
-/* synthesis syn_black_box black_box_pad_pin="Clk,Reset,Interrupt,Interrupt_Address[0:31],Interrupt_Ack[0:1],Instr_Addr[0:31],Instr[0:31],IFetch,I_AS,IReady,IWAIT,ICE,IUE,Data_Addr[0:31],Data_Read[0:31],Data_Write[0:31],D_AS,Read_Strobe,Write_Strobe,DReady,DWait,DCE,DUE,Byte_Enable[0:3],M_AXI_DP_AWADDR[31:0],M_AXI_DP_AWPROT[2:0],M_AXI_DP_AWVALID,M_AXI_DP_AWREADY,M_AXI_DP_WDATA[31:0],M_AXI_DP_WSTRB[3:0],M_AXI_DP_WVALID,M_AXI_DP_WREADY,M_AXI_DP_BRESP[1:0],M_AXI_DP_BVALID,M_AXI_DP_BREADY,M_AXI_DP_ARADDR[31:0],M_AXI_DP_ARPROT[2:0],M_AXI_DP_ARVALID,M_AXI_DP_ARREADY,M_AXI_DP_RDATA[31:0],M_AXI_DP_RRESP[1:0],M_AXI_DP_RVALID,M_AXI_DP_RREADY,Dbg_Clk,Dbg_TDI,Dbg_TDO,Dbg_Reg_En[0:7],Dbg_Shift,Dbg_Capture,Dbg_Update,Debug_Rst,Dbg_Disable,M0_AXIS_TLAST,M0_AXIS_TDATA[31:0],M0_AXIS_TVALID,M0_AXIS_TREADY,M1_AXIS_TLAST,M1_AXIS_TDATA[31:0],M1_AXIS_TVALID,M1_AXIS_TREADY,S0_AXIS_TLAST,S0_AXIS_TDATA[31:0],S0_AXIS_TVALID,S0_AXIS_TREADY,S1_AXIS_TLAST,S1_AXIS_TDATA[31:0],S1_AXIS_TVALID,S1_AXIS_TREADY" */;
+  M1_AXIS_TREADY, M2_AXIS_TLAST, M2_AXIS_TDATA, M2_AXIS_TVALID, M2_AXIS_TREADY, 
+  M3_AXIS_TLAST, M3_AXIS_TDATA, M3_AXIS_TVALID, M3_AXIS_TREADY, S0_AXIS_TLAST, S0_AXIS_TDATA, 
+  S0_AXIS_TVALID, S0_AXIS_TREADY, S1_AXIS_TLAST, S1_AXIS_TDATA, S1_AXIS_TVALID, 
+  S1_AXIS_TREADY, S2_AXIS_TLAST, S2_AXIS_TDATA, S2_AXIS_TVALID, S2_AXIS_TREADY, 
+  S3_AXIS_TLAST, S3_AXIS_TDATA, S3_AXIS_TVALID, S3_AXIS_TREADY)
+/* synthesis syn_black_box black_box_pad_pin="Clk,Reset,Interrupt,Interrupt_Address[0:31],Interrupt_Ack[0:1],Instr_Addr[0:31],Instr[0:31],IFetch,I_AS,IReady,IWAIT,ICE,IUE,Data_Addr[0:31],Data_Read[0:31],Data_Write[0:31],D_AS,Read_Strobe,Write_Strobe,DReady,DWait,DCE,DUE,Byte_Enable[0:3],M_AXI_DP_AWADDR[31:0],M_AXI_DP_AWPROT[2:0],M_AXI_DP_AWVALID,M_AXI_DP_AWREADY,M_AXI_DP_WDATA[31:0],M_AXI_DP_WSTRB[3:0],M_AXI_DP_WVALID,M_AXI_DP_WREADY,M_AXI_DP_BRESP[1:0],M_AXI_DP_BVALID,M_AXI_DP_BREADY,M_AXI_DP_ARADDR[31:0],M_AXI_DP_ARPROT[2:0],M_AXI_DP_ARVALID,M_AXI_DP_ARREADY,M_AXI_DP_RDATA[31:0],M_AXI_DP_RRESP[1:0],M_AXI_DP_RVALID,M_AXI_DP_RREADY,Dbg_Clk,Dbg_TDI,Dbg_TDO,Dbg_Reg_En[0:7],Dbg_Shift,Dbg_Capture,Dbg_Update,Debug_Rst,Dbg_Disable,M0_AXIS_TLAST,M0_AXIS_TDATA[31:0],M0_AXIS_TVALID,M0_AXIS_TREADY,M1_AXIS_TLAST,M1_AXIS_TDATA[31:0],M1_AXIS_TVALID,M1_AXIS_TREADY,M2_AXIS_TLAST,M2_AXIS_TDATA[31:0],M2_AXIS_TVALID,M2_AXIS_TREADY,M3_AXIS_TLAST,M3_AXIS_TDATA[31:0],M3_AXIS_TVALID,M3_AXIS_TREADY,S0_AXIS_TLAST,S0_AXIS_TDATA[31:0],S0_AXIS_TVALID,S0_AXIS_TREADY,S1_AXIS_TLAST,S1_AXIS_TDATA[31:0],S1_AXIS_TVALID,S1_AXIS_TREADY,S2_AXIS_TLAST,S2_AXIS_TDATA[31:0],S2_AXIS_TVALID,S2_AXIS_TREADY,S3_AXIS_TLAST,S3_AXIS_TDATA[31:0],S3_AXIS_TVALID,S3_AXIS_TREADY" */;
   input Clk;
   input Reset;
   input Interrupt;
@@ -86,6 +89,14 @@ module top_level_microblaze_0_0(Clk, Reset, Interrupt, Interrupt_Address,
   output [31:0]M1_AXIS_TDATA;
   output M1_AXIS_TVALID;
   input M1_AXIS_TREADY;
+  output M2_AXIS_TLAST;
+  output [31:0]M2_AXIS_TDATA;
+  output M2_AXIS_TVALID;
+  input M2_AXIS_TREADY;
+  output M3_AXIS_TLAST;
+  output [31:0]M3_AXIS_TDATA;
+  output M3_AXIS_TVALID;
+  input M3_AXIS_TREADY;
   input S0_AXIS_TLAST;
   input [31:0]S0_AXIS_TDATA;
   input S0_AXIS_TVALID;
@@ -94,4 +105,12 @@ module top_level_microblaze_0_0(Clk, Reset, Interrupt, Interrupt_Address,
   input [31:0]S1_AXIS_TDATA;
   input S1_AXIS_TVALID;
   output S1_AXIS_TREADY;
+  input S2_AXIS_TLAST;
+  input [31:0]S2_AXIS_TDATA;
+  input S2_AXIS_TVALID;
+  output S2_AXIS_TREADY;
+  input S3_AXIS_TLAST;
+  input [31:0]S3_AXIS_TDATA;
+  input S3_AXIS_TVALID;
+  output S3_AXIS_TREADY;
 endmodule

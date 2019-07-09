@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Jul  2 16:32:10 2019
+| Date         : Tue Jul  9 15:14:57 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_usp_rf_data_converter_0_0_utilization_synth.rpt -pb top_level_usp_rf_data_converter_0_0_utilization_synth.pb
 | Design       : top_level_usp_rf_data_converter_0_0
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               | 2961 |     0 |    425280 |  0.70 |
-|   LUT as Logic          | 2961 |     0 |    425280 |  0.70 |
+| CLB LUTs*               | 3010 |     0 |    425280 |  0.71 |
+|   LUT as Logic          | 3010 |     0 |    425280 |  0.71 |
 |   LUT as Memory         |    0 |     0 |    213600 |  0.00 |
-| CLB Registers           | 2873 |     0 |    850560 |  0.34 |
-|   Register as Flip Flop | 2873 |     0 |    850560 |  0.34 |
+| CLB Registers           | 2883 |     0 |    850560 |  0.34 |
+|   Register as Flip Flop | 2883 |     0 |    850560 |  0.34 |
 |   Register as Latch     |    0 |     0 |    850560 |  0.00 |
 | CARRY8                  |   29 |     0 |     53160 |  0.05 |
-| F7 Muxes                |    2 |     0 |    212640 | <0.01 |
+| F7 Muxes                |   23 |     0 |    212640 |  0.01 |
 | F8 Muxes                |    0 |     0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |     53160 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 248   |          Yes |         Set |            - |
-| 2625  |          Yes |       Reset |            - |
+| 247   |          Yes |         Set |            - |
+| 2636  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -158,18 +158,18 @@ Table of Contents
 +--------------+------+---------------------+
 |   Ref Name   | Used | Functional Category |
 +--------------+------+---------------------+
-| FDRE         | 2625 |            Register |
-| LUT6         | 1489 |                 CLB |
-| LUT5         |  613 |                 CLB |
-| LUT4         |  590 |                 CLB |
-| LUT2         |  548 |                 CLB |
-| LUT3         |  392 |                 CLB |
-| FDSE         |  248 |            Register |
+| FDRE         | 2636 |            Register |
+| LUT6         | 1568 |                 CLB |
+| LUT5         |  572 |                 CLB |
+| LUT4         |  570 |                 CLB |
+| LUT2         |  554 |                 CLB |
+| LUT3         |  438 |                 CLB |
+| FDSE         |  247 |            Register |
 | CARRY8       |   29 |                 CLB |
+| MUXF7        |   23 |                 CLB |
 | LUT1         |   22 |                 CLB |
 | HSDAC        |    4 |            Advanced |
 | HSADC        |    4 |            Advanced |
-| MUXF7        |    2 |                 CLB |
 | BUFG_GT_SYNC |    1 |               Clock |
 | BUFG_GT      |    1 |               Clock |
 +--------------+------+---------------------+

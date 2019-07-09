@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Mon Jul  8 18:24:29 2019
+| Date                      : Tue Jul  9 15:25:05 2019
 | Host                      : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_level_wrapper_io_placed.rpt
 | Design                    : top_level_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            14 |
+|            18 |
 +---------------+
 
 
@@ -1669,11 +1669,11 @@ Table of Contents
 | U40        |                      |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | U41        |                      |                  | MGTYRXP1_129                       | Gigabit       |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | U42        |                      |                  | MGTYRXN1_129                       | Gigabit       |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| V1         |                      | DAC              | DAC_VOUT3_N_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| V2         |                      | DAC              | DAC_VOUT3_P_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| V1         | vout03_v_n           | DAC              | DAC_VOUT3_N_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| V2         | vout03_v_p           | DAC              | DAC_VOUT3_P_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | V3         |                      |                  | DAC_GND                            | DAC           |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| V4         |                      | DAC              | DAC_VOUT2_N_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| V5         |                      | DAC              | DAC_VOUT2_P_228                    | DAC           |             |     228 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| V4         | vout02_v_n           | DAC              | DAC_VOUT2_N_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| V5         | vout02_v_p           | DAC              | DAC_VOUT2_P_228                    | OUTPUT        | LVCMOS18*   |     228 |         12 |                         | SLOW |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | V6         |                      |                  | DAC_GND                            | DAC           |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | V7         |                      |                  | DAC_AVTT                           | DAC           |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | V8         |                      |                  | DAC_AVTT                           | DAC           |             |         |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |

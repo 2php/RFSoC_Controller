@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Jul  8 18:09:30 2019
+-- Date        : Tue Jul  9 15:17:23 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_level_trigger_buffer_0_0_sim_netlist.vhdl
@@ -18,14 +18,19 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer is
   port (
     trigger_out : out STD_LOGIC;
     clk : in STD_LOGIC;
-    pipeline_active_in : in STD_LOGIC;
     trigger_in : in STD_LOGIC;
+    pipeline_active_in_2 : in STD_LOGIC;
+    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_1 : in STD_LOGIC;
+    pipeline_active_in_0 : in STD_LOGIC;
     reset : in STD_LOGIC
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer is
   signal \FSM_onehot_state[2]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
   signal count : STD_LOGIC;
@@ -55,16 +60,37 @@ begin
   trigger_out <= \^trigger_out\;
 \FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22F222F222FF2222"
+      INIT => X"F2FFF22222222222"
     )
         port map (
       I0 => count,
-      I1 => trigger_out_i_3_n_0,
+      I1 => \FSM_onehot_state[2]_i_2_n_0\,
       I2 => \FSM_onehot_state_reg_n_0_[0]\,
-      I3 => pipeline_active_in,
+      I3 => trigger_in,
       I4 => \FSM_onehot_state_reg_n_0_[2]\,
-      I5 => trigger_in,
+      I5 => \FSM_onehot_state[2]_i_3_n_0\,
       O => \FSM_onehot_state[2]_i_1_n_0\
+    );
+\FSM_onehot_state[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"15"
+    )
+        port map (
+      I0 => count_reg(3),
+      I1 => count_reg(2),
+      I2 => count_reg(1),
+      O => \FSM_onehot_state[2]_i_2_n_0\
+    );
+\FSM_onehot_state[2]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => pipeline_active_in_0,
+      I1 => pipeline_active_in_1,
+      I2 => pipeline_active_in_3,
+      I3 => pipeline_active_in_2,
+      O => \FSM_onehot_state[2]_i_3_n_0\
     );
 \FSM_onehot_state_reg[0]\: unisim.vcomponents.FDPE
     generic map(
@@ -206,13 +232,13 @@ begin
     );
 trigger_out_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF40FFFF40404040"
+      INIT => X"ABBBFFFFAAAAAAAA"
     )
         port map (
-      I0 => pipeline_active_in,
-      I1 => trigger_in,
-      I2 => \FSM_onehot_state_reg_n_0_[0]\,
-      I3 => trigger_out_i_3_n_0,
+      I0 => trigger_out_i_3_n_0,
+      I1 => count_reg(3),
+      I2 => count_reg(2),
+      I3 => count_reg(1),
       I4 => count,
       I5 => \^trigger_out\,
       O => trigger_out_i_1_n_0
@@ -225,14 +251,17 @@ trigger_out_i_2: unisim.vcomponents.LUT1
       I0 => reset,
       O => trigger_out_i_2_n_0
     );
-trigger_out_i_3: unisim.vcomponents.LUT3
+trigger_out_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15"
+      INIT => X"0001000000000000"
     )
         port map (
-      I0 => count_reg(3),
-      I1 => count_reg(2),
-      I2 => count_reg(1),
+      I0 => pipeline_active_in_2,
+      I1 => pipeline_active_in_3,
+      I2 => pipeline_active_in_1,
+      I3 => pipeline_active_in_0,
+      I4 => \FSM_onehot_state_reg_n_0_[0]\,
+      I5 => trigger_in,
       O => trigger_out_i_3_n_0
     );
 trigger_out_reg: unisim.vcomponents.FDCE
@@ -256,7 +285,10 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
     trigger_in : in STD_LOGIC;
-    pipeline_active_in : in STD_LOGIC;
+    pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_1 : in STD_LOGIC;
+    pipeline_active_in_2 : in STD_LOGIC;
+    pipeline_active_in_3 : in STD_LOGIC;
     trigger_out : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -282,7 +314,10 @@ begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer
      port map (
       clk => clk,
-      pipeline_active_in => pipeline_active_in,
+      pipeline_active_in_0 => pipeline_active_in_0,
+      pipeline_active_in_1 => pipeline_active_in_1,
+      pipeline_active_in_2 => pipeline_active_in_2,
+      pipeline_active_in_3 => pipeline_active_in_3,
       reset => reset,
       trigger_in => trigger_in,
       trigger_out => trigger_out

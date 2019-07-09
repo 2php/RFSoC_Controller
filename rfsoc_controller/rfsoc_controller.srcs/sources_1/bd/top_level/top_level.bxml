@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="top_level" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562634519"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562634519"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562634519"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562634519"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562710518"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562710518"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562710518"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562710518"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\top_level_microblaze_0_0\top_level_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -183,8 +183,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\top_level_util_vector_logic_1_0\top_level_util_vector_logic_1_0.xci" Type="IP">
-        <Instance HierarchyPath="util_vector_logic_1"/>
+      <File Name="ip\top_level_rfsoc_data_pipeline_2_0\top_level_rfsoc_data_pipeline_2_0.xci" Type="IP">
+        <Instance HierarchyPath="rfsoc_data_pipeline_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\top_level_rfsoc_data_pipeline_3_0\top_level_rfsoc_data_pipeline_3_0.xci" Type="IP">
+        <Instance HierarchyPath="rfsoc_data_pipeline_3"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

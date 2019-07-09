@@ -135,6 +135,28 @@
 						"TVALID": { "actual": "M1_AXIS_TVALID"}
 					}
 				},
+				"/microblaze_0/M2_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "Clk"},
+						"ARESET": { "actual": "Reset"},
+						"TDATA": { "actual": "M2_AXIS_TDATA"},
+						"TLAST": { "actual": "M2_AXIS_TLAST"},
+						"TREADY": { "actual": "M2_AXIS_TREADY"},
+						"TVALID": { "actual": "M2_AXIS_TVALID"}
+					}
+				},
+				"/microblaze_0/M3_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "Clk"},
+						"ARESET": { "actual": "Reset"},
+						"TDATA": { "actual": "M3_AXIS_TDATA"},
+						"TLAST": { "actual": "M3_AXIS_TLAST"},
+						"TREADY": { "actual": "M3_AXIS_TREADY"},
+						"TVALID": { "actual": "M3_AXIS_TVALID"}
+					}
+				},
 				"/microblaze_0/M_AXI_DP": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -697,6 +719,46 @@
 						"TVALID": { "actual": "m_axis_0_tvalid"}
 					}
 				},
+				"/rfsoc_data_pipeline_2/S_AXIS_0": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "microblaze_clk"},
+						"ARESETN": { "actual": "microblaze_resetn"},
+						"TDATA": { "actual": "S_AXIS_0_tdata[31:0]"},
+						"TREADY": { "actual": "S_AXIS_0_tready"},
+						"TVALID": { "actual": "S_AXIS_0_tvalid"}
+					}
+				},
+				"/rfsoc_data_pipeline_2/m_axis_0": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "rf_clock"},
+						"ARESETN": { "actual": "rf_resetn"},
+						"TDATA": { "actual": "m_axis_0_tdata[255:0]"},
+						"TREADY": { "actual": "m_axis_0_tready"},
+						"TVALID": { "actual": "m_axis_0_tvalid"}
+					}
+				},
+				"/rfsoc_data_pipeline_3/S_AXIS_0": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "microblaze_clk"},
+						"ARESETN": { "actual": "microblaze_resetn"},
+						"TDATA": { "actual": "S_AXIS_0_tdata[31:0]"},
+						"TREADY": { "actual": "S_AXIS_0_tready"},
+						"TVALID": { "actual": "S_AXIS_0_tvalid"}
+					}
+				},
+				"/rfsoc_data_pipeline_3/m_axis_0": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "rf_clock"},
+						"ARESETN": { "actual": "rf_resetn"},
+						"TDATA": { "actual": "m_axis_0_tdata[255:0]"},
+						"TREADY": { "actual": "m_axis_0_tready"},
+						"TVALID": { "actual": "m_axis_0_tvalid"}
+					}
+				},
 				"/usp_rf_data_converter_0/s00_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
@@ -715,6 +777,26 @@
 						"TDATA": { "actual": "s01_axis_tdata"},
 						"TREADY": { "actual": "s01_axis_tready"},
 						"TVALID": { "actual": "s01_axis_tvalid"}
+					}
+				},
+				"/usp_rf_data_converter_0/s02_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s0_axis_aclk"},
+						"ARESETN": { "actual": "s0_axis_aresetn"},
+						"TDATA": { "actual": "s02_axis_tdata"},
+						"TREADY": { "actual": "s02_axis_tready"},
+						"TVALID": { "actual": "s02_axis_tvalid"}
+					}
+				},
+				"/usp_rf_data_converter_0/s03_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s0_axis_aclk"},
+						"ARESETN": { "actual": "s0_axis_aresetn"},
+						"TDATA": { "actual": "s03_axis_tdata"},
+						"TREADY": { "actual": "s03_axis_tready"},
+						"TVALID": { "actual": "s03_axis_tvalid"}
 					}
 				},
 				"/usp_rf_data_converter_0/s_axi": {

@@ -1590,10 +1590,12 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     // DAC0
     //-------------------------------------------------------------------------
     // Instruction sequence for DAC0
-    reg [0:53][32:0] instr_dac0 = '{
+    reg [0:75][32:0] instr_dac0 = '{
     // Reset digital clocks
     {4'h1, 2'b11, 11'h000, 16'h000F},
     {4'h1, 2'b11, 11'h100, 16'h000F},
+    {4'h1, 2'b11, 11'h200, 16'h000F},
+    {4'h1, 2'b11, 11'h300, 16'h000F},
     // Clear HSCOM_PWR[15]
     {4'h1, 2'b11, 11'h725, 16'h8000},
     // Wait for external supplies
@@ -1619,6 +1621,10 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     {4'h4, 2'b00, 11'h072, 16'h0100},
     {4'h4, 2'b00, 11'h170, 16'h0001},
     {4'h4, 2'b00, 11'h172, 16'h0100},
+    {4'h4, 2'b00, 11'h270, 16'h0001},
+    {4'h4, 2'b00, 11'h272, 16'h0100},
+    {4'h4, 2'b00, 11'h370, 16'h0001},
+    {4'h4, 2'b00, 11'h372, 16'h0100},
     // Write to HSCOM_PWR[13:10]
     {4'h5, 2'b00, 11'h725, 16'h3C00},
     // Wait for 2 ms
@@ -1649,16 +1655,22 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     // Write to DAC_MC_CONFIG
     {4'h8, 2'b00, 11'h071, 16'h0014},
     {4'h8, 2'b00, 11'h171, 16'h0014},
+    {4'h8, 2'b00, 11'h271, 16'h0014},
+    {4'h8, 2'b00, 11'h371, 16'h0014},
     // Startup delay
     {4'h8, 2'b01, 3'b000, 24'h000000},
     // Digital clock release
     {4'h9, 2'b00, 11'h72C, 16'h0012},
     {4'h9, 2'b00, 11'h000, 16'h000F},
     {4'h9, 2'b00, 11'h100, 16'h000F},
+    {4'h9, 2'b00, 11'h200, 16'h000F},
+    {4'h9, 2'b00, 11'h300, 16'h000F},
     // Wait for 20 cycles
     {4'h9, 2'b01, 3'b000, 24'h000014},
     {4'h9, 2'b00, 11'h000, 16'h0000},
     {4'h9, 2'b00, 11'h100, 16'h0000},
+    {4'h9, 2'b00, 11'h200, 16'h0000},
+    {4'h9, 2'b00, 11'h300, 16'h0000},
     // Tile sync
     {4'hA, 2'b00, 11'h724, 16'h1000},
     {4'hA, 2'b00, 11'h724, 16'h1000},
@@ -1666,6 +1678,10 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     {4'hA, 2'b00, 11'h000, 16'h0000},
     {4'hA, 2'b00, 11'h100, 16'h0000},
     {4'hA, 2'b00, 11'h100, 16'h0000},
+    {4'hA, 2'b00, 11'h200, 16'h0000},
+    {4'hA, 2'b00, 11'h200, 16'h0000},
+    {4'hA, 2'b00, 11'h300, 16'h0000},
+    {4'hA, 2'b00, 11'h300, 16'h0000},
     // Update the NCO values
     {4'hA, 2'b00, 11'h023, 16'h0002},
     {4'hA, 2'b11, 11'h005, 16'h000F},
@@ -1673,6 +1689,12 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     {4'hA, 2'b00, 11'h123, 16'h0002},
     {4'hA, 2'b11, 11'h105, 16'h000F},
     {4'hA, 2'b11, 11'h10E, 16'h0FFF},
+    {4'hA, 2'b00, 11'h223, 16'h0002},
+    {4'hA, 2'b11, 11'h205, 16'h000F},
+    {4'hA, 2'b11, 11'h20E, 16'h0FFF},
+    {4'hA, 2'b00, 11'h323, 16'h0002},
+    {4'hA, 2'b11, 11'h305, 16'h000F},
+    {4'hA, 2'b11, 11'h30E, 16'h0FFF},
     {4'hA, 2'b00, 11'h72E, 16'h0001},
     // Wait for clocks to be OK
     {4'hE, 2'b01, 3'b111, 24'h000000},
