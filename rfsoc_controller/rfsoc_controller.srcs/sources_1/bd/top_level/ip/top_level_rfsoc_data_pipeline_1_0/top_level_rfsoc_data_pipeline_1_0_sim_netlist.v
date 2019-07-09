@@ -1,17 +1,84 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jul  8 16:59:01 2019
+// Date        : Mon Jul  8 18:07:27 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top top_level_rfsoc_data_pipeline_1_0 -prefix
-//               top_level_rfsoc_data_pipeline_1_0_ top_level_rfsoc_data_pipeline_0_0_sim_netlist.v
-// Design      : top_level_rfsoc_data_pipeline_0_0
+// Command     : write_verilog -force -mode funcsim
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_sim_netlist.v
+// Design      : top_level_rfsoc_data_pipeline_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_1_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
+(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
+(* NotValidForBitStream *)
+module top_level_rfsoc_data_pipeline_1_0
+   (S_AXIS_0_tdata,
+    S_AXIS_0_tready,
+    S_AXIS_0_tvalid,
+    count_val_in_0,
+    ext_trigger_0,
+    gpio_in,
+    m_axis_0_tdata,
+    m_axis_0_tready,
+    m_axis_0_tvalid,
+    microblaze_clk,
+    microblaze_resetn,
+    pipeline_active,
+    rf_clock,
+    rf_resetn);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *) input [31:0]S_AXIS_0_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TREADY" *) output S_AXIS_0_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_0_tvalid;
+  input [31:0]count_val_in_0;
+  input ext_trigger_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [7:0]gpio_in;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) output [255:0]m_axis_0_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *) input m_axis_0_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) output m_axis_0_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
+  output pipeline_active;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clock;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
+
+  wire [31:0]S_AXIS_0_tdata;
+  wire S_AXIS_0_tready;
+  wire S_AXIS_0_tvalid;
+  wire [31:0]count_val_in_0;
+  wire ext_trigger_0;
+  wire [7:0]gpio_in;
+  wire [255:0]m_axis_0_tdata;
+  wire m_axis_0_tready;
+  wire m_axis_0_tvalid;
+  wire microblaze_clk;
+  wire microblaze_resetn;
+  wire pipeline_active;
+  wire rf_clock;
+  wire rf_resetn;
+
+  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+  top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline inst
+       (.S_AXIS_0_tdata(S_AXIS_0_tdata),
+        .S_AXIS_0_tready(S_AXIS_0_tready),
+        .S_AXIS_0_tvalid(S_AXIS_0_tvalid),
+        .count_val_in_0(count_val_in_0),
+        .ext_trigger_0(ext_trigger_0),
+        .gpio_in(gpio_in),
+        .m_axis_0_tdata(m_axis_0_tdata),
+        .m_axis_0_tready(m_axis_0_tready),
+        .m_axis_0_tvalid(m_axis_0_tvalid),
+        .microblaze_clk(microblaze_clk),
+        .microblaze_resetn(microblaze_resetn),
+        .pipeline_active(pipeline_active),
+        .rf_clock(rf_clock),
+        .rf_resetn(rf_resetn));
+endmodule
+
+(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_data_fifo_v2_0_1_top
    (s_axis_tready,
     m_axis_tvalid,
@@ -519,6 +586,7 @@ module top_level_rfsoc_data_pipeline_1_0_axis_data_fifo_v2_0_1_top__parameterize
         .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_327 ,\gen_fifo.xpm_fifo_axis_inst_n_328 ,\gen_fifo.xpm_fifo_axis_inst_n_329 ,\gen_fifo.xpm_fifo_axis_inst_n_330 ,\gen_fifo.xpm_fifo_axis_inst_n_331 ,\gen_fifo.xpm_fifo_axis_inst_n_332 ,\gen_fifo.xpm_fifo_axis_inst_n_333 ,\gen_fifo.xpm_fifo_axis_inst_n_334 ,\gen_fifo.xpm_fifo_axis_inst_n_335 ,\gen_fifo.xpm_fifo_axis_inst_n_336 }));
 endmodule
 
+(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter
    (Q,
     m_axis_tdata,
@@ -568,6 +636,7 @@ module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axis_dwid
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axisc_upsizer" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axisc_upsizer
    (Q,
     m_axis_tdata,
@@ -2560,6 +2629,7 @@ module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axisc_ups
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axis_mux" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_mux
    (int_select_reg_rep__1_0,
     m_axis_tready,
@@ -4687,8 +4757,9 @@ module top_level_rfsoc_data_pipeline_1_0_axis_mux
         .Q(int_select_reg_rep__1_0));
 endmodule
 
+(* ORIG_REF_NAME = "axis_tready_slice" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
-   (out,
+   (pipeline_active,
     rf_resetn_0,
     s_axis_tvalid,
     rf_clock,
@@ -4698,7 +4769,7 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
     rf_resetn,
     ext_trigger_0,
     count_val_in_0);
-  output out;
+  output pipeline_active;
   output rf_resetn_0;
   output s_axis_tvalid;
   input rf_clock;
@@ -4709,70 +4780,75 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
   input ext_trigger_0;
   input [31:0]count_val_in_0;
 
+  wire \FSM_sequential_state[0]_i_1_n_0 ;
+  wire \FSM_sequential_state[1]_i_1_n_0 ;
+  wire \FSM_sequential_state[1]_i_2_n_0 ;
   (* DONT_TOUCH *) wire axis_tready_slice_0_mloop_axis_TVALID;
-  (* DONT_TOUCH *) wire [31:0]count;
+  wire [31:0]count;
   wire count0_carry__0_n_0;
   wire count0_carry__0_n_1;
-  wire count0_carry__0_n_10;
-  wire count0_carry__0_n_11;
-  wire count0_carry__0_n_12;
-  wire count0_carry__0_n_13;
-  wire count0_carry__0_n_14;
-  wire count0_carry__0_n_15;
   wire count0_carry__0_n_2;
   wire count0_carry__0_n_3;
   wire count0_carry__0_n_4;
   wire count0_carry__0_n_5;
   wire count0_carry__0_n_6;
   wire count0_carry__0_n_7;
-  wire count0_carry__0_n_8;
-  wire count0_carry__0_n_9;
   wire count0_carry__1_n_0;
   wire count0_carry__1_n_1;
-  wire count0_carry__1_n_10;
-  wire count0_carry__1_n_11;
-  wire count0_carry__1_n_12;
-  wire count0_carry__1_n_13;
-  wire count0_carry__1_n_14;
-  wire count0_carry__1_n_15;
   wire count0_carry__1_n_2;
   wire count0_carry__1_n_3;
   wire count0_carry__1_n_4;
   wire count0_carry__1_n_5;
   wire count0_carry__1_n_6;
   wire count0_carry__1_n_7;
-  wire count0_carry__1_n_8;
-  wire count0_carry__1_n_9;
-  wire count0_carry__2_n_10;
-  wire count0_carry__2_n_11;
-  wire count0_carry__2_n_12;
-  wire count0_carry__2_n_13;
-  wire count0_carry__2_n_14;
-  wire count0_carry__2_n_15;
   wire count0_carry__2_n_2;
   wire count0_carry__2_n_3;
   wire count0_carry__2_n_4;
   wire count0_carry__2_n_5;
   wire count0_carry__2_n_6;
   wire count0_carry__2_n_7;
-  wire count0_carry__2_n_9;
   wire count0_carry_n_0;
   wire count0_carry_n_1;
-  wire count0_carry_n_10;
-  wire count0_carry_n_11;
-  wire count0_carry_n_12;
-  wire count0_carry_n_13;
-  wire count0_carry_n_14;
-  wire count0_carry_n_15;
   wire count0_carry_n_2;
   wire count0_carry_n_3;
   wire count0_carry_n_4;
   wire count0_carry_n_5;
   wire count0_carry_n_6;
   wire count0_carry_n_7;
-  wire count0_carry_n_8;
-  wire count0_carry_n_9;
   wire \count[31]_i_1_n_0 ;
+  wire \count[31]_i_4_n_0 ;
+  wire \count_reg_n_0_[0] ;
+  wire \count_reg_n_0_[10] ;
+  wire \count_reg_n_0_[11] ;
+  wire \count_reg_n_0_[12] ;
+  wire \count_reg_n_0_[13] ;
+  wire \count_reg_n_0_[14] ;
+  wire \count_reg_n_0_[15] ;
+  wire \count_reg_n_0_[16] ;
+  wire \count_reg_n_0_[17] ;
+  wire \count_reg_n_0_[18] ;
+  wire \count_reg_n_0_[19] ;
+  wire \count_reg_n_0_[1] ;
+  wire \count_reg_n_0_[20] ;
+  wire \count_reg_n_0_[21] ;
+  wire \count_reg_n_0_[22] ;
+  wire \count_reg_n_0_[23] ;
+  wire \count_reg_n_0_[24] ;
+  wire \count_reg_n_0_[25] ;
+  wire \count_reg_n_0_[26] ;
+  wire \count_reg_n_0_[27] ;
+  wire \count_reg_n_0_[28] ;
+  wire \count_reg_n_0_[29] ;
+  wire \count_reg_n_0_[2] ;
+  wire \count_reg_n_0_[30] ;
+  wire \count_reg_n_0_[31] ;
+  wire \count_reg_n_0_[3] ;
+  wire \count_reg_n_0_[4] ;
+  wire \count_reg_n_0_[5] ;
+  wire \count_reg_n_0_[6] ;
+  wire \count_reg_n_0_[7] ;
+  wire \count_reg_n_0_[8] ;
+  wire \count_reg_n_0_[9] ;
   wire [31:0]count_val_in_0;
   wire \count_value_i_reg[8] ;
   wire ext_trigger_0;
@@ -4811,13 +4887,13 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
   wire [1:0]m_axis_tdata;
   wire m_axis_tvalid;
   wire mloop_axis_tvalid_i_1_n_0;
-  (* DONT_TOUCH *) wire out;
-  wire [31:0]p_1_in;
+  wire mloop_axis_tvalid_i_2_n_0;
+  wire [31:1]p_0_in;
+  (* DONT_TOUCH *) wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
   wire rf_resetn_0;
   wire s_axis_tready1;
-  wire s_axis_tready11_out;
   wire s_axis_tready2;
   wire s_axis_tready20_in;
   wire s_axis_tready2_carry__0_i_1_n_0;
@@ -4857,12 +4933,8 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
   wire \s_axis_tready2_inferred__0/i__carry_n_6 ;
   wire \s_axis_tready2_inferred__0/i__carry_n_7 ;
   wire s_axis_tready_i_1_n_0;
-  wire s_axis_tready_i_2_n_0;
   wire s_axis_tvalid;
-  (* DONT_TOUCH *) wire [1:0]state;
-  wire \state[0]_i_1_n_0 ;
-  wire \state[1]_i_1_n_0 ;
-  wire \state[1]_i_2_n_0 ;
+  wire [1:0]state;
   wire [7:6]NLW_count0_carry__2_CO_UNCONNECTED;
   wire [7:7]NLW_count0_carry__2_O_UNCONNECTED;
   wire [7:0]NLW_s_axis_tready2_carry_O_UNCONNECTED;
@@ -4871,6 +4943,55 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
   wire [7:0]\NLW_s_axis_tready2_inferred__0/i__carry_O_UNCONNECTED ;
   wire [7:0]\NLW_s_axis_tready2_inferred__0/i__carry__0_O_UNCONNECTED ;
 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \FSM_sequential_state[0]_i_1 
+       (.I0(state[0]),
+        .I1(state[1]),
+        .I2(m_axis_tdata[0]),
+        .O(\FSM_sequential_state[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h01FE01FE01FE010E)) 
+    \FSM_sequential_state[1]_i_1 
+       (.I0(ext_trigger_0),
+        .I1(m_axis_tdata[1]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready2),
+        .I5(s_axis_tready20_in),
+        .O(\FSM_sequential_state[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT3 #(
+    .INIT(8'h54)) 
+    \FSM_sequential_state[1]_i_2 
+       (.I0(state[1]),
+        .I1(m_axis_tdata[0]),
+        .I2(state[0]),
+        .O(\FSM_sequential_state[1]_i_2_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \FSM_sequential_state[1]_i_3 
+       (.I0(rf_resetn),
+        .O(rf_resetn_0));
+  (* FSM_ENCODED_STATES = "state_wait_trigger:00,state_trigger:01,state_cleanup:10" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_state_reg[0] 
+       (.C(rf_clock),
+        .CE(\FSM_sequential_state[1]_i_1_n_0 ),
+        .CLR(rf_resetn_0),
+        .D(\FSM_sequential_state[0]_i_1_n_0 ),
+        .Q(state[0]));
+  (* FSM_ENCODED_STATES = "state_wait_trigger:00,state_trigger:01,state_cleanup:10" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_state_reg[1] 
+       (.C(rf_clock),
+        .CE(\FSM_sequential_state[1]_i_1_n_0 ),
+        .CLR(rf_resetn_0),
+        .D(\FSM_sequential_state[1]_i_2_n_0 ),
+        .Q(state[1]));
   LUT3 #(
     .INIT(8'hB8)) 
     axis_data_fifo_waveform_i_1
@@ -4879,293 +5000,293 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
         .I2(m_axis_tvalid),
         .O(s_axis_tvalid));
   CARRY8 count0_carry
-       (.CI(count[0]),
+       (.CI(\count_reg_n_0_[0] ),
         .CI_TOP(1'b0),
         .CO({count0_carry_n_0,count0_carry_n_1,count0_carry_n_2,count0_carry_n_3,count0_carry_n_4,count0_carry_n_5,count0_carry_n_6,count0_carry_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({count0_carry_n_8,count0_carry_n_9,count0_carry_n_10,count0_carry_n_11,count0_carry_n_12,count0_carry_n_13,count0_carry_n_14,count0_carry_n_15}),
-        .S(count[8:1]));
+        .O(p_0_in[8:1]),
+        .S({\count_reg_n_0_[8] ,\count_reg_n_0_[7] ,\count_reg_n_0_[6] ,\count_reg_n_0_[5] ,\count_reg_n_0_[4] ,\count_reg_n_0_[3] ,\count_reg_n_0_[2] ,\count_reg_n_0_[1] }));
   CARRY8 count0_carry__0
        (.CI(count0_carry_n_0),
         .CI_TOP(1'b0),
         .CO({count0_carry__0_n_0,count0_carry__0_n_1,count0_carry__0_n_2,count0_carry__0_n_3,count0_carry__0_n_4,count0_carry__0_n_5,count0_carry__0_n_6,count0_carry__0_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({count0_carry__0_n_8,count0_carry__0_n_9,count0_carry__0_n_10,count0_carry__0_n_11,count0_carry__0_n_12,count0_carry__0_n_13,count0_carry__0_n_14,count0_carry__0_n_15}),
-        .S(count[16:9]));
+        .O(p_0_in[16:9]),
+        .S({\count_reg_n_0_[16] ,\count_reg_n_0_[15] ,\count_reg_n_0_[14] ,\count_reg_n_0_[13] ,\count_reg_n_0_[12] ,\count_reg_n_0_[11] ,\count_reg_n_0_[10] ,\count_reg_n_0_[9] }));
   CARRY8 count0_carry__1
        (.CI(count0_carry__0_n_0),
         .CI_TOP(1'b0),
         .CO({count0_carry__1_n_0,count0_carry__1_n_1,count0_carry__1_n_2,count0_carry__1_n_3,count0_carry__1_n_4,count0_carry__1_n_5,count0_carry__1_n_6,count0_carry__1_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({count0_carry__1_n_8,count0_carry__1_n_9,count0_carry__1_n_10,count0_carry__1_n_11,count0_carry__1_n_12,count0_carry__1_n_13,count0_carry__1_n_14,count0_carry__1_n_15}),
-        .S(count[24:17]));
+        .O(p_0_in[24:17]),
+        .S({\count_reg_n_0_[24] ,\count_reg_n_0_[23] ,\count_reg_n_0_[22] ,\count_reg_n_0_[21] ,\count_reg_n_0_[20] ,\count_reg_n_0_[19] ,\count_reg_n_0_[18] ,\count_reg_n_0_[17] }));
   CARRY8 count0_carry__2
        (.CI(count0_carry__1_n_0),
         .CI_TOP(1'b0),
         .CO({NLW_count0_carry__2_CO_UNCONNECTED[7:6],count0_carry__2_n_2,count0_carry__2_n_3,count0_carry__2_n_4,count0_carry__2_n_5,count0_carry__2_n_6,count0_carry__2_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_count0_carry__2_O_UNCONNECTED[7],count0_carry__2_n_9,count0_carry__2_n_10,count0_carry__2_n_11,count0_carry__2_n_12,count0_carry__2_n_13,count0_carry__2_n_14,count0_carry__2_n_15}),
-        .S({1'b0,count[31:25]}));
+        .O({NLW_count0_carry__2_O_UNCONNECTED[7],p_0_in[31:25]}),
+        .S({1'b0,\count_reg_n_0_[31] ,\count_reg_n_0_[30] ,\count_reg_n_0_[29] ,\count_reg_n_0_[28] ,\count_reg_n_0_[27] ,\count_reg_n_0_[26] ,\count_reg_n_0_[25] }));
   LUT6 #(
-    .INIT(64'h0F0F010F0F00010F)) 
+    .INIT(64'h0103010301030133)) 
     \count[0]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count[0]),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[0]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[0]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[10]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_14),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[10]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[10]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[10]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[11]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_13),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[11]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[11]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[11]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[12]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_12),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[12]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[12]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[12]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[13]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_11),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[13]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[13]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[13]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[14]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_10),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[14]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[14]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[14]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[15]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_9),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[15]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[15]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[15]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[16]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_8),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[16]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[16]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[16]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[17]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_15),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[17]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[17]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[17]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[18]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_14),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[18]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[18]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[18]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[19]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_13),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[19]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[19]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[19]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[1]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_15),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[1]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[1]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[1]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[20]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_12),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[20]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[20]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[20]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[21]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_11),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[21]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[21]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[21]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[22]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_10),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[22]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[22]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[22]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[23]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_9),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[23]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[23]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[23]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[24]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__1_n_8),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[24]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[24]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[24]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[25]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_15),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[25]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[25]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[25]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[26]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_14),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[26]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[26]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[26]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[27]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_13),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[27]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[27]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[27]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[28]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_12),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[28]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[28]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[28]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[29]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_11),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[29]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[29]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[29]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[2]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_14),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[2]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[2]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[2]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[30]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_10),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[30]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[30]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[30]));
   LUT6 #(
-    .INIT(64'h0000FC5500FFFC00)) 
+    .INIT(64'h0000FF00FCFC0055)) 
     \count[31]_i_1 
        (.I0(m_axis_tdata[0]),
-        .I1(s_axis_tready1),
-        .I2(rf_resetn),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
+        .I1(rf_resetn),
+        .I2(s_axis_tready1),
+        .I3(\count[31]_i_4_n_0 ),
+        .I4(state[0]),
+        .I5(state[1]),
         .O(\count[31]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[31]_i_2 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__2_n_9),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[31]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[31]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[31]));
   LUT2 #(
     .INIT(4'hE)) 
     \count[31]_i_3 
@@ -5173,617 +5294,618 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
         .I1(s_axis_tready2),
         .O(s_axis_tready1));
   LUT2 #(
-    .INIT(4'hE)) 
+    .INIT(4'h1)) 
     \count[31]_i_4 
        (.I0(m_axis_tdata[1]),
         .I1(ext_trigger_0),
-        .O(s_axis_tready11_out));
+        .O(\count[31]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[3]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_13),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[3]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[3]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[3]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[4]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_12),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[4]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[4]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[4]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[5]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_11),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[5]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[5]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[5]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[6]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_10),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[6]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[6]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[6]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[7]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_9),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[7]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[7]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[7]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[8]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry_n_8),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[8]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[8]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[8]));
   LUT6 #(
-    .INIT(64'hF0F010F0F00010F0)) 
+    .INIT(64'h040C040C040C04CC)) 
     \count[9]_i_1 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .I2(count0_carry__0_n_15),
-        .I3(state[0]),
-        .I4(state[1]),
-        .I5(s_axis_tready11_out),
-        .O(p_1_in[9]));
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(p_0_in[9]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(count[9]));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[0] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[0]),
-        .Q(count[0]));
+        .D(count[0]),
+        .Q(\count_reg_n_0_[0] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[10] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[10]),
-        .Q(count[10]));
+        .D(count[10]),
+        .Q(\count_reg_n_0_[10] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[11] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[11]),
-        .Q(count[11]));
+        .D(count[11]),
+        .Q(\count_reg_n_0_[11] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[12] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[12]),
-        .Q(count[12]));
+        .D(count[12]),
+        .Q(\count_reg_n_0_[12] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[13] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[13]),
-        .Q(count[13]));
+        .D(count[13]),
+        .Q(\count_reg_n_0_[13] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[14] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[14]),
-        .Q(count[14]));
+        .D(count[14]),
+        .Q(\count_reg_n_0_[14] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[15] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[15]),
-        .Q(count[15]));
+        .D(count[15]),
+        .Q(\count_reg_n_0_[15] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[16] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[16]),
-        .Q(count[16]));
+        .D(count[16]),
+        .Q(\count_reg_n_0_[16] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[17] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[17]),
-        .Q(count[17]));
+        .D(count[17]),
+        .Q(\count_reg_n_0_[17] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[18] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[18]),
-        .Q(count[18]));
+        .D(count[18]),
+        .Q(\count_reg_n_0_[18] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[19] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[19]),
-        .Q(count[19]));
+        .D(count[19]),
+        .Q(\count_reg_n_0_[19] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[1] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[1]),
-        .Q(count[1]));
+        .D(count[1]),
+        .Q(\count_reg_n_0_[1] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[20] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[20]),
-        .Q(count[20]));
+        .D(count[20]),
+        .Q(\count_reg_n_0_[20] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[21] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[21]),
-        .Q(count[21]));
+        .D(count[21]),
+        .Q(\count_reg_n_0_[21] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[22] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[22]),
-        .Q(count[22]));
+        .D(count[22]),
+        .Q(\count_reg_n_0_[22] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[23] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[23]),
-        .Q(count[23]));
+        .D(count[23]),
+        .Q(\count_reg_n_0_[23] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[24] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[24]),
-        .Q(count[24]));
+        .D(count[24]),
+        .Q(\count_reg_n_0_[24] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[25] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[25]),
-        .Q(count[25]));
+        .D(count[25]),
+        .Q(\count_reg_n_0_[25] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[26] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[26]),
-        .Q(count[26]));
+        .D(count[26]),
+        .Q(\count_reg_n_0_[26] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[27] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[27]),
-        .Q(count[27]));
+        .D(count[27]),
+        .Q(\count_reg_n_0_[27] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[28] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[28]),
-        .Q(count[28]));
+        .D(count[28]),
+        .Q(\count_reg_n_0_[28] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[29] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[29]),
-        .Q(count[29]));
+        .D(count[29]),
+        .Q(\count_reg_n_0_[29] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[2] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[2]),
-        .Q(count[2]));
+        .D(count[2]),
+        .Q(\count_reg_n_0_[2] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[30] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[30]),
-        .Q(count[30]));
+        .D(count[30]),
+        .Q(\count_reg_n_0_[30] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[31] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[31]),
-        .Q(count[31]));
+        .D(count[31]),
+        .Q(\count_reg_n_0_[31] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[3] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[3]),
-        .Q(count[3]));
+        .D(count[3]),
+        .Q(\count_reg_n_0_[3] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[4] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[4]),
-        .Q(count[4]));
+        .D(count[4]),
+        .Q(\count_reg_n_0_[4] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[5] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[5]),
-        .Q(count[5]));
+        .D(count[5]),
+        .Q(\count_reg_n_0_[5] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[6] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[6]),
-        .Q(count[6]));
+        .D(count[6]),
+        .Q(\count_reg_n_0_[6] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[7] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[7]),
-        .Q(count[7]));
+        .D(count[7]),
+        .Q(\count_reg_n_0_[7] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[8] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[8]),
-        .Q(count[8]));
+        .D(count[8]),
+        .Q(\count_reg_n_0_[8] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[9] 
        (.C(rf_clock),
         .CE(\count[31]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(p_1_in[9]),
-        .Q(count[9]));
+        .D(count[9]),
+        .Q(\count_reg_n_0_[9] ));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_1
-       (.I0(count[30]),
+       (.I0(\count_reg_n_0_[30] ),
         .I1(count_val_in_0[30]),
         .I2(count_val_in_0[31]),
-        .I3(count[31]),
+        .I3(\count_reg_n_0_[31] ),
         .O(i__carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_10
-       (.I0(count[28]),
+       (.I0(\count_reg_n_0_[28] ),
         .I1(count_val_in_0[28]),
-        .I2(count[29]),
+        .I2(\count_reg_n_0_[29] ),
         .I3(count_val_in_0[29]),
         .O(i__carry__0_i_10_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_11
-       (.I0(count[26]),
+       (.I0(\count_reg_n_0_[26] ),
         .I1(count_val_in_0[26]),
-        .I2(count[27]),
+        .I2(\count_reg_n_0_[27] ),
         .I3(count_val_in_0[27]),
         .O(i__carry__0_i_11_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_12
-       (.I0(count[24]),
+       (.I0(\count_reg_n_0_[24] ),
         .I1(count_val_in_0[24]),
-        .I2(count[25]),
+        .I2(\count_reg_n_0_[25] ),
         .I3(count_val_in_0[25]),
         .O(i__carry__0_i_12_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_13
-       (.I0(count[22]),
+       (.I0(\count_reg_n_0_[22] ),
         .I1(count_val_in_0[22]),
-        .I2(count[23]),
+        .I2(\count_reg_n_0_[23] ),
         .I3(count_val_in_0[23]),
         .O(i__carry__0_i_13_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_14
-       (.I0(count[20]),
+       (.I0(\count_reg_n_0_[20] ),
         .I1(count_val_in_0[20]),
-        .I2(count[21]),
+        .I2(\count_reg_n_0_[21] ),
         .I3(count_val_in_0[21]),
         .O(i__carry__0_i_14_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_15
-       (.I0(count[18]),
+       (.I0(\count_reg_n_0_[18] ),
         .I1(count_val_in_0[18]),
-        .I2(count[19]),
+        .I2(\count_reg_n_0_[19] ),
         .I3(count_val_in_0[19]),
         .O(i__carry__0_i_15_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_16
-       (.I0(count[16]),
+       (.I0(\count_reg_n_0_[16] ),
         .I1(count_val_in_0[16]),
-        .I2(count[17]),
+        .I2(\count_reg_n_0_[17] ),
         .I3(count_val_in_0[17]),
         .O(i__carry__0_i_16_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_2
-       (.I0(count[28]),
+       (.I0(\count_reg_n_0_[28] ),
         .I1(count_val_in_0[28]),
         .I2(count_val_in_0[29]),
-        .I3(count[29]),
+        .I3(\count_reg_n_0_[29] ),
         .O(i__carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_3
-       (.I0(count[26]),
+       (.I0(\count_reg_n_0_[26] ),
         .I1(count_val_in_0[26]),
         .I2(count_val_in_0[27]),
-        .I3(count[27]),
+        .I3(\count_reg_n_0_[27] ),
         .O(i__carry__0_i_3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_4
-       (.I0(count[24]),
+       (.I0(\count_reg_n_0_[24] ),
         .I1(count_val_in_0[24]),
         .I2(count_val_in_0[25]),
-        .I3(count[25]),
+        .I3(\count_reg_n_0_[25] ),
         .O(i__carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_5
-       (.I0(count[22]),
+       (.I0(\count_reg_n_0_[22] ),
         .I1(count_val_in_0[22]),
         .I2(count_val_in_0[23]),
-        .I3(count[23]),
+        .I3(\count_reg_n_0_[23] ),
         .O(i__carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_6
-       (.I0(count[20]),
+       (.I0(\count_reg_n_0_[20] ),
         .I1(count_val_in_0[20]),
         .I2(count_val_in_0[21]),
-        .I3(count[21]),
+        .I3(\count_reg_n_0_[21] ),
         .O(i__carry__0_i_6_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_7
-       (.I0(count[18]),
+       (.I0(\count_reg_n_0_[18] ),
         .I1(count_val_in_0[18]),
         .I2(count_val_in_0[19]),
-        .I3(count[19]),
+        .I3(\count_reg_n_0_[19] ),
         .O(i__carry__0_i_7_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_8
-       (.I0(count[16]),
+       (.I0(\count_reg_n_0_[16] ),
         .I1(count_val_in_0[16]),
         .I2(count_val_in_0[17]),
-        .I3(count[17]),
+        .I3(\count_reg_n_0_[17] ),
         .O(i__carry__0_i_8_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_9
-       (.I0(count[30]),
+       (.I0(\count_reg_n_0_[30] ),
         .I1(count_val_in_0[30]),
-        .I2(count[31]),
+        .I2(\count_reg_n_0_[31] ),
         .I3(count_val_in_0[31]),
         .O(i__carry__0_i_9_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_1
-       (.I0(count[14]),
+       (.I0(\count_reg_n_0_[14] ),
         .I1(count_val_in_0[14]),
         .I2(count_val_in_0[15]),
-        .I3(count[15]),
+        .I3(\count_reg_n_0_[15] ),
         .O(i__carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_10
-       (.I0(count[12]),
+       (.I0(\count_reg_n_0_[12] ),
         .I1(count_val_in_0[12]),
-        .I2(count[13]),
+        .I2(\count_reg_n_0_[13] ),
         .I3(count_val_in_0[13]),
         .O(i__carry_i_10_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_11
-       (.I0(count[10]),
+       (.I0(\count_reg_n_0_[10] ),
         .I1(count_val_in_0[10]),
-        .I2(count[11]),
+        .I2(\count_reg_n_0_[11] ),
         .I3(count_val_in_0[11]),
         .O(i__carry_i_11_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_12
-       (.I0(count[8]),
+       (.I0(\count_reg_n_0_[8] ),
         .I1(count_val_in_0[8]),
-        .I2(count[9]),
+        .I2(\count_reg_n_0_[9] ),
         .I3(count_val_in_0[9]),
         .O(i__carry_i_12_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_13
-       (.I0(count[6]),
+       (.I0(\count_reg_n_0_[6] ),
         .I1(count_val_in_0[6]),
-        .I2(count[7]),
+        .I2(\count_reg_n_0_[7] ),
         .I3(count_val_in_0[7]),
         .O(i__carry_i_13_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_14
-       (.I0(count[4]),
+       (.I0(\count_reg_n_0_[4] ),
         .I1(count_val_in_0[4]),
-        .I2(count[5]),
+        .I2(\count_reg_n_0_[5] ),
         .I3(count_val_in_0[5]),
         .O(i__carry_i_14_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_15
-       (.I0(count[2]),
+       (.I0(\count_reg_n_0_[2] ),
         .I1(count_val_in_0[2]),
-        .I2(count[3]),
+        .I2(\count_reg_n_0_[3] ),
         .I3(count_val_in_0[3]),
         .O(i__carry_i_15_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_16
-       (.I0(count[0]),
+       (.I0(\count_reg_n_0_[0] ),
         .I1(count_val_in_0[0]),
-        .I2(count[1]),
+        .I2(\count_reg_n_0_[1] ),
         .I3(count_val_in_0[1]),
         .O(i__carry_i_16_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_2
-       (.I0(count[12]),
+       (.I0(\count_reg_n_0_[12] ),
         .I1(count_val_in_0[12]),
         .I2(count_val_in_0[13]),
-        .I3(count[13]),
+        .I3(\count_reg_n_0_[13] ),
         .O(i__carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_3
-       (.I0(count[10]),
+       (.I0(\count_reg_n_0_[10] ),
         .I1(count_val_in_0[10]),
         .I2(count_val_in_0[11]),
-        .I3(count[11]),
+        .I3(\count_reg_n_0_[11] ),
         .O(i__carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_4
-       (.I0(count[8]),
+       (.I0(\count_reg_n_0_[8] ),
         .I1(count_val_in_0[8]),
         .I2(count_val_in_0[9]),
-        .I3(count[9]),
+        .I3(\count_reg_n_0_[9] ),
         .O(i__carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_5
-       (.I0(count[6]),
+       (.I0(\count_reg_n_0_[6] ),
         .I1(count_val_in_0[6]),
         .I2(count_val_in_0[7]),
-        .I3(count[7]),
+        .I3(\count_reg_n_0_[7] ),
         .O(i__carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_6
-       (.I0(count[4]),
+       (.I0(\count_reg_n_0_[4] ),
         .I1(count_val_in_0[4]),
         .I2(count_val_in_0[5]),
-        .I3(count[5]),
+        .I3(\count_reg_n_0_[5] ),
         .O(i__carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_7
-       (.I0(count[2]),
+       (.I0(\count_reg_n_0_[2] ),
         .I1(count_val_in_0[2]),
         .I2(count_val_in_0[3]),
-        .I3(count[3]),
+        .I3(\count_reg_n_0_[3] ),
         .O(i__carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry_i_8
-       (.I0(count[0]),
+       (.I0(\count_reg_n_0_[0] ),
         .I1(count_val_in_0[0]),
         .I2(count_val_in_0[1]),
-        .I3(count[1]),
+        .I3(\count_reg_n_0_[1] ),
         .O(i__carry_i_8_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_9
-       (.I0(count[14]),
+       (.I0(\count_reg_n_0_[14] ),
         .I1(count_val_in_0[14]),
-        .I2(count[15]),
+        .I2(\count_reg_n_0_[15] ),
         .I3(count_val_in_0[15]),
         .O(i__carry_i_9_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    int_select_i_1
-       (.I0(rf_resetn),
-        .O(rf_resetn_0));
-  LUT6 #(
-    .INIT(64'hABFF015500550000)) 
+  LUT2 #(
+    .INIT(4'h7)) 
     mloop_axis_tvalid_i_1
-       (.I0(state[1]),
-        .I1(s_axis_tready2),
-        .I2(s_axis_tready20_in),
-        .I3(state[0]),
-        .I4(s_axis_tready11_out),
-        .I5(axis_tready_slice_0_mloop_axis_TVALID),
+       (.I0(state[0]),
+        .I1(state[1]),
         .O(mloop_axis_tvalid_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h040D040D040D04CD)) 
+    mloop_axis_tvalid_i_2
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(axis_tready_slice_0_mloop_axis_TVALID),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(mloop_axis_tvalid_i_2_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
     mloop_axis_tvalid_reg
        (.C(rf_clock),
-        .CE(s_axis_tready_i_1_n_0),
+        .CE(mloop_axis_tvalid_i_1_n_0),
         .CLR(rf_resetn_0),
-        .D(mloop_axis_tvalid_i_1_n_0),
+        .D(mloop_axis_tvalid_i_2_n_0),
         .Q(axis_tready_slice_0_mloop_axis_TVALID));
   CARRY8 s_axis_tready2_carry
        (.CI(1'b1),
@@ -5802,110 +5924,110 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
   LUT4 #(
     .INIT(16'h9009)) 
     s_axis_tready2_carry__0_i_1
-       (.I0(count[30]),
+       (.I0(\count_reg_n_0_[30] ),
         .I1(count_val_in_0[30]),
-        .I2(count[31]),
+        .I2(\count_reg_n_0_[31] ),
         .I3(count_val_in_0[31]),
         .O(s_axis_tready2_carry__0_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry__0_i_2
-       (.I0(count[27]),
+       (.I0(\count_reg_n_0_[27] ),
         .I1(count_val_in_0[27]),
         .I2(count_val_in_0[29]),
-        .I3(count[29]),
+        .I3(\count_reg_n_0_[29] ),
         .I4(count_val_in_0[28]),
-        .I5(count[28]),
+        .I5(\count_reg_n_0_[28] ),
         .O(s_axis_tready2_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry__0_i_3
-       (.I0(count[24]),
+       (.I0(\count_reg_n_0_[24] ),
         .I1(count_val_in_0[24]),
         .I2(count_val_in_0[26]),
-        .I3(count[26]),
+        .I3(\count_reg_n_0_[26] ),
         .I4(count_val_in_0[25]),
-        .I5(count[25]),
+        .I5(\count_reg_n_0_[25] ),
         .O(s_axis_tready2_carry__0_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_1
-       (.I0(count[21]),
+       (.I0(\count_reg_n_0_[21] ),
         .I1(count_val_in_0[21]),
         .I2(count_val_in_0[23]),
-        .I3(count[23]),
+        .I3(\count_reg_n_0_[23] ),
         .I4(count_val_in_0[22]),
-        .I5(count[22]),
+        .I5(\count_reg_n_0_[22] ),
         .O(s_axis_tready2_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_2
-       (.I0(count[18]),
+       (.I0(\count_reg_n_0_[18] ),
         .I1(count_val_in_0[18]),
         .I2(count_val_in_0[20]),
-        .I3(count[20]),
+        .I3(\count_reg_n_0_[20] ),
         .I4(count_val_in_0[19]),
-        .I5(count[19]),
+        .I5(\count_reg_n_0_[19] ),
         .O(s_axis_tready2_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_3
-       (.I0(count[15]),
+       (.I0(\count_reg_n_0_[15] ),
         .I1(count_val_in_0[15]),
         .I2(count_val_in_0[17]),
-        .I3(count[17]),
+        .I3(\count_reg_n_0_[17] ),
         .I4(count_val_in_0[16]),
-        .I5(count[16]),
+        .I5(\count_reg_n_0_[16] ),
         .O(s_axis_tready2_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_4
-       (.I0(count[12]),
+       (.I0(\count_reg_n_0_[12] ),
         .I1(count_val_in_0[12]),
         .I2(count_val_in_0[14]),
-        .I3(count[14]),
+        .I3(\count_reg_n_0_[14] ),
         .I4(count_val_in_0[13]),
-        .I5(count[13]),
+        .I5(\count_reg_n_0_[13] ),
         .O(s_axis_tready2_carry_i_4_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_5
-       (.I0(count[9]),
+       (.I0(\count_reg_n_0_[9] ),
         .I1(count_val_in_0[9]),
         .I2(count_val_in_0[11]),
-        .I3(count[11]),
+        .I3(\count_reg_n_0_[11] ),
         .I4(count_val_in_0[10]),
-        .I5(count[10]),
+        .I5(\count_reg_n_0_[10] ),
         .O(s_axis_tready2_carry_i_5_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_6
-       (.I0(count[6]),
+       (.I0(\count_reg_n_0_[6] ),
         .I1(count_val_in_0[6]),
         .I2(count_val_in_0[8]),
-        .I3(count[8]),
+        .I3(\count_reg_n_0_[8] ),
         .I4(count_val_in_0[7]),
-        .I5(count[7]),
+        .I5(\count_reg_n_0_[7] ),
         .O(s_axis_tready2_carry_i_6_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_7
-       (.I0(count[3]),
+       (.I0(\count_reg_n_0_[3] ),
         .I1(count_val_in_0[3]),
         .I2(count_val_in_0[5]),
-        .I3(count[5]),
+        .I3(\count_reg_n_0_[5] ),
         .I4(count_val_in_0[4]),
-        .I5(count[4]),
+        .I5(\count_reg_n_0_[4] ),
         .O(s_axis_tready2_carry_i_7_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     s_axis_tready2_carry_i_8
-       (.I0(count[0]),
+       (.I0(\count_reg_n_0_[0] ),
         .I1(count_val_in_0[0]),
         .I2(count_val_in_0[2]),
-        .I3(count[2]),
+        .I3(\count_reg_n_0_[2] ),
         .I4(count_val_in_0[1]),
-        .I5(count[1]),
+        .I5(\count_reg_n_0_[1] ),
         .O(s_axis_tready2_carry_i_8_n_0));
   CARRY8 \s_axis_tready2_inferred__0/i__carry 
        (.CI(1'b0),
@@ -5921,77 +6043,29 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
         .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}),
         .O(\NLW_s_axis_tready2_inferred__0/i__carry__0_O_UNCONNECTED [7:0]),
         .S({i__carry__0_i_9_n_0,i__carry__0_i_10_n_0,i__carry__0_i_11_n_0,i__carry__0_i_12_n_0,i__carry__0_i_13_n_0,i__carry__0_i_14_n_0,i__carry__0_i_15_n_0,i__carry__0_i_16_n_0}));
-  LUT2 #(
-    .INIT(4'h7)) 
-    s_axis_tready_i_1
-       (.I0(state[0]),
-        .I1(state[1]),
-        .O(s_axis_tready_i_1_n_0));
   LUT6 #(
-    .INIT(64'hABFF015500550000)) 
-    s_axis_tready_i_2
-       (.I0(state[1]),
-        .I1(s_axis_tready2),
-        .I2(s_axis_tready20_in),
-        .I3(state[0]),
-        .I4(s_axis_tready11_out),
-        .I5(out),
-        .O(s_axis_tready_i_2_n_0));
+    .INIT(64'h040D040D040D04CD)) 
+    s_axis_tready_i_1
+       (.I0(\count[31]_i_4_n_0 ),
+        .I1(pipeline_active),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(s_axis_tready20_in),
+        .I5(s_axis_tready2),
+        .O(s_axis_tready_i_1_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
     s_axis_tready_reg
        (.C(rf_clock),
-        .CE(s_axis_tready_i_1_n_0),
+        .CE(mloop_axis_tvalid_i_1_n_0),
         .CLR(rf_resetn_0),
-        .D(s_axis_tready_i_2_n_0),
-        .Q(out));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \state[0]_i_1 
-       (.I0(state[0]),
-        .I1(m_axis_tdata[0]),
-        .I2(state[1]),
-        .O(\state[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF56FF56FF56AA56)) 
-    \state[1]_i_1 
-       (.I0(state[1]),
-        .I1(m_axis_tdata[1]),
-        .I2(ext_trigger_0),
-        .I3(state[0]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(\state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h54)) 
-    \state[1]_i_2 
-       (.I0(state[1]),
-        .I1(state[0]),
-        .I2(m_axis_tdata[0]),
-        .O(\state[1]_i_2_n_0 ));
-  FDCE #(
-    .INIT(1'b0)) 
-    \state_reg[0] 
-       (.C(rf_clock),
-        .CE(\state[1]_i_1_n_0 ),
-        .CLR(rf_resetn_0),
-        .D(\state[0]_i_1_n_0 ),
-        .Q(state[0]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \state_reg[1] 
-       (.C(rf_clock),
-        .CE(\state[1]_i_1_n_0 ),
-        .CLR(rf_resetn_0),
-        .D(\state[1]_i_2_n_0 ),
-        .Q(state[1]));
+        .D(s_axis_tready_i_1_n_0),
+        .Q(pipeline_active));
 endmodule
 
-(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
    (S_AXIS_0_tdata,
     S_AXIS_0_tready,
@@ -6004,6 +6078,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
     m_axis_0_tvalid,
     microblaze_clk,
     microblaze_resetn,
+    pipeline_active,
     rf_clock,
     rf_resetn);
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]S_AXIS_0_tdata;
@@ -6017,6 +6092,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *) output m_axis_0_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input microblaze_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input microblaze_resetn;
+  output pipeline_active;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, FREQ_HZ 250000000, INSERT_VIP 0, PHASE 0.000" *) input rf_clock;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rf_resetn;
 
@@ -6033,7 +6109,6 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
   wire axis_data_fifo_1_M_AXIS_TREADY;
   wire axis_data_fifo_1_M_AXIS_TVALID;
   wire [255:0]axis_data_fifo_2_M_AXIS_TDATA;
-  wire axis_data_fifo_2_M_AXIS_TREADY;
   wire axis_data_fifo_2_M_AXIS_TVALID;
   wire [255:0]axis_dwidth_converter_0_M_AXIS_TDATA;
   wire axis_dwidth_converter_0_M_AXIS_TREADY;
@@ -6050,6 +6125,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
   wire [255:0]m_axis_0_tdata;
   wire microblaze_clk;
   wire microblaze_resetn;
+  wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
 
@@ -6099,7 +6175,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
   (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
   top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_waveform_2 axis_data_fifo_waveform
        (.m_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
-        .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
+        .m_axis_tready(pipeline_active),
         .m_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
         .s_axis_aclk(rf_clock),
         .s_axis_aresetn(rf_resetn),
@@ -6136,7 +6212,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
         .ext_trigger_0(ext_trigger_0),
         .m_axis_tdata(axis_data_fifo_1_M_AXIS1_TDATA[1:0]),
         .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
-        .out(axis_data_fifo_2_M_AXIS_TREADY),
+        .pipeline_active(pipeline_active),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn),
         .rf_resetn_0(axis_tready_slice_0_n_1),
@@ -7935,7 +8011,8 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
         .O(m_axis_0_tdata[9]));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_0_3" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_0_3
    (s_axis_aresetn,
     s_axis_aclk,
@@ -7974,7 +8051,8 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_0_3
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_4,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_4,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_1_4" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_1_4
    (s_axis_aresetn,
     s_axis_aclk,
@@ -8017,7 +8095,8 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_1_4
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2
    (s_axis_aresetn,
     s_axis_aclk,
@@ -8060,7 +8139,8 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_cloc
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_waveform_2" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_waveform_2
    (s_axis_aresetn,
     s_axis_aclk,
@@ -8099,7 +8179,8 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_wave
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_3,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_3,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_dwidth_converter_0_3" *) 
+(* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_dwidth_converter_0_3
    (aclk,
     aresetn,
@@ -8137,6 +8218,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_dwidth_convert
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_mux_0_0" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_mux_0_0
    (int_select_reg_rep__1,
     m_axis_tready,
@@ -8179,8 +8261,9 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_mux_0_0
         .s_axis_tready(s_axis_tready));
 endmodule
 
+(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_tready_slice_0_0" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0_0
-   (out,
+   (pipeline_active,
     rf_resetn_0,
     s_axis_tvalid,
     rf_clock,
@@ -8190,7 +8273,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0
     rf_resetn,
     ext_trigger_0,
     count_val_in_0);
-  output out;
+  output pipeline_active;
   output rf_resetn_0;
   output s_axis_tvalid;
   input rf_clock;
@@ -8206,7 +8289,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0
   wire ext_trigger_0;
   wire [1:0]m_axis_tdata;
   wire m_axis_tvalid;
-  wire out;
+  wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
   wire rf_resetn_0;
@@ -8218,78 +8301,17 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0
         .ext_trigger_0(ext_trigger_0),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tvalid(m_axis_tvalid),
-        .out(out),
+        .pipeline_active(pipeline_active),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn),
         .rf_resetn_0(rf_resetn_0),
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_0_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
-(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
-(* NotValidForBitStream *)
-module top_level_rfsoc_data_pipeline_1_0
-   (S_AXIS_0_tdata,
-    S_AXIS_0_tready,
-    S_AXIS_0_tvalid,
-    count_val_in_0,
-    ext_trigger_0,
-    gpio_in,
-    m_axis_0_tdata,
-    m_axis_0_tready,
-    m_axis_0_tvalid,
-    microblaze_clk,
-    microblaze_resetn,
-    rf_clock,
-    rf_resetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *) input [31:0]S_AXIS_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TREADY" *) output S_AXIS_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_0_tvalid;
-  input [31:0]count_val_in_0;
-  input ext_trigger_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [7:0]gpio_in;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) output [255:0]m_axis_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *) input m_axis_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) output m_axis_0_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clock;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
-
-  wire [31:0]S_AXIS_0_tdata;
-  wire S_AXIS_0_tready;
-  wire S_AXIS_0_tvalid;
-  wire [31:0]count_val_in_0;
-  wire ext_trigger_0;
-  wire [7:0]gpio_in;
-  wire [255:0]m_axis_0_tdata;
-  wire m_axis_0_tready;
-  wire m_axis_0_tvalid;
-  wire microblaze_clk;
-  wire microblaze_resetn;
-  wire rf_clock;
-  wire rf_resetn;
-
-  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
-  top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline inst
-       (.S_AXIS_0_tdata(S_AXIS_0_tdata),
-        .S_AXIS_0_tready(S_AXIS_0_tready),
-        .S_AXIS_0_tvalid(S_AXIS_0_tvalid),
-        .count_val_in_0(count_val_in_0),
-        .ext_trigger_0(ext_trigger_0),
-        .gpio_in(gpio_in),
-        .m_axis_0_tdata(m_axis_0_tdata),
-        .m_axis_0_tready(m_axis_0_tready),
-        .m_axis_0_tvalid(m_axis_0_tvalid),
-        .microblaze_clk(microblaze_clk),
-        .microblaze_resetn(microblaze_resetn),
-        .rf_clock(rf_clock),
-        .rf_resetn(rf_resetn));
-endmodule
-
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
-(* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
+(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "GRAY" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -10279,8 +10301,8 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_gray__parameterized1__2
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "4" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -10708,6 +10730,7 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_sync_rst__parameterized0__9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_counter_updn
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -13528,15 +13551,16 @@ endmodule
 (* CLOCKING_MODE = "common_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
 (* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* PACKET_FIFO = "false" *) (* PKT_SIZE_LT8 = "1'b0" *) 
-(* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_PKT_MODE = "0" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) (* TDEST_OFFSET = "42" *) 
-(* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) (* TID_WIDTH = "1" *) 
-(* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) (* TUSER_MAX_WIDTH = "4053" *) 
-(* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
+(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
+(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) 
+(* TDEST_OFFSET = "42" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) 
+(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) 
+(* TUSER_MAX_WIDTH = "4053" *) (* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) 
+(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
+(* XPM_MODULE = "TRUE" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_axis
    (s_aresetn,
     s_aclk,
@@ -14592,18 +14616,18 @@ endmodule
 (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
 (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
 (* FIFO_SIZE = "704" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "11" *) 
-(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) (* PF_THRESH_MAX = "11" *) 
-(* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
-(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "44" *) 
-(* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "44" *) 
-(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) 
-(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
+(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
+(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) 
+(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
+(* READ_DATA_WIDTH = "44" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "44" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "6" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_base
    (sleep,
     rst,
@@ -16444,6 +16468,7 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_base__parameterized2
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -16587,6 +16612,7 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_bit_3
         .O(clr_full));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_vec
    (\state_reg[1] ,
     \syncstages_ff_reg[2] ,
@@ -17008,6 +17034,7 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_vec_7
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_rst
    (ram_wr_en_i,
     Q,
@@ -17938,23 +17965,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "704" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
-(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "44" *) 
-(* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) (* P_MIN_WIDTH_DATA_ECC = "44" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) (* P_NUM_COLS_WRITE_A = "1" *) 
-(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
-(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
-(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
-(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "44" *) 
-(* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) (* READ_DATA_WIDTH_B = "44" *) 
-(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
-(* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "44" *) 
-(* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
-(* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) (* rstb_loop_iter = "44" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
+(* P_MIN_WIDTH_DATA = "44" *) (* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) 
+(* P_MIN_WIDTH_DATA_ECC = "44" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) 
+(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
+(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
+(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
+(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
+(* P_WIDTH_COL_WRITE_A = "44" *) (* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) 
+(* READ_DATA_WIDTH_B = "44" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "44" *) (* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) 
+(* rstb_loop_iter = "44" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_memory_base
    (sleep,
     clka,

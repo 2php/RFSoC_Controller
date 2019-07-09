@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x55AF945822EFCA9E",
+      "boundary_crc": "0xCC9F8E5921E3CB7A",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "rfsoc_data_pipeline",
       "synth_flow_mode": "Hierarchical",
@@ -230,6 +230,9 @@
         "direction": "I",
         "left": "31",
         "right": "0"
+      },
+      "pipeline_active": {
+        "direction": "O"
       }
     },
     "components": {
@@ -903,15 +906,8 @@
             "left": "31",
             "right": "0"
           },
-          "count_out": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "state_out": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
+          "pipeline_active": {
+            "direction": "O"
           }
         }
       }
@@ -1040,14 +1036,10 @@
           "axis_tready_slice_0/count_val_in"
         ]
       },
-      "state_out": {
+      "axis_tready_slice_0_pipeline_active": {
         "ports": [
-          "axis_tready_slice_0/state_out"
-        ]
-      },
-      "count_out": {
-        "ports": [
-          "axis_tready_slice_0/count_out"
+          "axis_tready_slice_0/pipeline_active",
+          "pipeline_active"
         ]
       }
     }

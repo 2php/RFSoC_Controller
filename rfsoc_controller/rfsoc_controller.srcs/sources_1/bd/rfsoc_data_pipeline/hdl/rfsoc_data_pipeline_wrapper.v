@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jul  8 16:56:45 2019
+//Date        : Mon Jul  8 18:01:50 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_data_pipeline_wrapper.bd
 //Design      : rfsoc_data_pipeline_wrapper
@@ -21,6 +21,7 @@ module rfsoc_data_pipeline_wrapper
     m_axis_0_tvalid,
     microblaze_clk,
     microblaze_resetn,
+    pipeline_active,
     rf_clock,
     rf_resetn);
   input [31:0]S_AXIS_0_tdata;
@@ -34,6 +35,7 @@ module rfsoc_data_pipeline_wrapper
   output m_axis_0_tvalid;
   input microblaze_clk;
   input microblaze_resetn;
+  output pipeline_active;
   input rf_clock;
   input rf_resetn;
 
@@ -48,6 +50,7 @@ module rfsoc_data_pipeline_wrapper
   wire m_axis_0_tvalid;
   wire microblaze_clk;
   wire microblaze_resetn;
+  wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
 
@@ -63,6 +66,7 @@ module rfsoc_data_pipeline_wrapper
         .m_axis_0_tvalid(m_axis_0_tvalid),
         .microblaze_clk(microblaze_clk),
         .microblaze_resetn(microblaze_resetn),
+        .pipeline_active(pipeline_active),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn));
 endmodule

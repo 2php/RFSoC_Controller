@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date              : Mon Jul  8 17:06:00 2019
+| Date              : Mon Jul  8 18:27:02 2019
 | Host              : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command           : report_bus_skew -warn_on_violation -file top_level_wrapper_bus_skew_routed.rpt -pb top_level_wrapper_bus_skew_routed.pb -rpx top_level_wrapper_bus_skew_routed.rpx
 | Design            : top_level_wrapper
@@ -24,34 +24,34 @@ Id  Position  From                            To                              Co
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
 1   80        [get_cells [list {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.543      3.457
+                                                                              Slow              4.000       0.606      3.394
 2   82        [get_cells [list {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.529      3.471
+                                                                              Slow              4.000       0.484      3.516
 3   88        [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.568      3.432
+                                                                              Slow              4.000       0.547      3.453
 4   90        [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.531      3.469
+                                                                              Slow              4.000       0.716      3.284
 5   92        [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.884      3.116
+                                                                              Slow              4.000       0.635      3.365
 6   94        [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.660      3.340
+                                                                              Slow              4.000       0.586      3.414
 7   104       [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.589      3.411
+                                                                              Slow              4.000       0.689      3.311
 8   106       [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.566      3.434
+                                                                              Slow              4.000       0.462      3.538
 9   108       [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.984      3.016
+                                                                              Slow              4.000       0.446      3.554
 10  110       [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              4.000       0.573      3.427
+                                                                              Slow              4.000       0.787      3.213
 
 
 2. Bus Skew Report Per Constraint
@@ -65,15 +65,15 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 RFDAC0_CLK            clk_out1_top_level_clk_wiz_1_0
-                                            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                                                                             top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                                                            Slow         0.543      3.457
+                                                                                                            Slow         0.606      3.394
 
 
-Slack (MET) :             3.457ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+Slack (MET) :             3.394ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Endpoint Destination:   top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Endpoint Destination:   top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Reference Source:       top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
@@ -81,11 +81,11 @@ Slack (MET) :             3.457ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:   -1.170ns
-  Reference Relative Delay:  -1.410ns
-  Relative CRPR:             -0.164ns
+  Endpoint Relative Delay:   -0.654ns
+  Reference Relative Delay:  -0.992ns
+  Relative CRPR:             -0.129ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.543ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.606ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -98,13 +98,13 @@ Endpoint path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.512     2.185    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X104Y301       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.864     2.537    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X103Y275       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X104Y301       FDRE (Prop_HFF_SLICEM_C_Q)
-                                                      0.079     2.264 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.218     2.482    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
-    SLICE_X104Y297       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X103Y275       FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.078     2.615 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.350     2.965    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
+    SLICE_X103Y275       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -122,16 +122,16 @@ Endpoint path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.820     3.627    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X104Y297       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     3.627    
-    SLICE_X104Y297       FDRE (Setup_HFF2_SLICEM_C_D)
-                                                      0.025     3.652    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.787     3.594    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X103Y275       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     3.594    
+    SLICE_X103Y275       FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     3.619    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                           2.482    
-                         clock arrival                          3.652    
+                         data arrival                           2.965    
+                         clock arrival                          3.619    
   -------------------------------------------------------------------
-                         relative delay                        -1.170    
+                         relative delay                        -0.654    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -144,13 +144,13 @@ Reference path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.290     1.811    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X103Y298       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.661     2.182    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X104Y274       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X103Y298       FDRE (Prop_HFF2_SLICEM_C_Q)
-                                                      0.059     1.870 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.095     1.965    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
-    SLICE_X104Y298       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X104Y274       FDRE (Prop_AFF2_SLICEM_C_Q)
+                                                      0.060     2.242 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.100     2.342    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X105Y274       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -168,16 +168,16 @@ Reference path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.058     3.314    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X104Y298       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     3.314    
-    SLICE_X104Y298       FDRE (Hold_DFF2_SLICEM_C_D)
-                                                      0.061     3.375    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.016     3.272    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X105Y274       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     3.272    
+    SLICE_X105Y274       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.334    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           1.965    
-                         clock arrival                          3.375    
+                         data arrival                           2.342    
+                         clock arrival                          3.334    
   -------------------------------------------------------------------
-                         relative delay                        -1.410    
+                         relative delay                        -0.992    
 
 
 
@@ -189,27 +189,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_top_level_clk_wiz_1_0
-                      RFDAC0_CLK            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         0.529      3.471
+                      RFDAC0_CLK            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.484      3.516
 
 
-Slack (MET) :             3.471ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+Slack (MET) :             3.516ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Endpoint Destination:   top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  Endpoint Destination:   top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Source:       top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  Reference Source:       top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Destination:  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Reference Destination:  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:    1.786ns
-  Reference Relative Delay:   1.507ns
-  Relative CRPR:             -0.111ns
+  Endpoint Relative Delay:    1.491ns
+  Reference Relative Delay:   1.232ns
+  Relative CRPR:             -0.086ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.529ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.484ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -229,13 +229,13 @@ Endpoint path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.034     3.290    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X97Y303        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.008     3.264    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X97Y277        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X97Y303        FDRE (Prop_EFF_SLICEM_C_Q)
-                                                      0.076     3.366 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.302     3.668    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X97Y303        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X97Y277        FDRE (Prop_HFF2_SLICEM_C_Q)
+                                                      0.078     3.342 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.286     3.628    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X96Y278        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -246,16 +246,16 @@ Endpoint path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.336     1.857    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X97Y303        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     1.857    
-    SLICE_X97Y303        FDRE (Setup_DFF2_SLICEM_C_D)
-                                                      0.025     1.882    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.591     2.112    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X96Y278        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     2.112    
+    SLICE_X96Y278        FDRE (Setup_DFF2_SLICEM_C_D)
+                                                      0.025     2.137    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           3.668    
-                         clock arrival                          1.882    
+                         data arrival                           3.628    
+                         clock arrival                          2.137    
   -------------------------------------------------------------------
-                         relative delay                         1.786    
+                         relative delay                         1.491    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -275,13 +275,13 @@ Reference path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.821     3.628    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X100Y302       FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.782     3.589    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X97Y276        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X100Y302       FDRE (Prop_HFF2_SLICEL_C_Q)
-                                                      0.059     3.687 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.080     3.767    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
-    SLICE_X98Y302        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X97Y276        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.058     3.647 r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.189     3.836    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X97Y276        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -292,16 +292,16 @@ Reference path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.525     2.198    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X98Y302        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.000     2.198    
-    SLICE_X98Y302        FDRE (Hold_DFF2_SLICEL_C_D)
-                                                      0.062     2.260    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.869     2.542    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X97Y276        FDRE                                         r  top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.542    
+    SLICE_X97Y276        FDRE (Hold_HFF2_SLICEM_C_D)
+                                                      0.062     2.604    top_level_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           3.767    
-                         clock arrival                          2.260    
+                         data arrival                           3.836    
+                         clock arrival                          2.604    
   -------------------------------------------------------------------
-                         relative delay                         1.507    
+                         relative delay                         1.232    
 
 
 
@@ -314,26 +314,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 RFDAC0_CLK            clk_out1_top_level_clk_wiz_1_0
                                             top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.568      3.432
+                                                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.547      3.453
 
 
-Slack (MET) :             3.432ns  (requirement - actual skew)
+Slack (MET) :             3.453ns  (requirement - actual skew)
   Endpoint Source:        top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Endpoint Destination:   top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:   -1.134ns
-  Reference Relative Delay:  -1.393ns
-  Relative CRPR:             -0.170ns
+  Endpoint Relative Delay:   -0.766ns
+  Reference Relative Delay:  -1.037ns
+  Relative CRPR:             -0.137ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.568ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.547ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -346,13 +346,13 @@ Endpoint path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.503     2.176    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X109Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.874     2.547    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X106Y231       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y244       FDRE (Prop_EFF_SLICEM_C_Q)
-                                                      0.076     2.252 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.294     2.546    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
-    SLICE_X109Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X106Y231       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.079     2.626 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.211     2.837    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X106Y230       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -370,16 +370,16 @@ Endpoint path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.848     3.655    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X109Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     3.655    
-    SLICE_X109Y244       FDRE (Setup_DFF2_SLICEM_C_D)
-                                                      0.025     3.680    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.771     3.578    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X106Y230       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     3.578    
+    SLICE_X106Y230       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     3.603    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           2.546    
-                         clock arrival                          3.680    
+                         data arrival                           2.837    
+                         clock arrival                          3.603    
   -------------------------------------------------------------------
-                         relative delay                        -1.134    
+                         relative delay                        -0.766    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -392,13 +392,13 @@ Reference path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.331     1.852    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X110Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.627     2.148    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X103Y232       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y244       FDRE (Prop_DFF_SLICEM_C_Q)
-                                                      0.058     1.910 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.106     2.016    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X110Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X103Y232       FDRE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.061     2.209 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.074     2.283    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
+    SLICE_X102Y232       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -416,16 +416,16 @@ Reference path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.091     3.347    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X110Y244       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     3.347    
-    SLICE_X110Y244       FDRE (Hold_HFF2_SLICEM_C_D)
-                                                      0.062     3.409    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.002     3.258    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X102Y232       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     3.258    
+    SLICE_X102Y232       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.320    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           2.016    
-                         clock arrival                          3.409    
+                         data arrival                           2.283    
+                         clock arrival                          3.320    
   -------------------------------------------------------------------
-                         relative delay                        -1.393    
+                         relative delay                        -1.037    
 
 
 
@@ -439,10 +439,10 @@ From Clock            To Clock              Endpoint Pin                    Refe
 clk_out1_top_level_clk_wiz_1_0
                       RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                                                                             top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                                                            Slow         0.531      3.469
+                                                                                                            Slow         0.716      3.284
 
 
-Slack (MET) :             3.469ns  (requirement - actual skew)
+Slack (MET) :             3.284ns  (requirement - actual skew)
   Endpoint Source:        top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Endpoint Destination:   top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
@@ -453,11 +453,11 @@ Slack (MET) :             3.469ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:    1.771ns
-  Reference Relative Delay:   1.541ns
-  Relative CRPR:             -0.162ns
+  Endpoint Relative Delay:    1.616ns
+  Reference Relative Delay:   1.168ns
+  Relative CRPR:             -0.129ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.531ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.716ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -477,13 +477,13 @@ Endpoint path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.097     3.353    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X109Y301       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.038     3.294    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X106Y282       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y301       FDRE (Prop_HFF2_SLICEM_C_Q)
-                                                      0.078     3.431 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.251     3.682    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
-    SLICE_X108Y300       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X106Y282       FDRE (Prop_HFF2_SLICEL_C_Q)
+                                                      0.080     3.374 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.473     3.847    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X107Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -494,16 +494,16 @@ Endpoint path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.365     1.886    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X108Y300       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.000     1.886    
-    SLICE_X108Y300       FDRE (Setup_HFF2_SLICEL_C_D)
-                                                      0.025     1.911    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.685     2.206    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X107Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     2.206    
+    SLICE_X107Y283       FDRE (Setup_GFF2_SLICEM_C_D)
+                                                      0.025     2.231    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           3.682    
-                         clock arrival                          1.911    
+                         data arrival                           3.847    
+                         clock arrival                          2.231    
   -------------------------------------------------------------------
-                         relative delay                         1.771    
+                         relative delay                         1.616    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -523,13 +523,13 @@ Reference path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.868     3.675    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X111Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.806     3.613    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X105Y281       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y303       FDRE (Prop_EFF_SLICEL_C_Q)
-                                                      0.059     3.734 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.096     3.830    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X111Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X105Y281       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.059     3.672 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.096     3.768    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X105Y281       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -540,16 +540,16 @@ Reference path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.554     2.227    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X111Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     2.227    
-    SLICE_X111Y303       FDRE (Hold_DFF2_SLICEL_C_D)
-                                                      0.062     2.289    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.865     2.538    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X105Y281       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.538    
+    SLICE_X105Y281       FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     2.600    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           3.830    
-                         clock arrival                          2.289    
+                         data arrival                           3.768    
+                         clock arrival                          2.600    
   -------------------------------------------------------------------
-                         relative delay                         1.541    
+                         relative delay                         1.168    
 
 
 
@@ -561,27 +561,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 RFDAC0_CLK            clk_out1_top_level_clk_wiz_1_0
-                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.884      3.116
+                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.635      3.365
 
 
-Slack (MET) :             3.116ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+Slack (MET) :             3.365ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:   -0.805ns
-  Reference Relative Delay:  -1.388ns
-  Relative CRPR:             -0.162ns
+  Endpoint Relative Delay:   -0.649ns
+  Reference Relative Delay:  -1.016ns
+  Relative CRPR:             -0.129ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.884ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.635ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -594,13 +594,13 @@ Endpoint path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.539     2.212    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X108Y301       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.903     2.576    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X107Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X108Y301       FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.079     2.291 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.595     2.886    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X108Y301       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X107Y283       FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.079     2.655 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.340     2.995    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X105Y285       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -618,16 +618,16 @@ Endpoint path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.859     3.666    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X108Y301       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     3.666    
-    SLICE_X108Y301       FDRE (Setup_HFF2_SLICEL_C_D)
-                                                      0.025     3.691    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.812     3.619    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X105Y285       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     3.619    
+    SLICE_X105Y285       FDRE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     3.644    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           2.886    
-                         clock arrival                          3.691    
+                         data arrival                           2.995    
+                         clock arrival                          3.644    
   -------------------------------------------------------------------
-                         relative delay                        -0.805    
+                         relative delay                        -0.649    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -640,13 +640,13 @@ Reference path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.378     1.899    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X110Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.675     2.196    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X106Y288       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y303       FDRE (Prop_HFF_SLICEM_C_Q)
-                                                      0.058     1.957 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.072     2.029    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
-    SLICE_X111Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X106Y288       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.059     2.255 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.096     2.351    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X106Y288       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -664,16 +664,16 @@ Reference path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.099     3.355    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X111Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     3.355    
-    SLICE_X111Y303       FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.062     3.417    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.049     3.305    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X106Y288       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     3.305    
+    SLICE_X106Y288       FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     3.367    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           2.029    
-                         clock arrival                          3.417    
+                         data arrival                           2.351    
+                         clock arrival                          3.367    
   -------------------------------------------------------------------
-                         relative delay                        -1.388    
+                         relative delay                        -1.016    
 
 
 
@@ -687,10 +687,10 @@ From Clock            To Clock              Endpoint Pin                    Refe
 clk_out1_top_level_clk_wiz_1_0
                       RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                                                                             top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.660      3.340
+                                                                                                            Slow         0.586      3.414
 
 
-Slack (MET) :             3.340ns  (requirement - actual skew)
+Slack (MET) :             3.414ns  (requirement - actual skew)
   Endpoint Source:        top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Endpoint Destination:   top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
@@ -701,11 +701,11 @@ Slack (MET) :             3.340ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:    1.926ns
-  Reference Relative Delay:   1.575ns
-  Relative CRPR:             -0.170ns
+  Endpoint Relative Delay:    1.433ns
+  Reference Relative Delay:   1.123ns
+  Relative CRPR:             -0.137ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.660ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.586ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -725,13 +725,13 @@ Endpoint path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.088     3.344    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X110Y250       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.992     3.248    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X107Y230       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y250       FDRE (Prop_EFF_SLICEM_C_Q)
-                                                      0.076     3.420 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.381     3.801    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X110Y250       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X107Y230       FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.076     3.324 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.294     3.618    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X107Y230       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -742,16 +742,16 @@ Endpoint path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.329     1.850    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X110Y250       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.000     1.850    
-    SLICE_X110Y250       FDRE (Setup_DFF2_SLICEM_C_D)
-                                                      0.025     1.875    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.639     2.160    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X107Y230       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.160    
+    SLICE_X107Y230       FDRE (Setup_DFF2_SLICEM_C_D)
+                                                      0.025     2.185    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           3.801    
-                         clock arrival                          1.875    
+                         data arrival                           3.618    
+                         clock arrival                          2.185    
   -------------------------------------------------------------------
-                         relative delay                         1.926    
+                         relative delay                         1.433    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -771,13 +771,13 @@ Reference path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.840     3.647    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X108Y249       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.796     3.603    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X108Y232       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X108Y249       FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.059     3.706 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.099     3.805    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
-    SLICE_X108Y249       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X108Y232       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.059     3.662 r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.069     3.731    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
+    SLICE_X108Y231       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -788,16 +788,16 @@ Reference path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.495     2.168    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X108Y249       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     2.168    
-    SLICE_X108Y249       FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.062     2.230    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.873     2.546    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X108Y231       FDRE                                         r  top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     2.546    
+    SLICE_X108Y231       FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     2.608    top_level_i/rfsoc_data_pipeline_0/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                           3.805    
-                         clock arrival                          2.230    
+                         data arrival                           3.731    
+                         clock arrival                          2.608    
   -------------------------------------------------------------------
-                         relative delay                         1.575    
+                         relative delay                         1.123    
 
 
 
@@ -809,27 +809,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 RFDAC0_CLK            clk_out1_top_level_clk_wiz_1_0
-                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         0.589      3.411
+                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.689      3.311
 
 
-Slack (MET) :             3.411ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+Slack (MET) :             3.311ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:   -1.097ns
-  Reference Relative Delay:  -1.378ns
-  Relative CRPR:             -0.169ns
+  Endpoint Relative Delay:   -0.562ns
+  Reference Relative Delay:  -0.982ns
+  Relative CRPR:             -0.130ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.589ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.689ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -842,13 +842,13 @@ Endpoint path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.496     2.169    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X109Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.940     2.613    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X110Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y257       FDRE (Prop_DFF_SLICEM_C_Q)
-                                                      0.078     2.247 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.328     2.575    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X109Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X110Y240       FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.079     2.692 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.429     3.121    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X111Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -866,16 +866,16 @@ Endpoint path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.840     3.647    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X109Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     3.647    
-    SLICE_X109Y257       FDRE (Setup_HFF2_SLICEM_C_D)
-                                                      0.025     3.672    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.851     3.658    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X111Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     3.658    
+    SLICE_X111Y240       FDRE (Setup_CFF2_SLICEL_C_D)
+                                                      0.025     3.683    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           2.575    
-                         clock arrival                          3.672    
+                         data arrival                           3.121    
+                         clock arrival                          3.683    
   -------------------------------------------------------------------
-                         relative delay                        -1.097    
+                         relative delay                        -0.562    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -888,13 +888,13 @@ Reference path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.313     1.834    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X108Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.711     2.232    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X109Y241       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X108Y257       FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.061     1.895 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.102     1.997    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
-    SLICE_X108Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X109Y241       FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.058     2.290 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.114     2.404    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X109Y241       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -912,16 +912,16 @@ Reference path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.057     3.313    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X108Y257       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.000     3.313    
-    SLICE_X108Y257       FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.062     3.375    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.069     3.325    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X109Y241       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     3.325    
+    SLICE_X109Y241       FDRE (Hold_DFF2_SLICEM_C_D)
+                                                      0.061     3.386    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           1.997    
-                         clock arrival                          3.375    
+                         data arrival                           2.404    
+                         clock arrival                          3.386    
   -------------------------------------------------------------------
-                         relative delay                        -1.378    
+                         relative delay                        -0.982    
 
 
 
@@ -933,27 +933,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_top_level_clk_wiz_1_0
-                      RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.566      3.434
+                      RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.462      3.538
 
 
-Slack (MET) :             3.434ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+Slack (MET) :             3.538ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:    1.863ns
-  Reference Relative Delay:   1.543ns
-  Relative CRPR:             -0.107ns
+  Endpoint Relative Delay:    1.448ns
+  Reference Relative Delay:   1.150ns
+  Relative CRPR:             -0.025ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.566ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.462ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -973,13 +973,13 @@ Endpoint path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.097     3.353    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X109Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.070     3.326    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X110Y285       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y303       FDRE (Prop_HFF_SLICEM_C_Q)
-                                                      0.079     3.432 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.345     3.777    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X108Y302       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X110Y285       FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.076     3.402 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.302     3.704    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X110Y285       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -990,16 +990,16 @@ Endpoint path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.368     1.889    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X108Y302       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     1.889    
-    SLICE_X108Y302       FDRE (Setup_DFF2_SLICEL_C_D)
-                                                      0.025     1.914    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.710     2.231    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X110Y285       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.231    
+    SLICE_X110Y285       FDRE (Setup_DFF2_SLICEM_C_D)
+                                                      0.025     2.256    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           3.777    
-                         clock arrival                          1.914    
+                         data arrival                           3.704    
+                         clock arrival                          2.256    
   -------------------------------------------------------------------
-                         relative delay                         1.863    
+                         relative delay                         1.448    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1019,13 +1019,13 @@ Reference path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.856     3.663    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.848     3.655    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X110Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X108Y305       FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.059     3.722 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.099     3.821    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X110Y283       FDRE (Prop_HFF2_SLICEM_C_Q)
+                                                      0.059     3.714 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.103     3.817    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X111Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -1036,16 +1036,16 @@ Reference path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.543     2.216    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     2.216    
-    SLICE_X108Y305       FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.062     2.278    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.932     2.605    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X111Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     2.605    
+    SLICE_X111Y284       FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.062     2.667    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           3.821    
-                         clock arrival                          2.278    
+                         data arrival                           3.817    
+                         clock arrival                          2.667    
   -------------------------------------------------------------------
-                         relative delay                         1.543    
+                         relative delay                         1.150    
 
 
 
@@ -1057,27 +1057,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 RFDAC0_CLK            clk_out1_top_level_clk_wiz_1_0
-                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.984      3.016
+                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.446      3.554
 
 
-Slack (MET) :             3.016ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+Slack (MET) :             3.554ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:   -0.644ns
-  Reference Relative Delay:  -1.327ns
-  Relative CRPR:             -0.162ns
+  Endpoint Relative Delay:   -0.782ns
+  Reference Relative Delay:  -1.044ns
+  Relative CRPR:             -0.045ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.984ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.446ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1090,13 +1090,13 @@ Endpoint path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.551     2.224    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X109Y304       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.932     2.605    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X111Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y304       FDRE (Prop_DFF2_SLICEM_C_Q)
-                                                      0.080     2.304 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.751     3.055    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
-    SLICE_X109Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X111Y284       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     2.684 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.211     2.895    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X112Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -1114,16 +1114,16 @@ Endpoint path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.867     3.674    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X109Y303       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.000     3.674    
-    SLICE_X109Y303       FDRE (Setup_GFF2_SLICEM_C_D)
-                                                      0.025     3.699    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.845     3.652    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X112Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     3.652    
+    SLICE_X112Y284       FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     3.677    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           3.055    
-                         clock arrival                          3.699    
+                         data arrival                           2.895    
+                         clock arrival                          3.677    
   -------------------------------------------------------------------
-                         relative delay                        -0.644    
+                         relative delay                        -0.782    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1136,13 +1136,13 @@ Reference path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.364     1.885    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.707     2.228    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X111Y284       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X108Y305       FDRE (Prop_HFF_SLICEL_C_Q)
-                                                      0.058     1.943 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.126     2.069    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X111Y284       FDRE (Prop_DFF2_SLICEL_C_Q)
+                                                      0.061     2.289 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.065     2.354    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
+    SLICE_X111Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_top_level_clk_wiz_1_0 rise edge)
@@ -1160,16 +1160,16 @@ Reference path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.078     3.334    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X108Y305       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     3.334    
-    SLICE_X108Y305       FDRE (Hold_DFF2_SLICEL_C_D)
-                                                      0.062     3.396    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.080     3.336    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X111Y283       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     3.336    
+    SLICE_X111Y283       FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     3.398    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           2.069    
-                         clock arrival                          3.396    
+                         data arrival                           2.354    
+                         clock arrival                          3.398    
   -------------------------------------------------------------------
-                         relative delay                        -1.327    
+                         relative delay                        -1.044    
 
 
 
@@ -1181,27 +1181,27 @@ Endpoints: 4
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_top_level_clk_wiz_1_0
-                      RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.573      3.427
+                      RFDAC0_CLK            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.787      3.213
 
 
-Slack (MET) :             3.427ns  (requirement - actual skew)
-  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+Slack (MET) :             3.213ns  (requirement - actual skew)
+  Endpoint Source:        top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Endpoint Destination:   top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
-  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  Reference Source:       top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_top_level_clk_wiz_1_0)
-  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Reference Destination:  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by RFDAC0_CLK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            4.000ns
-  Endpoint Relative Delay:    1.909ns
-  Reference Relative Delay:   1.541ns
-  Relative CRPR:             -0.066ns
+  Endpoint Relative Delay:    1.528ns
+  Reference Relative Delay:   1.145ns
+  Relative CRPR:             -0.265ns
   Uncertainty:                0.140ns
-  Actual Bus Skew:            0.573ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.787ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1221,13 +1221,13 @@ Endpoint path:
                          net (fo=1, routed)           0.244     1.228    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     1.256 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.035     3.291    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X105Y258       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        2.075     3.331    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X111Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X105Y258       FDRE (Prop_DFF_SLICEL_C_Q)
-                                                      0.079     3.370 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.365     3.735    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
-    SLICE_X105Y258       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X111Y240       FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     3.410 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.382     3.792    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
+    SLICE_X110Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -1238,16 +1238,16 @@ Endpoint path:
                          net (fo=2, routed)           0.126     0.407    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.114     0.521 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.280     1.801    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X105Y258       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     1.801    
-    SLICE_X105Y258       FDRE (Setup_HFF2_SLICEL_C_D)
-                                                      0.025     1.826    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.718     2.239    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X110Y240       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     2.239    
+    SLICE_X110Y240       FDRE (Setup_GFF2_SLICEM_C_D)
+                                                      0.025     2.264    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           3.735    
-                         clock arrival                          1.826    
+                         data arrival                           3.792    
+                         clock arrival                          2.264    
   -------------------------------------------------------------------
-                         relative delay                         1.909    
+                         relative delay                         1.528    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1267,13 +1267,13 @@ Reference path:
                          net (fo=1, routed)           0.214     1.783    top_level_i/clk_wiz_1/inst/clk_out1_top_level_clk_wiz_1_0
     BUFGCE_X0Y50         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.807 r  top_level_i/clk_wiz_1/inst/clkout1_buf/O
-    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.805     3.612    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X104Y261       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    X4Y3 (CLOCK_ROOT)    net (fo=6457, routed)        1.811     3.618    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X112Y239       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X104Y261       FDRE (Prop_DFF_SLICEM_C_Q)
-                                                      0.058     3.670 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.084     3.754    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X104Y259       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X112Y239       FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.058     3.676 r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.078     3.754    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
+    SLICE_X112Y238       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock RFDAC0_CLK rise edge)
@@ -1284,16 +1284,16 @@ Reference path:
                          net (fo=2, routed)           0.207     0.543    top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/clk_dac0_i
     BUFG_GT_X1Y96        BUFG_GT (Prop_BUFG_GT_I_O)
                                                       0.130     0.673 r  top_level_i/usp_rf_data_converter_0/inst/i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl/dac0_bufg_gt/O
-    X4Y4 (CLOCK_ROOT)    net (fo=1540, routed)        1.479     2.152    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X104Y259       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     2.152    
-    SLICE_X104Y259       FDRE (Hold_DFF2_SLICEM_C_D)
-                                                      0.061     2.213    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+    X4Y3 (CLOCK_ROOT)    net (fo=1548, routed)        1.874     2.547    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X112Y238       FDRE                                         r  top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     2.547    
+    SLICE_X112Y238       FDRE (Hold_HFF2_SLICEM_C_D)
+                                                      0.062     2.609    top_level_i/rfsoc_data_pipeline_1/inst/axis_data_fifo_clock_crossing/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
                          data arrival                           3.754    
-                         clock arrival                          2.213    
+                         clock arrival                          2.609    
   -------------------------------------------------------------------
-                         relative delay                         1.541    
+                         relative delay                         1.145    
 
 
 

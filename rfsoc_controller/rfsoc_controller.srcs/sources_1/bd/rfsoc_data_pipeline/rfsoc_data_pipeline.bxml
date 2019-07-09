@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="rfsoc_data_pipeline" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562630206"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562630206"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562630206"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562630206"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562634110"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562634110"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562634110"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562634110"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_0\rfsoc_data_pipeline_axis_data_fifo_0_0.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -136,17 +136,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\rfsoc_data_pipeline.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\rfsoc_data_pipeline.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_3\rfsoc_data_pipeline_axis_data_fifo_0_3.xci" Type="IP">
         <Instance HierarchyPath="axis_data_fifo_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -185,6 +174,17 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\rfsoc_data_pipeline.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\rfsoc_data_pipeline.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="rfsoc_data_pipeline_ooc.xdc" Type="XDC">

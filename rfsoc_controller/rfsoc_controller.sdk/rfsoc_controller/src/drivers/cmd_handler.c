@@ -31,8 +31,8 @@ void handle_cmd()
 		cmd_load_waveform();
 		break;
 	case RF_TRIGGER:
-		uart_send_ack();
 		rf_trigger();
+		uart_send_ack();
 		break;
 	case RF_SET_TRIGGER_MODE:
 		uart_send_ack();
@@ -47,8 +47,8 @@ void handle_cmd()
 		cmd_set_repeat_cycles();
 		break;
 	case RF_FLUSH_BUFFER:
-		uart_send_ack();
 		rf_flush_buffer();
+		uart_send_ack();
 		break;
 	case RF_SET_TRIGGER:
 		uart_send_ack();

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# count_buffer, gpio_trigger_breakin
+# count_buffer, gpio_trigger_breakin, trigger_buffer
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -377,6 +377,17 @@ proc create_root_design { parentCell } {
   # Create instance: rst_clk_wiz_1_100M, and set properties
   set rst_clk_wiz_1_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_1_100M ]
 
+  # Create instance: trigger_buffer_0, and set properties
+  set block_name trigger_buffer
+  set block_cell_name trigger_buffer_0
+  if { [catch {set trigger_buffer_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $trigger_buffer_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: usp_rf_data_converter_0, and set properties
   set usp_rf_data_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:usp_rf_data_converter:2.1 usp_rf_data_converter_0 ]
   set_property -dict [ list \
@@ -407,6 +418,14 @@ proc create_root_design { parentCell } {
    CONFIG.LOGO_FILE {data/sym_notgate.png} \
  ] $util_vector_logic_0
 
+  # Create instance: util_vector_logic_1, and set properties
+  set util_vector_logic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_1 ]
+  set_property -dict [ list \
+   CONFIG.C_OPERATION {or} \
+   CONFIG.C_SIZE {1} \
+   CONFIG.LOGO_FILE {data/sym_orgate.png} \
+ ] $util_vector_logic_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins count_buffer_0/s_axis]
   connect_bd_intf_net -intf_net count_buffer_0_m_axis [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins count_buffer_0/m_axis]
@@ -430,22 +449,26 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net Net [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins rfsoc_data_pipeline_0/gpio_in] [get_bd_pins rfsoc_data_pipeline_1/gpio_in]
-  connect_bd_net -net Net3 [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins count_buffer_0/s_axis_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_0/rf_clock] [get_bd_pins rfsoc_data_pipeline_1/rf_clock] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk]
-  connect_bd_net -net Net4 [get_bd_pins count_buffer_0/s_axis_resetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins rfsoc_data_pipeline_0/rf_resetn] [get_bd_pins rfsoc_data_pipeline_1/rf_resetn] [get_bd_pins usp_rf_data_converter_0/s0_axis_aresetn]
+  connect_bd_net -net Net3 [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins count_buffer_0/s_axis_clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_0/rf_clock] [get_bd_pins rfsoc_data_pipeline_1/rf_clock] [get_bd_pins trigger_buffer_0/clk] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk]
+  connect_bd_net -net Net4 [get_bd_pins count_buffer_0/s_axis_resetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins rfsoc_data_pipeline_0/rf_resetn] [get_bd_pins rfsoc_data_pipeline_1/rf_resetn] [get_bd_pins trigger_buffer_0/reset] [get_bd_pins usp_rf_data_converter_0/s0_axis_aresetn]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins count_buffer_0/gpio_in]
   connect_bd_net -net axi_uartlite_0_tx [get_bd_ports tx_0] [get_bd_pins axi_uartlite_0/tx]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
-  connect_bd_net -net ext_trigger_0_0_1 [get_bd_ports ext_trigger_0_0] [get_bd_pins gpio_trigger_breakin_0/trigger_in] [get_bd_pins rfsoc_data_pipeline_0/ext_trigger_0] [get_bd_pins rfsoc_data_pipeline_1/ext_trigger_0]
+  connect_bd_net -net ext_trigger_0_0_1 [get_bd_ports ext_trigger_0_0] [get_bd_pins gpio_trigger_breakin_0/trigger_in] [get_bd_pins trigger_buffer_0/trigger_in]
   connect_bd_net -net gpio_trigger_breakin_0_gpio_out [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins gpio_trigger_breakin_0/gpio_out]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins clk_wiz_1/reset] [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins count_buffer_0/m_axis_clk] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rfsoc_data_pipeline_0/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_1/microblaze_clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk]
   connect_bd_net -net resetn_1 [get_bd_ports resetn] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net rfsoc_data_pipeline_0_pipeline_active [get_bd_pins rfsoc_data_pipeline_0/pipeline_active] [get_bd_pins util_vector_logic_1/Op1]
+  connect_bd_net -net rfsoc_data_pipeline_1_pipeline_active [get_bd_pins rfsoc_data_pipeline_1/pipeline_active] [get_bd_pins util_vector_logic_1/Op2]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rfsoc_data_pipeline_0/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_1/microblaze_resetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn] [get_bd_pins usp_rf_data_converter_0/s_axi_aresetn]
   connect_bd_net -net rx_0_1 [get_bd_ports rx_0] [get_bd_pins axi_uartlite_0/rx]
   connect_bd_net -net shift_register_0_data_out [get_bd_pins count_buffer_0/gpio_out] [get_bd_pins rfsoc_data_pipeline_0/count_val_in_0] [get_bd_pins rfsoc_data_pipeline_1/count_val_in_0]
+  connect_bd_net -net trigger_buffer_0_trigger_out [get_bd_pins rfsoc_data_pipeline_0/ext_trigger_0] [get_bd_pins rfsoc_data_pipeline_1/ext_trigger_0] [get_bd_pins trigger_buffer_0/trigger_out]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net util_vector_logic_1_Res [get_bd_pins trigger_buffer_0/pipeline_active_in] [get_bd_pins util_vector_logic_1/Res]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg

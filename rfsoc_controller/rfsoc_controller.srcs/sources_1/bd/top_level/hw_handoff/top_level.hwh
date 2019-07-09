@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  8 16:57:41 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  8 18:08:38 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -22,8 +22,7 @@
     <PORT DIR="I" NAME="ext_trigger_0_0" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="gpio_trigger_breakin_0" PORT="trigger_in"/>
-        <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="ext_trigger_0"/>
-        <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="ext_trigger_0"/>
+        <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_n">
@@ -5462,6 +5461,7 @@
             <CONNECTION INSTANCE="count_buffer_0" PORT="s_axis_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_resetn"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5494,9 +5494,9 @@
             <CONNECTION INSTANCE="count_buffer_0" PORT="gpio_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger_0" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
+        <PORT DIR="I" NAME="ext_trigger_0" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="gpio_in" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -5527,6 +5527,11 @@
         <PORT DIR="I" NAME="microblaze_resetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_0_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
@@ -5610,9 +5615,9 @@
             <CONNECTION INSTANCE="count_buffer_0" PORT="gpio_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger_0" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
+        <PORT DIR="I" NAME="ext_trigger_0" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="trigger_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="gpio_in" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -5643,6 +5648,11 @@
         <PORT DIR="I" NAME="microblaze_resetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_1_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
@@ -5770,6 +5780,43 @@
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="microblaze_resetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/trigger_buffer_0" HWVERSION="1.0" INSTANCE="trigger_buffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_buffer" VLNV="xilinx.com:module_ref:trigger_buffer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="count_cycles" VALUE="5"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_level_trigger_buffer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_out" SIGIS="undef" SIGNAME="trigger_buffer_0_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="ext_trigger_0"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="ext_trigger_0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -7215,6 +7262,7 @@
             <CONNECTION INSTANCE="count_buffer_0" PORT="s_axis_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_clock"/>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
@@ -7524,6 +7572,34 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="ext_reset_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_1" HWVERSION="2.0" INSTANCE="util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="or"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_level_util_vector_logic_1_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_orgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_0_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_1_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="trigger_buffer_0" PORT="pipeline_active_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

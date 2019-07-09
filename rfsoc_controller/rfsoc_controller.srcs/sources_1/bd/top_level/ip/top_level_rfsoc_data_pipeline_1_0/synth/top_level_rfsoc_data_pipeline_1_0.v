@@ -67,6 +67,7 @@ module top_level_rfsoc_data_pipeline_1_0 (
   m_axis_0_tvalid,
   microblaze_clk,
   microblaze_resetn,
+  pipeline_active,
   rf_clock,
   rf_resetn
 );
@@ -96,6 +97,7 @@ input wire microblaze_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *)
 input wire microblaze_resetn;
+output wire pipeline_active;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *)
 input wire rf_clock;
@@ -115,6 +117,7 @@ input wire rf_resetn;
     .m_axis_0_tvalid(m_axis_0_tvalid),
     .microblaze_clk(microblaze_clk),
     .microblaze_resetn(microblaze_resetn),
+    .pipeline_active(pipeline_active),
     .rf_clock(rf_clock),
     .rf_resetn(rf_resetn)
   );

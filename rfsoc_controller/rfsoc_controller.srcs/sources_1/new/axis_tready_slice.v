@@ -49,15 +49,14 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     input wire mloop_axis_tready, 
     
     input wire [31:0] count_val_in,
-    (* dont_touch = "true" *)output wire [31:0] count_out,
-    (* dont_touch = "true" *)output wire [1:0] state_out
+    output wire pipeline_active
 
     
     );
     
     assign count_out = count;
     assign state_out = state;
-    
+    assign pipeline_active = s_axis_tready;
     
     wire [31:0] count_val;
     assign count_val = count_val_in;

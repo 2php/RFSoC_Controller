@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jul  8 16:57:34 2019
+//Date        : Mon Jul  8 18:08:37 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,7 +917,7 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=29,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=2,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (dac0_clk_clk_n,
     dac0_clk_clk_p,
@@ -1093,9 +1093,11 @@ module top_level
   wire [255:0]rfsoc_data_pipeline_0_m_axis_0_TDATA;
   wire rfsoc_data_pipeline_0_m_axis_0_TREADY;
   wire rfsoc_data_pipeline_0_m_axis_0_TVALID;
+  wire rfsoc_data_pipeline_0_pipeline_active;
   wire [255:0]rfsoc_data_pipeline_1_m_axis_0_TDATA;
   wire rfsoc_data_pipeline_1_m_axis_0_TREADY;
   wire rfsoc_data_pipeline_1_m_axis_0_TVALID;
+  wire rfsoc_data_pipeline_1_pipeline_active;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
@@ -1103,11 +1105,13 @@ module top_level
   wire [31:0]shift_register_0_data_out;
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
+  wire trigger_buffer_0_trigger_out;
   wire usp_rf_data_converter_0_vout00_V_N;
   wire usp_rf_data_converter_0_vout00_V_P;
   wire usp_rf_data_converter_0_vout01_V_N;
   wire usp_rf_data_converter_0_vout01_V_P;
   wire [0:0]util_vector_logic_0_Res;
+  wire [0:0]util_vector_logic_1_Res;
 
   assign dac0_clk_1_CLK_N = dac0_clk_clk_n;
   assign dac0_clk_1_CLK_P = dac0_clk_clk_p;
@@ -1429,13 +1433,14 @@ module top_level
         .S_AXIS_0_tready(microblaze_0_M0_AXIS_TREADY),
         .S_AXIS_0_tvalid(microblaze_0_M0_AXIS_TVALID),
         .count_val_in_0(shift_register_0_data_out),
-        .ext_trigger_0(ext_trigger_0_0_1),
+        .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
         .m_axis_0_tdata(rfsoc_data_pipeline_0_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_0_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_0_m_axis_0_TVALID),
         .microblaze_clk(microblaze_0_Clk),
         .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_0_pipeline_active),
         .rf_clock(Net3),
         .rf_resetn(Net4));
   top_level_rfsoc_data_pipeline_1_0 rfsoc_data_pipeline_1
@@ -1443,13 +1448,14 @@ module top_level
         .S_AXIS_0_tready(microblaze_0_M1_AXIS_TREADY),
         .S_AXIS_0_tvalid(microblaze_0_M1_AXIS_TVALID),
         .count_val_in_0(shift_register_0_data_out),
-        .ext_trigger_0(ext_trigger_0_0_1),
+        .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
         .m_axis_0_tdata(rfsoc_data_pipeline_1_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_1_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_1_m_axis_0_TVALID),
         .microblaze_clk(microblaze_0_Clk),
         .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_1_pipeline_active),
         .rf_clock(Net3),
         .rf_resetn(Net4));
   top_level_rst_clk_wiz_1_100M_0 rst_clk_wiz_1_100M
@@ -1461,6 +1467,12 @@ module top_level
         .mb_reset(rst_clk_wiz_1_100M_mb_reset),
         .peripheral_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .slowest_sync_clk(microblaze_0_Clk));
+  top_level_trigger_buffer_0_0 trigger_buffer_0
+       (.clk(Net3),
+        .pipeline_active_in(util_vector_logic_1_Res),
+        .reset(Net4),
+        .trigger_in(ext_trigger_0_0_1),
+        .trigger_out(trigger_buffer_0_trigger_out));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.clk_dac0(Net3),
         .dac0_clk_n(dac0_clk_1_CLK_N),
@@ -1501,6 +1513,10 @@ module top_level
   top_level_util_vector_logic_0_0 util_vector_logic_0
        (.Op1(resetn_1),
         .Res(util_vector_logic_0_Res));
+  top_level_util_vector_logic_1_0 util_vector_logic_1
+       (.Op1(rfsoc_data_pipeline_0_pipeline_active),
+        .Op2(rfsoc_data_pipeline_1_pipeline_active),
+        .Res(util_vector_logic_1_Res));
 endmodule
 
 module top_level_microblaze_0_axi_periph_0

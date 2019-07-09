@@ -7,7 +7,6 @@ Created on Mon Jul  8 17:00:22 2019
 
 import init_board as ib
 import RFSoC_Board as rf
-import time
 #initialize the board object and get the board back
 board = ib.init_board_object("COM4")
 
@@ -30,7 +29,7 @@ board.write_channel(1)
 board.set_trigger_mode(rf.TRIGGER_CYCLES)
 
 #set the trigger cycles
-board.set_repeat_cycles(15)
+board.set_repeat_cycles(3*10)
 
 #set the loopback mode
 board.set_loopback(rf.YES)

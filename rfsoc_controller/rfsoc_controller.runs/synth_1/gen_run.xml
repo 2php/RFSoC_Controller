@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1562630269">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1562634525">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_level_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="top_level_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_level_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_level_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="top_level_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/count_buffer.v">
@@ -19,6 +16,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/gpio_trigger_breakin.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/trigger_buffer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -79,14 +83,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/trigger_buffer.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -123,12 +119,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rfsoc_data_pipeline_axis_mux_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="rfsoc_data_pipeline_gpio_buffer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_count_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_gpio_trigger_breakin_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_util_vector_logic_1_0"/>
 </GenRun>

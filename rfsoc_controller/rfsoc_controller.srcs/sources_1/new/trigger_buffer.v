@@ -22,12 +22,13 @@
 
 module trigger_buffer
 #(
-    parameter count_cycles = 2000
+    parameter count_cycles = 5
 )
 (
     input wire clk,
     input wire reset,
     input wire trigger_in,
+    input wire pipeline_active_in,
     output reg trigger_out
     );
     
@@ -58,7 +59,7 @@ module trigger_buffer
             case(state)
             
                 state_wait_trigger: begin
-                    if(trigger_in == 1'b1) begin
+                    if(trigger_in == 1'b1 && pipeline_active_in == 1'b0) begin
                         state <= state_trigger;
                         trigger_out <= 1'b1;
                     end
@@ -76,7 +77,7 @@ module trigger_buffer
                 end
                 
                 state_cleanup: begin
-                    if(trigger_in == 1'b0) begin
+                    if(trigger_in == 1'b0 && pipeline_active_in == 1'b0) begin
                         state <= state_wait_trigger;
                     end
                 end
