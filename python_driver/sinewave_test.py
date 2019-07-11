@@ -11,7 +11,7 @@ import RFSoC_Board as rf
 board = ib.init_board_object("COM4")
 
 #add a channel and set the period to 2 over the main frequency
-wf = rf.WaveFile("sine_wave.txt", 1*rf.DAC_WORD_PERIOD)
+wf = rf.WaveFile("sine_wave.txt", 1*rf.DAC_WORD_PERIOD, 0)
 c0 = rf.Channel(0, wf)
 c1 = rf.Channel(1, wf)
 

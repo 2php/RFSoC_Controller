@@ -70,7 +70,8 @@ module rfsoc_data_pipeline_axis_tready_slice_0_0 (
   mloop_axis_tvalid,
   mloop_axis_tready,
   count_val_in,
-  pipeline_active
+  pipeline_active,
+  is_locking
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m_axis:mloop_axis:s_axis, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0" *)
@@ -106,10 +107,13 @@ output wire mloop_axis_tvalid;
 input wire mloop_axis_tready;
 input wire [31 : 0] count_val_in;
 output wire pipeline_active;
+input wire is_locking;
 
   axis_tready_slice #(
     .trigger_override_bit(0),
     .ready_bit(1),
+    .sclk(3),
+    .sdata(4),
     .buffer_flush_bit(5)
   ) inst (
     .clk(clk),
@@ -127,6 +131,7 @@ output wire pipeline_active;
     .mloop_axis_tvalid(mloop_axis_tvalid),
     .mloop_axis_tready(mloop_axis_tready),
     .count_val_in(count_val_in),
-    .pipeline_active(pipeline_active)
+    .pipeline_active(pipeline_active),
+    .is_locking(is_locking)
   );
 endmodule

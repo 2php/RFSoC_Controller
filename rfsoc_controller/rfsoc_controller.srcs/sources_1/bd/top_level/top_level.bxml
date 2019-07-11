@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="top_level" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562710518"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562710518"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562710518"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562710518"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1562859414"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1562859414"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1562859414"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1562859414"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\top_level_microblaze_0_0\top_level_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -193,6 +193,30 @@
       </File>
       <File Name="ip\top_level_rfsoc_data_pipeline_3_0\top_level_rfsoc_data_pipeline_3_0.xci" Type="IP">
         <Instance HierarchyPath="rfsoc_data_pipeline_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\top_level_gpio_buffer_0_0\top_level_gpio_buffer_0_0.xci" Type="IP">
+        <Instance HierarchyPath="gpio_buffer_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\top_level_axis_data_fifo_1_0\top_level_axis_data_fifo_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\top_level_locking_sr_0_0\top_level_locking_sr_0_0.xci" Type="IP">
+        <Instance HierarchyPath="locking_sr_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

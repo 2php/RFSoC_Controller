@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jul  8 18:01:50 2019
+//Date        : Wed Jul 10 18:14:55 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_data_pipeline_wrapper.bd
 //Design      : rfsoc_data_pipeline_wrapper
@@ -16,6 +16,7 @@ module rfsoc_data_pipeline_wrapper
     count_val_in_0,
     ext_trigger_0,
     gpio_in,
+    is_locking,
     m_axis_0_tdata,
     m_axis_0_tready,
     m_axis_0_tvalid,
@@ -30,6 +31,7 @@ module rfsoc_data_pipeline_wrapper
   input [31:0]count_val_in_0;
   input ext_trigger_0;
   input [7:0]gpio_in;
+  input is_locking;
   output [255:0]m_axis_0_tdata;
   input m_axis_0_tready;
   output m_axis_0_tvalid;
@@ -45,6 +47,7 @@ module rfsoc_data_pipeline_wrapper
   wire [31:0]count_val_in_0;
   wire ext_trigger_0;
   wire [7:0]gpio_in;
+  wire is_locking;
   wire [255:0]m_axis_0_tdata;
   wire m_axis_0_tready;
   wire m_axis_0_tvalid;
@@ -61,6 +64,7 @@ module rfsoc_data_pipeline_wrapper
         .count_val_in_0(count_val_in_0),
         .ext_trigger_0(ext_trigger_0),
         .gpio_in(gpio_in),
+        .is_locking(is_locking),
         .m_axis_0_tdata(m_axis_0_tdata),
         .m_axis_0_tready(m_axis_0_tready),
         .m_axis_0_tvalid(m_axis_0_tvalid),

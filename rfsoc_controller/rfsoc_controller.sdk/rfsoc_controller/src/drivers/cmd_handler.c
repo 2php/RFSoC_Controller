@@ -54,6 +54,14 @@ void handle_cmd()
 		uart_send_ack();
 		cmd_set_trigger();
 		break;
+	case RF_SET_LOCKING_WAVEFORM:
+		uart_send_ack();
+		cmd_set_locking_waveform();
+		break;
+	case RF_SET_LOCKING_SELECT:
+		uart_send_ack();
+		cmd_set_locking_select();
+		break;
 
 		//Test command cases
 	case PULSE_TEST:
@@ -82,6 +90,33 @@ void handle_cmd()
 ////////////////////////////////////////////
 //Python command implementations////////////
 ////////////////////////////////////////////
+
+void cmd_set_locking_select()
+{
+	//Recieve 2 bytes from python as our select
+	u8 bytes[2];
+	uart_recieve(bytes, 2);
+
+
+	//Write that as our locking waveform
+	rf_set_locking_select(bytes);
+
+	uart_send_ack();
+}
+
+void cmd_set_locking_waveform()
+{
+	//Recieve 32 bytes from python as our waveform
+	u8 waveform[32];
+	uart_recieve(waveform, 32);
+
+
+	//Write that as our locking waveform
+	rf_set_locking_waveform(waveform);
+
+	uart_send_ack();
+
+}
 
 void cmd_set_repeat_cycles()
 {

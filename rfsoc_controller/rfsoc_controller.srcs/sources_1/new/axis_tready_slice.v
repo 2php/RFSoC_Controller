@@ -24,6 +24,8 @@ module axis_tready_slice
 #(
 parameter trigger_override_bit = 0,//Tells the state machine to trigger continuously instead of for a set number of clock cycles
 parameter ready_bit = 1,//Tells the state machine to trigger
+parameter sclk = 3,//Used for loading the locking cycle
+parameter sdata = 4,
 parameter buffer_flush_bit = 5//Used for setting all outputs to 0
 )
 (
@@ -49,7 +51,9 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     input wire mloop_axis_tready, 
     
     input wire [31:0] count_val_in,
-    output wire pipeline_active
+    output wire pipeline_active,
+    
+    input wire is_locking
 
     
     );
@@ -67,6 +71,9 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     localparam [1:0] state_wait_trigger = 2'b00,
 		             state_trigger = 2'b01,
 		             state_cleanup = 2'b10; 
+    
+    wire [255:0] locking_waveform;
+    shift_register #(256) sr(.clk(clk), .sclk(gpio_in[sclk]), .reset(reset), .data_in(gpio_in[sdata]), .data_out(locking_waveform));
     
     initial begin
          s_axis_tready <= 1'b0;
@@ -153,7 +160,7 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     end
     
     
-    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : s_axis_tdata;
+    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (is_locking == 1'b1 ? locking_waveform : 0));
 	assign mloop_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : s_axis_tdata; 
 	assign m_axis_tvalid = 1'b1;
     

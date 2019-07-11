@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Jul  9 15:27:50 2019
+| Date             : Thu Jul 11 08:45:04 2019
 | Host             : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_wrapper_power_routed.rpt -pb top_level_wrapper_power_summary_routed.pb -rpx top_level_wrapper_power_routed.rpx
 | Design           : top_level_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.171        |
+| Total On-Chip Power (W)  | 2.185        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.053        |
+| Dynamic (W)              | 1.068        |
 | Device Static (W)        | 1.118        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 98.3         |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.050 |       47 |       --- |             --- |
-| CLB Logic                |     0.040 |    21695 |       --- |             --- |
-|   LUT as Logic           |     0.024 |     7202 |    425280 |            1.69 |
-|   LUT as Distributed RAM |     0.012 |      824 |    213600 |            0.39 |
-|   Register               |     0.003 |     9605 |    850560 |            1.13 |
+| Clocks                   |     0.051 |       47 |       --- |             --- |
+| CLB Logic                |     0.045 |    22968 |       --- |             --- |
+|   LUT as Logic           |     0.028 |     7767 |    425280 |            1.83 |
+|   LUT as Distributed RAM |     0.013 |      832 |    213600 |            0.39 |
+|   Register               |     0.003 |    10767 |    850560 |            1.27 |
 |   CARRY8                 |    <0.001 |       85 |     53160 |            0.16 |
 |   LUT as Shift Register  |    <0.001 |      102 |    213600 |            0.05 |
-|   Others                 |    <0.001 |     1075 |       --- |             --- |
+|   Others                 |    <0.001 |     1099 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      133 |    425280 |            0.03 |
 |   BUFG                   |     0.000 |        1 |        64 |            1.56 |
-| Signals                  |     0.044 |    18775 |       --- |             --- |
+| Signals                  |     0.052 |    19981 |       --- |             --- |
 | Block RAM                |     0.073 |       48 |      1080 |            4.44 |
 | RFAMS                    |     0.746 |        8 |       --- |             --- |
 |   RFDAC                  |     0.746 |        4 |         4 |          100.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.003 |        6 |       408 |            1.47 |
 | Static Power             |     1.118 |          |           |                 |
-| Total                    |     2.171 |          |           |                 |
+| Total                    |     2.185 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.518 |       0.234 |      0.284 |
+| Vccint          |       0.850 |     0.535 |       0.252 |      0.284 |
 | Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |
 | Vccbram         |       0.850 |     0.040 |       0.009 |      0.031 |
 | Vccaux          |       1.800 |     0.335 |       0.054 |      0.281 |
@@ -177,26 +177,28 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_level_wrapper             |     1.053 |
-|   top_level_i                 |     1.053 |
+| top_level_wrapper             |     1.068 |
+|   top_level_i                 |     1.067 |
 |     axis_data_fifo_0          |     0.003 |
 |       inst                    |     0.003 |
+|     axis_data_fifo_1          |     0.002 |
+|       inst                    |     0.002 |
 |     clk_wiz_1                 |     0.101 |
 |       inst                    |     0.101 |
 |     microblaze_0              |     0.011 |
 |       U0                      |     0.011 |
 |     microblaze_0_local_memory |     0.016 |
 |       lmb_bram                |     0.016 |
-|     rfsoc_data_pipeline_0     |     0.040 |
-|       inst                    |     0.040 |
-|     rfsoc_data_pipeline_1     |     0.037 |
-|       inst                    |     0.037 |
-|     rfsoc_data_pipeline_2     |     0.034 |
-|       inst                    |     0.034 |
-|     rfsoc_data_pipeline_3     |     0.038 |
+|     rfsoc_data_pipeline_0     |     0.042 |
+|       inst                    |     0.042 |
+|     rfsoc_data_pipeline_1     |     0.041 |
+|       inst                    |     0.041 |
+|     rfsoc_data_pipeline_2     |     0.038 |
 |       inst                    |     0.038 |
-|     usp_rf_data_converter_0   |     0.769 |
-|       inst                    |     0.769 |
+|     rfsoc_data_pipeline_3     |     0.041 |
+|       inst                    |     0.041 |
+|     usp_rf_data_converter_0   |     0.770 |
+|       inst                    |     0.770 |
 +-------------------------------+-----------+
 
 

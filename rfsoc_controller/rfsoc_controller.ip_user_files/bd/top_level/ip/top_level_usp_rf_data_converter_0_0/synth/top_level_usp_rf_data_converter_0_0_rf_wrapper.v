@@ -226,6 +226,12 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   output            vout01_p,
   output            vout01_n,
 
+  output            vout02_p,
+  output            vout02_n,
+
+  output            vout03_p,
+  output            vout03_n,
+
   // DAC AXI Streaming Data for DAC33
   input  [255:0]    dac00_data_in,
   input             dac00_valid_in,
@@ -988,8 +994,8 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   assign data_dac3        = {dac33_data_in, dac23_data_in, dac13_data_in, dac03_data_in};
   assign dac00_ready_out = dac0_done_sync;
   assign dac01_ready_out = dac0_done_sync;
-  assign dac02_ready_out = 1'b0;
-  assign dac03_ready_out = 1'b0;
+  assign dac02_ready_out = dac0_done_sync;
+  assign dac03_ready_out = dac0_done_sync;
   assign dac10_ready_out = 1'b0;
   assign dac11_ready_out = 1'b0;
   assign dac12_ready_out = 1'b0;
@@ -1567,7 +1573,7 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
     .XPA_SAMPLE_RATE_MSPS (4000.0),
-    .XPA_NUM_DACS         (2),
+    .XPA_NUM_DACS         (4),
     .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
     .XPA_CFG0             (1),
@@ -1621,10 +1627,10 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .VOUT0_P            (vout00_p),                      // output
     .VOUT1_N            (vout01_n),                      // output
     .VOUT1_P            (vout01_p),                      // output
-    .VOUT2_N            (),                               // output
-    .VOUT2_P            (),                               // output
-    .VOUT3_N            (),                               // output
-    .VOUT3_P            ()                                // output
+    .VOUT2_N            (vout02_n),                      // output
+    .VOUT2_P            (vout02_p),                      // output
+    .VOUT3_N            (vout03_n),                      // output
+    .VOUT3_P            (vout03_p)                       // output
   );
 
   HSDAC #(

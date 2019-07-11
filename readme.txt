@@ -1,1 +1,1 @@
-blah blah blah
+RFSoC Controller for the Marandi Group. Journal paper and doccumentation will be uploaded by the end of August.

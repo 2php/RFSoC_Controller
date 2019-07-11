@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Jul  9 15:15:04 2019
+//Date        : Thu Jul 11 08:36:52 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,7 +917,7 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=30,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=4,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=33,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=4,bdsource=USER,da_axi4_cnt=3,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (dac0_clk_clk_n,
     dac0_clk_clk_p,
@@ -951,10 +951,10 @@ module top_level
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout00 V_P" *) output vout00_v_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout01 V_N" *) output vout01_v_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout01 V_P" *) output vout01_v_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout02 " *) output vout02_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout02 " *) output vout02_v_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 " *) output vout03_v_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 " *) output vout03_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout02 V_N" *) output vout02_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout02 V_P" *) output vout02_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 V_N" *) output vout03_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 V_P" *) output vout03_v_p;
 
   wire [7:0]Net;
   wire Net3;
@@ -964,6 +964,9 @@ module top_level
   wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
+  wire [7:0]axis_data_fifo_1_M_AXIS_TDATA;
+  wire axis_data_fifo_1_M_AXIS_TREADY;
+  wire axis_data_fifo_1_M_AXIS_TVALID;
   wire clk_wiz_1_locked;
   wire [31:0]count_buffer_0_m_axis_TDATA;
   wire count_buffer_0_m_axis_TREADY;
@@ -973,7 +976,15 @@ module top_level
   wire diff_clock_rtl_1_CLK_N;
   wire diff_clock_rtl_1_CLK_P;
   wire ext_trigger_0_0_1;
+  wire [7:0]gpio_buffer_0_gpio_out;
+  wire [7:0]gpio_buffer_0_m_axis_TDATA;
+  wire gpio_buffer_0_m_axis_TREADY;
+  wire gpio_buffer_0_m_axis_TVALID;
   wire [7:0]gpio_trigger_breakin_0_gpio_out;
+  wire locking_sr_0_ch0;
+  wire locking_sr_0_ch1;
+  wire locking_sr_0_ch2;
+  wire locking_sr_0_ch3;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M0_AXIS_TDATA;
@@ -1211,6 +1222,16 @@ module top_level
         .s_axis_tdata(count_buffer_0_m_axis_TDATA),
         .s_axis_tready(count_buffer_0_m_axis_TREADY),
         .s_axis_tvalid(count_buffer_0_m_axis_TVALID));
+  top_level_axis_data_fifo_1_0 axis_data_fifo_1
+       (.m_axis_aclk(Net3),
+        .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
+        .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
+        .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
+        .s_axis_aclk(microblaze_0_Clk),
+        .s_axis_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .s_axis_tdata(gpio_buffer_0_m_axis_TDATA),
+        .s_axis_tready(gpio_buffer_0_m_axis_TREADY),
+        .s_axis_tvalid(gpio_buffer_0_m_axis_TVALID));
   top_level_clk_wiz_1_0 clk_wiz_1
        (.clk_in1_n(diff_clock_rtl_1_CLK_N),
         .clk_in1_p(diff_clock_rtl_1_CLK_P),
@@ -1229,9 +1250,26 @@ module top_level
         .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+  top_level_gpio_buffer_0_0 gpio_buffer_0
+       (.gpio_in(Net),
+        .gpio_out(gpio_buffer_0_gpio_out),
+        .m_axis_tdata(gpio_buffer_0_m_axis_TDATA),
+        .m_axis_tready(gpio_buffer_0_m_axis_TREADY),
+        .m_axis_tvalid(gpio_buffer_0_m_axis_TVALID),
+        .s_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
+        .s_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
+        .s_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID));
   top_level_gpio_trigger_breakin_0_0 gpio_trigger_breakin_0
        (.gpio_out(gpio_trigger_breakin_0_gpio_out),
         .trigger_in(ext_trigger_0_0_1));
+  top_level_locking_sr_0_0 locking_sr_0
+       (.ch0(locking_sr_0_ch0),
+        .ch1(locking_sr_0_ch1),
+        .ch2(locking_sr_0_ch2),
+        .ch3(locking_sr_0_ch3),
+        .gpio_in(gpio_buffer_0_gpio_out),
+        .rf_clk(Net3),
+        .rf_reset(Net4));
   top_level_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -1476,6 +1514,7 @@ module top_level
         .count_val_in_0(shift_register_0_data_out),
         .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
+        .is_locking(locking_sr_0_ch0),
         .m_axis_0_tdata(rfsoc_data_pipeline_0_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_0_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_0_m_axis_0_TVALID),
@@ -1491,6 +1530,7 @@ module top_level
         .count_val_in_0(shift_register_0_data_out),
         .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
+        .is_locking(locking_sr_0_ch1),
         .m_axis_0_tdata(rfsoc_data_pipeline_1_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_1_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_1_m_axis_0_TVALID),
@@ -1506,6 +1546,7 @@ module top_level
         .count_val_in_0(shift_register_0_data_out),
         .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
+        .is_locking(locking_sr_0_ch2),
         .m_axis_0_tdata(rfsoc_data_pipeline_2_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_2_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_2_m_axis_0_TVALID),
@@ -1521,6 +1562,7 @@ module top_level
         .count_val_in_0(shift_register_0_data_out),
         .ext_trigger_0(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
+        .is_locking(locking_sr_0_ch3),
         .m_axis_0_tdata(rfsoc_data_pipeline_3_m_axis_0_TDATA),
         .m_axis_0_tready(rfsoc_data_pipeline_3_m_axis_0_TREADY),
         .m_axis_0_tvalid(rfsoc_data_pipeline_3_m_axis_0_TVALID),

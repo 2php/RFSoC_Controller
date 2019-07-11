@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  8 18:01:50 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 10 18:14:56 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="rfsoc_data_pipeline" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -51,6 +51,11 @@
         <CONNECTION INSTANCE="axis_tready_slice_0" PORT="count_val_in"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="pipeline_active"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" LEFT="31" NAME="S_AXIS_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tdata">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tdata"/>
@@ -81,9 +86,9 @@
         <CONNECTION INSTANCE="axis_tready_slice_0" PORT="m_axis_tready"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
+    <PORT DIR="I" NAME="is_locking" SIGIS="undef" SIGNAME="External_Ports_is_locking">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="pipeline_active"/>
+        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="is_locking"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -177,7 +182,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -310,7 +315,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_1_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_1_5"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -448,7 +453,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -586,7 +591,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -698,7 +703,7 @@
         <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
         <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
         <PARAMETER NAME="HAS_MI_TKEEP" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -923,6 +928,8 @@
       <PARAMETERS>
         <PARAMETER NAME="trigger_override_bit" VALUE="0"/>
         <PARAMETER NAME="ready_bit" VALUE="1"/>
+        <PARAMETER NAME="sclk" VALUE="3"/>
+        <PARAMETER NAME="sdata" VALUE="4"/>
         <PARAMETER NAME="buffer_flush_bit" VALUE="5"/>
         <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_tready_slice_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -1002,6 +1009,11 @@
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="is_locking" SIGIS="undef" SIGNAME="External_Ports_is_locking">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="is_locking"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

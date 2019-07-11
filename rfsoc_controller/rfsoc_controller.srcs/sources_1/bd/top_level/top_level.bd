@@ -36,11 +36,14 @@
       "axis_data_fifo_0": "",
       "count_buffer_0": "",
       "gpio_trigger_breakin_0": "",
+      "trigger_buffer_0": "",
       "rfsoc_data_pipeline_0": "",
       "rfsoc_data_pipeline_1": "",
       "rfsoc_data_pipeline_2": "",
-      "trigger_buffer_0": "",
-      "rfsoc_data_pipeline_3": ""
+      "rfsoc_data_pipeline_3": "",
+      "gpio_buffer_0": "",
+      "axis_data_fifo_1": "",
+      "locking_sr_0": ""
     },
     "interface_ports": {
       "diff_clock_rtl": {
@@ -227,12 +230,6 @@
               "dlmb_v10/LMB_M"
             ]
           },
-          "microblaze_0_ilmb": {
-            "interface_ports": [
-              "ILMB",
-              "ilmb_v10/LMB_M"
-            ]
-          },
           "microblaze_0_dlmb_bus": {
             "interface_ports": [
               "dlmb_v10/LMB_Sl_0",
@@ -245,16 +242,22 @@
               "lmb_bram/BRAM_PORTB"
             ]
           },
-          "microblaze_0_ilmb_bus": {
+          "microblaze_0_ilmb": {
             "interface_ports": [
-              "ilmb_v10/LMB_Sl_0",
-              "ilmb_bram_if_cntlr/SLMB"
+              "ILMB",
+              "ilmb_v10/LMB_M"
             ]
           },
           "microblaze_0_dlmb_cntlr": {
             "interface_ports": [
               "dlmb_bram_if_cntlr/BRAM_PORT",
               "lmb_bram/BRAM_PORTA"
+            ]
+          },
+          "microblaze_0_ilmb_bus": {
+            "interface_ports": [
+              "ilmb_v10/LMB_Sl_0",
+              "ilmb_bram_if_cntlr/SLMB"
             ]
           }
         },
@@ -692,16 +695,16 @@
           }
         },
         "interface_nets": {
-          "microblaze_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "m00_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
+            ]
+          },
+          "microblaze_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -714,12 +717,6 @@
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -750,6 +747,12 @@
             "interface_ports": [
               "xbar/M03_AXI",
               "m03_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           }
         },
@@ -1167,18 +1170,6 @@
           }
         }
       },
-      "rfsoc_data_pipeline_0": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_0_0"
-      },
-      "rfsoc_data_pipeline_1": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_1_0"
-      },
-      "rfsoc_data_pipeline_2": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_2_0"
-      },
       "trigger_buffer_0": {
         "vlnv": "xilinx.com:module_ref:trigger_buffer:1.0",
         "xci_name": "top_level_trigger_buffer_0_0",
@@ -1226,12 +1217,252 @@
           }
         }
       },
+      "rfsoc_data_pipeline_0": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_0_0"
+      },
+      "rfsoc_data_pipeline_1": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_1_0"
+      },
+      "rfsoc_data_pipeline_2": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_2_0"
+      },
       "rfsoc_data_pipeline_3": {
         "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
         "xci_name": "top_level_rfsoc_data_pipeline_3_0"
+      },
+      "gpio_buffer_0": {
+        "vlnv": "xilinx.com:module_ref:gpio_buffer:1.0",
+        "xci_name": "top_level_gpio_buffer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "gpio_buffer",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_tready",
+                "direction": "I"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "250000000"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "s_axis_tready",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "gpio_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "gpio_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "axis_data_fifo_1": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "top_level_axis_data_fifo_1_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "16"
+          },
+          "IS_ACLK_ASYNC": {
+            "value": "1"
+          }
+        }
+      },
+      "locking_sr_0": {
+        "vlnv": "xilinx.com:module_ref:locking_sr:1.0",
+        "xci_name": "top_level_locking_sr_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "locking_sr",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rf_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rf_reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rf_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "gpio_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ch0": {
+            "direction": "O"
+          },
+          "ch1": {
+            "direction": "O"
+          },
+          "ch2": {
+            "direction": "O"
+          },
+          "ch3": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
+      "microblaze_0_M0_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M0_AXIS",
+          "rfsoc_data_pipeline_0/S_AXIS_0"
+        ]
+      },
+      "dac0_clk_1": {
+        "interface_ports": [
+          "dac0_clk",
+          "usp_rf_data_converter_0/dac0_clk"
+        ]
+      },
+      "rfsoc_data_pipeline_0_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_0/m_axis_0",
+          "usp_rf_data_converter_0/s00_axis"
+        ]
+      },
+      "microblaze_0_ilmb_1": {
+        "interface_ports": [
+          "microblaze_0/ILMB",
+          "microblaze_0_local_memory/ILMB"
+        ]
+      },
+      "usp_rf_data_converter_0_vout01": {
+        "interface_ports": [
+          "vout01",
+          "usp_rf_data_converter_0/vout01"
+        ]
+      },
+      "microblaze_0_dlmb_1": {
+        "interface_ports": [
+          "microblaze_0/DLMB",
+          "microblaze_0_local_memory/DLMB"
+        ]
+      },
       "microblaze_0_M3_AXIS": {
         "interface_ports": [
           "microblaze_0/M3_AXIS",
@@ -1250,112 +1481,10 @@
           "axi_uartlite_0/S_AXI"
         ]
       },
-      "microblaze_0_ilmb_1": {
-        "interface_ports": [
-          "microblaze_0/ILMB",
-          "microblaze_0_local_memory/ILMB"
-        ]
-      },
-      "usp_rf_data_converter_0_vout01": {
-        "interface_ports": [
-          "vout01",
-          "usp_rf_data_converter_0/vout01"
-        ]
-      },
       "diff_clock_rtl_1": {
         "interface_ports": [
           "diff_clock_rtl",
           "clk_wiz_1/CLK_IN1_D"
-        ]
-      },
-      "microblaze_0_M0_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M0_AXIS",
-          "rfsoc_data_pipeline_0/S_AXIS_0"
-        ]
-      },
-      "rfsoc_data_pipeline_0_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_0/m_axis_0",
-          "usp_rf_data_converter_0/s00_axis"
-        ]
-      },
-      "microblaze_0_dlmb_1": {
-        "interface_ports": [
-          "microblaze_0/DLMB",
-          "microblaze_0_local_memory/DLMB"
-        ]
-      },
-      "dac0_clk_1": {
-        "interface_ports": [
-          "dac0_clk",
-          "usp_rf_data_converter_0/dac0_clk"
-        ]
-      },
-      "microblaze_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M02_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "microblaze_0_debug": {
-        "interface_ports": [
-          "mdm_1/MBDEBUG_0",
-          "microblaze_0/DEBUG"
-        ]
-      },
-      "microblaze_0_axi_dp": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/S00_AXI",
-          "microblaze_0/M_AXI_DP"
-        ]
-      },
-      "microblaze_0_M1_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M1_AXIS",
-          "rfsoc_data_pipeline_1/S_AXIS_0"
-        ]
-      },
-      "microblaze_0_mdm_axi": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M00_AXI",
-          "mdm_1/S_AXI"
-        ]
-      },
-      "rfsoc_data_pipeline_1_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_1/m_axis_0",
-          "usp_rf_data_converter_0/s01_axis"
-        ]
-      },
-      "usp_rf_data_converter_0_vout00": {
-        "interface_ports": [
-          "vout00",
-          "usp_rf_data_converter_0/vout00"
-        ]
-      },
-      "axis_data_fifo_0_M_AXIS": {
-        "interface_ports": [
-          "axis_data_fifo_0/M_AXIS",
-          "count_buffer_0/s_axis"
-        ]
-      },
-      "microblaze_0_axi_periph_M03_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M03_AXI",
-          "usp_rf_data_converter_0/s_axi"
-        ]
-      },
-      "count_buffer_0_m_axis": {
-        "interface_ports": [
-          "count_buffer_0/m_axis",
-          "axis_data_fifo_0/S_AXIS"
-        ]
-      },
-      "rfsoc_data_pipeline_3_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_3/m_axis_0",
-          "usp_rf_data_converter_0/s03_axis"
         ]
       },
       "usp_rf_data_converter_0_vout02": {
@@ -1364,10 +1493,52 @@
           "usp_rf_data_converter_0/vout02"
         ]
       },
+      "microblaze_0_mdm_axi": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M00_AXI",
+          "mdm_1/S_AXI"
+        ]
+      },
+      "rfsoc_data_pipeline_3_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_3/m_axis_0",
+          "usp_rf_data_converter_0/s03_axis"
+        ]
+      },
       "usp_rf_data_converter_0_vout03": {
         "interface_ports": [
           "vout03",
           "usp_rf_data_converter_0/vout03"
+        ]
+      },
+      "microblaze_0_debug": {
+        "interface_ports": [
+          "mdm_1/MBDEBUG_0",
+          "microblaze_0/DEBUG"
+        ]
+      },
+      "microblaze_0_M1_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M1_AXIS",
+          "rfsoc_data_pipeline_1/S_AXIS_0"
+        ]
+      },
+      "axis_data_fifo_0_M_AXIS": {
+        "interface_ports": [
+          "axis_data_fifo_0/M_AXIS",
+          "count_buffer_0/s_axis"
+        ]
+      },
+      "microblaze_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M02_AXI",
+          "axi_gpio_0/S_AXI"
+        ]
+      },
+      "rfsoc_data_pipeline_2_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_2/m_axis_0",
+          "usp_rf_data_converter_0/s02_axis"
         ]
       },
       "microblaze_0_M2_AXIS": {
@@ -1376,10 +1547,46 @@
           "rfsoc_data_pipeline_2/S_AXIS_0"
         ]
       },
-      "rfsoc_data_pipeline_2_m_axis_0": {
+      "microblaze_0_axi_dp": {
         "interface_ports": [
-          "rfsoc_data_pipeline_2/m_axis_0",
-          "usp_rf_data_converter_0/s02_axis"
+          "microblaze_0_axi_periph/S00_AXI",
+          "microblaze_0/M_AXI_DP"
+        ]
+      },
+      "usp_rf_data_converter_0_vout00": {
+        "interface_ports": [
+          "vout00",
+          "usp_rf_data_converter_0/vout00"
+        ]
+      },
+      "rfsoc_data_pipeline_1_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_1/m_axis_0",
+          "usp_rf_data_converter_0/s01_axis"
+        ]
+      },
+      "count_buffer_0_m_axis": {
+        "interface_ports": [
+          "count_buffer_0/m_axis",
+          "axis_data_fifo_0/S_AXIS"
+        ]
+      },
+      "microblaze_0_axi_periph_M03_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M03_AXI",
+          "usp_rf_data_converter_0/s_axi"
+        ]
+      },
+      "gpio_buffer_0_m_axis": {
+        "interface_ports": [
+          "gpio_buffer_0/m_axis",
+          "axis_data_fifo_1/S_AXIS"
+        ]
+      },
+      "axis_data_fifo_1_M_AXIS": {
+        "interface_ports": [
+          "axis_data_fifo_1/M_AXIS",
+          "gpio_buffer_0/s_axis"
         ]
       }
     },
@@ -1405,7 +1612,8 @@
           "rfsoc_data_pipeline_0/microblaze_clk",
           "rfsoc_data_pipeline_1/microblaze_clk",
           "rfsoc_data_pipeline_2/microblaze_clk",
-          "rfsoc_data_pipeline_3/microblaze_clk"
+          "rfsoc_data_pipeline_3/microblaze_clk",
+          "axis_data_fifo_1/s_axis_aclk"
         ]
       },
       "rst_clk_wiz_1_100M_mb_reset": {
@@ -1437,7 +1645,8 @@
           "rfsoc_data_pipeline_0/microblaze_resetn",
           "rfsoc_data_pipeline_1/microblaze_resetn",
           "rfsoc_data_pipeline_2/microblaze_resetn",
-          "rfsoc_data_pipeline_3/microblaze_resetn"
+          "rfsoc_data_pipeline_3/microblaze_resetn",
+          "axis_data_fifo_1/s_axis_aresetn"
         ]
       },
       "mdm_1_debug_sys_rst": {
@@ -1492,7 +1701,8 @@
           "rfsoc_data_pipeline_0/gpio_in",
           "rfsoc_data_pipeline_1/gpio_in",
           "rfsoc_data_pipeline_2/gpio_in",
-          "rfsoc_data_pipeline_3/gpio_in"
+          "rfsoc_data_pipeline_3/gpio_in",
+          "gpio_buffer_0/gpio_in"
         ]
       },
       "Net3": {
@@ -1502,11 +1712,13 @@
           "proc_sys_reset_0/slowest_sync_clk",
           "axis_data_fifo_0/m_axis_aclk",
           "count_buffer_0/s_axis_clk",
+          "trigger_buffer_0/clk",
           "rfsoc_data_pipeline_0/rf_clock",
           "rfsoc_data_pipeline_1/rf_clock",
           "rfsoc_data_pipeline_2/rf_clock",
-          "trigger_buffer_0/clk",
-          "rfsoc_data_pipeline_3/rf_clock"
+          "rfsoc_data_pipeline_3/rf_clock",
+          "axis_data_fifo_1/m_axis_aclk",
+          "locking_sr_0/rf_clk"
         ]
       },
       "Net4": {
@@ -1514,11 +1726,12 @@
           "proc_sys_reset_0/peripheral_aresetn",
           "usp_rf_data_converter_0/s0_axis_aresetn",
           "count_buffer_0/s_axis_resetn",
+          "trigger_buffer_0/reset",
           "rfsoc_data_pipeline_0/rf_resetn",
           "rfsoc_data_pipeline_1/rf_resetn",
           "rfsoc_data_pipeline_2/rf_resetn",
-          "trigger_buffer_0/reset",
-          "rfsoc_data_pipeline_3/rf_resetn"
+          "rfsoc_data_pipeline_3/rf_resetn",
+          "locking_sr_0/rf_reset"
         ]
       },
       "shift_register_0_data_out": {
@@ -1545,8 +1758,8 @@
       "trigger_buffer_0_trigger_out": {
         "ports": [
           "trigger_buffer_0/trigger_out",
-          "rfsoc_data_pipeline_1/ext_trigger_0",
           "rfsoc_data_pipeline_0/ext_trigger_0",
+          "rfsoc_data_pipeline_1/ext_trigger_0",
           "rfsoc_data_pipeline_2/ext_trigger_0",
           "rfsoc_data_pipeline_3/ext_trigger_0"
         ]
@@ -1573,6 +1786,36 @@
         "ports": [
           "rfsoc_data_pipeline_3/pipeline_active",
           "trigger_buffer_0/pipeline_active_in_3"
+        ]
+      },
+      "gpio_buffer_0_gpio_out": {
+        "ports": [
+          "gpio_buffer_0/gpio_out",
+          "locking_sr_0/gpio_in"
+        ]
+      },
+      "locking_sr_0_ch0": {
+        "ports": [
+          "locking_sr_0/ch0",
+          "rfsoc_data_pipeline_0/is_locking"
+        ]
+      },
+      "locking_sr_0_ch1": {
+        "ports": [
+          "locking_sr_0/ch1",
+          "rfsoc_data_pipeline_1/is_locking"
+        ]
+      },
+      "locking_sr_0_ch2": {
+        "ports": [
+          "locking_sr_0/ch2",
+          "rfsoc_data_pipeline_2/is_locking"
+        ]
+      },
+      "locking_sr_0_ch3": {
+        "ports": [
+          "locking_sr_0/ch3",
+          "rfsoc_data_pipeline_3/is_locking"
         ]
       }
     },

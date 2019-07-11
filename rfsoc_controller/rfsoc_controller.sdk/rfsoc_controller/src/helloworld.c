@@ -68,6 +68,9 @@ int main()
 
 	rf_init();
 
+	//Flush the buffer of any remaining waveforms
+	rf_flush_buffer();
+
 	while(1)
 	{
 		handle_cmd();

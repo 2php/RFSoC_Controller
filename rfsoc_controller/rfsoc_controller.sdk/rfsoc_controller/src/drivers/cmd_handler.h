@@ -26,12 +26,17 @@
 #define RF_SET_LOOPBACK 0x05
 #define RF_SET_REPEAT_CYCLES 0x06
 #define RF_SET_TRIGGER 0x07
+#define RF_SET_LOCKING_WAVEFORM 0x08
+#define RF_SET_LOCKING_SELECT 0x09
 
 //Python commands
 void cmd_set_repeat_cycles();
 void cmd_load_waveform();
 void cmd_set_trigger_mode();
 void cmd_set_loopback();
+void cmd_set_locking_waveform();
+void cmd_set_locking_select();
+void cmd_set_trigger();
 
 //Test case commands
 void cmd_pulse_test();
@@ -41,6 +46,7 @@ void cmd_ext_trigger_test();
 void cmd_led_test();
 void cmd_repeat_test();
 void cmd_trigger_detect_test();
+
 
 
 #endif /* SRC_DRIVERS_CMD_HANDLER_H_ */

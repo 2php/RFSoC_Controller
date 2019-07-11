@@ -61,6 +61,7 @@ module top_level_rfsoc_data_pipeline_3_0 (
   count_val_in_0,
   ext_trigger_0,
   gpio_in,
+  is_locking,
   m_axis_0_tdata,
   m_axis_0_tready,
   m_axis_0_tvalid,
@@ -83,6 +84,7 @@ input wire ext_trigger_0;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *)
 input wire [7 : 0] gpio_in;
+input wire is_locking;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *)
 output wire [255 : 0] m_axis_0_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *)
@@ -111,6 +113,7 @@ input wire rf_resetn;
     .count_val_in_0(count_val_in_0),
     .ext_trigger_0(ext_trigger_0),
     .gpio_in(gpio_in),
+    .is_locking(is_locking),
     .m_axis_0_tdata(m_axis_0_tdata),
     .m_axis_0_tready(m_axis_0_tready),
     .m_axis_0_tvalid(m_axis_0_tvalid),

@@ -12,10 +12,6 @@ import numpy as np
 
 
 #Parameters
-NUM_CHANNELS = 16
-CHANNEL_DEPTH = 1000 #in words
-WORD_LEN = 2 #bytes per DAC word 
-WORDS_PER_STREAM = 16 #16-bit words in a 256-bit stream word
 ENDIAN = 'big'#big endian
 SIZE_LEN = 4 #number of bytes sent when transmitting bytestream size
 DEFAULT_BAUD = 115200
@@ -31,6 +27,8 @@ RF_FLUSH_BUFFER = 0x04
 RF_SET_LOOPBACK = 0x05
 RF_SET_REPEAT_CYCLES = 0x06
 RF_SET_TRIGGER = 0x07
+RF_SET_LOCKING_WAVEFORM = 0x08
+RF_SET_LOCKING_SELECT = 0x09
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -53,7 +51,24 @@ def stream_scale(stream, old_min, old_max, new_min, new_max):
          
 
      return new_stream
-         
+
+def stream_shift(stream, shift):
+    new_stream = []
+    index = shift*-1
+    #fix the index
+    if(index < 0):
+        index += len(stream)
+        
+    for i in range(0, len(stream)):
+        #append the current index to the new stream
+        new_stream.append(stream[index])
+        #find the next index value
+        if(index == len(stream)-1):
+            index = 0
+        else:
+            index += 1
+            
+    return new_stream
          
 
 
@@ -124,17 +139,11 @@ class WaveFile:
     wordstream = []
     bytestream = []
     period = 0 #in seconds
+    shift = 0 #in number of DAC samples (16-bit samples)
     
-#    def __init__(self, fn, cn):
-#        #If we don't have a file name
-#        if fn is None:
-#            #then cn is our wordstream and we'll call it a day
-#            self.wordstream = cn
-#        else:
-#            self.fileName = fn
-#            self.columName = cn
         
-    def __init__(self, fn, per):
+    def __init__(self, fn, per, s):
+        self.shift = s
         self.period = per
         self.fileName = fn
         self.gen_word_stream()
@@ -165,7 +174,13 @@ class WaveFile:
         
         #rescale the values into the word stream
         prescale_wordstream = np.interp(scaled_time, disc_time, vals)
-        self.wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), 0, DAC_MAX_VALUE)  
+        final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), 0, DAC_MAX_VALUE)
+        if(self.shift == 0):
+            self.wordstream = final_wordstream
+            return
+        self.wordstream = stream_shift(final_wordstream, self.shift)
+        
+            
         
     def gen_byte_stream(self):
         self.bytestream = []
@@ -176,68 +191,19 @@ class WaveFile:
             #append the two bytes to the bytestream
             self.bytestream.append(bytes[0])
             self.bytestream.append(bytes[1])
-
-#    def get_byte_stream(self):
-#        #if we only have a wordstream
-#        if self.fileName == "":
-#            return []
-#        
-#        
-#        xls = pd.ExcelFile(self.fileName)
-#
-#        sheetX = pd.read_excel(xls, 'Sheet1') #1 is the sheet number
-#
-#        
-#        var1 = sheetX[self.columName]#columname"
-#
-#        #print(var1[1]) #1 is the row number...
-#        #define a byte buffer
-#        bytestream = []
-#        if(not (len(var1) == CHANNEL_DEPTH)):
-#            print("Warning, channel depth and column depth not equal for file: " + self.fileName + " col: " + self.columName)
-#            print("Expected length: " + str(CHANNEL_DEPTH) + ", actual length: " + str(len(var1)))
-#        for i in range(0, len(var1)):
-#            #Convert int to bytestream
-#            bs = int_to_bytestream(var1[i], WORD_LEN)
-#            for b in bs:
-#                bytestream.append(b)
-#        return bytestream
-#    
-#    def get_word_stream(self):
-#        #if we only have a wordstream
-#        if self.fileName == "":
-#            return self.wordstream
-#        
-#        
-#        xls = pd.ExcelFile(self.fileName)
-#
-#        sheetX = pd.read_excel(xls, 'Sheet1') #1 is the sheet number
-#
-#        
-#        var1 = sheetX[self.columName]#columname"
-#
-#        #print(var1[1]) #1 is the row number...
-#        #define a byte buffer
-#        bytestream = []
-#        if(not (len(var1) == CHANNEL_DEPTH)):
-#            print("Warning, channel depth and column depth not equal for file: " + self.fileName + " col: " + self.columName)
-#            print("Expected length: " + str(CHANNEL_DEPTH) + ", actual length: " + str(len(var1)))
-#        for i in range(0, len(var1)):
-#            #Just append the full values
-#            for b in var1:
-#                bytestream.append(b)
-#        return bytestream
-
+    
 
 class RFSoC_Board:
     port = None
     channels = []
+    locking_waveform = None
+    
     def __init__(self, portname):
         self.channels = []
         self.port = serial.Serial()
         self.port.baudrate = DEFAULT_BAUD
         self.port.port = portname
-        self.port.timeout = 5
+        self.port.timeout = 1
         
     def close(self):
         self.port.close()
@@ -278,6 +244,11 @@ class RFSoC_Board:
             return 0
         
     def add_channel(self, c):
+        #look and see if we have the channel already
+        for i in range(0, len(self.channels)):
+            if self.channels[i].number == c.number:
+                self.channels[i] = c
+                
         self.channels.append(c)
         
         
@@ -297,7 +268,7 @@ class RFSoC_Board:
         
         
     def write_channel(self, channel_num):
-        if(channel_num >= NUM_CHANNELS):
+        if(channel_num >= 16):
             print("Error, target channel not found: " + str(channel_num) + "\n")
             return
         #look up the appropriate channel
@@ -433,4 +404,40 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending trigger mode value, ack error code was: " + str(ack_val) + "\n")
+    
+    def set_locking_waveform(self, wf):
+        if(len(wf.bytestream) != 32):
+            print("Error, locking waveform must be exactly 16 samples...")
+            return
+        #send the set lockign waveform command
+        ack_val = self.write_bytes([RF_SET_LOCKING_WAVEFORM])
         
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set locking waveform command, ack error code was: " + str(ack_val) + "\n")
+            
+        #send the locking bytes
+        ack_val = self.write_bytes(wf.bytestream)
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
+            
+    def set_locking_select(self, bs):
+        if(len(bs) != 2):
+            print("Error, locking select must be exactly 2 bytes...")
+            return
+        #send the set lockign waveform command
+        ack_val = self.write_bytes([RF_SET_LOCKING_SELECT])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set locking select command, ack error code was: " + str(ack_val) + "\n")
+            
+        #send the locking bytes
+        ack_val = self.write_bytes(bs)
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
+            

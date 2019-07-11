@@ -23,6 +23,39 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+void rf_set_locking_select(u8* bytes)
+{
+	//There will always be two bytes here
+	for(int i = 1; i >= 0; i--)
+	{
+		for(int j = 0; j < 8; j++)
+		{
+			//Set the output to the correct bit
+			u8 current_bit = (bytes[i] & (1 << j)) == 0 ? 0 : 1;
+			gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+			//cycle locking_sclk
+			gpio_set_pin(RF_BANK, LOCKING_SELECT_SCLK, 0x01);
+			gpio_set_pin(RF_BANK, LOCKING_SELECT_SCLK, 0x00);
+		}
+	}
+}
+
+void rf_set_locking_waveform(u8* stream)
+{
+	//Stream will alway be 32 bytes long
+	for(int i = 31; i >= 0; i--)
+	{
+		for(int j = 0; j < 8; j++){
+			//Set the output to the correct bit
+			u8 current_bit = (stream[i] & (1 << j)) == 0 ? 0 : 1;
+			gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+			//cycle locking_sclk
+			gpio_set_pin(RF_BANK, LOCKING_SCLK, 0x01);
+			gpio_set_pin(RF_BANK, LOCKING_SCLK, 0x00);
+		}
+	}
+}
+
 void rf_set_trigger(u8 option)
 {
 	if(option == ON)

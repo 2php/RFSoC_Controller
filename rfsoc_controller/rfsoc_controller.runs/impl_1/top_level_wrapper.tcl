@@ -73,7 +73,7 @@ set rc [catch {
   set_param power.enableUnconnectedCarry8PinPower 1
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableLutRouteBelPower 1
-  set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11720-DESKTOP-6ILET8A/incrSyn}
+  set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-5228-DESKTOP-6ILET8A/incrSyn}
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]

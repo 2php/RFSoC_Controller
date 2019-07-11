@@ -57,7 +57,8 @@ void rf_set_trigger_mode(u8 mode);
 void rf_set_loopback(u8 option);
 void rf_set_trigger(u8 option);
 void rf_trigger();
-
+void rf_set_locking_waveform(u8* stream);
+void rf_set_locking_select(u8* bytes);
 
 
 

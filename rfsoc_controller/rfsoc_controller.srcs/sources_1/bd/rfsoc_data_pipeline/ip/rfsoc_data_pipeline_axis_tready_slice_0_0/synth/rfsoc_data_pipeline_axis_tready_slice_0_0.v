@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axis_tready_slice,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{}" *)
-(* CORE_GENERATION_INFO = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=axis_tready_slice,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,trigger_override_bit=0,ready_bit=1,buffer_flush_bit=5}" *)
+(* CORE_GENERATION_INFO = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=axis_tready_slice,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,trigger_override_bit=0,ready_bit=1,sclk=3,sdata=4,buffer_flush_bit=5}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module rfsoc_data_pipeline_axis_tready_slice_0_0 (
@@ -71,7 +71,8 @@ module rfsoc_data_pipeline_axis_tready_slice_0_0 (
   mloop_axis_tvalid,
   mloop_axis_tready,
   count_val_in,
-  pipeline_active
+  pipeline_active,
+  is_locking
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m_axis:mloop_axis:s_axis, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0" *)
@@ -107,10 +108,13 @@ output wire mloop_axis_tvalid;
 input wire mloop_axis_tready;
 input wire [31 : 0] count_val_in;
 output wire pipeline_active;
+input wire is_locking;
 
   axis_tready_slice #(
     .trigger_override_bit(0),
     .ready_bit(1),
+    .sclk(3),
+    .sdata(4),
     .buffer_flush_bit(5)
   ) inst (
     .clk(clk),
@@ -128,6 +132,7 @@ output wire pipeline_active;
     .mloop_axis_tvalid(mloop_axis_tvalid),
     .mloop_axis_tready(mloop_axis_tready),
     .count_val_in(count_val_in),
-    .pipeline_active(pipeline_active)
+    .pipeline_active(pipeline_active),
+    .is_locking(is_locking)
   );
 endmodule

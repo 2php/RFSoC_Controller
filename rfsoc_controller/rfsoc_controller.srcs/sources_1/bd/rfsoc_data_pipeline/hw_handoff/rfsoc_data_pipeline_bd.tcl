@@ -186,6 +186,7 @@ proc create_root_design { parentCell } {
   set count_val_in_0 [ create_bd_port -dir I -from 31 -to 0 count_val_in_0 ]
   set ext_trigger_0 [ create_bd_port -dir I ext_trigger_0 ]
   set gpio_in [ create_bd_port -dir I -from 7 -to 0 -type data gpio_in ]
+  set is_locking [ create_bd_port -dir I is_locking ]
   set microblaze_clk [ create_bd_port -dir I -type clk microblaze_clk ]
   set_property -dict [ list \
    CONFIG.ASSOCIATED_RESET {microblaze_resetn} \
@@ -286,6 +287,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net count_val_in_0_1 [get_bd_ports count_val_in_0] [get_bd_pins axis_tready_slice_0/count_val_in]
   connect_bd_net -net ext_trigger_0_1 [get_bd_ports ext_trigger_0] [get_bd_pins axis_tready_slice_0/ext_trigger]
   connect_bd_net -net gpio_in_1 [get_bd_ports gpio_in] [get_bd_pins gpio_buffer_0/gpio_in]
+  connect_bd_net -net is_locking_0_1 [get_bd_ports is_locking] [get_bd_pins axis_tready_slice_0/is_locking]
   connect_bd_net -net microblaze_clk_1 [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aclk] [get_bd_pins axis_dwidth_converter_0/aclk]
   connect_bd_net -net microblaze_reset_1 [get_bd_ports microblaze_resetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aresetn] [get_bd_pins axis_dwidth_converter_0/aresetn]
   connect_bd_net -net rf_clock_1 [get_bd_ports rf_clock] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/m_axis_aclk] [get_bd_pins axis_data_fifo_waveform/s_axis_aclk] [get_bd_pins axis_mux_0/clk] [get_bd_pins axis_tready_slice_0/clk]
