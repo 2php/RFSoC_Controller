@@ -2,100 +2,99 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port diff_clock_rtl -pg 1 -lvl 0 -x -20 -y 1340 -defaultsOSRD
-preplace port sysref_in -pg 1 -lvl 0 -x -20 -y 1420 -defaultsOSRD
-preplace port dac0_clk -pg 1 -lvl 0 -x -20 -y 1160 -defaultsOSRD
-preplace port vout00 -pg 1 -lvl 7 -x 2790 -y 1350 -defaultsOSRD
-preplace port vout01 -pg 1 -lvl 7 -x 2790 -y 1370 -defaultsOSRD
-preplace port vout02 -pg 1 -lvl 7 -x 2790 -y 1390 -defaultsOSRD
-preplace port vout03 -pg 1 -lvl 7 -x 2790 -y 1410 -defaultsOSRD
-preplace port resetn -pg 1 -lvl 0 -x -20 -y 1220 -defaultsOSRD
-preplace port rx_0 -pg 1 -lvl 0 -x -20 -y 1910 -defaultsOSRD
-preplace port tx_0 -pg 1 -lvl 7 -x 2790 -y 1880 -defaultsOSRD
-preplace port ext_trigger_0_0 -pg 1 -lvl 0 -x -20 -y 1440 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 4 -x 1410 -y 1140 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1980 -y 1320 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1980 -y 1730 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 3 -x 910 -y 1330 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 170 -y 1350 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 520 -y 1260 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 1220 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 2370 -y 1870 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2370 -y 1680 -defaultsOSRD
-preplace inst usp_rf_data_converter_0 -pg 1 -lvl 6 -x 2370 -y 1400 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 910 -y 1110 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 5 -x 1980 -y 350 -defaultsOSRD
-preplace inst count_buffer_0 -pg 1 -lvl 4 -x 1410 -y 800 -defaultsOSRD
-preplace inst gpio_trigger_breakin_0 -pg 1 -lvl 4 -x 1410 -y 1490 -defaultsOSRD
-preplace inst trigger_buffer_0 -pg 1 -lvl 4 -x 1410 -y 570 -defaultsOSRD
-preplace inst rfsoc_data_pipeline_0 -pg 1 -lvl 5 -x 1980 -y 130 -defaultsOSRD
-preplace inst rfsoc_data_pipeline_1 -pg 1 -lvl 5 -x 1980 -y 570 -defaultsOSRD
-preplace inst rfsoc_data_pipeline_2 -pg 1 -lvl 5 -x 1980 -y 830 -defaultsOSRD
-preplace inst rfsoc_data_pipeline_3 -pg 1 -lvl 5 -x 1980 -y 1100 -defaultsOSRD
-preplace inst gpio_buffer_0 -pg 1 -lvl 4 -x 1410 -y -330 -defaultsOSRD
-preplace inst axis_data_fifo_1 -pg 1 -lvl 4 -x 1410 -y -190 -defaultsOSRD
-preplace inst locking_sr_0 -pg 1 -lvl 4 -x 1410 -y -600 -defaultsOSRD
-preplace netloc microblaze_0_Clk 1 1 5 330 1150 700 1210 1090 150 1720 1540 2230
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 N 1220 1120J
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 N 1240 1100J 1350 NJ
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 710 160 1120J 160 1670 1460 2180
-preplace netloc mdm_1_debug_sys_rst 1 0 4 0 1280 340 1140 720 1230 1080
-preplace netloc clk_wiz_1_locked 1 1 1 340 1300n
-preplace netloc resetn_1 1 0 1 NJ 1220
-preplace netloc util_vector_logic_0_Res 1 1 2 320 1090 NJ
-preplace netloc rx_0_1 1 0 7 NJ 1910 NJ 1910 700J 1930 NJ 1930 NJ 1930 2190J 1240 2530
-preplace netloc axi_uartlite_0_tx 1 6 1 NJ 1880
-preplace netloc ext_trigger_0_0_1 1 0 4 NJ 1440 NJ 1440 NJ 1440 1130
-preplace netloc Net 1 3 4 1130 110 1710 1920 2220J 1780 2510
-preplace netloc Net3 1 2 5 720 800 1110 190 1760 1500 2220 1560 2510
-preplace netloc Net4 1 3 3 1080 210 1750 1480 NJ
-preplace netloc shift_register_0_data_out 1 4 1 1690 70n
-preplace netloc axi_gpio_0_gpio_io_o 1 3 4 1160 1550 NJ 1550 2130J 1570 2520
-preplace netloc gpio_trigger_breakin_0_gpio_out 1 4 3 NJ 1490 2140J 1580 2510
-preplace netloc trigger_buffer_0_trigger_out 1 4 1 1790 90n
-preplace netloc rfsoc_data_pipeline_1_pipeline_active 1 3 3 1170 -10 NJ -10 2210
-preplace netloc rfsoc_data_pipeline_0_pipeline_active 1 3 3 1160 -20 NJ -20 2220
-preplace netloc rfsoc_data_pipeline_2_pipeline_active 1 3 3 1150 1390 1660J 1440 2150
-preplace netloc rfsoc_data_pipeline_3_pipeline_active 1 3 3 1140 1420 NJ 1420 2130
-preplace netloc gpio_buffer_0_gpio_out 1 3 2 1170 -510 1660
-preplace netloc locking_sr_0_ch0 1 4 1 1810 -630n
-preplace netloc locking_sr_0_ch1 1 4 1 1800 -610n
-preplace netloc locking_sr_0_ch2 1 4 1 1780 -590n
-preplace netloc locking_sr_0_ch3 1 4 1 1770 -570n
-preplace netloc microblaze_0_M3_AXIS 1 4 1 1780 1020n
-preplace netloc sysref_in_1 1 0 6 NJ 1420 NJ 1420 NJ 1420 1090J 1430 NJ 1430 2180J
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 2160 1720n
-preplace netloc microblaze_0_ilmb_1 1 4 1 1690 1100n
-preplace netloc usp_rf_data_converter_0_vout01 1 6 1 NJ 1370
-preplace netloc diff_clock_rtl_1 1 0 1 NJ 1340
-preplace netloc microblaze_0_M0_AXIS 1 4 1 1660 50n
-preplace netloc rfsoc_data_pipeline_0_m_axis_0 1 5 1 2230 120n
-preplace netloc microblaze_0_dlmb_1 1 4 1 1700 1080n
-preplace netloc dac0_clk_1 1 0 6 NJ 1160 NJ 1160 690J 1250 1090J 1270 1680J 1410 2160J
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 2220 1660n
-preplace netloc microblaze_0_debug 1 3 1 1110 1170n
-preplace netloc microblaze_0_axi_dp 1 4 1 1650 1120n
-preplace netloc microblaze_0_M1_AXIS 1 4 1 1730 490n
-preplace netloc microblaze_0_mdm_axi 1 2 4 720 1910 NJ 1910 NJ 1910 2150
-preplace netloc rfsoc_data_pipeline_1_m_axis_0 1 5 1 2220 560n
-preplace netloc usp_rf_data_converter_0_vout00 1 6 1 NJ 1350
-preplace netloc axis_data_fifo_0_M_AXIS 1 3 3 1170 1400 NJ 1400 2140
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 2170 1300n
-preplace netloc count_buffer_0_m_axis 1 4 1 1700 320n
-preplace netloc rfsoc_data_pipeline_3_m_axis_0 1 5 1 2200 1090n
-preplace netloc usp_rf_data_converter_0_vout02 1 6 1 NJ 1390
-preplace netloc usp_rf_data_converter_0_vout03 1 6 1 NJ 1410
-preplace netloc microblaze_0_M2_AXIS 1 4 1 1740 750n
-preplace netloc rfsoc_data_pipeline_2_m_axis_0 1 5 1 2210 820n
-preplace netloc gpio_buffer_0_m_axis 1 3 2 1170 -90 1690
-preplace netloc axis_data_fifo_1_M_AXIS 1 3 2 1160 -100 1660
-levelinfo -pg 1 -20 170 520 910 1410 1980 2370 2790
-pagesize -pg 1 -db -bbox -sgen -170 -690 2890 1960
+preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 1190 -defaultsOSRD
+preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 1550 -defaultsOSRD
+preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 1530 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 7 -x 2500 -y 1090 -defaultsOSRD
+preplace port vout01 -pg 1 -lvl 7 -x 2500 -y 1110 -defaultsOSRD
+preplace port vout02 -pg 1 -lvl 7 -x 2500 -y 1130 -defaultsOSRD
+preplace port vout03 -pg 1 -lvl 7 -x 2500 -y 1150 -defaultsOSRD
+preplace port app_leds -pg 1 -lvl 7 -x 2500 -y 1360 -defaultsOSRD
+preplace port resetn -pg 1 -lvl 0 -x 0 -y 870 -defaultsOSRD
+preplace port rx_0 -pg 1 -lvl 0 -x 0 -y 1710 -defaultsOSRD
+preplace port tx_0 -pg 1 -lvl 7 -x 2500 -y 1560 -defaultsOSRD
+preplace port ext_trigger_0_0 -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -x 1380 -y 1000 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1940 -y 1630 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1940 -y 1350 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -x 900 -y 1050 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 170 -y 1200 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 510 -y 1170 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 870 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 2330 -y 1550 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2330 -y 1380 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 6 -x 2330 -y 1140 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 900 -y 570 -defaultsOSRD
+preplace inst trigger_buffer_0 -pg 1 -lvl 4 -x 1380 -y 540 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 4 -x 1380 -y 760 -defaultsOSRD
+preplace inst gpio_buffer_0 -pg 1 -lvl 3 -x 900 -y 740 -defaultsOSRD
+preplace inst rfsoc_data_pipeline_0 -pg 1 -lvl 5 -x 1940 -y 140 -defaultsOSRD
+preplace inst rfsoc_data_pipeline_1 -pg 1 -lvl 5 -x 1940 -y 420 -defaultsOSRD
+preplace inst rfsoc_data_pipeline_2 -pg 1 -lvl 5 -x 1940 -y 710 -defaultsOSRD
+preplace inst rfsoc_data_pipeline_3 -pg 1 -lvl 5 -x 1940 -y 970 -defaultsOSRD
+preplace inst locking_sr_0 -pg 1 -lvl 4 -x 1380 -y 170 -defaultsOSRD
+preplace inst channel_select_0 -pg 1 -lvl 4 -x 1380 -y 330 -defaultsOSRD
+preplace netloc microblaze_0_Clk 1 1 5 330 1060 680 960 1130 870 1750 1170 2120
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 710 970 1110J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 NJ 1150 1100J 1160 1620
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 690 860 1090 860 1730 1710 2190
+preplace netloc mdm_1_debug_sys_rst 1 0 4 20 1270 340 950 700 950 1080
+preplace netloc clk_wiz_1_locked 1 1 1 N 1210
+preplace netloc resetn_1 1 0 1 NJ 870
+preplace netloc util_vector_logic_0_Res 1 1 2 320 550 NJ
+preplace netloc rx_0_1 1 0 7 NJ 1710 NJ 1710 NJ 1710 NJ 1710 1630J 1720 NJ 1720 2470
+preplace netloc axi_uartlite_0_tx 1 6 1 NJ 1560
+preplace netloc ext_trigger_0_0_1 1 0 4 20J 470 NJ 470 NJ 470 1090J
+preplace netloc Net 1 2 5 710 50 NJ 50 1770 1110 2100J 970 2480
+preplace netloc Net3 1 2 5 730 460 1100 60 1650 1120 2150 980 2470
+preplace netloc Net4 1 3 3 1070 70 1720 1130 2130
+preplace netloc trigger_buffer_0_trigger_out 1 4 1 1790 80n
+preplace netloc rfsoc_data_pipeline_1_pipeline_active 1 3 3 1110 80 1780J 280 2090
+preplace netloc rfsoc_data_pipeline_0_pipeline_active 1 3 3 1120 660 1690J 560 2170
+preplace netloc rfsoc_data_pipeline_2_pipeline_active 1 3 3 1130 670 1710J 570 2090
+preplace netloc rfsoc_data_pipeline_3_pipeline_active 1 3 3 1140 1150 NJ 1150 2090
+preplace netloc gpio_buffer_0_gpio_out 1 3 1 1080 190n
+preplace netloc locking_sr_0_ch0 1 4 1 1630 120n
+preplace netloc locking_sr_0_ch1 1 4 1 1640 160n
+preplace netloc locking_sr_0_ch2 1 4 1 1660 180n
+preplace netloc locking_sr_0_ch3 1 4 1 1630 200n
+preplace netloc channel_select_0_ch1 1 4 1 1740 320n
+preplace netloc channel_select_0_ch0 1 4 1 1680 140n
+preplace netloc channel_select_0_ch2 1 4 1 1620 340n
+preplace netloc channel_select_0_ch3 1 4 1 1680 360n
+preplace netloc microblaze_0_M3_AXIS 1 4 1 1780 890n
+preplace netloc sysref_in_1 1 0 6 NJ 1550 NJ 1550 700J 1540 NJ 1540 NJ 1540 2140J
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 2100 1340n
+preplace netloc microblaze_0_ilmb_1 1 4 1 1630 960n
+preplace netloc usp_rf_data_converter_0_vout01 1 6 1 NJ 1110
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 1190
+preplace netloc microblaze_0_M0_AXIS 1 4 1 1670 60n
+preplace netloc rfsoc_data_pipeline_0_m_axis_0 1 5 1 2190 130n
+preplace netloc microblaze_0_dlmb_1 1 4 1 1660 940n
+preplace netloc dac0_clk_1 1 0 6 NJ 1530 NJ 1530 710J 1140 NJ 1140 NJ 1140 NJ
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 N 1360
+preplace netloc microblaze_0_debug 1 3 1 N 1030
+preplace netloc microblaze_0_axi_dp 1 4 1 1640 980n
+preplace netloc microblaze_0_M1_AXIS 1 4 1 1700 340n
+preplace netloc microblaze_0_mdm_axi 1 2 4 730 1530 NJ 1530 NJ 1530 2090
+preplace netloc rfsoc_data_pipeline_1_m_axis_0 1 5 1 2180 410n
+preplace netloc usp_rf_data_converter_0_vout00 1 6 1 NJ 1090
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 2110 1040n
+preplace netloc rfsoc_data_pipeline_3_m_axis_0 1 5 1 2160 960n
+preplace netloc usp_rf_data_converter_0_vout02 1 6 1 NJ 1130
+preplace netloc usp_rf_data_converter_0_vout03 1 6 1 NJ 1150
+preplace netloc microblaze_0_M2_AXIS 1 4 1 1760 630n
+preplace netloc rfsoc_data_pipeline_2_m_axis_0 1 5 1 2170 700n
+preplace netloc gpio_buffer_0_m_axis 1 3 1 N 730
+preplace netloc axis_data_fifo_1_M_AXIS 1 2 3 720 420 NJ 420 1640
+preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 1360
+levelinfo -pg 1 0 170 510 900 1380 1940 2330 2500
+pagesize -pg 1 -db -bbox -sgen -150 0 2610 1730
 "
 }
 {
    "da_axi4_cnt":"3",
-   "da_board_cnt":"4",
+   "da_board_cnt":"5",
    "da_clkrst_cnt":"1",
    "da_mb_cnt":"1",
    "da_rf_converter_usp_cnt":"1"

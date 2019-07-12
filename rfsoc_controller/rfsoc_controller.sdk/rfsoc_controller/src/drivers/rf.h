@@ -51,14 +51,15 @@ void rf_repeat_test();
 
 //Core functions
 void rf_load_bitstream(u8* stream, u32 length, u8 channel);
-void rf_set_repeat_cycles(u32 cycles);
+void rf_set_repeat_cycles(u8 channel, u32 cycles);
 void rf_flush_buffer();
 void rf_set_trigger_mode(u8 mode);
 void rf_set_loopback(u8 option);
 void rf_set_trigger(u8 option);
 void rf_trigger();
-void rf_set_locking_waveform(u8* stream);
+void rf_set_locking_waveform(u8 channel, u8* stream);
 void rf_set_locking_select(u8* bytes);
+void rf_set_zero_delay(u8 channel, u32 value);
 
 
 

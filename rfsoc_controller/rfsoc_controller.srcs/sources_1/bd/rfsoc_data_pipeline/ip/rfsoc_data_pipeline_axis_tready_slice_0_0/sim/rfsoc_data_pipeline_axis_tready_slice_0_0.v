@@ -69,9 +69,9 @@ module rfsoc_data_pipeline_axis_tready_slice_0_0 (
   mloop_axis_tdata,
   mloop_axis_tvalid,
   mloop_axis_tready,
-  count_val_in,
   pipeline_active,
-  is_locking
+  is_locking,
+  is_selected
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m_axis:mloop_axis:s_axis, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0" *)
@@ -89,7 +89,7 @@ input wire [255 : 0] s_axis_tdata;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *)
 input wire s_axis_tlast;
-input wire [7 : 0] gpio_in;
+input wire [15 : 0] gpio_in;
 input wire ext_trigger;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
 output wire [255 : 0] m_axis_tdata;
@@ -105,16 +105,18 @@ output wire mloop_axis_tvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mloop_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mloop_axis TREADY" *)
 input wire mloop_axis_tready;
-input wire [31 : 0] count_val_in;
 output wire pipeline_active;
 input wire is_locking;
+input wire is_selected;
 
   axis_tready_slice #(
     .trigger_override_bit(0),
     .ready_bit(1),
-    .sclk(3),
+    .locking_sclk(3),
     .sdata(4),
-    .buffer_flush_bit(5)
+    .buffer_flush_bit(5),
+    .zeros_sclk(7),
+    .cycles_sclk(8)
   ) inst (
     .clk(clk),
     .reset(reset),
@@ -130,8 +132,8 @@ input wire is_locking;
     .mloop_axis_tdata(mloop_axis_tdata),
     .mloop_axis_tvalid(mloop_axis_tvalid),
     .mloop_axis_tready(mloop_axis_tready),
-    .count_val_in(count_val_in),
     .pipeline_active(pipeline_active),
-    .is_locking(is_locking)
+    .is_locking(is_locking),
+    .is_selected(is_selected)
   );
 endmodule

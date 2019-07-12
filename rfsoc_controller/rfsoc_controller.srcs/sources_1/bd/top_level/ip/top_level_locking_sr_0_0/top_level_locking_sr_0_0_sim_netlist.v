@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Jul 11 08:37:48 2019
+// Date        : Thu Jul 11 15:04:47 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_locking_sr_0_0/top_level_locking_sr_0_0_sim_netlist.v
@@ -25,7 +25,7 @@ module top_level_locking_sr_0_0
     ch3);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rf_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_clk, ASSOCIATED_RESET rf_reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rf_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_reset;
-  input [7:0]gpio_in;
+  input [15:0]gpio_in;
   output ch0;
   output ch1;
   output ch2;
@@ -35,7 +35,7 @@ module top_level_locking_sr_0_0
   wire ch1;
   wire ch2;
   wire ch3;
-  wire [7:0]gpio_in;
+  wire [15:0]gpio_in;
   wire rf_clk;
   wire rf_reset;
 

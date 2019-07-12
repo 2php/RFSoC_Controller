@@ -163,7 +163,7 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set S_AXIS_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_0 ]
+  set S_AXIS [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS ]
   set_property -dict [ list \
    CONFIG.HAS_TKEEP {0} \
    CONFIG.HAS_TLAST {0} \
@@ -174,21 +174,22 @@ proc create_root_design { parentCell } {
    CONFIG.TDEST_WIDTH {0} \
    CONFIG.TID_WIDTH {0} \
    CONFIG.TUSER_WIDTH {0} \
-   ] $S_AXIS_0
+   ] $S_AXIS
 
-  set m_axis_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis_0 ]
+  set m_axis [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {250000000} \
-   ] $m_axis_0
+   ] $m_axis
 
 
   # Create ports
-  set count_val_in_0 [ create_bd_port -dir I -from 31 -to 0 count_val_in_0 ]
-  set ext_trigger_0 [ create_bd_port -dir I ext_trigger_0 ]
-  set gpio_in [ create_bd_port -dir I -from 7 -to 0 -type data gpio_in ]
+  set ext_trigger [ create_bd_port -dir I ext_trigger ]
+  set gpio_in [ create_bd_port -dir I -from 15 -to 0 gpio_in ]
   set is_locking [ create_bd_port -dir I is_locking ]
+  set is_selected [ create_bd_port -dir I is_selected ]
   set microblaze_clk [ create_bd_port -dir I -type clk microblaze_clk ]
   set_property -dict [ list \
+   CONFIG.ASSOCIATED_BUSIF {S_AXIS} \
    CONFIG.ASSOCIATED_RESET {microblaze_resetn} \
    CONFIG.FREQ_HZ {100000000} \
  ] $microblaze_clk
@@ -196,6 +197,7 @@ proc create_root_design { parentCell } {
   set pipeline_active [ create_bd_port -dir O pipeline_active ]
   set rf_clock [ create_bd_port -dir I -type clk rf_clock ]
   set_property -dict [ list \
+   CONFIG.ASSOCIATED_BUSIF {m_axis} \
    CONFIG.ASSOCIATED_RESET {rf_resetn} \
    CONFIG.FREQ_HZ {250000000} \
  ] $rf_clock
@@ -208,13 +210,6 @@ proc create_root_design { parentCell } {
    CONFIG.TDATA_NUM_BYTES {4} \
  ] $axis_data_fifo_0
 
-  # Create instance: axis_data_fifo_1, and set properties
-  set axis_data_fifo_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_1 ]
-  set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {16} \
-   CONFIG.IS_ACLK_ASYNC {1} \
- ] $axis_data_fifo_1
-
   # Create instance: axis_data_fifo_clock_crossing, and set properties
   set axis_data_fifo_clock_crossing [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_clock_crossing ]
   set_property -dict [ list \
@@ -222,6 +217,14 @@ proc create_root_design { parentCell } {
    CONFIG.IS_ACLK_ASYNC {1} \
    CONFIG.TDATA_NUM_BYTES {32} \
  ] $axis_data_fifo_clock_crossing
+
+  # Create instance: axis_data_fifo_gpio, and set properties
+  set axis_data_fifo_gpio [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_gpio ]
+  set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {16} \
+   CONFIG.IS_ACLK_ASYNC {1} \
+   CONFIG.TDATA_NUM_BYTES {2} \
+ ] $axis_data_fifo_gpio
 
   # Create instance: axis_data_fifo_waveform, and set properties
   set axis_data_fifo_waveform [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_waveform ]
@@ -270,27 +273,27 @@ proc create_root_design { parentCell } {
    }
   
   # Create interface connections
-  connect_bd_intf_net -intf_net S_AXIS_0_1 [get_bd_intf_ports S_AXIS_0] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+  connect_bd_intf_net -intf_net S_AXIS_0_1 [get_bd_intf_ports S_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_dwidth_converter_0/S_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_fifo_clock_crossing/M_AXIS] [get_bd_intf_pins axis_mux_0/s0_axis]
-  connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS1 [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins gpio_buffer_0/s_axis]
+  connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS1 [get_bd_intf_pins axis_data_fifo_gpio/M_AXIS] [get_bd_intf_pins gpio_buffer_0/s_axis]
   connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axis_data_fifo_waveform/M_AXIS] [get_bd_intf_pins axis_tready_slice_0/s_axis]
   connect_bd_intf_net -intf_net axis_dwidth_converter_0_M_AXIS [get_bd_intf_pins axis_data_fifo_clock_crossing/S_AXIS] [get_bd_intf_pins axis_dwidth_converter_0/M_AXIS]
   connect_bd_intf_net -intf_net axis_mux_0_m_axis [get_bd_intf_pins axis_data_fifo_waveform/S_AXIS] [get_bd_intf_pins axis_mux_0/m_axis]
-  connect_bd_intf_net -intf_net axis_tready_slice_0_m_axis [get_bd_intf_ports m_axis_0] [get_bd_intf_pins axis_tready_slice_0/m_axis]
+  connect_bd_intf_net -intf_net axis_tready_slice_0_m_axis [get_bd_intf_ports m_axis] [get_bd_intf_pins axis_tready_slice_0/m_axis]
   connect_bd_intf_net -intf_net axis_tready_slice_0_mloop_axis [get_bd_intf_pins axis_mux_0/s1_axis] [get_bd_intf_pins axis_tready_slice_0/mloop_axis]
-  connect_bd_intf_net -intf_net gpio_buffer_0_m_axis [get_bd_intf_pins axis_data_fifo_1/S_AXIS] [get_bd_intf_pins gpio_buffer_0/m_axis]
+  connect_bd_intf_net -intf_net gpio_buffer_0_m_axis [get_bd_intf_pins axis_data_fifo_gpio/S_AXIS] [get_bd_intf_pins gpio_buffer_0/m_axis]
 
   # Create port connections
   connect_bd_net -net Net [get_bd_pins axis_mux_0/gpio_in] [get_bd_pins axis_tready_slice_0/gpio_in] [get_bd_pins gpio_buffer_0/gpio_out]
   connect_bd_net -net axis_tready_slice_0_pipeline_active [get_bd_ports pipeline_active] [get_bd_pins axis_tready_slice_0/pipeline_active]
-  connect_bd_net -net count_val_in_0_1 [get_bd_ports count_val_in_0] [get_bd_pins axis_tready_slice_0/count_val_in]
-  connect_bd_net -net ext_trigger_0_1 [get_bd_ports ext_trigger_0] [get_bd_pins axis_tready_slice_0/ext_trigger]
-  connect_bd_net -net gpio_in_1 [get_bd_ports gpio_in] [get_bd_pins gpio_buffer_0/gpio_in]
+  connect_bd_net -net ext_trigger_0_1 [get_bd_ports ext_trigger] [get_bd_pins axis_tready_slice_0/ext_trigger]
+  connect_bd_net -net gpio_in_0_1 [get_bd_ports gpio_in] [get_bd_pins gpio_buffer_0/gpio_in]
   connect_bd_net -net is_locking_0_1 [get_bd_ports is_locking] [get_bd_pins axis_tready_slice_0/is_locking]
-  connect_bd_net -net microblaze_clk_1 [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aclk] [get_bd_pins axis_dwidth_converter_0/aclk]
-  connect_bd_net -net microblaze_reset_1 [get_bd_ports microblaze_resetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aresetn] [get_bd_pins axis_dwidth_converter_0/aresetn]
-  connect_bd_net -net rf_clock_1 [get_bd_ports rf_clock] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/m_axis_aclk] [get_bd_pins axis_data_fifo_waveform/s_axis_aclk] [get_bd_pins axis_mux_0/clk] [get_bd_pins axis_tready_slice_0/clk]
+  connect_bd_net -net is_selected_0_1 [get_bd_ports is_selected] [get_bd_pins axis_tready_slice_0/is_selected]
+  connect_bd_net -net microblaze_clk_1 [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aclk] [get_bd_pins axis_data_fifo_gpio/s_axis_aclk] [get_bd_pins axis_dwidth_converter_0/aclk]
+  connect_bd_net -net microblaze_reset_1 [get_bd_ports microblaze_resetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aresetn] [get_bd_pins axis_data_fifo_gpio/s_axis_aresetn] [get_bd_pins axis_dwidth_converter_0/aresetn]
+  connect_bd_net -net rf_clock_1 [get_bd_ports rf_clock] [get_bd_pins axis_data_fifo_clock_crossing/m_axis_aclk] [get_bd_pins axis_data_fifo_gpio/m_axis_aclk] [get_bd_pins axis_data_fifo_waveform/s_axis_aclk] [get_bd_pins axis_mux_0/clk] [get_bd_pins axis_tready_slice_0/clk]
   connect_bd_net -net rf_reset_1 [get_bd_ports rf_resetn] [get_bd_pins axis_data_fifo_waveform/s_axis_aresetn] [get_bd_pins axis_mux_0/reset] [get_bd_pins axis_tready_slice_0/reset]
 
   # Create address segments

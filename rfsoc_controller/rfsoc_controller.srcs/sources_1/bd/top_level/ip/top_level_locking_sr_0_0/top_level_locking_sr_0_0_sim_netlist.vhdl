@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Jul 11 08:37:48 2019
+-- Date        : Thu Jul 11 15:04:47 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_locking_sr_0_0/top_level_locking_sr_0_0_sim_netlist.vhdl
@@ -271,7 +271,7 @@ entity top_level_locking_sr_0_0 is
   port (
     rf_clk : in STD_LOGIC;
     rf_reset : in STD_LOGIC;
-    gpio_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    gpio_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ch0 : out STD_LOGIC;
     ch1 : out STD_LOGIC;
     ch2 : out STD_LOGIC;

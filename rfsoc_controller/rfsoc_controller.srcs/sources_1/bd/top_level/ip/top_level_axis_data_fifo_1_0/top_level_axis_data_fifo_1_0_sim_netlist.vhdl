@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Jul  1 13:49:00 2019
+-- Date        : Thu Jul 11 15:16:04 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top top_level_axis_data_fifo_1_0 -prefix
---               top_level_axis_data_fifo_1_0_ rfsoc_data_pipeline_axis_data_fifo_1_1_sim_netlist.vhdl
--- Design      : rfsoc_data_pipeline_axis_data_fifo_1_1
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0_sim_netlist.vhdl
+-- Design      : top_level_axis_data_fifo_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu29dr-ffvf1760-2-e
@@ -25,6 +25,8 @@ entity top_level_axis_data_fifo_1_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of top_level_axis_data_fifo_1_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_axis_data_fifo_1_0_xpm_cdc_gray : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_level_axis_data_fifo_1_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -1396,6 +1398,8 @@ entity top_level_axis_data_fifo_1_0_xpm_cdc_sync_rst is
   attribute INIT of top_level_axis_data_fifo_1_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_axis_data_fifo_1_0_xpm_cdc_sync_rst : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_level_axis_data_fifo_1_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -1641,6 +1645,8 @@ entity top_level_axis_data_fifo_1_0_xpm_counter_updn is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end top_level_axis_data_fifo_1_0_xpm_counter_updn;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_counter_updn is
@@ -2449,6 +2455,8 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_reg_bit is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end top_level_axis_data_fifo_1_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_reg_bit is
@@ -2496,6 +2504,8 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end top_level_axis_data_fifo_1_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_reg_vec is
@@ -2722,10 +2732,10 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 23 downto 0 );
     injectsbiterra : in STD_LOGIC;
     injectdbiterra : in STD_LOGIC;
-    douta : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 23 downto 0 );
     sbiterra : out STD_LOGIC;
     dbiterra : out STD_LOGIC;
     clkb : in STD_LOGIC;
@@ -2734,10 +2744,10 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
     addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    dinb : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    dinb : in STD_LOGIC_VECTOR ( 23 downto 0 );
     injectsbiterrb : in STD_LOGIC;
     injectdbiterrb : in STD_LOGIC;
-    doutb : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 23 downto 0 );
     sbiterrb : out STD_LOGIC;
     dbiterrb : out STD_LOGIC
   );
@@ -2748,9 +2758,9 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
-  attribute BYTE_WRITE_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute BYTE_WRITE_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute BYTE_WRITE_WIDTH_B : integer;
-  attribute BYTE_WRITE_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute BYTE_WRITE_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
   attribute CLOCKING_MODE : integer;
@@ -2768,13 +2778,15 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 224;
+  attribute MEMORY_SIZE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 384;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 1;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -2788,17 +2800,17 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute P_MEMORY_PRIMITIVE : string;
   attribute P_MEMORY_PRIMITIVE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is "auto";
   attribute P_MIN_WIDTH_DATA : integer;
-  attribute P_MIN_WIDTH_DATA of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_MIN_WIDTH_DATA of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_MIN_WIDTH_DATA_A : integer;
-  attribute P_MIN_WIDTH_DATA_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_MIN_WIDTH_DATA_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_MIN_WIDTH_DATA_B : integer;
-  attribute P_MIN_WIDTH_DATA_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_MIN_WIDTH_DATA_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_MIN_WIDTH_DATA_ECC : integer;
-  attribute P_MIN_WIDTH_DATA_ECC of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_MIN_WIDTH_DATA_ECC of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_MIN_WIDTH_DATA_LDW : integer;
   attribute P_MIN_WIDTH_DATA_LDW of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 4;
   attribute P_MIN_WIDTH_DATA_SHFT : integer;
-  attribute P_MIN_WIDTH_DATA_SHFT of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_MIN_WIDTH_DATA_SHFT of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_NUM_COLS_WRITE_A : integer;
   attribute P_NUM_COLS_WRITE_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 1;
   attribute P_NUM_COLS_WRITE_B : integer;
@@ -2830,13 +2842,13 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute P_WIDTH_ADDR_WRITE_B : integer;
   attribute P_WIDTH_ADDR_WRITE_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 4;
   attribute P_WIDTH_COL_WRITE_A : integer;
-  attribute P_WIDTH_COL_WRITE_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_WIDTH_COL_WRITE_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute P_WIDTH_COL_WRITE_B : integer;
-  attribute P_WIDTH_COL_WRITE_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute P_WIDTH_COL_WRITE_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute READ_DATA_WIDTH_A : integer;
-  attribute READ_DATA_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute READ_DATA_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute READ_DATA_WIDTH_B : integer;
-  attribute READ_DATA_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute READ_DATA_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute READ_LATENCY_A : integer;
   attribute READ_LATENCY_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 2;
   attribute READ_LATENCY_B : integer;
@@ -2860,9 +2872,9 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute WAKEUP_TIME : integer;
   attribute WAKEUP_TIME of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 0;
   attribute WRITE_DATA_WIDTH_A : integer;
-  attribute WRITE_DATA_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute WRITE_DATA_WIDTH_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute WRITE_DATA_WIDTH_B : integer;
-  attribute WRITE_DATA_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 14;
+  attribute WRITE_DATA_WIDTH_B of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute WRITE_MODE_A : integer;
   attribute WRITE_MODE_A of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 2;
   attribute WRITE_MODE_B : integer;
@@ -2870,20 +2882,30 @@ entity top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is "TRUE";
   attribute rsta_loop_iter : integer;
-  attribute rsta_loop_iter of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 16;
+  attribute rsta_loop_iter of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
   attribute rstb_loop_iter : integer;
-  attribute rstb_loop_iter of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 16;
+  attribute rstb_loop_iter of top_level_axis_data_fifo_1_0_xpm_memory_base : entity is 24;
 end top_level_axis_data_fifo_1_0_xpm_memory_base;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_memory_base is
   signal \<const0>\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg0\ : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal \gen_rd_b.doutb_reg0\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \gen_rd_b.doutb_reg_reg_n_0_[0]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[10]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[11]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[12]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[13]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[14]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[15]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[16]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[17]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[18]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[19]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[1]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[20]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[21]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[22]\ : STD_LOGIC;
+  signal \gen_rd_b.doutb_reg_reg_n_0_[23]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[2]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[3]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[4]\ : STD_LOGIC;
@@ -2893,13 +2915,26 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_memory_base is
   signal \gen_rd_b.doutb_reg_reg_n_0_[8]\ : STD_LOGIC;
   signal \gen_rd_b.doutb_reg_reg_n_0_[9]\ : STD_LOGIC;
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13_DOH_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOF_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOG_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOH_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute dram_emb_xdc : string;
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[0]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[10]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[11]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[12]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[13]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[14]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[15]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[16]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[17]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[18]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[19]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[1]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[20]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[21]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[22]\ : label is "no";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[23]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[2]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[3]\ : label is "no";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[4]\ : label is "no";
@@ -2911,7 +2946,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is "";
   attribute RTL_RAM_BITS : integer;
-  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is 224;
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is 384;
   attribute RTL_RAM_NAME : string;
   attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is "gen_wr_a.gen_word_narrow.mem";
   attribute ram_addr_begin : integer;
@@ -2924,9 +2959,27 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_memory_base is
   attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is 0;
   attribute ram_slice_end : integer;
   attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13\ : label is 13;
+  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is "";
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 384;
+  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is "gen_wr_a.gen_word_narrow.mem";
+  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 0;
+  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 15;
+  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 0;
+  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 14;
+  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\ : label is 23;
 begin
   dbiterra <= \<const0>\;
   dbiterrb <= \<const0>\;
+  douta(23) <= \<const0>\;
+  douta(22) <= \<const0>\;
+  douta(21) <= \<const0>\;
+  douta(20) <= \<const0>\;
+  douta(19) <= \<const0>\;
+  douta(18) <= \<const0>\;
+  douta(17) <= \<const0>\;
+  douta(16) <= \<const0>\;
+  douta(15) <= \<const0>\;
+  douta(14) <= \<const0>\;
   douta(13) <= \<const0>\;
   douta(12) <= \<const0>\;
   douta(11) <= \<const0>\;
@@ -3002,6 +3055,72 @@ GND: unisim.vcomponents.GND
       Q => \gen_rd_b.doutb_reg_reg_n_0_[13]\,
       R => '0'
     );
+\gen_rd_b.doutb_reg_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(14),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[14]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(15),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[15]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(16),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[16]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(17),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[17]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[18]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(18),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[18]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[19]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(19),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[19]\,
+      R => '0'
+    );
 \gen_rd_b.doutb_reg_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -3011,6 +3130,50 @@ GND: unisim.vcomponents.GND
       CE => enb,
       D => \gen_rd_b.doutb_reg0\(1),
       Q => \gen_rd_b.doutb_reg_reg_n_0_[1]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[20]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(20),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[20]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[21]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(21),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[21]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[22]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(22),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[22]\,
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[23]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(23),
+      Q => \gen_rd_b.doutb_reg_reg_n_0_[23]\,
       R => '0'
     );
 \gen_rd_b.doutb_reg_reg[2]\: unisim.vcomponents.FDRE
@@ -3156,6 +3319,72 @@ GND: unisim.vcomponents.GND
       Q => doutb(13),
       R => rstb
     );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[14]\,
+      Q => doutb(14),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[15]\,
+      Q => doutb(15),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[16]\,
+      Q => doutb(16),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[17]\,
+      Q => doutb(17),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][18]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[18]\,
+      Q => doutb(18),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][19]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[19]\,
+      Q => doutb(19),
+      R => rstb
+    );
 \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -3165,6 +3394,50 @@ GND: unisim.vcomponents.GND
       CE => regceb,
       D => \gen_rd_b.doutb_reg_reg_n_0_[1]\,
       Q => doutb(1),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][20]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[20]\,
+      Q => doutb(20),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][21]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[21]\,
+      Q => doutb(21),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][22]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[22]\,
+      Q => doutb(22),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][23]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg_reg_n_0_[23]\,
+      Q => doutb(23),
       R => rstb
     );
 \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2]\: unisim.vcomponents.FDRE
@@ -3302,6 +3575,53 @@ GND: unisim.vcomponents.GND
       WCLK => clka,
       WE => wea(0)
     );
+\gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23\: unisim.vcomponents.RAM32M16
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000",
+      INIT_E => X"0000000000000000",
+      INIT_F => X"0000000000000000",
+      INIT_G => X"0000000000000000",
+      INIT_H => X"0000000000000000"
+    )
+        port map (
+      ADDRA(4) => '0',
+      ADDRA(3 downto 0) => addrb(3 downto 0),
+      ADDRB(4) => '0',
+      ADDRB(3 downto 0) => addrb(3 downto 0),
+      ADDRC(4) => '0',
+      ADDRC(3 downto 0) => addrb(3 downto 0),
+      ADDRD(4) => '0',
+      ADDRD(3 downto 0) => addrb(3 downto 0),
+      ADDRE(4) => '0',
+      ADDRE(3 downto 0) => addrb(3 downto 0),
+      ADDRF(4) => '0',
+      ADDRF(3 downto 0) => addrb(3 downto 0),
+      ADDRG(4) => '0',
+      ADDRG(3 downto 0) => addrb(3 downto 0),
+      ADDRH(4) => '0',
+      ADDRH(3 downto 0) => addra(3 downto 0),
+      DIA(1 downto 0) => dina(15 downto 14),
+      DIB(1 downto 0) => dina(17 downto 16),
+      DIC(1 downto 0) => dina(19 downto 18),
+      DID(1 downto 0) => dina(21 downto 20),
+      DIE(1 downto 0) => dina(23 downto 22),
+      DIF(1 downto 0) => B"00",
+      DIG(1 downto 0) => B"00",
+      DIH(1 downto 0) => B"00",
+      DOA(1 downto 0) => \gen_rd_b.doutb_reg0\(15 downto 14),
+      DOB(1 downto 0) => \gen_rd_b.doutb_reg0\(17 downto 16),
+      DOC(1 downto 0) => \gen_rd_b.doutb_reg0\(19 downto 18),
+      DOD(1 downto 0) => \gen_rd_b.doutb_reg0\(21 downto 20),
+      DOE(1 downto 0) => \gen_rd_b.doutb_reg0\(23 downto 22),
+      DOF(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOF_UNCONNECTED\(1 downto 0),
+      DOG(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOG_UNCONNECTED\(1 downto 0),
+      DOH(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOH_UNCONNECTED\(1 downto 0),
+      WCLK => clka,
+      WE => wea(0)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -3322,6 +3642,8 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_rst is
     ram_empty_i : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end top_level_axis_data_fifo_1_0_xpm_fifo_rst;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_rst is
@@ -3790,7 +4112,7 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
     rst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
     wr_en : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    din : in STD_LOGIC_VECTOR ( 23 downto 0 );
     full : out STD_LOGIC;
     full_n : out STD_LOGIC;
     prog_full : out STD_LOGIC;
@@ -3801,7 +4123,7 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
     wr_ack : out STD_LOGIC;
     rd_clk : in STD_LOGIC;
     rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 23 downto 0 );
     empty : out STD_LOGIC;
     prog_empty : out STD_LOGIC;
     rd_data_count : out STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -3857,13 +4179,15 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute FIFO_READ_LATENCY : integer;
   attribute FIFO_READ_LATENCY of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 224;
+  attribute FIFO_SIZE of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 384;
   attribute FIFO_WRITE_DEPTH : integer;
   attribute FIFO_WRITE_DEPTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 16;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is "1'b1";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -3891,7 +4215,7 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute RD_PNTR_WIDTH : integer;
   attribute RD_PNTR_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 4;
   attribute READ_DATA_WIDTH : integer;
-  attribute READ_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 14;
+  attribute READ_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 24;
   attribute READ_MODE : integer;
   attribute READ_MODE of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 1;
   attribute RELATED_CLOCKS : integer;
@@ -3909,7 +4233,7 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute WIDTH_RATIO : integer;
   attribute WIDTH_RATIO of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 1;
   attribute WRITE_DATA_WIDTH : integer;
-  attribute WRITE_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 14;
+  attribute WRITE_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 24;
   attribute WR_DATA_COUNT_WIDTH : integer;
   attribute WR_DATA_COUNT_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 5;
   attribute WR_DC_WIDTH_EXT : integer;
@@ -3921,7 +4245,7 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 0;
   attribute WR_WIDTH_LOG : integer;
-  attribute WR_WIDTH_LOG of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 4;
+  attribute WR_WIDTH_LOG of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is 5;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of top_level_axis_data_fifo_1_0_xpm_fifo_base : entity is "TRUE";
   attribute both_stages_valid : integer;
@@ -3983,7 +4307,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   signal \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair20";
@@ -4040,9 +4364,9 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
-  attribute BYTE_WRITE_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute BYTE_WRITE_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute BYTE_WRITE_WIDTH_B : integer;
-  attribute BYTE_WRITE_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute BYTE_WRITE_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute CLOCKING_MODE : integer;
@@ -4059,7 +4383,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 224;
+  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 384;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute MESSAGE_CONTROL : integer;
@@ -4079,17 +4403,17 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute P_MEMORY_PRIMITIVE : string;
   attribute P_MEMORY_PRIMITIVE of \gen_sdpram.xpm_memory_base_inst\ : label is "auto";
   attribute P_MIN_WIDTH_DATA : integer;
-  attribute P_MIN_WIDTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_MIN_WIDTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_MIN_WIDTH_DATA_A : integer;
-  attribute P_MIN_WIDTH_DATA_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_MIN_WIDTH_DATA_A of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_MIN_WIDTH_DATA_B : integer;
-  attribute P_MIN_WIDTH_DATA_B of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_MIN_WIDTH_DATA_B of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_MIN_WIDTH_DATA_ECC : integer;
-  attribute P_MIN_WIDTH_DATA_ECC of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_MIN_WIDTH_DATA_ECC of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_MIN_WIDTH_DATA_LDW : integer;
   attribute P_MIN_WIDTH_DATA_LDW of \gen_sdpram.xpm_memory_base_inst\ : label is 4;
   attribute P_MIN_WIDTH_DATA_SHFT : integer;
-  attribute P_MIN_WIDTH_DATA_SHFT of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_MIN_WIDTH_DATA_SHFT of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_NUM_COLS_WRITE_A : integer;
   attribute P_NUM_COLS_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute P_NUM_COLS_WRITE_B : integer;
@@ -4121,13 +4445,13 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute P_WIDTH_ADDR_WRITE_B : integer;
   attribute P_WIDTH_ADDR_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 4;
   attribute P_WIDTH_COL_WRITE_A : integer;
-  attribute P_WIDTH_COL_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_WIDTH_COL_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute P_WIDTH_COL_WRITE_B : integer;
-  attribute P_WIDTH_COL_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute P_WIDTH_COL_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute READ_DATA_WIDTH_A : integer;
-  attribute READ_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute READ_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute READ_DATA_WIDTH_B : integer;
-  attribute READ_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute READ_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute READ_LATENCY_A : integer;
   attribute READ_LATENCY_A of \gen_sdpram.xpm_memory_base_inst\ : label is 2;
   attribute READ_LATENCY_B : integer;
@@ -4148,18 +4472,18 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_base is
   attribute VERSION of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute WAKEUP_TIME of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute WRITE_DATA_WIDTH_A : integer;
-  attribute WRITE_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute WRITE_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute WRITE_DATA_WIDTH_B : integer;
-  attribute WRITE_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 14;
+  attribute WRITE_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute WRITE_MODE_A : integer;
   attribute WRITE_MODE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 2;
   attribute WRITE_MODE_B : integer;
   attribute WRITE_MODE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 2;
   attribute XPM_MODULE of \gen_sdpram.xpm_memory_base_inst\ : label is "TRUE";
   attribute rsta_loop_iter : integer;
-  attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute rstb_loop_iter : integer;
-  attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 24;
   attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair19";
 begin
   almost_empty <= \<const0>\;
@@ -4390,10 +4714,10 @@ GND: unisim.vcomponents.GND
       clkb => rd_clk,
       dbiterra => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED\,
       dbiterrb => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\,
-      dina(13 downto 0) => din(13 downto 0),
-      dinb(13 downto 0) => B"00000000000000",
-      douta(13 downto 0) => \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\(13 downto 0),
-      doutb(13 downto 0) => dout(13 downto 0),
+      dina(23 downto 0) => din(23 downto 0),
+      dinb(23 downto 0) => B"000000000000000000000000",
+      douta(23 downto 0) => \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\(23 downto 0),
+      doutb(23 downto 0) => dout(23 downto 0),
       ena => '0',
       enb => rdp_inst_n_9,
       injectdbiterra => '0',
@@ -4512,18 +4836,18 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_axis is
     m_aclk : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_axis_tstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axis_tlast : in STD_LOGIC;
     s_axis_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tlast : out STD_LOGIC;
     m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4540,9 +4864,9 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_axis is
     dbiterr_axis : out STD_LOGIC
   );
   attribute AXIS_DATA_WIDTH : integer;
-  attribute AXIS_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 14;
+  attribute AXIS_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 24;
   attribute AXIS_FINAL_DATA_WIDTH : integer;
-  attribute AXIS_FINAL_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 14;
+  attribute AXIS_FINAL_DATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 24;
   attribute CDC_SYNC_STAGES : integer;
   attribute CDC_SYNC_STAGES of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 3;
   attribute CLOCKING_MODE : string;
@@ -4565,6 +4889,8 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 4;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -4588,25 +4914,25 @@ entity top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 0;
   attribute TDATA_OFFSET : integer;
-  attribute TDATA_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 8;
+  attribute TDATA_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 16;
   attribute TDATA_WIDTH : integer;
-  attribute TDATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 8;
+  attribute TDATA_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 16;
   attribute TDEST_OFFSET : integer;
-  attribute TDEST_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 12;
+  attribute TDEST_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 22;
   attribute TDEST_WIDTH : integer;
   attribute TDEST_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 1;
   attribute TID_OFFSET : integer;
-  attribute TID_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 11;
+  attribute TID_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 21;
   attribute TID_WIDTH : integer;
   attribute TID_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 1;
   attribute TKEEP_OFFSET : integer;
-  attribute TKEEP_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 10;
+  attribute TKEEP_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 20;
   attribute TSTRB_OFFSET : integer;
-  attribute TSTRB_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 9;
+  attribute TSTRB_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 18;
   attribute TUSER_MAX_WIDTH : integer;
-  attribute TUSER_MAX_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 4083;
+  attribute TUSER_MAX_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 4073;
   attribute TUSER_OFFSET : integer;
-  attribute TUSER_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 13;
+  attribute TUSER_OFFSET of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 23;
   attribute TUSER_WIDTH : integer;
   attribute TUSER_WIDTH of top_level_axis_data_fifo_1_0_xpm_fifo_axis : entity is 1;
   attribute USE_ADV_FEATURES : integer;
@@ -4697,7 +5023,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute FIFO_READ_LATENCY : integer;
   attribute FIFO_READ_LATENCY of xpm_fifo_base_inst : label is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of xpm_fifo_base_inst : label is 224;
+  attribute FIFO_SIZE of xpm_fifo_base_inst : label is 384;
   attribute FIFO_WRITE_DEPTH : integer;
   attribute FIFO_WRITE_DEPTH of xpm_fifo_base_inst : label is 16;
   attribute FULL_RESET_VALUE : integer;
@@ -4728,7 +5054,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute RD_PNTR_WIDTH : integer;
   attribute RD_PNTR_WIDTH of xpm_fifo_base_inst : label is 4;
   attribute READ_DATA_WIDTH : integer;
-  attribute READ_DATA_WIDTH of xpm_fifo_base_inst : label is 14;
+  attribute READ_DATA_WIDTH of xpm_fifo_base_inst : label is 24;
   attribute READ_MODE : integer;
   attribute READ_MODE of xpm_fifo_base_inst : label is 1;
   attribute RELATED_CLOCKS of xpm_fifo_base_inst : label is 0;
@@ -4742,7 +5068,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute WIDTH_RATIO : integer;
   attribute WIDTH_RATIO of xpm_fifo_base_inst : label is 1;
   attribute WRITE_DATA_WIDTH : integer;
-  attribute WRITE_DATA_WIDTH of xpm_fifo_base_inst : label is 14;
+  attribute WRITE_DATA_WIDTH of xpm_fifo_base_inst : label is 24;
   attribute WR_DATA_COUNT_WIDTH of xpm_fifo_base_inst : label is 5;
   attribute WR_DC_WIDTH_EXT : integer;
   attribute WR_DC_WIDTH_EXT of xpm_fifo_base_inst : label is 5;
@@ -4753,7 +5079,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_xpm_fifo_axis is
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of xpm_fifo_base_inst : label is 0;
   attribute WR_WIDTH_LOG : integer;
-  attribute WR_WIDTH_LOG of xpm_fifo_base_inst : label is 4;
+  attribute WR_WIDTH_LOG of xpm_fifo_base_inst : label is 5;
   attribute XPM_MODULE of xpm_fifo_base_inst : label is "TRUE";
   attribute both_stages_valid : integer;
   attribute both_stages_valid of xpm_fifo_base_inst : label is 3;
@@ -4805,20 +5131,20 @@ xpm_fifo_base_inst: entity work.top_level_axis_data_fifo_1_0_xpm_fifo_base
       almost_full => NLW_xpm_fifo_base_inst_almost_full_UNCONNECTED,
       data_valid => \^m_axis_tvalid\,
       dbiterr => NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED,
-      din(13) => s_axis_tlast,
-      din(12) => s_axis_tuser(0),
-      din(11) => s_axis_tdest(0),
-      din(10) => s_axis_tid(0),
-      din(9) => s_axis_tkeep(0),
-      din(8) => s_axis_tstrb(0),
-      din(7 downto 0) => s_axis_tdata(7 downto 0),
-      dout(13) => m_axis_tlast,
-      dout(12) => m_axis_tuser(0),
-      dout(11) => m_axis_tdest(0),
-      dout(10) => m_axis_tid(0),
-      dout(9) => m_axis_tkeep(0),
-      dout(8) => m_axis_tstrb(0),
-      dout(7 downto 0) => m_axis_tdata(7 downto 0),
+      din(23) => s_axis_tlast,
+      din(22) => s_axis_tuser(0),
+      din(21) => s_axis_tdest(0),
+      din(20) => s_axis_tid(0),
+      din(19 downto 18) => s_axis_tkeep(1 downto 0),
+      din(17 downto 16) => s_axis_tstrb(1 downto 0),
+      din(15 downto 0) => s_axis_tdata(15 downto 0),
+      dout(23) => m_axis_tlast,
+      dout(22) => m_axis_tuser(0),
+      dout(21) => m_axis_tdest(0),
+      dout(20) => m_axis_tid(0),
+      dout(19 downto 18) => m_axis_tkeep(1 downto 0),
+      dout(17 downto 16) => m_axis_tstrb(1 downto 0),
+      dout(15 downto 0) => m_axis_tdata(15 downto 0),
       empty => NLW_xpm_fifo_base_inst_empty_UNCONNECTED,
       full => NLW_xpm_fifo_base_inst_full_UNCONNECTED,
       full_n => s_axis_tready,
@@ -4862,9 +5188,9 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
     s_axis_aclken : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_axis_tstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axis_tlast : in STD_LOGIC;
     s_axis_tid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_tdest : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4878,9 +5204,9 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
     m_axis_aclken : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tlast : out STD_LOGIC;
     m_axis_tid : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tdest : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4896,7 +5222,7 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
   attribute C_AXIS_SIGNAL_SET : string;
   attribute C_AXIS_SIGNAL_SET of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is "32'b00000000000000000000000000000011";
   attribute C_AXIS_TDATA_WIDTH : integer;
-  attribute C_AXIS_TDATA_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 8;
+  attribute C_AXIS_TDATA_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 16;
   attribute C_AXIS_TDEST_WIDTH : integer;
   attribute C_AXIS_TDEST_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 1;
   attribute C_AXIS_TID_WIDTH : integer;
@@ -4986,7 +5312,7 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
   attribute LP_S_ACLKEN_CAN_TOGGLE : integer;
   attribute LP_S_ACLKEN_CAN_TOGGLE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 0;
   attribute LP_TDATA_WIDTH : integer;
-  attribute LP_TDATA_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 8;
+  attribute LP_TDATA_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 16;
   attribute LP_TDEST_WIDTH : integer;
   attribute LP_TDEST_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 1;
   attribute LP_TID_WIDTH : integer;
@@ -4997,6 +5323,8 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
   attribute LP_USE_ADV_FEATURES of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 825241648;
   attribute LP_WR_DATA_COUNT_WIDTH : integer;
   attribute LP_WR_DATA_COUNT_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is 5;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top : entity is "axis_data_fifo_v2_0_1_top";
 end top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top;
 
 architecture STRUCTURE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top is
@@ -5007,13 +5335,13 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute AXIS_DATA_WIDTH : integer;
-  attribute AXIS_DATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 14;
+  attribute AXIS_DATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 24;
   attribute AXIS_FINAL_DATA_WIDTH : integer;
-  attribute AXIS_FINAL_DATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 14;
+  attribute AXIS_FINAL_DATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 24;
   attribute CDC_SYNC_STAGES : integer;
   attribute CDC_SYNC_STAGES of \gen_fifo.xpm_fifo_axis_inst\ : label is 3;
   attribute CLOCKING_MODE : string;
@@ -5059,25 +5387,25 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of \gen_fifo.xpm_fifo_axis_inst\ : label is 0;
   attribute TDATA_OFFSET : integer;
-  attribute TDATA_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 8;
+  attribute TDATA_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 16;
   attribute TDATA_WIDTH : integer;
-  attribute TDATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 8;
+  attribute TDATA_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 16;
   attribute TDEST_OFFSET : integer;
-  attribute TDEST_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 12;
+  attribute TDEST_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 22;
   attribute TDEST_WIDTH : integer;
   attribute TDEST_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 1;
   attribute TID_OFFSET : integer;
-  attribute TID_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 11;
+  attribute TID_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 21;
   attribute TID_WIDTH : integer;
   attribute TID_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 1;
   attribute TKEEP_OFFSET : integer;
-  attribute TKEEP_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 10;
+  attribute TKEEP_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 20;
   attribute TSTRB_OFFSET : integer;
-  attribute TSTRB_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 9;
+  attribute TSTRB_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 18;
   attribute TUSER_MAX_WIDTH : integer;
-  attribute TUSER_MAX_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 4083;
+  attribute TUSER_MAX_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 4073;
   attribute TUSER_OFFSET : integer;
-  attribute TUSER_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 13;
+  attribute TUSER_OFFSET of \gen_fifo.xpm_fifo_axis_inst\ : label is 23;
   attribute TUSER_WIDTH : integer;
   attribute TUSER_WIDTH of \gen_fifo.xpm_fifo_axis_inst\ : label is 1;
   attribute USE_ADV_FEATURES : integer;
@@ -5147,8 +5475,10 @@ begin
   axis_wr_data_count(4 downto 0) <= \^axis_wr_data_count\(4 downto 0);
   m_axis_tdest(0) <= \<const0>\;
   m_axis_tid(0) <= \<const0>\;
+  m_axis_tkeep(1) <= \<const1>\;
   m_axis_tkeep(0) <= \<const1>\;
   m_axis_tlast <= \<const1>\;
+  m_axis_tstrb(1) <= \<const1>\;
   m_axis_tstrb(0) <= \<const1>\;
   m_axis_tuser(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
@@ -5167,13 +5497,13 @@ VCC: unisim.vcomponents.VCC
       injectdbiterr_axis => injectdbiterr,
       injectsbiterr_axis => injectsbiterr,
       m_aclk => m_axis_aclk,
-      m_axis_tdata(7 downto 0) => m_axis_tdata(7 downto 0),
+      m_axis_tdata(15 downto 0) => m_axis_tdata(15 downto 0),
       m_axis_tdest(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED\(0),
       m_axis_tid(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED\(0),
-      m_axis_tkeep(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\(0),
+      m_axis_tkeep(1 downto 0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\(1 downto 0),
       m_axis_tlast => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED\,
       m_axis_tready => m_axis_tready,
-      m_axis_tstrb(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\(0),
+      m_axis_tstrb(1 downto 0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\(1 downto 0),
       m_axis_tuser(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED\(0),
       m_axis_tvalid => m_axis_tvalid,
       prog_empty_axis => prog_empty,
@@ -5181,13 +5511,13 @@ VCC: unisim.vcomponents.VCC
       rd_data_count_axis(4 downto 0) => \^axis_rd_data_count\(4 downto 0),
       s_aclk => s_axis_aclk,
       s_aresetn => s_axis_aresetn,
-      s_axis_tdata(7 downto 0) => s_axis_tdata(7 downto 0),
+      s_axis_tdata(15 downto 0) => s_axis_tdata(15 downto 0),
       s_axis_tdest(0) => '0',
       s_axis_tid(0) => '0',
-      s_axis_tkeep(0) => '0',
+      s_axis_tkeep(1 downto 0) => B"00",
       s_axis_tlast => '0',
       s_axis_tready => s_axis_tready,
-      s_axis_tstrb(0) => '0',
+      s_axis_tstrb(1 downto 0) => B"00",
       s_axis_tuser(0) => '0',
       s_axis_tvalid => s_axis_tvalid,
       sbiterr_axis => sbiterr,
@@ -5204,16 +5534,16 @@ entity top_level_axis_data_fifo_1_0 is
     s_axis_aclk : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axis_aclk : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of top_level_axis_data_fifo_1_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_axis_data_fifo_1_0 : entity is "rfsoc_data_pipeline_axis_data_fifo_1_1,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_axis_data_fifo_1_0 : entity is "top_level_axis_data_fifo_1_0,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of top_level_axis_data_fifo_1_0 : entity is "yes";
   attribute X_CORE_INFO : string;
@@ -5232,15 +5562,15 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   signal NLW_inst_axis_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_inst_m_axis_tdest_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_m_axis_tid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_inst_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_inst_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_inst_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_inst_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute C_ACLKEN_CONV_MODE : integer;
   attribute C_ACLKEN_CONV_MODE of inst : label is 0;
   attribute C_AXIS_SIGNAL_SET : string;
   attribute C_AXIS_SIGNAL_SET of inst : label is "32'b00000000000000000000000000000011";
   attribute C_AXIS_TDATA_WIDTH : integer;
-  attribute C_AXIS_TDATA_WIDTH of inst : label is 8;
+  attribute C_AXIS_TDATA_WIDTH of inst : label is 16;
   attribute C_AXIS_TDEST_WIDTH : integer;
   attribute C_AXIS_TDEST_WIDTH of inst : label is 1;
   attribute C_AXIS_TID_WIDTH : integer;
@@ -5330,7 +5660,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   attribute LP_S_ACLKEN_CAN_TOGGLE : integer;
   attribute LP_S_ACLKEN_CAN_TOGGLE of inst : label is 0;
   attribute LP_TDATA_WIDTH : integer;
-  attribute LP_TDATA_WIDTH of inst : label is 8;
+  attribute LP_TDATA_WIDTH of inst : label is 16;
   attribute LP_TDEST_WIDTH : integer;
   attribute LP_TDEST_WIDTH of inst : label is 1;
   attribute LP_TID_WIDTH : integer;
@@ -5344,19 +5674,19 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of m_axis_aclk : signal is "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_aclk : signal is "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 S_CLKIF CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME S_CLKIF, ASSOCIATED_BUSIF S_AXIS, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_axis_aclken";
+  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME S_CLKIF, ASSOCIATED_BUSIF S_AXIS, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_axis_aclken";
   attribute X_INTERFACE_INFO of s_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 S_RSTIF RST";
   attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME S_RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of s_axis_tready : signal is "xilinx.com:interface:axis:1.0 S_AXIS TREADY";
   attribute X_INTERFACE_INFO of s_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 S_AXIS TVALID";
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
-  attribute X_INTERFACE_PARAMETER of m_axis_tdata : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_tdata : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_tdata : signal is "xilinx.com:interface:axis:1.0 S_AXIS TDATA";
-  attribute X_INTERFACE_PARAMETER of s_axis_tdata : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axis_tdata : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
 begin
 inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top
      port map (
@@ -5369,13 +5699,13 @@ inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top
       injectsbiterr => '0',
       m_axis_aclk => m_axis_aclk,
       m_axis_aclken => '1',
-      m_axis_tdata(7 downto 0) => m_axis_tdata(7 downto 0),
+      m_axis_tdata(15 downto 0) => m_axis_tdata(15 downto 0),
       m_axis_tdest(0) => NLW_inst_m_axis_tdest_UNCONNECTED(0),
       m_axis_tid(0) => NLW_inst_m_axis_tid_UNCONNECTED(0),
-      m_axis_tkeep(0) => NLW_inst_m_axis_tkeep_UNCONNECTED(0),
+      m_axis_tkeep(1 downto 0) => NLW_inst_m_axis_tkeep_UNCONNECTED(1 downto 0),
       m_axis_tlast => NLW_inst_m_axis_tlast_UNCONNECTED,
       m_axis_tready => m_axis_tready,
-      m_axis_tstrb(0) => NLW_inst_m_axis_tstrb_UNCONNECTED(0),
+      m_axis_tstrb(1 downto 0) => NLW_inst_m_axis_tstrb_UNCONNECTED(1 downto 0),
       m_axis_tuser(0) => NLW_inst_m_axis_tuser_UNCONNECTED(0),
       m_axis_tvalid => m_axis_tvalid,
       prog_empty => NLW_inst_prog_empty_UNCONNECTED,
@@ -5383,13 +5713,13 @@ inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_1_top
       s_axis_aclk => s_axis_aclk,
       s_axis_aclken => '1',
       s_axis_aresetn => s_axis_aresetn,
-      s_axis_tdata(7 downto 0) => s_axis_tdata(7 downto 0),
+      s_axis_tdata(15 downto 0) => s_axis_tdata(15 downto 0),
       s_axis_tdest(0) => '0',
       s_axis_tid(0) => '0',
-      s_axis_tkeep(0) => '1',
+      s_axis_tkeep(1 downto 0) => B"11",
       s_axis_tlast => '1',
       s_axis_tready => s_axis_tready,
-      s_axis_tstrb(0) => '1',
+      s_axis_tstrb(1 downto 0) => B"11",
       s_axis_tuser(0) => '0',
       s_axis_tvalid => s_axis_tvalid,
       sbiterr => NLW_inst_sbiterr_UNCONNECTED

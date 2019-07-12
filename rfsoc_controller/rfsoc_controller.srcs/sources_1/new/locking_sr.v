@@ -28,7 +28,7 @@ parameter sdata = 4
 (
     input wire rf_clk,
     input wire rf_reset,
-    input wire [7:0] gpio_in,
+    input wire [15:0] gpio_in,
     output wire ch0,
     output wire ch1,
     output wire ch2,

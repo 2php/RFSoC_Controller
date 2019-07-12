@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Jul 11 08:37:47 2019
+// Date        : Thu Jul 11 15:04:45 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_level_locking_sr_0_0_stub.v
@@ -15,10 +15,10 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "locking_sr,Vivado 2019.1" *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(rf_clk, rf_reset, gpio_in, ch0, ch1, ch2, ch3)
-/* synthesis syn_black_box black_box_pad_pin="rf_clk,rf_reset,gpio_in[7:0],ch0,ch1,ch2,ch3" */;
+/* synthesis syn_black_box black_box_pad_pin="rf_clk,rf_reset,gpio_in[15:0],ch0,ch1,ch2,ch3" */;
   input rf_clk;
   input rf_reset;
-  input [7:0]gpio_in;
+  input [15:0]gpio_in;
   output ch0;
   output ch1;
   output ch2;

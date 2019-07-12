@@ -70,7 +70,7 @@ input wire rf_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rf_reset RST" *)
 input wire rf_reset;
-input wire [7 : 0] gpio_in;
+input wire [15 : 0] gpio_in;
 output wire ch0;
 output wire ch1;
 output wire ch2;

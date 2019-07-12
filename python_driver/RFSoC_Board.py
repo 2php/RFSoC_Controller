@@ -17,6 +17,7 @@ SIZE_LEN = 4 #number of bytes sent when transmitting bytestream size
 DEFAULT_BAUD = 115200
 DAC_MAX_VALUE = 0x7FFF
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
+DAC_WORD_FREQ = 250250820
 
 #Commands
 PING_BOARD = 0x00
@@ -29,6 +30,7 @@ RF_SET_REPEAT_CYCLES = 0x06
 RF_SET_TRIGGER = 0x07
 RF_SET_LOCKING_WAVEFORM = 0x08
 RF_SET_LOCKING_SELECT = 0x09
+RF_SET_ZERO_DELAY = 0x0A
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -118,17 +120,25 @@ def int_to_bytestream(n, l):
 
 class Channel:
     number = 0
-    wf = None
+    zero_delay = 0
+    repeat_cycles = 0
+    locking_wf = None
+    experiment_wf = None
+    is_locking = 0
 
-    def __init__(self, n, f):
+    def __init__(self, n, zd, rc, lf, ef, il):
         self.number = n
-        self.wf = f
+        self.repeat_cycles = rc
+        self.zero_delay = zd
+        self.locking_wf = lf
+        self.experiment_wf = ef
+        self.is_locking = il
         
     def get_byte_stream(self):
-        return self.wf.bytestream
+        return self.experiment_wf.bytestream
     
     def get_word_stream(self):
-        return self.wf.wordstream
+        return self.experiment_wf.wordstream
         
    
     
@@ -140,12 +150,14 @@ class WaveFile:
     bytestream = []
     period = 0 #in seconds
     shift = 0 #in number of DAC samples (16-bit samples)
+    amp_factor = 1
     
         
-    def __init__(self, fn, per, s):
+    def __init__(self, fn, per, s, af):
         self.shift = s
         self.period = per
         self.fileName = fn
+        self.amp_factor = af
         self.gen_word_stream()
         self.gen_byte_stream()
         
@@ -175,6 +187,11 @@ class WaveFile:
         #rescale the values into the word stream
         prescale_wordstream = np.interp(scaled_time, disc_time, vals)
         final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), 0, DAC_MAX_VALUE)
+        #if we need to adjust our amplitudes
+        if(self.amp_factor != 1):
+            for i in range(0,len(final_wordstream)):
+                final_wordstream[i] = final_wordstream[i] * self.amp_factor
+                
         if(self.shift == 0):
             self.wordstream = final_wordstream
             return
@@ -298,6 +315,30 @@ class RFSoC_Board:
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending channel number, ack error code was: " + str(ack_val) + "\n")
         
+        
+        #send the repeat cycles
+        cycle_bytes = int_to_bytestream(target_channel.repeat_cycles, 4)
+        ack_val = self.write_bytes(cycle_bytes)
+        
+         #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set repeat cycles value, ack error code was: " + str(ack_val) + "\n")
+          
+        #send the zero cycles
+        zero_bytes = int_to_bytestream(target_channel.zero_delay, 4)
+        ack_val = self.write_bytes(zero_bytes)
+        
+         #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set zero cycles value, ack error code was: " + str(ack_val) + "\n")
+            
+        #send the locking waveform
+        ack_val = self.write_bytes(target_channel.locking_wf.bytestream)
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
+            
         #send the length
         ack_val = self.write_bytes(int_to_bytestream(len(bs),4))
         
@@ -311,26 +352,7 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending bytestream, ack error code was: " + str(ack_val) + "\n")
-        
-    def set_repeat_cycles(self, num_cycles):
-        
-        #get the number of cycles as a byte stream
-        cycle_bytes = int_to_bytestream(num_cycles, 4)
-        
-        #send the repeat cycles command
-        ack_val = self.write_bytes([RF_SET_REPEAT_CYCLES])
-        
-         #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending set repeat cycles command, ack error code was: " + str(ack_val) + "\n")
-        
-         #send the cycle bytes
-        ack_val = self.write_bytes(cycle_bytes)
-        
-         #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending set repeat cycles value, ack error code was: " + str(ack_val) + "\n")
-            
+                
         
     def set_loopback(self, choice):
         
@@ -378,6 +400,8 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending trigger command, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        return 0
             
     def flush_buffer(self):
         
@@ -387,6 +411,8 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending flush buffer command, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        return 0
             
         
     def set_trigger(self, state):
@@ -405,28 +431,12 @@ class RFSoC_Board:
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending trigger mode value, ack error code was: " + str(ack_val) + "\n")
     
-    def set_locking_waveform(self, wf):
-        if(len(wf.bytestream) != 32):
-            print("Error, locking waveform must be exactly 16 samples...")
-            return
-        #send the set lockign waveform command
-        ack_val = self.write_bytes([RF_SET_LOCKING_WAVEFORM])
-        
-        #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending set locking waveform command, ack error code was: " + str(ack_val) + "\n")
+        print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
             
-        #send the locking bytes
-        ack_val = self.write_bytes(wf.bytestream)
+    def set_locking_select(self):
         
-        #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
-            
-    def set_locking_select(self, bs):
-        if(len(bs) != 2):
-            print("Error, locking select must be exactly 2 bytes...")
-            return
+        bs = self.get_locking_bytes()
+        
         #send the set lockign waveform command
         ack_val = self.write_bytes([RF_SET_LOCKING_SELECT])
         
@@ -440,4 +450,13 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
-            
+
+    
+    def get_locking_bytes(self):
+        
+        locking_val = 0x0000
+        for c in self.channels:
+            if(c.is_locking):
+                locking_val = locking_val | (1 << c.number)
+                
+        return int_to_bytestream(locking_val, 2)

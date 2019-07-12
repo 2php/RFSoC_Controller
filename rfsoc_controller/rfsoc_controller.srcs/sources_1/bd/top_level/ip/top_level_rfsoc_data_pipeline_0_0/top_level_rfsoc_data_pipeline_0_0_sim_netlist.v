@@ -1,17 +1,88 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jul 10 18:30:40 2019
+// Date        : Thu Jul 11 15:06:10 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top top_level_rfsoc_data_pipeline_0_0 -prefix
-//               top_level_rfsoc_data_pipeline_0_0_ top_level_rfsoc_data_pipeline_2_0_sim_netlist.v
-// Design      : top_level_rfsoc_data_pipeline_2_0
+// Command     : write_verilog -force -mode funcsim
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_sim_netlist.v
+// Design      : top_level_rfsoc_data_pipeline_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_0_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
+(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
+(* NotValidForBitStream *)
+module top_level_rfsoc_data_pipeline_0_0
+   (S_AXIS_tdata,
+    S_AXIS_tready,
+    S_AXIS_tvalid,
+    ext_trigger,
+    gpio_in,
+    is_locking,
+    is_selected,
+    m_axis_tdata,
+    m_axis_tready,
+    m_axis_tvalid,
+    microblaze_clk,
+    microblaze_resetn,
+    pipeline_active,
+    rf_clock,
+    rf_resetn);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]S_AXIS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output S_AXIS_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_tvalid;
+  input ext_trigger;
+  input [15:0]gpio_in;
+  input is_locking;
+  input is_selected;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [255:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) output m_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
+  output pipeline_active;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clock;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
+
+  wire [31:0]S_AXIS_tdata;
+  wire S_AXIS_tready;
+  wire S_AXIS_tvalid;
+  wire ext_trigger;
+  wire [15:0]gpio_in;
+  wire is_locking;
+  wire is_selected;
+  wire [255:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire microblaze_clk;
+  wire microblaze_resetn;
+  wire pipeline_active;
+  wire rf_clock;
+  wire rf_resetn;
+
+  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+  top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline inst
+       (.S_AXIS_tdata(S_AXIS_tdata),
+        .S_AXIS_tready(S_AXIS_tready),
+        .S_AXIS_tvalid(S_AXIS_tvalid),
+        .ext_trigger(ext_trigger),
+        .gpio_in(gpio_in),
+        .is_locking(is_locking),
+        .is_selected(is_selected),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tvalid(m_axis_tvalid),
+        .microblaze_clk(microblaze_clk),
+        .microblaze_resetn(microblaze_resetn),
+        .pipeline_active(pipeline_active),
+        .rf_clock(rf_clock),
+        .rf_resetn(rf_resetn));
+endmodule
+
+(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
 module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top
    (s_axis_tready,
     m_axis_tvalid,
@@ -147,132 +218,6 @@ module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterize
     m_axis_tready);
   output s_axis_tready;
   output m_axis_tvalid;
-  output [7:0]m_axis_tdata;
-  input s_axis_aresetn;
-  input s_axis_aclk;
-  input m_axis_aclk;
-  input s_axis_tvalid;
-  input [7:0]s_axis_tdata;
-  input m_axis_tready;
-
-  wire \gen_fifo.xpm_fifo_axis_inst_n_16 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_17 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_18 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_19 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_20 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_21 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_22 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_23 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_24 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_25 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_26 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_27 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_28 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_29 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_30 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_31 ;
-  wire m_axis_aclk;
-  wire [7:0]m_axis_tdata;
-  wire m_axis_tready;
-  wire m_axis_tvalid;
-  wire s_axis_aclk;
-  wire s_axis_aresetn;
-  wire [7:0]s_axis_tdata;
-  wire s_axis_tready;
-  wire s_axis_tvalid;
-  wire \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED ;
-
-  (* AXIS_DATA_WIDTH = "14" *) 
-  (* AXIS_FINAL_DATA_WIDTH = "14" *) 
-  (* CDC_SYNC_STAGES = "3" *) 
-  (* CLOCKING_MODE = "independent_clock" *) 
-  (* ECC_MODE = "no_ecc" *) 
-  (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
-  (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) 
-  (* EN_ALMOST_EMPTY_INT = "1'b0" *) 
-  (* EN_ALMOST_FULL_INT = "1'b0" *) 
-  (* EN_DATA_VALID_INT = "1'b1" *) 
-  (* FIFO_DEPTH = "16" *) 
-  (* FIFO_MEMORY_TYPE = "auto" *) 
-  (* LOG_DEPTH_AXIS = "4" *) 
-  (* PACKET_FIFO = "false" *) 
-  (* PKT_SIZE_LT8 = "1'b0" *) 
-  (* PROG_EMPTY_THRESH = "5" *) 
-  (* PROG_FULL_THRESH = "11" *) 
-  (* P_COMMON_CLOCK = "0" *) 
-  (* P_ECC_MODE = "0" *) 
-  (* P_FIFO_MEMORY_TYPE = "0" *) 
-  (* P_PKT_MODE = "0" *) 
-  (* RD_DATA_COUNT_WIDTH = "5" *) 
-  (* RELATED_CLOCKS = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* TDATA_OFFSET = "8" *) 
-  (* TDATA_WIDTH = "8" *) 
-  (* TDEST_OFFSET = "12" *) 
-  (* TDEST_WIDTH = "1" *) 
-  (* TID_OFFSET = "11" *) 
-  (* TID_WIDTH = "1" *) 
-  (* TKEEP_OFFSET = "10" *) 
-  (* TSTRB_OFFSET = "9" *) 
-  (* TUSER_MAX_WIDTH = "4083" *) 
-  (* TUSER_OFFSET = "13" *) 
-  (* TUSER_WIDTH = "1" *) 
-  (* USE_ADV_FEATURES = "825241648" *) 
-  (* USE_ADV_FEATURES_INT = "825241648" *) 
-  (* WR_DATA_COUNT_WIDTH = "5" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized0 \gen_fifo.xpm_fifo_axis_inst 
-       (.almost_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_29 ),
-        .almost_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_22 ),
-        .dbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_31 ),
-        .injectdbiterr_axis(1'b0),
-        .injectsbiterr_axis(1'b0),
-        .m_aclk(m_axis_aclk),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tdest(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED [0]),
-        .m_axis_tid(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED [0]),
-        .m_axis_tkeep(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED [0]),
-        .m_axis_tlast(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tstrb(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED [0]),
-        .m_axis_tuser(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED [0]),
-        .m_axis_tvalid(m_axis_tvalid),
-        .prog_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_23 ),
-        .prog_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_16 ),
-        .rd_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_24 ,\gen_fifo.xpm_fifo_axis_inst_n_25 ,\gen_fifo.xpm_fifo_axis_inst_n_26 ,\gen_fifo.xpm_fifo_axis_inst_n_27 ,\gen_fifo.xpm_fifo_axis_inst_n_28 }),
-        .s_aclk(s_axis_aclk),
-        .s_aresetn(s_axis_aresetn),
-        .s_axis_tdata(s_axis_tdata),
-        .s_axis_tdest(1'b0),
-        .s_axis_tid(1'b0),
-        .s_axis_tkeep(1'b0),
-        .s_axis_tlast(1'b0),
-        .s_axis_tready(s_axis_tready),
-        .s_axis_tstrb(1'b0),
-        .s_axis_tuser(1'b0),
-        .s_axis_tvalid(s_axis_tvalid),
-        .sbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_30 ),
-        .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_17 ,\gen_fifo.xpm_fifo_axis_inst_n_18 ,\gen_fifo.xpm_fifo_axis_inst_n_19 ,\gen_fifo.xpm_fifo_axis_inst_n_20 ,\gen_fifo.xpm_fifo_axis_inst_n_21 }));
-endmodule
-
-(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
-module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized1
-   (s_axis_tready,
-    m_axis_tvalid,
-    m_axis_tdata,
-    s_axis_aresetn,
-    s_axis_aclk,
-    m_axis_aclk,
-    s_axis_tvalid,
-    s_axis_tdata,
-    m_axis_tready);
-  output s_axis_tready;
-  output m_axis_tvalid;
   output [255:0]m_axis_tdata;
   input s_axis_aresetn;
   input s_axis_aclk;
@@ -352,7 +297,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterize
   (* USE_ADV_FEATURES_INT = "825241648" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1 \gen_fifo.xpm_fifo_axis_inst 
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized0 \gen_fifo.xpm_fifo_axis_inst 
        (.almost_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_339 ),
         .almost_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_332 ),
         .dbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_341 ),
@@ -384,6 +329,132 @@ module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterize
         .s_axis_tvalid(s_axis_tvalid),
         .sbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_340 ),
         .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_327 ,\gen_fifo.xpm_fifo_axis_inst_n_328 ,\gen_fifo.xpm_fifo_axis_inst_n_329 ,\gen_fifo.xpm_fifo_axis_inst_n_330 ,\gen_fifo.xpm_fifo_axis_inst_n_331 }));
+endmodule
+
+(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
+module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized1
+   (s_axis_tready,
+    m_axis_tvalid,
+    m_axis_tdata,
+    s_axis_aresetn,
+    s_axis_aclk,
+    m_axis_aclk,
+    s_axis_tvalid,
+    s_axis_tdata,
+    m_axis_tready);
+  output s_axis_tready;
+  output m_axis_tvalid;
+  output [15:0]m_axis_tdata;
+  input s_axis_aresetn;
+  input s_axis_aclk;
+  input m_axis_aclk;
+  input s_axis_tvalid;
+  input [15:0]s_axis_tdata;
+  input m_axis_tready;
+
+  wire \gen_fifo.xpm_fifo_axis_inst_n_26 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_27 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_28 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_29 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_30 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_31 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_32 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_33 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_34 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_35 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_36 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_37 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_38 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_39 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_40 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_41 ;
+  wire m_axis_aclk;
+  wire [15:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire s_axis_aclk;
+  wire s_axis_aresetn;
+  wire [15:0]s_axis_tdata;
+  wire s_axis_tready;
+  wire s_axis_tvalid;
+  wire \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED ;
+  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED ;
+  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED ;
+
+  (* AXIS_DATA_WIDTH = "24" *) 
+  (* AXIS_FINAL_DATA_WIDTH = "24" *) 
+  (* CDC_SYNC_STAGES = "3" *) 
+  (* CLOCKING_MODE = "independent_clock" *) 
+  (* ECC_MODE = "no_ecc" *) 
+  (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
+  (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) 
+  (* EN_ALMOST_EMPTY_INT = "1'b0" *) 
+  (* EN_ALMOST_FULL_INT = "1'b0" *) 
+  (* EN_DATA_VALID_INT = "1'b1" *) 
+  (* FIFO_DEPTH = "16" *) 
+  (* FIFO_MEMORY_TYPE = "auto" *) 
+  (* LOG_DEPTH_AXIS = "4" *) 
+  (* PACKET_FIFO = "false" *) 
+  (* PKT_SIZE_LT8 = "1'b0" *) 
+  (* PROG_EMPTY_THRESH = "5" *) 
+  (* PROG_FULL_THRESH = "11" *) 
+  (* P_COMMON_CLOCK = "0" *) 
+  (* P_ECC_MODE = "0" *) 
+  (* P_FIFO_MEMORY_TYPE = "0" *) 
+  (* P_PKT_MODE = "0" *) 
+  (* RD_DATA_COUNT_WIDTH = "5" *) 
+  (* RELATED_CLOCKS = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* TDATA_OFFSET = "16" *) 
+  (* TDATA_WIDTH = "16" *) 
+  (* TDEST_OFFSET = "22" *) 
+  (* TDEST_WIDTH = "1" *) 
+  (* TID_OFFSET = "21" *) 
+  (* TID_WIDTH = "1" *) 
+  (* TKEEP_OFFSET = "20" *) 
+  (* TSTRB_OFFSET = "18" *) 
+  (* TUSER_MAX_WIDTH = "4073" *) 
+  (* TUSER_OFFSET = "23" *) 
+  (* TUSER_WIDTH = "1" *) 
+  (* USE_ADV_FEATURES = "825241648" *) 
+  (* USE_ADV_FEATURES_INT = "825241648" *) 
+  (* WR_DATA_COUNT_WIDTH = "5" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1 \gen_fifo.xpm_fifo_axis_inst 
+       (.almost_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_39 ),
+        .almost_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_32 ),
+        .dbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_41 ),
+        .injectdbiterr_axis(1'b0),
+        .injectsbiterr_axis(1'b0),
+        .m_aclk(m_axis_aclk),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tdest(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED [0]),
+        .m_axis_tid(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED [0]),
+        .m_axis_tkeep(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED [1:0]),
+        .m_axis_tlast(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tstrb(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED [1:0]),
+        .m_axis_tuser(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED [0]),
+        .m_axis_tvalid(m_axis_tvalid),
+        .prog_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_33 ),
+        .prog_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_26 ),
+        .rd_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_34 ,\gen_fifo.xpm_fifo_axis_inst_n_35 ,\gen_fifo.xpm_fifo_axis_inst_n_36 ,\gen_fifo.xpm_fifo_axis_inst_n_37 ,\gen_fifo.xpm_fifo_axis_inst_n_38 }),
+        .s_aclk(s_axis_aclk),
+        .s_aresetn(s_axis_aresetn),
+        .s_axis_tdata(s_axis_tdata),
+        .s_axis_tdest(1'b0),
+        .s_axis_tid(1'b0),
+        .s_axis_tkeep({1'b0,1'b0}),
+        .s_axis_tlast(1'b0),
+        .s_axis_tready(s_axis_tready),
+        .s_axis_tstrb({1'b0,1'b0}),
+        .s_axis_tuser(1'b0),
+        .s_axis_tvalid(s_axis_tvalid),
+        .sbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_40 ),
+        .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_27 ,\gen_fifo.xpm_fifo_axis_inst_n_28 ,\gen_fifo.xpm_fifo_axis_inst_n_29 ,\gen_fifo.xpm_fifo_axis_inst_n_30 ,\gen_fifo.xpm_fifo_axis_inst_n_31 }));
 endmodule
 
 (* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
@@ -519,6 +590,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterize
         .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_327 ,\gen_fifo.xpm_fifo_axis_inst_n_328 ,\gen_fifo.xpm_fifo_axis_inst_n_329 ,\gen_fifo.xpm_fifo_axis_inst_n_330 ,\gen_fifo.xpm_fifo_axis_inst_n_331 ,\gen_fifo.xpm_fifo_axis_inst_n_332 ,\gen_fifo.xpm_fifo_axis_inst_n_333 ,\gen_fifo.xpm_fifo_axis_inst_n_334 ,\gen_fifo.xpm_fifo_axis_inst_n_335 ,\gen_fifo.xpm_fifo_axis_inst_n_336 }));
 endmodule
 
+(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter" *) 
 module top_level_rfsoc_data_pipeline_0_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter
    (Q,
     m_axis_tdata,
@@ -568,6 +640,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_dwidth_converter_v1_1_18_axis_dwid
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axisc_upsizer" *) 
 module top_level_rfsoc_data_pipeline_0_0_axis_dwidth_converter_v1_1_18_axisc_upsizer
    (Q,
     m_axis_tdata,
@@ -2560,32 +2633,33 @@ module top_level_rfsoc_data_pipeline_0_0_axis_dwidth_converter_v1_1_18_axisc_ups
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axis_mux" *) 
 module top_level_rfsoc_data_pipeline_0_0_axis_mux
-   (int_select_reg_0,
+   (int_select_reg_rep__1_0,
     m_axis_tready,
     s_axis_tdata,
     m_axis_tdata,
     rf_clock,
-    int_select_reg_rep__1_0,
+    int_select_reg_rep__1_1,
     s_axis_tready,
     \gen_wr_a.gen_word_narrow.mem_reg_3 ,
     \gen_wr_a.gen_word_narrow.mem_reg_3_0 );
-  output int_select_reg_0;
+  output int_select_reg_rep__1_0;
   output m_axis_tready;
   output [255:0]s_axis_tdata;
   input [1:0]m_axis_tdata;
   input rf_clock;
-  input int_select_reg_rep__1_0;
+  input int_select_reg_rep__1_1;
   input s_axis_tready;
   input [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3 ;
   input [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3_0 ;
 
   wire [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3 ;
   wire [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3_0 ;
-  wire int_select_reg_0;
+  wire int_select;
   wire int_select_reg_rep__0_n_0;
   wire int_select_reg_rep__1_0;
-  wire int_select_reg_rep__1_n_0;
+  wire int_select_reg_rep__1_1;
   wire int_select_reg_rep_n_0;
   wire [1:0]m_axis_tdata;
   wire m_axis_tready;
@@ -2598,2056 +2672,2056 @@ module top_level_rfsoc_data_pipeline_0_0_axis_mux
     .INIT(4'h2)) 
     axis_data_fifo_clock_crossing_i_1
        (.I0(s_axis_tready),
-        .I1(int_select_reg_0),
+        .I1(int_select_reg_rep__1_0),
         .O(m_axis_tready));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_10
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [247]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [247]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [247]),
         .O(s_axis_tdata[247]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_100
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [157]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [157]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [157]),
         .O(s_axis_tdata[157]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_101
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [156]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [156]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [156]),
         .O(s_axis_tdata[156]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_102
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [155]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [155]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [155]),
         .O(s_axis_tdata[155]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_103
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [154]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [154]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [154]),
         .O(s_axis_tdata[154]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_104
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [153]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [153]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [153]),
         .O(s_axis_tdata[153]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_105
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [152]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [152]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [152]),
         .O(s_axis_tdata[152]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_106
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [151]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [151]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [151]),
         .O(s_axis_tdata[151]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_107
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [150]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [150]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [150]),
         .O(s_axis_tdata[150]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_108
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [149]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [149]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [149]),
         .O(s_axis_tdata[149]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_109
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [148]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [148]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [148]),
         .O(s_axis_tdata[148]));
   (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_11
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [246]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [246]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [246]),
         .O(s_axis_tdata[246]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_110
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [147]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [147]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [147]),
         .O(s_axis_tdata[147]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_111
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [146]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [146]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [146]),
         .O(s_axis_tdata[146]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_112
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [145]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [145]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [145]),
         .O(s_axis_tdata[145]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_113
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [144]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [144]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [144]),
         .O(s_axis_tdata[144]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_114
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [143]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [143]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [143]),
         .O(s_axis_tdata[143]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_115
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [142]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [142]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [142]),
         .O(s_axis_tdata[142]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_116
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [141]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [141]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [141]),
         .O(s_axis_tdata[141]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_117
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [140]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [140]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [140]),
         .O(s_axis_tdata[140]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_118
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [139]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [139]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [139]),
         .O(s_axis_tdata[139]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_119
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [138]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [138]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [138]),
         .O(s_axis_tdata[138]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_12
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [245]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [245]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [245]),
         .O(s_axis_tdata[245]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_120
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [137]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [137]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [137]),
         .O(s_axis_tdata[137]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_121
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [136]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [136]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [136]),
         .O(s_axis_tdata[136]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_122
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [135]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [135]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [135]),
         .O(s_axis_tdata[135]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_123
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [134]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [134]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [134]),
         .O(s_axis_tdata[134]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_124
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [133]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [133]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [133]),
         .O(s_axis_tdata[133]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_125
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [132]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [132]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [132]),
         .O(s_axis_tdata[132]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_126
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [131]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [131]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [131]),
         .O(s_axis_tdata[131]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_127
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [130]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [130]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [130]),
         .O(s_axis_tdata[130]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_128
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [129]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [129]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [129]),
         .O(s_axis_tdata[129]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_129
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [128]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [128]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [128]),
         .O(s_axis_tdata[128]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_13
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [244]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [244]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [244]),
         .O(s_axis_tdata[244]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_130
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [127]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [127]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [127]),
         .O(s_axis_tdata[127]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_131
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [126]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [126]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [126]),
         .O(s_axis_tdata[126]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_132
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [125]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [125]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [125]),
         .O(s_axis_tdata[125]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_133
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [124]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [124]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [124]),
         .O(s_axis_tdata[124]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_134
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [123]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [123]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [123]),
         .O(s_axis_tdata[123]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_135
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [122]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [122]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [122]),
         .O(s_axis_tdata[122]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_136
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [121]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [121]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [121]),
         .O(s_axis_tdata[121]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_137
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [120]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [120]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [120]),
         .O(s_axis_tdata[120]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_138
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [119]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [119]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [119]),
         .O(s_axis_tdata[119]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_139
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [118]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [118]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [118]),
         .O(s_axis_tdata[118]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_14
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [243]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [243]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [243]),
         .O(s_axis_tdata[243]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_140
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [117]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [117]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [117]),
         .O(s_axis_tdata[117]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_141
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [116]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [116]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [116]),
         .O(s_axis_tdata[116]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_142
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [115]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [115]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [115]),
         .O(s_axis_tdata[115]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_143
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [114]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [114]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [114]),
         .O(s_axis_tdata[114]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_144
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [113]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [113]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [113]),
         .O(s_axis_tdata[113]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_145
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [112]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [112]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [112]),
         .O(s_axis_tdata[112]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_146
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [111]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [111]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [111]),
         .O(s_axis_tdata[111]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_147
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [110]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [110]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [110]),
         .O(s_axis_tdata[110]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_148
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [109]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [109]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [109]),
         .O(s_axis_tdata[109]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_149
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [108]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [108]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [108]),
         .O(s_axis_tdata[108]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_15
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [242]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [242]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [242]),
         .O(s_axis_tdata[242]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_150
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [107]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [107]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [107]),
         .O(s_axis_tdata[107]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_151
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [106]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [106]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [106]),
         .O(s_axis_tdata[106]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_152
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [105]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [105]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [105]),
         .O(s_axis_tdata[105]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_153
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [104]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [104]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [104]),
         .O(s_axis_tdata[104]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_154
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [103]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [103]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [103]),
         .O(s_axis_tdata[103]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_155
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [102]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [102]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [102]),
         .O(s_axis_tdata[102]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_156
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [101]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [101]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [101]),
         .O(s_axis_tdata[101]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_157
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [100]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [100]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [100]),
         .O(s_axis_tdata[100]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_158
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [99]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [99]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [99]),
         .O(s_axis_tdata[99]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_159
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [98]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [98]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [98]),
         .O(s_axis_tdata[98]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_16
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [241]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [241]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [241]),
         .O(s_axis_tdata[241]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_160
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [97]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [97]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [97]),
         .O(s_axis_tdata[97]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_161
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [96]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [96]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [96]),
         .O(s_axis_tdata[96]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_162
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [95]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [95]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [95]),
         .O(s_axis_tdata[95]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_163
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [94]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [94]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [94]),
         .O(s_axis_tdata[94]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_164
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [93]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [93]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [93]),
         .O(s_axis_tdata[93]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_165
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [92]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [92]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [92]),
         .O(s_axis_tdata[92]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_166
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [91]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [91]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [91]),
         .O(s_axis_tdata[91]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_167
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [90]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [90]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [90]),
         .O(s_axis_tdata[90]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_168
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [89]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [89]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [89]),
         .O(s_axis_tdata[89]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_169
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [88]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [88]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [88]),
         .O(s_axis_tdata[88]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_17
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [240]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [240]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [240]),
         .O(s_axis_tdata[240]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_170
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [87]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [87]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [87]),
         .O(s_axis_tdata[87]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_171
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [86]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [86]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [86]),
         .O(s_axis_tdata[86]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_172
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [85]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [85]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [85]),
         .O(s_axis_tdata[85]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_173
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [84]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [84]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [84]),
         .O(s_axis_tdata[84]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_174
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [83]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [83]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [83]),
         .O(s_axis_tdata[83]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_175
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [82]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [82]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [82]),
         .O(s_axis_tdata[82]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_176
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [81]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [81]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [81]),
         .O(s_axis_tdata[81]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_177
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [80]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [80]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [80]),
         .O(s_axis_tdata[80]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_178
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [79]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [79]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [79]),
         .O(s_axis_tdata[79]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_179
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [78]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [78]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [78]),
         .O(s_axis_tdata[78]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_18
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [239]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [239]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [239]),
         .O(s_axis_tdata[239]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_180
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [77]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [77]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [77]),
         .O(s_axis_tdata[77]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_181
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [76]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [76]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [76]),
         .O(s_axis_tdata[76]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_182
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [75]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [75]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [75]),
         .O(s_axis_tdata[75]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_183
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [74]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [74]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [74]),
         .O(s_axis_tdata[74]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_184
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [73]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [73]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [73]),
         .O(s_axis_tdata[73]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_185
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [72]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [72]),
-        .I3(int_select_reg_rep__0_n_0),
+        .I2(int_select_reg_rep_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [72]),
         .O(s_axis_tdata[72]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_186
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [71]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [71]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [71]),
         .O(s_axis_tdata[71]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_187
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [70]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [70]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [70]),
         .O(s_axis_tdata[70]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_188
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [69]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [69]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [69]),
         .O(s_axis_tdata[69]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_189
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [68]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [68]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [68]),
         .O(s_axis_tdata[68]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_19
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [238]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [238]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [238]),
         .O(s_axis_tdata[238]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_190
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [67]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [67]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [67]),
         .O(s_axis_tdata[67]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_191
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [66]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [66]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [66]),
         .O(s_axis_tdata[66]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_192
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [65]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [65]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [65]),
         .O(s_axis_tdata[65]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_193
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [64]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [64]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [64]),
         .O(s_axis_tdata[64]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_194
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [63]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [63]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [63]),
         .O(s_axis_tdata[63]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_195
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [62]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [62]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [62]),
         .O(s_axis_tdata[62]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_196
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [61]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [61]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [61]),
         .O(s_axis_tdata[61]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_197
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [60]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [60]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [60]),
         .O(s_axis_tdata[60]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_198
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [59]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [59]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [59]),
         .O(s_axis_tdata[59]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_199
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [58]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [58]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [58]),
         .O(s_axis_tdata[58]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_2
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [255]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [255]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [255]),
         .O(s_axis_tdata[255]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_20
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [237]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [237]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [237]),
         .O(s_axis_tdata[237]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_200
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [57]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [57]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [57]),
         .O(s_axis_tdata[57]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_201
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [56]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [56]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [56]),
         .O(s_axis_tdata[56]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_202
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [55]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [55]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [55]),
         .O(s_axis_tdata[55]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_203
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [54]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [54]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [54]),
         .O(s_axis_tdata[54]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_204
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [53]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [53]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [53]),
         .O(s_axis_tdata[53]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_205
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [52]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [52]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [52]),
         .O(s_axis_tdata[52]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_206
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [51]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [51]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [51]),
         .O(s_axis_tdata[51]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_207
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [50]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [50]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [50]),
         .O(s_axis_tdata[50]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_208
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [49]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [49]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [49]),
         .O(s_axis_tdata[49]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_209
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [48]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [48]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [48]),
         .O(s_axis_tdata[48]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_21
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [236]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [236]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [236]),
         .O(s_axis_tdata[236]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_210
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [47]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [47]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [47]),
         .O(s_axis_tdata[47]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_211
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [46]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [46]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [46]),
         .O(s_axis_tdata[46]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_212
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [45]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [45]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [45]),
         .O(s_axis_tdata[45]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_213
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [44]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [44]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [44]),
         .O(s_axis_tdata[44]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_214
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [43]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [43]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [43]),
         .O(s_axis_tdata[43]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_215
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [42]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [42]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [42]),
         .O(s_axis_tdata[42]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_216
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [41]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [41]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [41]),
         .O(s_axis_tdata[41]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_217
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [40]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [40]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [40]),
         .O(s_axis_tdata[40]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_218
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [39]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [39]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [39]),
         .O(s_axis_tdata[39]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_219
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [38]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [38]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [38]),
         .O(s_axis_tdata[38]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_22
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [235]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [235]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [235]),
         .O(s_axis_tdata[235]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_220
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [37]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [37]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [37]),
         .O(s_axis_tdata[37]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_221
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [36]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [36]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [36]),
         .O(s_axis_tdata[36]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_222
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [35]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [35]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [35]),
         .O(s_axis_tdata[35]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_223
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [34]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [34]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [34]),
         .O(s_axis_tdata[34]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_224
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [33]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [33]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [33]),
         .O(s_axis_tdata[33]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_225
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [32]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [32]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [32]),
         .O(s_axis_tdata[32]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_226
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [31]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [31]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [31]),
         .O(s_axis_tdata[31]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_227
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [30]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [30]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [30]),
         .O(s_axis_tdata[30]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_228
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [29]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [29]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [29]),
         .O(s_axis_tdata[29]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_229
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [28]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [28]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [28]),
         .O(s_axis_tdata[28]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_23
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [234]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [234]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [234]),
         .O(s_axis_tdata[234]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_230
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [27]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [27]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [27]),
         .O(s_axis_tdata[27]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_231
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [26]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [26]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [26]),
         .O(s_axis_tdata[26]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_232
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [25]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [25]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [25]),
         .O(s_axis_tdata[25]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_233
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [24]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [24]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [24]),
         .O(s_axis_tdata[24]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_234
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [23]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [23]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [23]),
         .O(s_axis_tdata[23]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_235
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [22]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [22]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [22]),
         .O(s_axis_tdata[22]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_236
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [21]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [21]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [21]),
         .O(s_axis_tdata[21]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_237
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [20]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [20]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [20]),
         .O(s_axis_tdata[20]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_238
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [19]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [19]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [19]),
         .O(s_axis_tdata[19]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_239
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [18]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [18]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [18]),
         .O(s_axis_tdata[18]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_24
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [233]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [233]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [233]),
         .O(s_axis_tdata[233]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_240
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [17]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [17]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [17]),
         .O(s_axis_tdata[17]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_241
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [16]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [16]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [16]),
         .O(s_axis_tdata[16]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_242
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [15]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [15]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [15]),
         .O(s_axis_tdata[15]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_243
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [14]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [14]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [14]),
         .O(s_axis_tdata[14]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_244
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [13]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [13]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [13]),
         .O(s_axis_tdata[13]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_245
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [12]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [12]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [12]),
         .O(s_axis_tdata[12]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_246
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [11]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [11]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [11]),
         .O(s_axis_tdata[11]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_247
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [10]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [10]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [10]),
         .O(s_axis_tdata[10]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_248
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [9]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [9]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [9]),
         .O(s_axis_tdata[9]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_249
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [8]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [8]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [8]),
         .O(s_axis_tdata[8]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_25
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [232]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [232]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [232]),
         .O(s_axis_tdata[232]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_250
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [7]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [7]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [7]),
         .O(s_axis_tdata[7]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_251
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [6]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [6]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [6]),
         .O(s_axis_tdata[6]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_252
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [5]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [5]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [5]),
         .O(s_axis_tdata[5]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_253
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [4]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [4]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [4]),
         .O(s_axis_tdata[4]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_254
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [3]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [3]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [3]),
         .O(s_axis_tdata[3]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_255
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [2]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [2]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [2]),
         .O(s_axis_tdata[2]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_256
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [1]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [1]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [1]),
         .O(s_axis_tdata[1]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_257
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [0]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [0]),
-        .I3(int_select_reg_rep__1_n_0),
+        .I2(int_select),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [0]),
         .O(s_axis_tdata[0]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_26
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [231]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [231]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [231]),
         .O(s_axis_tdata[231]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_27
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [230]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [230]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [230]),
         .O(s_axis_tdata[230]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_28
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [229]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [229]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [229]),
         .O(s_axis_tdata[229]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_29
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [228]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [228]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [228]),
         .O(s_axis_tdata[228]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_3
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [254]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [254]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [254]),
         .O(s_axis_tdata[254]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_30
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [227]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [227]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [227]),
         .O(s_axis_tdata[227]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_31
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [226]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [226]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [226]),
         .O(s_axis_tdata[226]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_32
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [225]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [225]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [225]),
         .O(s_axis_tdata[225]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_33
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [224]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [224]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [224]),
         .O(s_axis_tdata[224]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_34
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [223]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [223]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [223]),
         .O(s_axis_tdata[223]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_35
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [222]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [222]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [222]),
         .O(s_axis_tdata[222]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_36
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [221]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [221]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [221]),
         .O(s_axis_tdata[221]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_37
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [220]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [220]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [220]),
         .O(s_axis_tdata[220]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_38
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [219]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [219]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [219]),
         .O(s_axis_tdata[219]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_39
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [218]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [218]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [218]),
         .O(s_axis_tdata[218]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_4
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [253]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [253]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [253]),
         .O(s_axis_tdata[253]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_40
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [217]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [217]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [217]),
         .O(s_axis_tdata[217]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_41
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [216]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [216]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [216]),
         .O(s_axis_tdata[216]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_42
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [215]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [215]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [215]),
         .O(s_axis_tdata[215]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_43
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [214]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [214]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [214]),
         .O(s_axis_tdata[214]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_44
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [213]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [213]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [213]),
         .O(s_axis_tdata[213]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_45
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [212]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [212]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [212]),
         .O(s_axis_tdata[212]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_46
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [211]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [211]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [211]),
         .O(s_axis_tdata[211]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_47
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [210]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [210]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [210]),
         .O(s_axis_tdata[210]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_48
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [209]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [209]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [209]),
         .O(s_axis_tdata[209]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_49
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [208]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [208]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [208]),
         .O(s_axis_tdata[208]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_5
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [252]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [252]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [252]),
         .O(s_axis_tdata[252]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_50
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [207]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [207]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [207]),
         .O(s_axis_tdata[207]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_51
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [206]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [206]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [206]),
         .O(s_axis_tdata[206]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_52
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [205]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [205]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [205]),
         .O(s_axis_tdata[205]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_53
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [204]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [204]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [204]),
         .O(s_axis_tdata[204]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_54
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [203]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [203]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [203]),
         .O(s_axis_tdata[203]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_55
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [202]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [202]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [202]),
         .O(s_axis_tdata[202]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_56
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [201]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [201]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [201]),
         .O(s_axis_tdata[201]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_57
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [200]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [200]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [200]),
         .O(s_axis_tdata[200]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_58
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [199]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [199]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [199]),
         .O(s_axis_tdata[199]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_59
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [198]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [198]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [198]),
         .O(s_axis_tdata[198]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_6
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [251]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [251]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [251]),
         .O(s_axis_tdata[251]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_60
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [197]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [197]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [197]),
         .O(s_axis_tdata[197]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_61
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [196]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [196]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [196]),
         .O(s_axis_tdata[196]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_62
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [195]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [195]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [195]),
         .O(s_axis_tdata[195]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_63
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [194]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [194]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [194]),
         .O(s_axis_tdata[194]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_64
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [193]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [193]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [193]),
         .O(s_axis_tdata[193]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_65
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [192]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [192]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [192]),
         .O(s_axis_tdata[192]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_66
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [191]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [191]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [191]),
         .O(s_axis_tdata[191]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_67
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [190]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [190]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [190]),
         .O(s_axis_tdata[190]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_68
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [189]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [189]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [189]),
         .O(s_axis_tdata[189]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_69
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [188]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [188]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [188]),
         .O(s_axis_tdata[188]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_7
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [250]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [250]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [250]),
         .O(s_axis_tdata[250]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_70
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [187]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [187]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [187]),
         .O(s_axis_tdata[187]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_71
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [186]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [186]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [186]),
         .O(s_axis_tdata[186]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_72
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [185]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [185]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [185]),
         .O(s_axis_tdata[185]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_73
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [184]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [184]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [184]),
         .O(s_axis_tdata[184]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_74
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [183]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [183]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [183]),
         .O(s_axis_tdata[183]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_75
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [182]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [182]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [182]),
         .O(s_axis_tdata[182]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_76
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [181]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [181]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [181]),
         .O(s_axis_tdata[181]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_77
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [180]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [180]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [180]),
         .O(s_axis_tdata[180]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_78
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [179]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [179]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [179]),
         .O(s_axis_tdata[179]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_79
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [178]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [178]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [178]),
         .O(s_axis_tdata[178]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_8
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [249]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [249]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [249]),
         .O(s_axis_tdata[249]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_80
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [177]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [177]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [177]),
         .O(s_axis_tdata[177]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_81
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [176]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [176]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [176]),
         .O(s_axis_tdata[176]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_82
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [175]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [175]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [175]),
         .O(s_axis_tdata[175]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_83
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [174]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [174]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [174]),
         .O(s_axis_tdata[174]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_84
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [173]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [173]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [173]),
         .O(s_axis_tdata[173]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_85
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [172]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [172]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [172]),
         .O(s_axis_tdata[172]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_86
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [171]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [171]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [171]),
         .O(s_axis_tdata[171]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_87
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [170]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [170]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [170]),
         .O(s_axis_tdata[170]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_88
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [169]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [169]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [169]),
         .O(s_axis_tdata[169]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_89
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [168]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [168]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [168]),
         .O(s_axis_tdata[168]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_9
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [248]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [248]),
-        .I3(int_select_reg_0),
+        .I2(int_select_reg_rep__1_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [248]),
         .O(s_axis_tdata[248]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_90
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [167]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [167]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [167]),
         .O(s_axis_tdata[167]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_91
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [166]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [166]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [166]),
         .O(s_axis_tdata[166]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_92
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [165]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [165]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [165]),
         .O(s_axis_tdata[165]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_93
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [164]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [164]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [164]),
         .O(s_axis_tdata[164]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_94
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [163]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [163]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [163]),
         .O(s_axis_tdata[163]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_95
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [162]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [162]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [162]),
         .O(s_axis_tdata[162]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_96
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [161]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [161]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [161]),
         .O(s_axis_tdata[161]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_97
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [160]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [160]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [160]),
         .O(s_axis_tdata[160]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_98
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [159]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [159]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [159]),
         .O(s_axis_tdata[159]));
   LUT4 #(
-    .INIT(16'h22F0)) 
+    .INIT(16'h2F20)) 
     axis_data_fifo_waveform_i_99
        (.I0(\gen_wr_a.gen_word_narrow.mem_reg_3 [158]),
         .I1(m_axis_tdata[1]),
-        .I2(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [158]),
-        .I3(int_select_reg_rep_n_0),
+        .I2(int_select_reg_rep__0_n_0),
+        .I3(\gen_wr_a.gen_word_narrow.mem_reg_3_0 [158]),
         .O(s_axis_tdata[158]));
   (* ORIG_CELL_NAME = "int_select_reg" *) 
   FDCE #(
@@ -4655,16 +4729,16 @@ module top_level_rfsoc_data_pipeline_0_0_axis_mux
     int_select_reg
        (.C(rf_clock),
         .CE(1'b1),
-        .CLR(int_select_reg_rep__1_0),
+        .CLR(int_select_reg_rep__1_1),
         .D(m_axis_tdata[0]),
-        .Q(int_select_reg_0));
+        .Q(int_select));
   (* ORIG_CELL_NAME = "int_select_reg" *) 
   FDCE #(
     .INIT(1'b0)) 
     int_select_reg_rep
        (.C(rf_clock),
         .CE(1'b1),
-        .CLR(int_select_reg_rep__1_0),
+        .CLR(int_select_reg_rep__1_1),
         .D(m_axis_tdata[0]),
         .Q(int_select_reg_rep_n_0));
   (* ORIG_CELL_NAME = "int_select_reg" *) 
@@ -4673,7 +4747,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_mux
     int_select_reg_rep__0
        (.C(rf_clock),
         .CE(1'b1),
-        .CLR(int_select_reg_rep__1_0),
+        .CLR(int_select_reg_rep__1_1),
         .D(m_axis_tdata[0]),
         .Q(int_select_reg_rep__0_n_0));
   (* ORIG_CELL_NAME = "int_select_reg" *) 
@@ -4682,76 +4756,110 @@ module top_level_rfsoc_data_pipeline_0_0_axis_mux
     int_select_reg_rep__1
        (.C(rf_clock),
         .CE(1'b1),
-        .CLR(int_select_reg_rep__1_0),
+        .CLR(int_select_reg_rep__1_1),
         .D(m_axis_tdata[0]),
-        .Q(int_select_reg_rep__1_n_0));
+        .Q(int_select_reg_rep__1_0));
 endmodule
 
+(* ORIG_REF_NAME = "axis_tready_slice" *) 
 module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
    (out,
     rf_resetn_0,
     s_axis_tvalid,
-    m_axis_0_tdata,
+    pipeline_active,
+    \data_out_reg[255] ,
     rf_clock,
-    m_axis_tdata,
-    int_select,
+    \count_value_i_reg[8] ,
     m_axis_tvalid,
     rf_resetn,
-    ext_trigger_0,
-    count_val_in_0,
+    m_axis_tdata,
+    ext_trigger,
+    \m_axis_tdata[255] ,
     is_locking,
-    \m_axis_0_tdata[255] );
+    is_selected);
   output out;
   output rf_resetn_0;
   output s_axis_tvalid;
-  output [255:0]m_axis_0_tdata;
+  output pipeline_active;
+  output [255:0]\data_out_reg[255] ;
   input rf_clock;
-  input [4:0]m_axis_tdata;
-  input int_select;
+  input \count_value_i_reg[8] ;
   input m_axis_tvalid;
   input rf_resetn;
-  input ext_trigger_0;
-  input [31:0]count_val_in_0;
+  input [6:0]m_axis_tdata;
+  input ext_trigger;
+  input [255:0]\m_axis_tdata[255] ;
   input is_locking;
-  input [255:0]\m_axis_0_tdata[255] ;
+  input is_selected;
 
   wire \FSM_sequential_state[0]_i_1_n_0 ;
-  wire \FSM_sequential_state[1]_i_1_n_0 ;
   wire \FSM_sequential_state[1]_i_2_n_0 ;
+  wire \FSM_sequential_state[1]_i_3_n_0 ;
+  wire \FSM_sequential_state[1]_i_4_n_0 ;
   (* DONT_TOUCH *) wire axis_tready_slice_0_mloop_axis_TVALID;
-  wire [31:0]count;
+  wire [31:1]count;
   wire count0_carry__0_n_0;
   wire count0_carry__0_n_1;
+  wire count0_carry__0_n_10;
+  wire count0_carry__0_n_11;
+  wire count0_carry__0_n_12;
+  wire count0_carry__0_n_13;
+  wire count0_carry__0_n_14;
+  wire count0_carry__0_n_15;
   wire count0_carry__0_n_2;
   wire count0_carry__0_n_3;
   wire count0_carry__0_n_4;
   wire count0_carry__0_n_5;
   wire count0_carry__0_n_6;
   wire count0_carry__0_n_7;
+  wire count0_carry__0_n_8;
+  wire count0_carry__0_n_9;
   wire count0_carry__1_n_0;
   wire count0_carry__1_n_1;
+  wire count0_carry__1_n_10;
+  wire count0_carry__1_n_11;
+  wire count0_carry__1_n_12;
+  wire count0_carry__1_n_13;
+  wire count0_carry__1_n_14;
+  wire count0_carry__1_n_15;
   wire count0_carry__1_n_2;
   wire count0_carry__1_n_3;
   wire count0_carry__1_n_4;
   wire count0_carry__1_n_5;
   wire count0_carry__1_n_6;
   wire count0_carry__1_n_7;
+  wire count0_carry__1_n_8;
+  wire count0_carry__1_n_9;
+  wire count0_carry__2_n_10;
+  wire count0_carry__2_n_11;
+  wire count0_carry__2_n_12;
+  wire count0_carry__2_n_13;
+  wire count0_carry__2_n_14;
+  wire count0_carry__2_n_15;
   wire count0_carry__2_n_2;
   wire count0_carry__2_n_3;
   wire count0_carry__2_n_4;
   wire count0_carry__2_n_5;
   wire count0_carry__2_n_6;
   wire count0_carry__2_n_7;
+  wire count0_carry__2_n_9;
   wire count0_carry_n_0;
   wire count0_carry_n_1;
+  wire count0_carry_n_10;
+  wire count0_carry_n_11;
+  wire count0_carry_n_12;
+  wire count0_carry_n_13;
+  wire count0_carry_n_14;
+  wire count0_carry_n_15;
   wire count0_carry_n_2;
   wire count0_carry_n_3;
   wire count0_carry_n_4;
   wire count0_carry_n_5;
   wire count0_carry_n_6;
   wire count0_carry_n_7;
-  wire \count[31]_i_1_n_0 ;
-  wire \count[31]_i_4_n_0 ;
+  wire count0_carry_n_8;
+  wire count0_carry_n_9;
+  wire \count[0]_i_1_n_0 ;
   wire \count_reg_n_0_[0] ;
   wire \count_reg_n_0_[10] ;
   wire \count_reg_n_0_[11] ;
@@ -4784,69 +4892,32 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
   wire \count_reg_n_0_[7] ;
   wire \count_reg_n_0_[8] ;
   wire \count_reg_n_0_[9] ;
-  wire [31:0]count_val_in_0;
-  wire ext_trigger_0;
-  wire i__carry__0_i_10_n_0;
-  wire i__carry__0_i_11_n_0;
-  wire i__carry__0_i_12_n_0;
-  wire i__carry__0_i_13_n_0;
-  wire i__carry__0_i_14_n_0;
-  wire i__carry__0_i_15_n_0;
-  wire i__carry__0_i_16_n_0;
-  wire i__carry__0_i_1_n_0;
-  wire i__carry__0_i_2_n_0;
-  wire i__carry__0_i_3_n_0;
-  wire i__carry__0_i_4_n_0;
-  wire i__carry__0_i_5_n_0;
-  wire i__carry__0_i_6_n_0;
-  wire i__carry__0_i_7_n_0;
-  wire i__carry__0_i_8_n_0;
-  wire i__carry__0_i_9_n_0;
-  wire i__carry_i_10_n_0;
-  wire i__carry_i_11_n_0;
-  wire i__carry_i_12_n_0;
-  wire i__carry_i_13_n_0;
-  wire i__carry_i_14_n_0;
-  wire i__carry_i_15_n_0;
-  wire i__carry_i_16_n_0;
-  wire i__carry_i_1_n_0;
-  wire i__carry_i_2_n_0;
-  wire i__carry_i_3_n_0;
-  wire i__carry_i_4_n_0;
-  wire i__carry_i_5_n_0;
-  wire i__carry_i_6_n_0;
-  wire i__carry_i_7_n_0;
-  wire i__carry_i_8_n_0;
-  wire i__carry_i_9_n_0;
-  wire int_select;
+  wire \count_value_i_reg[8] ;
+  wire [255:0]\data_out_reg[255] ;
+  wire ext_trigger;
   wire is_locking;
-  wire [255:0]m_axis_0_tdata;
-  wire [255:0]\m_axis_0_tdata[255] ;
-  wire [4:0]m_axis_tdata;
+  wire is_selected;
+  wire [6:0]m_axis_tdata;
+  wire [255:0]\m_axis_tdata[255] ;
+  wire \m_axis_tdata[255]_INST_0_i_1_n_0 ;
   wire m_axis_tvalid;
   wire mloop_axis_tvalid_i_1_n_0;
-  wire mloop_axis_tvalid_i_2_n_0;
   (* DONT_TOUCH *) wire out;
-  wire [31:1]p_0_in;
+  wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
   wire rf_resetn_0;
-  wire s_axis_tready1;
   wire s_axis_tready2;
   wire s_axis_tready20_in;
-  wire s_axis_tready2_carry__0_i_1_n_0;
-  wire s_axis_tready2_carry__0_i_2_n_0;
-  wire s_axis_tready2_carry__0_i_3_n_0;
+  wire s_axis_tready20_out;
+  wire s_axis_tready21_in;
+  wire s_axis_tready2_carry__0_n_1;
+  wire s_axis_tready2_carry__0_n_2;
+  wire s_axis_tready2_carry__0_n_3;
+  wire s_axis_tready2_carry__0_n_4;
+  wire s_axis_tready2_carry__0_n_5;
   wire s_axis_tready2_carry__0_n_6;
   wire s_axis_tready2_carry__0_n_7;
-  wire s_axis_tready2_carry_i_1_n_0;
-  wire s_axis_tready2_carry_i_2_n_0;
-  wire s_axis_tready2_carry_i_3_n_0;
-  wire s_axis_tready2_carry_i_4_n_0;
-  wire s_axis_tready2_carry_i_5_n_0;
-  wire s_axis_tready2_carry_i_6_n_0;
-  wire s_axis_tready2_carry_i_7_n_0;
-  wire s_axis_tready2_carry_i_8_n_0;
   wire s_axis_tready2_carry_n_0;
   wire s_axis_tready2_carry_n_1;
   wire s_axis_tready2_carry_n_2;
@@ -4855,11 +4926,6 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
   wire s_axis_tready2_carry_n_5;
   wire s_axis_tready2_carry_n_6;
   wire s_axis_tready2_carry_n_7;
-  wire \s_axis_tready2_inferred__0/i__carry__0_n_1 ;
-  wire \s_axis_tready2_inferred__0/i__carry__0_n_2 ;
-  wire \s_axis_tready2_inferred__0/i__carry__0_n_3 ;
-  wire \s_axis_tready2_inferred__0/i__carry__0_n_4 ;
-  wire \s_axis_tready2_inferred__0/i__carry__0_n_5 ;
   wire \s_axis_tready2_inferred__0/i__carry__0_n_6 ;
   wire \s_axis_tready2_inferred__0/i__carry__0_n_7 ;
   wire \s_axis_tready2_inferred__0/i__carry_n_0 ;
@@ -4870,58 +4936,187 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
   wire \s_axis_tready2_inferred__0/i__carry_n_5 ;
   wire \s_axis_tready2_inferred__0/i__carry_n_6 ;
   wire \s_axis_tready2_inferred__0/i__carry_n_7 ;
+  wire \s_axis_tready2_inferred__1/i__carry__0_n_6 ;
+  wire \s_axis_tready2_inferred__1/i__carry__0_n_7 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_0 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_1 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_2 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_3 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_4 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_5 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_6 ;
+  wire \s_axis_tready2_inferred__1/i__carry_n_7 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_1 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_2 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_3 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_4 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_5 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_6 ;
+  wire \s_axis_tready2_inferred__2/i__carry__0_n_7 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_0 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_1 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_2 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_3 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_4 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_5 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_6 ;
+  wire \s_axis_tready2_inferred__2/i__carry_n_7 ;
   wire s_axis_tready_i_1_n_0;
   wire s_axis_tvalid;
+  wire sr_cycles_n_0;
+  wire sr_cycles_n_1;
+  wire sr_cycles_n_10;
+  wire sr_cycles_n_11;
+  wire sr_cycles_n_12;
+  wire sr_cycles_n_13;
+  wire sr_cycles_n_14;
+  wire sr_cycles_n_15;
+  wire sr_cycles_n_16;
+  wire sr_cycles_n_17;
+  wire sr_cycles_n_18;
+  wire sr_cycles_n_19;
+  wire sr_cycles_n_2;
+  wire sr_cycles_n_20;
+  wire sr_cycles_n_21;
+  wire sr_cycles_n_22;
+  wire sr_cycles_n_23;
+  wire sr_cycles_n_24;
+  wire sr_cycles_n_25;
+  wire sr_cycles_n_26;
+  wire sr_cycles_n_27;
+  wire sr_cycles_n_28;
+  wire sr_cycles_n_29;
+  wire sr_cycles_n_3;
+  wire sr_cycles_n_30;
+  wire sr_cycles_n_31;
+  wire sr_cycles_n_32;
+  wire sr_cycles_n_33;
+  wire sr_cycles_n_34;
+  wire sr_cycles_n_35;
+  wire sr_cycles_n_36;
+  wire sr_cycles_n_37;
+  wire sr_cycles_n_38;
+  wire sr_cycles_n_39;
+  wire sr_cycles_n_4;
+  wire sr_cycles_n_40;
+  wire sr_cycles_n_41;
+  wire sr_cycles_n_42;
+  wire sr_cycles_n_5;
+  wire sr_cycles_n_6;
+  wire sr_cycles_n_7;
+  wire sr_cycles_n_8;
+  wire sr_cycles_n_9;
+  wire sr_zeros_n_0;
+  wire sr_zeros_n_1;
+  wire sr_zeros_n_2;
+  wire sr_zeros_n_3;
+  wire sr_zeros_n_35;
+  wire sr_zeros_n_36;
+  wire sr_zeros_n_37;
+  wire sr_zeros_n_38;
+  wire sr_zeros_n_39;
+  wire sr_zeros_n_40;
+  wire sr_zeros_n_41;
+  wire sr_zeros_n_42;
+  wire sr_zeros_n_43;
+  wire sr_zeros_n_44;
+  wire sr_zeros_n_45;
+  wire sr_zeros_n_46;
+  wire sr_zeros_n_47;
+  wire sr_zeros_n_48;
+  wire sr_zeros_n_49;
+  wire sr_zeros_n_50;
+  wire sr_zeros_n_51;
+  wire sr_zeros_n_52;
+  wire sr_zeros_n_53;
+  wire sr_zeros_n_54;
+  wire sr_zeros_n_55;
+  wire sr_zeros_n_56;
+  wire sr_zeros_n_57;
+  wire sr_zeros_n_58;
+  wire sr_zeros_n_59;
+  wire sr_zeros_n_60;
+  wire sr_zeros_n_61;
+  wire sr_zeros_n_62;
+  wire sr_zeros_n_63;
+  wire sr_zeros_n_64;
+  wire sr_zeros_n_65;
+  wire sr_zeros_n_66;
+  wire sr_zeros_n_67;
+  wire sr_zeros_n_68;
+  wire sr_zeros_n_69;
+  wire sr_zeros_n_70;
+  wire sr_zeros_n_71;
+  wire sr_zeros_n_72;
+  wire sr_zeros_n_73;
+  wire sr_zeros_n_74;
+  wire sr_zeros_n_75;
+  wire sr_zeros_n_76;
+  wire sr_zeros_n_77;
   wire [1:0]state;
   wire [7:6]NLW_count0_carry__2_CO_UNCONNECTED;
   wire [7:7]NLW_count0_carry__2_O_UNCONNECTED;
   wire [7:0]NLW_s_axis_tready2_carry_O_UNCONNECTED;
-  wire [7:3]NLW_s_axis_tready2_carry__0_CO_UNCONNECTED;
   wire [7:0]NLW_s_axis_tready2_carry__0_O_UNCONNECTED;
   wire [7:0]\NLW_s_axis_tready2_inferred__0/i__carry_O_UNCONNECTED ;
+  wire [7:3]\NLW_s_axis_tready2_inferred__0/i__carry__0_CO_UNCONNECTED ;
   wire [7:0]\NLW_s_axis_tready2_inferred__0/i__carry__0_O_UNCONNECTED ;
+  wire [7:0]\NLW_s_axis_tready2_inferred__1/i__carry_O_UNCONNECTED ;
+  wire [7:3]\NLW_s_axis_tready2_inferred__1/i__carry__0_CO_UNCONNECTED ;
+  wire [7:0]\NLW_s_axis_tready2_inferred__1/i__carry__0_O_UNCONNECTED ;
+  wire [7:0]\NLW_s_axis_tready2_inferred__2/i__carry_O_UNCONNECTED ;
+  wire [7:0]\NLW_s_axis_tready2_inferred__2/i__carry__0_O_UNCONNECTED ;
 
   (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
+  LUT4 #(
+    .INIT(16'h3331)) 
     \FSM_sequential_state[0]_i_1 
-       (.I0(state[0]),
-        .I1(state[1]),
-        .I2(m_axis_tdata[0]),
-        .O(\FSM_sequential_state[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h01FE01FE01FE010E)) 
-    \FSM_sequential_state[1]_i_1 
-       (.I0(ext_trigger_0),
-        .I1(m_axis_tdata[1]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready2),
-        .I5(s_axis_tready20_in),
-        .O(\FSM_sequential_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h54)) 
-    \FSM_sequential_state[1]_i_2 
        (.I0(state[1]),
-        .I1(m_axis_tdata[0]),
-        .I2(state[0]),
+        .I1(state[0]),
+        .I2(s_axis_tready2),
+        .I3(s_axis_tready20_in),
+        .O(\FSM_sequential_state[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT5 #(
+    .INIT(32'h0FEF0FE0)) 
+    \FSM_sequential_state[1]_i_2 
+       (.I0(s_axis_tready2),
+        .I1(s_axis_tready20_in),
+        .I2(state[1]),
+        .I3(state[0]),
+        .I4(m_axis_tdata[0]),
         .O(\FSM_sequential_state[1]_i_2_n_0 ));
-  (* FSM_ENCODED_STATES = "state_wait_trigger:00,state_trigger:01,state_cleanup:10" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \FSM_sequential_state[1]_i_3 
+       (.I0(ext_trigger),
+        .I1(m_axis_tdata[1]),
+        .O(\FSM_sequential_state[1]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h00E000E000E0F0E0)) 
+    \FSM_sequential_state[1]_i_4 
+       (.I0(s_axis_tready2),
+        .I1(s_axis_tready20_in),
+        .I2(state[1]),
+        .I3(state[0]),
+        .I4(ext_trigger),
+        .I5(m_axis_tdata[1]),
+        .O(\FSM_sequential_state[1]_i_4_n_0 ));
+  (* FSM_ENCODED_STATES = "state_trigger:10,state_zeros:01,state_wait_trigger:00,state_cleanup:11" *) 
   FDCE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[0] 
        (.C(rf_clock),
-        .CE(\FSM_sequential_state[1]_i_1_n_0 ),
+        .CE(sr_zeros_n_3),
         .CLR(rf_resetn_0),
         .D(\FSM_sequential_state[0]_i_1_n_0 ),
         .Q(state[0]));
-  (* FSM_ENCODED_STATES = "state_wait_trigger:00,state_trigger:01,state_cleanup:10" *) 
+  (* FSM_ENCODED_STATES = "state_trigger:10,state_zeros:01,state_wait_trigger:00,state_cleanup:11" *) 
   FDCE #(
     .INIT(1'b0)) 
     \FSM_sequential_state_reg[1] 
        (.C(rf_clock),
-        .CE(\FSM_sequential_state[1]_i_1_n_0 ),
+        .CE(sr_zeros_n_3),
         .CLR(rf_resetn_0),
         .D(\FSM_sequential_state[1]_i_2_n_0 ),
         .Q(state[1]));
@@ -4929,7 +5124,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(8'hB8)) 
     axis_data_fifo_waveform_i_1
        (.I0(axis_tready_slice_0_mloop_axis_TVALID),
-        .I1(int_select),
+        .I1(\count_value_i_reg[8] ),
         .I2(m_axis_tvalid),
         .O(s_axis_tvalid));
   CARRY8 count0_carry
@@ -4937,384 +5132,49 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
         .CI_TOP(1'b0),
         .CO({count0_carry_n_0,count0_carry_n_1,count0_carry_n_2,count0_carry_n_3,count0_carry_n_4,count0_carry_n_5,count0_carry_n_6,count0_carry_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(p_0_in[8:1]),
+        .O({count0_carry_n_8,count0_carry_n_9,count0_carry_n_10,count0_carry_n_11,count0_carry_n_12,count0_carry_n_13,count0_carry_n_14,count0_carry_n_15}),
         .S({\count_reg_n_0_[8] ,\count_reg_n_0_[7] ,\count_reg_n_0_[6] ,\count_reg_n_0_[5] ,\count_reg_n_0_[4] ,\count_reg_n_0_[3] ,\count_reg_n_0_[2] ,\count_reg_n_0_[1] }));
   CARRY8 count0_carry__0
        (.CI(count0_carry_n_0),
         .CI_TOP(1'b0),
         .CO({count0_carry__0_n_0,count0_carry__0_n_1,count0_carry__0_n_2,count0_carry__0_n_3,count0_carry__0_n_4,count0_carry__0_n_5,count0_carry__0_n_6,count0_carry__0_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(p_0_in[16:9]),
+        .O({count0_carry__0_n_8,count0_carry__0_n_9,count0_carry__0_n_10,count0_carry__0_n_11,count0_carry__0_n_12,count0_carry__0_n_13,count0_carry__0_n_14,count0_carry__0_n_15}),
         .S({\count_reg_n_0_[16] ,\count_reg_n_0_[15] ,\count_reg_n_0_[14] ,\count_reg_n_0_[13] ,\count_reg_n_0_[12] ,\count_reg_n_0_[11] ,\count_reg_n_0_[10] ,\count_reg_n_0_[9] }));
   CARRY8 count0_carry__1
        (.CI(count0_carry__0_n_0),
         .CI_TOP(1'b0),
         .CO({count0_carry__1_n_0,count0_carry__1_n_1,count0_carry__1_n_2,count0_carry__1_n_3,count0_carry__1_n_4,count0_carry__1_n_5,count0_carry__1_n_6,count0_carry__1_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(p_0_in[24:17]),
+        .O({count0_carry__1_n_8,count0_carry__1_n_9,count0_carry__1_n_10,count0_carry__1_n_11,count0_carry__1_n_12,count0_carry__1_n_13,count0_carry__1_n_14,count0_carry__1_n_15}),
         .S({\count_reg_n_0_[24] ,\count_reg_n_0_[23] ,\count_reg_n_0_[22] ,\count_reg_n_0_[21] ,\count_reg_n_0_[20] ,\count_reg_n_0_[19] ,\count_reg_n_0_[18] ,\count_reg_n_0_[17] }));
   CARRY8 count0_carry__2
        (.CI(count0_carry__1_n_0),
         .CI_TOP(1'b0),
         .CO({NLW_count0_carry__2_CO_UNCONNECTED[7:6],count0_carry__2_n_2,count0_carry__2_n_3,count0_carry__2_n_4,count0_carry__2_n_5,count0_carry__2_n_6,count0_carry__2_n_7}),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_count0_carry__2_O_UNCONNECTED[7],p_0_in[31:25]}),
+        .O({NLW_count0_carry__2_O_UNCONNECTED[7],count0_carry__2_n_9,count0_carry__2_n_10,count0_carry__2_n_11,count0_carry__2_n_12,count0_carry__2_n_13,count0_carry__2_n_14,count0_carry__2_n_15}),
         .S({1'b0,\count_reg_n_0_[31] ,\count_reg_n_0_[30] ,\count_reg_n_0_[29] ,\count_reg_n_0_[28] ,\count_reg_n_0_[27] ,\count_reg_n_0_[26] ,\count_reg_n_0_[25] }));
-  LUT6 #(
-    .INIT(64'h0103010301030133)) 
+  LUT3 #(
+    .INIT(8'h45)) 
     \count[0]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[0]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[10]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[10]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[10]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[11]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[11]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[11]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[12]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[12]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[12]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[13]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[13]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[13]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[14]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[14]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[14]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[15]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[15]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[15]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[16]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[16]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[16]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[17]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[17]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[17]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[18]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[18]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[18]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[19]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[19]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[19]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[1]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[1]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[1]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[20]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[20]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[20]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[21]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[21]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[21]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[22]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[22]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[22]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[23]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[23]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[23]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[24]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[24]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[24]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[25]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[25]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[25]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[26]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[26]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[26]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[27]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[27]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[27]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[28]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[28]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[28]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[29]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[29]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[29]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[2]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[2]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[2]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[30]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[30]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[30]));
-  LUT6 #(
-    .INIT(64'h0000FF00FCFC0055)) 
-    \count[31]_i_1 
-       (.I0(m_axis_tdata[0]),
-        .I1(rf_resetn),
-        .I2(s_axis_tready1),
-        .I3(\count[31]_i_4_n_0 ),
-        .I4(state[0]),
-        .I5(state[1]),
-        .O(\count[31]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[31]_i_2 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[31]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[31]));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \count[31]_i_3 
-       (.I0(s_axis_tready20_in),
-        .I1(s_axis_tready2),
-        .O(s_axis_tready1));
-  LUT2 #(
-    .INIT(4'h1)) 
-    \count[31]_i_4 
-       (.I0(m_axis_tdata[1]),
-        .I1(ext_trigger_0),
-        .O(\count[31]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[3]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[3]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[3]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[4]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[4]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[4]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[5]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[5]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[5]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[6]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[6]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[6]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[7]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[7]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[7]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[8]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[8]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[8]));
-  LUT6 #(
-    .INIT(64'h040C040C040C04CC)) 
-    \count[9]_i_1 
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(p_0_in[9]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(count[9]));
+       (.I0(\FSM_sequential_state[1]_i_4_n_0 ),
+        .I1(sr_zeros_n_1),
+        .I2(\count_reg_n_0_[0] ),
+        .O(\count[0]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[0] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
-        .D(count[0]),
+        .D(\count[0]_i_1_n_0 ),
         .Q(\count_reg_n_0_[0] ));
   FDCE #(
     .INIT(1'b0)) 
     \count_reg[10] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[10]),
         .Q(\count_reg_n_0_[10] ));
@@ -5322,7 +5182,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[11] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[11]),
         .Q(\count_reg_n_0_[11] ));
@@ -5330,7 +5190,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[12] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[12]),
         .Q(\count_reg_n_0_[12] ));
@@ -5338,7 +5198,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[13] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[13]),
         .Q(\count_reg_n_0_[13] ));
@@ -5346,7 +5206,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[14] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[14]),
         .Q(\count_reg_n_0_[14] ));
@@ -5354,7 +5214,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[15] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[15]),
         .Q(\count_reg_n_0_[15] ));
@@ -5362,7 +5222,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[16] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[16]),
         .Q(\count_reg_n_0_[16] ));
@@ -5370,7 +5230,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[17] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[17]),
         .Q(\count_reg_n_0_[17] ));
@@ -5378,7 +5238,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[18] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[18]),
         .Q(\count_reg_n_0_[18] ));
@@ -5386,7 +5246,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[19] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[19]),
         .Q(\count_reg_n_0_[19] ));
@@ -5394,7 +5254,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[1] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[1]),
         .Q(\count_reg_n_0_[1] ));
@@ -5402,7 +5262,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[20] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[20]),
         .Q(\count_reg_n_0_[20] ));
@@ -5410,7 +5270,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[21] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[21]),
         .Q(\count_reg_n_0_[21] ));
@@ -5418,7 +5278,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[22] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[22]),
         .Q(\count_reg_n_0_[22] ));
@@ -5426,7 +5286,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[23] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[23]),
         .Q(\count_reg_n_0_[23] ));
@@ -5434,7 +5294,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[24] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[24]),
         .Q(\count_reg_n_0_[24] ));
@@ -5442,7 +5302,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[25] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[25]),
         .Q(\count_reg_n_0_[25] ));
@@ -5450,7 +5310,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[26] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[26]),
         .Q(\count_reg_n_0_[26] ));
@@ -5458,7 +5318,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[27] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[27]),
         .Q(\count_reg_n_0_[27] ));
@@ -5466,7 +5326,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[28] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[28]),
         .Q(\count_reg_n_0_[28] ));
@@ -5474,7 +5334,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[29] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[29]),
         .Q(\count_reg_n_0_[29] ));
@@ -5482,7 +5342,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[2] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[2]),
         .Q(\count_reg_n_0_[2] ));
@@ -5490,7 +5350,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[30] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[30]),
         .Q(\count_reg_n_0_[30] ));
@@ -5498,7 +5358,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[31] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[31]),
         .Q(\count_reg_n_0_[31] ));
@@ -5506,7 +5366,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[3] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[3]),
         .Q(\count_reg_n_0_[3] ));
@@ -5514,7 +5374,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[4] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[4]),
         .Q(\count_reg_n_0_[4] ));
@@ -5522,7 +5382,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[5] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[5]),
         .Q(\count_reg_n_0_[5] ));
@@ -5530,7 +5390,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[6] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[6]),
         .Q(\count_reg_n_0_[6] ));
@@ -5538,7 +5398,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[7] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[7]),
         .Q(\count_reg_n_0_[7] ));
@@ -5546,7 +5406,7 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[8] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[8]),
         .Q(\count_reg_n_0_[8] ));
@@ -5554,437 +5414,104 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     \count_reg[9] 
        (.C(rf_clock),
-        .CE(\count[31]_i_1_n_0 ),
+        .CE(sr_zeros_n_0),
         .CLR(rf_resetn_0),
         .D(count[9]),
         .Q(\count_reg_n_0_[9] ));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_1
-       (.I0(\count_reg_n_0_[30] ),
-        .I1(count_val_in_0[30]),
-        .I2(count_val_in_0[31]),
-        .I3(\count_reg_n_0_[31] ),
-        .O(i__carry__0_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_10
-       (.I0(\count_reg_n_0_[28] ),
-        .I1(count_val_in_0[28]),
-        .I2(\count_reg_n_0_[29] ),
-        .I3(count_val_in_0[29]),
-        .O(i__carry__0_i_10_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_11
-       (.I0(\count_reg_n_0_[26] ),
-        .I1(count_val_in_0[26]),
-        .I2(\count_reg_n_0_[27] ),
-        .I3(count_val_in_0[27]),
-        .O(i__carry__0_i_11_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_12
-       (.I0(\count_reg_n_0_[24] ),
-        .I1(count_val_in_0[24]),
-        .I2(\count_reg_n_0_[25] ),
-        .I3(count_val_in_0[25]),
-        .O(i__carry__0_i_12_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_13
-       (.I0(\count_reg_n_0_[22] ),
-        .I1(count_val_in_0[22]),
-        .I2(\count_reg_n_0_[23] ),
-        .I3(count_val_in_0[23]),
-        .O(i__carry__0_i_13_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_14
-       (.I0(\count_reg_n_0_[20] ),
-        .I1(count_val_in_0[20]),
-        .I2(\count_reg_n_0_[21] ),
-        .I3(count_val_in_0[21]),
-        .O(i__carry__0_i_14_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_15
-       (.I0(\count_reg_n_0_[18] ),
-        .I1(count_val_in_0[18]),
-        .I2(\count_reg_n_0_[19] ),
-        .I3(count_val_in_0[19]),
-        .O(i__carry__0_i_15_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_16
-       (.I0(\count_reg_n_0_[16] ),
-        .I1(count_val_in_0[16]),
-        .I2(\count_reg_n_0_[17] ),
-        .I3(count_val_in_0[17]),
-        .O(i__carry__0_i_16_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_2
-       (.I0(\count_reg_n_0_[28] ),
-        .I1(count_val_in_0[28]),
-        .I2(count_val_in_0[29]),
-        .I3(\count_reg_n_0_[29] ),
-        .O(i__carry__0_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_3
-       (.I0(\count_reg_n_0_[26] ),
-        .I1(count_val_in_0[26]),
-        .I2(count_val_in_0[27]),
-        .I3(\count_reg_n_0_[27] ),
-        .O(i__carry__0_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_4
-       (.I0(\count_reg_n_0_[24] ),
-        .I1(count_val_in_0[24]),
-        .I2(count_val_in_0[25]),
-        .I3(\count_reg_n_0_[25] ),
-        .O(i__carry__0_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_5
-       (.I0(\count_reg_n_0_[22] ),
-        .I1(count_val_in_0[22]),
-        .I2(count_val_in_0[23]),
-        .I3(\count_reg_n_0_[23] ),
-        .O(i__carry__0_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_6
-       (.I0(\count_reg_n_0_[20] ),
-        .I1(count_val_in_0[20]),
-        .I2(count_val_in_0[21]),
-        .I3(\count_reg_n_0_[21] ),
-        .O(i__carry__0_i_6_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_7
-       (.I0(\count_reg_n_0_[18] ),
-        .I1(count_val_in_0[18]),
-        .I2(count_val_in_0[19]),
-        .I3(\count_reg_n_0_[19] ),
-        .O(i__carry__0_i_7_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry__0_i_8
-       (.I0(\count_reg_n_0_[16] ),
-        .I1(count_val_in_0[16]),
-        .I2(count_val_in_0[17]),
-        .I3(\count_reg_n_0_[17] ),
-        .O(i__carry__0_i_8_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry__0_i_9
-       (.I0(\count_reg_n_0_[30] ),
-        .I1(count_val_in_0[30]),
-        .I2(\count_reg_n_0_[31] ),
-        .I3(count_val_in_0[31]),
-        .O(i__carry__0_i_9_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_1
-       (.I0(\count_reg_n_0_[14] ),
-        .I1(count_val_in_0[14]),
-        .I2(count_val_in_0[15]),
-        .I3(\count_reg_n_0_[15] ),
-        .O(i__carry_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_10
-       (.I0(\count_reg_n_0_[12] ),
-        .I1(count_val_in_0[12]),
-        .I2(\count_reg_n_0_[13] ),
-        .I3(count_val_in_0[13]),
-        .O(i__carry_i_10_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_11
-       (.I0(\count_reg_n_0_[10] ),
-        .I1(count_val_in_0[10]),
-        .I2(\count_reg_n_0_[11] ),
-        .I3(count_val_in_0[11]),
-        .O(i__carry_i_11_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_12
-       (.I0(\count_reg_n_0_[8] ),
-        .I1(count_val_in_0[8]),
-        .I2(\count_reg_n_0_[9] ),
-        .I3(count_val_in_0[9]),
-        .O(i__carry_i_12_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_13
-       (.I0(\count_reg_n_0_[6] ),
-        .I1(count_val_in_0[6]),
-        .I2(\count_reg_n_0_[7] ),
-        .I3(count_val_in_0[7]),
-        .O(i__carry_i_13_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_14
-       (.I0(\count_reg_n_0_[4] ),
-        .I1(count_val_in_0[4]),
-        .I2(\count_reg_n_0_[5] ),
-        .I3(count_val_in_0[5]),
-        .O(i__carry_i_14_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_15
-       (.I0(\count_reg_n_0_[2] ),
-        .I1(count_val_in_0[2]),
-        .I2(\count_reg_n_0_[3] ),
-        .I3(count_val_in_0[3]),
-        .O(i__carry_i_15_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_16
-       (.I0(\count_reg_n_0_[0] ),
-        .I1(count_val_in_0[0]),
-        .I2(\count_reg_n_0_[1] ),
-        .I3(count_val_in_0[1]),
-        .O(i__carry_i_16_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_2
-       (.I0(\count_reg_n_0_[12] ),
-        .I1(count_val_in_0[12]),
-        .I2(count_val_in_0[13]),
-        .I3(\count_reg_n_0_[13] ),
-        .O(i__carry_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_3
-       (.I0(\count_reg_n_0_[10] ),
-        .I1(count_val_in_0[10]),
-        .I2(count_val_in_0[11]),
-        .I3(\count_reg_n_0_[11] ),
-        .O(i__carry_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_4
-       (.I0(\count_reg_n_0_[8] ),
-        .I1(count_val_in_0[8]),
-        .I2(count_val_in_0[9]),
-        .I3(\count_reg_n_0_[9] ),
-        .O(i__carry_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_5
-       (.I0(\count_reg_n_0_[6] ),
-        .I1(count_val_in_0[6]),
-        .I2(count_val_in_0[7]),
-        .I3(\count_reg_n_0_[7] ),
-        .O(i__carry_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_6
-       (.I0(\count_reg_n_0_[4] ),
-        .I1(count_val_in_0[4]),
-        .I2(count_val_in_0[5]),
-        .I3(\count_reg_n_0_[5] ),
-        .O(i__carry_i_6_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_7
-       (.I0(\count_reg_n_0_[2] ),
-        .I1(count_val_in_0[2]),
-        .I2(count_val_in_0[3]),
-        .I3(\count_reg_n_0_[3] ),
-        .O(i__carry_i_7_n_0));
-  LUT4 #(
-    .INIT(16'h2F02)) 
-    i__carry_i_8
-       (.I0(\count_reg_n_0_[0] ),
-        .I1(count_val_in_0[0]),
-        .I2(count_val_in_0[1]),
-        .I3(\count_reg_n_0_[1] ),
-        .O(i__carry_i_8_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    i__carry_i_9
-       (.I0(\count_reg_n_0_[14] ),
-        .I1(count_val_in_0[14]),
-        .I2(\count_reg_n_0_[15] ),
-        .I3(count_val_in_0[15]),
-        .O(i__carry_i_9_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT3 #(
+    .INIT(8'h5D)) 
+    \m_axis_tdata[255]_INST_0_i_1 
+       (.I0(is_locking),
+        .I1(state[0]),
+        .I2(state[1]),
+        .O(\m_axis_tdata[255]_INST_0_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h54)) 
     mloop_axis_tvalid_i_1
-       (.I0(state[0]),
-        .I1(state[1]),
+       (.I0(\FSM_sequential_state[1]_i_4_n_0 ),
+        .I1(sr_zeros_n_2),
+        .I2(axis_tready_slice_0_mloop_axis_TVALID),
         .O(mloop_axis_tvalid_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h040D040D040D04CD)) 
-    mloop_axis_tvalid_i_2
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(axis_tready_slice_0_mloop_axis_TVALID),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
-        .O(mloop_axis_tvalid_i_2_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   FDCE #(
     .INIT(1'b0)) 
     mloop_axis_tvalid_reg
        (.C(rf_clock),
-        .CE(mloop_axis_tvalid_i_1_n_0),
+        .CE(1'b1),
         .CLR(rf_resetn_0),
-        .D(mloop_axis_tvalid_i_2_n_0),
+        .D(mloop_axis_tvalid_i_1_n_0),
         .Q(axis_tready_slice_0_mloop_axis_TVALID));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    pipeline_active_INST_0
+       (.I0(state[0]),
+        .I1(state[1]),
+        .O(pipeline_active));
   CARRY8 s_axis_tready2_carry
-       (.CI(1'b1),
+       (.CI(1'b0),
         .CI_TOP(1'b0),
         .CO({s_axis_tready2_carry_n_0,s_axis_tready2_carry_n_1,s_axis_tready2_carry_n_2,s_axis_tready2_carry_n_3,s_axis_tready2_carry_n_4,s_axis_tready2_carry_n_5,s_axis_tready2_carry_n_6,s_axis_tready2_carry_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DI({sr_zeros_n_51,sr_zeros_n_52,sr_zeros_n_53,sr_zeros_n_54,sr_zeros_n_55,sr_zeros_n_56,sr_zeros_n_57,sr_zeros_n_58}),
         .O(NLW_s_axis_tready2_carry_O_UNCONNECTED[7:0]),
-        .S({s_axis_tready2_carry_i_1_n_0,s_axis_tready2_carry_i_2_n_0,s_axis_tready2_carry_i_3_n_0,s_axis_tready2_carry_i_4_n_0,s_axis_tready2_carry_i_5_n_0,s_axis_tready2_carry_i_6_n_0,s_axis_tready2_carry_i_7_n_0,s_axis_tready2_carry_i_8_n_0}));
+        .S({sr_zeros_n_43,sr_zeros_n_44,sr_zeros_n_45,sr_zeros_n_46,sr_zeros_n_47,sr_zeros_n_48,sr_zeros_n_49,sr_zeros_n_50}));
   CARRY8 s_axis_tready2_carry__0
        (.CI(s_axis_tready2_carry_n_0),
         .CI_TOP(1'b0),
-        .CO({NLW_s_axis_tready2_carry__0_CO_UNCONNECTED[7:3],s_axis_tready2,s_axis_tready2_carry__0_n_6,s_axis_tready2_carry__0_n_7}),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CO({s_axis_tready21_in,s_axis_tready2_carry__0_n_1,s_axis_tready2_carry__0_n_2,s_axis_tready2_carry__0_n_3,s_axis_tready2_carry__0_n_4,s_axis_tready2_carry__0_n_5,s_axis_tready2_carry__0_n_6,s_axis_tready2_carry__0_n_7}),
+        .DI({sr_zeros_n_67,sr_zeros_n_68,sr_zeros_n_69,sr_zeros_n_70,sr_zeros_n_71,sr_zeros_n_72,sr_zeros_n_73,sr_zeros_n_74}),
         .O(NLW_s_axis_tready2_carry__0_O_UNCONNECTED[7:0]),
-        .S({1'b0,1'b0,1'b0,1'b0,1'b0,s_axis_tready2_carry__0_i_1_n_0,s_axis_tready2_carry__0_i_2_n_0,s_axis_tready2_carry__0_i_3_n_0}));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    s_axis_tready2_carry__0_i_1
-       (.I0(\count_reg_n_0_[30] ),
-        .I1(count_val_in_0[30]),
-        .I2(\count_reg_n_0_[31] ),
-        .I3(count_val_in_0[31]),
-        .O(s_axis_tready2_carry__0_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry__0_i_2
-       (.I0(\count_reg_n_0_[27] ),
-        .I1(count_val_in_0[27]),
-        .I2(count_val_in_0[29]),
-        .I3(\count_reg_n_0_[29] ),
-        .I4(count_val_in_0[28]),
-        .I5(\count_reg_n_0_[28] ),
-        .O(s_axis_tready2_carry__0_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry__0_i_3
-       (.I0(\count_reg_n_0_[24] ),
-        .I1(count_val_in_0[24]),
-        .I2(count_val_in_0[26]),
-        .I3(\count_reg_n_0_[26] ),
-        .I4(count_val_in_0[25]),
-        .I5(\count_reg_n_0_[25] ),
-        .O(s_axis_tready2_carry__0_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_1
-       (.I0(\count_reg_n_0_[21] ),
-        .I1(count_val_in_0[21]),
-        .I2(count_val_in_0[23]),
-        .I3(\count_reg_n_0_[23] ),
-        .I4(count_val_in_0[22]),
-        .I5(\count_reg_n_0_[22] ),
-        .O(s_axis_tready2_carry_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_2
-       (.I0(\count_reg_n_0_[18] ),
-        .I1(count_val_in_0[18]),
-        .I2(count_val_in_0[20]),
-        .I3(\count_reg_n_0_[20] ),
-        .I4(count_val_in_0[19]),
-        .I5(\count_reg_n_0_[19] ),
-        .O(s_axis_tready2_carry_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_3
-       (.I0(\count_reg_n_0_[15] ),
-        .I1(count_val_in_0[15]),
-        .I2(count_val_in_0[17]),
-        .I3(\count_reg_n_0_[17] ),
-        .I4(count_val_in_0[16]),
-        .I5(\count_reg_n_0_[16] ),
-        .O(s_axis_tready2_carry_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_4
-       (.I0(\count_reg_n_0_[12] ),
-        .I1(count_val_in_0[12]),
-        .I2(count_val_in_0[14]),
-        .I3(\count_reg_n_0_[14] ),
-        .I4(count_val_in_0[13]),
-        .I5(\count_reg_n_0_[13] ),
-        .O(s_axis_tready2_carry_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_5
-       (.I0(\count_reg_n_0_[9] ),
-        .I1(count_val_in_0[9]),
-        .I2(count_val_in_0[11]),
-        .I3(\count_reg_n_0_[11] ),
-        .I4(count_val_in_0[10]),
-        .I5(\count_reg_n_0_[10] ),
-        .O(s_axis_tready2_carry_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_6
-       (.I0(\count_reg_n_0_[6] ),
-        .I1(count_val_in_0[6]),
-        .I2(count_val_in_0[8]),
-        .I3(\count_reg_n_0_[8] ),
-        .I4(count_val_in_0[7]),
-        .I5(\count_reg_n_0_[7] ),
-        .O(s_axis_tready2_carry_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_7
-       (.I0(\count_reg_n_0_[3] ),
-        .I1(count_val_in_0[3]),
-        .I2(count_val_in_0[5]),
-        .I3(\count_reg_n_0_[5] ),
-        .I4(count_val_in_0[4]),
-        .I5(\count_reg_n_0_[4] ),
-        .O(s_axis_tready2_carry_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    s_axis_tready2_carry_i_8
-       (.I0(\count_reg_n_0_[0] ),
-        .I1(count_val_in_0[0]),
-        .I2(count_val_in_0[2]),
-        .I3(\count_reg_n_0_[2] ),
-        .I4(count_val_in_0[1]),
-        .I5(\count_reg_n_0_[1] ),
-        .O(s_axis_tready2_carry_i_8_n_0));
+        .S({sr_zeros_n_59,sr_zeros_n_60,sr_zeros_n_61,sr_zeros_n_62,sr_zeros_n_63,sr_zeros_n_64,sr_zeros_n_65,sr_zeros_n_66}));
   CARRY8 \s_axis_tready2_inferred__0/i__carry 
-       (.CI(1'b0),
+       (.CI(1'b1),
         .CI_TOP(1'b0),
         .CO({\s_axis_tready2_inferred__0/i__carry_n_0 ,\s_axis_tready2_inferred__0/i__carry_n_1 ,\s_axis_tready2_inferred__0/i__carry_n_2 ,\s_axis_tready2_inferred__0/i__carry_n_3 ,\s_axis_tready2_inferred__0/i__carry_n_4 ,\s_axis_tready2_inferred__0/i__carry_n_5 ,\s_axis_tready2_inferred__0/i__carry_n_6 ,\s_axis_tready2_inferred__0/i__carry_n_7 }),
-        .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,i__carry_i_4_n_0,i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0,i__carry_i_8_n_0}),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_s_axis_tready2_inferred__0/i__carry_O_UNCONNECTED [7:0]),
-        .S({i__carry_i_9_n_0,i__carry_i_10_n_0,i__carry_i_11_n_0,i__carry_i_12_n_0,i__carry_i_13_n_0,i__carry_i_14_n_0,i__carry_i_15_n_0,i__carry_i_16_n_0}));
+        .S({sr_zeros_n_35,sr_zeros_n_36,sr_zeros_n_37,sr_zeros_n_38,sr_zeros_n_39,sr_zeros_n_40,sr_zeros_n_41,sr_zeros_n_42}));
   CARRY8 \s_axis_tready2_inferred__0/i__carry__0 
        (.CI(\s_axis_tready2_inferred__0/i__carry_n_0 ),
         .CI_TOP(1'b0),
-        .CO({s_axis_tready20_in,\s_axis_tready2_inferred__0/i__carry__0_n_1 ,\s_axis_tready2_inferred__0/i__carry__0_n_2 ,\s_axis_tready2_inferred__0/i__carry__0_n_3 ,\s_axis_tready2_inferred__0/i__carry__0_n_4 ,\s_axis_tready2_inferred__0/i__carry__0_n_5 ,\s_axis_tready2_inferred__0/i__carry__0_n_6 ,\s_axis_tready2_inferred__0/i__carry__0_n_7 }),
-        .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}),
+        .CO({\NLW_s_axis_tready2_inferred__0/i__carry__0_CO_UNCONNECTED [7:3],s_axis_tready20_out,\s_axis_tready2_inferred__0/i__carry__0_n_6 ,\s_axis_tready2_inferred__0/i__carry__0_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_s_axis_tready2_inferred__0/i__carry__0_O_UNCONNECTED [7:0]),
-        .S({i__carry__0_i_9_n_0,i__carry__0_i_10_n_0,i__carry__0_i_11_n_0,i__carry__0_i_12_n_0,i__carry__0_i_13_n_0,i__carry__0_i_14_n_0,i__carry__0_i_15_n_0,i__carry__0_i_16_n_0}));
-  LUT6 #(
-    .INIT(64'h040D040D040D04CD)) 
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,sr_zeros_n_75,sr_zeros_n_76,sr_zeros_n_77}));
+  CARRY8 \s_axis_tready2_inferred__1/i__carry 
+       (.CI(1'b1),
+        .CI_TOP(1'b0),
+        .CO({\s_axis_tready2_inferred__1/i__carry_n_0 ,\s_axis_tready2_inferred__1/i__carry_n_1 ,\s_axis_tready2_inferred__1/i__carry_n_2 ,\s_axis_tready2_inferred__1/i__carry_n_3 ,\s_axis_tready2_inferred__1/i__carry_n_4 ,\s_axis_tready2_inferred__1/i__carry_n_5 ,\s_axis_tready2_inferred__1/i__carry_n_6 ,\s_axis_tready2_inferred__1/i__carry_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O(\NLW_s_axis_tready2_inferred__1/i__carry_O_UNCONNECTED [7:0]),
+        .S({sr_cycles_n_8,sr_cycles_n_9,sr_cycles_n_10,sr_cycles_n_11,sr_cycles_n_12,sr_cycles_n_13,sr_cycles_n_14,sr_cycles_n_15}));
+  CARRY8 \s_axis_tready2_inferred__1/i__carry__0 
+       (.CI(\s_axis_tready2_inferred__1/i__carry_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\NLW_s_axis_tready2_inferred__1/i__carry__0_CO_UNCONNECTED [7:3],s_axis_tready2,\s_axis_tready2_inferred__1/i__carry__0_n_6 ,\s_axis_tready2_inferred__1/i__carry__0_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O(\NLW_s_axis_tready2_inferred__1/i__carry__0_O_UNCONNECTED [7:0]),
+        .S({1'b0,1'b0,1'b0,1'b0,1'b0,sr_cycles_n_40,sr_cycles_n_41,sr_cycles_n_42}));
+  CARRY8 \s_axis_tready2_inferred__2/i__carry 
+       (.CI(1'b0),
+        .CI_TOP(1'b0),
+        .CO({\s_axis_tready2_inferred__2/i__carry_n_0 ,\s_axis_tready2_inferred__2/i__carry_n_1 ,\s_axis_tready2_inferred__2/i__carry_n_2 ,\s_axis_tready2_inferred__2/i__carry_n_3 ,\s_axis_tready2_inferred__2/i__carry_n_4 ,\s_axis_tready2_inferred__2/i__carry_n_5 ,\s_axis_tready2_inferred__2/i__carry_n_6 ,\s_axis_tready2_inferred__2/i__carry_n_7 }),
+        .DI({sr_cycles_n_16,sr_cycles_n_17,sr_cycles_n_18,sr_cycles_n_19,sr_cycles_n_20,sr_cycles_n_21,sr_cycles_n_22,sr_cycles_n_23}),
+        .O(\NLW_s_axis_tready2_inferred__2/i__carry_O_UNCONNECTED [7:0]),
+        .S({sr_cycles_n_0,sr_cycles_n_1,sr_cycles_n_2,sr_cycles_n_3,sr_cycles_n_4,sr_cycles_n_5,sr_cycles_n_6,sr_cycles_n_7}));
+  CARRY8 \s_axis_tready2_inferred__2/i__carry__0 
+       (.CI(\s_axis_tready2_inferred__2/i__carry_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({s_axis_tready20_in,\s_axis_tready2_inferred__2/i__carry__0_n_1 ,\s_axis_tready2_inferred__2/i__carry__0_n_2 ,\s_axis_tready2_inferred__2/i__carry__0_n_3 ,\s_axis_tready2_inferred__2/i__carry__0_n_4 ,\s_axis_tready2_inferred__2/i__carry__0_n_5 ,\s_axis_tready2_inferred__2/i__carry__0_n_6 ,\s_axis_tready2_inferred__2/i__carry__0_n_7 }),
+        .DI({sr_cycles_n_32,sr_cycles_n_33,sr_cycles_n_34,sr_cycles_n_35,sr_cycles_n_36,sr_cycles_n_37,sr_cycles_n_38,sr_cycles_n_39}),
+        .O(\NLW_s_axis_tready2_inferred__2/i__carry__0_O_UNCONNECTED [7:0]),
+        .S({sr_cycles_n_24,sr_cycles_n_25,sr_cycles_n_26,sr_cycles_n_27,sr_cycles_n_28,sr_cycles_n_29,sr_cycles_n_30,sr_cycles_n_31}));
+  LUT3 #(
+    .INIT(8'h54)) 
     s_axis_tready_i_1
-       (.I0(\count[31]_i_4_n_0 ),
-        .I1(out),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axis_tready20_in),
-        .I5(s_axis_tready2),
+       (.I0(\FSM_sequential_state[1]_i_4_n_0 ),
+        .I1(sr_zeros_n_2),
+        .I2(out),
         .O(s_axis_tready_i_1_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
@@ -5992,67 +5519,110 @@ module top_level_rfsoc_data_pipeline_0_0_axis_tready_slice
     .INIT(1'b0)) 
     s_axis_tready_reg
        (.C(rf_clock),
-        .CE(mloop_axis_tvalid_i_1_n_0),
+        .CE(1'b1),
         .CLR(rf_resetn_0),
         .D(s_axis_tready_i_1_n_0),
         .Q(out));
-  top_level_rfsoc_data_pipeline_0_0_shift_register sr
-       (.is_locking(is_locking),
-        .m_axis_0_tdata(m_axis_0_tdata),
-        .\m_axis_0_tdata[255] (\m_axis_0_tdata[255] ),
+  top_level_rfsoc_data_pipeline_0_0_shift_register__parameterized0 sr_cycles
+       (.DI({sr_cycles_n_16,sr_cycles_n_17,sr_cycles_n_18,sr_cycles_n_19,sr_cycles_n_20,sr_cycles_n_21,sr_cycles_n_22,sr_cycles_n_23}),
+        .Q({\count_reg_n_0_[31] ,\count_reg_n_0_[30] ,\count_reg_n_0_[29] ,\count_reg_n_0_[28] ,\count_reg_n_0_[27] ,\count_reg_n_0_[26] ,\count_reg_n_0_[25] ,\count_reg_n_0_[24] ,\count_reg_n_0_[23] ,\count_reg_n_0_[22] ,\count_reg_n_0_[21] ,\count_reg_n_0_[20] ,\count_reg_n_0_[19] ,\count_reg_n_0_[18] ,\count_reg_n_0_[17] ,\count_reg_n_0_[16] ,\count_reg_n_0_[15] ,\count_reg_n_0_[14] ,\count_reg_n_0_[13] ,\count_reg_n_0_[12] ,\count_reg_n_0_[11] ,\count_reg_n_0_[10] ,\count_reg_n_0_[9] ,\count_reg_n_0_[8] ,\count_reg_n_0_[7] ,\count_reg_n_0_[6] ,\count_reg_n_0_[5] ,\count_reg_n_0_[4] ,\count_reg_n_0_[3] ,\count_reg_n_0_[2] ,\count_reg_n_0_[1] ,\count_reg_n_0_[0] }),
+        .S({sr_cycles_n_0,sr_cycles_n_1,sr_cycles_n_2,sr_cycles_n_3,sr_cycles_n_4,sr_cycles_n_5,sr_cycles_n_6,sr_cycles_n_7}),
+        .\count_reg[22] ({sr_cycles_n_8,sr_cycles_n_9,sr_cycles_n_10,sr_cycles_n_11,sr_cycles_n_12,sr_cycles_n_13,sr_cycles_n_14,sr_cycles_n_15}),
+        .\count_reg[31] ({sr_cycles_n_32,sr_cycles_n_33,sr_cycles_n_34,sr_cycles_n_35,sr_cycles_n_36,sr_cycles_n_37,sr_cycles_n_38,sr_cycles_n_39}),
+        .\data_out_reg[0]_0 (rf_resetn_0),
+        .\data_out_reg[31]_0 ({sr_cycles_n_24,sr_cycles_n_25,sr_cycles_n_26,sr_cycles_n_27,sr_cycles_n_28,sr_cycles_n_29,sr_cycles_n_30,sr_cycles_n_31}),
+        .\data_out_reg[31]_1 ({sr_cycles_n_40,sr_cycles_n_41,sr_cycles_n_42}),
+        .is_selected(is_selected),
+        .m_axis_tdata({m_axis_tdata[6],m_axis_tdata[3]}),
+        .rf_clock(rf_clock));
+  top_level_rfsoc_data_pipeline_0_0_shift_register sr_locking
+       (.\data_out_reg[255]_0 (\data_out_reg[255] ),
+        .is_selected(is_selected),
         .m_axis_tdata(m_axis_tdata[4:2]),
+        .\m_axis_tdata[255] (\m_axis_tdata[255] ),
+        .m_axis_tdata_0_sp_1(\m_axis_tdata[255]_INST_0_i_1_n_0 ),
         .out(out),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn),
         .rf_resetn_0(rf_resetn_0));
+  top_level_rfsoc_data_pipeline_0_0_shift_register__parameterized0_0 sr_zeros
+       (.CO(s_axis_tready21_in),
+        .D(count),
+        .DI({sr_zeros_n_51,sr_zeros_n_52,sr_zeros_n_53,sr_zeros_n_54,sr_zeros_n_55,sr_zeros_n_56,sr_zeros_n_57,sr_zeros_n_58}),
+        .E(sr_zeros_n_0),
+        .\FSM_sequential_state_reg[0] (sr_zeros_n_2),
+        .\FSM_sequential_state_reg[0]_0 (sr_zeros_n_3),
+        .\FSM_sequential_state_reg[0]_1 (\FSM_sequential_state[1]_i_3_n_0 ),
+        .\FSM_sequential_state_reg[0]_2 (s_axis_tready20_out),
+        .O({count0_carry_n_8,count0_carry_n_9,count0_carry_n_10,count0_carry_n_11,count0_carry_n_12,count0_carry_n_13,count0_carry_n_14,count0_carry_n_15}),
+        .Q(state),
+        .S({sr_zeros_n_35,sr_zeros_n_36,sr_zeros_n_37,sr_zeros_n_38,sr_zeros_n_39,sr_zeros_n_40,sr_zeros_n_41,sr_zeros_n_42}),
+        .\count_reg[0] (\FSM_sequential_state[1]_i_4_n_0 ),
+        .\count_reg[16] ({count0_carry__0_n_8,count0_carry__0_n_9,count0_carry__0_n_10,count0_carry__0_n_11,count0_carry__0_n_12,count0_carry__0_n_13,count0_carry__0_n_14,count0_carry__0_n_15}),
+        .\count_reg[24] ({count0_carry__1_n_8,count0_carry__1_n_9,count0_carry__1_n_10,count0_carry__1_n_11,count0_carry__1_n_12,count0_carry__1_n_13,count0_carry__1_n_14,count0_carry__1_n_15}),
+        .\count_reg[31] ({sr_zeros_n_67,sr_zeros_n_68,sr_zeros_n_69,sr_zeros_n_70,sr_zeros_n_71,sr_zeros_n_72,sr_zeros_n_73,sr_zeros_n_74}),
+        .\count_reg[31]_0 ({count0_carry__2_n_9,count0_carry__2_n_10,count0_carry__2_n_11,count0_carry__2_n_12,count0_carry__2_n_13,count0_carry__2_n_14,count0_carry__2_n_15}),
+        .\count_reg[31]_1 (s_axis_tready2),
+        .\count_reg[31]_2 (s_axis_tready20_in),
+        .\data_out_reg[0]_0 (rf_resetn_0),
+        .\data_out_reg[15]_0 ({sr_zeros_n_43,sr_zeros_n_44,sr_zeros_n_45,sr_zeros_n_46,sr_zeros_n_47,sr_zeros_n_48,sr_zeros_n_49,sr_zeros_n_50}),
+        .\data_out_reg[31]_0 ({sr_zeros_n_59,sr_zeros_n_60,sr_zeros_n_61,sr_zeros_n_62,sr_zeros_n_63,sr_zeros_n_64,sr_zeros_n_65,sr_zeros_n_66}),
+        .\data_out_reg[31]_1 ({sr_zeros_n_75,sr_zeros_n_76,sr_zeros_n_77}),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] (sr_zeros_n_1),
+        .is_selected(is_selected),
+        .m_axis_tdata({m_axis_tdata[5],m_axis_tdata[3],m_axis_tdata[0]}),
+        .rf_clock(rf_clock),
+        .rf_resetn(rf_resetn),
+        .s_axis_tready2_carry__0({\count_reg_n_0_[31] ,\count_reg_n_0_[30] ,\count_reg_n_0_[29] ,\count_reg_n_0_[28] ,\count_reg_n_0_[27] ,\count_reg_n_0_[26] ,\count_reg_n_0_[25] ,\count_reg_n_0_[24] ,\count_reg_n_0_[23] ,\count_reg_n_0_[22] ,\count_reg_n_0_[21] ,\count_reg_n_0_[20] ,\count_reg_n_0_[19] ,\count_reg_n_0_[18] ,\count_reg_n_0_[17] ,\count_reg_n_0_[16] ,\count_reg_n_0_[15] ,\count_reg_n_0_[14] ,\count_reg_n_0_[13] ,\count_reg_n_0_[12] ,\count_reg_n_0_[11] ,\count_reg_n_0_[10] ,\count_reg_n_0_[9] ,\count_reg_n_0_[8] ,\count_reg_n_0_[7] ,\count_reg_n_0_[6] ,\count_reg_n_0_[5] ,\count_reg_n_0_[4] ,\count_reg_n_0_[3] ,\count_reg_n_0_[2] ,\count_reg_n_0_[1] ,\count_reg_n_0_[0] }));
 endmodule
 
-(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
-   (S_AXIS_0_tdata,
-    S_AXIS_0_tready,
-    S_AXIS_0_tvalid,
-    count_val_in_0,
-    ext_trigger_0,
+   (S_AXIS_tdata,
+    S_AXIS_tready,
+    S_AXIS_tvalid,
+    ext_trigger,
     gpio_in,
     is_locking,
-    m_axis_0_tdata,
-    m_axis_0_tready,
-    m_axis_0_tvalid,
+    is_selected,
+    m_axis_tdata,
+    m_axis_tready,
+    m_axis_tvalid,
     microblaze_clk,
     microblaze_resetn,
     pipeline_active,
     rf_clock,
     rf_resetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]S_AXIS_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TREADY" *) output S_AXIS_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TVALID" *) input S_AXIS_0_tvalid;
-  input [31:0]count_val_in_0;
-  input ext_trigger_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [7:0]gpio_in;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]S_AXIS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS " *) output S_AXIS_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS " *) input S_AXIS_tvalid;
+  input ext_trigger;
+  input [15:0]gpio_in;
   input is_locking;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [255:0]m_axis_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *) output m_axis_0_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input microblaze_clk;
+  input is_selected;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [255:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis " *) output m_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input microblaze_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input microblaze_resetn;
   output pipeline_active;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, FREQ_HZ 250000000, INSERT_VIP 0, PHASE 0.000" *) input rf_clock;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, FREQ_HZ 250000000, INSERT_VIP 0, PHASE 0.000" *) input rf_clock;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rf_resetn;
 
   wire \<const1> ;
-  wire [31:0]S_AXIS_0_tdata;
-  wire S_AXIS_0_tready;
-  wire S_AXIS_0_tvalid;
+  wire [31:0]S_AXIS_tdata;
+  wire S_AXIS_tready;
+  wire S_AXIS_tvalid;
   wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [7:0]axis_data_fifo_1_M_AXIS1_TDATA;
+  wire [15:0]axis_data_fifo_1_M_AXIS1_TDATA;
   wire axis_data_fifo_1_M_AXIS1_TVALID;
   wire [255:0]axis_data_fifo_1_M_AXIS_TDATA;
   wire axis_data_fifo_1_M_AXIS_TREADY;
   wire axis_data_fifo_1_M_AXIS_TVALID;
   wire [255:0]axis_data_fifo_2_M_AXIS_TDATA;
+  wire axis_data_fifo_2_M_AXIS_TREADY;
   wire axis_data_fifo_2_M_AXIS_TVALID;
   wire [255:0]axis_dwidth_converter_0_M_AXIS_TDATA;
   wire axis_dwidth_converter_0_M_AXIS_TREADY;
@@ -6060,21 +5630,21 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
   wire [255:0]axis_mux_0_m_axis_TDATA;
   wire axis_mux_0_m_axis_TREADY;
   wire axis_mux_0_m_axis_TVALID;
+  wire axis_mux_0_n_0;
   wire axis_tready_slice_0_n_1;
-  wire [31:0]count_val_in_0;
-  wire ext_trigger_0;
+  wire ext_trigger;
   wire gpio_buffer_0_m_axis_TREADY;
-  wire [7:0]gpio_in;
-  wire \inst/int_select ;
+  wire [15:0]gpio_in;
   wire is_locking;
-  wire [255:0]m_axis_0_tdata;
+  wire is_selected;
+  wire [255:0]m_axis_tdata;
   wire microblaze_clk;
   wire microblaze_resetn;
   wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
 
-  assign m_axis_0_tvalid = \<const1> ;
+  assign m_axis_tvalid = \<const1> ;
   VCC VCC
        (.P(\<const1> ));
   (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_4,axis_data_fifo_v2_0_1_top,{}" *) 
@@ -6086,22 +5656,9 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
         .s_axis_aclk(microblaze_clk),
         .s_axis_aresetn(microblaze_resetn),
-        .s_axis_tdata(S_AXIS_0_tdata),
-        .s_axis_tready(S_AXIS_0_tready),
-        .s_axis_tvalid(S_AXIS_0_tvalid));
-  (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_5,axis_data_fifo_v2_0_1_top,{}" *) 
-  (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
-  top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_1_5 axis_data_fifo_1
-       (.m_axis_aclk(rf_clock),
-        .m_axis_tdata(axis_data_fifo_1_M_AXIS1_TDATA),
-        .m_axis_tready(1'b1),
-        .m_axis_tvalid(axis_data_fifo_1_M_AXIS1_TVALID),
-        .s_axis_aclk(microblaze_clk),
-        .s_axis_aresetn(microblaze_resetn),
-        .s_axis_tdata(gpio_in),
-        .s_axis_tready(gpio_buffer_0_m_axis_TREADY),
-        .s_axis_tvalid(1'b1));
+        .s_axis_tdata(S_AXIS_tdata),
+        .s_axis_tready(S_AXIS_tready),
+        .s_axis_tvalid(S_AXIS_tvalid));
   (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3,axis_data_fifo_v2_0_1_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
@@ -6115,12 +5672,25 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
         .s_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
         .s_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
         .s_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID));
+  (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_5,axis_data_fifo_v2_0_1_top,{}" *) 
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+  top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_1_5 axis_data_fifo_gpio
+       (.m_axis_aclk(rf_clock),
+        .m_axis_tdata(axis_data_fifo_1_M_AXIS1_TDATA),
+        .m_axis_tready(1'b1),
+        .m_axis_tvalid(axis_data_fifo_1_M_AXIS1_TVALID),
+        .s_axis_aclk(microblaze_clk),
+        .s_axis_aresetn(microblaze_resetn),
+        .s_axis_tdata(gpio_in),
+        .s_axis_tready(gpio_buffer_0_m_axis_TREADY),
+        .s_axis_tvalid(1'b1));
   (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_3,axis_data_fifo_v2_0_1_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
   top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_waveform_3 axis_data_fifo_waveform
        (.m_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
-        .m_axis_tready(pipeline_active),
+        .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
         .s_axis_aclk(rf_clock),
         .s_axis_aresetn(rf_resetn),
@@ -6143,8 +5713,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
   top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_mux_0_0 axis_mux_0
        (.\gen_wr_a.gen_word_narrow.mem_reg_3 (axis_data_fifo_2_M_AXIS_TDATA),
         .\gen_wr_a.gen_word_narrow.mem_reg_3_0 (axis_data_fifo_1_M_AXIS_TDATA),
-        .int_select(\inst/int_select ),
-        .int_select_reg_rep__1(axis_tready_slice_0_n_1),
+        .int_select_reg_rep__1(axis_mux_0_n_0),
+        .int_select_reg_rep__1_0(axis_tready_slice_0_n_1),
         .m_axis_tdata({axis_data_fifo_1_M_AXIS1_TDATA[5],axis_data_fifo_1_M_AXIS1_TDATA[2]}),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
         .rf_clock(rf_clock),
@@ -6152,22 +5722,24 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline
         .s_axis_tready(axis_mux_0_m_axis_TREADY));
   (* X_CORE_INFO = "axis_tready_slice,Vivado 2019.1" *) 
   top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_tready_slice_0_0 axis_tready_slice_0
-       (.count_val_in_0(count_val_in_0),
-        .ext_trigger_0(ext_trigger_0),
-        .int_select(\inst/int_select ),
+       (.\count_value_i_reg[8] (axis_mux_0_n_0),
+        .\data_out_reg[255] (m_axis_tdata),
+        .ext_trigger(ext_trigger),
         .is_locking(is_locking),
-        .m_axis_0_tdata(m_axis_0_tdata),
-        .\m_axis_0_tdata[255] (axis_data_fifo_2_M_AXIS_TDATA),
-        .m_axis_tdata({axis_data_fifo_1_M_AXIS1_TDATA[5:3],axis_data_fifo_1_M_AXIS1_TDATA[1:0]}),
+        .is_selected(is_selected),
+        .m_axis_tdata({axis_data_fifo_1_M_AXIS1_TDATA[8:7],axis_data_fifo_1_M_AXIS1_TDATA[5:3],axis_data_fifo_1_M_AXIS1_TDATA[1:0]}),
+        .\m_axis_tdata[255] (axis_data_fifo_2_M_AXIS_TDATA),
         .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
-        .out(pipeline_active),
+        .out(axis_data_fifo_2_M_AXIS_TREADY),
+        .pipeline_active(pipeline_active),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn),
         .rf_resetn_0(axis_tready_slice_0_n_1),
         .s_axis_tvalid(axis_mux_0_m_axis_TVALID));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_4,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_4,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_0_4" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_0_4
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6206,7 +5778,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_0_4
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_5,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_1_5,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_1_5" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_1_5
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6221,23 +5794,23 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_1_5
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_CLKIF, ASSOCIATED_BUSIF S_AXIS, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_axis_aclken" *) input s_axis_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) input s_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output s_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]s_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_microblaze_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) input [15:0]s_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_CLKIF CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0" *) input m_axis_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input m_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *) output [7:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *) output [15:0]m_axis_tdata;
 
   wire m_axis_aclk;
-  wire [7:0]m_axis_tdata;
+  wire [15:0]m_axis_tdata;
   wire m_axis_tready;
   wire m_axis_tvalid;
   wire s_axis_aclk;
   wire s_axis_aresetn;
-  wire [7:0]s_axis_tdata;
+  wire [15:0]s_axis_tdata;
   wire s_axis_tready;
   wire s_axis_tvalid;
 
-  top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized0 inst
+  top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized1 inst
        (.m_axis_aclk(m_axis_aclk),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tready(m_axis_tready),
@@ -6249,7 +5822,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_1_5
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6280,7 +5854,7 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_cloc
   wire s_axis_tready;
   wire s_axis_tvalid;
 
-  top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized1 inst
+  top_level_rfsoc_data_pipeline_0_0_axis_data_fifo_v2_0_1_top__parameterized0 inst
        (.m_axis_aclk(m_axis_aclk),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tready(m_axis_tready),
@@ -6292,7 +5866,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_cloc
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_waveform_3" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_waveform_3
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6331,7 +5906,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_data_fifo_wave
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_4,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_4,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_dwidth_converter_0_4" *) 
+(* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_dwidth_converter_0_4
    (aclk,
     aresetn,
@@ -6369,30 +5945,31 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_dwidth_convert
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_mux_0_0" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_mux_0_0
-   (int_select,
+   (int_select_reg_rep__1,
     m_axis_tready,
     s_axis_tdata,
     m_axis_tdata,
     rf_clock,
-    int_select_reg_rep__1,
+    int_select_reg_rep__1_0,
     s_axis_tready,
     \gen_wr_a.gen_word_narrow.mem_reg_3 ,
     \gen_wr_a.gen_word_narrow.mem_reg_3_0 );
-  output int_select;
+  output int_select_reg_rep__1;
   output m_axis_tready;
   output [255:0]s_axis_tdata;
   input [1:0]m_axis_tdata;
   input rf_clock;
-  input int_select_reg_rep__1;
+  input int_select_reg_rep__1_0;
   input s_axis_tready;
   input [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3 ;
   input [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3_0 ;
 
   wire [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3 ;
   wire [255:0]\gen_wr_a.gen_word_narrow.mem_reg_3_0 ;
-  wire int_select;
   wire int_select_reg_rep__1;
+  wire int_select_reg_rep__1_0;
   wire [1:0]m_axis_tdata;
   wire m_axis_tready;
   wire rf_clock;
@@ -6402,8 +5979,8 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_mux_0_0
   top_level_rfsoc_data_pipeline_0_0_axis_mux inst
        (.\gen_wr_a.gen_word_narrow.mem_reg_3 (\gen_wr_a.gen_word_narrow.mem_reg_3 ),
         .\gen_wr_a.gen_word_narrow.mem_reg_3_0 (\gen_wr_a.gen_word_narrow.mem_reg_3_0 ),
-        .int_select_reg_0(int_select),
         .int_select_reg_rep__1_0(int_select_reg_rep__1),
+        .int_select_reg_rep__1_1(int_select_reg_rep__1_0),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tready(m_axis_tready),
         .rf_clock(rf_clock),
@@ -6411,100 +5988,111 @@ module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_mux_0_0
         .s_axis_tready(s_axis_tready));
 endmodule
 
+(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_tready_slice_0_0" *) 
 module top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline_axis_tready_slice_0_0
    (out,
     rf_resetn_0,
     s_axis_tvalid,
-    m_axis_0_tdata,
+    pipeline_active,
+    \data_out_reg[255] ,
     rf_clock,
-    m_axis_tdata,
-    int_select,
+    \count_value_i_reg[8] ,
     m_axis_tvalid,
     rf_resetn,
-    ext_trigger_0,
-    count_val_in_0,
+    m_axis_tdata,
+    ext_trigger,
+    \m_axis_tdata[255] ,
     is_locking,
-    \m_axis_0_tdata[255] );
+    is_selected);
   output out;
   output rf_resetn_0;
   output s_axis_tvalid;
-  output [255:0]m_axis_0_tdata;
+  output pipeline_active;
+  output [255:0]\data_out_reg[255] ;
   input rf_clock;
-  input [4:0]m_axis_tdata;
-  input int_select;
+  input \count_value_i_reg[8] ;
   input m_axis_tvalid;
   input rf_resetn;
-  input ext_trigger_0;
-  input [31:0]count_val_in_0;
+  input [6:0]m_axis_tdata;
+  input ext_trigger;
+  input [255:0]\m_axis_tdata[255] ;
   input is_locking;
-  input [255:0]\m_axis_0_tdata[255] ;
+  input is_selected;
 
-  wire [31:0]count_val_in_0;
-  wire ext_trigger_0;
-  wire int_select;
+  wire \count_value_i_reg[8] ;
+  wire [255:0]\data_out_reg[255] ;
+  wire ext_trigger;
   wire is_locking;
-  wire [255:0]m_axis_0_tdata;
-  wire [255:0]\m_axis_0_tdata[255] ;
-  wire [4:0]m_axis_tdata;
+  wire is_selected;
+  wire [6:0]m_axis_tdata;
+  wire [255:0]\m_axis_tdata[255] ;
   wire m_axis_tvalid;
   wire out;
+  wire pipeline_active;
   wire rf_clock;
   wire rf_resetn;
   wire rf_resetn_0;
   wire s_axis_tvalid;
 
   top_level_rfsoc_data_pipeline_0_0_axis_tready_slice inst
-       (.count_val_in_0(count_val_in_0),
-        .ext_trigger_0(ext_trigger_0),
-        .int_select(int_select),
+       (.\count_value_i_reg[8] (\count_value_i_reg[8] ),
+        .\data_out_reg[255] (\data_out_reg[255] ),
+        .ext_trigger(ext_trigger),
         .is_locking(is_locking),
-        .m_axis_0_tdata(m_axis_0_tdata),
-        .\m_axis_0_tdata[255] (\m_axis_0_tdata[255] ),
+        .is_selected(is_selected),
         .m_axis_tdata(m_axis_tdata),
+        .\m_axis_tdata[255] (\m_axis_tdata[255] ),
         .m_axis_tvalid(m_axis_tvalid),
         .out(out),
+        .pipeline_active(pipeline_active),
         .rf_clock(rf_clock),
         .rf_resetn(rf_resetn),
         .rf_resetn_0(rf_resetn_0),
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "shift_register" *) 
 module top_level_rfsoc_data_pipeline_0_0_shift_register
-   (rf_resetn_0,
-    m_axis_0_tdata,
-    m_axis_tdata,
-    rf_clock,
-    is_locking,
+   (\data_out_reg[255]_0 ,
+    rf_resetn_0,
+    m_axis_tdata_0_sp_1,
     out,
-    \m_axis_0_tdata[255] ,
-    rf_resetn);
+    \m_axis_tdata[255] ,
+    m_axis_tdata,
+    rf_resetn,
+    is_selected,
+    rf_clock);
+  output [255:0]\data_out_reg[255]_0 ;
   output rf_resetn_0;
-  output [255:0]m_axis_0_tdata;
-  input [2:0]m_axis_tdata;
-  input rf_clock;
-  input is_locking;
+  input m_axis_tdata_0_sp_1;
   input out;
-  input [255:0]\m_axis_0_tdata[255] ;
+  input [255:0]\m_axis_tdata[255] ;
+  input [2:0]m_axis_tdata;
   input rf_resetn;
+  input is_selected;
+  input rf_clock;
 
-  wire [254:0]data_next;
   wire \data_out[255]_i_1_n_0 ;
-  wire \data_out_reg_n_0_[0] ;
-  wire is_locking;
-  wire [255:0]m_axis_0_tdata;
-  wire [255:0]\m_axis_0_tdata[255] ;
+  wire [255:0]\data_out_reg[255]_0 ;
+  wire is_selected;
+  wire [255:0]locking_waveform;
   wire [2:0]m_axis_tdata;
+  wire [255:0]\m_axis_tdata[255] ;
+  wire m_axis_tdata_0_sn_1;
   wire out;
   wire rf_clock;
   wire rf_resetn;
   wire rf_resetn_0;
   wire state;
+  wire state_i_1_n_0;
 
-  LUT2 #(
-    .INIT(4'h2)) 
+  assign m_axis_tdata_0_sn_1 = m_axis_tdata_0_sp_1;
+  LUT3 #(
+    .INIT(8'h08)) 
     \data_out[255]_i_1 
-       (.I0(m_axis_tdata[0]),
-        .I1(state),
+       (.I0(is_selected),
+        .I1(m_axis_tdata[0]),
+        .I2(state),
         .O(\data_out[255]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -6512,1376 +6100,1376 @@ module top_level_rfsoc_data_pipeline_0_0_shift_register
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[0]),
-        .Q(\data_out_reg_n_0_[0] ));
+        .D(locking_waveform[1]),
+        .Q(locking_waveform[0]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[100] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[100]),
-        .Q(data_next[99]));
+        .D(locking_waveform[101]),
+        .Q(locking_waveform[100]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[101] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[101]),
-        .Q(data_next[100]));
+        .D(locking_waveform[102]),
+        .Q(locking_waveform[101]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[102] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[102]),
-        .Q(data_next[101]));
+        .D(locking_waveform[103]),
+        .Q(locking_waveform[102]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[103] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[103]),
-        .Q(data_next[102]));
+        .D(locking_waveform[104]),
+        .Q(locking_waveform[103]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[104] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[104]),
-        .Q(data_next[103]));
+        .D(locking_waveform[105]),
+        .Q(locking_waveform[104]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[105] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[105]),
-        .Q(data_next[104]));
+        .D(locking_waveform[106]),
+        .Q(locking_waveform[105]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[106] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[106]),
-        .Q(data_next[105]));
+        .D(locking_waveform[107]),
+        .Q(locking_waveform[106]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[107] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[107]),
-        .Q(data_next[106]));
+        .D(locking_waveform[108]),
+        .Q(locking_waveform[107]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[108] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[108]),
-        .Q(data_next[107]));
+        .D(locking_waveform[109]),
+        .Q(locking_waveform[108]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[109] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[109]),
-        .Q(data_next[108]));
+        .D(locking_waveform[110]),
+        .Q(locking_waveform[109]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[10] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[10]),
-        .Q(data_next[9]));
+        .D(locking_waveform[11]),
+        .Q(locking_waveform[10]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[110] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[110]),
-        .Q(data_next[109]));
+        .D(locking_waveform[111]),
+        .Q(locking_waveform[110]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[111] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[111]),
-        .Q(data_next[110]));
+        .D(locking_waveform[112]),
+        .Q(locking_waveform[111]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[112] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[112]),
-        .Q(data_next[111]));
+        .D(locking_waveform[113]),
+        .Q(locking_waveform[112]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[113] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[113]),
-        .Q(data_next[112]));
+        .D(locking_waveform[114]),
+        .Q(locking_waveform[113]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[114] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[114]),
-        .Q(data_next[113]));
+        .D(locking_waveform[115]),
+        .Q(locking_waveform[114]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[115] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[115]),
-        .Q(data_next[114]));
+        .D(locking_waveform[116]),
+        .Q(locking_waveform[115]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[116] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[116]),
-        .Q(data_next[115]));
+        .D(locking_waveform[117]),
+        .Q(locking_waveform[116]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[117] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[117]),
-        .Q(data_next[116]));
+        .D(locking_waveform[118]),
+        .Q(locking_waveform[117]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[118] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[118]),
-        .Q(data_next[117]));
+        .D(locking_waveform[119]),
+        .Q(locking_waveform[118]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[119] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[119]),
-        .Q(data_next[118]));
+        .D(locking_waveform[120]),
+        .Q(locking_waveform[119]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[11] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[11]),
-        .Q(data_next[10]));
+        .D(locking_waveform[12]),
+        .Q(locking_waveform[11]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[120] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[120]),
-        .Q(data_next[119]));
+        .D(locking_waveform[121]),
+        .Q(locking_waveform[120]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[121] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[121]),
-        .Q(data_next[120]));
+        .D(locking_waveform[122]),
+        .Q(locking_waveform[121]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[122] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[122]),
-        .Q(data_next[121]));
+        .D(locking_waveform[123]),
+        .Q(locking_waveform[122]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[123] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[123]),
-        .Q(data_next[122]));
+        .D(locking_waveform[124]),
+        .Q(locking_waveform[123]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[124] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[124]),
-        .Q(data_next[123]));
+        .D(locking_waveform[125]),
+        .Q(locking_waveform[124]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[125] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[125]),
-        .Q(data_next[124]));
+        .D(locking_waveform[126]),
+        .Q(locking_waveform[125]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[126] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[126]),
-        .Q(data_next[125]));
+        .D(locking_waveform[127]),
+        .Q(locking_waveform[126]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[127] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[127]),
-        .Q(data_next[126]));
+        .D(locking_waveform[128]),
+        .Q(locking_waveform[127]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[128] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[128]),
-        .Q(data_next[127]));
+        .D(locking_waveform[129]),
+        .Q(locking_waveform[128]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[129] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[129]),
-        .Q(data_next[128]));
+        .D(locking_waveform[130]),
+        .Q(locking_waveform[129]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[12] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[12]),
-        .Q(data_next[11]));
+        .D(locking_waveform[13]),
+        .Q(locking_waveform[12]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[130] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[130]),
-        .Q(data_next[129]));
+        .D(locking_waveform[131]),
+        .Q(locking_waveform[130]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[131] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[131]),
-        .Q(data_next[130]));
+        .D(locking_waveform[132]),
+        .Q(locking_waveform[131]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[132] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[132]),
-        .Q(data_next[131]));
+        .D(locking_waveform[133]),
+        .Q(locking_waveform[132]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[133] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[133]),
-        .Q(data_next[132]));
+        .D(locking_waveform[134]),
+        .Q(locking_waveform[133]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[134] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[134]),
-        .Q(data_next[133]));
+        .D(locking_waveform[135]),
+        .Q(locking_waveform[134]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[135] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[135]),
-        .Q(data_next[134]));
+        .D(locking_waveform[136]),
+        .Q(locking_waveform[135]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[136] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[136]),
-        .Q(data_next[135]));
+        .D(locking_waveform[137]),
+        .Q(locking_waveform[136]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[137] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[137]),
-        .Q(data_next[136]));
+        .D(locking_waveform[138]),
+        .Q(locking_waveform[137]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[138] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[138]),
-        .Q(data_next[137]));
+        .D(locking_waveform[139]),
+        .Q(locking_waveform[138]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[139] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[139]),
-        .Q(data_next[138]));
+        .D(locking_waveform[140]),
+        .Q(locking_waveform[139]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[13] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[13]),
-        .Q(data_next[12]));
+        .D(locking_waveform[14]),
+        .Q(locking_waveform[13]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[140] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[140]),
-        .Q(data_next[139]));
+        .D(locking_waveform[141]),
+        .Q(locking_waveform[140]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[141] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[141]),
-        .Q(data_next[140]));
+        .D(locking_waveform[142]),
+        .Q(locking_waveform[141]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[142] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[142]),
-        .Q(data_next[141]));
+        .D(locking_waveform[143]),
+        .Q(locking_waveform[142]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[143] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[143]),
-        .Q(data_next[142]));
+        .D(locking_waveform[144]),
+        .Q(locking_waveform[143]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[144] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[144]),
-        .Q(data_next[143]));
+        .D(locking_waveform[145]),
+        .Q(locking_waveform[144]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[145] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[145]),
-        .Q(data_next[144]));
+        .D(locking_waveform[146]),
+        .Q(locking_waveform[145]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[146] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[146]),
-        .Q(data_next[145]));
+        .D(locking_waveform[147]),
+        .Q(locking_waveform[146]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[147] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[147]),
-        .Q(data_next[146]));
+        .D(locking_waveform[148]),
+        .Q(locking_waveform[147]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[148] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[148]),
-        .Q(data_next[147]));
+        .D(locking_waveform[149]),
+        .Q(locking_waveform[148]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[149] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[149]),
-        .Q(data_next[148]));
+        .D(locking_waveform[150]),
+        .Q(locking_waveform[149]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[14] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[14]),
-        .Q(data_next[13]));
+        .D(locking_waveform[15]),
+        .Q(locking_waveform[14]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[150] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[150]),
-        .Q(data_next[149]));
+        .D(locking_waveform[151]),
+        .Q(locking_waveform[150]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[151] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[151]),
-        .Q(data_next[150]));
+        .D(locking_waveform[152]),
+        .Q(locking_waveform[151]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[152] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[152]),
-        .Q(data_next[151]));
+        .D(locking_waveform[153]),
+        .Q(locking_waveform[152]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[153] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[153]),
-        .Q(data_next[152]));
+        .D(locking_waveform[154]),
+        .Q(locking_waveform[153]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[154] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[154]),
-        .Q(data_next[153]));
+        .D(locking_waveform[155]),
+        .Q(locking_waveform[154]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[155] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[155]),
-        .Q(data_next[154]));
+        .D(locking_waveform[156]),
+        .Q(locking_waveform[155]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[156] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[156]),
-        .Q(data_next[155]));
+        .D(locking_waveform[157]),
+        .Q(locking_waveform[156]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[157] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[157]),
-        .Q(data_next[156]));
+        .D(locking_waveform[158]),
+        .Q(locking_waveform[157]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[158] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[158]),
-        .Q(data_next[157]));
+        .D(locking_waveform[159]),
+        .Q(locking_waveform[158]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[159] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[159]),
-        .Q(data_next[158]));
+        .D(locking_waveform[160]),
+        .Q(locking_waveform[159]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[15] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[15]),
-        .Q(data_next[14]));
+        .D(locking_waveform[16]),
+        .Q(locking_waveform[15]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[160] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[160]),
-        .Q(data_next[159]));
+        .D(locking_waveform[161]),
+        .Q(locking_waveform[160]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[161] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[161]),
-        .Q(data_next[160]));
+        .D(locking_waveform[162]),
+        .Q(locking_waveform[161]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[162] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[162]),
-        .Q(data_next[161]));
+        .D(locking_waveform[163]),
+        .Q(locking_waveform[162]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[163] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[163]),
-        .Q(data_next[162]));
+        .D(locking_waveform[164]),
+        .Q(locking_waveform[163]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[164] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[164]),
-        .Q(data_next[163]));
+        .D(locking_waveform[165]),
+        .Q(locking_waveform[164]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[165] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[165]),
-        .Q(data_next[164]));
+        .D(locking_waveform[166]),
+        .Q(locking_waveform[165]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[166] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[166]),
-        .Q(data_next[165]));
+        .D(locking_waveform[167]),
+        .Q(locking_waveform[166]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[167] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[167]),
-        .Q(data_next[166]));
+        .D(locking_waveform[168]),
+        .Q(locking_waveform[167]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[168] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[168]),
-        .Q(data_next[167]));
+        .D(locking_waveform[169]),
+        .Q(locking_waveform[168]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[169] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[169]),
-        .Q(data_next[168]));
+        .D(locking_waveform[170]),
+        .Q(locking_waveform[169]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[16] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[16]),
-        .Q(data_next[15]));
+        .D(locking_waveform[17]),
+        .Q(locking_waveform[16]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[170] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[170]),
-        .Q(data_next[169]));
+        .D(locking_waveform[171]),
+        .Q(locking_waveform[170]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[171] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[171]),
-        .Q(data_next[170]));
+        .D(locking_waveform[172]),
+        .Q(locking_waveform[171]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[172] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[172]),
-        .Q(data_next[171]));
+        .D(locking_waveform[173]),
+        .Q(locking_waveform[172]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[173] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[173]),
-        .Q(data_next[172]));
+        .D(locking_waveform[174]),
+        .Q(locking_waveform[173]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[174] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[174]),
-        .Q(data_next[173]));
+        .D(locking_waveform[175]),
+        .Q(locking_waveform[174]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[175] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[175]),
-        .Q(data_next[174]));
+        .D(locking_waveform[176]),
+        .Q(locking_waveform[175]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[176] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[176]),
-        .Q(data_next[175]));
+        .D(locking_waveform[177]),
+        .Q(locking_waveform[176]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[177] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[177]),
-        .Q(data_next[176]));
+        .D(locking_waveform[178]),
+        .Q(locking_waveform[177]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[178] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[178]),
-        .Q(data_next[177]));
+        .D(locking_waveform[179]),
+        .Q(locking_waveform[178]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[179] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[179]),
-        .Q(data_next[178]));
+        .D(locking_waveform[180]),
+        .Q(locking_waveform[179]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[17] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[17]),
-        .Q(data_next[16]));
+        .D(locking_waveform[18]),
+        .Q(locking_waveform[17]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[180] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[180]),
-        .Q(data_next[179]));
+        .D(locking_waveform[181]),
+        .Q(locking_waveform[180]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[181] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[181]),
-        .Q(data_next[180]));
+        .D(locking_waveform[182]),
+        .Q(locking_waveform[181]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[182] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[182]),
-        .Q(data_next[181]));
+        .D(locking_waveform[183]),
+        .Q(locking_waveform[182]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[183] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[183]),
-        .Q(data_next[182]));
+        .D(locking_waveform[184]),
+        .Q(locking_waveform[183]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[184] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[184]),
-        .Q(data_next[183]));
+        .D(locking_waveform[185]),
+        .Q(locking_waveform[184]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[185] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[185]),
-        .Q(data_next[184]));
+        .D(locking_waveform[186]),
+        .Q(locking_waveform[185]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[186] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[186]),
-        .Q(data_next[185]));
+        .D(locking_waveform[187]),
+        .Q(locking_waveform[186]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[187] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[187]),
-        .Q(data_next[186]));
+        .D(locking_waveform[188]),
+        .Q(locking_waveform[187]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[188] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[188]),
-        .Q(data_next[187]));
+        .D(locking_waveform[189]),
+        .Q(locking_waveform[188]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[189] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[189]),
-        .Q(data_next[188]));
+        .D(locking_waveform[190]),
+        .Q(locking_waveform[189]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[18] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[18]),
-        .Q(data_next[17]));
+        .D(locking_waveform[19]),
+        .Q(locking_waveform[18]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[190] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[190]),
-        .Q(data_next[189]));
+        .D(locking_waveform[191]),
+        .Q(locking_waveform[190]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[191] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[191]),
-        .Q(data_next[190]));
+        .D(locking_waveform[192]),
+        .Q(locking_waveform[191]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[192] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[192]),
-        .Q(data_next[191]));
+        .D(locking_waveform[193]),
+        .Q(locking_waveform[192]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[193] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[193]),
-        .Q(data_next[192]));
+        .D(locking_waveform[194]),
+        .Q(locking_waveform[193]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[194] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[194]),
-        .Q(data_next[193]));
+        .D(locking_waveform[195]),
+        .Q(locking_waveform[194]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[195] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[195]),
-        .Q(data_next[194]));
+        .D(locking_waveform[196]),
+        .Q(locking_waveform[195]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[196] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[196]),
-        .Q(data_next[195]));
+        .D(locking_waveform[197]),
+        .Q(locking_waveform[196]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[197] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[197]),
-        .Q(data_next[196]));
+        .D(locking_waveform[198]),
+        .Q(locking_waveform[197]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[198] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[198]),
-        .Q(data_next[197]));
+        .D(locking_waveform[199]),
+        .Q(locking_waveform[198]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[199] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[199]),
-        .Q(data_next[198]));
+        .D(locking_waveform[200]),
+        .Q(locking_waveform[199]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[19] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[19]),
-        .Q(data_next[18]));
+        .D(locking_waveform[20]),
+        .Q(locking_waveform[19]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[1] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[1]),
-        .Q(data_next[0]));
+        .D(locking_waveform[2]),
+        .Q(locking_waveform[1]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[200] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[200]),
-        .Q(data_next[199]));
+        .D(locking_waveform[201]),
+        .Q(locking_waveform[200]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[201] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[201]),
-        .Q(data_next[200]));
+        .D(locking_waveform[202]),
+        .Q(locking_waveform[201]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[202] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[202]),
-        .Q(data_next[201]));
+        .D(locking_waveform[203]),
+        .Q(locking_waveform[202]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[203] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[203]),
-        .Q(data_next[202]));
+        .D(locking_waveform[204]),
+        .Q(locking_waveform[203]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[204] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[204]),
-        .Q(data_next[203]));
+        .D(locking_waveform[205]),
+        .Q(locking_waveform[204]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[205] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[205]),
-        .Q(data_next[204]));
+        .D(locking_waveform[206]),
+        .Q(locking_waveform[205]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[206] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[206]),
-        .Q(data_next[205]));
+        .D(locking_waveform[207]),
+        .Q(locking_waveform[206]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[207] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[207]),
-        .Q(data_next[206]));
+        .D(locking_waveform[208]),
+        .Q(locking_waveform[207]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[208] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[208]),
-        .Q(data_next[207]));
+        .D(locking_waveform[209]),
+        .Q(locking_waveform[208]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[209] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[209]),
-        .Q(data_next[208]));
+        .D(locking_waveform[210]),
+        .Q(locking_waveform[209]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[20] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[20]),
-        .Q(data_next[19]));
+        .D(locking_waveform[21]),
+        .Q(locking_waveform[20]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[210] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[210]),
-        .Q(data_next[209]));
+        .D(locking_waveform[211]),
+        .Q(locking_waveform[210]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[211] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[211]),
-        .Q(data_next[210]));
+        .D(locking_waveform[212]),
+        .Q(locking_waveform[211]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[212] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[212]),
-        .Q(data_next[211]));
+        .D(locking_waveform[213]),
+        .Q(locking_waveform[212]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[213] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[213]),
-        .Q(data_next[212]));
+        .D(locking_waveform[214]),
+        .Q(locking_waveform[213]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[214] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[214]),
-        .Q(data_next[213]));
+        .D(locking_waveform[215]),
+        .Q(locking_waveform[214]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[215] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[215]),
-        .Q(data_next[214]));
+        .D(locking_waveform[216]),
+        .Q(locking_waveform[215]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[216] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[216]),
-        .Q(data_next[215]));
+        .D(locking_waveform[217]),
+        .Q(locking_waveform[216]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[217] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[217]),
-        .Q(data_next[216]));
+        .D(locking_waveform[218]),
+        .Q(locking_waveform[217]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[218] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[218]),
-        .Q(data_next[217]));
+        .D(locking_waveform[219]),
+        .Q(locking_waveform[218]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[219] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[219]),
-        .Q(data_next[218]));
+        .D(locking_waveform[220]),
+        .Q(locking_waveform[219]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[21] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[21]),
-        .Q(data_next[20]));
+        .D(locking_waveform[22]),
+        .Q(locking_waveform[21]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[220] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[220]),
-        .Q(data_next[219]));
+        .D(locking_waveform[221]),
+        .Q(locking_waveform[220]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[221] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[221]),
-        .Q(data_next[220]));
+        .D(locking_waveform[222]),
+        .Q(locking_waveform[221]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[222] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[222]),
-        .Q(data_next[221]));
+        .D(locking_waveform[223]),
+        .Q(locking_waveform[222]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[223] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[223]),
-        .Q(data_next[222]));
+        .D(locking_waveform[224]),
+        .Q(locking_waveform[223]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[224] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[224]),
-        .Q(data_next[223]));
+        .D(locking_waveform[225]),
+        .Q(locking_waveform[224]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[225] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[225]),
-        .Q(data_next[224]));
+        .D(locking_waveform[226]),
+        .Q(locking_waveform[225]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[226] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[226]),
-        .Q(data_next[225]));
+        .D(locking_waveform[227]),
+        .Q(locking_waveform[226]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[227] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[227]),
-        .Q(data_next[226]));
+        .D(locking_waveform[228]),
+        .Q(locking_waveform[227]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[228] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[228]),
-        .Q(data_next[227]));
+        .D(locking_waveform[229]),
+        .Q(locking_waveform[228]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[229] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[229]),
-        .Q(data_next[228]));
+        .D(locking_waveform[230]),
+        .Q(locking_waveform[229]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[22] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[22]),
-        .Q(data_next[21]));
+        .D(locking_waveform[23]),
+        .Q(locking_waveform[22]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[230] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[230]),
-        .Q(data_next[229]));
+        .D(locking_waveform[231]),
+        .Q(locking_waveform[230]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[231] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[231]),
-        .Q(data_next[230]));
+        .D(locking_waveform[232]),
+        .Q(locking_waveform[231]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[232] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[232]),
-        .Q(data_next[231]));
+        .D(locking_waveform[233]),
+        .Q(locking_waveform[232]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[233] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[233]),
-        .Q(data_next[232]));
+        .D(locking_waveform[234]),
+        .Q(locking_waveform[233]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[234] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[234]),
-        .Q(data_next[233]));
+        .D(locking_waveform[235]),
+        .Q(locking_waveform[234]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[235] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[235]),
-        .Q(data_next[234]));
+        .D(locking_waveform[236]),
+        .Q(locking_waveform[235]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[236] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[236]),
-        .Q(data_next[235]));
+        .D(locking_waveform[237]),
+        .Q(locking_waveform[236]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[237] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[237]),
-        .Q(data_next[236]));
+        .D(locking_waveform[238]),
+        .Q(locking_waveform[237]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[238] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[238]),
-        .Q(data_next[237]));
+        .D(locking_waveform[239]),
+        .Q(locking_waveform[238]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[239] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[239]),
-        .Q(data_next[238]));
+        .D(locking_waveform[240]),
+        .Q(locking_waveform[239]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[23] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[23]),
-        .Q(data_next[22]));
+        .D(locking_waveform[24]),
+        .Q(locking_waveform[23]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[240] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[240]),
-        .Q(data_next[239]));
+        .D(locking_waveform[241]),
+        .Q(locking_waveform[240]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[241] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[241]),
-        .Q(data_next[240]));
+        .D(locking_waveform[242]),
+        .Q(locking_waveform[241]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[242] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[242]),
-        .Q(data_next[241]));
+        .D(locking_waveform[243]),
+        .Q(locking_waveform[242]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[243] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[243]),
-        .Q(data_next[242]));
+        .D(locking_waveform[244]),
+        .Q(locking_waveform[243]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[244] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[244]),
-        .Q(data_next[243]));
+        .D(locking_waveform[245]),
+        .Q(locking_waveform[244]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[245] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[245]),
-        .Q(data_next[244]));
+        .D(locking_waveform[246]),
+        .Q(locking_waveform[245]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[246] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[246]),
-        .Q(data_next[245]));
+        .D(locking_waveform[247]),
+        .Q(locking_waveform[246]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[247] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[247]),
-        .Q(data_next[246]));
+        .D(locking_waveform[248]),
+        .Q(locking_waveform[247]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[248] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[248]),
-        .Q(data_next[247]));
+        .D(locking_waveform[249]),
+        .Q(locking_waveform[248]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[249] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[249]),
-        .Q(data_next[248]));
+        .D(locking_waveform[250]),
+        .Q(locking_waveform[249]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[24] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[24]),
-        .Q(data_next[23]));
+        .D(locking_waveform[25]),
+        .Q(locking_waveform[24]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[250] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[250]),
-        .Q(data_next[249]));
+        .D(locking_waveform[251]),
+        .Q(locking_waveform[250]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[251] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[251]),
-        .Q(data_next[250]));
+        .D(locking_waveform[252]),
+        .Q(locking_waveform[251]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[252] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[252]),
-        .Q(data_next[251]));
+        .D(locking_waveform[253]),
+        .Q(locking_waveform[252]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[253] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[253]),
-        .Q(data_next[252]));
+        .D(locking_waveform[254]),
+        .Q(locking_waveform[253]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[254] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[254]),
-        .Q(data_next[253]));
+        .D(locking_waveform[255]),
+        .Q(locking_waveform[254]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[255] 
@@ -7889,3063 +7477,4778 @@ module top_level_rfsoc_data_pipeline_0_0_shift_register
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
         .D(m_axis_tdata[1]),
-        .Q(data_next[254]));
+        .Q(locking_waveform[255]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[25] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[25]),
-        .Q(data_next[24]));
+        .D(locking_waveform[26]),
+        .Q(locking_waveform[25]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[26] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[26]),
-        .Q(data_next[25]));
+        .D(locking_waveform[27]),
+        .Q(locking_waveform[26]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[27] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[27]),
-        .Q(data_next[26]));
+        .D(locking_waveform[28]),
+        .Q(locking_waveform[27]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[28] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[28]),
-        .Q(data_next[27]));
+        .D(locking_waveform[29]),
+        .Q(locking_waveform[28]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[29] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[29]),
-        .Q(data_next[28]));
+        .D(locking_waveform[30]),
+        .Q(locking_waveform[29]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[2] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[2]),
-        .Q(data_next[1]));
+        .D(locking_waveform[3]),
+        .Q(locking_waveform[2]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[30] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[30]),
-        .Q(data_next[29]));
+        .D(locking_waveform[31]),
+        .Q(locking_waveform[30]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[31] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[31]),
-        .Q(data_next[30]));
+        .D(locking_waveform[32]),
+        .Q(locking_waveform[31]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[32] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[32]),
-        .Q(data_next[31]));
+        .D(locking_waveform[33]),
+        .Q(locking_waveform[32]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[33] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[33]),
-        .Q(data_next[32]));
+        .D(locking_waveform[34]),
+        .Q(locking_waveform[33]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[34] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[34]),
-        .Q(data_next[33]));
+        .D(locking_waveform[35]),
+        .Q(locking_waveform[34]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[35] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[35]),
-        .Q(data_next[34]));
+        .D(locking_waveform[36]),
+        .Q(locking_waveform[35]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[36] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[36]),
-        .Q(data_next[35]));
+        .D(locking_waveform[37]),
+        .Q(locking_waveform[36]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[37] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[37]),
-        .Q(data_next[36]));
+        .D(locking_waveform[38]),
+        .Q(locking_waveform[37]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[38] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[38]),
-        .Q(data_next[37]));
+        .D(locking_waveform[39]),
+        .Q(locking_waveform[38]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[39] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[39]),
-        .Q(data_next[38]));
+        .D(locking_waveform[40]),
+        .Q(locking_waveform[39]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[3] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[3]),
-        .Q(data_next[2]));
+        .D(locking_waveform[4]),
+        .Q(locking_waveform[3]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[40] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[40]),
-        .Q(data_next[39]));
+        .D(locking_waveform[41]),
+        .Q(locking_waveform[40]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[41] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[41]),
-        .Q(data_next[40]));
+        .D(locking_waveform[42]),
+        .Q(locking_waveform[41]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[42] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[42]),
-        .Q(data_next[41]));
+        .D(locking_waveform[43]),
+        .Q(locking_waveform[42]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[43] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[43]),
-        .Q(data_next[42]));
+        .D(locking_waveform[44]),
+        .Q(locking_waveform[43]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[44] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[44]),
-        .Q(data_next[43]));
+        .D(locking_waveform[45]),
+        .Q(locking_waveform[44]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[45] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[45]),
-        .Q(data_next[44]));
+        .D(locking_waveform[46]),
+        .Q(locking_waveform[45]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[46] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[46]),
-        .Q(data_next[45]));
+        .D(locking_waveform[47]),
+        .Q(locking_waveform[46]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[47] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[47]),
-        .Q(data_next[46]));
+        .D(locking_waveform[48]),
+        .Q(locking_waveform[47]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[48] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[48]),
-        .Q(data_next[47]));
+        .D(locking_waveform[49]),
+        .Q(locking_waveform[48]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[49] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[49]),
-        .Q(data_next[48]));
+        .D(locking_waveform[50]),
+        .Q(locking_waveform[49]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[4] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[4]),
-        .Q(data_next[3]));
+        .D(locking_waveform[5]),
+        .Q(locking_waveform[4]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[50] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[50]),
-        .Q(data_next[49]));
+        .D(locking_waveform[51]),
+        .Q(locking_waveform[50]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[51] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[51]),
-        .Q(data_next[50]));
+        .D(locking_waveform[52]),
+        .Q(locking_waveform[51]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[52] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[52]),
-        .Q(data_next[51]));
+        .D(locking_waveform[53]),
+        .Q(locking_waveform[52]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[53] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[53]),
-        .Q(data_next[52]));
+        .D(locking_waveform[54]),
+        .Q(locking_waveform[53]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[54] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[54]),
-        .Q(data_next[53]));
+        .D(locking_waveform[55]),
+        .Q(locking_waveform[54]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[55] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[55]),
-        .Q(data_next[54]));
+        .D(locking_waveform[56]),
+        .Q(locking_waveform[55]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[56] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[56]),
-        .Q(data_next[55]));
+        .D(locking_waveform[57]),
+        .Q(locking_waveform[56]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[57] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[57]),
-        .Q(data_next[56]));
+        .D(locking_waveform[58]),
+        .Q(locking_waveform[57]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[58] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[58]),
-        .Q(data_next[57]));
+        .D(locking_waveform[59]),
+        .Q(locking_waveform[58]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[59] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[59]),
-        .Q(data_next[58]));
+        .D(locking_waveform[60]),
+        .Q(locking_waveform[59]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[5] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[5]),
-        .Q(data_next[4]));
+        .D(locking_waveform[6]),
+        .Q(locking_waveform[5]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[60] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[60]),
-        .Q(data_next[59]));
+        .D(locking_waveform[61]),
+        .Q(locking_waveform[60]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[61] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[61]),
-        .Q(data_next[60]));
+        .D(locking_waveform[62]),
+        .Q(locking_waveform[61]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[62] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[62]),
-        .Q(data_next[61]));
+        .D(locking_waveform[63]),
+        .Q(locking_waveform[62]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[63] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[63]),
-        .Q(data_next[62]));
+        .D(locking_waveform[64]),
+        .Q(locking_waveform[63]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[64] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[64]),
-        .Q(data_next[63]));
+        .D(locking_waveform[65]),
+        .Q(locking_waveform[64]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[65] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[65]),
-        .Q(data_next[64]));
+        .D(locking_waveform[66]),
+        .Q(locking_waveform[65]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[66] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[66]),
-        .Q(data_next[65]));
+        .D(locking_waveform[67]),
+        .Q(locking_waveform[66]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[67] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[67]),
-        .Q(data_next[66]));
+        .D(locking_waveform[68]),
+        .Q(locking_waveform[67]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[68] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[68]),
-        .Q(data_next[67]));
+        .D(locking_waveform[69]),
+        .Q(locking_waveform[68]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[69] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[69]),
-        .Q(data_next[68]));
+        .D(locking_waveform[70]),
+        .Q(locking_waveform[69]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[6] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[6]),
-        .Q(data_next[5]));
+        .D(locking_waveform[7]),
+        .Q(locking_waveform[6]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[70] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[70]),
-        .Q(data_next[69]));
+        .D(locking_waveform[71]),
+        .Q(locking_waveform[70]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[71] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[71]),
-        .Q(data_next[70]));
+        .D(locking_waveform[72]),
+        .Q(locking_waveform[71]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[72] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[72]),
-        .Q(data_next[71]));
+        .D(locking_waveform[73]),
+        .Q(locking_waveform[72]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[73] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[73]),
-        .Q(data_next[72]));
+        .D(locking_waveform[74]),
+        .Q(locking_waveform[73]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[74] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[74]),
-        .Q(data_next[73]));
+        .D(locking_waveform[75]),
+        .Q(locking_waveform[74]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[75] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[75]),
-        .Q(data_next[74]));
+        .D(locking_waveform[76]),
+        .Q(locking_waveform[75]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[76] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[76]),
-        .Q(data_next[75]));
+        .D(locking_waveform[77]),
+        .Q(locking_waveform[76]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[77] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[77]),
-        .Q(data_next[76]));
+        .D(locking_waveform[78]),
+        .Q(locking_waveform[77]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[78] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[78]),
-        .Q(data_next[77]));
+        .D(locking_waveform[79]),
+        .Q(locking_waveform[78]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[79] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[79]),
-        .Q(data_next[78]));
+        .D(locking_waveform[80]),
+        .Q(locking_waveform[79]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[7] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[7]),
-        .Q(data_next[6]));
+        .D(locking_waveform[8]),
+        .Q(locking_waveform[7]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[80] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[80]),
-        .Q(data_next[79]));
+        .D(locking_waveform[81]),
+        .Q(locking_waveform[80]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[81] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[81]),
-        .Q(data_next[80]));
+        .D(locking_waveform[82]),
+        .Q(locking_waveform[81]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[82] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[82]),
-        .Q(data_next[81]));
+        .D(locking_waveform[83]),
+        .Q(locking_waveform[82]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[83] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[83]),
-        .Q(data_next[82]));
+        .D(locking_waveform[84]),
+        .Q(locking_waveform[83]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[84] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[84]),
-        .Q(data_next[83]));
+        .D(locking_waveform[85]),
+        .Q(locking_waveform[84]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[85] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[85]),
-        .Q(data_next[84]));
+        .D(locking_waveform[86]),
+        .Q(locking_waveform[85]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[86] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[86]),
-        .Q(data_next[85]));
+        .D(locking_waveform[87]),
+        .Q(locking_waveform[86]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[87] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[87]),
-        .Q(data_next[86]));
+        .D(locking_waveform[88]),
+        .Q(locking_waveform[87]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[88] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[88]),
-        .Q(data_next[87]));
+        .D(locking_waveform[89]),
+        .Q(locking_waveform[88]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[89] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[89]),
-        .Q(data_next[88]));
+        .D(locking_waveform[90]),
+        .Q(locking_waveform[89]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[8] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[8]),
-        .Q(data_next[7]));
+        .D(locking_waveform[9]),
+        .Q(locking_waveform[8]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[90] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[90]),
-        .Q(data_next[89]));
+        .D(locking_waveform[91]),
+        .Q(locking_waveform[90]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[91] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[91]),
-        .Q(data_next[90]));
+        .D(locking_waveform[92]),
+        .Q(locking_waveform[91]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[92] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[92]),
-        .Q(data_next[91]));
+        .D(locking_waveform[93]),
+        .Q(locking_waveform[92]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[93] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[93]),
-        .Q(data_next[92]));
+        .D(locking_waveform[94]),
+        .Q(locking_waveform[93]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[94] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[94]),
-        .Q(data_next[93]));
+        .D(locking_waveform[95]),
+        .Q(locking_waveform[94]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[95] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[95]),
-        .Q(data_next[94]));
+        .D(locking_waveform[96]),
+        .Q(locking_waveform[95]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[96] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[96]),
-        .Q(data_next[95]));
+        .D(locking_waveform[97]),
+        .Q(locking_waveform[96]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[97] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[97]),
-        .Q(data_next[96]));
+        .D(locking_waveform[98]),
+        .Q(locking_waveform[97]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[98] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[98]),
-        .Q(data_next[97]));
+        .D(locking_waveform[99]),
+        .Q(locking_waveform[98]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[99] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[99]),
-        .Q(data_next[98]));
+        .D(locking_waveform[100]),
+        .Q(locking_waveform[99]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[9] 
        (.C(rf_clock),
         .CE(\data_out[255]_i_1_n_0 ),
         .CLR(rf_resetn_0),
-        .D(data_next[9]),
-        .Q(data_next[8]));
+        .D(locking_waveform[10]),
+        .Q(locking_waveform[9]));
   LUT1 #(
     .INIT(2'h1)) 
     int_select_i_1
        (.I0(rf_resetn),
         .O(rf_resetn_0));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[0]_INST_0 
-       (.I0(\data_out_reg_n_0_[0] ),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[0]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[0]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [0]),
+        .I3(\m_axis_tdata[255] [0]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[0]));
+        .O(\data_out_reg[255]_0 [0]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[100]_INST_0 
-       (.I0(data_next[99]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[100]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[100]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [100]),
+        .I3(\m_axis_tdata[255] [100]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[100]));
+        .O(\data_out_reg[255]_0 [100]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[101]_INST_0 
-       (.I0(data_next[100]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[101]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[101]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [101]),
+        .I3(\m_axis_tdata[255] [101]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[101]));
+        .O(\data_out_reg[255]_0 [101]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[102]_INST_0 
-       (.I0(data_next[101]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[102]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[102]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [102]),
+        .I3(\m_axis_tdata[255] [102]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[102]));
+        .O(\data_out_reg[255]_0 [102]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[103]_INST_0 
-       (.I0(data_next[102]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[103]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[103]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [103]),
+        .I3(\m_axis_tdata[255] [103]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[103]));
+        .O(\data_out_reg[255]_0 [103]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[104]_INST_0 
-       (.I0(data_next[103]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[104]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[104]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [104]),
+        .I3(\m_axis_tdata[255] [104]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[104]));
+        .O(\data_out_reg[255]_0 [104]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[105]_INST_0 
-       (.I0(data_next[104]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[105]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[105]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [105]),
+        .I3(\m_axis_tdata[255] [105]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[105]));
+        .O(\data_out_reg[255]_0 [105]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[106]_INST_0 
-       (.I0(data_next[105]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[106]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[106]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [106]),
+        .I3(\m_axis_tdata[255] [106]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[106]));
+        .O(\data_out_reg[255]_0 [106]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[107]_INST_0 
-       (.I0(data_next[106]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[107]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[107]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [107]),
+        .I3(\m_axis_tdata[255] [107]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[107]));
+        .O(\data_out_reg[255]_0 [107]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[108]_INST_0 
-       (.I0(data_next[107]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[108]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[108]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [108]),
+        .I3(\m_axis_tdata[255] [108]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[108]));
+        .O(\data_out_reg[255]_0 [108]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[109]_INST_0 
-       (.I0(data_next[108]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[109]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[109]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [109]),
+        .I3(\m_axis_tdata[255] [109]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[109]));
+        .O(\data_out_reg[255]_0 [109]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[10]_INST_0 
-       (.I0(data_next[9]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[10]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[10]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [10]),
+        .I3(\m_axis_tdata[255] [10]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[10]));
+        .O(\data_out_reg[255]_0 [10]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[110]_INST_0 
-       (.I0(data_next[109]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[110]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[110]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [110]),
+        .I3(\m_axis_tdata[255] [110]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[110]));
+        .O(\data_out_reg[255]_0 [110]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[111]_INST_0 
-       (.I0(data_next[110]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[111]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[111]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [111]),
+        .I3(\m_axis_tdata[255] [111]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[111]));
+        .O(\data_out_reg[255]_0 [111]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[112]_INST_0 
-       (.I0(data_next[111]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[112]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[112]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [112]),
+        .I3(\m_axis_tdata[255] [112]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[112]));
+        .O(\data_out_reg[255]_0 [112]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[113]_INST_0 
-       (.I0(data_next[112]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[113]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[113]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [113]),
+        .I3(\m_axis_tdata[255] [113]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[113]));
+        .O(\data_out_reg[255]_0 [113]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[114]_INST_0 
-       (.I0(data_next[113]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[114]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[114]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [114]),
+        .I3(\m_axis_tdata[255] [114]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[114]));
+        .O(\data_out_reg[255]_0 [114]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[115]_INST_0 
-       (.I0(data_next[114]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[115]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[115]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [115]),
+        .I3(\m_axis_tdata[255] [115]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[115]));
+        .O(\data_out_reg[255]_0 [115]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[116]_INST_0 
-       (.I0(data_next[115]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[116]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[116]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [116]),
+        .I3(\m_axis_tdata[255] [116]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[116]));
+        .O(\data_out_reg[255]_0 [116]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[117]_INST_0 
-       (.I0(data_next[116]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[117]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[117]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [117]),
+        .I3(\m_axis_tdata[255] [117]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[117]));
+        .O(\data_out_reg[255]_0 [117]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[118]_INST_0 
-       (.I0(data_next[117]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[118]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[118]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [118]),
+        .I3(\m_axis_tdata[255] [118]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[118]));
+        .O(\data_out_reg[255]_0 [118]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[119]_INST_0 
-       (.I0(data_next[118]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[119]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[119]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [119]),
+        .I3(\m_axis_tdata[255] [119]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[119]));
+        .O(\data_out_reg[255]_0 [119]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[11]_INST_0 
-       (.I0(data_next[10]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[11]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[11]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [11]),
+        .I3(\m_axis_tdata[255] [11]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[11]));
+        .O(\data_out_reg[255]_0 [11]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[120]_INST_0 
-       (.I0(data_next[119]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[120]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[120]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [120]),
+        .I3(\m_axis_tdata[255] [120]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[120]));
+        .O(\data_out_reg[255]_0 [120]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[121]_INST_0 
-       (.I0(data_next[120]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[121]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[121]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [121]),
+        .I3(\m_axis_tdata[255] [121]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[121]));
+        .O(\data_out_reg[255]_0 [121]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[122]_INST_0 
-       (.I0(data_next[121]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[122]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[122]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [122]),
+        .I3(\m_axis_tdata[255] [122]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[122]));
+        .O(\data_out_reg[255]_0 [122]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[123]_INST_0 
-       (.I0(data_next[122]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[123]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[123]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [123]),
+        .I3(\m_axis_tdata[255] [123]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[123]));
+        .O(\data_out_reg[255]_0 [123]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[124]_INST_0 
-       (.I0(data_next[123]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[124]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[124]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [124]),
+        .I3(\m_axis_tdata[255] [124]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[124]));
+        .O(\data_out_reg[255]_0 [124]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[125]_INST_0 
-       (.I0(data_next[124]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[125]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[125]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [125]),
+        .I3(\m_axis_tdata[255] [125]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[125]));
+        .O(\data_out_reg[255]_0 [125]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[126]_INST_0 
-       (.I0(data_next[125]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[126]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[126]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [126]),
+        .I3(\m_axis_tdata[255] [126]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[126]));
+        .O(\data_out_reg[255]_0 [126]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[127]_INST_0 
-       (.I0(data_next[126]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[127]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[127]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [127]),
+        .I3(\m_axis_tdata[255] [127]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[127]));
+        .O(\data_out_reg[255]_0 [127]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[128]_INST_0 
-       (.I0(data_next[127]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[128]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[128]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [128]),
+        .I3(\m_axis_tdata[255] [128]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[128]));
+        .O(\data_out_reg[255]_0 [128]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[129]_INST_0 
-       (.I0(data_next[128]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[129]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[129]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [129]),
+        .I3(\m_axis_tdata[255] [129]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[129]));
+        .O(\data_out_reg[255]_0 [129]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[12]_INST_0 
-       (.I0(data_next[11]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[12]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[12]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [12]),
+        .I3(\m_axis_tdata[255] [12]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[12]));
+        .O(\data_out_reg[255]_0 [12]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[130]_INST_0 
-       (.I0(data_next[129]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[130]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[130]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [130]),
+        .I3(\m_axis_tdata[255] [130]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[130]));
+        .O(\data_out_reg[255]_0 [130]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[131]_INST_0 
-       (.I0(data_next[130]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[131]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[131]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [131]),
+        .I3(\m_axis_tdata[255] [131]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[131]));
+        .O(\data_out_reg[255]_0 [131]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[132]_INST_0 
-       (.I0(data_next[131]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[132]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[132]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [132]),
+        .I3(\m_axis_tdata[255] [132]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[132]));
+        .O(\data_out_reg[255]_0 [132]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[133]_INST_0 
-       (.I0(data_next[132]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[133]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[133]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [133]),
+        .I3(\m_axis_tdata[255] [133]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[133]));
+        .O(\data_out_reg[255]_0 [133]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[134]_INST_0 
-       (.I0(data_next[133]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[134]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[134]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [134]),
+        .I3(\m_axis_tdata[255] [134]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[134]));
+        .O(\data_out_reg[255]_0 [134]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[135]_INST_0 
-       (.I0(data_next[134]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[135]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[135]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [135]),
+        .I3(\m_axis_tdata[255] [135]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[135]));
+        .O(\data_out_reg[255]_0 [135]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[136]_INST_0 
-       (.I0(data_next[135]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[136]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[136]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [136]),
+        .I3(\m_axis_tdata[255] [136]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[136]));
+        .O(\data_out_reg[255]_0 [136]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[137]_INST_0 
-       (.I0(data_next[136]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[137]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[137]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [137]),
+        .I3(\m_axis_tdata[255] [137]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[137]));
+        .O(\data_out_reg[255]_0 [137]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[138]_INST_0 
-       (.I0(data_next[137]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[138]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[138]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [138]),
+        .I3(\m_axis_tdata[255] [138]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[138]));
+        .O(\data_out_reg[255]_0 [138]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[139]_INST_0 
-       (.I0(data_next[138]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[139]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[139]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [139]),
+        .I3(\m_axis_tdata[255] [139]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[139]));
+        .O(\data_out_reg[255]_0 [139]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[13]_INST_0 
-       (.I0(data_next[12]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[13]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[13]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [13]),
+        .I3(\m_axis_tdata[255] [13]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[13]));
+        .O(\data_out_reg[255]_0 [13]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[140]_INST_0 
-       (.I0(data_next[139]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[140]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[140]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [140]),
+        .I3(\m_axis_tdata[255] [140]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[140]));
+        .O(\data_out_reg[255]_0 [140]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[141]_INST_0 
-       (.I0(data_next[140]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[141]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[141]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [141]),
+        .I3(\m_axis_tdata[255] [141]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[141]));
+        .O(\data_out_reg[255]_0 [141]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[142]_INST_0 
-       (.I0(data_next[141]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[142]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[142]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [142]),
+        .I3(\m_axis_tdata[255] [142]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[142]));
+        .O(\data_out_reg[255]_0 [142]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[143]_INST_0 
-       (.I0(data_next[142]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[143]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[143]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [143]),
+        .I3(\m_axis_tdata[255] [143]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[143]));
+        .O(\data_out_reg[255]_0 [143]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[144]_INST_0 
-       (.I0(data_next[143]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[144]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[144]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [144]),
+        .I3(\m_axis_tdata[255] [144]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[144]));
+        .O(\data_out_reg[255]_0 [144]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[145]_INST_0 
-       (.I0(data_next[144]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[145]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[145]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [145]),
+        .I3(\m_axis_tdata[255] [145]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[145]));
+        .O(\data_out_reg[255]_0 [145]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[146]_INST_0 
-       (.I0(data_next[145]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[146]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[146]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [146]),
+        .I3(\m_axis_tdata[255] [146]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[146]));
+        .O(\data_out_reg[255]_0 [146]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[147]_INST_0 
-       (.I0(data_next[146]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[147]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[147]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [147]),
+        .I3(\m_axis_tdata[255] [147]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[147]));
+        .O(\data_out_reg[255]_0 [147]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[148]_INST_0 
-       (.I0(data_next[147]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[148]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[148]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [148]),
+        .I3(\m_axis_tdata[255] [148]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[148]));
+        .O(\data_out_reg[255]_0 [148]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[149]_INST_0 
-       (.I0(data_next[148]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[149]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[149]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [149]),
+        .I3(\m_axis_tdata[255] [149]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[149]));
+        .O(\data_out_reg[255]_0 [149]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[14]_INST_0 
-       (.I0(data_next[13]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[14]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[14]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [14]),
+        .I3(\m_axis_tdata[255] [14]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[14]));
+        .O(\data_out_reg[255]_0 [14]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[150]_INST_0 
-       (.I0(data_next[149]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[150]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[150]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [150]),
+        .I3(\m_axis_tdata[255] [150]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[150]));
+        .O(\data_out_reg[255]_0 [150]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[151]_INST_0 
-       (.I0(data_next[150]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[151]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[151]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [151]),
+        .I3(\m_axis_tdata[255] [151]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[151]));
+        .O(\data_out_reg[255]_0 [151]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[152]_INST_0 
-       (.I0(data_next[151]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[152]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[152]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [152]),
+        .I3(\m_axis_tdata[255] [152]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[152]));
+        .O(\data_out_reg[255]_0 [152]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[153]_INST_0 
-       (.I0(data_next[152]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[153]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[153]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [153]),
+        .I3(\m_axis_tdata[255] [153]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[153]));
+        .O(\data_out_reg[255]_0 [153]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[154]_INST_0 
-       (.I0(data_next[153]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[154]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[154]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [154]),
+        .I3(\m_axis_tdata[255] [154]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[154]));
+        .O(\data_out_reg[255]_0 [154]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[155]_INST_0 
-       (.I0(data_next[154]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[155]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[155]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [155]),
+        .I3(\m_axis_tdata[255] [155]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[155]));
+        .O(\data_out_reg[255]_0 [155]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[156]_INST_0 
-       (.I0(data_next[155]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[156]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[156]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [156]),
+        .I3(\m_axis_tdata[255] [156]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[156]));
+        .O(\data_out_reg[255]_0 [156]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[157]_INST_0 
-       (.I0(data_next[156]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[157]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[157]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [157]),
+        .I3(\m_axis_tdata[255] [157]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[157]));
+        .O(\data_out_reg[255]_0 [157]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[158]_INST_0 
-       (.I0(data_next[157]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[158]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[158]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [158]),
+        .I3(\m_axis_tdata[255] [158]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[158]));
+        .O(\data_out_reg[255]_0 [158]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[159]_INST_0 
-       (.I0(data_next[158]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[159]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[159]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [159]),
+        .I3(\m_axis_tdata[255] [159]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[159]));
+        .O(\data_out_reg[255]_0 [159]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[15]_INST_0 
-       (.I0(data_next[14]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[15]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[15]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [15]),
+        .I3(\m_axis_tdata[255] [15]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[15]));
+        .O(\data_out_reg[255]_0 [15]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[160]_INST_0 
-       (.I0(data_next[159]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[160]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[160]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [160]),
+        .I3(\m_axis_tdata[255] [160]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[160]));
+        .O(\data_out_reg[255]_0 [160]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[161]_INST_0 
-       (.I0(data_next[160]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[161]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[161]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [161]),
+        .I3(\m_axis_tdata[255] [161]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[161]));
+        .O(\data_out_reg[255]_0 [161]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[162]_INST_0 
-       (.I0(data_next[161]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[162]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[162]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [162]),
+        .I3(\m_axis_tdata[255] [162]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[162]));
+        .O(\data_out_reg[255]_0 [162]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[163]_INST_0 
-       (.I0(data_next[162]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[163]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[163]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [163]),
+        .I3(\m_axis_tdata[255] [163]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[163]));
+        .O(\data_out_reg[255]_0 [163]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[164]_INST_0 
-       (.I0(data_next[163]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[164]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[164]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [164]),
+        .I3(\m_axis_tdata[255] [164]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[164]));
+        .O(\data_out_reg[255]_0 [164]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[165]_INST_0 
-       (.I0(data_next[164]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[165]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[165]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [165]),
+        .I3(\m_axis_tdata[255] [165]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[165]));
+        .O(\data_out_reg[255]_0 [165]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[166]_INST_0 
-       (.I0(data_next[165]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[166]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[166]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [166]),
+        .I3(\m_axis_tdata[255] [166]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[166]));
+        .O(\data_out_reg[255]_0 [166]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[167]_INST_0 
-       (.I0(data_next[166]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[167]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[167]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [167]),
+        .I3(\m_axis_tdata[255] [167]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[167]));
+        .O(\data_out_reg[255]_0 [167]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[168]_INST_0 
-       (.I0(data_next[167]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[168]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[168]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [168]),
+        .I3(\m_axis_tdata[255] [168]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[168]));
+        .O(\data_out_reg[255]_0 [168]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[169]_INST_0 
-       (.I0(data_next[168]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[169]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[169]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [169]),
+        .I3(\m_axis_tdata[255] [169]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[169]));
+        .O(\data_out_reg[255]_0 [169]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[16]_INST_0 
-       (.I0(data_next[15]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[16]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[16]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [16]),
+        .I3(\m_axis_tdata[255] [16]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[16]));
+        .O(\data_out_reg[255]_0 [16]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[170]_INST_0 
-       (.I0(data_next[169]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[170]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[170]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [170]),
+        .I3(\m_axis_tdata[255] [170]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[170]));
+        .O(\data_out_reg[255]_0 [170]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[171]_INST_0 
-       (.I0(data_next[170]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[171]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[171]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [171]),
+        .I3(\m_axis_tdata[255] [171]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[171]));
+        .O(\data_out_reg[255]_0 [171]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[172]_INST_0 
-       (.I0(data_next[171]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[172]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[172]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [172]),
+        .I3(\m_axis_tdata[255] [172]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[172]));
+        .O(\data_out_reg[255]_0 [172]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[173]_INST_0 
-       (.I0(data_next[172]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[173]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[173]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [173]),
+        .I3(\m_axis_tdata[255] [173]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[173]));
+        .O(\data_out_reg[255]_0 [173]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[174]_INST_0 
-       (.I0(data_next[173]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[174]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[174]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [174]),
+        .I3(\m_axis_tdata[255] [174]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[174]));
+        .O(\data_out_reg[255]_0 [174]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[175]_INST_0 
-       (.I0(data_next[174]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[175]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[175]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [175]),
+        .I3(\m_axis_tdata[255] [175]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[175]));
+        .O(\data_out_reg[255]_0 [175]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[176]_INST_0 
-       (.I0(data_next[175]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[176]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[176]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [176]),
+        .I3(\m_axis_tdata[255] [176]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[176]));
+        .O(\data_out_reg[255]_0 [176]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[177]_INST_0 
-       (.I0(data_next[176]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[177]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[177]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [177]),
+        .I3(\m_axis_tdata[255] [177]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[177]));
+        .O(\data_out_reg[255]_0 [177]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[178]_INST_0 
-       (.I0(data_next[177]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[178]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[178]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [178]),
+        .I3(\m_axis_tdata[255] [178]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[178]));
+        .O(\data_out_reg[255]_0 [178]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[179]_INST_0 
-       (.I0(data_next[178]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[179]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[179]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [179]),
+        .I3(\m_axis_tdata[255] [179]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[179]));
+        .O(\data_out_reg[255]_0 [179]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[17]_INST_0 
-       (.I0(data_next[16]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[17]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[17]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [17]),
+        .I3(\m_axis_tdata[255] [17]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[17]));
+        .O(\data_out_reg[255]_0 [17]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[180]_INST_0 
-       (.I0(data_next[179]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[180]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[180]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [180]),
+        .I3(\m_axis_tdata[255] [180]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[180]));
+        .O(\data_out_reg[255]_0 [180]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[181]_INST_0 
-       (.I0(data_next[180]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[181]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[181]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [181]),
+        .I3(\m_axis_tdata[255] [181]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[181]));
+        .O(\data_out_reg[255]_0 [181]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[182]_INST_0 
-       (.I0(data_next[181]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[182]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[182]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [182]),
+        .I3(\m_axis_tdata[255] [182]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[182]));
+        .O(\data_out_reg[255]_0 [182]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[183]_INST_0 
-       (.I0(data_next[182]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[183]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[183]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [183]),
+        .I3(\m_axis_tdata[255] [183]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[183]));
+        .O(\data_out_reg[255]_0 [183]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[184]_INST_0 
-       (.I0(data_next[183]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[184]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[184]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [184]),
+        .I3(\m_axis_tdata[255] [184]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[184]));
+        .O(\data_out_reg[255]_0 [184]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[185]_INST_0 
-       (.I0(data_next[184]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[185]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[185]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [185]),
+        .I3(\m_axis_tdata[255] [185]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[185]));
+        .O(\data_out_reg[255]_0 [185]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[186]_INST_0 
-       (.I0(data_next[185]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[186]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[186]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [186]),
+        .I3(\m_axis_tdata[255] [186]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[186]));
+        .O(\data_out_reg[255]_0 [186]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[187]_INST_0 
-       (.I0(data_next[186]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[187]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[187]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [187]),
+        .I3(\m_axis_tdata[255] [187]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[187]));
+        .O(\data_out_reg[255]_0 [187]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[188]_INST_0 
-       (.I0(data_next[187]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[188]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[188]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [188]),
+        .I3(\m_axis_tdata[255] [188]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[188]));
+        .O(\data_out_reg[255]_0 [188]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[189]_INST_0 
-       (.I0(data_next[188]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[189]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[189]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [189]),
+        .I3(\m_axis_tdata[255] [189]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[189]));
+        .O(\data_out_reg[255]_0 [189]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[18]_INST_0 
-       (.I0(data_next[17]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[18]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[18]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [18]),
+        .I3(\m_axis_tdata[255] [18]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[18]));
+        .O(\data_out_reg[255]_0 [18]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[190]_INST_0 
-       (.I0(data_next[189]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[190]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[190]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [190]),
+        .I3(\m_axis_tdata[255] [190]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[190]));
+        .O(\data_out_reg[255]_0 [190]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[191]_INST_0 
-       (.I0(data_next[190]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[191]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[191]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [191]),
+        .I3(\m_axis_tdata[255] [191]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[191]));
+        .O(\data_out_reg[255]_0 [191]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[192]_INST_0 
-       (.I0(data_next[191]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[192]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[192]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [192]),
+        .I3(\m_axis_tdata[255] [192]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[192]));
+        .O(\data_out_reg[255]_0 [192]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[193]_INST_0 
-       (.I0(data_next[192]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[193]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[193]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [193]),
+        .I3(\m_axis_tdata[255] [193]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[193]));
+        .O(\data_out_reg[255]_0 [193]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[194]_INST_0 
-       (.I0(data_next[193]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[194]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[194]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [194]),
+        .I3(\m_axis_tdata[255] [194]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[194]));
+        .O(\data_out_reg[255]_0 [194]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[195]_INST_0 
-       (.I0(data_next[194]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[195]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[195]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [195]),
+        .I3(\m_axis_tdata[255] [195]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[195]));
+        .O(\data_out_reg[255]_0 [195]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[196]_INST_0 
-       (.I0(data_next[195]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[196]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[196]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [196]),
+        .I3(\m_axis_tdata[255] [196]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[196]));
+        .O(\data_out_reg[255]_0 [196]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[197]_INST_0 
-       (.I0(data_next[196]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[197]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[197]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [197]),
+        .I3(\m_axis_tdata[255] [197]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[197]));
+        .O(\data_out_reg[255]_0 [197]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[198]_INST_0 
-       (.I0(data_next[197]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[198]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[198]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [198]),
+        .I3(\m_axis_tdata[255] [198]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[198]));
+        .O(\data_out_reg[255]_0 [198]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[199]_INST_0 
-       (.I0(data_next[198]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[199]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[199]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [199]),
+        .I3(\m_axis_tdata[255] [199]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[199]));
+        .O(\data_out_reg[255]_0 [199]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[19]_INST_0 
-       (.I0(data_next[18]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[19]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[19]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [19]),
+        .I3(\m_axis_tdata[255] [19]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[19]));
+        .O(\data_out_reg[255]_0 [19]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[1]_INST_0 
-       (.I0(data_next[0]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[1]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[1]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [1]),
+        .I3(\m_axis_tdata[255] [1]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[1]));
+        .O(\data_out_reg[255]_0 [1]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[200]_INST_0 
-       (.I0(data_next[199]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[200]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[200]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [200]),
+        .I3(\m_axis_tdata[255] [200]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[200]));
+        .O(\data_out_reg[255]_0 [200]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[201]_INST_0 
-       (.I0(data_next[200]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[201]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[201]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [201]),
+        .I3(\m_axis_tdata[255] [201]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[201]));
+        .O(\data_out_reg[255]_0 [201]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[202]_INST_0 
-       (.I0(data_next[201]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[202]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[202]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [202]),
+        .I3(\m_axis_tdata[255] [202]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[202]));
+        .O(\data_out_reg[255]_0 [202]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[203]_INST_0 
-       (.I0(data_next[202]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[203]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[203]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [203]),
+        .I3(\m_axis_tdata[255] [203]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[203]));
+        .O(\data_out_reg[255]_0 [203]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[204]_INST_0 
-       (.I0(data_next[203]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[204]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[204]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [204]),
+        .I3(\m_axis_tdata[255] [204]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[204]));
+        .O(\data_out_reg[255]_0 [204]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[205]_INST_0 
-       (.I0(data_next[204]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[205]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[205]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [205]),
+        .I3(\m_axis_tdata[255] [205]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[205]));
+        .O(\data_out_reg[255]_0 [205]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[206]_INST_0 
-       (.I0(data_next[205]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[206]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[206]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [206]),
+        .I3(\m_axis_tdata[255] [206]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[206]));
+        .O(\data_out_reg[255]_0 [206]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[207]_INST_0 
-       (.I0(data_next[206]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[207]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[207]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [207]),
+        .I3(\m_axis_tdata[255] [207]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[207]));
+        .O(\data_out_reg[255]_0 [207]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[208]_INST_0 
-       (.I0(data_next[207]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[208]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[208]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [208]),
+        .I3(\m_axis_tdata[255] [208]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[208]));
+        .O(\data_out_reg[255]_0 [208]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[209]_INST_0 
-       (.I0(data_next[208]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[209]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[209]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [209]),
+        .I3(\m_axis_tdata[255] [209]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[209]));
+        .O(\data_out_reg[255]_0 [209]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[20]_INST_0 
-       (.I0(data_next[19]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[20]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[20]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [20]),
+        .I3(\m_axis_tdata[255] [20]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[20]));
+        .O(\data_out_reg[255]_0 [20]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[210]_INST_0 
-       (.I0(data_next[209]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[210]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[210]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [210]),
+        .I3(\m_axis_tdata[255] [210]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[210]));
+        .O(\data_out_reg[255]_0 [210]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[211]_INST_0 
-       (.I0(data_next[210]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[211]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[211]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [211]),
+        .I3(\m_axis_tdata[255] [211]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[211]));
+        .O(\data_out_reg[255]_0 [211]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[212]_INST_0 
-       (.I0(data_next[211]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[212]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[212]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [212]),
+        .I3(\m_axis_tdata[255] [212]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[212]));
+        .O(\data_out_reg[255]_0 [212]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[213]_INST_0 
-       (.I0(data_next[212]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[213]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[213]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [213]),
+        .I3(\m_axis_tdata[255] [213]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[213]));
+        .O(\data_out_reg[255]_0 [213]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[214]_INST_0 
-       (.I0(data_next[213]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[214]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[214]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [214]),
+        .I3(\m_axis_tdata[255] [214]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[214]));
+        .O(\data_out_reg[255]_0 [214]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[215]_INST_0 
-       (.I0(data_next[214]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[215]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[215]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [215]),
+        .I3(\m_axis_tdata[255] [215]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[215]));
+        .O(\data_out_reg[255]_0 [215]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[216]_INST_0 
-       (.I0(data_next[215]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[216]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[216]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [216]),
+        .I3(\m_axis_tdata[255] [216]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[216]));
+        .O(\data_out_reg[255]_0 [216]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[217]_INST_0 
-       (.I0(data_next[216]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[217]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[217]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [217]),
+        .I3(\m_axis_tdata[255] [217]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[217]));
+        .O(\data_out_reg[255]_0 [217]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[218]_INST_0 
-       (.I0(data_next[217]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[218]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[218]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [218]),
+        .I3(\m_axis_tdata[255] [218]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[218]));
+        .O(\data_out_reg[255]_0 [218]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[219]_INST_0 
-       (.I0(data_next[218]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[219]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[219]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [219]),
+        .I3(\m_axis_tdata[255] [219]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[219]));
+        .O(\data_out_reg[255]_0 [219]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[21]_INST_0 
-       (.I0(data_next[20]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[21]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[21]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [21]),
+        .I3(\m_axis_tdata[255] [21]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[21]));
+        .O(\data_out_reg[255]_0 [21]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[220]_INST_0 
-       (.I0(data_next[219]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[220]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[220]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [220]),
+        .I3(\m_axis_tdata[255] [220]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[220]));
+        .O(\data_out_reg[255]_0 [220]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[221]_INST_0 
-       (.I0(data_next[220]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[221]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[221]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [221]),
+        .I3(\m_axis_tdata[255] [221]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[221]));
+        .O(\data_out_reg[255]_0 [221]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[222]_INST_0 
-       (.I0(data_next[221]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[222]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[222]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [222]),
+        .I3(\m_axis_tdata[255] [222]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[222]));
+        .O(\data_out_reg[255]_0 [222]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[223]_INST_0 
-       (.I0(data_next[222]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[223]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[223]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [223]),
+        .I3(\m_axis_tdata[255] [223]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[223]));
+        .O(\data_out_reg[255]_0 [223]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[224]_INST_0 
-       (.I0(data_next[223]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[224]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[224]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [224]),
+        .I3(\m_axis_tdata[255] [224]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[224]));
+        .O(\data_out_reg[255]_0 [224]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[225]_INST_0 
-       (.I0(data_next[224]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[225]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[225]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [225]),
+        .I3(\m_axis_tdata[255] [225]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[225]));
+        .O(\data_out_reg[255]_0 [225]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[226]_INST_0 
-       (.I0(data_next[225]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[226]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[226]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [226]),
+        .I3(\m_axis_tdata[255] [226]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[226]));
+        .O(\data_out_reg[255]_0 [226]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[227]_INST_0 
-       (.I0(data_next[226]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[227]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[227]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [227]),
+        .I3(\m_axis_tdata[255] [227]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[227]));
+        .O(\data_out_reg[255]_0 [227]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[228]_INST_0 
-       (.I0(data_next[227]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[228]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[228]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [228]),
+        .I3(\m_axis_tdata[255] [228]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[228]));
+        .O(\data_out_reg[255]_0 [228]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[229]_INST_0 
-       (.I0(data_next[228]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[229]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[229]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [229]),
+        .I3(\m_axis_tdata[255] [229]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[229]));
+        .O(\data_out_reg[255]_0 [229]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[22]_INST_0 
-       (.I0(data_next[21]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[22]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[22]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [22]),
+        .I3(\m_axis_tdata[255] [22]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[22]));
+        .O(\data_out_reg[255]_0 [22]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[230]_INST_0 
-       (.I0(data_next[229]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[230]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[230]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [230]),
+        .I3(\m_axis_tdata[255] [230]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[230]));
+        .O(\data_out_reg[255]_0 [230]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[231]_INST_0 
-       (.I0(data_next[230]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[231]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[231]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [231]),
+        .I3(\m_axis_tdata[255] [231]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[231]));
+        .O(\data_out_reg[255]_0 [231]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[232]_INST_0 
-       (.I0(data_next[231]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[232]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[232]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [232]),
+        .I3(\m_axis_tdata[255] [232]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[232]));
+        .O(\data_out_reg[255]_0 [232]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[233]_INST_0 
-       (.I0(data_next[232]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[233]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[233]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [233]),
+        .I3(\m_axis_tdata[255] [233]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[233]));
+        .O(\data_out_reg[255]_0 [233]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[234]_INST_0 
-       (.I0(data_next[233]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[234]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[234]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [234]),
+        .I3(\m_axis_tdata[255] [234]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[234]));
+        .O(\data_out_reg[255]_0 [234]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[235]_INST_0 
-       (.I0(data_next[234]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[235]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[235]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [235]),
+        .I3(\m_axis_tdata[255] [235]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[235]));
+        .O(\data_out_reg[255]_0 [235]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[236]_INST_0 
-       (.I0(data_next[235]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[236]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[236]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [236]),
+        .I3(\m_axis_tdata[255] [236]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[236]));
+        .O(\data_out_reg[255]_0 [236]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[237]_INST_0 
-       (.I0(data_next[236]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[237]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[237]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [237]),
+        .I3(\m_axis_tdata[255] [237]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[237]));
+        .O(\data_out_reg[255]_0 [237]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[238]_INST_0 
-       (.I0(data_next[237]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[238]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[238]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [238]),
+        .I3(\m_axis_tdata[255] [238]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[238]));
+        .O(\data_out_reg[255]_0 [238]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[239]_INST_0 
-       (.I0(data_next[238]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[239]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[239]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [239]),
+        .I3(\m_axis_tdata[255] [239]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[239]));
+        .O(\data_out_reg[255]_0 [239]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[23]_INST_0 
-       (.I0(data_next[22]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[23]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[23]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [23]),
+        .I3(\m_axis_tdata[255] [23]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[23]));
+        .O(\data_out_reg[255]_0 [23]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[240]_INST_0 
-       (.I0(data_next[239]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[240]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[240]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [240]),
+        .I3(\m_axis_tdata[255] [240]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[240]));
+        .O(\data_out_reg[255]_0 [240]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[241]_INST_0 
-       (.I0(data_next[240]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[241]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[241]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [241]),
+        .I3(\m_axis_tdata[255] [241]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[241]));
+        .O(\data_out_reg[255]_0 [241]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[242]_INST_0 
-       (.I0(data_next[241]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[242]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[242]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [242]),
+        .I3(\m_axis_tdata[255] [242]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[242]));
+        .O(\data_out_reg[255]_0 [242]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[243]_INST_0 
-       (.I0(data_next[242]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[243]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[243]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [243]),
+        .I3(\m_axis_tdata[255] [243]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[243]));
+        .O(\data_out_reg[255]_0 [243]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[244]_INST_0 
-       (.I0(data_next[243]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[244]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[244]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [244]),
+        .I3(\m_axis_tdata[255] [244]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[244]));
+        .O(\data_out_reg[255]_0 [244]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[245]_INST_0 
-       (.I0(data_next[244]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[245]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[245]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [245]),
+        .I3(\m_axis_tdata[255] [245]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[245]));
+        .O(\data_out_reg[255]_0 [245]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[246]_INST_0 
-       (.I0(data_next[245]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[246]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[246]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [246]),
+        .I3(\m_axis_tdata[255] [246]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[246]));
+        .O(\data_out_reg[255]_0 [246]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[247]_INST_0 
-       (.I0(data_next[246]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[247]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[247]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [247]),
+        .I3(\m_axis_tdata[255] [247]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[247]));
+        .O(\data_out_reg[255]_0 [247]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[248]_INST_0 
-       (.I0(data_next[247]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[248]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[248]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [248]),
+        .I3(\m_axis_tdata[255] [248]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[248]));
+        .O(\data_out_reg[255]_0 [248]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[249]_INST_0 
-       (.I0(data_next[248]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[249]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[249]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [249]),
+        .I3(\m_axis_tdata[255] [249]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[249]));
+        .O(\data_out_reg[255]_0 [249]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[24]_INST_0 
-       (.I0(data_next[23]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[24]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[24]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [24]),
+        .I3(\m_axis_tdata[255] [24]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[24]));
+        .O(\data_out_reg[255]_0 [24]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[250]_INST_0 
-       (.I0(data_next[249]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[250]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[250]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [250]),
+        .I3(\m_axis_tdata[255] [250]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[250]));
+        .O(\data_out_reg[255]_0 [250]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[251]_INST_0 
-       (.I0(data_next[250]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[251]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[251]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [251]),
+        .I3(\m_axis_tdata[255] [251]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[251]));
+        .O(\data_out_reg[255]_0 [251]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[252]_INST_0 
-       (.I0(data_next[251]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[252]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[252]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [252]),
+        .I3(\m_axis_tdata[255] [252]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[252]));
+        .O(\data_out_reg[255]_0 [252]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[253]_INST_0 
-       (.I0(data_next[252]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[253]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[253]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [253]),
+        .I3(\m_axis_tdata[255] [253]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[253]));
+        .O(\data_out_reg[255]_0 [253]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[254]_INST_0 
-       (.I0(data_next[253]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[254]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[254]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [254]),
+        .I3(\m_axis_tdata[255] [254]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[254]));
+        .O(\data_out_reg[255]_0 [254]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[255]_INST_0 
-       (.I0(data_next[254]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[255]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[255]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [255]),
+        .I3(\m_axis_tdata[255] [255]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[255]));
+        .O(\data_out_reg[255]_0 [255]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[25]_INST_0 
-       (.I0(data_next[24]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[25]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[25]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [25]),
+        .I3(\m_axis_tdata[255] [25]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[25]));
+        .O(\data_out_reg[255]_0 [25]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[26]_INST_0 
-       (.I0(data_next[25]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[26]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[26]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [26]),
+        .I3(\m_axis_tdata[255] [26]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[26]));
+        .O(\data_out_reg[255]_0 [26]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[27]_INST_0 
-       (.I0(data_next[26]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[27]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[27]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [27]),
+        .I3(\m_axis_tdata[255] [27]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[27]));
+        .O(\data_out_reg[255]_0 [27]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[28]_INST_0 
-       (.I0(data_next[27]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[28]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[28]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [28]),
+        .I3(\m_axis_tdata[255] [28]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[28]));
+        .O(\data_out_reg[255]_0 [28]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[29]_INST_0 
-       (.I0(data_next[28]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[29]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[29]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [29]),
+        .I3(\m_axis_tdata[255] [29]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[29]));
+        .O(\data_out_reg[255]_0 [29]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[2]_INST_0 
-       (.I0(data_next[1]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[2]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[2]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [2]),
+        .I3(\m_axis_tdata[255] [2]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[2]));
+        .O(\data_out_reg[255]_0 [2]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[30]_INST_0 
-       (.I0(data_next[29]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[30]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[30]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [30]),
+        .I3(\m_axis_tdata[255] [30]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[30]));
+        .O(\data_out_reg[255]_0 [30]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[31]_INST_0 
-       (.I0(data_next[30]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[31]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[31]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [31]),
+        .I3(\m_axis_tdata[255] [31]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[31]));
+        .O(\data_out_reg[255]_0 [31]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[32]_INST_0 
-       (.I0(data_next[31]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[32]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[32]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [32]),
+        .I3(\m_axis_tdata[255] [32]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[32]));
+        .O(\data_out_reg[255]_0 [32]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[33]_INST_0 
-       (.I0(data_next[32]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[33]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[33]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [33]),
+        .I3(\m_axis_tdata[255] [33]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[33]));
+        .O(\data_out_reg[255]_0 [33]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[34]_INST_0 
-       (.I0(data_next[33]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[34]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[34]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [34]),
+        .I3(\m_axis_tdata[255] [34]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[34]));
+        .O(\data_out_reg[255]_0 [34]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[35]_INST_0 
-       (.I0(data_next[34]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[35]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[35]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [35]),
+        .I3(\m_axis_tdata[255] [35]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[35]));
+        .O(\data_out_reg[255]_0 [35]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[36]_INST_0 
-       (.I0(data_next[35]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[36]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[36]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [36]),
+        .I3(\m_axis_tdata[255] [36]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[36]));
+        .O(\data_out_reg[255]_0 [36]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[37]_INST_0 
-       (.I0(data_next[36]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[37]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[37]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [37]),
+        .I3(\m_axis_tdata[255] [37]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[37]));
+        .O(\data_out_reg[255]_0 [37]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[38]_INST_0 
-       (.I0(data_next[37]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[38]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[38]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [38]),
+        .I3(\m_axis_tdata[255] [38]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[38]));
+        .O(\data_out_reg[255]_0 [38]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[39]_INST_0 
-       (.I0(data_next[38]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[39]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[39]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [39]),
+        .I3(\m_axis_tdata[255] [39]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[39]));
+        .O(\data_out_reg[255]_0 [39]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[3]_INST_0 
-       (.I0(data_next[2]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[3]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[3]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [3]),
+        .I3(\m_axis_tdata[255] [3]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[3]));
+        .O(\data_out_reg[255]_0 [3]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[40]_INST_0 
-       (.I0(data_next[39]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[40]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[40]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [40]),
+        .I3(\m_axis_tdata[255] [40]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[40]));
+        .O(\data_out_reg[255]_0 [40]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[41]_INST_0 
-       (.I0(data_next[40]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[41]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[41]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [41]),
+        .I3(\m_axis_tdata[255] [41]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[41]));
+        .O(\data_out_reg[255]_0 [41]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[42]_INST_0 
-       (.I0(data_next[41]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[42]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[42]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [42]),
+        .I3(\m_axis_tdata[255] [42]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[42]));
+        .O(\data_out_reg[255]_0 [42]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[43]_INST_0 
-       (.I0(data_next[42]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[43]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[43]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [43]),
+        .I3(\m_axis_tdata[255] [43]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[43]));
+        .O(\data_out_reg[255]_0 [43]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[44]_INST_0 
-       (.I0(data_next[43]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[44]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[44]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [44]),
+        .I3(\m_axis_tdata[255] [44]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[44]));
+        .O(\data_out_reg[255]_0 [44]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[45]_INST_0 
-       (.I0(data_next[44]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[45]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[45]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [45]),
+        .I3(\m_axis_tdata[255] [45]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[45]));
+        .O(\data_out_reg[255]_0 [45]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[46]_INST_0 
-       (.I0(data_next[45]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[46]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[46]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [46]),
+        .I3(\m_axis_tdata[255] [46]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[46]));
+        .O(\data_out_reg[255]_0 [46]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[47]_INST_0 
-       (.I0(data_next[46]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[47]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[47]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [47]),
+        .I3(\m_axis_tdata[255] [47]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[47]));
+        .O(\data_out_reg[255]_0 [47]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[48]_INST_0 
-       (.I0(data_next[47]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[48]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[48]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [48]),
+        .I3(\m_axis_tdata[255] [48]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[48]));
+        .O(\data_out_reg[255]_0 [48]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[49]_INST_0 
-       (.I0(data_next[48]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[49]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[49]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [49]),
+        .I3(\m_axis_tdata[255] [49]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[49]));
+        .O(\data_out_reg[255]_0 [49]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[4]_INST_0 
-       (.I0(data_next[3]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[4]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[4]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [4]),
+        .I3(\m_axis_tdata[255] [4]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[4]));
+        .O(\data_out_reg[255]_0 [4]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[50]_INST_0 
-       (.I0(data_next[49]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[50]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[50]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [50]),
+        .I3(\m_axis_tdata[255] [50]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[50]));
+        .O(\data_out_reg[255]_0 [50]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[51]_INST_0 
-       (.I0(data_next[50]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[51]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[51]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [51]),
+        .I3(\m_axis_tdata[255] [51]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[51]));
+        .O(\data_out_reg[255]_0 [51]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[52]_INST_0 
-       (.I0(data_next[51]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[52]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[52]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [52]),
+        .I3(\m_axis_tdata[255] [52]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[52]));
+        .O(\data_out_reg[255]_0 [52]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[53]_INST_0 
-       (.I0(data_next[52]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[53]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[53]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [53]),
+        .I3(\m_axis_tdata[255] [53]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[53]));
+        .O(\data_out_reg[255]_0 [53]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[54]_INST_0 
-       (.I0(data_next[53]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[54]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[54]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [54]),
+        .I3(\m_axis_tdata[255] [54]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[54]));
+        .O(\data_out_reg[255]_0 [54]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[55]_INST_0 
-       (.I0(data_next[54]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[55]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[55]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [55]),
+        .I3(\m_axis_tdata[255] [55]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[55]));
+        .O(\data_out_reg[255]_0 [55]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[56]_INST_0 
-       (.I0(data_next[55]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[56]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[56]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [56]),
+        .I3(\m_axis_tdata[255] [56]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[56]));
+        .O(\data_out_reg[255]_0 [56]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[57]_INST_0 
-       (.I0(data_next[56]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[57]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[57]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [57]),
+        .I3(\m_axis_tdata[255] [57]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[57]));
+        .O(\data_out_reg[255]_0 [57]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[58]_INST_0 
-       (.I0(data_next[57]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[58]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[58]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [58]),
+        .I3(\m_axis_tdata[255] [58]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[58]));
+        .O(\data_out_reg[255]_0 [58]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[59]_INST_0 
-       (.I0(data_next[58]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[59]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[59]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [59]),
+        .I3(\m_axis_tdata[255] [59]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[59]));
+        .O(\data_out_reg[255]_0 [59]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[5]_INST_0 
-       (.I0(data_next[4]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[5]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[5]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [5]),
+        .I3(\m_axis_tdata[255] [5]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[5]));
+        .O(\data_out_reg[255]_0 [5]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[60]_INST_0 
-       (.I0(data_next[59]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[60]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[60]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [60]),
+        .I3(\m_axis_tdata[255] [60]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[60]));
+        .O(\data_out_reg[255]_0 [60]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[61]_INST_0 
-       (.I0(data_next[60]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[61]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[61]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [61]),
+        .I3(\m_axis_tdata[255] [61]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[61]));
+        .O(\data_out_reg[255]_0 [61]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[62]_INST_0 
-       (.I0(data_next[61]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[62]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[62]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [62]),
+        .I3(\m_axis_tdata[255] [62]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[62]));
+        .O(\data_out_reg[255]_0 [62]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[63]_INST_0 
-       (.I0(data_next[62]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[63]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[63]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [63]),
+        .I3(\m_axis_tdata[255] [63]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[63]));
+        .O(\data_out_reg[255]_0 [63]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[64]_INST_0 
-       (.I0(data_next[63]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[64]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[64]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [64]),
+        .I3(\m_axis_tdata[255] [64]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[64]));
+        .O(\data_out_reg[255]_0 [64]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[65]_INST_0 
-       (.I0(data_next[64]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[65]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[65]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [65]),
+        .I3(\m_axis_tdata[255] [65]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[65]));
+        .O(\data_out_reg[255]_0 [65]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[66]_INST_0 
-       (.I0(data_next[65]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[66]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[66]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [66]),
+        .I3(\m_axis_tdata[255] [66]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[66]));
+        .O(\data_out_reg[255]_0 [66]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[67]_INST_0 
-       (.I0(data_next[66]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[67]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[67]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [67]),
+        .I3(\m_axis_tdata[255] [67]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[67]));
+        .O(\data_out_reg[255]_0 [67]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[68]_INST_0 
-       (.I0(data_next[67]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[68]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[68]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [68]),
+        .I3(\m_axis_tdata[255] [68]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[68]));
+        .O(\data_out_reg[255]_0 [68]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[69]_INST_0 
-       (.I0(data_next[68]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[69]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[69]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [69]),
+        .I3(\m_axis_tdata[255] [69]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[69]));
+        .O(\data_out_reg[255]_0 [69]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[6]_INST_0 
-       (.I0(data_next[5]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[6]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[6]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [6]),
+        .I3(\m_axis_tdata[255] [6]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[6]));
+        .O(\data_out_reg[255]_0 [6]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[70]_INST_0 
-       (.I0(data_next[69]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[70]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[70]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [70]),
+        .I3(\m_axis_tdata[255] [70]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[70]));
+        .O(\data_out_reg[255]_0 [70]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[71]_INST_0 
-       (.I0(data_next[70]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[71]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[71]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [71]),
+        .I3(\m_axis_tdata[255] [71]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[71]));
+        .O(\data_out_reg[255]_0 [71]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[72]_INST_0 
-       (.I0(data_next[71]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[72]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[72]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [72]),
+        .I3(\m_axis_tdata[255] [72]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[72]));
+        .O(\data_out_reg[255]_0 [72]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[73]_INST_0 
-       (.I0(data_next[72]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[73]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[73]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [73]),
+        .I3(\m_axis_tdata[255] [73]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[73]));
+        .O(\data_out_reg[255]_0 [73]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[74]_INST_0 
-       (.I0(data_next[73]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[74]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[74]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [74]),
+        .I3(\m_axis_tdata[255] [74]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[74]));
+        .O(\data_out_reg[255]_0 [74]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[75]_INST_0 
-       (.I0(data_next[74]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[75]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[75]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [75]),
+        .I3(\m_axis_tdata[255] [75]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[75]));
+        .O(\data_out_reg[255]_0 [75]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[76]_INST_0 
-       (.I0(data_next[75]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[76]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[76]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [76]),
+        .I3(\m_axis_tdata[255] [76]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[76]));
+        .O(\data_out_reg[255]_0 [76]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[77]_INST_0 
-       (.I0(data_next[76]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[77]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[77]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [77]),
+        .I3(\m_axis_tdata[255] [77]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[77]));
+        .O(\data_out_reg[255]_0 [77]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[78]_INST_0 
-       (.I0(data_next[77]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[78]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[78]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [78]),
+        .I3(\m_axis_tdata[255] [78]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[78]));
+        .O(\data_out_reg[255]_0 [78]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[79]_INST_0 
-       (.I0(data_next[78]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[79]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[79]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [79]),
+        .I3(\m_axis_tdata[255] [79]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[79]));
+        .O(\data_out_reg[255]_0 [79]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[7]_INST_0 
-       (.I0(data_next[6]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[7]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[7]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [7]),
+        .I3(\m_axis_tdata[255] [7]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[7]));
+        .O(\data_out_reg[255]_0 [7]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[80]_INST_0 
-       (.I0(data_next[79]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[80]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[80]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [80]),
+        .I3(\m_axis_tdata[255] [80]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[80]));
+        .O(\data_out_reg[255]_0 [80]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[81]_INST_0 
-       (.I0(data_next[80]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[81]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[81]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [81]),
+        .I3(\m_axis_tdata[255] [81]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[81]));
+        .O(\data_out_reg[255]_0 [81]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[82]_INST_0 
-       (.I0(data_next[81]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[82]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[82]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [82]),
+        .I3(\m_axis_tdata[255] [82]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[82]));
+        .O(\data_out_reg[255]_0 [82]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[83]_INST_0 
-       (.I0(data_next[82]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[83]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[83]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [83]),
+        .I3(\m_axis_tdata[255] [83]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[83]));
+        .O(\data_out_reg[255]_0 [83]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[84]_INST_0 
-       (.I0(data_next[83]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[84]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[84]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [84]),
+        .I3(\m_axis_tdata[255] [84]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[84]));
+        .O(\data_out_reg[255]_0 [84]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[85]_INST_0 
-       (.I0(data_next[84]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[85]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[85]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [85]),
+        .I3(\m_axis_tdata[255] [85]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[85]));
+        .O(\data_out_reg[255]_0 [85]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[86]_INST_0 
-       (.I0(data_next[85]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[86]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[86]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [86]),
+        .I3(\m_axis_tdata[255] [86]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[86]));
+        .O(\data_out_reg[255]_0 [86]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[87]_INST_0 
-       (.I0(data_next[86]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[87]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[87]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [87]),
+        .I3(\m_axis_tdata[255] [87]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[87]));
+        .O(\data_out_reg[255]_0 [87]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[88]_INST_0 
-       (.I0(data_next[87]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[88]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[88]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [88]),
+        .I3(\m_axis_tdata[255] [88]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[88]));
+        .O(\data_out_reg[255]_0 [88]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[89]_INST_0 
-       (.I0(data_next[88]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[89]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[89]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [89]),
+        .I3(\m_axis_tdata[255] [89]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[89]));
+        .O(\data_out_reg[255]_0 [89]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[8]_INST_0 
-       (.I0(data_next[7]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[8]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[8]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [8]),
+        .I3(\m_axis_tdata[255] [8]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[8]));
+        .O(\data_out_reg[255]_0 [8]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[90]_INST_0 
-       (.I0(data_next[89]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[90]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[90]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [90]),
+        .I3(\m_axis_tdata[255] [90]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[90]));
+        .O(\data_out_reg[255]_0 [90]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[91]_INST_0 
-       (.I0(data_next[90]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[91]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[91]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [91]),
+        .I3(\m_axis_tdata[255] [91]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[91]));
+        .O(\data_out_reg[255]_0 [91]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[92]_INST_0 
-       (.I0(data_next[91]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[92]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[92]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [92]),
+        .I3(\m_axis_tdata[255] [92]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[92]));
+        .O(\data_out_reg[255]_0 [92]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[93]_INST_0 
-       (.I0(data_next[92]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[93]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[93]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [93]),
+        .I3(\m_axis_tdata[255] [93]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[93]));
+        .O(\data_out_reg[255]_0 [93]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[94]_INST_0 
-       (.I0(data_next[93]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[94]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[94]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [94]),
+        .I3(\m_axis_tdata[255] [94]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[94]));
+        .O(\data_out_reg[255]_0 [94]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[95]_INST_0 
-       (.I0(data_next[94]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[95]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[95]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [95]),
+        .I3(\m_axis_tdata[255] [95]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[95]));
+        .O(\data_out_reg[255]_0 [95]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[96]_INST_0 
-       (.I0(data_next[95]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[96]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[96]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [96]),
+        .I3(\m_axis_tdata[255] [96]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[96]));
+        .O(\data_out_reg[255]_0 [96]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[97]_INST_0 
-       (.I0(data_next[96]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[97]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[97]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [97]),
+        .I3(\m_axis_tdata[255] [97]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[97]));
+        .O(\data_out_reg[255]_0 [97]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[98]_INST_0 
-       (.I0(data_next[97]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[98]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[98]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [98]),
+        .I3(\m_axis_tdata[255] [98]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[98]));
+        .O(\data_out_reg[255]_0 [98]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[99]_INST_0 
-       (.I0(data_next[98]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[99]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[99]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [99]),
+        .I3(\m_axis_tdata[255] [99]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[99]));
+        .O(\data_out_reg[255]_0 [99]));
   LUT5 #(
-    .INIT(32'h0000F808)) 
-    \m_axis_0_tdata[9]_INST_0 
-       (.I0(data_next[8]),
-        .I1(is_locking),
+    .INIT(32'h0000F404)) 
+    \m_axis_tdata[9]_INST_0 
+       (.I0(m_axis_tdata_0_sn_1),
+        .I1(locking_waveform[9]),
         .I2(out),
-        .I3(\m_axis_0_tdata[255] [9]),
+        .I3(\m_axis_tdata[255] [9]),
         .I4(m_axis_tdata[2]),
-        .O(m_axis_0_tdata[9]));
+        .O(\data_out_reg[255]_0 [9]));
+  LUT2 #(
+    .INIT(4'h8)) 
+    state_i_1
+       (.I0(is_selected),
+        .I1(m_axis_tdata[0]),
+        .O(state_i_1_n_0));
   FDCE #(
     .INIT(1'b0)) 
     state_reg
        (.C(rf_clock),
         .CE(1'b1),
         .CLR(rf_resetn_0),
-        .D(m_axis_tdata[0]),
+        .D(state_i_1_n_0),
         .Q(state));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_2_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
-(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
-(* NotValidForBitStream *)
-module top_level_rfsoc_data_pipeline_0_0
-   (S_AXIS_0_tdata,
-    S_AXIS_0_tready,
-    S_AXIS_0_tvalid,
-    count_val_in_0,
-    ext_trigger_0,
-    gpio_in,
-    is_locking,
-    m_axis_0_tdata,
-    m_axis_0_tready,
-    m_axis_0_tvalid,
-    microblaze_clk,
-    microblaze_resetn,
-    pipeline_active,
+(* ORIG_REF_NAME = "shift_register" *) 
+module top_level_rfsoc_data_pipeline_0_0_shift_register__parameterized0
+   (S,
+    \count_reg[22] ,
+    DI,
+    \data_out_reg[31]_0 ,
+    \count_reg[31] ,
+    \data_out_reg[31]_1 ,
+    Q,
+    is_selected,
+    m_axis_tdata,
     rf_clock,
-    rf_resetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *) input [31:0]S_AXIS_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TREADY" *) output S_AXIS_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_0_tvalid;
-  input [31:0]count_val_in_0;
-  input ext_trigger_0;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [7:0]gpio_in;
-  input is_locking;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) output [255:0]m_axis_0_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *) input m_axis_0_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) output m_axis_0_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
-  output pipeline_active;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clock;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
+    \data_out_reg[0]_0 );
+  output [7:0]S;
+  output [7:0]\count_reg[22] ;
+  output [7:0]DI;
+  output [7:0]\data_out_reg[31]_0 ;
+  output [7:0]\count_reg[31] ;
+  output [2:0]\data_out_reg[31]_1 ;
+  input [31:0]Q;
+  input is_selected;
+  input [1:0]m_axis_tdata;
+  input rf_clock;
+  input \data_out_reg[0]_0 ;
 
-  wire [31:0]S_AXIS_0_tdata;
-  wire S_AXIS_0_tready;
-  wire S_AXIS_0_tvalid;
-  wire [31:0]count_val_in_0;
-  wire ext_trigger_0;
-  wire [7:0]gpio_in;
-  wire is_locking;
-  wire [255:0]m_axis_0_tdata;
-  wire m_axis_0_tready;
-  wire m_axis_0_tvalid;
-  wire microblaze_clk;
-  wire microblaze_resetn;
-  wire pipeline_active;
+  wire [7:0]DI;
+  wire [31:0]Q;
+  wire [7:0]S;
+  wire [7:0]\count_reg[22] ;
+  wire [7:0]\count_reg[31] ;
+  wire [31:0]count_val;
+  wire \data_out[31]_i_1__0_n_0 ;
+  wire \data_out_reg[0]_0 ;
+  wire [7:0]\data_out_reg[31]_0 ;
+  wire [2:0]\data_out_reg[31]_1 ;
+  wire is_selected;
+  wire [1:0]m_axis_tdata;
   wire rf_clock;
-  wire rf_resetn;
+  wire state;
+  wire state_i_1__1_n_0;
 
-  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
-  top_level_rfsoc_data_pipeline_0_0_rfsoc_data_pipeline inst
-       (.S_AXIS_0_tdata(S_AXIS_0_tdata),
-        .S_AXIS_0_tready(S_AXIS_0_tready),
-        .S_AXIS_0_tvalid(S_AXIS_0_tvalid),
-        .count_val_in_0(count_val_in_0),
-        .ext_trigger_0(ext_trigger_0),
-        .gpio_in(gpio_in),
-        .is_locking(is_locking),
-        .m_axis_0_tdata(m_axis_0_tdata),
-        .m_axis_0_tready(m_axis_0_tready),
-        .m_axis_0_tvalid(m_axis_0_tvalid),
-        .microblaze_clk(microblaze_clk),
-        .microblaze_resetn(microblaze_resetn),
-        .pipeline_active(pipeline_active),
-        .rf_clock(rf_clock),
-        .rf_resetn(rf_resetn));
+  LUT3 #(
+    .INIT(8'h08)) 
+    \data_out[31]_i_1__0 
+       (.I0(is_selected),
+        .I1(m_axis_tdata[1]),
+        .I2(state),
+        .O(\data_out[31]_i_1__0_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[0] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[1]),
+        .Q(count_val[0]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[10] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[11]),
+        .Q(count_val[10]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[11] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[12]),
+        .Q(count_val[11]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[12] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[13]),
+        .Q(count_val[12]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[13] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[14]),
+        .Q(count_val[13]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[14] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[15]),
+        .Q(count_val[14]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[15] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[16]),
+        .Q(count_val[15]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[16] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[17]),
+        .Q(count_val[16]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[17] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[18]),
+        .Q(count_val[17]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[18] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[19]),
+        .Q(count_val[18]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[19] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[20]),
+        .Q(count_val[19]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[1] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[2]),
+        .Q(count_val[1]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[20] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[21]),
+        .Q(count_val[20]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[21] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[22]),
+        .Q(count_val[21]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[22] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[23]),
+        .Q(count_val[22]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[23] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[24]),
+        .Q(count_val[23]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[24] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[25]),
+        .Q(count_val[24]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[25] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[26]),
+        .Q(count_val[25]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[26] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[27]),
+        .Q(count_val[26]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[27] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[28]),
+        .Q(count_val[27]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[28] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[29]),
+        .Q(count_val[28]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[29] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[30]),
+        .Q(count_val[29]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[2] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[3]),
+        .Q(count_val[2]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[30] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[31]),
+        .Q(count_val[30]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[31] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(m_axis_tdata[0]),
+        .Q(count_val[31]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[3] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[4]),
+        .Q(count_val[3]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[4] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[5]),
+        .Q(count_val[4]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[5] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[6]),
+        .Q(count_val[5]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[6] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[7]),
+        .Q(count_val[6]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[7] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[8]),
+        .Q(count_val[7]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[8] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[9]),
+        .Q(count_val[8]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[9] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1__0_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(count_val[10]),
+        .Q(count_val[9]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_10
+       (.I0(count_val[29]),
+        .I1(Q[29]),
+        .I2(count_val[28]),
+        .I3(Q[28]),
+        .O(\data_out_reg[31]_0 [6]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_11
+       (.I0(count_val[26]),
+        .I1(Q[26]),
+        .I2(count_val[27]),
+        .I3(Q[27]),
+        .O(\data_out_reg[31]_0 [5]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_12
+       (.I0(count_val[25]),
+        .I1(Q[25]),
+        .I2(count_val[24]),
+        .I3(Q[24]),
+        .O(\data_out_reg[31]_0 [4]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_13
+       (.I0(count_val[23]),
+        .I1(Q[23]),
+        .I2(count_val[22]),
+        .I3(Q[22]),
+        .O(\data_out_reg[31]_0 [3]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_14
+       (.I0(count_val[20]),
+        .I1(Q[20]),
+        .I2(count_val[21]),
+        .I3(Q[21]),
+        .O(\data_out_reg[31]_0 [2]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_15
+       (.I0(count_val[19]),
+        .I1(Q[19]),
+        .I2(count_val[18]),
+        .I3(Q[18]),
+        .O(\data_out_reg[31]_0 [1]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_16
+       (.I0(count_val[17]),
+        .I1(Q[17]),
+        .I2(count_val[16]),
+        .I3(Q[16]),
+        .O(\data_out_reg[31]_0 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_1__0
+       (.I0(Q[31]),
+        .I1(count_val[31]),
+        .I2(Q[30]),
+        .I3(count_val[30]),
+        .O(\count_reg[31] [7]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_1__1
+       (.I0(count_val[31]),
+        .I1(Q[31]),
+        .I2(count_val[30]),
+        .I3(Q[30]),
+        .O(\data_out_reg[31]_1 [2]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry__0_i_2__0
+       (.I0(Q[28]),
+        .I1(count_val[28]),
+        .I2(Q[29]),
+        .I3(count_val[29]),
+        .I4(count_val[27]),
+        .I5(Q[27]),
+        .O(\data_out_reg[31]_1 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_2__1
+       (.I0(Q[29]),
+        .I1(count_val[29]),
+        .I2(Q[28]),
+        .I3(count_val[28]),
+        .O(\count_reg[31] [6]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry__0_i_3__0
+       (.I0(Q[24]),
+        .I1(count_val[24]),
+        .I2(Q[25]),
+        .I3(count_val[25]),
+        .I4(count_val[26]),
+        .I5(Q[26]),
+        .O(\data_out_reg[31]_1 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_3__1
+       (.I0(Q[27]),
+        .I1(count_val[27]),
+        .I2(Q[26]),
+        .I3(count_val[26]),
+        .O(\count_reg[31] [5]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_4
+       (.I0(Q[25]),
+        .I1(count_val[25]),
+        .I2(Q[24]),
+        .I3(count_val[24]),
+        .O(\count_reg[31] [4]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_5
+       (.I0(Q[23]),
+        .I1(count_val[23]),
+        .I2(Q[22]),
+        .I3(count_val[22]),
+        .O(\count_reg[31] [3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_6
+       (.I0(Q[21]),
+        .I1(count_val[21]),
+        .I2(Q[20]),
+        .I3(count_val[20]),
+        .O(\count_reg[31] [2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_7
+       (.I0(Q[19]),
+        .I1(count_val[19]),
+        .I2(Q[18]),
+        .I3(count_val[18]),
+        .O(\count_reg[31] [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry__0_i_8
+       (.I0(Q[17]),
+        .I1(count_val[17]),
+        .I2(Q[16]),
+        .I3(count_val[16]),
+        .O(\count_reg[31] [0]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_9
+       (.I0(count_val[31]),
+        .I1(Q[31]),
+        .I2(count_val[30]),
+        .I3(Q[30]),
+        .O(\data_out_reg[31]_0 [7]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_10
+       (.I0(count_val[13]),
+        .I1(Q[13]),
+        .I2(count_val[12]),
+        .I3(Q[12]),
+        .O(S[6]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_11
+       (.I0(count_val[11]),
+        .I1(Q[11]),
+        .I2(count_val[10]),
+        .I3(Q[10]),
+        .O(S[5]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_12
+       (.I0(count_val[8]),
+        .I1(Q[8]),
+        .I2(count_val[9]),
+        .I3(Q[9]),
+        .O(S[4]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_13
+       (.I0(count_val[7]),
+        .I1(Q[7]),
+        .I2(count_val[6]),
+        .I3(Q[6]),
+        .O(S[3]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_14
+       (.I0(count_val[5]),
+        .I1(Q[5]),
+        .I2(count_val[4]),
+        .I3(Q[4]),
+        .O(S[2]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_15
+       (.I0(count_val[2]),
+        .I1(Q[2]),
+        .I2(count_val[3]),
+        .I3(Q[3]),
+        .O(S[1]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_16
+       (.I0(count_val[1]),
+        .I1(Q[1]),
+        .I2(count_val[0]),
+        .I3(Q[0]),
+        .O(S[0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_1__0
+       (.I0(Q[15]),
+        .I1(count_val[15]),
+        .I2(Q[14]),
+        .I3(count_val[14]),
+        .O(DI[7]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_1__1
+       (.I0(Q[22]),
+        .I1(count_val[22]),
+        .I2(Q[23]),
+        .I3(count_val[23]),
+        .I4(count_val[21]),
+        .I5(Q[21]),
+        .O(\count_reg[22] [7]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_2__0
+       (.I0(Q[13]),
+        .I1(count_val[13]),
+        .I2(Q[12]),
+        .I3(count_val[12]),
+        .O(DI[6]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_2__1
+       (.I0(Q[18]),
+        .I1(count_val[18]),
+        .I2(Q[19]),
+        .I3(count_val[19]),
+        .I4(count_val[20]),
+        .I5(Q[20]),
+        .O(\count_reg[22] [6]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_3__0
+       (.I0(Q[11]),
+        .I1(count_val[11]),
+        .I2(Q[10]),
+        .I3(count_val[10]),
+        .O(DI[5]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_3__1
+       (.I0(Q[16]),
+        .I1(count_val[16]),
+        .I2(Q[17]),
+        .I3(count_val[17]),
+        .I4(count_val[15]),
+        .I5(Q[15]),
+        .O(\count_reg[22] [5]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_4__0
+       (.I0(Q[9]),
+        .I1(count_val[9]),
+        .I2(Q[8]),
+        .I3(count_val[8]),
+        .O(DI[4]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_4__1
+       (.I0(Q[12]),
+        .I1(count_val[12]),
+        .I2(Q[13]),
+        .I3(count_val[13]),
+        .I4(count_val[14]),
+        .I5(Q[14]),
+        .O(\count_reg[22] [4]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_5__0
+       (.I0(Q[7]),
+        .I1(count_val[7]),
+        .I2(Q[6]),
+        .I3(count_val[6]),
+        .O(DI[3]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_5__1
+       (.I0(Q[10]),
+        .I1(count_val[10]),
+        .I2(Q[11]),
+        .I3(count_val[11]),
+        .I4(count_val[9]),
+        .I5(Q[9]),
+        .O(\count_reg[22] [3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_6__0
+       (.I0(Q[5]),
+        .I1(count_val[5]),
+        .I2(Q[4]),
+        .I3(count_val[4]),
+        .O(DI[2]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_6__1
+       (.I0(Q[6]),
+        .I1(count_val[6]),
+        .I2(Q[7]),
+        .I3(count_val[7]),
+        .I4(count_val[8]),
+        .I5(Q[8]),
+        .O(\count_reg[22] [2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_7__0
+       (.I0(Q[3]),
+        .I1(count_val[3]),
+        .I2(Q[2]),
+        .I3(count_val[2]),
+        .O(DI[1]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_7__1
+       (.I0(Q[4]),
+        .I1(count_val[4]),
+        .I2(Q[5]),
+        .I3(count_val[5]),
+        .I4(count_val[3]),
+        .I5(Q[3]),
+        .O(\count_reg[22] [1]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_8__0
+       (.I0(Q[0]),
+        .I1(count_val[0]),
+        .I2(Q[1]),
+        .I3(count_val[1]),
+        .I4(count_val[2]),
+        .I5(Q[2]),
+        .O(\count_reg[22] [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    i__carry_i_8__1
+       (.I0(Q[1]),
+        .I1(count_val[1]),
+        .I2(Q[0]),
+        .I3(count_val[0]),
+        .O(DI[0]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry_i_9
+       (.I0(count_val[14]),
+        .I1(Q[14]),
+        .I2(count_val[15]),
+        .I3(Q[15]),
+        .O(S[7]));
+  LUT2 #(
+    .INIT(4'h8)) 
+    state_i_1__1
+       (.I0(is_selected),
+        .I1(m_axis_tdata[1]),
+        .O(state_i_1__1_n_0));
+  FDCE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(rf_clock),
+        .CE(1'b1),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(state_i_1__1_n_0),
+        .Q(state));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
-(* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+(* ORIG_REF_NAME = "shift_register" *) 
+module top_level_rfsoc_data_pipeline_0_0_shift_register__parameterized0_0
+   (E,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ,
+    \FSM_sequential_state_reg[0] ,
+    \FSM_sequential_state_reg[0]_0 ,
+    D,
+    S,
+    \data_out_reg[15]_0 ,
+    DI,
+    \data_out_reg[31]_0 ,
+    \count_reg[31] ,
+    \data_out_reg[31]_1 ,
+    \count_reg[0] ,
+    rf_resetn,
+    m_axis_tdata,
+    \FSM_sequential_state_reg[0]_1 ,
+    Q,
+    CO,
+    \FSM_sequential_state_reg[0]_2 ,
+    O,
+    \count_reg[16] ,
+    \count_reg[24] ,
+    \count_reg[31]_0 ,
+    s_axis_tready2_carry__0,
+    \count_reg[31]_1 ,
+    \count_reg[31]_2 ,
+    is_selected,
+    rf_clock,
+    \data_out_reg[0]_0 );
+  output [0:0]E;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
+  output \FSM_sequential_state_reg[0] ;
+  output [0:0]\FSM_sequential_state_reg[0]_0 ;
+  output [30:0]D;
+  output [7:0]S;
+  output [7:0]\data_out_reg[15]_0 ;
+  output [7:0]DI;
+  output [7:0]\data_out_reg[31]_0 ;
+  output [7:0]\count_reg[31] ;
+  output [2:0]\data_out_reg[31]_1 ;
+  input \count_reg[0] ;
+  input rf_resetn;
+  input [2:0]m_axis_tdata;
+  input \FSM_sequential_state_reg[0]_1 ;
+  input [1:0]Q;
+  input [0:0]CO;
+  input [0:0]\FSM_sequential_state_reg[0]_2 ;
+  input [7:0]O;
+  input [7:0]\count_reg[16] ;
+  input [7:0]\count_reg[24] ;
+  input [6:0]\count_reg[31]_0 ;
+  input [31:0]s_axis_tready2_carry__0;
+  input [0:0]\count_reg[31]_1 ;
+  input [0:0]\count_reg[31]_2 ;
+  input is_selected;
+  input rf_clock;
+  input \data_out_reg[0]_0 ;
+
+  wire [0:0]CO;
+  wire [30:0]D;
+  wire [7:0]DI;
+  wire [0:0]E;
+  wire \FSM_sequential_state_reg[0] ;
+  wire [0:0]\FSM_sequential_state_reg[0]_0 ;
+  wire \FSM_sequential_state_reg[0]_1 ;
+  wire [0:0]\FSM_sequential_state_reg[0]_2 ;
+  wire [7:0]O;
+  wire [1:0]Q;
+  wire [7:0]S;
+  wire \count[31]_i_4_n_0 ;
+  wire \count_reg[0] ;
+  wire [7:0]\count_reg[16] ;
+  wire [7:0]\count_reg[24] ;
+  wire [7:0]\count_reg[31] ;
+  wire [6:0]\count_reg[31]_0 ;
+  wire [0:0]\count_reg[31]_1 ;
+  wire [0:0]\count_reg[31]_2 ;
+  wire \data_out[31]_i_1_n_0 ;
+  wire \data_out_reg[0]_0 ;
+  wire [7:0]\data_out_reg[15]_0 ;
+  wire [7:0]\data_out_reg[31]_0 ;
+  wire [2:0]\data_out_reg[31]_1 ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ;
+  wire is_selected;
+  wire [2:0]m_axis_tdata;
+  wire rf_clock;
+  wire rf_resetn;
+  wire [31:0]s_axis_tready2_carry__0;
+  wire state;
+  wire state_i_1__0_n_0;
+  wire [31:0]zeros;
+
+  LUT6 #(
+    .INIT(64'hFFFFFFFF00EF00E0)) 
+    \FSM_sequential_state[1]_i_1 
+       (.I0(\FSM_sequential_state_reg[0]_2 ),
+        .I1(CO),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(\FSM_sequential_state_reg[0]_1 ),
+        .I5(\count_reg[0] ),
+        .O(\FSM_sequential_state_reg[0]_0 ));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[10]_i_1 
+       (.I0(\count_reg[16] [1]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[9]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[11]_i_1 
+       (.I0(\count_reg[16] [2]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[10]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[12]_i_1 
+       (.I0(\count_reg[16] [3]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[11]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[13]_i_1 
+       (.I0(\count_reg[16] [4]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[12]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[14]_i_1 
+       (.I0(\count_reg[16] [5]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[13]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[15]_i_1 
+       (.I0(\count_reg[16] [6]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[14]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[16]_i_1 
+       (.I0(\count_reg[16] [7]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[15]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[17]_i_1 
+       (.I0(\count_reg[24] [0]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[16]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[18]_i_1 
+       (.I0(\count_reg[24] [1]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[17]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[19]_i_1 
+       (.I0(\count_reg[24] [2]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[18]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[1]_i_1 
+       (.I0(O[0]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[0]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[20]_i_1 
+       (.I0(\count_reg[24] [3]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[19]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[21]_i_1 
+       (.I0(\count_reg[24] [4]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[20]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[22]_i_1 
+       (.I0(\count_reg[24] [5]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[21]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[23]_i_1 
+       (.I0(\count_reg[24] [6]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[22]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[24]_i_1 
+       (.I0(\count_reg[24] [7]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[23]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[25]_i_1 
+       (.I0(\count_reg[31]_0 [0]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[24]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[26]_i_1 
+       (.I0(\count_reg[31]_0 [1]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[25]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[27]_i_1 
+       (.I0(\count_reg[31]_0 [2]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[26]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[28]_i_1 
+       (.I0(\count_reg[31]_0 [3]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[27]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[29]_i_1 
+       (.I0(\count_reg[31]_0 [4]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[28]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[2]_i_1 
+       (.I0(O[1]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[30]_i_1 
+       (.I0(\count_reg[31]_0 [5]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[29]));
+  LUT4 #(
+    .INIT(16'hEEFE)) 
+    \count[31]_i_1 
+       (.I0(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ),
+        .I1(\count_reg[0] ),
+        .I2(rf_resetn),
+        .I3(\count[31]_i_4_n_0 ),
+        .O(E));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[31]_i_2 
+       (.I0(\count_reg[31]_0 [6]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[30]));
+  LUT6 #(
+    .INIT(64'h0F040F040F040004)) 
+    \count[31]_i_3 
+       (.I0(m_axis_tdata[0]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(CO),
+        .I5(\FSM_sequential_state_reg[0]_2 ),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] ));
+  LUT6 #(
+    .INIT(64'hFFEFFFEFFFEFF0EF)) 
+    \count[31]_i_4 
+       (.I0(CO),
+        .I1(\FSM_sequential_state_reg[0]_2 ),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(\count_reg[31]_1 ),
+        .I5(\count_reg[31]_2 ),
+        .O(\count[31]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[3]_i_1 
+       (.I0(O[2]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[2]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[4]_i_1 
+       (.I0(O[3]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[3]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[5]_i_1 
+       (.I0(O[4]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[4]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[6]_i_1 
+       (.I0(O[5]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[5]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[7]_i_1 
+       (.I0(O[6]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[6]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[8]_i_1 
+       (.I0(O[7]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[7]));
+  LUT6 #(
+    .INIT(64'h880000A2AAAAAAAA)) 
+    \count[9]_i_1 
+       (.I0(\count_reg[16] [0]),
+        .I1(\FSM_sequential_state_reg[0]_1 ),
+        .I2(m_axis_tdata[0]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\count[31]_i_4_n_0 ),
+        .O(D[8]));
+  LUT3 #(
+    .INIT(8'h08)) 
+    \data_out[31]_i_1 
+       (.I0(is_selected),
+        .I1(m_axis_tdata[2]),
+        .I2(state),
+        .O(\data_out[31]_i_1_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[0] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[1]),
+        .Q(zeros[0]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[10] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[11]),
+        .Q(zeros[10]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[11] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[12]),
+        .Q(zeros[11]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[12] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[13]),
+        .Q(zeros[12]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[13] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[14]),
+        .Q(zeros[13]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[14] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[15]),
+        .Q(zeros[14]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[15] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[16]),
+        .Q(zeros[15]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[16] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[17]),
+        .Q(zeros[16]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[17] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[18]),
+        .Q(zeros[17]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[18] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[19]),
+        .Q(zeros[18]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[19] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[20]),
+        .Q(zeros[19]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[1] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[2]),
+        .Q(zeros[1]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[20] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[21]),
+        .Q(zeros[20]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[21] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[22]),
+        .Q(zeros[21]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[22] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[23]),
+        .Q(zeros[22]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[23] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[24]),
+        .Q(zeros[23]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[24] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[25]),
+        .Q(zeros[24]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[25] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[26]),
+        .Q(zeros[25]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[26] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[27]),
+        .Q(zeros[26]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[27] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[28]),
+        .Q(zeros[27]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[28] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[29]),
+        .Q(zeros[28]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[29] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[30]),
+        .Q(zeros[29]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[2] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[3]),
+        .Q(zeros[2]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[30] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[31]),
+        .Q(zeros[30]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[31] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(m_axis_tdata[1]),
+        .Q(zeros[31]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[3] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[4]),
+        .Q(zeros[3]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[4] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[5]),
+        .Q(zeros[4]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[5] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[6]),
+        .Q(zeros[5]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[6] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[7]),
+        .Q(zeros[6]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[7] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[8]),
+        .Q(zeros[7]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[8] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[9]),
+        .Q(zeros[8]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \data_out_reg[9] 
+       (.C(rf_clock),
+        .CE(\data_out[31]_i_1_n_0 ),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(zeros[10]),
+        .Q(zeros[9]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    i__carry__0_i_1
+       (.I0(zeros[31]),
+        .I1(s_axis_tready2_carry__0[31]),
+        .I2(zeros[30]),
+        .I3(s_axis_tready2_carry__0[30]),
+        .O(\data_out_reg[31]_1 [2]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry__0_i_2
+       (.I0(s_axis_tready2_carry__0[28]),
+        .I1(zeros[28]),
+        .I2(s_axis_tready2_carry__0[29]),
+        .I3(zeros[29]),
+        .I4(zeros[27]),
+        .I5(s_axis_tready2_carry__0[27]),
+        .O(\data_out_reg[31]_1 [1]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry__0_i_3
+       (.I0(s_axis_tready2_carry__0[24]),
+        .I1(zeros[24]),
+        .I2(s_axis_tready2_carry__0[25]),
+        .I3(zeros[25]),
+        .I4(zeros[26]),
+        .I5(s_axis_tready2_carry__0[26]),
+        .O(\data_out_reg[31]_1 [0]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_1
+       (.I0(s_axis_tready2_carry__0[22]),
+        .I1(zeros[22]),
+        .I2(s_axis_tready2_carry__0[23]),
+        .I3(zeros[23]),
+        .I4(zeros[21]),
+        .I5(s_axis_tready2_carry__0[21]),
+        .O(S[7]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_2
+       (.I0(s_axis_tready2_carry__0[18]),
+        .I1(zeros[18]),
+        .I2(s_axis_tready2_carry__0[19]),
+        .I3(zeros[19]),
+        .I4(zeros[20]),
+        .I5(s_axis_tready2_carry__0[20]),
+        .O(S[6]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_3
+       (.I0(s_axis_tready2_carry__0[16]),
+        .I1(zeros[16]),
+        .I2(s_axis_tready2_carry__0[17]),
+        .I3(zeros[17]),
+        .I4(zeros[15]),
+        .I5(s_axis_tready2_carry__0[15]),
+        .O(S[5]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_4
+       (.I0(s_axis_tready2_carry__0[12]),
+        .I1(zeros[12]),
+        .I2(s_axis_tready2_carry__0[13]),
+        .I3(zeros[13]),
+        .I4(zeros[14]),
+        .I5(s_axis_tready2_carry__0[14]),
+        .O(S[4]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_5
+       (.I0(s_axis_tready2_carry__0[10]),
+        .I1(zeros[10]),
+        .I2(s_axis_tready2_carry__0[11]),
+        .I3(zeros[11]),
+        .I4(zeros[9]),
+        .I5(s_axis_tready2_carry__0[9]),
+        .O(S[3]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_6
+       (.I0(s_axis_tready2_carry__0[6]),
+        .I1(zeros[6]),
+        .I2(s_axis_tready2_carry__0[7]),
+        .I3(zeros[7]),
+        .I4(zeros[8]),
+        .I5(s_axis_tready2_carry__0[8]),
+        .O(S[2]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_7
+       (.I0(s_axis_tready2_carry__0[4]),
+        .I1(zeros[4]),
+        .I2(s_axis_tready2_carry__0[5]),
+        .I3(zeros[5]),
+        .I4(zeros[3]),
+        .I5(s_axis_tready2_carry__0[3]),
+        .O(S[1]));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    i__carry_i_8
+       (.I0(s_axis_tready2_carry__0[0]),
+        .I1(zeros[0]),
+        .I2(s_axis_tready2_carry__0[1]),
+        .I3(zeros[1]),
+        .I4(zeros[2]),
+        .I5(s_axis_tready2_carry__0[2]),
+        .O(S[0]));
+  LUT6 #(
+    .INIT(64'h0000FCAA0000FC00)) 
+    mloop_axis_tvalid_i_2
+       (.I0(\FSM_sequential_state_reg[0]_1 ),
+        .I1(\FSM_sequential_state_reg[0]_2 ),
+        .I2(CO),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(m_axis_tdata[0]),
+        .O(\FSM_sequential_state_reg[0] ));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_1
+       (.I0(s_axis_tready2_carry__0[31]),
+        .I1(zeros[31]),
+        .I2(s_axis_tready2_carry__0[30]),
+        .I3(zeros[30]),
+        .O(\count_reg[31] [7]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_10
+       (.I0(zeros[29]),
+        .I1(s_axis_tready2_carry__0[29]),
+        .I2(zeros[28]),
+        .I3(s_axis_tready2_carry__0[28]),
+        .O(\data_out_reg[31]_0 [6]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_11
+       (.I0(zeros[27]),
+        .I1(s_axis_tready2_carry__0[27]),
+        .I2(zeros[26]),
+        .I3(s_axis_tready2_carry__0[26]),
+        .O(\data_out_reg[31]_0 [5]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_12
+       (.I0(zeros[25]),
+        .I1(s_axis_tready2_carry__0[25]),
+        .I2(zeros[24]),
+        .I3(s_axis_tready2_carry__0[24]),
+        .O(\data_out_reg[31]_0 [4]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_13
+       (.I0(zeros[23]),
+        .I1(s_axis_tready2_carry__0[23]),
+        .I2(zeros[22]),
+        .I3(s_axis_tready2_carry__0[22]),
+        .O(\data_out_reg[31]_0 [3]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_14
+       (.I0(zeros[21]),
+        .I1(s_axis_tready2_carry__0[21]),
+        .I2(zeros[20]),
+        .I3(s_axis_tready2_carry__0[20]),
+        .O(\data_out_reg[31]_0 [2]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_15
+       (.I0(zeros[19]),
+        .I1(s_axis_tready2_carry__0[19]),
+        .I2(zeros[18]),
+        .I3(s_axis_tready2_carry__0[18]),
+        .O(\data_out_reg[31]_0 [1]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_16
+       (.I0(zeros[17]),
+        .I1(s_axis_tready2_carry__0[17]),
+        .I2(zeros[16]),
+        .I3(s_axis_tready2_carry__0[16]),
+        .O(\data_out_reg[31]_0 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_2
+       (.I0(s_axis_tready2_carry__0[29]),
+        .I1(zeros[29]),
+        .I2(s_axis_tready2_carry__0[28]),
+        .I3(zeros[28]),
+        .O(\count_reg[31] [6]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_3
+       (.I0(s_axis_tready2_carry__0[27]),
+        .I1(zeros[27]),
+        .I2(s_axis_tready2_carry__0[26]),
+        .I3(zeros[26]),
+        .O(\count_reg[31] [5]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_4
+       (.I0(s_axis_tready2_carry__0[25]),
+        .I1(zeros[25]),
+        .I2(s_axis_tready2_carry__0[24]),
+        .I3(zeros[24]),
+        .O(\count_reg[31] [4]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_5
+       (.I0(s_axis_tready2_carry__0[23]),
+        .I1(zeros[23]),
+        .I2(s_axis_tready2_carry__0[22]),
+        .I3(zeros[22]),
+        .O(\count_reg[31] [3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_6
+       (.I0(s_axis_tready2_carry__0[21]),
+        .I1(zeros[21]),
+        .I2(s_axis_tready2_carry__0[20]),
+        .I3(zeros[20]),
+        .O(\count_reg[31] [2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_7
+       (.I0(s_axis_tready2_carry__0[19]),
+        .I1(zeros[19]),
+        .I2(s_axis_tready2_carry__0[18]),
+        .I3(zeros[18]),
+        .O(\count_reg[31] [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry__0_i_8
+       (.I0(s_axis_tready2_carry__0[17]),
+        .I1(zeros[17]),
+        .I2(s_axis_tready2_carry__0[16]),
+        .I3(zeros[16]),
+        .O(\count_reg[31] [0]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry__0_i_9
+       (.I0(zeros[31]),
+        .I1(s_axis_tready2_carry__0[31]),
+        .I2(zeros[30]),
+        .I3(s_axis_tready2_carry__0[30]),
+        .O(\data_out_reg[31]_0 [7]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_1
+       (.I0(s_axis_tready2_carry__0[15]),
+        .I1(zeros[15]),
+        .I2(s_axis_tready2_carry__0[14]),
+        .I3(zeros[14]),
+        .O(DI[7]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_10
+       (.I0(zeros[13]),
+        .I1(s_axis_tready2_carry__0[13]),
+        .I2(zeros[12]),
+        .I3(s_axis_tready2_carry__0[12]),
+        .O(\data_out_reg[15]_0 [6]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_11
+       (.I0(zeros[11]),
+        .I1(s_axis_tready2_carry__0[11]),
+        .I2(zeros[10]),
+        .I3(s_axis_tready2_carry__0[10]),
+        .O(\data_out_reg[15]_0 [5]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_12
+       (.I0(zeros[9]),
+        .I1(s_axis_tready2_carry__0[9]),
+        .I2(zeros[8]),
+        .I3(s_axis_tready2_carry__0[8]),
+        .O(\data_out_reg[15]_0 [4]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_13
+       (.I0(zeros[7]),
+        .I1(s_axis_tready2_carry__0[7]),
+        .I2(zeros[6]),
+        .I3(s_axis_tready2_carry__0[6]),
+        .O(\data_out_reg[15]_0 [3]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_14
+       (.I0(zeros[5]),
+        .I1(s_axis_tready2_carry__0[5]),
+        .I2(zeros[4]),
+        .I3(s_axis_tready2_carry__0[4]),
+        .O(\data_out_reg[15]_0 [2]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_15
+       (.I0(zeros[3]),
+        .I1(s_axis_tready2_carry__0[3]),
+        .I2(zeros[2]),
+        .I3(s_axis_tready2_carry__0[2]),
+        .O(\data_out_reg[15]_0 [1]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_16
+       (.I0(zeros[1]),
+        .I1(s_axis_tready2_carry__0[1]),
+        .I2(zeros[0]),
+        .I3(s_axis_tready2_carry__0[0]),
+        .O(\data_out_reg[15]_0 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_2
+       (.I0(s_axis_tready2_carry__0[13]),
+        .I1(zeros[13]),
+        .I2(s_axis_tready2_carry__0[12]),
+        .I3(zeros[12]),
+        .O(DI[6]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_3
+       (.I0(s_axis_tready2_carry__0[11]),
+        .I1(zeros[11]),
+        .I2(s_axis_tready2_carry__0[10]),
+        .I3(zeros[10]),
+        .O(DI[5]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_4
+       (.I0(s_axis_tready2_carry__0[9]),
+        .I1(zeros[9]),
+        .I2(s_axis_tready2_carry__0[8]),
+        .I3(zeros[8]),
+        .O(DI[4]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_5
+       (.I0(s_axis_tready2_carry__0[7]),
+        .I1(zeros[7]),
+        .I2(s_axis_tready2_carry__0[6]),
+        .I3(zeros[6]),
+        .O(DI[3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_6
+       (.I0(s_axis_tready2_carry__0[5]),
+        .I1(zeros[5]),
+        .I2(s_axis_tready2_carry__0[4]),
+        .I3(zeros[4]),
+        .O(DI[2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_7
+       (.I0(s_axis_tready2_carry__0[3]),
+        .I1(zeros[3]),
+        .I2(s_axis_tready2_carry__0[2]),
+        .I3(zeros[2]),
+        .O(DI[1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    s_axis_tready2_carry_i_8
+       (.I0(s_axis_tready2_carry__0[1]),
+        .I1(zeros[1]),
+        .I2(s_axis_tready2_carry__0[0]),
+        .I3(zeros[0]),
+        .O(DI[0]));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    s_axis_tready2_carry_i_9
+       (.I0(zeros[15]),
+        .I1(s_axis_tready2_carry__0[15]),
+        .I2(zeros[14]),
+        .I3(s_axis_tready2_carry__0[14]),
+        .O(\data_out_reg[15]_0 [7]));
+  LUT2 #(
+    .INIT(4'h8)) 
+    state_i_1__0
+       (.I0(is_selected),
+        .I1(m_axis_tdata[2]),
+        .O(state_i_1__0_n_0));
+  FDCE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(rf_clock),
+        .CE(1'b1),
+        .CLR(\data_out_reg[0]_0 ),
+        .D(state_i_1__0_n_0),
+        .Q(state));
+endmodule
+
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
+(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "GRAY" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -12935,8 +14238,8 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__parameterized1__2
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "4" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -13364,6 +14667,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst__parameterized0__9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -13434,7 +14738,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn_8
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn_9
    (Q,
     \count_value_i_reg[1]_0 ,
     rd_en,
@@ -13541,7 +14845,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0
   wire [1:0]\src_gray_ff_reg[4] ;
   wire [4:0]src_in_bin;
 
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT4 #(
     .INIT(16'h10EF)) 
     \count_value_i[0]_i_1__3 
@@ -13550,7 +14854,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0
         .I2(\count_value_i_reg[0]_0 [1]),
         .I3(Q[0]),
         .O(\count_value_i[0]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h02FFFD00)) 
     \count_value_i[1]_i_1__3 
@@ -13567,7 +14871,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -13576,7 +14880,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -13692,7 +14996,195 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_12
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_10
+   (src_in_bin,
+    Q,
+    E,
+    \src_gray_ff_reg[4] ,
+    \count_value_i_reg[0]_0 ,
+    rd_en,
+    ram_empty_i,
+    SR,
+    rd_clk);
+  output [4:0]src_in_bin;
+  output [3:0]Q;
+  output [0:0]E;
+  input [1:0]\src_gray_ff_reg[4] ;
+  input [1:0]\count_value_i_reg[0]_0 ;
+  input rd_en;
+  input ram_empty_i;
+  input [0:0]SR;
+  input rd_clk;
+
+  wire [0:0]E;
+  wire [3:0]Q;
+  wire [0:0]SR;
+  wire \count_value_i[0]_i_1__3_n_0 ;
+  wire \count_value_i[1]_i_1__3_n_0 ;
+  wire \count_value_i[2]_i_1__3_n_0 ;
+  wire \count_value_i[3]_i_1__3_n_0 ;
+  wire \count_value_i[4]_i_1__0_n_0 ;
+  wire [1:0]\count_value_i_reg[0]_0 ;
+  wire \count_value_i_reg_n_0_[4] ;
+  wire \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ;
+  wire ram_empty_i;
+  wire rd_clk;
+  wire rd_en;
+  wire [1:0]\src_gray_ff_reg[4] ;
+  wire [4:0]src_in_bin;
+
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT4 #(
+    .INIT(16'h10EF)) 
+    \count_value_i[0]_i_1__3 
+       (.I0(rd_en),
+        .I1(\count_value_i_reg[0]_0 [0]),
+        .I2(\count_value_i_reg[0]_0 [1]),
+        .I3(Q[0]),
+        .O(\count_value_i[0]_i_1__3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT5 #(
+    .INIT(32'h02FFFD00)) 
+    \count_value_i[1]_i_1__3 
+       (.I0(\count_value_i_reg[0]_0 [1]),
+        .I1(\count_value_i_reg[0]_0 [0]),
+        .I2(rd_en),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .O(\count_value_i[1]_i_1__3_n_0 ));
+  LUT3 #(
+    .INIT(8'h78)) 
+    \count_value_i[2]_i_1__3 
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
+        .O(\count_value_i[2]_i_1__3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \count_value_i[3]_i_1__3 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[3]),
+        .O(\count_value_i[3]_i_1__3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \count_value_i[4]_i_1__0 
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[3]),
+        .I4(\count_value_i_reg_n_0_[4] ),
+        .O(\count_value_i[4]_i_1__0_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[0] 
+       (.C(rd_clk),
+        .CE(E),
+        .D(\count_value_i[0]_i_1__3_n_0 ),
+        .Q(Q[0]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[1] 
+       (.C(rd_clk),
+        .CE(E),
+        .D(\count_value_i[1]_i_1__3_n_0 ),
+        .Q(Q[1]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[2] 
+       (.C(rd_clk),
+        .CE(E),
+        .D(\count_value_i[2]_i_1__3_n_0 ),
+        .Q(Q[2]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[3] 
+       (.C(rd_clk),
+        .CE(E),
+        .D(\count_value_i[3]_i_1__3_n_0 ),
+        .Q(Q[3]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[4] 
+       (.C(rd_clk),
+        .CE(E),
+        .D(\count_value_i[4]_i_1__0_n_0 ),
+        .Q(\count_value_i_reg_n_0_[4] ),
+        .R(SR));
+  LUT5 #(
+    .INIT(32'hEEE71118)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1 
+       (.I0(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ),
+        .I1(Q[3]),
+        .I2(\src_gray_ff_reg[4] [1]),
+        .I3(\src_gray_ff_reg[4] [0]),
+        .I4(\count_value_i_reg_n_0_[4] ),
+        .O(src_in_bin[4]));
+  LUT6 #(
+    .INIT(64'hF8FEFAFF07010500)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(\src_gray_ff_reg[4] [1]),
+        .I4(\src_gray_ff_reg[4] [0]),
+        .I5(Q[3]),
+        .O(src_in_bin[3]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT5 #(
+    .INIT(32'h8ECF7130)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(\src_gray_ff_reg[4] [1]),
+        .I3(\src_gray_ff_reg[4] [0]),
+        .I4(Q[2]),
+        .O(src_in_bin[2]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT4 #(
+    .INIT(16'h4BB4)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4 
+       (.I0(Q[0]),
+        .I1(\src_gray_ff_reg[4] [0]),
+        .I2(\src_gray_ff_reg[4] [1]),
+        .I3(Q[1]),
+        .O(src_in_bin[1]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5 
+       (.I0(Q[0]),
+        .I1(\src_gray_ff_reg[4] [0]),
+        .O(src_in_bin[0]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT5 #(
+    .INIT(32'hEEE6E2E0)) 
+    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
+       (.I0(\src_gray_ff_reg[4] [0]),
+        .I1(\src_gray_ff_reg[4] [1]),
+        .I2(Q[2]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'h00FD)) 
+    \gen_sdpram.xpm_memory_base_inst_i_2 
+       (.I0(\count_value_i_reg[0]_0 [1]),
+        .I1(\count_value_i_reg[0]_0 [0]),
+        .I2(rd_en),
+        .I3(ram_empty_i),
+        .O(E));
+endmodule
+
+(* ORIG_REF_NAME = "xpm_counter_updn" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_13
    (Q,
     wrst_busy,
     E,
@@ -13794,7 +15286,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_12
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_15
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_16
    (leaving_empty0,
     Q,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
@@ -13984,7 +15476,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_15
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_18
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_19
    (ram_empty_i0,
     Q,
     \gen_pntr_flags_cc.ram_empty_i_reg ,
@@ -14111,7 +15603,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_18
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_4
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_5
    (Q,
     wrst_busy,
     E,
@@ -14213,194 +15705,6 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_4
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_9
-   (src_in_bin,
-    Q,
-    E,
-    \src_gray_ff_reg[4] ,
-    \count_value_i_reg[0]_0 ,
-    rd_en,
-    ram_empty_i,
-    SR,
-    rd_clk);
-  output [4:0]src_in_bin;
-  output [3:0]Q;
-  output [0:0]E;
-  input [1:0]\src_gray_ff_reg[4] ;
-  input [1:0]\count_value_i_reg[0]_0 ;
-  input rd_en;
-  input ram_empty_i;
-  input [0:0]SR;
-  input rd_clk;
-
-  wire [0:0]E;
-  wire [3:0]Q;
-  wire [0:0]SR;
-  wire \count_value_i[0]_i_1__3_n_0 ;
-  wire \count_value_i[1]_i_1__3_n_0 ;
-  wire \count_value_i[2]_i_1__3_n_0 ;
-  wire \count_value_i[3]_i_1__3_n_0 ;
-  wire \count_value_i[4]_i_1__0_n_0 ;
-  wire [1:0]\count_value_i_reg[0]_0 ;
-  wire \count_value_i_reg_n_0_[4] ;
-  wire \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ;
-  wire ram_empty_i;
-  wire rd_clk;
-  wire rd_en;
-  wire [1:0]\src_gray_ff_reg[4] ;
-  wire [4:0]src_in_bin;
-
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT4 #(
-    .INIT(16'h10EF)) 
-    \count_value_i[0]_i_1__3 
-       (.I0(rd_en),
-        .I1(\count_value_i_reg[0]_0 [0]),
-        .I2(\count_value_i_reg[0]_0 [1]),
-        .I3(Q[0]),
-        .O(\count_value_i[0]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT5 #(
-    .INIT(32'h02FFFD00)) 
-    \count_value_i[1]_i_1__3 
-       (.I0(\count_value_i_reg[0]_0 [1]),
-        .I1(\count_value_i_reg[0]_0 [0]),
-        .I2(rd_en),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(\count_value_i[1]_i_1__3_n_0 ));
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count_value_i[2]_i_1__3 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count_value_i[3]_i_1__3 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\count_value_i[3]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[4]_i_1__0 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(\count_value_i_reg_n_0_[4] ),
-        .O(\count_value_i[4]_i_1__0_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_value_i_reg[0] 
-       (.C(rd_clk),
-        .CE(E),
-        .D(\count_value_i[0]_i_1__3_n_0 ),
-        .Q(Q[0]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_value_i_reg[1] 
-       (.C(rd_clk),
-        .CE(E),
-        .D(\count_value_i[1]_i_1__3_n_0 ),
-        .Q(Q[1]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_value_i_reg[2] 
-       (.C(rd_clk),
-        .CE(E),
-        .D(\count_value_i[2]_i_1__3_n_0 ),
-        .Q(Q[2]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_value_i_reg[3] 
-       (.C(rd_clk),
-        .CE(E),
-        .D(\count_value_i[3]_i_1__3_n_0 ),
-        .Q(Q[3]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_value_i_reg[4] 
-       (.C(rd_clk),
-        .CE(E),
-        .D(\count_value_i[4]_i_1__0_n_0 ),
-        .Q(\count_value_i_reg_n_0_[4] ),
-        .R(SR));
-  LUT5 #(
-    .INIT(32'hEEE71118)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_1 
-       (.I0(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ),
-        .I1(Q[3]),
-        .I2(\src_gray_ff_reg[4] [1]),
-        .I3(\src_gray_ff_reg[4] [0]),
-        .I4(\count_value_i_reg_n_0_[4] ),
-        .O(src_in_bin[4]));
-  LUT6 #(
-    .INIT(64'hF8FEFAFF07010500)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_2 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(\src_gray_ff_reg[4] [1]),
-        .I4(\src_gray_ff_reg[4] [0]),
-        .I5(Q[3]),
-        .O(src_in_bin[3]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT5 #(
-    .INIT(32'h8ECF7130)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(\src_gray_ff_reg[4] [1]),
-        .I3(\src_gray_ff_reg[4] [0]),
-        .I4(Q[2]),
-        .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT4 #(
-    .INIT(16'h4BB4)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_4 
-       (.I0(Q[0]),
-        .I1(\src_gray_ff_reg[4] [0]),
-        .I2(\src_gray_ff_reg[4] [1]),
-        .I3(Q[1]),
-        .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5 
-       (.I0(Q[0]),
-        .I1(\src_gray_ff_reg[4] [0]),
-        .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT5 #(
-    .INIT(32'hEEE6E2E0)) 
-    \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
-       (.I0(\src_gray_ff_reg[4] [0]),
-        .I1(\src_gray_ff_reg[4] [1]),
-        .I2(Q[2]),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(\gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'h00FD)) 
-    \gen_sdpram.xpm_memory_base_inst_i_2 
-       (.I0(\count_value_i_reg[0]_0 [1]),
-        .I1(\count_value_i_reg[0]_0 [0]),
-        .I2(rd_en),
-        .I3(ram_empty_i),
-        .O(E));
-endmodule
-
-(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -14495,7 +15799,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_10
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_11
    (Q,
     \count_value_i_reg[1]_0 ,
     rd_en,
@@ -14589,7 +15893,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_10
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_13
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_14
    (\count_value_i_reg[3]_0 ,
     Q,
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
@@ -14684,7 +15988,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_13
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_16
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_17
    (Q,
     \count_value_i_reg[1]_0 ,
     rd_en,
@@ -14778,7 +16082,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_16
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_19
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_20
    (Q,
     \count_value_i_reg[0]_0 ,
     E,
@@ -14860,7 +16164,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_19
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_5
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_6
    (\count_value_i_reg[3]_0 ,
     Q,
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
@@ -15050,7 +16354,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized2_14
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized2_15
    (\count_value_i_reg[3]_0 ,
     Q,
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
@@ -15483,7 +16787,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized3
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized3_0
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized3_1
    (ram_empty_i0,
     Q,
     \gen_pntr_flags_cc.ram_empty_i_reg ,
@@ -15974,7 +17278,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized4
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized4_1
+module top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized4_2
    (Q,
     ram_wr_en_i,
     wr_en,
@@ -16184,15 +17488,16 @@ endmodule
 (* CLOCKING_MODE = "common_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
 (* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* PACKET_FIFO = "false" *) (* PKT_SIZE_LT8 = "1'b0" *) 
-(* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_PKT_MODE = "0" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) (* TDEST_OFFSET = "42" *) 
-(* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) (* TID_WIDTH = "1" *) 
-(* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) (* TUSER_MAX_WIDTH = "4053" *) 
-(* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
+(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
+(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) 
+(* TDEST_OFFSET = "42" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) 
+(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) 
+(* TUSER_MAX_WIDTH = "4053" *) (* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) 
+(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
+(* XPM_MODULE = "TRUE" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis
    (s_aresetn,
     s_aclk,
@@ -16427,255 +17732,6 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis
         .O(xpm_fifo_base_inst_i_1_n_0));
 endmodule
 
-(* AXIS_DATA_WIDTH = "14" *) (* AXIS_FINAL_DATA_WIDTH = "14" *) (* CDC_SYNC_STAGES = "3" *) 
-(* CLOCKING_MODE = "independent_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
-(* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
-(* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
-(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
-(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "8" *) (* TDATA_WIDTH = "8" *) 
-(* TDEST_OFFSET = "12" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "11" *) 
-(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "10" *) (* TSTRB_OFFSET = "9" *) 
-(* TUSER_MAX_WIDTH = "4083" *) (* TUSER_OFFSET = "13" *) (* TUSER_WIDTH = "1" *) 
-(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
-(* XPM_MODULE = "TRUE" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized0
-   (s_aresetn,
-    s_aclk,
-    m_aclk,
-    s_axis_tvalid,
-    s_axis_tready,
-    s_axis_tdata,
-    s_axis_tstrb,
-    s_axis_tkeep,
-    s_axis_tlast,
-    s_axis_tid,
-    s_axis_tdest,
-    s_axis_tuser,
-    m_axis_tvalid,
-    m_axis_tready,
-    m_axis_tdata,
-    m_axis_tstrb,
-    m_axis_tkeep,
-    m_axis_tlast,
-    m_axis_tid,
-    m_axis_tdest,
-    m_axis_tuser,
-    prog_full_axis,
-    wr_data_count_axis,
-    almost_full_axis,
-    prog_empty_axis,
-    rd_data_count_axis,
-    almost_empty_axis,
-    injectsbiterr_axis,
-    injectdbiterr_axis,
-    sbiterr_axis,
-    dbiterr_axis);
-  input s_aresetn;
-  input s_aclk;
-  input m_aclk;
-  input s_axis_tvalid;
-  output s_axis_tready;
-  input [7:0]s_axis_tdata;
-  input [0:0]s_axis_tstrb;
-  input [0:0]s_axis_tkeep;
-  input s_axis_tlast;
-  input [0:0]s_axis_tid;
-  input [0:0]s_axis_tdest;
-  input [0:0]s_axis_tuser;
-  output m_axis_tvalid;
-  input m_axis_tready;
-  output [7:0]m_axis_tdata;
-  output [0:0]m_axis_tstrb;
-  output [0:0]m_axis_tkeep;
-  output m_axis_tlast;
-  output [0:0]m_axis_tid;
-  output [0:0]m_axis_tdest;
-  output [0:0]m_axis_tuser;
-  output prog_full_axis;
-  output [4:0]wr_data_count_axis;
-  output almost_full_axis;
-  output prog_empty_axis;
-  output [4:0]rd_data_count_axis;
-  output almost_empty_axis;
-  input injectsbiterr_axis;
-  input injectdbiterr_axis;
-  output sbiterr_axis;
-  output dbiterr_axis;
-
-  wire \<const0> ;
-  wire \gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ;
-  wire m_aclk;
-  wire [7:0]m_axis_tdata;
-  wire [0:0]m_axis_tdest;
-  wire [0:0]m_axis_tid;
-  wire [0:0]m_axis_tkeep;
-  wire m_axis_tlast;
-  wire m_axis_tready;
-  wire [0:0]m_axis_tstrb;
-  wire [0:0]m_axis_tuser;
-  wire m_axis_tvalid;
-  wire rst_axis;
-  wire s_aclk;
-  wire s_aresetn;
-  wire [7:0]s_axis_tdata;
-  wire [0:0]s_axis_tdest;
-  wire [0:0]s_axis_tid;
-  wire [0:0]s_axis_tkeep;
-  wire s_axis_tlast;
-  wire s_axis_tready;
-  wire [0:0]s_axis_tstrb;
-  wire [0:0]s_axis_tuser;
-  wire s_axis_tvalid;
-  wire xpm_fifo_base_inst_i_1_n_0;
-  wire NLW_xpm_fifo_base_inst_almost_empty_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_almost_full_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_empty_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_full_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_overflow_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_prog_empty_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_prog_full_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_rd_rst_busy_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_sbiterr_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_underflow_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED;
-  wire NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED;
-  wire [4:0]NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED;
-  wire [4:0]NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED;
-
-  assign almost_empty_axis = \<const0> ;
-  assign almost_full_axis = \<const0> ;
-  assign dbiterr_axis = \<const0> ;
-  assign prog_empty_axis = \<const0> ;
-  assign prog_full_axis = \<const0> ;
-  assign rd_data_count_axis[4] = \<const0> ;
-  assign rd_data_count_axis[3] = \<const0> ;
-  assign rd_data_count_axis[2] = \<const0> ;
-  assign rd_data_count_axis[1] = \<const0> ;
-  assign rd_data_count_axis[0] = \<const0> ;
-  assign sbiterr_axis = \<const0> ;
-  assign wr_data_count_axis[4] = \<const0> ;
-  assign wr_data_count_axis[3] = \<const0> ;
-  assign wr_data_count_axis[2] = \<const0> ;
-  assign wr_data_count_axis[1] = \<const0> ;
-  assign wr_data_count_axis[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  (* DEF_VAL = "1'b0" *) 
-  (* DEST_SYNC_FF = "3" *) 
-  (* INIT = "0" *) 
-  (* INIT_SYNC_FF = "1" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* VERSION = "0" *) 
-  (* XPM_CDC = "SYNC_RST" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst__parameterized0__6 \gaxis_rst_sync.xpm_cdc_sync_rst_inst 
-       (.dest_clk(s_aclk),
-        .dest_rst(rst_axis),
-        .src_rst(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1 
-       (.I0(s_aresetn),
-        .O(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
-  (* CDC_DEST_SYNC_FF = "3" *) 
-  (* COMMON_CLOCK = "0" *) 
-  (* DOUT_RESET_VALUE = "" *) 
-  (* ECC_MODE = "0" *) 
-  (* ENABLE_ECC = "0" *) 
-  (* EN_ADV_FEATURE = "16'b0001000000000000" *) 
-  (* EN_AE = "1'b0" *) 
-  (* EN_AF = "1'b0" *) 
-  (* EN_DVLD = "1'b1" *) 
-  (* EN_OF = "1'b0" *) 
-  (* EN_PE = "1'b0" *) 
-  (* EN_PF = "1'b0" *) 
-  (* EN_RDC = "1'b0" *) 
-  (* EN_UF = "1'b0" *) 
-  (* EN_WACK = "1'b0" *) 
-  (* EN_WDC = "1'b0" *) 
-  (* FG_EQ_ASYM_DOUT = "1'b0" *) 
-  (* FIFO_MEMORY_TYPE = "0" *) 
-  (* FIFO_MEM_TYPE = "0" *) 
-  (* FIFO_READ_DEPTH = "16" *) 
-  (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "224" *) 
-  (* FIFO_WRITE_DEPTH = "16" *) 
-  (* FULL_RESET_VALUE = "1" *) 
-  (* FULL_RST_VAL = "1'b1" *) 
-  (* PE_THRESH_ADJ = "3" *) 
-  (* PE_THRESH_MAX = "11" *) 
-  (* PE_THRESH_MIN = "5" *) 
-  (* PF_THRESH_ADJ = "9" *) 
-  (* PF_THRESH_MAX = "11" *) 
-  (* PF_THRESH_MIN = "8" *) 
-  (* PROG_EMPTY_THRESH = "5" *) 
-  (* PROG_FULL_THRESH = "11" *) 
-  (* RD_DATA_COUNT_WIDTH = "5" *) 
-  (* RD_DC_WIDTH_EXT = "5" *) 
-  (* RD_LATENCY = "2" *) 
-  (* RD_MODE = "1" *) 
-  (* RD_PNTR_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "14" *) 
-  (* READ_MODE = "1" *) 
-  (* RELATED_CLOCKS = "0" *) 
-  (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* USE_ADV_FEATURES = "825241648" *) 
-  (* VERSION = "0" *) 
-  (* WAKEUP_TIME = "0" *) 
-  (* WIDTH_RATIO = "1" *) 
-  (* WRITE_DATA_WIDTH = "14" *) 
-  (* WR_DATA_COUNT_WIDTH = "5" *) 
-  (* WR_DC_WIDTH_EXT = "5" *) 
-  (* WR_DEPTH_LOG = "4" *) 
-  (* WR_PNTR_WIDTH = "4" *) 
-  (* WR_RD_RATIO = "0" *) 
-  (* WR_WIDTH_LOG = "4" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  (* both_stages_valid = "3" *) 
-  (* invalid = "0" *) 
-  (* stage1_valid = "2" *) 
-  (* stage2_valid = "1" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized0 xpm_fifo_base_inst
-       (.almost_empty(NLW_xpm_fifo_base_inst_almost_empty_UNCONNECTED),
-        .almost_full(NLW_xpm_fifo_base_inst_almost_full_UNCONNECTED),
-        .data_valid(m_axis_tvalid),
-        .dbiterr(NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED),
-        .din({s_axis_tlast,s_axis_tuser,s_axis_tdest,s_axis_tid,s_axis_tkeep,s_axis_tstrb,s_axis_tdata}),
-        .dout({m_axis_tlast,m_axis_tuser,m_axis_tdest,m_axis_tid,m_axis_tkeep,m_axis_tstrb,m_axis_tdata}),
-        .empty(NLW_xpm_fifo_base_inst_empty_UNCONNECTED),
-        .full(NLW_xpm_fifo_base_inst_full_UNCONNECTED),
-        .full_n(s_axis_tready),
-        .injectdbiterr(1'b0),
-        .injectsbiterr(1'b0),
-        .overflow(NLW_xpm_fifo_base_inst_overflow_UNCONNECTED),
-        .prog_empty(NLW_xpm_fifo_base_inst_prog_empty_UNCONNECTED),
-        .prog_full(NLW_xpm_fifo_base_inst_prog_full_UNCONNECTED),
-        .rd_clk(m_aclk),
-        .rd_data_count(NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED[4:0]),
-        .rd_en(xpm_fifo_base_inst_i_1_n_0),
-        .rd_rst_busy(NLW_xpm_fifo_base_inst_rd_rst_busy_UNCONNECTED),
-        .rst(rst_axis),
-        .sbiterr(NLW_xpm_fifo_base_inst_sbiterr_UNCONNECTED),
-        .sleep(1'b0),
-        .underflow(NLW_xpm_fifo_base_inst_underflow_UNCONNECTED),
-        .wr_ack(NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED),
-        .wr_clk(s_aclk),
-        .wr_data_count(NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED[4:0]),
-        .wr_en(s_axis_tvalid),
-        .wr_rst_busy(NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED));
-  LUT2 #(
-    .INIT(4'h8)) 
-    xpm_fifo_base_inst_i_1
-       (.I0(m_axis_tvalid),
-        .I1(m_axis_tready),
-        .O(xpm_fifo_base_inst_i_1_n_0));
-endmodule
-
 (* AXIS_DATA_WIDTH = "324" *) (* AXIS_FINAL_DATA_WIDTH = "324" *) (* CDC_SYNC_STAGES = "3" *) 
 (* CLOCKING_MODE = "independent_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
@@ -16690,7 +17746,7 @@ endmodule
 (* TUSER_MAX_WIDTH = "3773" *) (* TUSER_OFFSET = "323" *) (* TUSER_WIDTH = "1" *) 
 (* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
 (* XPM_MODULE = "TRUE" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized0
    (s_aresetn,
     s_aclk,
     m_aclk,
@@ -16821,7 +17877,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1
   (* VERSION = "0" *) 
   (* XPM_CDC = "SYNC_RST" *) 
   (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst__parameterized0__9 \gaxis_rst_sync.xpm_cdc_sync_rst_inst 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst__parameterized0__6 \gaxis_rst_sync.xpm_cdc_sync_rst_inst 
        (.dest_clk(s_aclk),
         .dest_rst(rst_axis),
         .src_rst(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
@@ -16884,6 +17940,255 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1
   (* WR_PNTR_WIDTH = "4" *) 
   (* WR_RD_RATIO = "0" *) 
   (* WR_WIDTH_LOG = "9" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  (* both_stages_valid = "3" *) 
+  (* invalid = "0" *) 
+  (* stage1_valid = "2" *) 
+  (* stage2_valid = "1" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized0 xpm_fifo_base_inst
+       (.almost_empty(NLW_xpm_fifo_base_inst_almost_empty_UNCONNECTED),
+        .almost_full(NLW_xpm_fifo_base_inst_almost_full_UNCONNECTED),
+        .data_valid(m_axis_tvalid),
+        .dbiterr(NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED),
+        .din({s_axis_tlast,s_axis_tuser,s_axis_tdest,s_axis_tid,s_axis_tkeep,s_axis_tstrb,s_axis_tdata}),
+        .dout({m_axis_tlast,m_axis_tuser,m_axis_tdest,m_axis_tid,m_axis_tkeep,m_axis_tstrb,m_axis_tdata}),
+        .empty(NLW_xpm_fifo_base_inst_empty_UNCONNECTED),
+        .full(NLW_xpm_fifo_base_inst_full_UNCONNECTED),
+        .full_n(s_axis_tready),
+        .injectdbiterr(1'b0),
+        .injectsbiterr(1'b0),
+        .overflow(NLW_xpm_fifo_base_inst_overflow_UNCONNECTED),
+        .prog_empty(NLW_xpm_fifo_base_inst_prog_empty_UNCONNECTED),
+        .prog_full(NLW_xpm_fifo_base_inst_prog_full_UNCONNECTED),
+        .rd_clk(m_aclk),
+        .rd_data_count(NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED[4:0]),
+        .rd_en(xpm_fifo_base_inst_i_1_n_0),
+        .rd_rst_busy(NLW_xpm_fifo_base_inst_rd_rst_busy_UNCONNECTED),
+        .rst(rst_axis),
+        .sbiterr(NLW_xpm_fifo_base_inst_sbiterr_UNCONNECTED),
+        .sleep(1'b0),
+        .underflow(NLW_xpm_fifo_base_inst_underflow_UNCONNECTED),
+        .wr_ack(NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED),
+        .wr_clk(s_aclk),
+        .wr_data_count(NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED[4:0]),
+        .wr_en(s_axis_tvalid),
+        .wr_rst_busy(NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED));
+  LUT2 #(
+    .INIT(4'h8)) 
+    xpm_fifo_base_inst_i_1
+       (.I0(m_axis_tvalid),
+        .I1(m_axis_tready),
+        .O(xpm_fifo_base_inst_i_1_n_0));
+endmodule
+
+(* AXIS_DATA_WIDTH = "24" *) (* AXIS_FINAL_DATA_WIDTH = "24" *) (* CDC_SYNC_STAGES = "3" *) 
+(* CLOCKING_MODE = "independent_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
+(* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
+(* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
+(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
+(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "16" *) (* TDATA_WIDTH = "16" *) 
+(* TDEST_OFFSET = "22" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "21" *) 
+(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "20" *) (* TSTRB_OFFSET = "18" *) 
+(* TUSER_MAX_WIDTH = "4073" *) (* TUSER_OFFSET = "23" *) (* TUSER_WIDTH = "1" *) 
+(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
+(* XPM_MODULE = "TRUE" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_axis__parameterized1
+   (s_aresetn,
+    s_aclk,
+    m_aclk,
+    s_axis_tvalid,
+    s_axis_tready,
+    s_axis_tdata,
+    s_axis_tstrb,
+    s_axis_tkeep,
+    s_axis_tlast,
+    s_axis_tid,
+    s_axis_tdest,
+    s_axis_tuser,
+    m_axis_tvalid,
+    m_axis_tready,
+    m_axis_tdata,
+    m_axis_tstrb,
+    m_axis_tkeep,
+    m_axis_tlast,
+    m_axis_tid,
+    m_axis_tdest,
+    m_axis_tuser,
+    prog_full_axis,
+    wr_data_count_axis,
+    almost_full_axis,
+    prog_empty_axis,
+    rd_data_count_axis,
+    almost_empty_axis,
+    injectsbiterr_axis,
+    injectdbiterr_axis,
+    sbiterr_axis,
+    dbiterr_axis);
+  input s_aresetn;
+  input s_aclk;
+  input m_aclk;
+  input s_axis_tvalid;
+  output s_axis_tready;
+  input [15:0]s_axis_tdata;
+  input [1:0]s_axis_tstrb;
+  input [1:0]s_axis_tkeep;
+  input s_axis_tlast;
+  input [0:0]s_axis_tid;
+  input [0:0]s_axis_tdest;
+  input [0:0]s_axis_tuser;
+  output m_axis_tvalid;
+  input m_axis_tready;
+  output [15:0]m_axis_tdata;
+  output [1:0]m_axis_tstrb;
+  output [1:0]m_axis_tkeep;
+  output m_axis_tlast;
+  output [0:0]m_axis_tid;
+  output [0:0]m_axis_tdest;
+  output [0:0]m_axis_tuser;
+  output prog_full_axis;
+  output [4:0]wr_data_count_axis;
+  output almost_full_axis;
+  output prog_empty_axis;
+  output [4:0]rd_data_count_axis;
+  output almost_empty_axis;
+  input injectsbiterr_axis;
+  input injectdbiterr_axis;
+  output sbiterr_axis;
+  output dbiterr_axis;
+
+  wire \<const0> ;
+  wire \gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ;
+  wire m_aclk;
+  wire [15:0]m_axis_tdata;
+  wire [0:0]m_axis_tdest;
+  wire [0:0]m_axis_tid;
+  wire [1:0]m_axis_tkeep;
+  wire m_axis_tlast;
+  wire m_axis_tready;
+  wire [1:0]m_axis_tstrb;
+  wire [0:0]m_axis_tuser;
+  wire m_axis_tvalid;
+  wire rst_axis;
+  wire s_aclk;
+  wire s_aresetn;
+  wire [15:0]s_axis_tdata;
+  wire [0:0]s_axis_tdest;
+  wire [0:0]s_axis_tid;
+  wire [1:0]s_axis_tkeep;
+  wire s_axis_tlast;
+  wire s_axis_tready;
+  wire [1:0]s_axis_tstrb;
+  wire [0:0]s_axis_tuser;
+  wire s_axis_tvalid;
+  wire xpm_fifo_base_inst_i_1_n_0;
+  wire NLW_xpm_fifo_base_inst_almost_empty_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_almost_full_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_dbiterr_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_empty_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_full_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_overflow_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_prog_empty_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_prog_full_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_rd_rst_busy_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_sbiterr_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_underflow_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED;
+  wire NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED;
+  wire [4:0]NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED;
+  wire [4:0]NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED;
+
+  assign almost_empty_axis = \<const0> ;
+  assign almost_full_axis = \<const0> ;
+  assign dbiterr_axis = \<const0> ;
+  assign prog_empty_axis = \<const0> ;
+  assign prog_full_axis = \<const0> ;
+  assign rd_data_count_axis[4] = \<const0> ;
+  assign rd_data_count_axis[3] = \<const0> ;
+  assign rd_data_count_axis[2] = \<const0> ;
+  assign rd_data_count_axis[1] = \<const0> ;
+  assign rd_data_count_axis[0] = \<const0> ;
+  assign sbiterr_axis = \<const0> ;
+  assign wr_data_count_axis[4] = \<const0> ;
+  assign wr_data_count_axis[3] = \<const0> ;
+  assign wr_data_count_axis[2] = \<const0> ;
+  assign wr_data_count_axis[1] = \<const0> ;
+  assign wr_data_count_axis[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  (* DEF_VAL = "1'b0" *) 
+  (* DEST_SYNC_FF = "3" *) 
+  (* INIT = "0" *) 
+  (* INIT_SYNC_FF = "1" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "SYNC_RST" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_sync_rst__parameterized0__9 \gaxis_rst_sync.xpm_cdc_sync_rst_inst 
+       (.dest_clk(s_aclk),
+        .dest_rst(rst_axis),
+        .src_rst(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1 
+       (.I0(s_aresetn),
+        .O(\gaxis_rst_sync.xpm_cdc_sync_rst_inst_i_1_n_0 ));
+  (* CDC_DEST_SYNC_FF = "3" *) 
+  (* COMMON_CLOCK = "0" *) 
+  (* DOUT_RESET_VALUE = "" *) 
+  (* ECC_MODE = "0" *) 
+  (* ENABLE_ECC = "0" *) 
+  (* EN_ADV_FEATURE = "16'b0001000000000000" *) 
+  (* EN_AE = "1'b0" *) 
+  (* EN_AF = "1'b0" *) 
+  (* EN_DVLD = "1'b1" *) 
+  (* EN_OF = "1'b0" *) 
+  (* EN_PE = "1'b0" *) 
+  (* EN_PF = "1'b0" *) 
+  (* EN_RDC = "1'b0" *) 
+  (* EN_UF = "1'b0" *) 
+  (* EN_WACK = "1'b0" *) 
+  (* EN_WDC = "1'b0" *) 
+  (* FG_EQ_ASYM_DOUT = "1'b0" *) 
+  (* FIFO_MEMORY_TYPE = "0" *) 
+  (* FIFO_MEM_TYPE = "0" *) 
+  (* FIFO_READ_DEPTH = "16" *) 
+  (* FIFO_READ_LATENCY = "0" *) 
+  (* FIFO_SIZE = "384" *) 
+  (* FIFO_WRITE_DEPTH = "16" *) 
+  (* FULL_RESET_VALUE = "1" *) 
+  (* FULL_RST_VAL = "1'b1" *) 
+  (* PE_THRESH_ADJ = "3" *) 
+  (* PE_THRESH_MAX = "11" *) 
+  (* PE_THRESH_MIN = "5" *) 
+  (* PF_THRESH_ADJ = "9" *) 
+  (* PF_THRESH_MAX = "11" *) 
+  (* PF_THRESH_MIN = "8" *) 
+  (* PROG_EMPTY_THRESH = "5" *) 
+  (* PROG_FULL_THRESH = "11" *) 
+  (* RD_DATA_COUNT_WIDTH = "5" *) 
+  (* RD_DC_WIDTH_EXT = "5" *) 
+  (* RD_LATENCY = "2" *) 
+  (* RD_MODE = "1" *) 
+  (* RD_PNTR_WIDTH = "4" *) 
+  (* READ_DATA_WIDTH = "24" *) 
+  (* READ_MODE = "1" *) 
+  (* RELATED_CLOCKS = "0" *) 
+  (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* USE_ADV_FEATURES = "825241648" *) 
+  (* VERSION = "0" *) 
+  (* WAKEUP_TIME = "0" *) 
+  (* WIDTH_RATIO = "1" *) 
+  (* WRITE_DATA_WIDTH = "24" *) 
+  (* WR_DATA_COUNT_WIDTH = "5" *) 
+  (* WR_DC_WIDTH_EXT = "5" *) 
+  (* WR_DEPTH_LOG = "4" *) 
+  (* WR_PNTR_WIDTH = "4" *) 
+  (* WR_RD_RATIO = "0" *) 
+  (* WR_WIDTH_LOG = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
   (* both_stages_valid = "3" *) 
   (* invalid = "0" *) 
@@ -17248,18 +18553,18 @@ endmodule
 (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
 (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
 (* FIFO_SIZE = "704" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "11" *) 
-(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) (* PF_THRESH_MAX = "11" *) 
-(* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
-(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "44" *) 
-(* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "44" *) 
-(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) 
-(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
+(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
+(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) 
+(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
+(* READ_DATA_WIDTH = "44" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "44" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "6" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -17573,7 +18878,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base
         .I1(curr_fwft_state[1]),
         .I2(rd_en),
         .O(\gen_fwft.ram_regout_en ));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_15 rdp_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_16 rdp_inst
        (.\FSM_sequential_gen_fwft.curr_fwft_state_reg[1] (rdp_inst_n_6),
         .Q(rd_pntr_ext),
         .clr_full(clr_full),
@@ -17589,20 +18894,20 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base
         .ram_wr_en_i(ram_wr_en_i),
         .rd_en(rd_en),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_16 rdpp1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_17 rdpp1_inst
        (.E(rdp_inst_n_6),
         .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
         .\count_value_i_reg[0]_0 (xpm_fifo_rst_inst_n_1),
         .\count_value_i_reg[1]_0 (curr_fwft_state),
         .rd_en(rd_en),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_17 rst_d1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_18 rst_d1_inst
        (.Q(xpm_fifo_rst_inst_n_1),
         .clr_full(clr_full),
         .rst(rst),
         .rst_d1(rst_d1),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_18 wrp_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_19 wrp_inst
        (.E(ram_wr_en_i),
         .Q(wr_pntr_ext),
         .\count_value_i_reg[3]_0 (xpm_fifo_rst_inst_n_1),
@@ -17612,12 +18917,12 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base
         .ram_empty_i(ram_empty_i),
         .ram_empty_i0(ram_empty_i0),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_19 wrpp1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_20 wrpp1_inst
        (.E(ram_wr_en_i),
         .Q(count_value_i__0),
         .\count_value_i_reg[0]_0 (xpm_fifo_rst_inst_n_1),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst_20 xpm_fifo_rst_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst_21 xpm_fifo_rst_inst
        (.E(ram_wr_en_i),
         .Q(xpm_fifo_rst_inst_n_1),
         .\count_value_i_reg[3] (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0 ),
@@ -17625,500 +18930,6 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base
         .rst_d1(rst_d1),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-endmodule
-
-(* CDC_DEST_SYNC_FF = "3" *) (* COMMON_CLOCK = "0" *) (* DOUT_RESET_VALUE = "" *) 
-(* ECC_MODE = "0" *) (* ENABLE_ECC = "0" *) (* EN_ADV_FEATURE = "16'b0001000000000000" *) 
-(* EN_AE = "1'b0" *) (* EN_AF = "1'b0" *) (* EN_DVLD = "1'b1" *) 
-(* EN_OF = "1'b0" *) (* EN_PE = "1'b0" *) (* EN_PF = "1'b0" *) 
-(* EN_RDC = "1'b0" *) (* EN_UF = "1'b0" *) (* EN_WACK = "1'b0" *) 
-(* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
-(* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
-(* FIFO_SIZE = "224" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
-(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
-(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) 
-(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
-(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
-(* READ_DATA_WIDTH = "14" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
-(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
-(* WRITE_DATA_WIDTH = "14" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
-(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
-(* WR_WIDTH_LOG = "4" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
-(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized0
-   (sleep,
-    rst,
-    wr_clk,
-    wr_en,
-    din,
-    full,
-    full_n,
-    prog_full,
-    wr_data_count,
-    overflow,
-    wr_rst_busy,
-    almost_full,
-    wr_ack,
-    rd_clk,
-    rd_en,
-    dout,
-    empty,
-    prog_empty,
-    rd_data_count,
-    underflow,
-    rd_rst_busy,
-    almost_empty,
-    data_valid,
-    injectsbiterr,
-    injectdbiterr,
-    sbiterr,
-    dbiterr);
-  input sleep;
-  input rst;
-  input wr_clk;
-  input wr_en;
-  input [13:0]din;
-  output full;
-  output full_n;
-  output prog_full;
-  output [4:0]wr_data_count;
-  output overflow;
-  output wr_rst_busy;
-  output almost_full;
-  output wr_ack;
-  input rd_clk;
-  input rd_en;
-  output [13:0]dout;
-  output empty;
-  output prog_empty;
-  output [4:0]rd_data_count;
-  output underflow;
-  output rd_rst_busy;
-  output almost_empty;
-  output data_valid;
-  input injectsbiterr;
-  input injectdbiterr;
-  output sbiterr;
-  output dbiterr;
-
-  wire \<const0> ;
-  wire clr_full;
-  wire [1:0]count_value_i;
-  wire [1:0]curr_fwft_state;
-  wire data_valid;
-  wire data_valid_fwft1;
-  wire [13:0]din;
-  wire [13:0]dout;
-  wire full_n;
-  wire \gen_cdc_pntr.rpw_gray_reg_n_0 ;
-  wire \gen_cdc_pntr.rpw_gray_reg_n_1 ;
-  wire \gen_cdc_pntr.rpw_gray_reg_n_2 ;
-  wire \gen_fwft.count_rst ;
-  wire \gen_fwft.empty_fwft_i_reg_n_0 ;
-  wire \gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ;
-  wire \gen_fwft.ram_regout_en ;
-  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ;
-  wire [1:0]next_fwft_state__0;
-  wire ram_empty_i;
-  wire ram_empty_i0;
-  wire ram_wr_en_i;
-  wire rd_clk;
-  wire rd_en;
-  wire [3:0]rd_pntr_ext;
-  wire [3:0]rd_pntr_wr_cdc;
-  wire [4:0]rd_pntr_wr_cdc_dc;
-  wire rdp_inst_n_0;
-  wire rdp_inst_n_1;
-  wire rdp_inst_n_2;
-  wire rdp_inst_n_3;
-  wire rdp_inst_n_4;
-  wire rdp_inst_n_9;
-  wire rdpp1_inst_n_0;
-  wire rdpp1_inst_n_1;
-  wire rdpp1_inst_n_2;
-  wire rdpp1_inst_n_3;
-  wire rst;
-  wire rst_d1;
-  wire sleep;
-  wire wr_clk;
-  wire wr_en;
-  wire [4:0]wr_pntr_ext;
-  wire [3:0]wr_pntr_rd_cdc;
-  wire [4:0]wr_pntr_rd_cdc_dc;
-  wire wrpp1_inst_n_0;
-  wire wrpp1_inst_n_1;
-  wire wrpp1_inst_n_2;
-  wire wrpp1_inst_n_3;
-  wire wrpp2_inst_n_0;
-  wire wrpp2_inst_n_1;
-  wire wrpp2_inst_n_2;
-  wire wrpp2_inst_n_3;
-  wire wrst_busy;
-  wire xpm_fifo_rst_inst_n_0;
-  wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ;
-  wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
-  wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
-  wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
-  wire [13:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
-
-  assign almost_empty = \<const0> ;
-  assign almost_full = \<const0> ;
-  assign dbiterr = \<const0> ;
-  assign empty = \<const0> ;
-  assign full = \<const0> ;
-  assign overflow = \<const0> ;
-  assign prog_empty = \<const0> ;
-  assign prog_full = \<const0> ;
-  assign rd_data_count[4] = \<const0> ;
-  assign rd_data_count[3] = \<const0> ;
-  assign rd_data_count[2] = \<const0> ;
-  assign rd_data_count[1] = \<const0> ;
-  assign rd_data_count[0] = \<const0> ;
-  assign rd_rst_busy = \<const0> ;
-  assign sbiterr = \<const0> ;
-  assign underflow = \<const0> ;
-  assign wr_ack = \<const0> ;
-  assign wr_data_count[4] = \<const0> ;
-  assign wr_data_count[3] = \<const0> ;
-  assign wr_data_count[2] = \<const0> ;
-  assign wr_data_count[1] = \<const0> ;
-  assign wr_data_count[0] = \<const0> ;
-  assign wr_rst_busy = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT4 #(
-    .INIT(16'h6A85)) 
-    \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
-       (.I0(curr_fwft_state[0]),
-        .I1(rd_en),
-        .I2(curr_fwft_state[1]),
-        .I3(ram_empty_i),
-        .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT3 #(
-    .INIT(8'h7C)) 
-    \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
-       (.I0(rd_en),
-        .I1(curr_fwft_state[1]),
-        .I2(curr_fwft_state[0]),
-        .O(next_fwft_state__0[1]));
-  (* FSM_ENCODED_STATES = "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_gen_fwft.curr_fwft_state_reg[0] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(next_fwft_state__0[0]),
-        .Q(curr_fwft_state[0]),
-        .R(xpm_fifo_rst_inst_n_0));
-  (* FSM_ENCODED_STATES = "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_gen_fwft.curr_fwft_state_reg[1] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(next_fwft_state__0[1]),
-        .Q(curr_fwft_state[1]),
-        .R(xpm_fifo_rst_inst_n_0));
-  GND GND
-       (.G(\<const0> ));
-  (* DEST_SYNC_FF = "3" *) 
-  (* INIT_SYNC_FF = "1" *) 
-  (* REG_OUTPUT = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-  (* VERSION = "0" *) 
-  (* WIDTH = "5" *) 
-  (* XPM_CDC = "GRAY" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__parameterized1__2 \gen_cdc_pntr.rd_pntr_cdc_dc_inst 
-       (.dest_clk(wr_clk),
-        .dest_out_bin(rd_pntr_wr_cdc_dc),
-        .src_clk(rd_clk),
-        .src_in_bin({rdp_inst_n_0,rdp_inst_n_1,rdp_inst_n_2,rdp_inst_n_3,rdp_inst_n_4}));
-  (* DEST_SYNC_FF = "3" *) 
-  (* INIT_SYNC_FF = "1" *) 
-  (* REG_OUTPUT = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-  (* VERSION = "0" *) 
-  (* WIDTH = "4" *) 
-  (* XPM_CDC = "GRAY" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__5 \gen_cdc_pntr.rd_pntr_cdc_inst 
-       (.dest_clk(wr_clk),
-        .dest_out_bin(rd_pntr_wr_cdc),
-        .src_clk(rd_clk),
-        .src_in_bin(rd_pntr_ext));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_6 \gen_cdc_pntr.rpw_gray_reg 
-       (.D(rd_pntr_wr_cdc),
-        .E(ram_wr_en_i),
-        .Q({wrpp2_inst_n_1,wrpp2_inst_n_2,wrpp2_inst_n_3}),
-        .clr_full(clr_full),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_0 ),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (wrpp2_inst_n_0),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_1 (wrpp1_inst_n_0),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
-        .\reg_out_i_reg[3]_0 (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
-        .\syncstages_ff_reg[2] (\gen_cdc_pntr.rpw_gray_reg_n_1 ),
-        .wr_clk(wr_clk),
-        .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_7 \gen_cdc_pntr.wpr_gray_reg 
-       (.D(wr_pntr_rd_cdc),
-        .E(rdp_inst_n_9),
-        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
-        .SR(xpm_fifo_rst_inst_n_0),
-        .\gen_pf_ic_rc.ram_empty_i_reg (rd_pntr_ext),
-        .ram_empty_i0(ram_empty_i0),
-        .rd_clk(rd_clk));
-  (* DEST_SYNC_FF = "5" *) 
-  (* INIT_SYNC_FF = "1" *) 
-  (* REG_OUTPUT = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-  (* VERSION = "0" *) 
-  (* WIDTH = "5" *) 
-  (* XPM_CDC = "GRAY" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__parameterized0__2 \gen_cdc_pntr.wr_pntr_cdc_dc_inst 
-       (.dest_clk(rd_clk),
-        .dest_out_bin(wr_pntr_rd_cdc_dc),
-        .src_clk(wr_clk),
-        .src_in_bin(wr_pntr_ext));
-  (* DEST_SYNC_FF = "3" *) 
-  (* INIT_SYNC_FF = "1" *) 
-  (* REG_OUTPUT = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-  (* VERSION = "0" *) 
-  (* WIDTH = "4" *) 
-  (* XPM_CDC = "GRAY" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__4 \gen_cdc_pntr.wr_pntr_cdc_inst 
-       (.dest_clk(rd_clk),
-        .dest_out_bin(wr_pntr_rd_cdc),
-        .src_clk(wr_clk),
-        .src_in_bin(wr_pntr_ext[3:0]));
-  LUT4 #(
-    .INIT(16'hF380)) 
-    \gen_fwft.empty_fwft_i_i_1 
-       (.I0(rd_en),
-        .I1(curr_fwft_state[0]),
-        .I2(curr_fwft_state[1]),
-        .I3(\gen_fwft.empty_fwft_i_reg_n_0 ),
-        .O(data_valid_fwft1));
-  FDSE #(
-    .INIT(1'b1)) 
-    \gen_fwft.empty_fwft_i_reg 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(data_valid_fwft1),
-        .Q(\gen_fwft.empty_fwft_i_reg_n_0 ),
-        .S(xpm_fifo_rst_inst_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT4 #(
-    .INIT(16'h3575)) 
-    \gen_fwft.gdvld_fwft.data_valid_fwft_i_1 
-       (.I0(\gen_fwft.empty_fwft_i_reg_n_0 ),
-        .I1(curr_fwft_state[1]),
-        .I2(curr_fwft_state[0]),
-        .I3(rd_en),
-        .O(\gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_fwft.gdvld_fwft.data_valid_fwft_reg 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(\gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ),
-        .Q(data_valid),
-        .R(xpm_fifo_rst_inst_n_0));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn_8 \gen_fwft.rdpp1_inst 
-       (.Q(count_value_i),
-        .SR(\gen_fwft.count_rst ),
-        .\count_value_i_reg[1]_0 (curr_fwft_state),
-        .ram_empty_i(ram_empty_i),
-        .rd_clk(rd_clk),
-        .rd_en(rd_en));
-  FDSE #(
-    .INIT(1'b1)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(\gen_cdc_pntr.rpw_gray_reg_n_0 ),
-        .Q(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ),
-        .S(wrst_busy));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(\gen_cdc_pntr.rpw_gray_reg_n_1 ),
-        .Q(full_n),
-        .R(wrst_busy));
-  FDSE #(
-    .INIT(1'b1)) 
-    \gen_pf_ic_rc.ram_empty_i_reg 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(ram_empty_i0),
-        .Q(ram_empty_i),
-        .S(xpm_fifo_rst_inst_n_0));
-  (* ADDR_WIDTH_A = "4" *) 
-  (* ADDR_WIDTH_B = "4" *) 
-  (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "14" *) 
-  (* BYTE_WRITE_WIDTH_B = "14" *) 
-  (* CASCADE_HEIGHT = "0" *) 
-  (* CLOCKING_MODE = "1" *) 
-  (* ECC_MODE = "0" *) 
-  (* MAX_NUM_CHAR = "0" *) 
-  (* MEMORY_INIT_FILE = "none" *) 
-  (* MEMORY_INIT_PARAM = "" *) 
-  (* MEMORY_OPTIMIZATION = "true" *) 
-  (* MEMORY_PRIMITIVE = "0" *) 
-  (* MEMORY_SIZE = "224" *) 
-  (* MEMORY_TYPE = "1" *) 
-  (* MESSAGE_CONTROL = "0" *) 
-  (* NUM_CHAR_LOC = "0" *) 
-  (* P_ECC_MODE = "no_ecc" *) 
-  (* P_ENABLE_BYTE_WRITE_A = "0" *) 
-  (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-  (* P_MAX_DEPTH_DATA = "16" *) 
-  (* P_MEMORY_OPT = "yes" *) 
-  (* P_MEMORY_PRIMITIVE = "auto" *) 
-  (* P_MIN_WIDTH_DATA = "14" *) 
-  (* P_MIN_WIDTH_DATA_A = "14" *) 
-  (* P_MIN_WIDTH_DATA_B = "14" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "14" *) 
-  (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "14" *) 
-  (* P_NUM_COLS_WRITE_A = "1" *) 
-  (* P_NUM_COLS_WRITE_B = "1" *) 
-  (* P_NUM_ROWS_READ_A = "1" *) 
-  (* P_NUM_ROWS_READ_B = "1" *) 
-  (* P_NUM_ROWS_WRITE_A = "1" *) 
-  (* P_NUM_ROWS_WRITE_B = "1" *) 
-  (* P_SDP_WRITE_MODE = "yes" *) 
-  (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
-  (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-  (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-  (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
-  (* P_WIDTH_ADDR_READ_A = "4" *) 
-  (* P_WIDTH_ADDR_READ_B = "4" *) 
-  (* P_WIDTH_ADDR_WRITE_A = "4" *) 
-  (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "14" *) 
-  (* P_WIDTH_COL_WRITE_B = "14" *) 
-  (* READ_DATA_WIDTH_A = "14" *) 
-  (* READ_DATA_WIDTH_B = "14" *) 
-  (* READ_LATENCY_A = "2" *) 
-  (* READ_LATENCY_B = "2" *) 
-  (* READ_RESET_VALUE_A = "0" *) 
-  (* READ_RESET_VALUE_B = "" *) 
-  (* RST_MODE_A = "SYNC" *) 
-  (* RST_MODE_B = "SYNC" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-  (* USE_MEM_INIT = "0" *) 
-  (* VERSION = "0" *) 
-  (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "14" *) 
-  (* WRITE_DATA_WIDTH_B = "14" *) 
-  (* WRITE_MODE_A = "2" *) 
-  (* WRITE_MODE_B = "2" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "16" *) 
-  (* rstb_loop_iter = "16" *) 
-  top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized0 \gen_sdpram.xpm_memory_base_inst 
-       (.addra(wr_pntr_ext[3:0]),
-        .addrb(rd_pntr_ext),
-        .clka(wr_clk),
-        .clkb(rd_clk),
-        .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
-        .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
-        .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [13:0]),
-        .doutb(dout),
-        .ena(1'b0),
-        .enb(rdp_inst_n_9),
-        .injectdbiterra(1'b0),
-        .injectdbiterrb(1'b0),
-        .injectsbiterra(1'b0),
-        .injectsbiterrb(1'b0),
-        .regcea(1'b0),
-        .regceb(\gen_fwft.ram_regout_en ),
-        .rsta(1'b0),
-        .rstb(xpm_fifo_rst_inst_n_0),
-        .sbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ),
-        .sbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ),
-        .sleep(sleep),
-        .wea(ram_wr_en_i),
-        .web(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT3 #(
-    .INIT(8'h62)) 
-    \gen_sdpram.xpm_memory_base_inst_i_3 
-       (.I0(curr_fwft_state[0]),
-        .I1(curr_fwft_state[1]),
-        .I2(rd_en),
-        .O(\gen_fwft.ram_regout_en ));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_9 rdp_inst
-       (.E(rdp_inst_n_9),
-        .Q(rd_pntr_ext),
-        .SR(xpm_fifo_rst_inst_n_0),
-        .\count_value_i_reg[0]_0 (curr_fwft_state),
-        .ram_empty_i(ram_empty_i),
-        .rd_clk(rd_clk),
-        .rd_en(rd_en),
-        .\src_gray_ff_reg[4] (count_value_i),
-        .src_in_bin({rdp_inst_n_0,rdp_inst_n_1,rdp_inst_n_2,rdp_inst_n_3,rdp_inst_n_4}));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_10 rdpp1_inst
-       (.E(rdp_inst_n_9),
-        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
-        .SR(xpm_fifo_rst_inst_n_0),
-        .\count_value_i_reg[1]_0 (curr_fwft_state),
-        .rd_clk(rd_clk),
-        .rd_en(rd_en));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_11 rst_d1_inst
-       (.clr_full(clr_full),
-        .rst(rst),
-        .rst_d1(rst_d1),
-        .wr_clk(wr_clk),
-        .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_12 wrp_inst
-       (.E(ram_wr_en_i),
-        .Q(wr_pntr_ext),
-        .wr_clk(wr_clk),
-        .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_13 wrpp1_inst
-       (.E(ram_wr_en_i),
-        .Q({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
-        .\count_value_i_reg[3]_0 (wrpp1_inst_n_0),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
-        .wr_clk(wr_clk),
-        .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized2_14 wrpp2_inst
-       (.E(ram_wr_en_i),
-        .Q({wrpp2_inst_n_1,wrpp2_inst_n_2,wrpp2_inst_n_3}),
-        .\count_value_i_reg[3]_0 (wrpp2_inst_n_0),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
-        .wr_clk(wr_clk),
-        .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst__parameterized0__xdcDup__1 xpm_fifo_rst_inst
-       (.E(ram_wr_en_i),
-        .Q(curr_fwft_state),
-        .SR(xpm_fifo_rst_inst_n_0),
-        .\count_value_i_reg[3] (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ),
-        .\gen_rst_ic.fifo_rd_rst_ic_reg_0 (\gen_fwft.count_rst ),
-        .ram_empty_i(ram_empty_i),
-        .rd_clk(rd_clk),
-        .rst(rst),
-        .rst_d1(rst_d1),
-        .wr_clk(wr_clk),
-        .wr_en(wr_en),
-        .wrst_busy(wrst_busy));
 endmodule
 
 (* CDC_DEST_SYNC_FF = "3" *) (* COMMON_CLOCK = "0" *) (* DOUT_RESET_VALUE = "" *) 
@@ -18141,7 +18952,7 @@ endmodule
 (* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
 (* WR_WIDTH_LOG = "9" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
 (* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized0
    (sleep,
     rst,
     wr_clk,
@@ -18280,6 +19091,500 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   assign wr_data_count[1] = \<const0> ;
   assign wr_data_count[0] = \<const0> ;
   assign wr_rst_busy = \<const0> ;
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT4 #(
+    .INIT(16'h6A85)) 
+    \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
+       (.I0(curr_fwft_state[0]),
+        .I1(rd_en),
+        .I2(curr_fwft_state[1]),
+        .I3(ram_empty_i),
+        .O(next_fwft_state__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT3 #(
+    .INIT(8'h7C)) 
+    \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
+       (.I0(rd_en),
+        .I1(curr_fwft_state[1]),
+        .I2(curr_fwft_state[0]),
+        .O(next_fwft_state__0[1]));
+  (* FSM_ENCODED_STATES = "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_gen_fwft.curr_fwft_state_reg[0] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(next_fwft_state__0[0]),
+        .Q(curr_fwft_state[0]),
+        .R(xpm_fifo_rst_inst_n_0));
+  (* FSM_ENCODED_STATES = "invalid:00,stage1_valid:01,both_stages_valid:10,stage2_valid:11" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_gen_fwft.curr_fwft_state_reg[1] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(next_fwft_state__0[1]),
+        .Q(curr_fwft_state[1]),
+        .R(xpm_fifo_rst_inst_n_0));
+  GND GND
+       (.G(\<const0> ));
+  (* DEST_SYNC_FF = "3" *) 
+  (* INIT_SYNC_FF = "1" *) 
+  (* REG_OUTPUT = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+  (* VERSION = "0" *) 
+  (* WIDTH = "5" *) 
+  (* XPM_CDC = "GRAY" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__parameterized1__2 \gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+       (.dest_clk(wr_clk),
+        .dest_out_bin(rd_pntr_wr_cdc_dc),
+        .src_clk(rd_clk),
+        .src_in_bin({rdp_inst_n_0,rdp_inst_n_1,rdp_inst_n_2,rdp_inst_n_3,rdp_inst_n_4}));
+  (* DEST_SYNC_FF = "3" *) 
+  (* INIT_SYNC_FF = "1" *) 
+  (* REG_OUTPUT = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+  (* VERSION = "0" *) 
+  (* WIDTH = "4" *) 
+  (* XPM_CDC = "GRAY" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__5 \gen_cdc_pntr.rd_pntr_cdc_inst 
+       (.dest_clk(wr_clk),
+        .dest_out_bin(rd_pntr_wr_cdc),
+        .src_clk(rd_clk),
+        .src_in_bin(rd_pntr_ext));
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_7 \gen_cdc_pntr.rpw_gray_reg 
+       (.D(rd_pntr_wr_cdc),
+        .E(ram_wr_en_i),
+        .Q({wrpp2_inst_n_1,wrpp2_inst_n_2,wrpp2_inst_n_3}),
+        .clr_full(clr_full),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (wrpp2_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (wrpp1_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
+        .\reg_out_i_reg[3]_0 (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
+        .\state_reg[1] (\gen_cdc_pntr.rpw_gray_reg_n_0 ),
+        .\syncstages_ff_reg[2] (\gen_cdc_pntr.rpw_gray_reg_n_1 ),
+        .wr_clk(wr_clk),
+        .wrst_busy(wrst_busy));
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_8 \gen_cdc_pntr.wpr_gray_reg 
+       (.D(wr_pntr_rd_cdc),
+        .E(rdp_inst_n_9),
+        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
+        .SR(xpm_fifo_rst_inst_n_0),
+        .\gen_pf_ic_rc.ram_empty_i_reg (rd_pntr_ext),
+        .ram_empty_i0(ram_empty_i0),
+        .rd_clk(rd_clk));
+  (* DEST_SYNC_FF = "5" *) 
+  (* INIT_SYNC_FF = "1" *) 
+  (* REG_OUTPUT = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+  (* VERSION = "0" *) 
+  (* WIDTH = "5" *) 
+  (* XPM_CDC = "GRAY" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__parameterized0__2 \gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+       (.dest_clk(rd_clk),
+        .dest_out_bin(wr_pntr_rd_cdc_dc),
+        .src_clk(wr_clk),
+        .src_in_bin(wr_pntr_ext));
+  (* DEST_SYNC_FF = "3" *) 
+  (* INIT_SYNC_FF = "1" *) 
+  (* REG_OUTPUT = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+  (* VERSION = "0" *) 
+  (* WIDTH = "4" *) 
+  (* XPM_CDC = "GRAY" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_cdc_gray__4 \gen_cdc_pntr.wr_pntr_cdc_inst 
+       (.dest_clk(rd_clk),
+        .dest_out_bin(wr_pntr_rd_cdc),
+        .src_clk(wr_clk),
+        .src_in_bin(wr_pntr_ext[3:0]));
+  LUT4 #(
+    .INIT(16'hF380)) 
+    \gen_fwft.empty_fwft_i_i_1 
+       (.I0(rd_en),
+        .I1(curr_fwft_state[0]),
+        .I2(curr_fwft_state[1]),
+        .I3(\gen_fwft.empty_fwft_i_reg_n_0 ),
+        .O(data_valid_fwft1));
+  FDSE #(
+    .INIT(1'b1)) 
+    \gen_fwft.empty_fwft_i_reg 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(data_valid_fwft1),
+        .Q(\gen_fwft.empty_fwft_i_reg_n_0 ),
+        .S(xpm_fifo_rst_inst_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT4 #(
+    .INIT(16'h3575)) 
+    \gen_fwft.gdvld_fwft.data_valid_fwft_i_1 
+       (.I0(\gen_fwft.empty_fwft_i_reg_n_0 ),
+        .I1(curr_fwft_state[1]),
+        .I2(curr_fwft_state[0]),
+        .I3(rd_en),
+        .O(\gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_fwft.gdvld_fwft.data_valid_fwft_reg 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(\gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ),
+        .Q(data_valid),
+        .R(xpm_fifo_rst_inst_n_0));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn_9 \gen_fwft.rdpp1_inst 
+       (.Q(count_value_i),
+        .SR(\gen_fwft.count_rst ),
+        .\count_value_i_reg[1]_0 (curr_fwft_state),
+        .ram_empty_i(ram_empty_i),
+        .rd_clk(rd_clk),
+        .rd_en(rd_en));
+  FDSE #(
+    .INIT(1'b1)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(\gen_cdc_pntr.rpw_gray_reg_n_0 ),
+        .Q(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ),
+        .S(wrst_busy));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(\gen_cdc_pntr.rpw_gray_reg_n_1 ),
+        .Q(full_n),
+        .R(wrst_busy));
+  FDSE #(
+    .INIT(1'b1)) 
+    \gen_pf_ic_rc.ram_empty_i_reg 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(ram_empty_i0),
+        .Q(ram_empty_i),
+        .S(xpm_fifo_rst_inst_n_0));
+  (* ADDR_WIDTH_A = "4" *) 
+  (* ADDR_WIDTH_B = "4" *) 
+  (* AUTO_SLEEP_TIME = "0" *) 
+  (* BYTE_WRITE_WIDTH_A = "324" *) 
+  (* BYTE_WRITE_WIDTH_B = "324" *) 
+  (* CASCADE_HEIGHT = "0" *) 
+  (* CLOCKING_MODE = "1" *) 
+  (* ECC_MODE = "0" *) 
+  (* MAX_NUM_CHAR = "0" *) 
+  (* MEMORY_INIT_FILE = "none" *) 
+  (* MEMORY_INIT_PARAM = "" *) 
+  (* MEMORY_OPTIMIZATION = "true" *) 
+  (* MEMORY_PRIMITIVE = "0" *) 
+  (* MEMORY_SIZE = "5184" *) 
+  (* MEMORY_TYPE = "1" *) 
+  (* MESSAGE_CONTROL = "0" *) 
+  (* NUM_CHAR_LOC = "0" *) 
+  (* P_ECC_MODE = "no_ecc" *) 
+  (* P_ENABLE_BYTE_WRITE_A = "0" *) 
+  (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+  (* P_MAX_DEPTH_DATA = "16" *) 
+  (* P_MEMORY_OPT = "yes" *) 
+  (* P_MEMORY_PRIMITIVE = "auto" *) 
+  (* P_MIN_WIDTH_DATA = "324" *) 
+  (* P_MIN_WIDTH_DATA_A = "324" *) 
+  (* P_MIN_WIDTH_DATA_B = "324" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "324" *) 
+  (* P_MIN_WIDTH_DATA_LDW = "4" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "324" *) 
+  (* P_NUM_COLS_WRITE_A = "1" *) 
+  (* P_NUM_COLS_WRITE_B = "1" *) 
+  (* P_NUM_ROWS_READ_A = "1" *) 
+  (* P_NUM_ROWS_READ_B = "1" *) 
+  (* P_NUM_ROWS_WRITE_A = "1" *) 
+  (* P_NUM_ROWS_WRITE_B = "1" *) 
+  (* P_SDP_WRITE_MODE = "yes" *) 
+  (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+  (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
+  (* P_WIDTH_ADDR_READ_A = "4" *) 
+  (* P_WIDTH_ADDR_READ_B = "4" *) 
+  (* P_WIDTH_ADDR_WRITE_A = "4" *) 
+  (* P_WIDTH_ADDR_WRITE_B = "4" *) 
+  (* P_WIDTH_COL_WRITE_A = "324" *) 
+  (* P_WIDTH_COL_WRITE_B = "324" *) 
+  (* READ_DATA_WIDTH_A = "324" *) 
+  (* READ_DATA_WIDTH_B = "324" *) 
+  (* READ_LATENCY_A = "2" *) 
+  (* READ_LATENCY_B = "2" *) 
+  (* READ_RESET_VALUE_A = "0" *) 
+  (* READ_RESET_VALUE_B = "" *) 
+  (* RST_MODE_A = "SYNC" *) 
+  (* RST_MODE_B = "SYNC" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+  (* USE_MEM_INIT = "0" *) 
+  (* VERSION = "0" *) 
+  (* WAKEUP_TIME = "0" *) 
+  (* WRITE_DATA_WIDTH_A = "324" *) 
+  (* WRITE_DATA_WIDTH_B = "324" *) 
+  (* WRITE_MODE_A = "2" *) 
+  (* WRITE_MODE_B = "2" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  (* rsta_loop_iter = "324" *) 
+  (* rstb_loop_iter = "324" *) 
+  top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized0 \gen_sdpram.xpm_memory_base_inst 
+       (.addra(wr_pntr_ext[3:0]),
+        .addrb(rd_pntr_ext),
+        .clka(wr_clk),
+        .clkb(rd_clk),
+        .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
+        .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
+        .dina(din),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [323:0]),
+        .doutb(dout),
+        .ena(1'b0),
+        .enb(rdp_inst_n_9),
+        .injectdbiterra(1'b0),
+        .injectdbiterrb(1'b0),
+        .injectsbiterra(1'b0),
+        .injectsbiterrb(1'b0),
+        .regcea(1'b0),
+        .regceb(\gen_fwft.ram_regout_en ),
+        .rsta(1'b0),
+        .rstb(xpm_fifo_rst_inst_n_0),
+        .sbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ),
+        .sbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ),
+        .sleep(sleep),
+        .wea(ram_wr_en_i),
+        .web(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT3 #(
+    .INIT(8'h62)) 
+    \gen_sdpram.xpm_memory_base_inst_i_3 
+       (.I0(curr_fwft_state[0]),
+        .I1(curr_fwft_state[1]),
+        .I2(rd_en),
+        .O(\gen_fwft.ram_regout_en ));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_10 rdp_inst
+       (.E(rdp_inst_n_9),
+        .Q(rd_pntr_ext),
+        .SR(xpm_fifo_rst_inst_n_0),
+        .\count_value_i_reg[0]_0 (curr_fwft_state),
+        .ram_empty_i(ram_empty_i),
+        .rd_clk(rd_clk),
+        .rd_en(rd_en),
+        .\src_gray_ff_reg[4] (count_value_i),
+        .src_in_bin({rdp_inst_n_0,rdp_inst_n_1,rdp_inst_n_2,rdp_inst_n_3,rdp_inst_n_4}));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_11 rdpp1_inst
+       (.E(rdp_inst_n_9),
+        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
+        .SR(xpm_fifo_rst_inst_n_0),
+        .\count_value_i_reg[1]_0 (curr_fwft_state),
+        .rd_clk(rd_clk),
+        .rd_en(rd_en));
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_12 rst_d1_inst
+       (.clr_full(clr_full),
+        .rst(rst),
+        .rst_d1(rst_d1),
+        .wr_clk(wr_clk),
+        .wrst_busy(wrst_busy));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_13 wrp_inst
+       (.E(ram_wr_en_i),
+        .Q(wr_pntr_ext),
+        .wr_clk(wr_clk),
+        .wrst_busy(wrst_busy));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_14 wrpp1_inst
+       (.E(ram_wr_en_i),
+        .Q({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
+        .\count_value_i_reg[3]_0 (wrpp1_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
+        .wr_clk(wr_clk),
+        .wrst_busy(wrst_busy));
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized2_15 wrpp2_inst
+       (.E(ram_wr_en_i),
+        .Q({wrpp2_inst_n_1,wrpp2_inst_n_2,wrpp2_inst_n_3}),
+        .\count_value_i_reg[3]_0 (wrpp2_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
+        .wr_clk(wr_clk),
+        .wrst_busy(wrst_busy));
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst__parameterized0__xdcDup__1 xpm_fifo_rst_inst
+       (.E(ram_wr_en_i),
+        .Q(curr_fwft_state),
+        .SR(xpm_fifo_rst_inst_n_0),
+        .\count_value_i_reg[3] (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ),
+        .\gen_rst_ic.fifo_rd_rst_ic_reg_0 (\gen_fwft.count_rst ),
+        .ram_empty_i(ram_empty_i),
+        .rd_clk(rd_clk),
+        .rst(rst),
+        .rst_d1(rst_d1),
+        .wr_clk(wr_clk),
+        .wr_en(wr_en),
+        .wrst_busy(wrst_busy));
+endmodule
+
+(* CDC_DEST_SYNC_FF = "3" *) (* COMMON_CLOCK = "0" *) (* DOUT_RESET_VALUE = "" *) 
+(* ECC_MODE = "0" *) (* ENABLE_ECC = "0" *) (* EN_ADV_FEATURE = "16'b0001000000000000" *) 
+(* EN_AE = "1'b0" *) (* EN_AF = "1'b0" *) (* EN_DVLD = "1'b1" *) 
+(* EN_OF = "1'b0" *) (* EN_PE = "1'b0" *) (* EN_PF = "1'b0" *) 
+(* EN_RDC = "1'b0" *) (* EN_UF = "1'b0" *) (* EN_WACK = "1'b0" *) 
+(* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
+(* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
+(* FIFO_SIZE = "384" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
+(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
+(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) 
+(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
+(* READ_DATA_WIDTH = "24" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "24" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "5" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
+   (sleep,
+    rst,
+    wr_clk,
+    wr_en,
+    din,
+    full,
+    full_n,
+    prog_full,
+    wr_data_count,
+    overflow,
+    wr_rst_busy,
+    almost_full,
+    wr_ack,
+    rd_clk,
+    rd_en,
+    dout,
+    empty,
+    prog_empty,
+    rd_data_count,
+    underflow,
+    rd_rst_busy,
+    almost_empty,
+    data_valid,
+    injectsbiterr,
+    injectdbiterr,
+    sbiterr,
+    dbiterr);
+  input sleep;
+  input rst;
+  input wr_clk;
+  input wr_en;
+  input [23:0]din;
+  output full;
+  output full_n;
+  output prog_full;
+  output [4:0]wr_data_count;
+  output overflow;
+  output wr_rst_busy;
+  output almost_full;
+  output wr_ack;
+  input rd_clk;
+  input rd_en;
+  output [23:0]dout;
+  output empty;
+  output prog_empty;
+  output [4:0]rd_data_count;
+  output underflow;
+  output rd_rst_busy;
+  output almost_empty;
+  output data_valid;
+  input injectsbiterr;
+  input injectdbiterr;
+  output sbiterr;
+  output dbiterr;
+
+  wire \<const0> ;
+  wire clr_full;
+  wire [1:0]count_value_i;
+  wire [1:0]curr_fwft_state;
+  wire data_valid;
+  wire data_valid_fwft1;
+  wire [23:0]din;
+  wire [23:0]dout;
+  wire full_n;
+  wire \gen_cdc_pntr.rpw_gray_reg_n_0 ;
+  wire \gen_cdc_pntr.rpw_gray_reg_n_1 ;
+  wire \gen_cdc_pntr.rpw_gray_reg_n_2 ;
+  wire \gen_fwft.count_rst ;
+  wire \gen_fwft.empty_fwft_i_reg_n_0 ;
+  wire \gen_fwft.gdvld_fwft.data_valid_fwft_i_1_n_0 ;
+  wire \gen_fwft.ram_regout_en ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_n_0 ;
+  wire [1:0]next_fwft_state__0;
+  wire ram_empty_i;
+  wire ram_empty_i0;
+  wire ram_wr_en_i;
+  wire rd_clk;
+  wire rd_en;
+  wire [3:0]rd_pntr_ext;
+  wire [3:0]rd_pntr_wr_cdc;
+  wire [4:0]rd_pntr_wr_cdc_dc;
+  wire rdp_inst_n_0;
+  wire rdp_inst_n_1;
+  wire rdp_inst_n_2;
+  wire rdp_inst_n_3;
+  wire rdp_inst_n_4;
+  wire rdp_inst_n_9;
+  wire rdpp1_inst_n_0;
+  wire rdpp1_inst_n_1;
+  wire rdpp1_inst_n_2;
+  wire rdpp1_inst_n_3;
+  wire rst;
+  wire rst_d1;
+  wire sleep;
+  wire wr_clk;
+  wire wr_en;
+  wire [4:0]wr_pntr_ext;
+  wire [3:0]wr_pntr_rd_cdc;
+  wire [4:0]wr_pntr_rd_cdc_dc;
+  wire wrpp1_inst_n_0;
+  wire wrpp1_inst_n_1;
+  wire wrpp1_inst_n_2;
+  wire wrpp1_inst_n_3;
+  wire wrpp2_inst_n_0;
+  wire wrpp2_inst_n_1;
+  wire wrpp2_inst_n_2;
+  wire wrpp2_inst_n_3;
+  wire wrst_busy;
+  wire xpm_fifo_rst_inst_n_0;
+  wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ;
+  wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
+  wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
+  wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
+  wire [23:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
+
+  assign almost_empty = \<const0> ;
+  assign almost_full = \<const0> ;
+  assign dbiterr = \<const0> ;
+  assign empty = \<const0> ;
+  assign full = \<const0> ;
+  assign overflow = \<const0> ;
+  assign prog_empty = \<const0> ;
+  assign prog_full = \<const0> ;
+  assign rd_data_count[4] = \<const0> ;
+  assign rd_data_count[3] = \<const0> ;
+  assign rd_data_count[2] = \<const0> ;
+  assign rd_data_count[1] = \<const0> ;
+  assign rd_data_count[0] = \<const0> ;
+  assign rd_rst_busy = \<const0> ;
+  assign sbiterr = \<const0> ;
+  assign underflow = \<const0> ;
+  assign wr_ack = \<const0> ;
+  assign wr_data_count[4] = \<const0> ;
+  assign wr_data_count[3] = \<const0> ;
+  assign wr_data_count[2] = \<const0> ;
+  assign wr_data_count[1] = \<const0> ;
+  assign wr_data_count[0] = \<const0> ;
+  assign wr_rst_busy = \<const0> ;
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
@@ -18350,15 +19655,15 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
         .E(ram_wr_en_i),
         .Q({wrpp2_inst_n_1,wrpp2_inst_n_2,wrpp2_inst_n_3}),
         .clr_full(clr_full),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (wrpp2_inst_n_0),
-        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (wrpp1_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg (\gen_cdc_pntr.rpw_gray_reg_n_0 ),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 (wrpp2_inst_n_0),
+        .\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_1 (wrpp1_inst_n_0),
         .\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
         .\reg_out_i_reg[3]_0 (\gen_cdc_pntr.rpw_gray_reg_n_2 ),
-        .\state_reg[1] (\gen_cdc_pntr.rpw_gray_reg_n_0 ),
         .\syncstages_ff_reg[2] (\gen_cdc_pntr.rpw_gray_reg_n_1 ),
         .wr_clk(wr_clk),
         .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_2 \gen_cdc_pntr.wpr_gray_reg 
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_3 \gen_cdc_pntr.wpr_gray_reg 
        (.D(wr_pntr_rd_cdc),
         .E(rdp_inst_n_9),
         .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3}),
@@ -18461,8 +19766,8 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   (* ADDR_WIDTH_A = "4" *) 
   (* ADDR_WIDTH_B = "4" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "324" *) 
-  (* BYTE_WRITE_WIDTH_B = "324" *) 
+  (* BYTE_WRITE_WIDTH_A = "24" *) 
+  (* BYTE_WRITE_WIDTH_B = "24" *) 
   (* CASCADE_HEIGHT = "0" *) 
   (* CLOCKING_MODE = "1" *) 
   (* ECC_MODE = "0" *) 
@@ -18471,7 +19776,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "0" *) 
-  (* MEMORY_SIZE = "5184" *) 
+  (* MEMORY_SIZE = "384" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
@@ -18481,12 +19786,12 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   (* P_MAX_DEPTH_DATA = "16" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "auto" *) 
-  (* P_MIN_WIDTH_DATA = "324" *) 
-  (* P_MIN_WIDTH_DATA_A = "324" *) 
-  (* P_MIN_WIDTH_DATA_B = "324" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "324" *) 
+  (* P_MIN_WIDTH_DATA = "24" *) 
+  (* P_MIN_WIDTH_DATA_A = "24" *) 
+  (* P_MIN_WIDTH_DATA_B = "24" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "24" *) 
   (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "324" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "24" *) 
   (* P_NUM_COLS_WRITE_A = "1" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
@@ -18502,10 +19807,10 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   (* P_WIDTH_ADDR_READ_B = "4" *) 
   (* P_WIDTH_ADDR_WRITE_A = "4" *) 
   (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "324" *) 
-  (* P_WIDTH_COL_WRITE_B = "324" *) 
-  (* READ_DATA_WIDTH_A = "324" *) 
-  (* READ_DATA_WIDTH_B = "324" *) 
+  (* P_WIDTH_COL_WRITE_A = "24" *) 
+  (* P_WIDTH_COL_WRITE_B = "24" *) 
+  (* READ_DATA_WIDTH_A = "24" *) 
+  (* READ_DATA_WIDTH_B = "24" *) 
   (* READ_LATENCY_A = "2" *) 
   (* READ_LATENCY_B = "2" *) 
   (* READ_RESET_VALUE_A = "0" *) 
@@ -18517,13 +19822,13 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
   (* USE_MEM_INIT = "0" *) 
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "324" *) 
-  (* WRITE_DATA_WIDTH_B = "324" *) 
+  (* WRITE_DATA_WIDTH_A = "24" *) 
+  (* WRITE_DATA_WIDTH_B = "24" *) 
   (* WRITE_MODE_A = "2" *) 
   (* WRITE_MODE_B = "2" *) 
   (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "324" *) 
-  (* rstb_loop_iter = "324" *) 
+  (* rsta_loop_iter = "24" *) 
+  (* rstb_loop_iter = "24" *) 
   top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized1 \gen_sdpram.xpm_memory_base_inst 
        (.addra(wr_pntr_ext[3:0]),
         .addrb(rd_pntr_ext),
@@ -18532,8 +19837,8 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
         .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
         .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
         .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [323:0]),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [23:0]),
         .doutb(dout),
         .ena(1'b0),
         .enb(rdp_inst_n_9),
@@ -18575,18 +19880,18 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized1
         .\count_value_i_reg[1]_0 (curr_fwft_state),
         .rd_clk(rd_clk),
         .rd_en(rd_en));
-  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_3 rst_d1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_4 rst_d1_inst
        (.clr_full(clr_full),
         .rst(rst),
         .rst_d1(rst_d1),
         .wr_clk(wr_clk),
         .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_4 wrp_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized0_5 wrp_inst
        (.E(ram_wr_en_i),
         .Q(wr_pntr_ext),
         .wr_clk(wr_clk),
         .wrst_busy(wrst_busy));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_5 wrpp1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized1_6 wrpp1_inst
        (.E(ram_wr_en_i),
         .Q({wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3}),
         .\count_value_i_reg[3]_0 (wrpp1_inst_n_0),
@@ -19069,7 +20374,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized2
         .rst(rst),
         .rst_d1(rst_d1),
         .wr_clk(wr_clk));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized3_0 wrp_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized3_1 wrp_inst
        (.Q(wr_pntr_ext),
         .\count_value_i_reg[5]_0 (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0 ),
         .\count_value_i_reg[8]_0 (xpm_fifo_rst_inst_n_1),
@@ -19082,7 +20387,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized2
         .rst_d1(rst_d1),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized4_1 wrpp1_inst
+  top_level_rfsoc_data_pipeline_0_0_xpm_counter_updn__parameterized4_2 wrpp1_inst
        (.Q(count_value_i__0),
         .\count_value_i_reg[0]_0 (xpm_fifo_rst_inst_n_1),
         .\count_value_i_reg[5]_0 (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_n_0 ),
@@ -19100,6 +20405,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_base__parameterized2
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -19136,7 +20442,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit
 endmodule
 
 (* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_11
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_12
    (rst_d1,
     clr_full,
     wrst_busy,
@@ -19172,7 +20478,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_11
 endmodule
 
 (* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_17
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_18
    (rst_d1,
     clr_full,
     Q,
@@ -19208,7 +20514,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_17
 endmodule
 
 (* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_3
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_4
    (rst_d1,
     clr_full,
     wrst_busy,
@@ -19243,218 +20549,8 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_bit_3
         .O(clr_full));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec
-   (\state_reg[1] ,
-    \syncstages_ff_reg[2] ,
-    \reg_out_i_reg[3]_0 ,
-    Q,
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ,
-    E,
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ,
-    clr_full,
-    wrst_busy,
-    D,
-    wr_clk);
-  output \state_reg[1] ;
-  output \syncstages_ff_reg[2] ;
-  output [0:0]\reg_out_i_reg[3]_0 ;
-  input [2:0]Q;
-  input [2:0]\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ;
-  input [0:0]E;
-  input \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
-  input \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
-  input clr_full;
-  input wrst_busy;
-  input [3:0]D;
-  input wr_clk;
-
-  wire [3:0]D;
-  wire [0:0]E;
-  wire [2:0]Q;
-  wire clr_full;
-  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
-  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
-  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ;
-  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ;
-  wire [2:0]\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ;
-  wire [0:0]\reg_out_i_reg[3]_0 ;
-  wire \reg_out_i_reg_n_0_[0] ;
-  wire \reg_out_i_reg_n_0_[1] ;
-  wire \reg_out_i_reg_n_0_[2] ;
-  wire \state_reg[1] ;
-  wire \syncstages_ff_reg[2] ;
-  wire wr_clk;
-  wire wrst_busy;
-
-  LUT6 #(
-    .INIT(64'h00000000FF808080)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_1 
-       (.I0(E),
-        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
-        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ),
-        .I3(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ),
-        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
-        .I5(clr_full),
-        .O(\state_reg[1] ));
-  LUT6 #(
-    .INIT(64'hAABFBFBFBFBFBFBF)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_1 
-       (.I0(clr_full),
-        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
-        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ),
-        .I3(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ),
-        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
-        .I5(E),
-        .O(\syncstages_ff_reg[2] ));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4 
-       (.I0(\reg_out_i_reg_n_0_[0] ),
-        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [0]),
-        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [2]),
-        .I3(\reg_out_i_reg_n_0_[2] ),
-        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [1]),
-        .I5(\reg_out_i_reg_n_0_[1] ),
-        .O(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5 
-       (.I0(\reg_out_i_reg_n_0_[0] ),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(\reg_out_i_reg_n_0_[2] ),
-        .I4(Q[1]),
-        .I5(\reg_out_i_reg_n_0_[1] ),
-        .O(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[0] 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(D[0]),
-        .Q(\reg_out_i_reg_n_0_[0] ),
-        .R(wrst_busy));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[1] 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(D[1]),
-        .Q(\reg_out_i_reg_n_0_[1] ),
-        .R(wrst_busy));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[2] 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(D[2]),
-        .Q(\reg_out_i_reg_n_0_[2] ),
-        .R(wrst_busy));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[3] 
-       (.C(wr_clk),
-        .CE(1'b1),
-        .D(D[3]),
-        .Q(\reg_out_i_reg[3]_0 ),
-        .R(wrst_busy));
-endmodule
-
-(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_2
-   (ram_empty_i0,
-    E,
-    Q,
-    \gen_pf_ic_rc.ram_empty_i_reg ,
-    SR,
-    D,
-    rd_clk);
-  output ram_empty_i0;
-  input [0:0]E;
-  input [3:0]Q;
-  input [3:0]\gen_pf_ic_rc.ram_empty_i_reg ;
-  input [0:0]SR;
-  input [3:0]D;
-  input rd_clk;
-
-  wire [3:0]D;
-  wire [0:0]E;
-  wire [3:0]Q;
-  wire [0:0]SR;
-  wire \gen_pf_ic_rc.ram_empty_i_i_2_n_0 ;
-  wire \gen_pf_ic_rc.ram_empty_i_i_3_n_0 ;
-  wire [3:0]\gen_pf_ic_rc.ram_empty_i_reg ;
-  wire ram_empty_i0;
-  wire rd_clk;
-  wire [3:0]reg_out_i;
-
-  LUT6 #(
-    .INIT(64'hFF8080802020FF20)) 
-    \gen_pf_ic_rc.ram_empty_i_i_1 
-       (.I0(E),
-        .I1(Q[3]),
-        .I2(\gen_pf_ic_rc.ram_empty_i_i_2_n_0 ),
-        .I3(\gen_pf_ic_rc.ram_empty_i_i_3_n_0 ),
-        .I4(\gen_pf_ic_rc.ram_empty_i_reg [3]),
-        .I5(reg_out_i[3]),
-        .O(ram_empty_i0));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    \gen_pf_ic_rc.ram_empty_i_i_2 
-       (.I0(reg_out_i[0]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(reg_out_i[2]),
-        .I4(Q[1]),
-        .I5(reg_out_i[1]),
-        .O(\gen_pf_ic_rc.ram_empty_i_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
-    \gen_pf_ic_rc.ram_empty_i_i_3 
-       (.I0(reg_out_i[0]),
-        .I1(\gen_pf_ic_rc.ram_empty_i_reg [0]),
-        .I2(\gen_pf_ic_rc.ram_empty_i_reg [2]),
-        .I3(reg_out_i[2]),
-        .I4(\gen_pf_ic_rc.ram_empty_i_reg [1]),
-        .I5(reg_out_i[1]),
-        .O(\gen_pf_ic_rc.ram_empty_i_i_3_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[0] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(D[0]),
-        .Q(reg_out_i[0]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[1] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(D[1]),
-        .Q(reg_out_i[1]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[2] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(D[2]),
-        .Q(reg_out_i[2]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \reg_out_i_reg[3] 
-       (.C(rd_clk),
-        .CE(1'b1),
-        .D(D[3]),
-        .Q(reg_out_i[3]),
-        .R(SR));
-endmodule
-
-(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_6
    (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
     \syncstages_ff_reg[2] ,
     \reg_out_i_reg[3]_0 ,
@@ -19573,7 +20669,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_6
 endmodule
 
 (* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_7
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_3
    (ram_empty_i0,
     E,
     Q,
@@ -19664,6 +20760,218 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_7
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_7
+   (\state_reg[1] ,
+    \syncstages_ff_reg[2] ,
+    \reg_out_i_reg[3]_0 ,
+    Q,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ,
+    E,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ,
+    clr_full,
+    wrst_busy,
+    D,
+    wr_clk);
+  output \state_reg[1] ;
+  output \syncstages_ff_reg[2] ;
+  output [0:0]\reg_out_i_reg[3]_0 ;
+  input [2:0]Q;
+  input [2:0]\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ;
+  input [0:0]E;
+  input \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
+  input \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
+  input clr_full;
+  input wrst_busy;
+  input [3:0]D;
+  input wr_clk;
+
+  wire [3:0]D;
+  wire [0:0]E;
+  wire [2:0]Q;
+  wire clr_full;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ;
+  wire \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ;
+  wire [2:0]\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg ;
+  wire [0:0]\reg_out_i_reg[3]_0 ;
+  wire \reg_out_i_reg_n_0_[0] ;
+  wire \reg_out_i_reg_n_0_[1] ;
+  wire \reg_out_i_reg_n_0_[2] ;
+  wire \state_reg[1] ;
+  wire \syncstages_ff_reg[2] ;
+  wire wr_clk;
+  wire wrst_busy;
+
+  LUT6 #(
+    .INIT(64'h00000000FF808080)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_1 
+       (.I0(E),
+        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
+        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ),
+        .I3(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ),
+        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
+        .I5(clr_full),
+        .O(\state_reg[1] ));
+  LUT6 #(
+    .INIT(64'hAABFBFBFBFBFBFBF)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_1 
+       (.I0(clr_full),
+        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg_0 ),
+        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ),
+        .I3(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ),
+        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ),
+        .I5(E),
+        .O(\syncstages_ff_reg[2] ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4 
+       (.I0(\reg_out_i_reg_n_0_[0] ),
+        .I1(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [0]),
+        .I2(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [2]),
+        .I3(\reg_out_i_reg_n_0_[2] ),
+        .I4(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_reg [1]),
+        .I5(\reg_out_i_reg_n_0_[1] ),
+        .O(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5 
+       (.I0(\reg_out_i_reg_n_0_[0] ),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(\reg_out_i_reg_n_0_[2] ),
+        .I4(Q[1]),
+        .I5(\reg_out_i_reg_n_0_[1] ),
+        .O(\gen_pf_ic_rc.gen_full_rst_val.ram_full_n_i_5_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[0] 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(D[0]),
+        .Q(\reg_out_i_reg_n_0_[0] ),
+        .R(wrst_busy));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[1] 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(D[1]),
+        .Q(\reg_out_i_reg_n_0_[1] ),
+        .R(wrst_busy));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[2] 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(D[2]),
+        .Q(\reg_out_i_reg_n_0_[2] ),
+        .R(wrst_busy));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[3] 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .D(D[3]),
+        .Q(\reg_out_i_reg[3]_0 ),
+        .R(wrst_busy));
+endmodule
+
+(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_reg_vec_8
+   (ram_empty_i0,
+    E,
+    Q,
+    \gen_pf_ic_rc.ram_empty_i_reg ,
+    SR,
+    D,
+    rd_clk);
+  output ram_empty_i0;
+  input [0:0]E;
+  input [3:0]Q;
+  input [3:0]\gen_pf_ic_rc.ram_empty_i_reg ;
+  input [0:0]SR;
+  input [3:0]D;
+  input rd_clk;
+
+  wire [3:0]D;
+  wire [0:0]E;
+  wire [3:0]Q;
+  wire [0:0]SR;
+  wire \gen_pf_ic_rc.ram_empty_i_i_2_n_0 ;
+  wire \gen_pf_ic_rc.ram_empty_i_i_3_n_0 ;
+  wire [3:0]\gen_pf_ic_rc.ram_empty_i_reg ;
+  wire ram_empty_i0;
+  wire rd_clk;
+  wire [3:0]reg_out_i;
+
+  LUT6 #(
+    .INIT(64'hFF8080802020FF20)) 
+    \gen_pf_ic_rc.ram_empty_i_i_1 
+       (.I0(E),
+        .I1(Q[3]),
+        .I2(\gen_pf_ic_rc.ram_empty_i_i_2_n_0 ),
+        .I3(\gen_pf_ic_rc.ram_empty_i_i_3_n_0 ),
+        .I4(\gen_pf_ic_rc.ram_empty_i_reg [3]),
+        .I5(reg_out_i[3]),
+        .O(ram_empty_i0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pf_ic_rc.ram_empty_i_i_2 
+       (.I0(reg_out_i[0]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(reg_out_i[2]),
+        .I4(Q[1]),
+        .I5(reg_out_i[1]),
+        .O(\gen_pf_ic_rc.ram_empty_i_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pf_ic_rc.ram_empty_i_i_3 
+       (.I0(reg_out_i[0]),
+        .I1(\gen_pf_ic_rc.ram_empty_i_reg [0]),
+        .I2(\gen_pf_ic_rc.ram_empty_i_reg [2]),
+        .I3(reg_out_i[2]),
+        .I4(\gen_pf_ic_rc.ram_empty_i_reg [1]),
+        .I5(reg_out_i[1]),
+        .O(\gen_pf_ic_rc.ram_empty_i_i_3_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[0] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(D[0]),
+        .Q(reg_out_i[0]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[1] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(D[1]),
+        .Q(reg_out_i[1]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[2] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(D[2]),
+        .Q(reg_out_i[2]),
+        .R(SR));
+  FDRE #(
+    .INIT(1'b0)) 
+    \reg_out_i_reg[3] 
+       (.C(rd_clk),
+        .CE(1'b1),
+        .D(D[3]),
+        .Q(reg_out_i[3]),
+        .R(SR));
+endmodule
+
+(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst
    (ram_wr_en_i,
     Q,
@@ -19749,7 +21057,7 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst
 endmodule
 
 (* ORIG_REF_NAME = "xpm_fifo_rst" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst_20
+module top_level_rfsoc_data_pipeline_0_0_xpm_fifo_rst_21
    (E,
     Q,
     rst,
@@ -20594,23 +21902,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "704" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
-(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "44" *) 
-(* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) (* P_MIN_WIDTH_DATA_ECC = "44" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) (* P_NUM_COLS_WRITE_A = "1" *) 
-(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
-(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
-(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
-(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "44" *) 
-(* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) (* READ_DATA_WIDTH_B = "44" *) 
-(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
-(* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "44" *) 
-(* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
-(* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) (* rstb_loop_iter = "44" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
+(* P_MIN_WIDTH_DATA = "44" *) (* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) 
+(* P_MIN_WIDTH_DATA_ECC = "44" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) 
+(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
+(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
+(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
+(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
+(* P_WIDTH_COL_WRITE_A = "44" *) (* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) 
+(* READ_DATA_WIDTH_B = "44" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "44" *) (* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) 
+(* rstb_loop_iter = "44" *) 
 module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base
    (sleep,
     clka,
@@ -21707,414 +23016,6 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base
 endmodule
 
 (* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
-(* BYTE_WRITE_WIDTH_A = "14" *) (* BYTE_WRITE_WIDTH_B = "14" *) (* CASCADE_HEIGHT = "0" *) 
-(* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
-(* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
-(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "224" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "14" *) (* P_MIN_WIDTH_DATA_A = "14" *) (* P_MIN_WIDTH_DATA_B = "14" *) 
-(* P_MIN_WIDTH_DATA_ECC = "14" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "14" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
-(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "14" *) (* P_WIDTH_COL_WRITE_B = "14" *) (* READ_DATA_WIDTH_A = "14" *) 
-(* READ_DATA_WIDTH_B = "14" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "14" *) (* WRITE_DATA_WIDTH_B = "14" *) (* WRITE_MODE_A = "2" *) 
-(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "16" *) 
-(* rstb_loop_iter = "16" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized0
-   (sleep,
-    clka,
-    rsta,
-    ena,
-    regcea,
-    wea,
-    addra,
-    dina,
-    injectsbiterra,
-    injectdbiterra,
-    douta,
-    sbiterra,
-    dbiterra,
-    clkb,
-    rstb,
-    enb,
-    regceb,
-    web,
-    addrb,
-    dinb,
-    injectsbiterrb,
-    injectdbiterrb,
-    doutb,
-    sbiterrb,
-    dbiterrb);
-  input sleep;
-  input clka;
-  input rsta;
-  input ena;
-  input regcea;
-  input [0:0]wea;
-  input [3:0]addra;
-  input [13:0]dina;
-  input injectsbiterra;
-  input injectdbiterra;
-  output [13:0]douta;
-  output sbiterra;
-  output dbiterra;
-  input clkb;
-  input rstb;
-  input enb;
-  input regceb;
-  input [0:0]web;
-  input [3:0]addrb;
-  input [13:0]dinb;
-  input injectsbiterrb;
-  input injectdbiterrb;
-  output [13:0]doutb;
-  output sbiterrb;
-  output dbiterrb;
-
-  wire \<const0> ;
-  wire [3:0]addra;
-  wire [3:0]addrb;
-  wire clka;
-  wire clkb;
-  wire [13:0]dina;
-  wire [13:0]doutb;
-  wire enb;
-  wire [13:0]\gen_rd_b.doutb_reg0 ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[10] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[11] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[12] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[13] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[4] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[5] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[6] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[7] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[8] ;
-  wire \gen_rd_b.doutb_reg_reg_n_0_[9] ;
-  wire regceb;
-  wire rstb;
-  wire sleep;
-  wire [0:0]wea;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13_DOH_UNCONNECTED ;
-
-  assign dbiterra = \<const0> ;
-  assign dbiterrb = \<const0> ;
-  assign douta[13] = \<const0> ;
-  assign douta[12] = \<const0> ;
-  assign douta[11] = \<const0> ;
-  assign douta[10] = \<const0> ;
-  assign douta[9] = \<const0> ;
-  assign douta[8] = \<const0> ;
-  assign douta[7] = \<const0> ;
-  assign douta[6] = \<const0> ;
-  assign douta[5] = \<const0> ;
-  assign douta[4] = \<const0> ;
-  assign douta[3] = \<const0> ;
-  assign douta[2] = \<const0> ;
-  assign douta[1] = \<const0> ;
-  assign douta[0] = \<const0> ;
-  assign sbiterra = \<const0> ;
-  assign sbiterrb = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[0] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [0]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[10] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [10]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[11] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [11]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[12] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [12]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[13] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [13]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[13] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[1] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [1]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[2] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [2]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[3] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [3]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[4] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [4]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[5] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [5]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[6] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [6]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[7] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [7]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[8] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [8]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
-        .R(1'b0));
-  (* dram_emb_xdc = "no" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.doutb_reg_reg[9] 
-       (.C(clkb),
-        .CE(enb),
-        .D(\gen_rd_b.doutb_reg0 [9]),
-        .Q(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
-        .Q(doutb[0]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
-        .Q(doutb[10]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
-        .Q(doutb[11]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][12] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
-        .Q(doutb[12]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][13] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[13] ),
-        .Q(doutb[13]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
-        .Q(doutb[1]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
-        .Q(doutb[2]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
-        .Q(doutb[3]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][4] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
-        .Q(doutb[4]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
-        .Q(doutb[5]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
-        .Q(doutb[6]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
-        .Q(doutb[7]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][8] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
-        .Q(doutb[8]),
-        .R(rstb));
-  FDRE #(
-    .INIT(1'b0)) 
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][9] 
-       (.C(clkb),
-        .CE(regceb),
-        .D(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
-        .Q(doutb[9]),
-        .R(rstb));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "224" *) 
-  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "0" *) 
-  (* ram_slice_end = "13" *) 
-  RAM32M16 #(
-    .INIT_A(64'h0000000000000000),
-    .INIT_B(64'h0000000000000000),
-    .INIT_C(64'h0000000000000000),
-    .INIT_D(64'h0000000000000000),
-    .INIT_E(64'h0000000000000000),
-    .INIT_F(64'h0000000000000000),
-    .INIT_G(64'h0000000000000000),
-    .INIT_H(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13 
-       (.ADDRA({1'b0,addrb}),
-        .ADDRB({1'b0,addrb}),
-        .ADDRC({1'b0,addrb}),
-        .ADDRD({1'b0,addrb}),
-        .ADDRE({1'b0,addrb}),
-        .ADDRF({1'b0,addrb}),
-        .ADDRG({1'b0,addrb}),
-        .ADDRH({1'b0,addra}),
-        .DIA(dina[1:0]),
-        .DIB(dina[3:2]),
-        .DIC(dina[5:4]),
-        .DID(dina[7:6]),
-        .DIE(dina[9:8]),
-        .DIF(dina[11:10]),
-        .DIG(dina[13:12]),
-        .DIH({1'b0,1'b0}),
-        .DOA(\gen_rd_b.doutb_reg0 [1:0]),
-        .DOB(\gen_rd_b.doutb_reg0 [3:2]),
-        .DOC(\gen_rd_b.doutb_reg0 [5:4]),
-        .DOD(\gen_rd_b.doutb_reg0 [7:6]),
-        .DOE(\gen_rd_b.doutb_reg0 [9:8]),
-        .DOF(\gen_rd_b.doutb_reg0 [11:10]),
-        .DOG(\gen_rd_b.doutb_reg0 [13:12]),
-        .DOH(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13_DOH_UNCONNECTED [1:0]),
-        .WCLK(clka),
-        .WE(wea));
-endmodule
-
-(* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
 (* BYTE_WRITE_WIDTH_A = "324" *) (* BYTE_WRITE_WIDTH_B = "324" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
@@ -22137,7 +23038,7 @@ endmodule
 (* WRITE_DATA_WIDTH_A = "324" *) (* WRITE_DATA_WIDTH_B = "324" *) (* WRITE_MODE_A = "2" *) 
 (* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "324" *) 
 (* rstb_loop_iter = "324" *) 
-module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized1
+module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized0
    (sleep,
     clka,
     rsta,
@@ -29449,6 +30350,651 @@ module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized1
         .DOF(\gen_rd_b.doutb_reg0 [109:108]),
         .DOG(\gen_rd_b.doutb_reg0 [111:110]),
         .DOH(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_98_111_DOH_UNCONNECTED [1:0]),
+        .WCLK(clka),
+        .WE(wea));
+endmodule
+
+(* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
+(* BYTE_WRITE_WIDTH_A = "24" *) (* BYTE_WRITE_WIDTH_B = "24" *) (* CASCADE_HEIGHT = "0" *) 
+(* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
+(* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
+(* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "384" *) (* MEMORY_TYPE = "1" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
+(* P_MIN_WIDTH_DATA = "24" *) (* P_MIN_WIDTH_DATA_A = "24" *) (* P_MIN_WIDTH_DATA_B = "24" *) 
+(* P_MIN_WIDTH_DATA_ECC = "24" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "24" *) 
+(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
+(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
+(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
+(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
+(* P_WIDTH_COL_WRITE_A = "24" *) (* P_WIDTH_COL_WRITE_B = "24" *) (* READ_DATA_WIDTH_A = "24" *) 
+(* READ_DATA_WIDTH_B = "24" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "24" *) (* WRITE_DATA_WIDTH_B = "24" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "24" *) 
+(* rstb_loop_iter = "24" *) 
+module top_level_rfsoc_data_pipeline_0_0_xpm_memory_base__parameterized1
+   (sleep,
+    clka,
+    rsta,
+    ena,
+    regcea,
+    wea,
+    addra,
+    dina,
+    injectsbiterra,
+    injectdbiterra,
+    douta,
+    sbiterra,
+    dbiterra,
+    clkb,
+    rstb,
+    enb,
+    regceb,
+    web,
+    addrb,
+    dinb,
+    injectsbiterrb,
+    injectdbiterrb,
+    doutb,
+    sbiterrb,
+    dbiterrb);
+  input sleep;
+  input clka;
+  input rsta;
+  input ena;
+  input regcea;
+  input [0:0]wea;
+  input [3:0]addra;
+  input [23:0]dina;
+  input injectsbiterra;
+  input injectdbiterra;
+  output [23:0]douta;
+  output sbiterra;
+  output dbiterra;
+  input clkb;
+  input rstb;
+  input enb;
+  input regceb;
+  input [0:0]web;
+  input [3:0]addrb;
+  input [23:0]dinb;
+  input injectsbiterrb;
+  input injectdbiterrb;
+  output [23:0]doutb;
+  output sbiterrb;
+  output dbiterrb;
+
+  wire \<const0> ;
+  wire [3:0]addra;
+  wire [3:0]addrb;
+  wire clka;
+  wire clkb;
+  wire [23:0]dina;
+  wire [23:0]doutb;
+  wire enb;
+  wire [23:0]\gen_rd_b.doutb_reg0 ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[10] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[11] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[12] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[13] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[14] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[15] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[16] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[17] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[18] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[19] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[20] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[21] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[22] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[23] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[4] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[5] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[6] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[7] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[8] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[9] ;
+  wire regceb;
+  wire rstb;
+  wire sleep;
+  wire [0:0]wea;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13_DOH_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOF_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOG_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOH_UNCONNECTED ;
+
+  assign dbiterra = \<const0> ;
+  assign dbiterrb = \<const0> ;
+  assign douta[23] = \<const0> ;
+  assign douta[22] = \<const0> ;
+  assign douta[21] = \<const0> ;
+  assign douta[20] = \<const0> ;
+  assign douta[19] = \<const0> ;
+  assign douta[18] = \<const0> ;
+  assign douta[17] = \<const0> ;
+  assign douta[16] = \<const0> ;
+  assign douta[15] = \<const0> ;
+  assign douta[14] = \<const0> ;
+  assign douta[13] = \<const0> ;
+  assign douta[12] = \<const0> ;
+  assign douta[11] = \<const0> ;
+  assign douta[10] = \<const0> ;
+  assign douta[9] = \<const0> ;
+  assign douta[8] = \<const0> ;
+  assign douta[7] = \<const0> ;
+  assign douta[6] = \<const0> ;
+  assign douta[5] = \<const0> ;
+  assign douta[4] = \<const0> ;
+  assign douta[3] = \<const0> ;
+  assign douta[2] = \<const0> ;
+  assign douta[1] = \<const0> ;
+  assign douta[0] = \<const0> ;
+  assign sbiterra = \<const0> ;
+  assign sbiterrb = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[0] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [0]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[10] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [10]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[11] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [11]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[12] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [12]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[13] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [13]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[13] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[14] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [14]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[14] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[15] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [15]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[15] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[16] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [16]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[17] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [17]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[18] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [18]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[19] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [19]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[1] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [1]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[20] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [20]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[21] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [21]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[22] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [22]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[23] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [23]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[2] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [2]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[3] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [3]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[4] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [4]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[5] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [5]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[6] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [6]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[7] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [7]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[8] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [8]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[9] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [9]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
+        .Q(doutb[0]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
+        .Q(doutb[10]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
+        .Q(doutb[11]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][12] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
+        .Q(doutb[12]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][13] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[13] ),
+        .Q(doutb[13]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][14] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[14] ),
+        .Q(doutb[14]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][15] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[15] ),
+        .Q(doutb[15]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[16] ),
+        .Q(doutb[16]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[17] ),
+        .Q(doutb[17]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][18] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[18] ),
+        .Q(doutb[18]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][19] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[19] ),
+        .Q(doutb[19]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[1] ),
+        .Q(doutb[1]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][20] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[20] ),
+        .Q(doutb[20]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][21] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[21] ),
+        .Q(doutb[21]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][22] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[22] ),
+        .Q(doutb[22]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][23] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[23] ),
+        .Q(doutb[23]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][2] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[2] ),
+        .Q(doutb[2]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[3] ),
+        .Q(doutb[3]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][4] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[4] ),
+        .Q(doutb[4]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[5] ),
+        .Q(doutb[5]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[6] ),
+        .Q(doutb[6]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[7] ),
+        .Q(doutb[7]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][8] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
+        .Q(doutb[8]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][9] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
+        .Q(doutb[9]),
+        .R(rstb));
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "384" *) 
+  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "13" *) 
+  RAM32M16 #(
+    .INIT_A(64'h0000000000000000),
+    .INIT_B(64'h0000000000000000),
+    .INIT_C(64'h0000000000000000),
+    .INIT_D(64'h0000000000000000),
+    .INIT_E(64'h0000000000000000),
+    .INIT_F(64'h0000000000000000),
+    .INIT_G(64'h0000000000000000),
+    .INIT_H(64'h0000000000000000)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13 
+       (.ADDRA({1'b0,addrb}),
+        .ADDRB({1'b0,addrb}),
+        .ADDRC({1'b0,addrb}),
+        .ADDRD({1'b0,addrb}),
+        .ADDRE({1'b0,addrb}),
+        .ADDRF({1'b0,addrb}),
+        .ADDRG({1'b0,addrb}),
+        .ADDRH({1'b0,addra}),
+        .DIA(dina[1:0]),
+        .DIB(dina[3:2]),
+        .DIC(dina[5:4]),
+        .DID(dina[7:6]),
+        .DIE(dina[9:8]),
+        .DIF(dina[11:10]),
+        .DIG(dina[13:12]),
+        .DIH({1'b0,1'b0}),
+        .DOA(\gen_rd_b.doutb_reg0 [1:0]),
+        .DOB(\gen_rd_b.doutb_reg0 [3:2]),
+        .DOC(\gen_rd_b.doutb_reg0 [5:4]),
+        .DOD(\gen_rd_b.doutb_reg0 [7:6]),
+        .DOE(\gen_rd_b.doutb_reg0 [9:8]),
+        .DOF(\gen_rd_b.doutb_reg0 [11:10]),
+        .DOG(\gen_rd_b.doutb_reg0 [13:12]),
+        .DOH(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_13_DOH_UNCONNECTED [1:0]),
+        .WCLK(clka),
+        .WE(wea));
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "384" *) 
+  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "14" *) 
+  (* ram_slice_end = "23" *) 
+  RAM32M16 #(
+    .INIT_A(64'h0000000000000000),
+    .INIT_B(64'h0000000000000000),
+    .INIT_C(64'h0000000000000000),
+    .INIT_D(64'h0000000000000000),
+    .INIT_E(64'h0000000000000000),
+    .INIT_F(64'h0000000000000000),
+    .INIT_G(64'h0000000000000000),
+    .INIT_H(64'h0000000000000000)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23 
+       (.ADDRA({1'b0,addrb}),
+        .ADDRB({1'b0,addrb}),
+        .ADDRC({1'b0,addrb}),
+        .ADDRD({1'b0,addrb}),
+        .ADDRE({1'b0,addrb}),
+        .ADDRF({1'b0,addrb}),
+        .ADDRG({1'b0,addrb}),
+        .ADDRH({1'b0,addra}),
+        .DIA(dina[15:14]),
+        .DIB(dina[17:16]),
+        .DIC(dina[19:18]),
+        .DID(dina[21:20]),
+        .DIE(dina[23:22]),
+        .DIF({1'b0,1'b0}),
+        .DIG({1'b0,1'b0}),
+        .DIH({1'b0,1'b0}),
+        .DOA(\gen_rd_b.doutb_reg0 [15:14]),
+        .DOB(\gen_rd_b.doutb_reg0 [17:16]),
+        .DOC(\gen_rd_b.doutb_reg0 [19:18]),
+        .DOD(\gen_rd_b.doutb_reg0 [21:20]),
+        .DOE(\gen_rd_b.doutb_reg0 [23:22]),
+        .DOF(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOF_UNCONNECTED [1:0]),
+        .DOG(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOG_UNCONNECTED [1:0]),
+        .DOH(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_14_23_DOH_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(wea));
 endmodule

@@ -38,7 +38,7 @@ parameter gpio_bit = 2
     output wire s1_axis_tready,
     input wire [255:0] s1_axis_tdata,
     
-    input wire [7:0] gpio_in,
+    input wire [15:0] gpio_in,
     
     //output
     output wire [255:0] m_axis_tdata,

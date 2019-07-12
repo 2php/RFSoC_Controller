@@ -23,6 +23,20 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+void rf_set_zero_delay(u8 channel, u32 value)
+{
+	gpio_select_channel(channel);
+	for(int i = 0; i < 32; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (value & (1 << i)) == 0 ? 0 : 1;
+		gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+		//cycle locking_sclk
+		gpio_set_pin(RF_BANK, ZERO_SCLK, 0x01);
+		gpio_set_pin(RF_BANK, ZERO_SCLK, 0x00);
+	}
+}
+
 void rf_set_locking_select(u8* bytes)
 {
 	//There will always be two bytes here
@@ -40,8 +54,10 @@ void rf_set_locking_select(u8* bytes)
 	}
 }
 
-void rf_set_locking_waveform(u8* stream)
+void rf_set_locking_waveform(u8 channel, u8* stream)
 {
+
+	gpio_select_channel(channel);
 	//Stream will alway be 32 bytes long
 	for(int i = 31; i >= 0; i--)
 	{
@@ -103,8 +119,9 @@ void rf_load_bitstream(u8* stream, u32 length, u8 channel)
 	}
 }
 
-void rf_set_repeat_cycles(u32 cycles)
+void rf_set_repeat_cycles(u8 channel, u32 cycles)
 {
+	gpio_select_channel(channel);
 	gpio_write_repeat_cycles(cycles);
 }
 
@@ -168,7 +185,7 @@ void rf_repeat_test()
 	rf_flush_buffer();
 
 	//set the repeat cycles
-	rf_set_repeat_cycles(15);
+	//rf_set_repeat_cycles(15);
 
 
 	//load the bitstream to all channels
@@ -266,7 +283,7 @@ void rf_ext_trigger_test()
 	rf_flush_buffer();
 
 	//set the repeat cycles
-	rf_set_repeat_cycles(15);
+	//rf_set_repeat_cycles(15);
 
 	//load the bitstream to all channels
 	for(int i = 0; i < NUM_CHANNELS; i++)

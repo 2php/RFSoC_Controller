@@ -1,6 +1,490 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 14:37:21 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'top_level_rfsoc_data_pipeline_3_0'.
+
+
+-Upgrade has removed interface 'S_AXIS_0'
+
+-Upgrade has removed interface 'm_axis_0'
+
+-Upgrade has added interface 'S_AXIS' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'm_axis' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_rfsoc_data_pipeline_3_0'. These changes may impact your design.
+
+
+-Upgraded port 'gpio_in' width 16 differs from original width 8
+
+-Upgrade has removed port 'S_AXIS_0_tdata'
+
+-Upgrade has removed port 'S_AXIS_0_tready'
+
+-Upgrade has removed port 'S_AXIS_0_tvalid'
+
+-Upgrade has removed port 'count_val_in_0'
+
+-Upgrade has removed port 'ext_trigger_0'
+
+-Upgrade has removed port 'm_axis_0_tdata'
+
+-Upgrade has removed port 'm_axis_0_tready'
+
+-Upgrade has removed port 'm_axis_0_tvalid'
+
+-Upgrade has added port 'S_AXIS_tdata'
+
+-Upgrade has added port 'S_AXIS_tready'
+
+-Upgrade has added port 'S_AXIS_tvalid'
+
+-Upgrade has added port 'ext_trigger'
+
+-Upgrade has added port 'is_selected'
+
+-Upgrade has added port 'm_axis_tdata'
+
+-Upgrade has added port 'm_axis_tready'
+
+-Upgrade has added port 'm_axis_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 14:37:21 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'top_level_rfsoc_data_pipeline_2_0'.
+
+
+-Upgrade has removed interface 'S_AXIS_0'
+
+-Upgrade has removed interface 'm_axis_0'
+
+-Upgrade has added interface 'S_AXIS' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'm_axis' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_rfsoc_data_pipeline_2_0'. These changes may impact your design.
+
+
+-Upgraded port 'gpio_in' width 16 differs from original width 8
+
+-Upgrade has removed port 'S_AXIS_0_tdata'
+
+-Upgrade has removed port 'S_AXIS_0_tready'
+
+-Upgrade has removed port 'S_AXIS_0_tvalid'
+
+-Upgrade has removed port 'count_val_in_0'
+
+-Upgrade has removed port 'ext_trigger_0'
+
+-Upgrade has removed port 'm_axis_0_tdata'
+
+-Upgrade has removed port 'm_axis_0_tready'
+
+-Upgrade has removed port 'm_axis_0_tvalid'
+
+-Upgrade has added port 'S_AXIS_tdata'
+
+-Upgrade has added port 'S_AXIS_tready'
+
+-Upgrade has added port 'S_AXIS_tvalid'
+
+-Upgrade has added port 'ext_trigger'
+
+-Upgrade has added port 'is_selected'
+
+-Upgrade has added port 'm_axis_tdata'
+
+-Upgrade has added port 'm_axis_tready'
+
+-Upgrade has added port 'm_axis_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 14:37:21 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'top_level_rfsoc_data_pipeline_1_0'.
+
+
+-Upgrade has removed interface 'S_AXIS_0'
+
+-Upgrade has removed interface 'm_axis_0'
+
+-Upgrade has added interface 'S_AXIS' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'm_axis' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_rfsoc_data_pipeline_1_0'. These changes may impact your design.
+
+
+-Upgraded port 'gpio_in' width 16 differs from original width 8
+
+-Upgrade has removed port 'S_AXIS_0_tdata'
+
+-Upgrade has removed port 'S_AXIS_0_tready'
+
+-Upgrade has removed port 'S_AXIS_0_tvalid'
+
+-Upgrade has removed port 'count_val_in_0'
+
+-Upgrade has removed port 'ext_trigger_0'
+
+-Upgrade has removed port 'm_axis_0_tdata'
+
+-Upgrade has removed port 'm_axis_0_tready'
+
+-Upgrade has removed port 'm_axis_0_tvalid'
+
+-Upgrade has added port 'S_AXIS_tdata'
+
+-Upgrade has added port 'S_AXIS_tready'
+
+-Upgrade has added port 'S_AXIS_tvalid'
+
+-Upgrade has added port 'ext_trigger'
+
+-Upgrade has added port 'is_selected'
+
+-Upgrade has added port 'm_axis_tdata'
+
+-Upgrade has added port 'm_axis_tready'
+
+-Upgrade has added port 'm_axis_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 14:37:21 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'top_level_rfsoc_data_pipeline_0_0'.
+
+
+-Upgrade has removed interface 'S_AXIS_0'
+
+-Upgrade has removed interface 'm_axis_0'
+
+-Upgrade has added interface 'S_AXIS' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 'm_axis' (xilinx.com:interface:axis:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_rfsoc_data_pipeline_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'gpio_in' width 16 differs from original width 8
+
+-Upgrade has removed port 'S_AXIS_0_tdata'
+
+-Upgrade has removed port 'S_AXIS_0_tready'
+
+-Upgrade has removed port 'S_AXIS_0_tvalid'
+
+-Upgrade has removed port 'count_val_in_0'
+
+-Upgrade has removed port 'ext_trigger_0'
+
+-Upgrade has removed port 'm_axis_0_tdata'
+
+-Upgrade has removed port 'm_axis_0_tready'
+
+-Upgrade has removed port 'm_axis_0_tvalid'
+
+-Upgrade has added port 'S_AXIS_tdata'
+
+-Upgrade has added port 'S_AXIS_tready'
+
+-Upgrade has added port 'S_AXIS_tvalid'
+
+-Upgrade has added port 'ext_trigger'
+
+-Upgrade has added port 'is_selected'
+
+-Upgrade has added port 'm_axis_tdata'
+
+-Upgrade has added port 'm_axis_tready'
+
+-Upgrade has added port 'm_axis_tvalid'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 11:42:16 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 11:42:16 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 11:42:16 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 11:42:16 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 10:47:41 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 10:47:41 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 10:47:41 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jul 11 10:47:41 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Wed Jul 10 18:15:35 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

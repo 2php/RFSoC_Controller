@@ -56,16 +56,16 @@
 (* IP_DEFINITION_SOURCE = "IPI" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_rfsoc_data_pipeline_3_0 (
-  S_AXIS_0_tdata,
-  S_AXIS_0_tready,
-  S_AXIS_0_tvalid,
-  count_val_in_0,
-  ext_trigger_0,
+  S_AXIS_tdata,
+  S_AXIS_tready,
+  S_AXIS_tvalid,
+  ext_trigger,
   gpio_in,
   is_locking,
-  m_axis_0_tdata,
-  m_axis_0_tready,
-  m_axis_0_tvalid,
+  is_selected,
+  m_axis_tdata,
+  m_axis_tready,
+  m_axis_tvalid,
   microblaze_clk,
   microblaze_resetn,
   pipeline_active,
@@ -73,34 +73,32 @@ module top_level_rfsoc_data_pipeline_3_0 (
   rf_resetn
 );
 
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TDATA" *)
-input wire [31 : 0] S_AXIS_0_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TREADY" *)
-output wire S_AXIS_0_tready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_0 TVALID" *)
-input wire S_AXIS_0_tvalid;
-input wire [31 : 0] count_val_in_0;
-input wire ext_trigger_0;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *)
-input wire [7 : 0] gpio_in;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *)
+input wire [31 : 0] S_AXIS_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *)
+output wire S_AXIS_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *)
+input wire S_AXIS_tvalid;
+input wire ext_trigger;
+input wire [15 : 0] gpio_in;
 input wire is_locking;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *)
-output wire [255 : 0] m_axis_0_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TREADY" *)
-input wire m_axis_0_tready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TVALID" *)
-output wire m_axis_0_tvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS_0, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
+input wire is_selected;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
+output wire [255 : 0] m_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *)
+input wire m_axis_tready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
+output wire m_axis_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *)
 input wire microblaze_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *)
 input wire microblaze_resetn;
 output wire pipeline_active;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis_0, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *)
 input wire rf_clock;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -108,16 +106,16 @@ input wire rf_clock;
 input wire rf_resetn;
 
   rfsoc_data_pipeline inst (
-    .S_AXIS_0_tdata(S_AXIS_0_tdata),
-    .S_AXIS_0_tready(S_AXIS_0_tready),
-    .S_AXIS_0_tvalid(S_AXIS_0_tvalid),
-    .count_val_in_0(count_val_in_0),
-    .ext_trigger_0(ext_trigger_0),
+    .S_AXIS_tdata(S_AXIS_tdata),
+    .S_AXIS_tready(S_AXIS_tready),
+    .S_AXIS_tvalid(S_AXIS_tvalid),
+    .ext_trigger(ext_trigger),
     .gpio_in(gpio_in),
     .is_locking(is_locking),
-    .m_axis_0_tdata(m_axis_0_tdata),
-    .m_axis_0_tready(m_axis_0_tready),
-    .m_axis_0_tvalid(m_axis_0_tvalid),
+    .is_selected(is_selected),
+    .m_axis_tdata(m_axis_tdata),
+    .m_axis_tready(m_axis_tready),
+    .m_axis_tvalid(m_axis_tvalid),
     .microblaze_clk(microblaze_clk),
     .microblaze_resetn(microblaze_resetn),
     .pipeline_active(pipeline_active),

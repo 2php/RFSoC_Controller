@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x893D2EC9327B8853",
+      "boundary_crc": "0x78244B43A6F4997F",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "rfsoc_data_pipeline",
       "synth_flow_mode": "Hierarchical",
@@ -12,14 +12,14 @@
       "axis_data_fifo_0": "",
       "axis_dwidth_converter_0": "",
       "axis_data_fifo_clock_crossing": "",
-      "axis_mux_0": "",
       "axis_data_fifo_waveform": "",
+      "axis_data_fifo_gpio": "",
       "gpio_buffer_0": "",
-      "axis_data_fifo_1": "",
-      "axis_tready_slice_0": ""
+      "axis_tready_slice_0": "",
+      "axis_mux_0": ""
     },
     "interface_ports": {
-      "m_axis_0": {
+      "m_axis": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
@@ -76,7 +76,7 @@
           }
         }
       },
-      "S_AXIS_0": {
+      "S_AXIS": {
         "mode": "Slave",
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
@@ -132,8 +132,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_BUSIF": {
-            "value": "S_AXIS_0",
-            "value_src": "default"
+            "value": "S_AXIS"
           },
           "ASSOCIATED_RESET": {
             "value": "microblaze_resetn"
@@ -160,8 +159,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_BUSIF": {
-            "value": "m_axis_0",
-            "value_src": "default"
+            "value": "m_axis"
           },
           "ASSOCIATED_RESET": {
             "value": "rf_resetn"
@@ -211,31 +209,22 @@
           }
         }
       },
-      "gpio_in": {
-        "type": "data",
-        "direction": "I",
-        "left": "7",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "ext_trigger_0": {
+      "ext_trigger": {
         "direction": "I"
-      },
-      "count_val_in_0": {
-        "direction": "I",
-        "left": "31",
-        "right": "0"
       },
       "pipeline_active": {
         "direction": "O"
       },
       "is_locking": {
         "direction": "I"
+      },
+      "is_selected": {
+        "direction": "I"
+      },
+      "gpio_in": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
       }
     },
     "components": {
@@ -278,242 +267,27 @@
           }
         }
       },
-      "axis_mux_0": {
-        "vlnv": "xilinx.com:module_ref:axis_mux:1.0",
-        "xci_name": "rfsoc_data_pipeline_axis_mux_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "axis_mux",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "m_axis": {
-            "mode": "Master",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "rfsoc_data_pipeline_rf_clock",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "250000000",
-                "value_src": "user_prop"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "32",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "m_axis_tdata",
-                "direction": "O",
-                "left": "255",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "m_axis_tvalid",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "m_axis_tready",
-                "direction": "I"
-              }
-            }
-          },
-          "s0_axis": {
-            "mode": "Slave",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "rfsoc_data_pipeline_rf_clock",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "250000000",
-                "value_src": "user_prop"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "32",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "s0_axis_tdata",
-                "direction": "I",
-                "left": "255",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s0_axis_tvalid",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "s0_axis_tready",
-                "direction": "O"
-              }
-            }
-          },
-          "s1_axis": {
-            "mode": "Slave",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "rfsoc_data_pipeline_rf_clock",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "250000000",
-                "value_src": "user_prop"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "32",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "s1_axis_tdata",
-                "direction": "I",
-                "left": "255",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s1_axis_tvalid",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "s1_axis_tready",
-                "direction": "O"
-              }
-            }
-          }
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "m_axis:s0_axis:s1_axis",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "rfsoc_data_pipeline_rf_clock",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "250000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "gpio_in": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
       "axis_data_fifo_waveform": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "rfsoc_data_pipeline_axis_data_fifo_waveform_3",
         "parameters": {
           "TDATA_NUM_BYTES": {
             "value": "32"
+          }
+        }
+      },
+      "axis_data_fifo_gpio": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_1_5",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "16"
+          },
+          "IS_ACLK_ASYNC": {
+            "value": "1"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "2"
           }
         }
       },
@@ -547,7 +321,7 @@
                 "value_src": "constant"
               },
               "TDATA_NUM_BYTES": {
-                "value": "1",
+                "value": "2",
                 "value_src": "constant"
               },
               "TDEST_WIDTH": {
@@ -567,7 +341,7 @@
               "TDATA": {
                 "physical_name": "m_axis_tdata",
                 "direction": "O",
-                "left": "7",
+                "left": "15",
                 "right": "0"
               },
               "TVALID": {
@@ -604,7 +378,7 @@
                 "value_src": "constant"
               },
               "TDATA_NUM_BYTES": {
-                "value": "1",
+                "value": "2",
                 "value_src": "constant"
               },
               "TDEST_WIDTH": {
@@ -624,7 +398,7 @@
               "TDATA": {
                 "physical_name": "s_axis_tdata",
                 "direction": "I",
-                "left": "7",
+                "left": "15",
                 "right": "0"
               },
               "TVALID": {
@@ -641,31 +415,13 @@
         "ports": {
           "gpio_in": {
             "direction": "I",
-            "left": "7",
-            "right": "0",
-            "parameters": {
-              "LAYERED_METADATA": {
-                "value": "undef",
-                "value_src": "default_prop"
-              }
-            }
+            "left": "15",
+            "right": "0"
           },
           "gpio_out": {
             "direction": "O",
-            "left": "7",
+            "left": "15",
             "right": "0"
-          }
-        }
-      },
-      "axis_data_fifo_1": {
-        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_1_5",
-        "parameters": {
-          "FIFO_DEPTH": {
-            "value": "16"
-          },
-          "IS_ACLK_ASYNC": {
-            "value": "1"
           }
         }
       },
@@ -898,22 +654,250 @@
           },
           "gpio_in": {
             "direction": "I",
-            "left": "7",
+            "left": "15",
             "right": "0"
           },
           "ext_trigger": {
             "direction": "I"
-          },
-          "count_val_in": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
           },
           "pipeline_active": {
             "direction": "O"
           },
           "is_locking": {
             "direction": "I"
+          },
+          "is_selected": {
+            "direction": "I"
+          }
+        }
+      },
+      "axis_mux_0": {
+        "vlnv": "xilinx.com:module_ref:axis_mux:1.0",
+        "xci_name": "rfsoc_data_pipeline_axis_mux_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "axis_mux",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "rfsoc_data_pipeline_rf_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "32",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "255",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_tready",
+                "direction": "I"
+              }
+            }
+          },
+          "s0_axis": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "rfsoc_data_pipeline_rf_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "32",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s0_axis_tdata",
+                "direction": "I",
+                "left": "255",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s0_axis_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "s0_axis_tready",
+                "direction": "O"
+              }
+            }
+          },
+          "s1_axis": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "rfsoc_data_pipeline_rf_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "32",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s1_axis_tdata",
+                "direction": "I",
+                "left": "255",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s1_axis_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "s1_axis_tready",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axis:s0_axis:s1_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "rfsoc_data_pipeline_rf_clock",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "gpio_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
           }
         }
       }
@@ -939,14 +923,14 @@
       },
       "axis_tready_slice_0_m_axis": {
         "interface_ports": [
-          "m_axis_0",
+          "m_axis",
           "axis_tready_slice_0/m_axis"
         ]
       },
       "axis_data_fifo_1_M_AXIS1": {
         "interface_ports": [
           "gpio_buffer_0/s_axis",
-          "axis_data_fifo_1/M_AXIS"
+          "axis_data_fifo_gpio/M_AXIS"
         ]
       },
       "axis_tready_slice_0_mloop_axis": {
@@ -957,7 +941,7 @@
       },
       "gpio_buffer_0_m_axis": {
         "interface_ports": [
-          "axis_data_fifo_1/S_AXIS",
+          "axis_data_fifo_gpio/S_AXIS",
           "gpio_buffer_0/m_axis"
         ]
       },
@@ -975,7 +959,7 @@
       },
       "S_AXIS_0_1": {
         "interface_ports": [
-          "S_AXIS_0",
+          "S_AXIS",
           "axis_data_fifo_0/S_AXIS"
         ]
       }
@@ -984,30 +968,24 @@
       "Net": {
         "ports": [
           "gpio_buffer_0/gpio_out",
-          "axis_mux_0/gpio_in",
-          "axis_tready_slice_0/gpio_in"
-        ]
-      },
-      "gpio_in_1": {
-        "ports": [
-          "gpio_in",
-          "gpio_buffer_0/gpio_in"
+          "axis_tready_slice_0/gpio_in",
+          "axis_mux_0/gpio_in"
         ]
       },
       "rf_clock_1": {
         "ports": [
           "rf_clock",
-          "axis_data_fifo_1/m_axis_aclk",
-          "axis_mux_0/clk",
+          "axis_data_fifo_gpio/m_axis_aclk",
           "axis_data_fifo_waveform/s_axis_aclk",
           "axis_data_fifo_clock_crossing/m_axis_aclk",
-          "axis_tready_slice_0/clk"
+          "axis_tready_slice_0/clk",
+          "axis_mux_0/clk"
         ]
       },
       "microblaze_clk_1": {
         "ports": [
           "microblaze_clk",
-          "axis_data_fifo_1/s_axis_aclk",
+          "axis_data_fifo_gpio/s_axis_aclk",
           "axis_data_fifo_clock_crossing/s_axis_aclk",
           "axis_dwidth_converter_0/aclk",
           "axis_data_fifo_0/s_axis_aclk"
@@ -1016,7 +994,7 @@
       "microblaze_reset_1": {
         "ports": [
           "microblaze_resetn",
-          "axis_data_fifo_1/s_axis_aresetn",
+          "axis_data_fifo_gpio/s_axis_aresetn",
           "axis_data_fifo_clock_crossing/s_axis_aresetn",
           "axis_dwidth_converter_0/aresetn",
           "axis_data_fifo_0/s_axis_aresetn"
@@ -1025,21 +1003,15 @@
       "rf_reset_1": {
         "ports": [
           "rf_resetn",
-          "axis_mux_0/reset",
           "axis_data_fifo_waveform/s_axis_aresetn",
-          "axis_tready_slice_0/reset"
+          "axis_tready_slice_0/reset",
+          "axis_mux_0/reset"
         ]
       },
       "ext_trigger_0_1": {
         "ports": [
-          "ext_trigger_0",
+          "ext_trigger",
           "axis_tready_slice_0/ext_trigger"
-        ]
-      },
-      "count_val_in_0_1": {
-        "ports": [
-          "count_val_in_0",
-          "axis_tready_slice_0/count_val_in"
         ]
       },
       "axis_tready_slice_0_pipeline_active": {
@@ -1052,6 +1024,18 @@
         "ports": [
           "is_locking",
           "axis_tready_slice_0/is_locking"
+        ]
+      },
+      "is_selected_0_1": {
+        "ports": [
+          "is_selected",
+          "axis_tready_slice_0/is_selected"
+        ]
+      },
+      "gpio_in_0_1": {
+        "ports": [
+          "gpio_in",
+          "gpio_buffer_0/gpio_in"
         ]
       }
     }

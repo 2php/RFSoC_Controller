@@ -8,7 +8,7 @@
 #include "gpio.h"
 #include "xgpio.h"
 
-u8 GPIO_PREV_STATE[2];
+u16 RF_PREV_STATE;
 
 void gpio_init()
 {
@@ -21,12 +21,11 @@ void gpio_init()
 		debug_print("GPIO init failed!");
 	}
 
-	GPIO_PREV_STATE[0] = 0x0;
-	GPIO_PREV_STATE[1] = 0x0;
+	RF_PREV_STATE = 0x0000;
 
-	//set channel 1 and 2 to be all outputs except the trigger pin
-	XGpio_SetDataDirection(&Gpio, 1, 0x00000000);
-	XGpio_SetDataDirection(&Gpio, 2, 0x80);
+	//set channel 1 and 2 to be all outputs
+	XGpio_SetDataDirection(&Gpio, 1, 0x00);
+	XGpio_SetDataDirection(&Gpio, 2, 0x0000);
 
 
 
@@ -37,36 +36,44 @@ void gpio_init()
 
 void gpio_set_pin(u8 bank, u8 bit, u8 value)
 {
-	if(bank > 2 || bank < 1 || bit > 7 || bit < 0)
+	if(bank != RF_BANK || bit > 15 || bit < 0)
 	{
 		return;
 	}
-	u8 new_bank_value;
+	u16 new_bank_value;
 	if(value){
-		new_bank_value = GPIO_PREV_STATE[bank-1] | (0x01 << bit);
+		new_bank_value = RF_PREV_STATE | (0x01 << bit);
 	}
 	else
 	{
-		new_bank_value = GPIO_PREV_STATE[bank-1] & ~(0x01 << bit);
+		new_bank_value = RF_PREV_STATE & ~(0x01 << bit);
 	}
 
 	XGpio_DiscreteWrite(&Gpio, bank, new_bank_value);
-	GPIO_PREV_STATE[bank-1] = new_bank_value;
+	RF_PREV_STATE = new_bank_value;
 }
-void gpio_set_bank(u8 bank, u8 value)
+void gpio_set_bank(u8 bank, u16 value)
 {
-	if(bank > 2 || bank < 1)
+	if(bank != RF_BANK)
 	{
 		return;
 	}
 	XGpio_DiscreteWrite(&Gpio, bank, value);
-	GPIO_PREV_STATE[bank-1] = value;
+	RF_PREV_STATE = value;
 
 }
 
-void gpio_write_repeat_cycles(u32 cycles)
+void gpio_write_repeat_cycles(u32 value)
 {
-	XGpio_DiscreteWrite(&Gpio, COUNT_BANK, cycles);
+	for(int i = 0; i < 32; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (value & (1 << i)) == 0 ? 0 : 1;
+		gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+		//cycle the cycles sclk
+		gpio_set_pin(RF_BANK, CYCLES_SCLK, 0x01);
+		gpio_set_pin(RF_BANK, CYCLES_SCLK, 0x00);
+	}
 }
 
 //returns 1 if the trigger is active
@@ -78,4 +85,29 @@ u8 gpio_read_trigger()
 		return 0;
 	}
 	return 1;
+}
+
+void gpio_set_leds(u8 value)
+{
+	XGpio_DiscreteWrite(&Gpio, LED_BANK, value);
+}
+
+void gpio_select_channel(u8 c)
+{
+	for(int i = 0; i < 16; i++)
+	{
+		//If the channel matches, shift in a 1 to select it
+		if(i == c)
+		{
+			gpio_set_pin(RF_BANK, LOCKING_SDATA, 0x01);
+		}
+		else
+		{
+			gpio_set_pin(RF_BANK, LOCKING_SDATA, 0x00);
+		}
+
+		//cycle the channel select clock
+		gpio_set_pin(RF_BANK, CHANNEL_SELECT_SCLK, 0x01);
+		gpio_set_pin(RF_BANK, CHANNEL_SELECT_SCLK, 0x00);
+	}
 }

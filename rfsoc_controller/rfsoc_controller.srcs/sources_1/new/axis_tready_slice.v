@@ -24,9 +24,11 @@ module axis_tready_slice
 #(
 parameter trigger_override_bit = 0,//Tells the state machine to trigger continuously instead of for a set number of clock cycles
 parameter ready_bit = 1,//Tells the state machine to trigger
-parameter sclk = 3,//Used for loading the locking cycle
+parameter locking_sclk = 3,//Used for loading the locking cycle
 parameter sdata = 4,
-parameter buffer_flush_bit = 5//Used for setting all outputs to 0
+parameter buffer_flush_bit = 5,//Used for setting all outputs to 0
+parameter zeros_sclk = 7,
+parameter cycles_sclk = 8
 )
 (
 
@@ -38,7 +40,7 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     input wire s_axis_tlast,
     
     
-    input wire [7:0] gpio_in,
+    input wire [15:0] gpio_in,
     input wire ext_trigger,
     
     
@@ -50,30 +52,35 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     (* dont_touch = "true" *) output reg mloop_axis_tvalid,
     input wire mloop_axis_tready, 
     
-    input wire [31:0] count_val_in,
     output wire pipeline_active,
     
-    input wire is_locking
+    input wire is_locking,
+    
+    input wire is_selected
 
     
     );
     
-    assign count_out = count;
-    assign state_out = state;
-    assign pipeline_active = s_axis_tready;
-    
-    wire [31:0] count_val;
-    assign count_val = count_val_in;
+    assign pipeline_active = state != state_wait_trigger;
     
     reg [1:0] state;
     reg [31:0] count;
     
+   
+    
     localparam [1:0] state_wait_trigger = 2'b00,
-		             state_trigger = 2'b01,
-		             state_cleanup = 2'b10; 
+		             state_zeros = 2'b01,
+		             state_trigger = 2'b10,
+		             state_cleanup = 2'b11; 
     
     wire [255:0] locking_waveform;
-    shift_register #(256) sr(.clk(clk), .sclk(gpio_in[sclk]), .reset(reset), .data_in(gpio_in[sdata]), .data_out(locking_waveform));
+    shift_register #(256) sr_locking(.clk(clk), .sclk(gpio_in[locking_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(locking_waveform));
+    
+    wire [31:0] zeros;
+    shift_register #(32) sr_zeros(.clk(clk), .sclk(gpio_in[zeros_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(zeros));
+    
+    wire [31:0] count_val;
+    shift_register #(32) sr_cycles(.clk(clk), .sclk(gpio_in[cycles_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(count_val));
     
     initial begin
          s_axis_tready <= 1'b0;
@@ -107,14 +114,30 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
                         end
                         else begin
                             //Increment count
-                            count <= count + 1;
+                            count <= 1;
                             //advance to the trigger state
-                            state <= state_trigger;
-                            //start all data transfers
-                            s_axis_tready <= 1'b1;
-                            mloop_axis_tvalid <= 1'b1;
+                            state <= state_zeros;
                         end
                     end
+                end
+                
+                state_zeros: begin
+                    //If we're done counting zeros
+                    if(count == zeros || count > zeros) begin
+                        //Increment count
+                        count <= 1;
+                        //advance to the trigger state
+                        state <= state_trigger;
+                        //start all data transfers
+                        s_axis_tready <= 1'b1;
+                        mloop_axis_tvalid <= 1'b1;
+                    
+                    end
+                    else begin
+                        //Increment our zero count
+                        count = count + 1'b1;
+                    end
+                
                 end
                 
                 
@@ -160,7 +183,7 @@ parameter buffer_flush_bit = 5//Used for setting all outputs to 0
     end
     
     
-    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (is_locking == 1'b1 ? locking_waveform : 0));
+    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (is_locking == 1'b1 && state != state_zeros ? locking_waveform : 0));
 	assign mloop_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : s_axis_tdata; 
 	assign m_axis_tvalid = 1'b1;
     
