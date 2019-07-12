@@ -7,7 +7,7 @@ Created on Fri Jul 12 10:14:37 2019
 
 import init_board_int as ib
 import sys
-import RFSoC_board as rf
+import RFSoC_Board as rf
 
 #load the board state
 board = ib.load_board()

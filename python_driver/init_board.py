@@ -6,7 +6,7 @@ import sys
 #if we weren't passed a port as an argument
 if(len(sys.argv) == 1):
     print("Error, please provide a portname as an argument..., usage is \"init_board.py PORTNAME\"")
-    quit()
+    sys.exit()
     
 port_choice = sys.argv[1]
 print("\n\n***** Initializing board on port: " + port_choice + " *****\n")

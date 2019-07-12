@@ -73,7 +73,7 @@ def init_board_object(port = None):
 def load_board():
     try:
         #open the database
-        f = open("database.txt", "wb")
+        f = open("database.txt", "rb")
         board = pickle.load(f)
         f.close()
         return board
@@ -91,5 +91,7 @@ def save_board(board):
         pickle.dump(board, f)
         f.flush()
         f.close()
+        return 0
     except:
         print("Error while trying to save board to disk")
+        return 1

@@ -6,7 +6,7 @@ Created on Fri Jul 12 09:36:43 2019
 """
 import init_board_int as ib
 import sys
-import RFSoC_board as rf
+import RFSoC_Board as rf
 
 #load the board state
 board = ib.load_board()
@@ -19,12 +19,13 @@ board.flush_buffer()
 #set locking select
 board.set_locking_select()
 
-#set the trigger mode
-board.set_trigger_mode(rf.TRIGGER_CYCLES)
+board.write_all_channels()
+
 
 #set the loopback mode
 board.set_loopback(rf.YES)
 
-board.write_all_channels()
+#set the trigger mode
+board.set_trigger_mode(rf.TRIGGER_CYCLES)
 
 print("Board is armed, trigger using trigger_board.py")

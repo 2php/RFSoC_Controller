@@ -44,6 +44,10 @@ ON = 0x01
 OFF = 0x00
 
 def stream_scale(stream, old_min, old_max, new_min, new_max):
+    
+     if(old_max == old_min):
+        return stream
+    
      new_stream = []
      
      #add the minimum value to everyrthing to eliminate the offset
