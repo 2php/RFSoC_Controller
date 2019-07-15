@@ -12,6 +12,10 @@ port_choice = sys.argv[1]
 print("\n\n***** Initializing board on port: " + port_choice + " *****\n")
 board = ib.init_board_object(port_choice)
 
+if(board == None):
+    print("Error initializing board, was the port choice correct?")
+    sys.exit()
+
 if(board.flush_buffer()):
     print("Error while flushing board buffers")
     
