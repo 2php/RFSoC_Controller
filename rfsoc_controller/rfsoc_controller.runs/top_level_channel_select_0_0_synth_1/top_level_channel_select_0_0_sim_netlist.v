@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Jul 11 15:05:50 2019
+// Date        : Mon Jul 15 10:44:47 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_level_channel_select_0_0_sim_netlist.v
@@ -15,42 +15,41 @@
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_channel_select
    (Q,
     gpio_in,
-    rf_clk,
-    rf_reset);
-  output [3:0]Q;
+    mb_clk,
+    mb_reset);
+  output [15:0]Q;
   input [1:0]gpio_in;
-  input rf_clk;
-  input rf_reset;
+  input mb_clk;
+  input mb_reset;
 
-  wire [3:0]Q;
+  wire [15:0]Q;
   wire [1:0]gpio_in;
-  wire rf_clk;
-  wire rf_reset;
+  wire mb_clk;
+  wire mb_reset;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register sr
        (.Q(Q),
         .gpio_in(gpio_in),
-        .rf_clk(rf_clk),
-        .rf_reset(rf_reset));
+        .mb_clk(mb_clk),
+        .mb_reset(mb_reset));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register
    (Q,
     gpio_in,
-    rf_clk,
-    rf_reset);
-  output [3:0]Q;
+    mb_clk,
+    mb_reset);
+  output [15:0]Q;
   input [1:0]gpio_in;
-  input rf_clk;
-  input rf_reset;
+  input mb_clk;
+  input mb_reset;
 
-  wire [3:0]Q;
-  wire [14:3]data_next;
+  wire [15:0]Q;
   wire \data_out[0]_i_1_n_0 ;
   wire \data_out[0]_i_2_n_0 ;
   wire [1:0]gpio_in;
-  wire rf_clk;
-  wire rf_reset;
+  wire mb_clk;
+  wire mb_reset;
   wire state;
 
   LUT2 #(
@@ -62,12 +61,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register
   LUT1 #(
     .INIT(2'h1)) 
     \data_out[0]_i_2 
-       (.I0(rf_reset),
+       (.I0(mb_reset),
         .O(\data_out[0]_i_2_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[0] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
         .D(Q[1]),
@@ -75,55 +74,55 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[10] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[10]),
-        .Q(data_next[9]));
+        .D(Q[11]),
+        .Q(Q[10]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[11] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[11]),
-        .Q(data_next[10]));
+        .D(Q[12]),
+        .Q(Q[11]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[12] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[12]),
-        .Q(data_next[11]));
+        .D(Q[13]),
+        .Q(Q[12]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[13] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[13]),
-        .Q(data_next[12]));
+        .D(Q[14]),
+        .Q(Q[13]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[14] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[14]),
-        .Q(data_next[13]));
+        .D(Q[15]),
+        .Q(Q[14]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[15] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
         .D(gpio_in[0]),
-        .Q(data_next[14]));
+        .Q(Q[15]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[1] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
         .D(Q[2]),
@@ -131,7 +130,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[2] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
         .D(Q[3]),
@@ -139,63 +138,63 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_shift_register
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[3] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[3]),
+        .D(Q[4]),
         .Q(Q[3]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[4] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[4]),
-        .Q(data_next[3]));
+        .D(Q[5]),
+        .Q(Q[4]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[5] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[5]),
-        .Q(data_next[4]));
+        .D(Q[6]),
+        .Q(Q[5]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[6] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[6]),
-        .Q(data_next[5]));
+        .D(Q[7]),
+        .Q(Q[6]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[7] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[7]),
-        .Q(data_next[6]));
+        .D(Q[8]),
+        .Q(Q[7]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[8] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[8]),
-        .Q(data_next[7]));
+        .D(Q[9]),
+        .Q(Q[8]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_reg[9] 
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(\data_out[0]_i_1_n_0 ),
         .CLR(\data_out[0]_i_2_n_0 ),
-        .D(data_next[9]),
-        .Q(data_next[8]));
+        .D(Q[10]),
+        .Q(Q[9]));
   FDCE #(
     .INIT(1'b0)) 
     state_reg
-       (.C(rf_clk),
+       (.C(mb_clk),
         .CE(1'b1),
         .CLR(\data_out[0]_i_2_n_0 ),
         .D(gpio_in[1]),
@@ -206,34 +205,70 @@ endmodule
 (* X_CORE_INFO = "channel_select,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
-   (rf_clk,
-    rf_reset,
+   (mb_clk,
+    mb_reset,
     gpio_in,
     ch0,
     ch1,
     ch2,
-    ch3);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rf_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_clk, ASSOCIATED_RESET rf_reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rf_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_reset;
+    ch3,
+    ch4,
+    ch5,
+    ch6,
+    ch7,
+    ch8,
+    ch9,
+    ch10,
+    ch11,
+    ch12,
+    ch13,
+    ch14,
+    ch15);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mb_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mb_clk, ASSOCIATED_RESET mb_reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input mb_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 mb_reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mb_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input mb_reset;
   input [15:0]gpio_in;
   output ch0;
   output ch1;
   output ch2;
   output ch3;
+  output ch4;
+  output ch5;
+  output ch6;
+  output ch7;
+  output ch8;
+  output ch9;
+  output ch10;
+  output ch11;
+  output ch12;
+  output ch13;
+  output ch14;
+  output ch15;
 
   wire ch0;
   wire ch1;
+  wire ch10;
+  wire ch11;
+  wire ch12;
+  wire ch13;
+  wire ch14;
+  wire ch15;
   wire ch2;
   wire ch3;
+  wire ch4;
+  wire ch5;
+  wire ch6;
+  wire ch7;
+  wire ch8;
+  wire ch9;
   wire [15:0]gpio_in;
-  wire rf_clk;
-  wire rf_reset;
+  wire mb_clk;
+  wire mb_reset;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_channel_select inst
-       (.Q({ch3,ch2,ch1,ch0}),
+       (.Q({ch15,ch14,ch13,ch12,ch11,ch10,ch9,ch8,ch7,ch6,ch5,ch4,ch3,ch2,ch1,ch0}),
         .gpio_in({gpio_in[9],gpio_in[4]}),
-        .rf_clk(rf_clk),
-        .rf_reset(rf_reset));
+        .mb_clk(mb_clk),
+        .mb_reset(mb_reset));
 endmodule
 `ifndef GLBL
 `define GLBL

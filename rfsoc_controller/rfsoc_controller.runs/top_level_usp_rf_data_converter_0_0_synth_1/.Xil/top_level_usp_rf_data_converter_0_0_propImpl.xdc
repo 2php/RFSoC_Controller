@@ -25,7 +25,7 @@ set_property src_info {type:SCOPED_XDC file:2 line:61 export:INPUT save:INPUT re
 set_property LOC HSDAC_X0Y2 [get_cells -hier -filter {name =~ */tx2_u_dac}]
 set_property src_info {type:SCOPED_XDC file:2 line:62 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC HSDAC_X0Y3 [get_cells -hier -filter {name =~ */tx3_u_dac}]
-set_property src_info {type:SCOPED_XDC file:2 line:85 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:SCOPED_XDC file:2 line:100 export:INPUT save:INPUT read:READ} [current_design]
 set_multicycle_path -from [get_pins -filter {REF_PIN_NAME==C} -of [get_cells -hier -filter {name =~  *tile_config/ram/data_reg[*]}]] -to [get_pins -filter {REF_PIN_NAME=~DI[*]} -of [get_cells -hier -filter {name =~ *rf_wrapper_i/*_u_*c}]] -hold  2
-set_property src_info {type:SCOPED_XDC file:2 line:87 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:SCOPED_XDC file:2 line:102 export:INPUT save:INPUT read:READ} [current_design]
 set_multicycle_path -from [get_pins -filter {REF_PIN_NAME==C} -of [get_cells -hier -filter {name =~  *tile_config/ram/data_reg[*]}]] -to [get_pins -hierarchical -regexp {.*rf_wrapper_i\/.*_u_.*c\/DADDR\[[0-9][0]*\]}] -hold  2

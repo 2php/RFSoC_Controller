@@ -49,7 +49,19 @@
 module top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl (
   // DAC Fabric Feedback Clock for Tile 0
   input    clk_dac0,
-  output   clk_dac0_buf
+  output   clk_dac0_buf,
+      
+  // DAC Fabric Feedback Clock for Tile 1
+  input    clk_dac1,
+  output   clk_dac1_buf,
+      
+  // DAC Fabric Feedback Clock for Tile 2
+  input    clk_dac2,
+  output   clk_dac2_buf,
+      
+  // DAC Fabric Feedback Clock for Tile 3
+  input    clk_dac3,
+  output   clk_dac3_buf
       
 );
 
@@ -62,6 +74,39 @@ module top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl (
     .CLRMASK (1'b1),
     .DIV     (3'b000),
     .O       (clk_dac0_buf)
+  );  
+
+  BUFG_GT dac1_bufg_gt
+  (
+    .I       (clk_dac1),
+    .CE      (1'b1),
+    .CEMASK  (1'b1),
+    .CLR     (1'b0),
+    .CLRMASK (1'b1),
+    .DIV     (3'b000),
+    .O       (clk_dac1_buf)
+  );  
+
+  BUFG_GT dac2_bufg_gt
+  (
+    .I       (clk_dac2),
+    .CE      (1'b1),
+    .CEMASK  (1'b1),
+    .CLR     (1'b0),
+    .CLRMASK (1'b1),
+    .DIV     (3'b000),
+    .O       (clk_dac2_buf)
+  );  
+
+  BUFG_GT dac3_bufg_gt
+  (
+    .I       (clk_dac3),
+    .CE      (1'b1),
+    .CEMASK  (1'b1),
+    .CLR     (1'b0),
+    .CLRMASK (1'b1),
+    .DIV     (3'b000),
+    .O       (clk_dac3_buf)
   );  
 
  

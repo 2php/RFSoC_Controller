@@ -23,6 +23,25 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+void rf_set_pre_waveform(u8 channel, u8* stream)
+{
+	gpio_select_channel(channel);
+
+	//Stream will alway be 32 bytes long
+	for(int i = 31; i >= 0; i--)
+	{
+		for(int j = 0; j < 8; j++){
+			//Set the output to the correct bit
+			u8 current_bit = (stream[i] & (1 << j)) == 0 ? 0 : 1;
+			gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+			//cycle locking_sclk
+			gpio_set_pin(RF_BANK, PRE_WAVEFORM_SCLK, 0x01);
+			gpio_set_pin(RF_BANK, PRE_WAVEFORM_SCLK, 0x00);
+		}
+	}
+
+}
+
 void rf_set_zero_delay(u8 channel, u32 value)
 {
 	gpio_select_channel(channel);
@@ -142,6 +161,12 @@ void rf_flush_buffer()
 	gpio_set_pin(RF_BANK, TRIGGER_OVERRIDE_PIN, 0x00);
 	gpio_set_pin(RF_BANK, BUFFER_FLUSH_PIN, 0x00);
 	gpio_set_pin(RF_BANK, FIFO_MUX_PIN, 0x00);
+
+	//Write the locking waveforms to 0
+	for(int i = 0; i < NUM_CHANNELS; i++)
+	{
+		rf_set_locking_waveform(i, zeros_bitstream);
+	}
 
 }
 
@@ -368,6 +393,22 @@ void write_sample_stream(u16* samples, u16 length, u8 channel)
 		else if(channel == 3)
 		{
 			putfsl(sample,  3);
+		}
+		else if(channel == 4)
+		{
+			putfsl(sample,  4);
+		}
+		else if(channel == 5)
+		{
+			putfsl(sample,  5);
+		}
+		else if(channel == 6)
+		{
+			putfsl(sample,  6);
+		}
+		else if(channel == 7)
+		{
+			putfsl(sample,  7);
 		}
 
 	}

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jul 11 14:36:39 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 15 17:25:30 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="rfsoc_data_pipeline" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -10,6 +10,7 @@
         <CONNECTION INSTANCE="axis_data_fifo_clock_crossing" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="External_Ports_rf_clock">
@@ -17,8 +18,9 @@
         <CONNECTION INSTANCE="axis_data_fifo_gpio" PORT="m_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_waveform" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_clock_crossing" PORT="m_axis_aclk"/>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="clk"/>
         <CONNECTION INSTANCE="axis_mux_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="microblaze_resetn" SIGIS="rst" SIGNAME="External_Ports_microblaze_resetn">
@@ -32,33 +34,29 @@
     <PORT DIR="I" NAME="rf_resetn" SIGIS="rst" SIGNAME="External_Ports_rf_resetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_data_fifo_waveform" PORT="s_axis_aresetn"/>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="reset"/>
         <CONNECTION INSTANCE="axis_mux_0" PORT="reset"/>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aresetn"/>
+        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="ext_trigger"/>
+        <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="ext_trigger_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
+    <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="pipeline_active_buff_0_active_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="pipeline_active"/>
+        <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="active_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="S_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tdata">
+    <PORT DIR="I" NAME="is_selected" SIGIS="undef" SIGNAME="External_Ports_is_selected">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tdata"/>
+        <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="select_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="S_AXIS_tready" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tready">
+    <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_in">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tready"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="S_AXIS_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tvalid"/>
+        <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="gpio_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="255" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_tready_slice_0_m_axis_tdata">
@@ -76,19 +74,19 @@
         <CONNECTION INSTANCE="axis_tready_slice_0" PORT="m_axis_tready"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="is_locking" SIGIS="undef" SIGNAME="External_Ports_is_locking">
+    <PORT DIR="I" LEFT="31" NAME="S_AXIS_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tdata">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="is_locking"/>
+        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tdata"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="is_selected" SIGIS="undef" SIGNAME="External_Ports_is_selected">
+    <PORT DIR="O" NAME="S_AXIS_tready" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tready">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_tready_slice_0" PORT="is_selected"/>
+        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tready"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_in">
+    <PORT DIR="I" NAME="S_AXIS_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tvalid">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="gpio_buffer_0" PORT="gpio_in"/>
+        <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tvalid"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -182,7 +180,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_5"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -270,6 +268,144 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/axis_data_fifo_1" HWVERSION="2.0" INSTANCE="axis_data_fifo_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_data_fifo" VLNV="xilinx.com:ip:axis_data_fifo:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="https://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_data_fifo;v=v2_0;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000000000011"/>
+        <PARAMETER NAME="C_FIFO_DEPTH" VALUE="16"/>
+        <PARAMETER NAME="C_FIFO_MODE" VALUE="1"/>
+        <PARAMETER NAME="C_IS_ACLK_ASYNC" VALUE="1"/>
+        <PARAMETER NAME="C_SYNCHRONIZER_STAGE" VALUE="3"/>
+        <PARAMETER NAME="C_ACLKEN_CONV_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_ECC_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_FIFO_MEMORY_TYPE" VALUE="auto"/>
+        <PARAMETER NAME="C_USE_ADV_FEATURES" VALUE="825241648"/>
+        <PARAMETER NAME="C_PROG_EMPTY_THRESH" VALUE="5"/>
+        <PARAMETER NAME="C_PROG_FULL_THRESH" VALUE="11"/>
+        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="FIFO_DEPTH" VALUE="16"/>
+        <PARAMETER NAME="FIFO_MODE" VALUE="1"/>
+        <PARAMETER NAME="IS_ACLK_ASYNC" VALUE="1"/>
+        <PARAMETER NAME="ACLKEN_CONV_MODE" VALUE="0"/>
+        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+        <PARAMETER NAME="SYNCHRONIZATION_STAGES" VALUE="3"/>
+        <PARAMETER NAME="HAS_WR_DATA_COUNT" VALUE="0"/>
+        <PARAMETER NAME="HAS_RD_DATA_COUNT" VALUE="0"/>
+        <PARAMETER NAME="HAS_AEMPTY" VALUE="0"/>
+        <PARAMETER NAME="HAS_PROG_EMPTY" VALUE="0"/>
+        <PARAMETER NAME="PROG_EMPTY_THRESH" VALUE="5"/>
+        <PARAMETER NAME="HAS_AFULL" VALUE="0"/>
+        <PARAMETER NAME="HAS_PROG_FULL" VALUE="0"/>
+        <PARAMETER NAME="PROG_FULL_THRESH" VALUE="11"/>
+        <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
+        <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
+        <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_1_7"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="s_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_rf_resetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rf_resetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_rf_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rf_clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_microblaze_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="microblaze_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="pipeline_active_buff_0_m_axis" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_data_pipeline_rf_clock"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_data_fifo_1_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_data_pipeline_microblaze_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/axis_data_fifo_clock_crossing" HWVERSION="2.0" INSTANCE="axis_data_fifo_clock_crossing" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_data_fifo" VLNV="xilinx.com:ip:axis_data_fifo:2.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="https://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_data_fifo;v=v2_0;d=pg085-axi4stream-infrastructure.pdf"/>
@@ -315,7 +451,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -414,7 +550,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
-        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
@@ -429,7 +565,7 @@
         <PARAMETER NAME="C_USE_ADV_FEATURES" VALUE="825241648"/>
         <PARAMETER NAME="C_PROG_EMPTY_THRESH" VALUE="5"/>
         <PARAMETER NAME="C_PROG_FULL_THRESH" VALUE="11"/>
-        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+        <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
         <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
         <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -453,7 +589,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_1_5"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_gpio_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -469,17 +605,17 @@
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="m_axis_tvalid"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="m_axis_tready"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="m_axis_tdata"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_rf_clock">
@@ -489,23 +625,23 @@
         </PORT>
         <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="s_axis_tvalid"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="s_axis_tready"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tdata">
+        <PORT DIR="O" LEFT="31" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="s_axis_tdata"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="gpio_buffer_0_m_axis" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+        <BUSINTERFACE BUSNAME="gpio_and_select_buff_0_m_axis" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -525,7 +661,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axis_data_fifo_gpio_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -591,7 +727,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -703,7 +839,7 @@
         <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
         <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
         <PARAMETER NAME="HAS_MI_TKEEP" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_5"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -839,9 +975,9 @@
             <CONNECTION INSTANCE="axis_tready_slice_0" PORT="mloop_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="gpio_buffer_0_gpio_out">
+        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_gpio_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="gpio_out"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="gpio_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="255" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_waveform_s_axis_tdata">
@@ -933,6 +1069,7 @@
         <PARAMETER NAME="buffer_flush_bit" VALUE="5"/>
         <PARAMETER NAME="zeros_sclk" VALUE="7"/>
         <PARAMETER NAME="cycles_sclk" VALUE="8"/>
+        <PARAMETER NAME="pre_waveform_sclk" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_tready_slice_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -963,14 +1100,14 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="gpio_buffer_0_gpio_out">
+        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_gpio_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_buffer_0" PORT="gpio_out"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="gpio_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_ext_trigger_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="ext_trigger_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="255" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_tready_slice_0_m_axis_tdata">
@@ -1005,17 +1142,12 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active"/>
+            <CONNECTION INSTANCE="pipeline_active_buff_0" PORT="active_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="is_locking" SIGIS="undef" SIGNAME="External_Ports_is_locking">
+        <PORT DIR="I" NAME="is_selected" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_select_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="is_locking"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="is_selected" SIGIS="undef" SIGNAME="External_Ports_is_selected">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="is_selected"/>
+            <CONNECTION INSTANCE="gpio_and_select_buff_0" PORT="select_out"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1083,10 +1215,10 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/gpio_buffer_0" HWVERSION="1.0" INSTANCE="gpio_buffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gpio_buffer" VLNV="xilinx.com:module_ref:gpio_buffer:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/gpio_and_select_buff_0" HWVERSION="1.0" INSTANCE="gpio_and_select_buff_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="gpio_and_select_buffer" VLNV="xilinx.com:module_ref:gpio_and_select_buffer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_gpio_buffer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_gpio_and_select_buff_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1095,10 +1227,30 @@
             <CONNECTION INSTANCE="External_Ports" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="gpio_out" RIGHT="0" SIGIS="undef" SIGNAME="gpio_buffer_0_gpio_out">
+        <PORT DIR="O" LEFT="15" NAME="gpio_out" RIGHT="0" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_gpio_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="axis_mux_0" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="gpio_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="select_in" SIGIS="undef" SIGNAME="External_Ports_is_selected">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="is_selected"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="select_out" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_select_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="is_selected"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ext_trigger_out" SIGIS="undef" SIGNAME="gpio_and_select_buff_0_ext_trigger_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tvalid">
@@ -1111,12 +1263,12 @@
             <CONNECTION INSTANCE="axis_data_fifo_gpio" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tdata">
+        <PORT DIR="I" LEFT="31" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_m_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_gpio" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tdata">
+        <PORT DIR="O" LEFT="31" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_gpio_s_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_gpio" PORT="s_axis_tdata"/>
           </CONNECTIONS>
@@ -1133,8 +1285,8 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="gpio_buffer_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+        <BUSINTERFACE BUSNAME="gpio_and_select_buff_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -1154,7 +1306,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axis_data_fifo_gpio_M_AXIS" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -1163,6 +1315,97 @@
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pipeline_active_buff_0" HWVERSION="1.0" INSTANCE="pipeline_active_buff_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pipeline_active_buffer" VLNV="xilinx.com:module_ref:pipeline_active_buffer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_pipeline_active_buff_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="active_in" SIGIS="undef" SIGNAME="axis_tready_slice_0_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_tready_slice_0" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="active_out" SIGIS="undef" SIGNAME="pipeline_active_buff_0_active_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="pipeline_active_buff_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axis_data_fifo_1_M_AXIS" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>

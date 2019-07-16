@@ -232,6 +232,42 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   output            vout03_p,
   output            vout03_n,
 
+  output            vout10_p,
+  output            vout10_n,
+
+  output            vout11_p,
+  output            vout11_n,
+
+  output            vout12_p,
+  output            vout12_n,
+
+  output            vout13_p,
+  output            vout13_n,
+
+  output            vout20_p,
+  output            vout20_n,
+
+  output            vout21_p,
+  output            vout21_n,
+
+  output            vout22_p,
+  output            vout22_n,
+
+  output            vout23_p,
+  output            vout23_n,
+
+  output            vout30_p,
+  output            vout30_n,
+
+  output            vout31_p,
+  output            vout31_n,
+
+  output            vout32_p,
+  output            vout32_n,
+
+  output            vout33_p,
+  output            vout33_n,
+
   // DAC AXI Streaming Data for DAC33
   input  [255:0]    dac00_data_in,
   input             dac00_valid_in,
@@ -976,9 +1012,78 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     end
   end
 
-  assign dac1_done_sync = 1'b0;
-  assign dac2_done_sync = 1'b0;
-  assign dac3_done_sync = 1'b0;
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac1_done_i (
+      .src_clk(1'b0),
+      .src_in(dac1_done_i),
+      .dest_clk(dac_fabric_clk[1]),
+      .dest_out(dac1_done_sync)
+    );
+
+  // Only assert common control bit 15 if the clocks are active
+  always @(posedge drpclk)
+  begin
+    if (dac1_end_stage >= 4'hA) begin
+      if (dac1_fifo_disable == 1'b0 && dac1_fabricclk_val == 1'b1) begin
+        dac1_done_i <= dac1_done;
+      end
+      else begin
+        dac1_done_i <= 1'b0;
+      end
+    end
+    else begin
+      dac1_done_i <= 1'b0;
+    end
+  end
+
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac2_done_i (
+      .src_clk(1'b0),
+      .src_in(dac2_done_i),
+      .dest_clk(dac_fabric_clk[2]),
+      .dest_out(dac2_done_sync)
+    );
+
+  // Only assert common control bit 15 if the clocks are active
+  always @(posedge drpclk)
+  begin
+    if (dac2_end_stage >= 4'hA) begin
+      if (dac2_fifo_disable == 1'b0 && dac2_fabricclk_val == 1'b1) begin
+        dac2_done_i <= dac2_done;
+      end
+      else begin
+        dac2_done_i <= 1'b0;
+      end
+    end
+    else begin
+      dac2_done_i <= 1'b0;
+    end
+  end
+
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac3_done_i (
+      .src_clk(1'b0),
+      .src_in(dac3_done_i),
+      .dest_clk(dac_fabric_clk[3]),
+      .dest_out(dac3_done_sync)
+    );
+
+  // Only assert common control bit 15 if the clocks are active
+  always @(posedge drpclk)
+  begin
+    if (dac3_end_stage >= 4'hA) begin
+      if (dac3_fifo_disable == 1'b0 && dac3_fabricclk_val == 1'b1) begin
+        dac3_done_i <= dac3_done;
+      end
+      else begin
+        dac3_done_i <= 1'b0;
+      end
+    end
+    else begin
+      dac3_done_i <= 1'b0;
+    end
+  end
+
   assign dac_clk_p        = {dac3_clk_p, dac2_clk_p, dac1_clk_p, dac0_clk_p};
   assign dac_clk_n        = {dac3_clk_n, dac2_clk_n, dac1_clk_n, dac0_clk_n};
   assign dac_pll_clk      = {dac3_pll_clk, dac2_pll_clk, dac1_pll_clk, dac0_pll_clk};
@@ -996,18 +1101,18 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   assign dac01_ready_out = dac0_done_sync;
   assign dac02_ready_out = dac0_done_sync;
   assign dac03_ready_out = dac0_done_sync;
-  assign dac10_ready_out = 1'b0;
-  assign dac11_ready_out = 1'b0;
-  assign dac12_ready_out = 1'b0;
-  assign dac13_ready_out = 1'b0;
-  assign dac20_ready_out = 1'b0;
-  assign dac21_ready_out = 1'b0;
-  assign dac22_ready_out = 1'b0;
-  assign dac23_ready_out = 1'b0;
-  assign dac30_ready_out = 1'b0;
-  assign dac31_ready_out = 1'b0;
-  assign dac32_ready_out = 1'b0;
-  assign dac33_ready_out = 1'b0;
+  assign dac10_ready_out = dac1_done_sync;
+  assign dac11_ready_out = dac1_done_sync;
+  assign dac12_ready_out = dac1_done_sync;
+  assign dac13_ready_out = dac1_done_sync;
+  assign dac20_ready_out = dac2_done_sync;
+  assign dac21_ready_out = dac2_done_sync;
+  assign dac22_ready_out = dac2_done_sync;
+  assign dac23_ready_out = dac2_done_sync;
+  assign dac30_ready_out = dac3_done_sync;
+  assign dac31_ready_out = dac3_done_sync;
+  assign dac32_ready_out = dac3_done_sync;
+  assign dac33_ready_out = dac3_done_sync;
 
   // Assign ADC signals
   assign adc_drpen       = {adc3_drp_en_i, adc2_drp_en_i, adc1_drp_en_i, adc0_drp_en_i};
@@ -1210,11 +1315,21 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
 
   // Synchronize common status bus onto the DRP clock for input
   // to the status_bits bus of the converters (DAC1)
-  assign dac1_pll_lock_sync = 1'b0;
-  assign dac1_clk_present_sync = 1'b0;
-  assign dac1_powerup_state_sync = 1'b0;
-  assign dac1_powerup_state_interrupt = 1'b0;
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac1_pll_lock_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[19]),
+      .dest_clk(drpclk),
+      .dest_out(dac1_pll_lock_sync)
+    );
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac1_powerup_state_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[18]),
+      .dest_clk(drpclk),
+      .dest_out(dac1_powerup_state_sync)
+    );
+  assign dac1_powerup_state_interrupt = (dac1_status == 4'hf) ? ~dac1_powerup_state_sync : 1'b0;
   xpm_cdc_single #(.SRC_INPUT_REG(0))
     cdc_dac1_supplies_up_i (
       .src_clk(1'b0),
@@ -1222,17 +1337,33 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
       .dest_clk(drpclk),
       .dest_out(dac1_supplies_up_sync)
     );
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac1_clk_present_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[16]),
+      .dest_clk(drpclk),
+      .dest_out(dac1_clk_present_sync)
+    );
   assign dac1_status_bits    = {dac_common_stat[22], dac1_pll_lock_sync, dac1_supplies_up_sync, dac1_clk_present_sync};
   assign dac1_pll_lock       = dac1_pll_lock_sync;
 
   // Synchronize common status bus onto the DRP clock for input
   // to the status_bits bus of the converters (DAC2)
-  assign dac2_pll_lock_sync = 1'b0;
-  assign dac2_clk_present_sync = 1'b0;
-  assign dac2_powerup_state_sync = 1'b0;
-  assign dac2_powerup_state_interrupt = 1'b0;
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac2_pll_lock_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[35]),
+      .dest_clk(drpclk),
+      .dest_out(dac2_pll_lock_sync)
+    );
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac2_powerup_state_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[34]),
+      .dest_clk(drpclk),
+      .dest_out(dac2_powerup_state_sync)
+    );
+  assign dac2_powerup_state_interrupt = (dac2_status == 4'hf) ? ~dac2_powerup_state_sync : 1'b0;
   xpm_cdc_single #(.SRC_INPUT_REG(0))
     cdc_dac2_supplies_up_i (
       .src_clk(1'b0),
@@ -1240,17 +1371,33 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
       .dest_clk(drpclk),
       .dest_out(dac2_supplies_up_sync)
     );
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac2_clk_present_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[32]),
+      .dest_clk(drpclk),
+      .dest_out(dac2_clk_present_sync)
+    );
   assign dac2_status_bits    = {dac_common_stat[38], dac2_pll_lock_sync, dac2_supplies_up_sync, dac2_clk_present_sync};
   assign dac2_pll_lock       = dac2_pll_lock_sync;
 
   // Synchronize common status bus onto the DRP clock for input
   // to the status_bits bus of the converters (DAC3)
-  assign dac3_pll_lock_sync = 1'b0;
-  assign dac3_clk_present_sync = 1'b0;
-  assign dac3_powerup_state_sync = 1'b0;
-  assign dac3_powerup_state_interrupt = 1'b0;
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac3_pll_lock_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[51]),
+      .dest_clk(drpclk),
+      .dest_out(dac3_pll_lock_sync)
+    );
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac3_powerup_state_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[50]),
+      .dest_clk(drpclk),
+      .dest_out(dac3_powerup_state_sync)
+    );
+  assign dac3_powerup_state_interrupt = (dac3_status == 4'hf) ? ~dac3_powerup_state_sync : 1'b0;
   xpm_cdc_single #(.SRC_INPUT_REG(0))
     cdc_dac3_supplies_up_i (
       .src_clk(1'b0),
@@ -1258,7 +1405,13 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
       .dest_clk(drpclk),
       .dest_out(dac3_supplies_up_sync)
     );
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac3_clk_present_i (
+      .src_clk(1'b0),
+      .src_in(dac_common_stat[48]),
+      .dest_clk(drpclk),
+      .dest_out(dac3_clk_present_sync)
+    );
   assign dac3_status_bits    = {dac_common_stat[54], dac3_pll_lock_sync, dac3_supplies_up_sync, dac3_clk_present_sync};
   assign dac3_pll_lock       = dac3_pll_lock_sync;
 
@@ -1635,11 +1788,11 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
 
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
-    .XPA_SAMPLE_RATE_MSPS (6400.0),
-    .XPA_NUM_DACS         (0),
-    .XPA_PLL_USED         ("No"),
+    .XPA_SAMPLE_RATE_MSPS (4000.0),
+    .XPA_NUM_DACS         (4),
+    .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
-    .XPA_CFG0             (0),
+    .XPA_CFG0             (1),
     .XPA_CFG1             (0)
   ) tx1_u_dac (
     .CONTROL_COMMON     ( {dac_common_ctrl[1], dac1_cmn_control[14:0]} ),  // input  [15:0]
@@ -1686,23 +1839,23 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .DATA_DAC1          ( data_dac1[511:256] ),            // input  [255:0]
     .DATA_DAC2          ( data_dac2[511:256] ),            // input  [255:0]
     .DATA_DAC3          ( data_dac3[511:256] ),            // input  [255:0]
-    .VOUT0_N            (),                               // output
-    .VOUT0_P            (),                               // output
-    .VOUT1_N            (),                               // output
-    .VOUT1_P            (),                               // output
-    .VOUT2_N            (),                               // output
-    .VOUT2_P            (),                               // output
-    .VOUT3_N            (),                               // output
-    .VOUT3_P            ()                                // output
+    .VOUT0_N            (vout10_n),                      // output
+    .VOUT0_P            (vout10_p),                      // output
+    .VOUT1_N            (vout11_n),                      // output
+    .VOUT1_P            (vout11_p),                      // output
+    .VOUT2_N            (vout12_n),                      // output
+    .VOUT2_P            (vout12_p),                      // output
+    .VOUT3_N            (vout13_n),                      // output
+    .VOUT3_P            (vout13_p)                       // output
   );
 
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
-    .XPA_SAMPLE_RATE_MSPS (6400.0),
-    .XPA_NUM_DACS         (0),
-    .XPA_PLL_USED         ("No"),
+    .XPA_SAMPLE_RATE_MSPS (4000.0),
+    .XPA_NUM_DACS         (4),
+    .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
-    .XPA_CFG0             (0),
+    .XPA_CFG0             (1),
     .XPA_CFG1             (0)
   ) tx2_u_dac (
     .CONTROL_COMMON     ( {dac_common_ctrl[2], dac2_cmn_control[14:0]} ),  // input  [15:0]
@@ -1749,23 +1902,23 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .DATA_DAC1          ( data_dac1[767:512] ),            // input  [255:0]
     .DATA_DAC2          ( data_dac2[767:512] ),            // input  [255:0]
     .DATA_DAC3          ( data_dac3[767:512] ),            // input  [255:0]
-    .VOUT0_N            (),                               // output
-    .VOUT0_P            (),                               // output
-    .VOUT1_N            (),                               // output
-    .VOUT1_P            (),                               // output
-    .VOUT2_N            (),                               // output
-    .VOUT2_P            (),                               // output
-    .VOUT3_N            (),                               // output
-    .VOUT3_P            ()                                // output
+    .VOUT0_N            (vout20_n),                      // output
+    .VOUT0_P            (vout20_p),                      // output
+    .VOUT1_N            (vout21_n),                      // output
+    .VOUT1_P            (vout21_p),                      // output
+    .VOUT2_N            (vout22_n),                      // output
+    .VOUT2_P            (vout22_p),                      // output
+    .VOUT3_N            (vout23_n),                      // output
+    .VOUT3_P            (vout23_p)                       // output
   );
 
   HSDAC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
-    .XPA_SAMPLE_RATE_MSPS (6400.0),
-    .XPA_NUM_DACS         (0),
-    .XPA_PLL_USED         ("No"),
+    .XPA_SAMPLE_RATE_MSPS (4000.0),
+    .XPA_NUM_DACS         (4),
+    .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DUCS         (0),
-    .XPA_CFG0             (0),
+    .XPA_CFG0             (1),
     .XPA_CFG1             (0)
   ) tx3_u_dac (
     .CONTROL_COMMON     ( {dac_common_ctrl[3], dac3_cmn_control[14:0]} ),  // input  [15:0]
@@ -1812,14 +1965,14 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .DATA_DAC1          ( data_dac1[1023:768] ),            // input  [255:0]
     .DATA_DAC2          ( data_dac2[1023:768] ),            // input  [255:0]
     .DATA_DAC3          ( data_dac3[1023:768] ),            // input  [255:0]
-    .VOUT0_N            (),                               // output
-    .VOUT0_P            (),                               // output
-    .VOUT1_N            (),                               // output
-    .VOUT1_P            (),                               // output
-    .VOUT2_N            (),                               // output
-    .VOUT2_P            (),                               // output
-    .VOUT3_N            (),                               // output
-    .VOUT3_P            ()                                // output
+    .VOUT0_N            (vout30_n),                      // output
+    .VOUT0_P            (vout30_p),                      // output
+    .VOUT1_N            (vout31_n),                      // output
+    .VOUT1_P            (vout31_p),                      // output
+    .VOUT2_N            (vout32_n),                      // output
+    .VOUT2_P            (vout32_p),                      // output
+    .VOUT3_N            (vout33_n),                      // output
+    .VOUT3_P            (vout33_p)                       // output
   );
 
   HSADC #(
@@ -2217,8 +2370,8 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   assign adc3_sm_reset = 1'b0;
 
   assign dac0_sm_reset = (dac0_sm_reset_i | ~dac0_supplies_up_sync) & dac0_done;
-  assign dac1_sm_reset = 1'b0;
-  assign dac2_sm_reset = 1'b0;
-  assign dac3_sm_reset = 1'b0;
+  assign dac1_sm_reset = (dac1_sm_reset_i | ~dac1_supplies_up_sync) & dac1_done;
+  assign dac2_sm_reset = (dac2_sm_reset_i | ~dac2_supplies_up_sync) & dac2_done;
+  assign dac3_sm_reset = (dac3_sm_reset_i | ~dac3_supplies_up_sync) & dac3_done;
 
 endmodule

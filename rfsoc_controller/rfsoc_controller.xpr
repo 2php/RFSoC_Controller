@@ -43,13 +43,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="9"/>
-    <Option Name="WTModelSimExportSim" Val="9"/>
-    <Option Name="WTQuestaExportSim" Val="9"/>
-    <Option Name="WTIesExportSim" Val="9"/>
-    <Option Name="WTVcsExportSim" Val="9"/>
-    <Option Name="WTRivieraExportSim" Val="9"/>
-    <Option Name="WTActivehdlExportSim" Val="9"/>
+    <Option Name="WTXSimExportSim" Val="10"/>
+    <Option Name="WTModelSimExportSim" Val="10"/>
+    <Option Name="WTQuestaExportSim" Val="10"/>
+    <Option Name="WTIesExportSim" Val="10"/>
+    <Option Name="WTVcsExportSim" Val="10"/>
+    <Option Name="WTRivieraExportSim" Val="10"/>
+    <Option Name="WTActivehdlExportSim" Val="10"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -71,21 +71,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/gpio_buffer.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/shift_register.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/locking_sr.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -105,42 +91,85 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_12_0/top_level_rfsoc_data_pipeline_12_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_12_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_14_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_6_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_microblaze_0_0/top_level_microblaze_0_0.xci">
           <Proxy FileSetName="top_level_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0.xci">
-          <Proxy FileSetName="top_level_rfsoc_data_pipeline_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0.xci">
-          <Proxy FileSetName="top_level_usp_rf_data_converter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0.xci">
-          <Proxy FileSetName="top_level_rfsoc_data_pipeline_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0.xci">
           <Proxy FileSetName="top_level_trigger_buffer_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0.xci">
-          <Proxy FileSetName="top_level_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_7_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0.xci">
-          <Proxy FileSetName="top_level_rfsoc_data_pipeline_3_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_10_0/top_level_rfsoc_data_pipeline_10_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_10_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0.xci">
-          <Proxy FileSetName="top_level_axis_data_fifo_1_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_15_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_locking_sr_0_0/top_level_locking_sr_0_0.xci">
-          <Proxy FileSetName="top_level_locking_sr_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0.xci">
-          <Proxy FileSetName="top_level_gpio_buffer_0_0"/>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_channel_select_0_0/top_level_channel_select_0_0.xci">
           <Proxy FileSetName="top_level_channel_select_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_11_0/top_level_rfsoc_data_pipeline_11_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_11_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0.xci">
+          <Proxy FileSetName="top_level_usp_rf_data_converter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_13_0/top_level_rfsoc_data_pipeline_13_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_13_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_8_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="top_level.bd" FileRelPathName="ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0.xci">
+          <Proxy FileSetName="top_level_rfsoc_data_pipeline_9_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/top_level/hdl/top_level_wrapper.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/gpio_buffer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/locking_sr.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -202,6 +231,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/gpio_and_select_buffer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/pipeline_active_buffer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top_level_wrapper"/>
@@ -238,21 +283,15 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_usp_rf_data_converter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_usp_rf_data_converter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="top_level_usp_rf_data_converter_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="top_level_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_axi_gpio_0_0">
-      <Config>
-        <Option Name="TopModule" Val="top_level_axi_gpio_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="top_level_microblaze_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_microblaze_0_0">
       <Config>
         <Option Name="TopModule" Val="top_level_microblaze_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_usp_rf_data_converter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_usp_rf_data_converter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_usp_rf_data_converter_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -262,9 +301,45 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_rfsoc_data_pipeline_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_0_0">
+    <FileSet Name="top_level_channel_select_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_channel_select_0_0">
       <Config>
-        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_0_0"/>
+        <Option Name="TopModule" Val="top_level_channel_select_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_12_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_12_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_12_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_14_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_14_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_14_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_6_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_6_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_6_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_7_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_7_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_7_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_10_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_10_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_10_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_15_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_15_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_15_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -274,33 +349,57 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_4_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_4_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_4_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_0_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_11_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_11_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_11_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_5_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_5_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_5_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="top_level_rfsoc_data_pipeline_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_2_0">
+      <Config>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_2_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="top_level_rfsoc_data_pipeline_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_3_0">
       <Config>
         <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_3_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_axis_data_fifo_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_axis_data_fifo_1_0">
+    <FileSet Name="top_level_rfsoc_data_pipeline_13_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_13_0">
       <Config>
-        <Option Name="TopModule" Val="top_level_axis_data_fifo_1_0"/>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_13_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_locking_sr_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_locking_sr_0_0">
+    <FileSet Name="top_level_rfsoc_data_pipeline_8_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_8_0">
       <Config>
-        <Option Name="TopModule" Val="top_level_locking_sr_0_0"/>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_8_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="top_level_gpio_buffer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_gpio_buffer_0_0">
+    <FileSet Name="top_level_rfsoc_data_pipeline_9_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_9_0">
       <Config>
-        <Option Name="TopModule" Val="top_level_gpio_buffer_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="top_level_channel_select_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_channel_select_0_0">
-      <Config>
-        <Option Name="TopModule" Val="top_level_channel_select_0_0"/>
+        <Option Name="TopModule" Val="top_level_rfsoc_data_pipeline_9_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -333,27 +432,22 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_usp_rf_data_converter_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_usp_rf_data_converter_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_usp_rf_data_converter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="top_level_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_axi_gpio_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_axi_gpio_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="top_level_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_microblaze_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_microblaze_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_usp_rf_data_converter_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_usp_rf_data_converter_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_usp_rf_data_converter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -362,14 +456,82 @@
     </Run>
     <Run Id="top_level_trigger_buffer_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_trigger_buffer_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_trigger_buffer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_trigger_buffer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_rfsoc_data_pipeline_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="top_level_channel_select_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_channel_select_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_channel_select_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_channel_select_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_12_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_12_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_12_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_12_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_14_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_14_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_14_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_14_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_6_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_6_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_6_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_6_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_7_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_7_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_7_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_7_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_10_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_10_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_10_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_15_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_15_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_15_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_15_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -391,6 +553,61 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_4_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_4_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_4_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_4_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_11_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_11_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_11_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_11_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_5_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_5_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_5_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_5_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_2_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_2_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_2_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="top_level_rfsoc_data_pipeline_3_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_3_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_3_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
@@ -402,7 +619,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_axis_data_fifo_1_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_axis_data_fifo_1_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_axis_data_fifo_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_axis_data_fifo_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="top_level_rfsoc_data_pipeline_13_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_13_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_13_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_13_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -413,7 +630,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_locking_sr_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_locking_sr_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_locking_sr_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_locking_sr_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="top_level_rfsoc_data_pipeline_8_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_8_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_8_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_8_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -424,18 +641,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_gpio_buffer_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_gpio_buffer_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_gpio_buffer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_gpio_buffer_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="top_level_channel_select_0_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_channel_select_0_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_channel_select_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_channel_select_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="top_level_rfsoc_data_pipeline_9_0_synth_1" Type="Ft3:Synth" SrcSet="top_level_rfsoc_data_pipeline_9_0" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_9_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/top_level_rfsoc_data_pipeline_9_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -463,41 +669,29 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_usp_rf_data_converter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_usp_rf_data_converter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="top_level_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_axi_gpio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="top_level_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_microblaze_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_usp_rf_data_converter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_usp_rf_data_converter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -513,7 +707,9 @@
     </Run>
     <Run Id="top_level_trigger_buffer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_trigger_buffer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_trigger_buffer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -527,7 +723,115 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_rfsoc_data_pipeline_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="top_level_channel_select_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_channel_select_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_channel_select_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_12_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_12_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_12_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_14_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_14_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_14_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_6_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_6_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_6_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_7_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_7_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_7_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_10_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_15_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_15_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_15_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
@@ -563,6 +867,96 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_4_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_4_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_4_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_11_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_11_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_11_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_5_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_5_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_5_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_level_rfsoc_data_pipeline_2_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="top_level_rfsoc_data_pipeline_3_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
@@ -581,7 +975,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_axis_data_fifo_1_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_axis_data_fifo_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_axis_data_fifo_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="top_level_rfsoc_data_pipeline_13_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_13_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_13_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
@@ -599,7 +993,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_locking_sr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_locking_sr_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_locking_sr_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="top_level_rfsoc_data_pipeline_8_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_8_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_8_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
@@ -617,25 +1011,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="top_level_gpio_buffer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_gpio_buffer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_gpio_buffer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="top_level_channel_select_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_channel_select_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_channel_select_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="top_level_rfsoc_data_pipeline_9_0_impl_1" Type="Ft2:EntireDesign" Part="xczu29dr-ffvf1760-2-e" ConstrsSet="top_level_rfsoc_data_pipeline_9_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="top_level_rfsoc_data_pipeline_9_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>

@@ -61,7 +61,6 @@ module top_level_rfsoc_data_pipeline_0_0 (
   S_AXIS_tvalid,
   ext_trigger,
   gpio_in,
-  is_locking,
   is_selected,
   m_axis_tdata,
   m_axis_tready,
@@ -82,7 +81,6 @@ output wire S_AXIS_tready;
 input wire S_AXIS_tvalid;
 input wire ext_trigger;
 input wire [15 : 0] gpio_in;
-input wire is_locking;
 input wire is_selected;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
 output wire [255 : 0] m_axis_tdata;
@@ -111,7 +109,6 @@ input wire rf_resetn;
     .S_AXIS_tvalid(S_AXIS_tvalid),
     .ext_trigger(ext_trigger),
     .gpio_in(gpio_in),
-    .is_locking(is_locking),
     .is_selected(is_selected),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tready(m_axis_tready),

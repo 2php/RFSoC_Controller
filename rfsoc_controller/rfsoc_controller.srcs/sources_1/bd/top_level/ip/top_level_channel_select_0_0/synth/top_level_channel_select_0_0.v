@@ -56,37 +56,73 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_channel_select_0_0 (
-  rf_clk,
-  rf_reset,
+  mb_clk,
+  mb_reset,
   gpio_in,
   ch0,
   ch1,
   ch2,
-  ch3
+  ch3,
+  ch4,
+  ch5,
+  ch6,
+  ch7,
+  ch8,
+  ch9,
+  ch10,
+  ch11,
+  ch12,
+  ch13,
+  ch14,
+  ch15
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_clk, ASSOCIATED_RESET rf_reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rf_clk CLK" *)
-input wire rf_clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rf_reset RST" *)
-input wire rf_reset;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mb_clk, ASSOCIATED_RESET mb_reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 mb_clk CLK" *)
+input wire mb_clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mb_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 mb_reset RST" *)
+input wire mb_reset;
 input wire [15 : 0] gpio_in;
 output wire ch0;
 output wire ch1;
 output wire ch2;
 output wire ch3;
+output wire ch4;
+output wire ch5;
+output wire ch6;
+output wire ch7;
+output wire ch8;
+output wire ch9;
+output wire ch10;
+output wire ch11;
+output wire ch12;
+output wire ch13;
+output wire ch14;
+output wire ch15;
 
   channel_select #(
     .sclk(9),
     .sdata(4)
   ) inst (
-    .rf_clk(rf_clk),
-    .rf_reset(rf_reset),
+    .mb_clk(mb_clk),
+    .mb_reset(mb_reset),
     .gpio_in(gpio_in),
     .ch0(ch0),
     .ch1(ch1),
     .ch2(ch2),
-    .ch3(ch3)
+    .ch3(ch3),
+    .ch4(ch4),
+    .ch5(ch5),
+    .ch6(ch6),
+    .ch7(ch7),
+    .ch8(ch8),
+    .ch9(ch9),
+    .ch10(ch10),
+    .ch11(ch11),
+    .ch12(ch12),
+    .ch13(ch13),
+    .ch14(ch14),
+    .ch15(ch15)
   );
 endmodule

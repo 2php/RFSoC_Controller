@@ -1,48 +1,53 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port m_axis -pg 1 -lvl 7 -x 1660 -y 390 -defaultsOSRD
-preplace port S_AXIS -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace port microblaze_clk -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
-preplace port rf_clock -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
-preplace port microblaze_resetn -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
-preplace port rf_resetn -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
-preplace port ext_trigger -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
-preplace port pipeline_active -pg 1 -lvl 7 -x 1660 -y 430 -defaultsOSRD
-preplace port is_locking -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
-preplace port is_selected -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
-preplace portBus gpio_in -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 150 -y 200 -defaultsOSRD
-preplace inst axis_dwidth_converter_0 -pg 1 -lvl 2 -x 390 -y 220 -defaultsOSRD
-preplace inst axis_data_fifo_clock_crossing -pg 1 -lvl 3 -x 660 -y 250 -defaultsOSRD
-preplace inst axis_data_fifo_waveform -pg 1 -lvl 5 -x 1230 -y 310 -defaultsOSRD
-preplace inst axis_data_fifo_gpio -pg 1 -lvl 4 -x 970 -y 110 -defaultsOSRD
-preplace inst gpio_buffer_0 -pg 1 -lvl 3 -x 660 -y 90 -defaultsOSRD
-preplace inst axis_tready_slice_0 -pg 1 -lvl 6 -x 1500 -y 410 -defaultsOSRD
-preplace inst axis_mux_0 -pg 1 -lvl 4 -x 970 -y 290 -defaultsOSRD
-preplace netloc Net 1 3 3 800 410 NJ 410 NJ
-preplace netloc rf_clock_1 1 0 6 NJ 300 NJ 300 520 340 820 400 1110 390 1350J
-preplace netloc microblaze_clk_1 1 0 4 20 280 270 360 510 160 810J
-preplace netloc microblaze_reset_1 1 0 4 30 290 280 370 500 20 810J
-preplace netloc rf_reset_1 1 0 6 NJ 350 NJ 350 NJ 350 830 390 1100 400 1360J
-preplace netloc ext_trigger_0_1 1 0 6 NJ 430 NJ 430 NJ 430 NJ 430 NJ 430 NJ
-preplace netloc axis_tready_slice_0_pipeline_active 1 6 1 NJ 430
-preplace netloc is_locking_0_1 1 0 6 NJ 450 NJ 450 NJ 450 NJ 450 NJ 450 NJ
-preplace netloc is_selected_0_1 1 0 6 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ
-preplace netloc gpio_in_0_1 1 0 3 NJ 100 NJ 100 NJ
-preplace netloc axis_tready_slice_0_mloop_axis 1 3 4 840 530 NJ 530 NJ 530 1640
-preplace netloc gpio_buffer_0_m_axis 1 3 1 N 80
-preplace netloc axis_dwidth_converter_0_M_AXIS 1 2 1 N 220
-preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 N 200
-preplace netloc axis_mux_0_m_axis 1 4 1 N 290
-preplace netloc S_AXIS_0_1 1 0 1 NJ 180
-preplace netloc axis_data_fifo_2_M_AXIS 1 5 1 1350 310n
-preplace netloc axis_data_fifo_1_M_AXIS1 1 2 3 520 10 NJ 10 1100
-preplace netloc axis_data_fifo_1_M_AXIS 1 3 1 N 250
-preplace netloc axis_tready_slice_0_m_axis 1 6 1 NJ 390
-levelinfo -pg 1 0 150 390 660 970 1230 1500 1660
-pagesize -pg 1 -db -bbox -sgen -170 0 1810 540
+preplace port m_axis -pg 1 -lvl 8 -x 1960 -y 380 -defaultsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port microblaze_clk -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port rf_clock -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port microblaze_resetn -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port rf_resetn -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port ext_trigger -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port pipeline_active -pg 1 -lvl 8 -x 1960 -y 220 -defaultsOSRD
+preplace port is_selected -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus gpio_in -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 150 -y 240 -defaultsOSRD
+preplace inst axis_dwidth_converter_0 -pg 1 -lvl 2 -x 390 -y 260 -defaultsOSRD
+preplace inst axis_data_fifo_clock_crossing -pg 1 -lvl 3 -x 660 -y 290 -defaultsOSRD
+preplace inst axis_data_fifo_waveform -pg 1 -lvl 5 -x 1250 -y 350 -defaultsOSRD
+preplace inst axis_data_fifo_gpio -pg 1 -lvl 4 -x 990 -y 100 -defaultsOSRD
+preplace inst axis_mux_0 -pg 1 -lvl 4 -x 990 -y 330 -defaultsOSRD
+preplace inst pipeline_active_buff_0 -pg 1 -lvl 7 -x 1820 -y 210 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 6 -x 1550 -y 200 -defaultsOSRD
+preplace inst gpio_and_select_buff_0 -pg 1 -lvl 3 -x 660 -y 100 -defaultsOSRD
+preplace inst axis_tready_slice_0 -pg 1 -lvl 6 -x 1550 -y 400 -defaultsOSRD
+preplace netloc rf_clock_1 1 0 6 20J 350 NJ 350 510 380 850 430 1120 260 1410
+preplace netloc microblaze_clk_1 1 0 6 20 320 280 340 500 200 840 200 NJ 200 1390J
+preplace netloc microblaze_reset_1 1 0 4 20 160 270 180 510 190 810
+preplace netloc rf_reset_1 1 0 6 NJ 390 NJ 390 NJ 390 830 450 1130 270 1400
+preplace netloc gpio_in_1 1 0 3 NJ 90 NJ 90 NJ
+preplace netloc is_selected_1 1 0 3 NJ 110 NJ 110 NJ
+preplace netloc gpio_and_select_buff_0_select_out 1 3 3 830 190 NJ 190 1380J
+preplace netloc Net 1 3 3 800 440 NJ 440 1400J
+preplace netloc axis_tready_slice_0_pipeline_active 1 6 1 1700 220n
+preplace netloc pipeline_active_buff_0_active_out 1 7 1 NJ 220
+preplace netloc ext_trigger_1 1 0 3 NJ 130 NJ 130 NJ
+preplace netloc gpio_and_select_buff_0_ext_trigger_out 1 3 3 820 210 NJ 210 1370J
+preplace netloc axis_mux_0_m_axis 1 4 1 N 330
+preplace netloc axis_data_fifo_2_M_AXIS 1 5 1 N 350
+preplace netloc axis_data_fifo_1_M_AXIS 1 3 1 N 290
+preplace netloc axis_tready_slice_0_m_axis 1 6 2 NJ 380 NJ
+preplace netloc axis_tready_slice_0_mloop_axis 1 3 4 860 220 1130J 100 NJ 100 1690
+preplace netloc axis_dwidth_converter_0_M_AXIS 1 2 1 N 260
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 N 240
+preplace netloc S_AXIS_0_1 1 0 1 NJ 220
+preplace netloc gpio_and_select_buff_0_m_axis 1 3 1 N 70
+preplace netloc axis_data_fifo_gpio_M_AXIS 1 2 3 510 10 NJ 10 1120
+preplace netloc axis_data_fifo_1_M_AXIS1 1 6 1 N 200
+preplace netloc pipeline_active_buff_0_m_axis 1 5 3 1380 110 NJ 110 1940
+levelinfo -pg 1 0 150 390 660 990 1250 1550 1820 1960
+pagesize -pg 1 -db -bbox -sgen -170 0 2110 520
 "
 }
 0

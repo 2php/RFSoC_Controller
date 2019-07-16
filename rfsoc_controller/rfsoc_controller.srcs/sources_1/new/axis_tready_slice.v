@@ -28,7 +28,8 @@ parameter locking_sclk = 3,//Used for loading the locking cycle
 parameter sdata = 4,
 parameter buffer_flush_bit = 5,//Used for setting all outputs to 0
 parameter zeros_sclk = 7,
-parameter cycles_sclk = 8
+parameter cycles_sclk = 8,
+parameter pre_waveform_sclk = 10
 )
 (
 
@@ -54,8 +55,6 @@ parameter cycles_sclk = 8
     
     output wire pipeline_active,
     
-    input wire is_locking,
-    
     input wire is_selected
 
     
@@ -63,18 +62,22 @@ parameter cycles_sclk = 8
     
     assign pipeline_active = state != state_wait_trigger;
     
-    reg [1:0] state;
+    reg [2:0] state;
     reg [31:0] count;
     
    
     
-    localparam [1:0] state_wait_trigger = 2'b00,
-		             state_zeros = 2'b01,
-		             state_trigger = 2'b10,
-		             state_cleanup = 2'b11; 
+    localparam [2:0] state_wait_trigger = 3'b000,
+		             state_zeros = 3'b001,
+		             state_pre_waveform = 3'b010,
+		             state_trigger = 3'b011,
+		             state_cleanup = 3'b100; 
     
     wire [255:0] locking_waveform;
     shift_register #(256) sr_locking(.clk(clk), .sclk(gpio_in[locking_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(locking_waveform));
+    
+    wire [255:0] pre_waveform;
+    shift_register #(256) sr_pre_waveform(.clk(clk), .sclk(gpio_in[pre_waveform_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(pre_waveform));
     
     wire [31:0] zeros;
     shift_register #(32) sr_zeros(.clk(clk), .sclk(gpio_in[zeros_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(zeros));
@@ -115,8 +118,16 @@ parameter cycles_sclk = 8
                         else begin
                             //Increment count
                             count <= 1;
-                            //advance to the trigger state
-                            state <= state_zeros;
+                            //Check which state should be next
+                            if(zeros == 0)begin
+                                //If there isn't any counting to be done
+                                state <= state_pre_waveform;
+                            end
+                            else begin
+                                //If we need to count
+                                state <= state_zeros;
+                            end
+                               
                         end
                     end
                 end
@@ -124,13 +135,8 @@ parameter cycles_sclk = 8
                 state_zeros: begin
                     //If we're done counting zeros
                     if(count == zeros || count > zeros) begin
-                        //Increment count
-                        count <= 1;
-                        //advance to the trigger state
-                        state <= state_trigger;
-                        //start all data transfers
-                        s_axis_tready <= 1'b1;
-                        mloop_axis_tvalid <= 1'b1;
+                        //Just go to the prewaveform state
+                        state <= state_pre_waveform;
                     
                     end
                     else begin
@@ -140,6 +146,16 @@ parameter cycles_sclk = 8
                 
                 end
                 
+                state_pre_waveform: begin
+                    //Increment count
+                    count <= 1;
+                    //advance to the trigger state
+                    state <= state_trigger;
+                    //start all data transfers
+                    s_axis_tready <= 1'b1;
+                    mloop_axis_tvalid <= 1'b1;
+                
+                end
                 
                 state_trigger: begin
                     //If we're done counting
@@ -183,7 +199,7 @@ parameter cycles_sclk = 8
     end
     
     
-    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (is_locking == 1'b1 && state != state_zeros ? locking_waveform : 0));
+    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (state == state_pre_waveform ? pre_waveform : (state != state_zeros ? locking_waveform : 0)));
 	assign mloop_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : s_axis_tdata; 
 	assign m_axis_tvalid = 1'b1;
     

@@ -45,7 +45,7 @@ void rf_repeat_test();
 #define TRIGGER_CYCLES 0x01
 #define YES 0x00
 #define NO 0x01
-#define NUM_CHANNELS 2
+#define NUM_CHANNELS 4
 #define ON 0x01
 #define OFF 0x00
 
@@ -60,6 +60,7 @@ void rf_trigger();
 void rf_set_locking_waveform(u8 channel, u8* stream);
 void rf_set_locking_select(u8* bytes);
 void rf_set_zero_delay(u8 channel, u32 value);
+void rf_set_pre_waveform(u8 channel, u8* stream);
 
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Jul  9 15:14:57 2019
+| Date         : Mon Jul 15 10:45:29 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_usp_rf_data_converter_0_0_utilization_synth.rpt -pb top_level_usp_rf_data_converter_0_0_utilization_synth.pb
 | Design       : top_level_usp_rf_data_converter_0_0
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               | 3010 |     0 |    425280 |  0.71 |
-|   LUT as Logic          | 3010 |     0 |    425280 |  0.71 |
+| CLB LUTs*               | 4038 |     0 |    425280 |  0.95 |
+|   LUT as Logic          | 4038 |     0 |    425280 |  0.95 |
 |   LUT as Memory         |    0 |     0 |    213600 |  0.00 |
-| CLB Registers           | 2883 |     0 |    850560 |  0.34 |
-|   Register as Flip Flop | 2883 |     0 |    850560 |  0.34 |
+| CLB Registers           | 3469 |     0 |    850560 |  0.41 |
+|   Register as Flip Flop | 3469 |     0 |    850560 |  0.41 |
 |   Register as Latch     |    0 |     0 |    850560 |  0.00 |
-| CARRY8                  |   29 |     0 |     53160 |  0.05 |
-| F7 Muxes                |   23 |     0 |    212640 |  0.01 |
+| CARRY8                  |   38 |     0 |     53160 |  0.07 |
+| F7 Muxes                |   46 |     0 |    212640 |  0.02 |
 | F8 Muxes                |    0 |     0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |     53160 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -59,8 +59,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 247   |          Yes |         Set |            - |
-| 2636  |          Yes |       Reset |            - |
+| 265   |          Yes |         Set |            - |
+| 3204  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -104,10 +104,10 @@ Table of Contents
 +----------------------+------+-------+-----------+-------+
 |       Site Type      | Used | Fixed | Available | Util% |
 +----------------------+------+-------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    1 |     0 |       696 |  0.14 |
+| GLOBAL CLOCK BUFFERs |    4 |     0 |       696 |  0.57 |
 |   BUFGCE             |    0 |     0 |       216 |  0.00 |
 |   BUFGCE_DIV         |    0 |     0 |        32 |  0.00 |
-|   BUFG_GT            |    1 |     0 |       312 |  0.32 |
+|   BUFG_GT            |    4 |     0 |       312 |  1.28 |
 |   BUFG_PS            |    0 |     0 |        72 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |        64 |  0.00 |
 | PLL                  |    0 |     0 |        16 |  0.00 |
@@ -158,20 +158,20 @@ Table of Contents
 +--------------+------+---------------------+
 |   Ref Name   | Used | Functional Category |
 +--------------+------+---------------------+
-| FDRE         | 2636 |            Register |
-| LUT6         | 1568 |                 CLB |
-| LUT5         |  572 |                 CLB |
-| LUT4         |  570 |                 CLB |
-| LUT2         |  554 |                 CLB |
-| LUT3         |  438 |                 CLB |
-| FDSE         |  247 |            Register |
-| CARRY8       |   29 |                 CLB |
-| MUXF7        |   23 |                 CLB |
-| LUT1         |   22 |                 CLB |
+| FDRE         | 3204 |            Register |
+| LUT6         | 2108 |                 CLB |
+| LUT5         |  808 |                 CLB |
+| LUT4         |  722 |                 CLB |
+| LUT2         |  679 |                 CLB |
+| LUT3         |  571 |                 CLB |
+| FDSE         |  265 |            Register |
+| LUT1         |   74 |                 CLB |
+| MUXF7        |   46 |                 CLB |
+| CARRY8       |   38 |                 CLB |
 | HSDAC        |    4 |            Advanced |
 | HSADC        |    4 |            Advanced |
-| BUFG_GT_SYNC |    1 |               Clock |
-| BUFG_GT      |    1 |               Clock |
+| BUFG_GT_SYNC |    4 |               Clock |
+| BUFG_GT      |    4 |               Clock |
 +--------------+------+---------------------+
 
 

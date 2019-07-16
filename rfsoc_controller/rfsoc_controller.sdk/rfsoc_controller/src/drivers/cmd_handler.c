@@ -151,6 +151,12 @@ void cmd_load_waveform()
 	rf_set_locking_waveform(channel, waveform);
 	uart_send_ack();
 
+	//Recieve 32 bytes from python as our pre-waveform
+	uart_recieve(waveform, 32);
+	//Write that as our locking waveform
+	rf_set_pre_waveform(channel, waveform);
+	uart_send_ack();
+
 
 	//Get the bitstream length
 	u8 size[4] = {0x00, 0x00, 0x00, 0x00};

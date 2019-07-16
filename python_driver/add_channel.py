@@ -16,7 +16,7 @@ import RFSoC_Board as rf
 #4 waveform phase, can be a float but will be rounded to nearest quarter nanosecond
 #5 waveform amplitude multiplication factor, must be between 0 and 1
 #6 number of cycles to playback the waveform
-#7 delay before experiment in nanoseconds, will be rounded to the nearest 4 nanoseconds
+#7 delay before experiment in nanoseconds, will be rounded to the nearest quarter nanosecond
 #8 is locking channel? Must be either 0 or 1
 #9 locking waveform amplitude factor, must be between 0 and 1
 #10 locking phase in nanoseconds, can be a float but will be rounded to nearest quarter nanosecond
@@ -37,6 +37,10 @@ if not os.path.isfile(waveform_filename):
 
 waveform_period = int(sys.argv[3])#in nanoseconds, must be int
 
+if(waveform_period%4 != 0):
+    print("Error, waveform period must be a multiple of 4 nanoseconds!")
+    sys.exit()
+
 waveform_phase = float(sys.argv[4]) #in nanoseconds, can be negative and a float
 
 amp_mul_factor = float(sys.argv[5]) #between 0 and 1
@@ -46,7 +50,7 @@ if(amp_mul_factor < 0 or amp_mul_factor > 1):
 
 num_cycles = int(sys.argv[6])
 
-zero_delay = int(sys.argv[7]) #in nanoseconds, must be positive
+zero_delay = float(sys.argv[7]) #in nanoseconds, must be positive
 if(zero_delay < 0):
     print("Error, delay before experiment must be positive or 0")
     sys.exit()
@@ -83,10 +87,10 @@ if(board == None):
     sys.exit()
     
 #If the board is valid, add the channelw
-waveform_file = rf.WaveFile(waveform_filename, (round(waveform_period/4) * rf.DAC_WORD_PERIOD), round(waveform_phase * 4), amp_mul_factor)
-locking_file = rf.WaveFile(locking_filename, rf.DAC_WORD_PERIOD, round(locking_phase * 4), locking_amp_factor)
+waveform_file = rf.WaveFile(waveform_filename, waveform_period, zero_delay, amp_mul_factor, 0, 0)
+locking_file = rf.WaveFile(locking_filename, 4, 0, locking_amp_factor, 1, round(locking_phase * 4)) 
 
-c = rf.Channel(channel_number, round(zero_delay/4), round(num_cycles * round(waveform_period/4)), locking_file, waveform_file, is_locking)
+c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file)
 
 
 board.add_channel(c)

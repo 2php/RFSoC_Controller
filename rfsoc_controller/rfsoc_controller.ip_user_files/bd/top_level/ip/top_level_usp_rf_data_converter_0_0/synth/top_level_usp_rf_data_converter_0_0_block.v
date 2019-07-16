@@ -106,6 +106,39 @@ module top_level_usp_rf_data_converter_0_0_block (
   input             s0_axis_aclk,
   input             s0_axis_aresetn,
 
+  // DAC Reference Clock for Tile 1
+  input             dac1_clk_p,
+  input             dac1_clk_n,
+
+  // DAC Fabric Feedback Clock for Tile 1
+  output            clk_dac1,
+
+  // DAC AXI Streaming and Reset for DAC1
+  input             s1_axis_aclk,
+  input             s1_axis_aresetn,
+
+  // DAC Reference Clock for Tile 2
+  input             dac2_clk_p,
+  input             dac2_clk_n,
+
+  // DAC Fabric Feedback Clock for Tile 2
+  output            clk_dac2,
+
+  // DAC AXI Streaming and Reset for DAC2
+  input             s2_axis_aclk,
+  input             s2_axis_aresetn,
+
+  // DAC Reference Clock for Tile 3
+  input             dac3_clk_p,
+  input             dac3_clk_n,
+
+  // DAC Fabric Feedback Clock for Tile 3
+  output            clk_dac3,
+
+  // DAC AXI Streaming and Reset for DAC3
+  input             s3_axis_aclk,
+  input             s3_axis_aresetn,
+
   output            vout00_p,
   output            vout00_n,
 
@@ -117,6 +150,42 @@ module top_level_usp_rf_data_converter_0_0_block (
 
   output            vout03_p,
   output            vout03_n,
+
+  output            vout10_p,
+  output            vout10_n,
+
+  output            vout11_p,
+  output            vout11_n,
+
+  output            vout12_p,
+  output            vout12_n,
+
+  output            vout13_p,
+  output            vout13_n,
+
+  output            vout20_p,
+  output            vout20_n,
+
+  output            vout21_p,
+  output            vout21_n,
+
+  output            vout22_p,
+  output            vout22_n,
+
+  output            vout23_p,
+  output            vout23_n,
+
+  output            vout30_p,
+  output            vout30_n,
+
+  output            vout31_p,
+  output            vout31_n,
+
+  output            vout32_p,
+  output            vout32_n,
+
+  output            vout33_p,
+  output            vout33_n,
 
   // DAC AXI Streaming Data for DAC00
   input  [255:0]    s00_axis_tdata,
@@ -137,6 +206,66 @@ module top_level_usp_rf_data_converter_0_0_block (
   input  [255:0]    s03_axis_tdata,
   input             s03_axis_tvalid,
   output            s03_axis_tready,
+
+  // DAC AXI Streaming Data for DAC10
+  input  [255:0]    s10_axis_tdata,
+  input             s10_axis_tvalid,
+  output            s10_axis_tready,
+
+  // DAC AXI Streaming Data for DAC11
+  input  [255:0]    s11_axis_tdata,
+  input             s11_axis_tvalid,
+  output            s11_axis_tready,
+
+  // DAC AXI Streaming Data for DAC12
+  input  [255:0]    s12_axis_tdata,
+  input             s12_axis_tvalid,
+  output            s12_axis_tready,
+
+  // DAC AXI Streaming Data for DAC13
+  input  [255:0]    s13_axis_tdata,
+  input             s13_axis_tvalid,
+  output            s13_axis_tready,
+
+  // DAC AXI Streaming Data for DAC20
+  input  [255:0]    s20_axis_tdata,
+  input             s20_axis_tvalid,
+  output            s20_axis_tready,
+
+  // DAC AXI Streaming Data for DAC21
+  input  [255:0]    s21_axis_tdata,
+  input             s21_axis_tvalid,
+  output            s21_axis_tready,
+
+  // DAC AXI Streaming Data for DAC22
+  input  [255:0]    s22_axis_tdata,
+  input             s22_axis_tvalid,
+  output            s22_axis_tready,
+
+  // DAC AXI Streaming Data for DAC23
+  input  [255:0]    s23_axis_tdata,
+  input             s23_axis_tvalid,
+  output            s23_axis_tready,
+
+  // DAC AXI Streaming Data for DAC30
+  input  [255:0]    s30_axis_tdata,
+  input             s30_axis_tvalid,
+  output            s30_axis_tready,
+
+  // DAC AXI Streaming Data for DAC31
+  input  [255:0]    s31_axis_tdata,
+  input             s31_axis_tvalid,
+  output            s31_axis_tready,
+
+  // DAC AXI Streaming Data for DAC32
+  input  [255:0]    s32_axis_tdata,
+  input             s32_axis_tvalid,
+  output            s32_axis_tready,
+
+  // DAC AXI Streaming Data for DAC33
+  input  [255:0]    s33_axis_tdata,
+  input             s33_axis_tvalid,
+  output            s33_axis_tready,
 
   // DAC Debug Ports
   // DAC0
@@ -350,64 +479,64 @@ module top_level_usp_rf_data_converter_0_0_block (
   localparam [2:0] dac03_interpolation = 3'd1;
   localparam [1:0] dac03_mixer         = 2'd2;
   localparam       dac03_sinc          = 1'b0;
-  localparam       dac10_enable        = 1'b0;
+  localparam       dac10_enable        = 1'b1;
   localparam       dac10_data_type     = 1'b0;
-  localparam [2:0] dac10_interpolation = 3'd0;
+  localparam [2:0] dac10_interpolation = 3'd1;
   localparam [1:0] dac10_mixer         = 2'd2;
   localparam       dac10_sinc          = 1'b0;
-  localparam       dac11_enable        = 1'b0;
+  localparam       dac11_enable        = 1'b1;
   localparam       dac11_data_type     = 1'b0;
-  localparam [2:0] dac11_interpolation = 3'd0;
+  localparam [2:0] dac11_interpolation = 3'd1;
   localparam [1:0] dac11_mixer         = 2'd2;
   localparam       dac11_sinc          = 1'b0;
-  localparam       dac12_enable        = 1'b0;
+  localparam       dac12_enable        = 1'b1;
   localparam       dac12_data_type     = 1'b0;
-  localparam [2:0] dac12_interpolation = 3'd0;
+  localparam [2:0] dac12_interpolation = 3'd1;
   localparam [1:0] dac12_mixer         = 2'd2;
   localparam       dac12_sinc          = 1'b0;
-  localparam       dac13_enable        = 1'b0;
+  localparam       dac13_enable        = 1'b1;
   localparam       dac13_data_type     = 1'b0;
-  localparam [2:0] dac13_interpolation = 3'd0;
+  localparam [2:0] dac13_interpolation = 3'd1;
   localparam [1:0] dac13_mixer         = 2'd2;
   localparam       dac13_sinc          = 1'b0;
-  localparam       dac20_enable        = 1'b0;
+  localparam       dac20_enable        = 1'b1;
   localparam       dac20_data_type     = 1'b0;
-  localparam [2:0] dac20_interpolation = 3'd0;
+  localparam [2:0] dac20_interpolation = 3'd1;
   localparam [1:0] dac20_mixer         = 2'd2;
   localparam       dac20_sinc          = 1'b0;
-  localparam       dac21_enable        = 1'b0;
+  localparam       dac21_enable        = 1'b1;
   localparam       dac21_data_type     = 1'b0;
-  localparam [2:0] dac21_interpolation = 3'd0;
+  localparam [2:0] dac21_interpolation = 3'd1;
   localparam [1:0] dac21_mixer         = 2'd2;
   localparam       dac21_sinc          = 1'b0;
-  localparam       dac22_enable        = 1'b0;
+  localparam       dac22_enable        = 1'b1;
   localparam       dac22_data_type     = 1'b0;
-  localparam [2:0] dac22_interpolation = 3'd0;
+  localparam [2:0] dac22_interpolation = 3'd1;
   localparam [1:0] dac22_mixer         = 2'd2;
   localparam       dac22_sinc          = 1'b0;
-  localparam       dac23_enable        = 1'b0;
+  localparam       dac23_enable        = 1'b1;
   localparam       dac23_data_type     = 1'b0;
-  localparam [2:0] dac23_interpolation = 3'd0;
+  localparam [2:0] dac23_interpolation = 3'd1;
   localparam [1:0] dac23_mixer         = 2'd2;
   localparam       dac23_sinc          = 1'b0;
-  localparam       dac30_enable        = 1'b0;
+  localparam       dac30_enable        = 1'b1;
   localparam       dac30_data_type     = 1'b0;
-  localparam [2:0] dac30_interpolation = 3'd0;
+  localparam [2:0] dac30_interpolation = 3'd1;
   localparam [1:0] dac30_mixer         = 2'd2;
   localparam       dac30_sinc          = 1'b0;
-  localparam       dac31_enable        = 1'b0;
+  localparam       dac31_enable        = 1'b1;
   localparam       dac31_data_type     = 1'b0;
-  localparam [2:0] dac31_interpolation = 3'd0;
+  localparam [2:0] dac31_interpolation = 3'd1;
   localparam [1:0] dac31_mixer         = 2'd2;
   localparam       dac31_sinc          = 1'b0;
-  localparam       dac32_enable        = 1'b0;
+  localparam       dac32_enable        = 1'b1;
   localparam       dac32_data_type     = 1'b0;
-  localparam [2:0] dac32_interpolation = 3'd0;
+  localparam [2:0] dac32_interpolation = 3'd1;
   localparam [1:0] dac32_mixer         = 2'd2;
   localparam       dac32_sinc          = 1'b0;
-  localparam       dac33_enable        = 1'b0;
+  localparam       dac33_enable        = 1'b1;
   localparam       dac33_data_type     = 1'b0;
-  localparam [2:0] dac33_interpolation = 3'd0;
+  localparam [2:0] dac33_interpolation = 3'd1;
   localparam [1:0] dac33_mixer         = 2'd2;
   localparam       dac33_sinc          = 1'b0;
 
@@ -824,7 +953,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire             dac3_sm_reset_i;
   wire   [7:0]     dac3_reset_cnt;
 
-  wire   [0:0]     dac_reset_cnt_ack;
+  wire   [3:0]     dac_reset_cnt_ack;
   wire               dac_reset_cnt_ack_i;
 
   reg    [3:0]     adc0_start_stage;
@@ -971,6 +1100,12 @@ module top_level_usp_rf_data_converter_0_0_block (
 
   wire             clk_dac0_i;
   wire             s0_axis_aclk_val_sync;
+  wire             clk_dac1_i;
+  wire             s1_axis_aclk_val_sync;
+  wire             clk_dac2_i;
+  wire             s2_axis_aclk_val_sync;
+  wire             clk_dac3_i;
+  wire             s3_axis_aclk_val_sync;
 
 
   wire  [15:0]     adc00_stat;
@@ -1139,12 +1274,36 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire  [255:0]    dac01_data_i;
   wire  [255:0]    dac02_data_i;
   wire  [255:0]    dac03_data_i;
+  wire  [255:0]    dac10_data_i;
+  wire  [255:0]    dac11_data_i;
+  wire  [255:0]    dac12_data_i;
+  wire  [255:0]    dac13_data_i;
+  wire  [255:0]    dac20_data_i;
+  wire  [255:0]    dac21_data_i;
+  wire  [255:0]    dac22_data_i;
+  wire  [255:0]    dac23_data_i;
+  wire  [255:0]    dac30_data_i;
+  wire  [255:0]    dac31_data_i;
+  wire  [255:0]    dac32_data_i;
+  wire  [255:0]    dac33_data_i;
 
 
   assign  dac00_data_i  =  s00_axis_tdata;
   assign  dac01_data_i  =  s01_axis_tdata;
   assign  dac02_data_i  =  s02_axis_tdata;
   assign  dac03_data_i  =  s03_axis_tdata;
+  assign  dac10_data_i  =  s10_axis_tdata;
+  assign  dac11_data_i  =  s11_axis_tdata;
+  assign  dac12_data_i  =  s12_axis_tdata;
+  assign  dac13_data_i  =  s13_axis_tdata;
+  assign  dac20_data_i  =  s20_axis_tdata;
+  assign  dac21_data_i  =  s21_axis_tdata;
+  assign  dac22_data_i  =  s22_axis_tdata;
+  assign  dac23_data_i  =  s23_axis_tdata;
+  assign  dac30_data_i  =  s30_axis_tdata;
+  assign  dac31_data_i  =  s31_axis_tdata;
+  assign  dac32_data_i  =  s32_axis_tdata;
+  assign  dac33_data_i  =  s33_axis_tdata;
 
   top_level_usp_rf_data_converter_0_0_rf_wrapper
   top_level_usp_rf_data_converter_0_0_rf_wrapper_i(
@@ -1294,49 +1453,52 @@ module top_level_usp_rf_data_converter_0_0_block (
     .dac0_common_stat      (dac0_common_stat),
 
     // DAC Reference Clock for Tile 1
-    .dac1_clk_p            (1'b0),
-    .dac1_clk_n            (1'b0),
+    .dac1_clk_p            (dac1_clk_p),
+    .dac1_clk_n            (dac1_clk_n),
 
     // DAC PLL Reference Clock for Tile 1
+    // TODO. How to connect this?
     .dac1_pll_clk          (1'b0),
 
-    .dac1_fabricclk        (1'b0),
-    .dac1_fabricclk_val    (1'b0),
+    .dac1_fabricclk        (s1_axis_aclk),
+    .dac1_fabricclk_val    (s1_axis_aclk_val_sync),
 
     // DAC Fabric Feedback Clock for Tile 1
-    .clk_dac1              (),
+    .clk_dac1              (clk_dac1_i),
 
     // DAC Common Status for Tile 1
     .dac1_common_stat      (dac1_common_stat),
 
     // DAC Reference Clock for Tile 2
-    .dac2_clk_p            (1'b0),
-    .dac2_clk_n            (1'b0),
+    .dac2_clk_p            (dac2_clk_p),
+    .dac2_clk_n            (dac2_clk_n),
 
     // DAC PLL Reference Clock for Tile 2
+    // TODO. How to connect this?
     .dac2_pll_clk          (1'b0),
 
-    .dac2_fabricclk        (1'b0),
-    .dac2_fabricclk_val    (1'b0),
+    .dac2_fabricclk        (s2_axis_aclk),
+    .dac2_fabricclk_val    (s2_axis_aclk_val_sync),
 
     // DAC Fabric Feedback Clock for Tile 2
-    .clk_dac2              (),
+    .clk_dac2              (clk_dac2_i),
 
     // DAC Common Status for Tile 2
     .dac2_common_stat      (dac2_common_stat),
 
     // DAC Reference Clock for Tile 3
-    .dac3_clk_p            (1'b0),
-    .dac3_clk_n            (1'b0),
+    .dac3_clk_p            (dac3_clk_p),
+    .dac3_clk_n            (dac3_clk_n),
 
     // DAC PLL Reference Clock for Tile 3
+    // TODO. How to connect this?
     .dac3_pll_clk          (1'b0),
 
-    .dac3_fabricclk        (1'b0),
-    .dac3_fabricclk_val    (1'b0),
+    .dac3_fabricclk        (s3_axis_aclk),
+    .dac3_fabricclk_val    (s3_axis_aclk_val_sync),
 
     // DAC Fabric Feedback Clock for Tile 3
-    .clk_dac3              (),
+    .clk_dac3              (clk_dac3_i),
 
     // DAC Common Status for Tile 3
     .dac3_common_stat      (dac3_common_stat),
@@ -1352,6 +1514,42 @@ module top_level_usp_rf_data_converter_0_0_block (
 
     .vout03_p              (vout03_p),
     .vout03_n              (vout03_n),
+
+    .vout10_p              (vout10_p),
+    .vout10_n              (vout10_n),
+
+    .vout11_p              (vout11_p),
+    .vout11_n              (vout11_n),
+
+    .vout12_p              (vout12_p),
+    .vout12_n              (vout12_n),
+
+    .vout13_p              (vout13_p),
+    .vout13_n              (vout13_n),
+
+    .vout20_p              (vout20_p),
+    .vout20_n              (vout20_n),
+
+    .vout21_p              (vout21_p),
+    .vout21_n              (vout21_n),
+
+    .vout22_p              (vout22_p),
+    .vout22_n              (vout22_n),
+
+    .vout23_p              (vout23_p),
+    .vout23_n              (vout23_n),
+
+    .vout30_p              (vout30_p),
+    .vout30_n              (vout30_n),
+
+    .vout31_p              (vout31_p),
+    .vout31_n              (vout31_n),
+
+    .vout32_p              (vout32_p),
+    .vout32_n              (vout32_n),
+
+    .vout33_p              (vout33_p),
+    .vout33_n              (vout33_n),
 
     // DAC data for DAC00
     .dac00_data_in         (dac00_data_i),
@@ -1374,64 +1572,64 @@ module top_level_usp_rf_data_converter_0_0_block (
     .dac03_ready_out       (s03_axis_tready),
 
     // DAC data for DAC10
-    .dac10_data_in         (256'b0),
-    .dac10_valid_in        (1'b0),
-    .dac10_ready_out       (),
+    .dac10_data_in         (dac10_data_i),
+    .dac10_valid_in        (s10_axis_tvalid),
+    .dac10_ready_out       (s10_axis_tready),
 
     // DAC data for DAC11
-    .dac11_data_in         (256'b0),
-    .dac11_valid_in        (1'b0),
-    .dac11_ready_out       (),
+    .dac11_data_in         (dac11_data_i),
+    .dac11_valid_in        (s11_axis_tvalid),
+    .dac11_ready_out       (s11_axis_tready),
 
     // DAC data for DAC12
-    .dac12_data_in         (256'b0),
-    .dac12_valid_in        (1'b0),
-    .dac12_ready_out       (),
+    .dac12_data_in         (dac12_data_i),
+    .dac12_valid_in        (s12_axis_tvalid),
+    .dac12_ready_out       (s12_axis_tready),
 
     // DAC data for DAC13
-    .dac13_data_in         (256'b0),
-    .dac13_valid_in        (1'b0),
-    .dac13_ready_out       (),
+    .dac13_data_in         (dac13_data_i),
+    .dac13_valid_in        (s13_axis_tvalid),
+    .dac13_ready_out       (s13_axis_tready),
 
     // DAC data for DAC20
-    .dac20_data_in         (256'b0),
-    .dac20_valid_in        (1'b0),
-    .dac20_ready_out       (),
+    .dac20_data_in         (dac20_data_i),
+    .dac20_valid_in        (s20_axis_tvalid),
+    .dac20_ready_out       (s20_axis_tready),
 
     // DAC data for DAC21
-    .dac21_data_in         (256'b0),
-    .dac21_valid_in        (1'b0),
-    .dac21_ready_out       (),
+    .dac21_data_in         (dac21_data_i),
+    .dac21_valid_in        (s21_axis_tvalid),
+    .dac21_ready_out       (s21_axis_tready),
 
     // DAC data for DAC22
-    .dac22_data_in         (256'b0),
-    .dac22_valid_in        (1'b0),
-    .dac22_ready_out       (),
+    .dac22_data_in         (dac22_data_i),
+    .dac22_valid_in        (s22_axis_tvalid),
+    .dac22_ready_out       (s22_axis_tready),
 
     // DAC data for DAC23
-    .dac23_data_in         (256'b0),
-    .dac23_valid_in        (1'b0),
-    .dac23_ready_out       (),
+    .dac23_data_in         (dac23_data_i),
+    .dac23_valid_in        (s23_axis_tvalid),
+    .dac23_ready_out       (s23_axis_tready),
 
     // DAC data for DAC30
-    .dac30_data_in         (256'b0),
-    .dac30_valid_in        (1'b0),
-    .dac30_ready_out       (),
+    .dac30_data_in         (dac30_data_i),
+    .dac30_valid_in        (s30_axis_tvalid),
+    .dac30_ready_out       (s30_axis_tready),
 
     // DAC data for DAC31
-    .dac31_data_in         (256'b0),
-    .dac31_valid_in        (1'b0),
-    .dac31_ready_out       (),
+    .dac31_data_in         (dac31_data_i),
+    .dac31_valid_in        (s31_axis_tvalid),
+    .dac31_ready_out       (s31_axis_tready),
 
     // DAC data for DAC32
-    .dac32_data_in         (256'b0),
-    .dac32_valid_in        (1'b0),
-    .dac32_ready_out       (),
+    .dac32_data_in         (dac32_data_i),
+    .dac32_valid_in        (s32_axis_tvalid),
+    .dac32_ready_out       (s32_axis_tready),
 
     // DAC data for DAC33
-    .dac33_data_in         (256'b0),
-    .dac33_valid_in        (1'b0),
-    .dac33_ready_out       (),
+    .dac33_data_in         (dac33_data_i),
+    .dac33_valid_in        (s33_axis_tvalid),
+    .dac33_ready_out       (s33_axis_tready),
 
     .drp_addr              (drp_addr),
     .drp_di                (drp_di),
@@ -1922,8 +2120,29 @@ module top_level_usp_rf_data_converter_0_0_block (
       .dest_out (s0_axis_aclk_val_sync)
     );
   // Synchronize the asynchronous DAC clock valid inputs onto the DRP clock
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac1_clk_valid_i (
+      .src_clk  (1'b0                              ),
+      .src_in   (s1_axis_aresetn      ),
+      .dest_clk (s_axi_aclk                        ),
+      .dest_out (s1_axis_aclk_val_sync)
+    );
   // Synchronize the asynchronous DAC clock valid inputs onto the DRP clock
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac2_clk_valid_i (
+      .src_clk  (1'b0                              ),
+      .src_in   (s2_axis_aresetn      ),
+      .dest_clk (s_axi_aclk                        ),
+      .dest_out (s2_axis_aclk_val_sync)
+    );
   // Synchronize the asynchronous DAC clock valid inputs onto the DRP clock
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_dac3_clk_valid_i (
+      .src_clk  (1'b0                              ),
+      .src_in   (s3_axis_aresetn      ),
+      .dest_clk (s_axi_aclk                        ),
+      .dest_out (s3_axis_aclk_val_sync)
+    );
 
   top_level_usp_rf_data_converter_0_0_axi_lite_ipif #(
     .C_S_AXI_DATA_WIDTH           (32),
@@ -2510,7 +2729,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac1_ref_clk_freq <= 32'd6400000;
+      dac1_ref_clk_freq <= 32'd250000;
     end
     else if (bank3_write[192])
     begin
@@ -2521,7 +2740,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac1_sample_rate <= 32'd6400000;
+      dac1_sample_rate <= 32'd4000000;
     end
     else if (bank3_write[193])
     begin
@@ -2689,7 +2908,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac2_ref_clk_freq <= 32'd6400000;
+      dac2_ref_clk_freq <= 32'd250000;
     end
     else if (bank5_write[192])
     begin
@@ -2700,7 +2919,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac2_sample_rate <= 32'd6400000;
+      dac2_sample_rate <= 32'd4000000;
     end
     else if (bank5_write[193])
     begin
@@ -2868,7 +3087,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac3_ref_clk_freq <= 32'd6400000;
+      dac3_ref_clk_freq <= 32'd250000;
     end
     else if (bank7_write[192])
     begin
@@ -2879,7 +3098,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      dac3_sample_rate <= 32'd6400000;
+      dac3_sample_rate <= 32'd4000000;
     end
     else if (bank7_write[193])
     begin
@@ -4213,7 +4432,7 @@ module top_level_usp_rf_data_converter_0_0_block (
                                bank0_read[2] ? {16'b0, startup_delay} :
                                bank0_read[8] ? {16'b0, 8'd228, 7'b0, 1'b1} :
                                // DAC Tile Config Bit 0:DAC Tile 0 Enable, Bit 1 Tile 0 PLL Enable Bits 3:2 Reserved, Bit 4: DAC Tile 1 Enabled, Bit 5: Tile 1 PLL Enable Bits 7:6 Reserved...
-                               bank0_read[9] ? {4'h0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b1, 1'b1} :
+                               bank0_read[9] ? {4'h0, 2'b00, 1'b1, 1'b1, 2'b00, 1'b1, 1'b1, 2'b00, 1'b1, 1'b1, 2'b00, 1'b1, 1'b1} :
                                bank0_read[10] ? {3'b000, dac01_sinc, 2'b00, dac01_mixer, 1'b0, dac01_interpolation, 2'b0, dac01_data_type, dac01_enable,  3'b000, dac00_sinc, 2'b00, dac00_mixer, 1'b0, dac00_interpolation, 2'b00, dac00_data_type, dac00_enable} :
                                bank0_read[11] ? {3'b000, dac03_sinc, 2'b00, dac03_mixer, 1'b0, dac03_interpolation, 2'b00, dac03_data_type, dac03_enable,  3'b000, dac02_sinc, 2'b00, dac02_mixer, 1'b0, dac02_interpolation, 2'b00, dac02_data_type, dac02_enable} :
                                bank0_read[12] ? {3'b000, dac11_sinc, 2'b00, dac11_mixer, 1'b0, dac11_interpolation, 2'b0, dac11_data_type, dac11_enable,  3'b000, dac10_sinc, 2'b00, dac10_mixer, 1'b0, dac10_interpolation, 2'b00, dac10_data_type, dac10_enable} :
@@ -4579,7 +4798,16 @@ module top_level_usp_rf_data_converter_0_0_block (
   top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl i_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl (
   // DAC Fabric Feedback Clock for Tile 0
     .clk_dac0         (clk_dac0_i),
-    .clk_dac0_buf     (clk_dac0)
+    .clk_dac0_buf     (clk_dac0),
+  // DAC Fabric Feedback Clock for Tile 1
+    .clk_dac1         (clk_dac1_i),
+    .clk_dac1_buf     (clk_dac1),
+  // DAC Fabric Feedback Clock for Tile 2
+    .clk_dac2         (clk_dac2_i),
+    .clk_dac2_buf     (clk_dac2),
+  // DAC Fabric Feedback Clock for Tile 3
+    .clk_dac3         (clk_dac3_i),
+    .clk_dac3_buf     (clk_dac3)
   );
 
   // DAC Reset Module Counter for Tile 0
@@ -4592,8 +4820,35 @@ module top_level_usp_rf_data_converter_0_0_block (
     .count        (dac0_reset_cnt)
   );
 
+  // DAC Reset Module Counter for Tile 1
+  top_level_usp_rf_data_converter_0_0_reset_count i_dac1_reset_count (
+    .clk          (s_axi_aclk),
+    .reset        (~s_axi_aresetn),
+    .sm_reset     (dac1_sm_reset_i),
+    .axi_read_req (bank3_read[14]),
+    .read_ack     (dac_reset_cnt_ack[1]),
+    .count        (dac1_reset_cnt)
+  );
 
+  // DAC Reset Module Counter for Tile 2
+  top_level_usp_rf_data_converter_0_0_reset_count i_dac2_reset_count (
+    .clk          (s_axi_aclk),
+    .reset        (~s_axi_aresetn),
+    .sm_reset     (dac2_sm_reset_i),
+    .axi_read_req (bank5_read[14]),
+    .read_ack     (dac_reset_cnt_ack[2]),
+    .count        (dac2_reset_cnt)
+  );
 
+  // DAC Reset Module Counter for Tile 3
+  top_level_usp_rf_data_converter_0_0_reset_count i_dac3_reset_count (
+    .clk          (s_axi_aclk),
+    .reset        (~s_axi_aresetn),
+    .sm_reset     (dac3_sm_reset_i),
+    .axi_read_req (bank7_read[14]),
+    .read_ack     (dac_reset_cnt_ack[3]),
+    .count        (dac3_reset_cnt)
+  );
 
   assign dac_reset_cnt_ack_i = |dac_reset_cnt_ack;
 

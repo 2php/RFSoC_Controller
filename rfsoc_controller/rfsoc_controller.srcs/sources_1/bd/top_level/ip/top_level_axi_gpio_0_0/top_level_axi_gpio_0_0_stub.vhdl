@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Thu Jul 11 15:16:04 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top top_level_axi_gpio_0_0 -prefix
+--               top_level_axi_gpio_0_0_ top_level_axi_gpio_0_0_stub.vhdl
 -- Design      : top_level_axi_gpio_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu29dr-ffvf1760-2-e

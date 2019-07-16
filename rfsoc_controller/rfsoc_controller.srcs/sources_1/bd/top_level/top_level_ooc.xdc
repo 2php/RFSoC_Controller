@@ -8,5 +8,8 @@
 ################################################################################
 create_clock -name diff_clock_rtl_clk_p -period 3.333 [get_ports diff_clock_rtl_clk_p]
 create_clock -name dac0_clk_clk_p -period 0.250 [get_ports dac0_clk_clk_p]
+create_clock -name dac1_clk_clk_p -period 4 [get_ports dac1_clk_clk_p]
+create_clock -name dac2_clk_clk_p -period 4 [get_ports dac2_clk_clk_p]
+create_clock -name dac3_clk_clk_p -period 4 [get_ports dac3_clk_clk_p]
 
 ################################################################################

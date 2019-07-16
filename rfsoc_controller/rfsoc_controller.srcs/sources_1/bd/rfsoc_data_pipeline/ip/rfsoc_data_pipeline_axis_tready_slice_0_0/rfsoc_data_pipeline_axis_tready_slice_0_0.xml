@@ -575,7 +575,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:888c81b7</spirit:value>
+            <spirit:value>9:8b5f5542</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -586,7 +586,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:888c81b7</spirit:value>
+            <spirit:value>9:8b5f5542</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -602,11 +602,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 11 21:36:39 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 16 00:25:30 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:888c81b7</spirit:value>
+            <spirit:value>9:8b5f5542</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -618,7 +618,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07f31ae7</spirit:value>
+            <spirit:value>9:a46ea366</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -634,11 +634,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 11 21:36:39 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 16 00:25:30 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07f31ae7</spirit:value>
+            <spirit:value>9:a46ea366</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -868,19 +868,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>is_locking</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>is_selected</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -929,6 +916,11 @@
         <spirit:name>cycles_sclk</spirit:name>
         <spirit:displayName>Cycles Sclk</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.cycles_sclk">8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>pre_waveform_sclk</spirit:name>
+        <spirit:displayName>Pre Waveform Sclk</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pre_waveform_sclk">10</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -986,6 +978,11 @@
       <spirit:name>cycles_sclk</spirit:name>
       <spirit:displayName>Cycles Sclk</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.cycles_sclk">8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>pre_waveform_sclk</spirit:name>
+      <spirit:displayName>Pre Waveform Sclk</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.pre_waveform_sclk">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

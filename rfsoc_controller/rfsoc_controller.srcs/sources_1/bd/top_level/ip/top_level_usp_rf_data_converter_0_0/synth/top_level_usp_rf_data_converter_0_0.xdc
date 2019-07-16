@@ -69,6 +69,12 @@ set ipif_read   [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUEN
 
 set rfams_clock_dac0 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx0_u_dac]]
 set_false_path -through $rfams_clock_dac0 -to $ipif_read
+set rfams_clock_dac1 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx1_u_dac]]
+set_false_path -through $rfams_clock_dac1 -to $ipif_read
+set rfams_clock_dac2 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx2_u_dac]]
+set_false_path -through $rfams_clock_dac2 -to $ipif_read
+set rfams_clock_dac3 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx3_u_dac]]
+set_false_path -through $rfams_clock_dac3 -to $ipif_read
 
 
 ###############################################################################
@@ -78,6 +84,15 @@ set top_level_usp_rf_data_converter_0_0_axi_aclk  [get_clocks -of_objects [get_p
 
 # Workaround to exclude paths that are wrongly related to DCLK
 set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_DAC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx0_u_dac]]
+
+# Workaround to exclude paths that are wrongly related to DCLK
+set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_DAC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx1_u_dac]]
+
+# Workaround to exclude paths that are wrongly related to DCLK
+set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_DAC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx2_u_dac]]
+
+# Workaround to exclude paths that are wrongly related to DCLK
+set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_DAC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx3_u_dac]]
 
 # Multicycle paths from the state machine to the DRP address and
 # data inputs of the converters

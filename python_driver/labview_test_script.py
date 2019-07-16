@@ -13,7 +13,7 @@ Created on Fri Jul 12 10:26:47 2019
 #4 waveform phase, can be a float but will be rounded to nearest quarter nanosecond
 #5 waveform amplitude multiplication factor, must be between 0 and 1
 #6 number of cycles to playback the waveform
-#7 delay before experiment in nanoseconds, will be rounded to the nearest 4 nanoseconds
+#7 delay before experiment in nanoseconds, will be rounded to the nearest quarter nanosecond
 #8 is locking channel? Must be either 0 or 1
 #9 locking waveform amplitude factor, must be between 0 and 1
 #10 locking phase in nanoseconds, can be a float but will be rounded to nearest quarter nanosecond
@@ -23,7 +23,7 @@ import os
 
 os.system("python init_board.py COM4 && PAUSE")
 
-os.system("python add_channel.py 1 2_dc_square_wave.txt 200 0 1 200 400 1 1 0 locking_waveform.txt && PAUSE")
-os.system("python add_channel.py 2 2_dc_square_wave.txt 200 0 1 200 1600 0 && PAUSE")
+os.system("python add_channel.py 1 2_dc_square_wave.txt 200 0 1 10 202 1 1 0 locking_waveform.txt && PAUSE")
+os.system("python add_channel.py 2 2_dc_square_wave.txt 200 0 1 10 0 0 && PAUSE")
 os.system("python arm_board.py && PAUSE")
 os.system("python trigger_board.py && PAUSE")

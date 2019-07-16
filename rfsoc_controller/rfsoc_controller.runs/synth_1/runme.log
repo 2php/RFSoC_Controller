@@ -12,95 +12,122 @@ source top_level_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 414.121 ; gain = 19.168
+add_files: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 485.848 ; gain = 91.066
 Command: synth_design -top top_level_wrapper -part xczu29dr-ffvf1760-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29dr'
-INFO: [Common 17-86] Your Synthesis license expires in 6 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 2 day(s)
 INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10896 
+INFO: Helper process launched with PID 3796 
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1510.230 ; gain = 178.020
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1581.734 ; gain = 179.184
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_wrapper' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'top_level' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:921]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axi_gpio_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_gpio_0_0' (1#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axi_uartlite_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_uartlite_0_0' (2#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_level_axi_uartlite_0_0' has 22 connections declared, but only 21 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1191]
-INFO: [Synth 8-6157] synthesizing module 'top_level_axis_data_fifo_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_axis_data_fifo_1_0' (3#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_axis_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_channel_select_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_channel_select_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_channel_select_0_0' (4#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_channel_select_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_clk_wiz_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_clk_wiz_1_0' (5#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_level_gpio_buffer_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_gpio_buffer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_gpio_buffer_0_0' (6#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_gpio_buffer_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_locking_sr_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_locking_sr_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_locking_sr_0_0' (7#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_locking_sr_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_mdm_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_mdm_1_0' (8#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_mdm_1_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'top_level_mdm_1_0' has 30 connections declared, but only 29 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1254]
-INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_0' (9#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'top_level_microblaze_0_0' has 84 connections declared, but only 75 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1286]
-INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_axi_periph_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1625]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_gpio_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_gpio_0_0' (1#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_axi_uartlite_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_axi_uartlite_0_0' (2#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'top_level_axi_uartlite_0_0' has 22 connections declared, but only 21 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1402]
+INFO: [Synth 8-6157] synthesizing module 'top_level_channel_select_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_channel_select_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_channel_select_0_0' (3#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_channel_select_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_clk_wiz_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_clk_wiz_1_0' (4#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_level_mdm_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_mdm_1_0' (5#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'top_level_mdm_1_0' has 30 connections declared, but only 29 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1450]
+INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_0' (6#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'top_level_microblaze_0_0' has 180 connections declared, but only 147 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1482]
+INFO: [Synth 8-6157] synthesizing module 'top_level_microblaze_0_axi_periph_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2177]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_RMQ2WX' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_RMQ2WX' (10#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_RMQ2WX' (7#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1E2MCK9' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1E2MCK9' (11#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1E2MCK9' (8#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:144]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_6F20FK' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_6F20FK' (12#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_6F20FK' (9#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:276]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1HHG8VC' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1HHG8VC' (13#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1HHG8VC' (10#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:408]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1XULX5P' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:774]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1XULX5P' (14#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:774]
-INFO: [Synth 8-6157] synthesizing module 'top_level_xbar_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_xbar_0' (15#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_xbar_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'top_level_xbar_0' has 40 connections declared, but only 38 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2290]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_axi_periph_0' (16#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1625]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1XULX5P' (11#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:774]
+INFO: [Synth 8-6157] synthesizing module 'top_level_xbar_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_xbar_0' (12#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'top_level_xbar_0' has 40 connections declared, but only 38 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2842]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_microblaze_0_axi_periph_0' (13#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2177]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_598ZMX' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:540]
-INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_bram_if_cntlr_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_bram_if_cntlr_0' (17#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_v10_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_v10_0' (18#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_bram_if_cntlr_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_bram_if_cntlr_0' (14#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_dlmb_v10_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_dlmb_v10_0' (15#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_dlmb_v10_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'top_level_dlmb_v10_0' has 25 connections declared, but only 24 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:686]
-INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_bram_if_cntlr_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_bram_if_cntlr_0' (19#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_v10_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_v10_0' (20#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_bram_if_cntlr_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_bram_if_cntlr_0' (16#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_ilmb_v10_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_ilmb_v10_0' (17#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_ilmb_v10_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'top_level_ilmb_v10_0' has 25 connections declared, but only 24 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:732]
-INFO: [Synth 8-6157] synthesizing module 'top_level_lmb_bram_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_lmb_bram_0' (21#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_lmb_bram_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_lmb_bram_0' (18#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_lmb_bram_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'top_level_lmb_bram_0' has 16 connections declared, but only 14 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:757]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_598ZMX' (22#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:540]
-INFO: [Synth 8-6157] synthesizing module 'top_level_proc_sys_reset_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_proc_sys_reset_0_0' (23#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'top_level_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1484]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_0_0' (24#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_1_0' (25#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_2_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_2_0' (26#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_3_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_3_0' (27#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_rst_clk_wiz_1_100M_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_clk_wiz_1_100M_0' (28#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'top_level_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1555]
-INFO: [Synth 8-6157] synthesizing module 'top_level_trigger_buffer_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_trigger_buffer_0_0' (29#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_0' (30#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'top_level_usp_rf_data_converter_0_0' has 47 connections declared, but only 46 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1573]
-INFO: [Synth 8-6157] synthesizing module 'top_level_util_vector_logic_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_util_vector_logic_0_0' (31#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-8056-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top_level' (32#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:921]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (33#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_598ZMX' (19#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:540]
+INFO: [Synth 8-6157] synthesizing module 'top_level_proc_sys_reset_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_proc_sys_reset_0_0' (20#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'top_level_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1752]
+INFO: [Synth 8-6157] synthesizing module 'top_level_proc_sys_reset_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_proc_sys_reset_1_0' (21#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'top_level_proc_sys_reset_1_0' has 10 connections declared, but only 6 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1759]
+INFO: [Synth 8-6157] synthesizing module 'top_level_proc_sys_reset_1_1' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_proc_sys_reset_1_1' (22#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_1_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_2' of module 'top_level_proc_sys_reset_1_1' has 10 connections declared, but only 6 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1766]
+INFO: [Synth 8-6157] synthesizing module 'top_level_proc_sys_reset_2_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_proc_sys_reset_2_0' (23#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_proc_sys_reset_2_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_3' of module 'top_level_proc_sys_reset_2_0' has 10 connections declared, but only 6 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:1773]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_0_0' (24#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_1_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_1_0' (25#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_10_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_10_0' (26#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_11_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_11_0' (27#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_11_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_12_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_12_0' (28#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_12_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_13_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_13_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_13_0' (29#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_13_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_14_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_14_0' (30#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_14_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_15_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_15_0' (31#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_15_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_2_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_2_0' (32#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_3_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_3_0' (33#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_4_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_4_0' (34#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_5_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_5_0' (35#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_6_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_6_0' (36#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_7_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_7_0' (37#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_8_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_8_0' (38#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_data_pipeline_9_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_data_pipeline_9_0' (39#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rfsoc_data_pipeline_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_rst_clk_wiz_1_100M_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_rst_clk_wiz_1_100M_0' (40#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'top_level_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2020]
+INFO: [Synth 8-6157] synthesizing module 'top_level_trigger_buffer_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_trigger_buffer_0_0' (41#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_trigger_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'top_level_usp_rf_data_converter_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_usp_rf_data_converter_0_0' (42#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_usp_rf_data_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'top_level_usp_rf_data_converter_0_0' has 122 connections declared, but only 121 given [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:2050]
+INFO: [Synth 8-6157] synthesizing module 'top_level_util_vector_logic_0_0' [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_util_vector_logic_0_0' (43#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/.Xil/Vivado-5636-DESKTOP-6ILET8A/realtime/top_level_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top_level' (44#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v:921]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (45#1) [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_1XULX5P has unconnected port S_ACLK
@@ -132,7 +159,7 @@ WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnect
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.199 ; gain = 243.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1650.770 ; gain = 248.219
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -145,10 +172,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.332 ; gain = 250.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1655.871 ; gain = 253.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.332 ; gain = 250.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1655.871 ; gain = 253.320
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -182,26 +209,50 @@ Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/
 Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0_in_context.xdc] for cell 'top_level_i/axi_gpio_0'
 Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc] for cell 'top_level_i/usp_rf_data_converter_0'
 Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc] for cell 'top_level_i/usp_rf_data_converter_0'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_0'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_0'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_1'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_1'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_0'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_0'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_1'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_1'
 Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_0'
 Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_0'
 Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_in_context.xdc] for cell 'top_level_i/trigger_buffer_0'
 Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0/top_level_trigger_buffer_0_0_in_context.xdc] for cell 'top_level_i/trigger_buffer_0'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_0_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_2'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_0_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_2'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_3'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_3'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0_in_context.xdc] for cell 'top_level_i/gpio_buffer_0'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0_in_context.xdc] for cell 'top_level_i/gpio_buffer_0'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0_in_context.xdc] for cell 'top_level_i/axis_data_fifo_1'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0_in_context.xdc] for cell 'top_level_i/axis_data_fifo_1'
-Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_locking_sr_0_0/top_level_locking_sr_0_0/top_level_locking_sr_0_0_in_context.xdc] for cell 'top_level_i/locking_sr_0'
-Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_locking_sr_0_0/top_level_locking_sr_0_0/top_level_locking_sr_0_0_in_context.xdc] for cell 'top_level_i/locking_sr_0'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_2'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_2'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_3'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_3'
 Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_channel_select_0_0/top_level_channel_select_0_0/top_level_channel_select_0_0_in_context.xdc] for cell 'top_level_i/channel_select_0'
 Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_channel_select_0_0/top_level_channel_select_0_0/top_level_channel_select_0_0_in_context.xdc] for cell 'top_level_i/channel_select_0'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_4'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_4'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_5'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_5'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_6'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_6'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_1'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_1'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_7'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_7'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_8'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_8'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_2'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_2'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_9'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_9'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/top_level_rfsoc_data_pipeline_10_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_10'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/top_level_rfsoc_data_pipeline_10_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_10'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/top_level_rfsoc_data_pipeline_11_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_11'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/top_level_rfsoc_data_pipeline_11_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_11'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/top_level_rfsoc_data_pipeline_12_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_12'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/top_level_rfsoc_data_pipeline_12_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_12'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_3'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_0_0_in_context.xdc] for cell 'top_level_i/proc_sys_reset_3'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/top_level_rfsoc_data_pipeline_13_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_13'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/top_level_rfsoc_data_pipeline_13_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_13'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_14'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_14'
+Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_15'
+Finished Parsing XDC File [c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_12_0_in_context.xdc] for cell 'top_level_i/rfsoc_data_pipeline_15'
 Parsing XDC File [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/constrs_1/new/elab_design.xdc]
 WARNING: [Vivado 12-584] No ports matched 'led_out_0[7]'. [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/constrs_1/new/elab_design.xdc:14]
 WARNING: [Vivado 12-584] No ports matched 'led_out_0[6]'. [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/constrs_1/new/elab_design.xdc:15]
@@ -227,15 +278,15 @@ Parsing XDC File [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/
 Finished Parsing XDC File [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1686.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1686.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1780.840 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'top_level_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1693.820 ; gain = 361.609
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1790.375 ; gain = 387.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -243,7 +294,7 @@ Start Loading Part and Timing Information
 Loading part: xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1693.820 ; gain = 361.609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1790.375 ; gain = 387.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -252,30 +303,90 @@ Applied set_property IO_BUFFER_TYPE = NONE for diff_clock_rtl_clk_n. (constraint
 Applied set_property CLOCK_BUFFER_TYPE = NONE for diff_clock_rtl_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0_in_context.xdc, line 4).
 Applied set_property IO_BUFFER_TYPE = NONE for diff_clock_rtl_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0_in_context.xdc, line 5).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for diff_clock_rtl_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0/top_level_clk_wiz_1_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 2).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 3).
-Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_diff_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_diff_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_diff_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_diff_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for vout00_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for vout00_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for vout01_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout01_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for vout01_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout01_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for vout02_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout02_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for vout02_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout02_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for vout03_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout03_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for vout03_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for vout03_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for dac0_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac0_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for dac1_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac1_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for dac1_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac1_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for dac2_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac2_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for dac2_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac2_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for dac3_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac3_clk_clk_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for dac3_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dac3_clk_clk_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_diff_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_diff_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for sysref_in_diff_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysref_in_diff_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for vout00_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for vout00_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout00_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for vout01_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout01_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for vout01_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout01_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for vout02_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout02_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for vout02_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout02_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for vout03_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout03_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for vout03_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout03_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for vout10_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout10_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for vout10_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout10_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for vout11_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout11_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for vout11_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout11_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for vout12_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout12_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for vout12_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout12_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for vout13_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout13_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for vout13_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout13_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for vout20_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout20_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for vout20_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout20_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for vout21_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout21_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for vout21_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout21_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for vout22_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout22_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for vout22_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout22_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for vout23_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout23_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for vout23_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout23_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for vout30_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout30_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for vout30_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout30_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for vout31_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout31_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for vout31_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout31_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for vout32_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout32_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for vout32_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout32_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for vout33_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout33_v_n. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for vout33_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for vout33_v_p. (constraint file  c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_in_context.xdc, line 88).
 Applied set_property DONT_TOUCH = true for top_level_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/microblaze_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
@@ -298,15 +409,27 @@ Applied set_property DONT_TOUCH = true for top_level_i/proc_sys_reset_0. (constr
 Applied set_property DONT_TOUCH = true for top_level_i/trigger_buffer_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_3. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for top_level_i/gpio_buffer_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for top_level_i/axis_data_fifo_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for top_level_i/locking_sr_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for top_level_i/channel_select_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/proc_sys_reset_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/proc_sys_reset_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/proc_sys_reset_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for top_level_i/rfsoc_data_pipeline_15. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1693.820 ; gain = 361.609
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1790.375 ; gain = 387.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1693.820 ; gain = 361.609
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1790.375 ; gain = 387.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,7 +475,7 @@ WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnect
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design top_level_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1693.820 ; gain = 361.609
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1790.375 ; gain = 387.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -369,15 +492,18 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/mdm_1/Dbg_Clk
 INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/mdm_1/Dbg_Update_0' to pin 'top_level_i/mdm_1/bbstub_Dbg_Update_0/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/clk_wiz_1/clk_out1' to pin 'top_level_i/clk_wiz_1/bbstub_clk_out1/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/usp_rf_data_converter_0/clk_dac0' to pin 'top_level_i/usp_rf_data_converter_0/bbstub_clk_dac0/O'
-INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/usp_rf_data_converter_0/clk_dac1' to pin 'top_level_i/usp_rf_data_converter_0/bbstub_clk_dac1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/usp_rf_data_converter_0/clk_dac2' to pin 'top_level_i/usp_rf_data_converter_0/bbstub_clk_dac2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'top_level_i/usp_rf_data_converter_0/clk_dac3' to pin 'top_level_i/usp_rf_data_converter_0/bbstub_clk_dac3/O'
+INFO: [Synth 8-5819] Moved 9 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2099.340 ; gain = 767.129
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2178.754 ; gain = 776.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2099.715 ; gain = 767.504
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2179.598 ; gain = 777.047
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -389,7 +515,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2111.559 ; gain = 779.348
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2190.914 ; gain = 788.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -413,7 +539,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -426,7 +552,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -438,25 +564,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -469,27 +595,39 @@ Report BlackBoxes:
 |1     |top_level_xbar_0                    |         1|
 |2     |top_level_axi_gpio_0_0              |         1|
 |3     |top_level_axi_uartlite_0_0          |         1|
-|4     |top_level_axis_data_fifo_1_0        |         1|
-|5     |top_level_channel_select_0_0        |         1|
-|6     |top_level_clk_wiz_1_0               |         1|
-|7     |top_level_gpio_buffer_0_0           |         1|
-|8     |top_level_locking_sr_0_0            |         1|
-|9     |top_level_mdm_1_0                   |         1|
-|10    |top_level_microblaze_0_0            |         1|
-|11    |top_level_proc_sys_reset_0_0        |         1|
+|4     |top_level_channel_select_0_0        |         1|
+|5     |top_level_clk_wiz_1_0               |         1|
+|6     |top_level_mdm_1_0                   |         1|
+|7     |top_level_microblaze_0_0            |         1|
+|8     |top_level_proc_sys_reset_0_0        |         1|
+|9     |top_level_proc_sys_reset_1_0        |         1|
+|10    |top_level_proc_sys_reset_1_1        |         1|
+|11    |top_level_proc_sys_reset_2_0        |         1|
 |12    |top_level_rfsoc_data_pipeline_0_0   |         1|
 |13    |top_level_rfsoc_data_pipeline_1_0   |         1|
-|14    |top_level_rfsoc_data_pipeline_2_0   |         1|
-|15    |top_level_rfsoc_data_pipeline_3_0   |         1|
-|16    |top_level_rst_clk_wiz_1_100M_0      |         1|
-|17    |top_level_trigger_buffer_0_0        |         1|
-|18    |top_level_usp_rf_data_converter_0_0 |         1|
-|19    |top_level_util_vector_logic_0_0     |         1|
-|20    |top_level_dlmb_bram_if_cntlr_0      |         1|
-|21    |top_level_dlmb_v10_0                |         1|
-|22    |top_level_ilmb_bram_if_cntlr_0      |         1|
-|23    |top_level_ilmb_v10_0                |         1|
-|24    |top_level_lmb_bram_0                |         1|
+|14    |top_level_rfsoc_data_pipeline_10_0  |         1|
+|15    |top_level_rfsoc_data_pipeline_11_0  |         1|
+|16    |top_level_rfsoc_data_pipeline_12_0  |         1|
+|17    |top_level_rfsoc_data_pipeline_13_0  |         1|
+|18    |top_level_rfsoc_data_pipeline_14_0  |         1|
+|19    |top_level_rfsoc_data_pipeline_15_0  |         1|
+|20    |top_level_rfsoc_data_pipeline_2_0   |         1|
+|21    |top_level_rfsoc_data_pipeline_3_0   |         1|
+|22    |top_level_rfsoc_data_pipeline_4_0   |         1|
+|23    |top_level_rfsoc_data_pipeline_5_0   |         1|
+|24    |top_level_rfsoc_data_pipeline_6_0   |         1|
+|25    |top_level_rfsoc_data_pipeline_7_0   |         1|
+|26    |top_level_rfsoc_data_pipeline_8_0   |         1|
+|27    |top_level_rfsoc_data_pipeline_9_0   |         1|
+|28    |top_level_rst_clk_wiz_1_100M_0      |         1|
+|29    |top_level_trigger_buffer_0_0        |         1|
+|30    |top_level_usp_rf_data_converter_0_0 |         1|
+|31    |top_level_util_vector_logic_0_0     |         1|
+|32    |top_level_dlmb_bram_if_cntlr_0      |         1|
+|33    |top_level_dlmb_v10_0                |         1|
+|34    |top_level_ilmb_bram_if_cntlr_0      |         1|
+|35    |top_level_ilmb_v10_0                |         1|
+|36    |top_level_lmb_bram_0                |         1|
 +------+------------------------------------+----------+
 
 Report Cell Usage: 
@@ -498,66 +636,76 @@ Report Cell Usage:
 +------+------------------------------------+------+
 |1     |top_level_axi_gpio_0_0              |     1|
 |2     |top_level_axi_uartlite_0_0          |     1|
-|3     |top_level_axis_data_fifo_1_0        |     1|
-|4     |top_level_channel_select_0_0        |     1|
-|5     |top_level_clk_wiz_1_0               |     1|
-|6     |top_level_dlmb_bram_if_cntlr_0      |     1|
-|7     |top_level_dlmb_v10_0                |     1|
-|8     |top_level_gpio_buffer_0_0           |     1|
-|9     |top_level_ilmb_bram_if_cntlr_0      |     1|
-|10    |top_level_ilmb_v10_0                |     1|
-|11    |top_level_lmb_bram_0                |     1|
-|12    |top_level_locking_sr_0_0            |     1|
-|13    |top_level_mdm_1_0                   |     1|
-|14    |top_level_microblaze_0_0            |     1|
-|15    |top_level_proc_sys_reset_0_0        |     1|
+|3     |top_level_channel_select_0_0        |     1|
+|4     |top_level_clk_wiz_1_0               |     1|
+|5     |top_level_dlmb_bram_if_cntlr_0      |     1|
+|6     |top_level_dlmb_v10_0                |     1|
+|7     |top_level_ilmb_bram_if_cntlr_0      |     1|
+|8     |top_level_ilmb_v10_0                |     1|
+|9     |top_level_lmb_bram_0                |     1|
+|10    |top_level_mdm_1_0                   |     1|
+|11    |top_level_microblaze_0_0            |     1|
+|12    |top_level_proc_sys_reset_0_0        |     1|
+|13    |top_level_proc_sys_reset_1_0        |     1|
+|14    |top_level_proc_sys_reset_1_1        |     1|
+|15    |top_level_proc_sys_reset_2_0        |     1|
 |16    |top_level_rfsoc_data_pipeline_0_0   |     1|
-|17    |top_level_rfsoc_data_pipeline_1_0   |     1|
-|18    |top_level_rfsoc_data_pipeline_2_0   |     1|
-|19    |top_level_rfsoc_data_pipeline_3_0   |     1|
-|20    |top_level_rst_clk_wiz_1_100M_0      |     1|
-|21    |top_level_trigger_buffer_0_0        |     1|
-|22    |top_level_usp_rf_data_converter_0_0 |     1|
-|23    |top_level_util_vector_logic_0_0     |     1|
-|24    |top_level_xbar_0                    |     1|
-|25    |IBUF                                |     3|
-|26    |OBUF                                |     9|
+|17    |top_level_rfsoc_data_pipeline_10_0  |     1|
+|18    |top_level_rfsoc_data_pipeline_11_0  |     1|
+|19    |top_level_rfsoc_data_pipeline_12_0  |     1|
+|20    |top_level_rfsoc_data_pipeline_13_0  |     1|
+|21    |top_level_rfsoc_data_pipeline_14_0  |     1|
+|22    |top_level_rfsoc_data_pipeline_15_0  |     1|
+|23    |top_level_rfsoc_data_pipeline_1_0   |     1|
+|24    |top_level_rfsoc_data_pipeline_2_0   |     1|
+|25    |top_level_rfsoc_data_pipeline_3_0   |     1|
+|26    |top_level_rfsoc_data_pipeline_4_0   |     1|
+|27    |top_level_rfsoc_data_pipeline_5_0   |     1|
+|28    |top_level_rfsoc_data_pipeline_6_0   |     1|
+|29    |top_level_rfsoc_data_pipeline_7_0   |     1|
+|30    |top_level_rfsoc_data_pipeline_8_0   |     1|
+|31    |top_level_rfsoc_data_pipeline_9_0   |     1|
+|32    |top_level_rst_clk_wiz_1_100M_0      |     1|
+|33    |top_level_trigger_buffer_0_0        |     1|
+|34    |top_level_usp_rf_data_converter_0_0 |     1|
+|35    |top_level_util_vector_logic_0_0     |     1|
+|36    |top_level_xbar_0                    |     1|
+|37    |IBUF                                |     3|
+|38    |OBUF                                |     9|
 +------+------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+-------------------------------------+------+
 |      |Instance                      |Module                               |Cells |
 +------+------------------------------+-------------------------------------+------+
-|1     |top                           |                                     |  2683|
-|2     |  top_level_i                 |top_level                            |  2671|
+|1     |top                           |                                     |  6221|
+|2     |  top_level_i                 |top_level                            |  6209|
 |3     |    microblaze_0_axi_periph   |top_level_microblaze_0_axi_periph_0  |   485|
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_598ZMX |   496|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2126.355 ; gain = 682.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2126.355 ; gain = 794.145
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2205.629 ; gain = 668.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2205.629 ; gain = 803.078
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2180.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.012 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 71 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2180.457 ; gain = 1766.328
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2180.457 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2263.012 ; gain = 1776.859
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.012 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_1/top_level_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 11 15:16:59 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 15 17:30:26 2019...

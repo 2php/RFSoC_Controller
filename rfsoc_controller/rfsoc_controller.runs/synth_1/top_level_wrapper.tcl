@@ -17,17 +17,12 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 3
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
-set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-5228-DESKTOP-6ILET8A/incrSyn}
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -82,7 +77,27 @@ set_property used_in_implementation false [get_files -all c:/james/fpga_projects
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_0_0/top_level_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/src/rfsoc_data_pipeline_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/src/rfsoc_data_pipeline_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_0/top_level_proc_sys_reset_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_1_1/top_level_proc_sys_reset_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_proc_sys_reset_2_0/top_level_proc_sys_reset_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_microblaze_0_0/data/mb_bootloop_le.elf]
 set_property used_in_implementation false [get_files -all c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/data/startup.elf]

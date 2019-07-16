@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jul 11 15:02:57 2019
+//Date        : Mon Jul 15 17:26:37 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,11 +917,17 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=31,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=4,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=43,numReposBlks=36,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=16,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (app_leds_tri_o,
     dac0_clk_clk_n,
     dac0_clk_clk_p,
+    dac1_clk_clk_n,
+    dac1_clk_clk_p,
+    dac2_clk_clk_n,
+    dac2_clk_clk_p,
+    dac3_clk_clk_n,
+    dac3_clk_clk_p,
     diff_clock_rtl_clk_n,
     diff_clock_rtl_clk_p,
     ext_trigger_0_0,
@@ -937,10 +943,40 @@ module top_level
     vout02_v_n,
     vout02_v_p,
     vout03_v_n,
-    vout03_v_p);
+    vout03_v_p,
+    vout10_v_n,
+    vout10_v_p,
+    vout11_v_n,
+    vout11_v_p,
+    vout12_v_n,
+    vout12_v_p,
+    vout13_v_n,
+    vout13_v_p,
+    vout20_v_n,
+    vout20_v_p,
+    vout21_v_n,
+    vout21_v_p,
+    vout22_v_n,
+    vout22_v_p,
+    vout23_v_n,
+    vout23_v_p,
+    vout30_v_n,
+    vout30_v_p,
+    vout31_v_n,
+    vout31_v_p,
+    vout32_v_n,
+    vout32_v_p,
+    vout33_v_n,
+    vout33_v_p);
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 app_leds TRI_O" *) output [7:0]app_leds_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac0_clk, CAN_DEBUG false, FREQ_HZ 4000000000.0" *) input dac0_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_P" *) input dac0_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac1_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac1_clk, CAN_DEBUG false, FREQ_HZ 250000000.0" *) input dac1_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac1_clk CLK_P" *) input dac1_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac2_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac2_clk, CAN_DEBUG false, FREQ_HZ 250000000.0" *) input dac2_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac2_clk CLK_P" *) input dac2_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac3_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac3_clk, CAN_DEBUG false, FREQ_HZ 250000000.0" *) input dac3_clk_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac3_clk CLK_P" *) input dac3_clk_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_clock_rtl, CAN_DEBUG false, FREQ_HZ 300000000" *) input diff_clock_rtl_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl CLK_P" *) input diff_clock_rtl_clk_p;
   input ext_trigger_0_0;
@@ -957,38 +993,89 @@ module top_level
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout02 V_P" *) output vout02_v_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 V_N" *) output vout03_v_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout03 V_P" *) output vout03_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout10 V_N" *) output vout10_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout10 V_P" *) output vout10_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout11 V_N" *) output vout11_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout11 V_P" *) output vout11_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout12 V_N" *) output vout12_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout12 V_P" *) output vout12_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout13 V_N" *) output vout13_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout13 V_P" *) output vout13_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout20 V_N" *) output vout20_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout20 V_P" *) output vout20_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout21 V_N" *) output vout21_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout21 V_P" *) output vout21_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout22 V_N" *) output vout22_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout22 V_P" *) output vout22_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout23 V_N" *) output vout23_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout23 V_P" *) output vout23_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout30 V_N" *) output vout30_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout30 V_P" *) output vout30_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout31 V_N" *) output vout31_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout31 V_P" *) output vout31_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout32 V_N" *) output vout32_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout32 V_P" *) output vout32_v_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout33 V_N" *) output vout33_v_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_analog_io:1.0 vout33 V_P" *) output vout33_v_p;
 
   wire [15:0]Net;
+  wire [0:0]Net1;
+  wire [0:0]Net2;
   wire Net3;
   wire [0:0]Net4;
   wire [7:0]axi_gpio_0_GPIO_TRI_O;
   wire axi_uartlite_0_tx;
-  wire [15:0]axis_data_fifo_1_M_AXIS_TDATA;
-  wire axis_data_fifo_1_M_AXIS_TREADY;
-  wire axis_data_fifo_1_M_AXIS_TVALID;
   wire channel_select_0_ch0;
   wire channel_select_0_ch1;
+  wire channel_select_0_ch10;
+  wire channel_select_0_ch11;
+  wire channel_select_0_ch12;
+  wire channel_select_0_ch13;
+  wire channel_select_0_ch14;
+  wire channel_select_0_ch15;
   wire channel_select_0_ch2;
   wire channel_select_0_ch3;
+  wire channel_select_0_ch4;
+  wire channel_select_0_ch5;
+  wire channel_select_0_ch6;
+  wire channel_select_0_ch7;
+  wire channel_select_0_ch8;
+  wire channel_select_0_ch9;
   wire clk_wiz_1_locked;
   wire dac0_clk_1_CLK_N;
   wire dac0_clk_1_CLK_P;
+  wire dac1_clk_1_CLK_N;
+  wire dac1_clk_1_CLK_P;
+  wire dac2_clk_1_CLK_N;
+  wire dac2_clk_1_CLK_P;
+  wire dac3_clk_1_CLK_N;
+  wire dac3_clk_1_CLK_P;
   wire diff_clock_rtl_1_CLK_N;
   wire diff_clock_rtl_1_CLK_P;
   wire ext_trigger_0_0_1;
-  wire [15:0]gpio_buffer_0_gpio_out;
-  wire [15:0]gpio_buffer_0_m_axis_TDATA;
-  wire gpio_buffer_0_m_axis_TREADY;
-  wire gpio_buffer_0_m_axis_TVALID;
-  wire locking_sr_0_ch0;
-  wire locking_sr_0_ch1;
-  wire locking_sr_0_ch2;
-  wire locking_sr_0_ch3;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M0_AXIS_TDATA;
   wire microblaze_0_M0_AXIS_TREADY;
   wire microblaze_0_M0_AXIS_TVALID;
+  wire [31:0]microblaze_0_M10_AXIS_TDATA;
+  wire microblaze_0_M10_AXIS_TREADY;
+  wire microblaze_0_M10_AXIS_TVALID;
+  wire [31:0]microblaze_0_M11_AXIS_TDATA;
+  wire microblaze_0_M11_AXIS_TREADY;
+  wire microblaze_0_M11_AXIS_TVALID;
+  wire [31:0]microblaze_0_M12_AXIS_TDATA;
+  wire microblaze_0_M12_AXIS_TREADY;
+  wire microblaze_0_M12_AXIS_TVALID;
+  wire [31:0]microblaze_0_M13_AXIS_TDATA;
+  wire microblaze_0_M13_AXIS_TREADY;
+  wire microblaze_0_M13_AXIS_TVALID;
+  wire [31:0]microblaze_0_M14_AXIS_TDATA;
+  wire microblaze_0_M14_AXIS_TREADY;
+  wire microblaze_0_M14_AXIS_TVALID;
+  wire [31:0]microblaze_0_M15_AXIS_TDATA;
+  wire microblaze_0_M15_AXIS_TREADY;
+  wire microblaze_0_M15_AXIS_TVALID;
   wire [31:0]microblaze_0_M1_AXIS_TDATA;
   wire microblaze_0_M1_AXIS_TREADY;
   wire microblaze_0_M1_AXIS_TVALID;
@@ -998,6 +1085,24 @@ module top_level
   wire [31:0]microblaze_0_M3_AXIS_TDATA;
   wire microblaze_0_M3_AXIS_TREADY;
   wire microblaze_0_M3_AXIS_TVALID;
+  wire [31:0]microblaze_0_M4_AXIS_TDATA;
+  wire microblaze_0_M4_AXIS_TREADY;
+  wire microblaze_0_M4_AXIS_TVALID;
+  wire [31:0]microblaze_0_M5_AXIS_TDATA;
+  wire microblaze_0_M5_AXIS_TREADY;
+  wire microblaze_0_M5_AXIS_TVALID;
+  wire [31:0]microblaze_0_M6_AXIS_TDATA;
+  wire microblaze_0_M6_AXIS_TREADY;
+  wire microblaze_0_M6_AXIS_TVALID;
+  wire [31:0]microblaze_0_M7_AXIS_TDATA;
+  wire microblaze_0_M7_AXIS_TREADY;
+  wire microblaze_0_M7_AXIS_TVALID;
+  wire [31:0]microblaze_0_M8_AXIS_TDATA;
+  wire microblaze_0_M8_AXIS_TREADY;
+  wire microblaze_0_M8_AXIS_TVALID;
+  wire [31:0]microblaze_0_M9_AXIS_TDATA;
+  wire microblaze_0_M9_AXIS_TREADY;
+  wire microblaze_0_M9_AXIS_TVALID;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
   wire [2:0]microblaze_0_axi_dp_ARPROT;
   wire [0:0]microblaze_0_axi_dp_ARREADY;
@@ -1113,11 +1218,36 @@ module top_level
   wire microblaze_0_mdm_axi_WREADY;
   wire [3:0]microblaze_0_mdm_axi_WSTRB;
   wire microblaze_0_mdm_axi_WVALID;
+  wire [0:0]proc_sys_reset_3_peripheral_aresetn;
   wire resetn_1;
   wire [255:0]rfsoc_data_pipeline_0_m_axis_0_TDATA;
   wire rfsoc_data_pipeline_0_m_axis_0_TREADY;
   wire rfsoc_data_pipeline_0_m_axis_0_TVALID;
   wire rfsoc_data_pipeline_0_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_10_m_axis_TDATA;
+  wire rfsoc_data_pipeline_10_m_axis_TREADY;
+  wire rfsoc_data_pipeline_10_m_axis_TVALID;
+  wire rfsoc_data_pipeline_10_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_11_m_axis_TDATA;
+  wire rfsoc_data_pipeline_11_m_axis_TREADY;
+  wire rfsoc_data_pipeline_11_m_axis_TVALID;
+  wire rfsoc_data_pipeline_11_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_12_m_axis_TDATA;
+  wire rfsoc_data_pipeline_12_m_axis_TREADY;
+  wire rfsoc_data_pipeline_12_m_axis_TVALID;
+  wire rfsoc_data_pipeline_12_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_13_m_axis_TDATA;
+  wire rfsoc_data_pipeline_13_m_axis_TREADY;
+  wire rfsoc_data_pipeline_13_m_axis_TVALID;
+  wire rfsoc_data_pipeline_13_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_14_m_axis_TDATA;
+  wire rfsoc_data_pipeline_14_m_axis_TREADY;
+  wire rfsoc_data_pipeline_14_m_axis_TVALID;
+  wire rfsoc_data_pipeline_14_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_15_m_axis_TDATA;
+  wire rfsoc_data_pipeline_15_m_axis_TREADY;
+  wire rfsoc_data_pipeline_15_m_axis_TVALID;
+  wire rfsoc_data_pipeline_15_pipeline_active;
   wire [255:0]rfsoc_data_pipeline_1_m_axis_0_TDATA;
   wire rfsoc_data_pipeline_1_m_axis_0_TREADY;
   wire rfsoc_data_pipeline_1_m_axis_0_TVALID;
@@ -1130,6 +1260,30 @@ module top_level
   wire rfsoc_data_pipeline_3_m_axis_0_TREADY;
   wire rfsoc_data_pipeline_3_m_axis_0_TVALID;
   wire rfsoc_data_pipeline_3_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_4_m_axis_TDATA;
+  wire rfsoc_data_pipeline_4_m_axis_TREADY;
+  wire rfsoc_data_pipeline_4_m_axis_TVALID;
+  wire rfsoc_data_pipeline_4_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_5_m_axis_TDATA;
+  wire rfsoc_data_pipeline_5_m_axis_TREADY;
+  wire rfsoc_data_pipeline_5_m_axis_TVALID;
+  wire rfsoc_data_pipeline_5_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_6_m_axis_TDATA;
+  wire rfsoc_data_pipeline_6_m_axis_TREADY;
+  wire rfsoc_data_pipeline_6_m_axis_TVALID;
+  wire rfsoc_data_pipeline_6_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_7_m_axis_TDATA;
+  wire rfsoc_data_pipeline_7_m_axis_TREADY;
+  wire rfsoc_data_pipeline_7_m_axis_TVALID;
+  wire rfsoc_data_pipeline_7_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_8_m_axis_TDATA;
+  wire rfsoc_data_pipeline_8_m_axis_TREADY;
+  wire rfsoc_data_pipeline_8_m_axis_TVALID;
+  wire rfsoc_data_pipeline_8_pipeline_active;
+  wire [255:0]rfsoc_data_pipeline_9_m_axis_TDATA;
+  wire rfsoc_data_pipeline_9_m_axis_TREADY;
+  wire rfsoc_data_pipeline_9_m_axis_TVALID;
+  wire rfsoc_data_pipeline_9_pipeline_active;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
@@ -1137,6 +1291,9 @@ module top_level
   wire sysref_in_1_diff_n;
   wire sysref_in_1_diff_p;
   wire trigger_buffer_0_trigger_out;
+  wire usp_rf_data_converter_0_clk_dac1;
+  wire usp_rf_data_converter_0_clk_dac2;
+  wire usp_rf_data_converter_0_clk_dac3;
   wire usp_rf_data_converter_0_vout00_V_N;
   wire usp_rf_data_converter_0_vout00_V_P;
   wire usp_rf_data_converter_0_vout01_V_N;
@@ -1145,11 +1302,41 @@ module top_level
   wire usp_rf_data_converter_0_vout02_V_P;
   wire usp_rf_data_converter_0_vout03_V_N;
   wire usp_rf_data_converter_0_vout03_V_P;
+  wire usp_rf_data_converter_0_vout10_V_N;
+  wire usp_rf_data_converter_0_vout10_V_P;
+  wire usp_rf_data_converter_0_vout11_V_N;
+  wire usp_rf_data_converter_0_vout11_V_P;
+  wire usp_rf_data_converter_0_vout12_V_N;
+  wire usp_rf_data_converter_0_vout12_V_P;
+  wire usp_rf_data_converter_0_vout13_V_N;
+  wire usp_rf_data_converter_0_vout13_V_P;
+  wire usp_rf_data_converter_0_vout20_V_N;
+  wire usp_rf_data_converter_0_vout20_V_P;
+  wire usp_rf_data_converter_0_vout21_V_N;
+  wire usp_rf_data_converter_0_vout21_V_P;
+  wire usp_rf_data_converter_0_vout22_V_N;
+  wire usp_rf_data_converter_0_vout22_V_P;
+  wire usp_rf_data_converter_0_vout23_V_N;
+  wire usp_rf_data_converter_0_vout23_V_P;
+  wire usp_rf_data_converter_0_vout30_V_N;
+  wire usp_rf_data_converter_0_vout30_V_P;
+  wire usp_rf_data_converter_0_vout31_V_N;
+  wire usp_rf_data_converter_0_vout31_V_P;
+  wire usp_rf_data_converter_0_vout32_V_N;
+  wire usp_rf_data_converter_0_vout32_V_P;
+  wire usp_rf_data_converter_0_vout33_V_N;
+  wire usp_rf_data_converter_0_vout33_V_P;
   wire [0:0]util_vector_logic_0_Res;
 
   assign app_leds_tri_o[7:0] = axi_gpio_0_GPIO_TRI_O;
   assign dac0_clk_1_CLK_N = dac0_clk_clk_n;
   assign dac0_clk_1_CLK_P = dac0_clk_clk_p;
+  assign dac1_clk_1_CLK_N = dac1_clk_clk_n;
+  assign dac1_clk_1_CLK_P = dac1_clk_clk_p;
+  assign dac2_clk_1_CLK_N = dac2_clk_clk_n;
+  assign dac2_clk_1_CLK_P = dac2_clk_clk_p;
+  assign dac3_clk_1_CLK_N = dac3_clk_clk_n;
+  assign dac3_clk_1_CLK_P = dac3_clk_clk_p;
   assign diff_clock_rtl_1_CLK_N = diff_clock_rtl_clk_n;
   assign diff_clock_rtl_1_CLK_P = diff_clock_rtl_clk_p;
   assign ext_trigger_0_0_1 = ext_trigger_0_0;
@@ -1166,6 +1353,30 @@ module top_level
   assign vout02_v_p = usp_rf_data_converter_0_vout02_V_P;
   assign vout03_v_n = usp_rf_data_converter_0_vout03_V_N;
   assign vout03_v_p = usp_rf_data_converter_0_vout03_V_P;
+  assign vout10_v_n = usp_rf_data_converter_0_vout10_V_N;
+  assign vout10_v_p = usp_rf_data_converter_0_vout10_V_P;
+  assign vout11_v_n = usp_rf_data_converter_0_vout11_V_N;
+  assign vout11_v_p = usp_rf_data_converter_0_vout11_V_P;
+  assign vout12_v_n = usp_rf_data_converter_0_vout12_V_N;
+  assign vout12_v_p = usp_rf_data_converter_0_vout12_V_P;
+  assign vout13_v_n = usp_rf_data_converter_0_vout13_V_N;
+  assign vout13_v_p = usp_rf_data_converter_0_vout13_V_P;
+  assign vout20_v_n = usp_rf_data_converter_0_vout20_V_N;
+  assign vout20_v_p = usp_rf_data_converter_0_vout20_V_P;
+  assign vout21_v_n = usp_rf_data_converter_0_vout21_V_N;
+  assign vout21_v_p = usp_rf_data_converter_0_vout21_V_P;
+  assign vout22_v_n = usp_rf_data_converter_0_vout22_V_N;
+  assign vout22_v_p = usp_rf_data_converter_0_vout22_V_P;
+  assign vout23_v_n = usp_rf_data_converter_0_vout23_V_N;
+  assign vout23_v_p = usp_rf_data_converter_0_vout23_V_P;
+  assign vout30_v_n = usp_rf_data_converter_0_vout30_V_N;
+  assign vout30_v_p = usp_rf_data_converter_0_vout30_V_P;
+  assign vout31_v_n = usp_rf_data_converter_0_vout31_V_N;
+  assign vout31_v_p = usp_rf_data_converter_0_vout31_V_P;
+  assign vout32_v_n = usp_rf_data_converter_0_vout32_V_N;
+  assign vout32_v_p = usp_rf_data_converter_0_vout32_V_P;
+  assign vout33_v_n = usp_rf_data_converter_0_vout33_V_N;
+  assign vout33_v_p = usp_rf_data_converter_0_vout33_V_P;
   top_level_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_o(Net),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -1210,47 +1421,32 @@ module top_level
         .s_axi_wstrb(microblaze_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_tx));
-  top_level_axis_data_fifo_1_0 axis_data_fifo_1
-       (.m_axis_aclk(Net3),
-        .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
-        .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
-        .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
-        .s_axis_aclk(microblaze_0_Clk),
-        .s_axis_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .s_axis_tdata(gpio_buffer_0_m_axis_TDATA),
-        .s_axis_tready(gpio_buffer_0_m_axis_TREADY),
-        .s_axis_tvalid(gpio_buffer_0_m_axis_TVALID));
   top_level_channel_select_0_0 channel_select_0
        (.ch0(channel_select_0_ch0),
         .ch1(channel_select_0_ch1),
+        .ch10(channel_select_0_ch10),
+        .ch11(channel_select_0_ch11),
+        .ch12(channel_select_0_ch12),
+        .ch13(channel_select_0_ch13),
+        .ch14(channel_select_0_ch14),
+        .ch15(channel_select_0_ch15),
         .ch2(channel_select_0_ch2),
         .ch3(channel_select_0_ch3),
-        .gpio_in(gpio_buffer_0_gpio_out),
-        .rf_clk(Net3),
-        .rf_reset(Net4));
+        .ch4(channel_select_0_ch4),
+        .ch5(channel_select_0_ch5),
+        .ch6(channel_select_0_ch6),
+        .ch7(channel_select_0_ch7),
+        .ch8(channel_select_0_ch8),
+        .ch9(channel_select_0_ch9),
+        .gpio_in(Net),
+        .mb_clk(microblaze_0_Clk),
+        .mb_reset(rst_clk_wiz_1_100M_peripheral_aresetn));
   top_level_clk_wiz_1_0 clk_wiz_1
        (.clk_in1_n(diff_clock_rtl_1_CLK_N),
         .clk_in1_p(diff_clock_rtl_1_CLK_P),
         .clk_out1(microblaze_0_Clk),
         .locked(clk_wiz_1_locked),
         .reset(mdm_1_debug_sys_rst));
-  top_level_gpio_buffer_0_0 gpio_buffer_0
-       (.gpio_in(Net),
-        .gpio_out(gpio_buffer_0_gpio_out),
-        .m_axis_tdata(gpio_buffer_0_m_axis_TDATA),
-        .m_axis_tready(gpio_buffer_0_m_axis_TREADY),
-        .m_axis_tvalid(gpio_buffer_0_m_axis_TVALID),
-        .s_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
-        .s_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
-        .s_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID));
-  top_level_locking_sr_0_0 locking_sr_0
-       (.ch0(locking_sr_0_ch0),
-        .ch1(locking_sr_0_ch1),
-        .ch2(locking_sr_0_ch2),
-        .ch3(locking_sr_0_ch3),
-        .gpio_in(gpio_buffer_0_gpio_out),
-        .rf_clk(Net3),
-        .rf_reset(Net4));
   top_level_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -1316,6 +1512,24 @@ module top_level
         .M0_AXIS_TDATA(microblaze_0_M0_AXIS_TDATA),
         .M0_AXIS_TREADY(microblaze_0_M0_AXIS_TREADY),
         .M0_AXIS_TVALID(microblaze_0_M0_AXIS_TVALID),
+        .M10_AXIS_TDATA(microblaze_0_M10_AXIS_TDATA),
+        .M10_AXIS_TREADY(microblaze_0_M10_AXIS_TREADY),
+        .M10_AXIS_TVALID(microblaze_0_M10_AXIS_TVALID),
+        .M11_AXIS_TDATA(microblaze_0_M11_AXIS_TDATA),
+        .M11_AXIS_TREADY(microblaze_0_M11_AXIS_TREADY),
+        .M11_AXIS_TVALID(microblaze_0_M11_AXIS_TVALID),
+        .M12_AXIS_TDATA(microblaze_0_M12_AXIS_TDATA),
+        .M12_AXIS_TREADY(microblaze_0_M12_AXIS_TREADY),
+        .M12_AXIS_TVALID(microblaze_0_M12_AXIS_TVALID),
+        .M13_AXIS_TDATA(microblaze_0_M13_AXIS_TDATA),
+        .M13_AXIS_TREADY(microblaze_0_M13_AXIS_TREADY),
+        .M13_AXIS_TVALID(microblaze_0_M13_AXIS_TVALID),
+        .M14_AXIS_TDATA(microblaze_0_M14_AXIS_TDATA),
+        .M14_AXIS_TREADY(microblaze_0_M14_AXIS_TREADY),
+        .M14_AXIS_TVALID(microblaze_0_M14_AXIS_TVALID),
+        .M15_AXIS_TDATA(microblaze_0_M15_AXIS_TDATA),
+        .M15_AXIS_TREADY(microblaze_0_M15_AXIS_TREADY),
+        .M15_AXIS_TVALID(microblaze_0_M15_AXIS_TVALID),
         .M1_AXIS_TDATA(microblaze_0_M1_AXIS_TDATA),
         .M1_AXIS_TREADY(microblaze_0_M1_AXIS_TREADY),
         .M1_AXIS_TVALID(microblaze_0_M1_AXIS_TVALID),
@@ -1325,6 +1539,24 @@ module top_level
         .M3_AXIS_TDATA(microblaze_0_M3_AXIS_TDATA),
         .M3_AXIS_TREADY(microblaze_0_M3_AXIS_TREADY),
         .M3_AXIS_TVALID(microblaze_0_M3_AXIS_TVALID),
+        .M4_AXIS_TDATA(microblaze_0_M4_AXIS_TDATA),
+        .M4_AXIS_TREADY(microblaze_0_M4_AXIS_TREADY),
+        .M4_AXIS_TVALID(microblaze_0_M4_AXIS_TVALID),
+        .M5_AXIS_TDATA(microblaze_0_M5_AXIS_TDATA),
+        .M5_AXIS_TREADY(microblaze_0_M5_AXIS_TREADY),
+        .M5_AXIS_TVALID(microblaze_0_M5_AXIS_TVALID),
+        .M6_AXIS_TDATA(microblaze_0_M6_AXIS_TDATA),
+        .M6_AXIS_TREADY(microblaze_0_M6_AXIS_TREADY),
+        .M6_AXIS_TVALID(microblaze_0_M6_AXIS_TVALID),
+        .M7_AXIS_TDATA(microblaze_0_M7_AXIS_TDATA),
+        .M7_AXIS_TREADY(microblaze_0_M7_AXIS_TREADY),
+        .M7_AXIS_TVALID(microblaze_0_M7_AXIS_TVALID),
+        .M8_AXIS_TDATA(microblaze_0_M8_AXIS_TDATA),
+        .M8_AXIS_TREADY(microblaze_0_M8_AXIS_TREADY),
+        .M8_AXIS_TVALID(microblaze_0_M8_AXIS_TVALID),
+        .M9_AXIS_TDATA(microblaze_0_M9_AXIS_TDATA),
+        .M9_AXIS_TREADY(microblaze_0_M9_AXIS_TREADY),
+        .M9_AXIS_TVALID(microblaze_0_M9_AXIS_TVALID),
         .M_AXI_DP_ARADDR(microblaze_0_axi_dp_ARADDR),
         .M_AXI_DP_ARPROT(microblaze_0_axi_dp_ARPROT),
         .M_AXI_DP_ARREADY(microblaze_0_axi_dp_ARREADY),
@@ -1349,6 +1581,24 @@ module top_level
         .S0_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .S0_AXIS_TLAST(1'b0),
         .S0_AXIS_TVALID(1'b0),
+        .S10_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S10_AXIS_TLAST(1'b0),
+        .S10_AXIS_TVALID(1'b0),
+        .S11_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S11_AXIS_TLAST(1'b0),
+        .S11_AXIS_TVALID(1'b0),
+        .S12_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S12_AXIS_TLAST(1'b0),
+        .S12_AXIS_TVALID(1'b0),
+        .S13_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S13_AXIS_TLAST(1'b0),
+        .S13_AXIS_TVALID(1'b0),
+        .S14_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S14_AXIS_TLAST(1'b0),
+        .S14_AXIS_TVALID(1'b0),
+        .S15_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S15_AXIS_TLAST(1'b0),
+        .S15_AXIS_TVALID(1'b0),
         .S1_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .S1_AXIS_TLAST(1'b0),
         .S1_AXIS_TVALID(1'b0),
@@ -1358,6 +1608,24 @@ module top_level
         .S3_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .S3_AXIS_TLAST(1'b0),
         .S3_AXIS_TVALID(1'b0),
+        .S4_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S4_AXIS_TLAST(1'b0),
+        .S4_AXIS_TVALID(1'b0),
+        .S5_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S5_AXIS_TLAST(1'b0),
+        .S5_AXIS_TVALID(1'b0),
+        .S6_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S6_AXIS_TLAST(1'b0),
+        .S6_AXIS_TVALID(1'b0),
+        .S7_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S7_AXIS_TLAST(1'b0),
+        .S7_AXIS_TVALID(1'b0),
+        .S8_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S8_AXIS_TLAST(1'b0),
+        .S8_AXIS_TVALID(1'b0),
+        .S9_AXIS_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S9_AXIS_TLAST(1'b0),
+        .S9_AXIS_TVALID(1'b0),
         .Write_Strobe(microblaze_0_dlmb_1_WRITESTROBE));
   top_level_microblaze_0_axi_periph_0 microblaze_0_axi_periph
        (.ACLK(microblaze_0_Clk),
@@ -1488,13 +1756,33 @@ module top_level
         .mb_debug_sys_rst(mdm_1_debug_sys_rst),
         .peripheral_aresetn(Net4),
         .slowest_sync_clk(Net3));
+  top_level_proc_sys_reset_1_0 proc_sys_reset_1
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(util_vector_logic_0_Res),
+        .mb_debug_sys_rst(mdm_1_debug_sys_rst),
+        .peripheral_aresetn(Net1),
+        .slowest_sync_clk(usp_rf_data_converter_0_clk_dac1));
+  top_level_proc_sys_reset_1_1 proc_sys_reset_2
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(util_vector_logic_0_Res),
+        .mb_debug_sys_rst(mdm_1_debug_sys_rst),
+        .peripheral_aresetn(Net2),
+        .slowest_sync_clk(usp_rf_data_converter_0_clk_dac2));
+  top_level_proc_sys_reset_2_0 proc_sys_reset_3
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(util_vector_logic_0_Res),
+        .mb_debug_sys_rst(mdm_1_debug_sys_rst),
+        .peripheral_aresetn(proc_sys_reset_3_peripheral_aresetn),
+        .slowest_sync_clk(usp_rf_data_converter_0_clk_dac3));
   top_level_rfsoc_data_pipeline_0_0 rfsoc_data_pipeline_0
        (.S_AXIS_tdata(microblaze_0_M0_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M0_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M0_AXIS_TVALID),
         .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
-        .is_locking(locking_sr_0_ch0),
         .is_selected(channel_select_0_ch0),
         .m_axis_tdata(rfsoc_data_pipeline_0_m_axis_0_TDATA),
         .m_axis_tready(rfsoc_data_pipeline_0_m_axis_0_TREADY),
@@ -1510,7 +1798,6 @@ module top_level
         .S_AXIS_tvalid(microblaze_0_M1_AXIS_TVALID),
         .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
-        .is_locking(locking_sr_0_ch1),
         .is_selected(channel_select_0_ch1),
         .m_axis_tdata(rfsoc_data_pipeline_1_m_axis_0_TDATA),
         .m_axis_tready(rfsoc_data_pipeline_1_m_axis_0_TREADY),
@@ -1520,13 +1807,102 @@ module top_level
         .pipeline_active(rfsoc_data_pipeline_1_pipeline_active),
         .rf_clock(Net3),
         .rf_resetn(Net4));
+  top_level_rfsoc_data_pipeline_10_0 rfsoc_data_pipeline_10
+       (.S_AXIS_tdata(microblaze_0_M10_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M10_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M10_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch10),
+        .m_axis_tdata(rfsoc_data_pipeline_10_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_10_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_10_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_10_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac2),
+        .rf_resetn(Net2));
+  top_level_rfsoc_data_pipeline_11_0 rfsoc_data_pipeline_11
+       (.S_AXIS_tdata(microblaze_0_M11_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M11_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M11_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch11),
+        .m_axis_tdata(rfsoc_data_pipeline_11_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_11_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_11_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_11_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac2),
+        .rf_resetn(Net2));
+  top_level_rfsoc_data_pipeline_12_0 rfsoc_data_pipeline_12
+       (.S_AXIS_tdata(microblaze_0_M12_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M12_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M12_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch12),
+        .m_axis_tdata(rfsoc_data_pipeline_12_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_12_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_12_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_12_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac3),
+        .rf_resetn(proc_sys_reset_3_peripheral_aresetn));
+  top_level_rfsoc_data_pipeline_13_0 rfsoc_data_pipeline_13
+       (.S_AXIS_tdata(microblaze_0_M13_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M13_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M13_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch13),
+        .m_axis_tdata(rfsoc_data_pipeline_13_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_13_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_13_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_13_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac3),
+        .rf_resetn(proc_sys_reset_3_peripheral_aresetn));
+  top_level_rfsoc_data_pipeline_14_0 rfsoc_data_pipeline_14
+       (.S_AXIS_tdata(microblaze_0_M14_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M14_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M14_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch14),
+        .m_axis_tdata(rfsoc_data_pipeline_14_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_14_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_14_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_14_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac3),
+        .rf_resetn(proc_sys_reset_3_peripheral_aresetn));
+  top_level_rfsoc_data_pipeline_15_0 rfsoc_data_pipeline_15
+       (.S_AXIS_tdata(microblaze_0_M15_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M15_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M15_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch15),
+        .m_axis_tdata(rfsoc_data_pipeline_15_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_15_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_15_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_15_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac3),
+        .rf_resetn(proc_sys_reset_3_peripheral_aresetn));
   top_level_rfsoc_data_pipeline_2_0 rfsoc_data_pipeline_2
        (.S_AXIS_tdata(microblaze_0_M2_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M2_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M2_AXIS_TVALID),
         .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
-        .is_locking(locking_sr_0_ch2),
         .is_selected(channel_select_0_ch2),
         .m_axis_tdata(rfsoc_data_pipeline_2_m_axis_0_TDATA),
         .m_axis_tready(rfsoc_data_pipeline_2_m_axis_0_TREADY),
@@ -1542,7 +1918,6 @@ module top_level
         .S_AXIS_tvalid(microblaze_0_M3_AXIS_TVALID),
         .ext_trigger(trigger_buffer_0_trigger_out),
         .gpio_in(Net),
-        .is_locking(locking_sr_0_ch3),
         .is_selected(channel_select_0_ch3),
         .m_axis_tdata(rfsoc_data_pipeline_3_m_axis_0_TDATA),
         .m_axis_tready(rfsoc_data_pipeline_3_m_axis_0_TREADY),
@@ -1552,6 +1927,96 @@ module top_level
         .pipeline_active(rfsoc_data_pipeline_3_pipeline_active),
         .rf_clock(Net3),
         .rf_resetn(Net4));
+  top_level_rfsoc_data_pipeline_4_0 rfsoc_data_pipeline_4
+       (.S_AXIS_tdata(microblaze_0_M4_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M4_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M4_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch4),
+        .m_axis_tdata(rfsoc_data_pipeline_4_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_4_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_4_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_4_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac1),
+        .rf_resetn(Net1));
+  top_level_rfsoc_data_pipeline_5_0 rfsoc_data_pipeline_5
+       (.S_AXIS_tdata(microblaze_0_M5_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M5_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M5_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch5),
+        .m_axis_tdata(rfsoc_data_pipeline_5_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_5_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_5_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_5_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac1),
+        .rf_resetn(Net1));
+  top_level_rfsoc_data_pipeline_6_0 rfsoc_data_pipeline_6
+       (.S_AXIS_tdata(microblaze_0_M6_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M6_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M6_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch6),
+        .m_axis_tdata(rfsoc_data_pipeline_6_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_6_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_6_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_6_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac1),
+        .rf_resetn(Net1));
+  top_level_rfsoc_data_pipeline_7_0 rfsoc_data_pipeline_7
+       (.S_AXIS_tdata(microblaze_0_M7_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M7_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M7_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch7),
+        .m_axis_tdata(rfsoc_data_pipeline_7_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_7_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_7_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_7_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac1),
+        .rf_resetn(Net1));
+  top_level_rfsoc_data_pipeline_8_0 rfsoc_data_pipeline_8
+       (.S_AXIS_tdata(microblaze_0_M8_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M8_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M8_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch8),
+        .m_axis_tdata(rfsoc_data_pipeline_8_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_8_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_8_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_8_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac2),
+        .rf_resetn(Net2));
+  top_level_rfsoc_data_pipeline_9_0 rfsoc_data_pipeline_9
+       (.S_AXIS_tdata(microblaze_0_M9_AXIS_TDATA),
+        .S_AXIS_tready(microblaze_0_M9_AXIS_TREADY),
+        .S_AXIS_tvalid(microblaze_0_M9_AXIS_TVALID),
+        .ext_trigger(trigger_buffer_0_trigger_out),
+        .gpio_in(Net),
+        .is_selected(channel_select_0_ch9),
+        .m_axis_tdata(rfsoc_data_pipeline_9_m_axis_TDATA),
+        .m_axis_tready(rfsoc_data_pipeline_9_m_axis_TREADY),
+        .m_axis_tvalid(rfsoc_data_pipeline_9_m_axis_TVALID),
+        .microblaze_clk(microblaze_0_Clk),
+        .microblaze_resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .pipeline_active(rfsoc_data_pipeline_9_pipeline_active),
+        .rf_clock(usp_rf_data_converter_0_clk_dac2),
+        .rf_resetn(Net2));
   top_level_rst_clk_wiz_1_100M_0 rst_clk_wiz_1_100M
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_1_100M_bus_struct_reset),
@@ -1562,18 +2027,39 @@ module top_level
         .peripheral_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .slowest_sync_clk(microblaze_0_Clk));
   top_level_trigger_buffer_0_0 trigger_buffer_0
-       (.clk(Net3),
+       (.clk(microblaze_0_Clk),
         .pipeline_active_in_0(rfsoc_data_pipeline_0_pipeline_active),
         .pipeline_active_in_1(rfsoc_data_pipeline_1_pipeline_active),
+        .pipeline_active_in_10(rfsoc_data_pipeline_10_pipeline_active),
+        .pipeline_active_in_11(rfsoc_data_pipeline_11_pipeline_active),
+        .pipeline_active_in_12(rfsoc_data_pipeline_12_pipeline_active),
+        .pipeline_active_in_13(rfsoc_data_pipeline_13_pipeline_active),
+        .pipeline_active_in_14(rfsoc_data_pipeline_14_pipeline_active),
+        .pipeline_active_in_15(rfsoc_data_pipeline_15_pipeline_active),
         .pipeline_active_in_2(rfsoc_data_pipeline_2_pipeline_active),
         .pipeline_active_in_3(rfsoc_data_pipeline_3_pipeline_active),
-        .reset(Net4),
+        .pipeline_active_in_4(rfsoc_data_pipeline_4_pipeline_active),
+        .pipeline_active_in_5(rfsoc_data_pipeline_5_pipeline_active),
+        .pipeline_active_in_6(rfsoc_data_pipeline_6_pipeline_active),
+        .pipeline_active_in_7(rfsoc_data_pipeline_7_pipeline_active),
+        .pipeline_active_in_8(rfsoc_data_pipeline_8_pipeline_active),
+        .pipeline_active_in_9(rfsoc_data_pipeline_9_pipeline_active),
+        .reset(rst_clk_wiz_1_100M_peripheral_aresetn),
         .trigger_in(ext_trigger_0_0_1),
         .trigger_out(trigger_buffer_0_trigger_out));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.clk_dac0(Net3),
+        .clk_dac1(usp_rf_data_converter_0_clk_dac1),
+        .clk_dac2(usp_rf_data_converter_0_clk_dac2),
+        .clk_dac3(usp_rf_data_converter_0_clk_dac3),
         .dac0_clk_n(dac0_clk_1_CLK_N),
         .dac0_clk_p(dac0_clk_1_CLK_P),
+        .dac1_clk_n(dac1_clk_1_CLK_N),
+        .dac1_clk_p(dac1_clk_1_CLK_P),
+        .dac2_clk_n(dac2_clk_1_CLK_N),
+        .dac2_clk_p(dac2_clk_1_CLK_P),
+        .dac3_clk_n(dac3_clk_1_CLK_N),
+        .dac3_clk_p(dac3_clk_1_CLK_P),
         .s00_axis_tdata(rfsoc_data_pipeline_0_m_axis_0_TDATA),
         .s00_axis_tready(rfsoc_data_pipeline_0_m_axis_0_TREADY),
         .s00_axis_tvalid(rfsoc_data_pipeline_0_m_axis_0_TVALID),
@@ -1588,6 +2074,48 @@ module top_level
         .s03_axis_tvalid(rfsoc_data_pipeline_3_m_axis_0_TVALID),
         .s0_axis_aclk(Net3),
         .s0_axis_aresetn(Net4),
+        .s10_axis_tdata(rfsoc_data_pipeline_4_m_axis_TDATA),
+        .s10_axis_tready(rfsoc_data_pipeline_4_m_axis_TREADY),
+        .s10_axis_tvalid(rfsoc_data_pipeline_4_m_axis_TVALID),
+        .s11_axis_tdata(rfsoc_data_pipeline_5_m_axis_TDATA),
+        .s11_axis_tready(rfsoc_data_pipeline_5_m_axis_TREADY),
+        .s11_axis_tvalid(rfsoc_data_pipeline_5_m_axis_TVALID),
+        .s12_axis_tdata(rfsoc_data_pipeline_6_m_axis_TDATA),
+        .s12_axis_tready(rfsoc_data_pipeline_6_m_axis_TREADY),
+        .s12_axis_tvalid(rfsoc_data_pipeline_6_m_axis_TVALID),
+        .s13_axis_tdata(rfsoc_data_pipeline_7_m_axis_TDATA),
+        .s13_axis_tready(rfsoc_data_pipeline_7_m_axis_TREADY),
+        .s13_axis_tvalid(rfsoc_data_pipeline_7_m_axis_TVALID),
+        .s1_axis_aclk(usp_rf_data_converter_0_clk_dac1),
+        .s1_axis_aresetn(Net1),
+        .s20_axis_tdata(rfsoc_data_pipeline_8_m_axis_TDATA),
+        .s20_axis_tready(rfsoc_data_pipeline_8_m_axis_TREADY),
+        .s20_axis_tvalid(rfsoc_data_pipeline_8_m_axis_TVALID),
+        .s21_axis_tdata(rfsoc_data_pipeline_9_m_axis_TDATA),
+        .s21_axis_tready(rfsoc_data_pipeline_9_m_axis_TREADY),
+        .s21_axis_tvalid(rfsoc_data_pipeline_9_m_axis_TVALID),
+        .s22_axis_tdata(rfsoc_data_pipeline_10_m_axis_TDATA),
+        .s22_axis_tready(rfsoc_data_pipeline_10_m_axis_TREADY),
+        .s22_axis_tvalid(rfsoc_data_pipeline_10_m_axis_TVALID),
+        .s23_axis_tdata(rfsoc_data_pipeline_11_m_axis_TDATA),
+        .s23_axis_tready(rfsoc_data_pipeline_11_m_axis_TREADY),
+        .s23_axis_tvalid(rfsoc_data_pipeline_11_m_axis_TVALID),
+        .s2_axis_aclk(usp_rf_data_converter_0_clk_dac2),
+        .s2_axis_aresetn(Net2),
+        .s30_axis_tdata(rfsoc_data_pipeline_12_m_axis_TDATA),
+        .s30_axis_tready(rfsoc_data_pipeline_12_m_axis_TREADY),
+        .s30_axis_tvalid(rfsoc_data_pipeline_12_m_axis_TVALID),
+        .s31_axis_tdata(rfsoc_data_pipeline_13_m_axis_TDATA),
+        .s31_axis_tready(rfsoc_data_pipeline_13_m_axis_TREADY),
+        .s31_axis_tvalid(rfsoc_data_pipeline_13_m_axis_TVALID),
+        .s32_axis_tdata(rfsoc_data_pipeline_14_m_axis_TDATA),
+        .s32_axis_tready(rfsoc_data_pipeline_14_m_axis_TREADY),
+        .s32_axis_tvalid(rfsoc_data_pipeline_14_m_axis_TVALID),
+        .s33_axis_tdata(rfsoc_data_pipeline_15_m_axis_TDATA),
+        .s33_axis_tready(rfsoc_data_pipeline_15_m_axis_TREADY),
+        .s33_axis_tvalid(rfsoc_data_pipeline_15_m_axis_TVALID),
+        .s3_axis_aclk(usp_rf_data_converter_0_clk_dac3),
+        .s3_axis_aresetn(proc_sys_reset_3_peripheral_aresetn),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M03_AXI_ARADDR[17:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
@@ -1616,7 +2144,31 @@ module top_level
         .vout02_n(usp_rf_data_converter_0_vout02_V_N),
         .vout02_p(usp_rf_data_converter_0_vout02_V_P),
         .vout03_n(usp_rf_data_converter_0_vout03_V_N),
-        .vout03_p(usp_rf_data_converter_0_vout03_V_P));
+        .vout03_p(usp_rf_data_converter_0_vout03_V_P),
+        .vout10_n(usp_rf_data_converter_0_vout10_V_N),
+        .vout10_p(usp_rf_data_converter_0_vout10_V_P),
+        .vout11_n(usp_rf_data_converter_0_vout11_V_N),
+        .vout11_p(usp_rf_data_converter_0_vout11_V_P),
+        .vout12_n(usp_rf_data_converter_0_vout12_V_N),
+        .vout12_p(usp_rf_data_converter_0_vout12_V_P),
+        .vout13_n(usp_rf_data_converter_0_vout13_V_N),
+        .vout13_p(usp_rf_data_converter_0_vout13_V_P),
+        .vout20_n(usp_rf_data_converter_0_vout20_V_N),
+        .vout20_p(usp_rf_data_converter_0_vout20_V_P),
+        .vout21_n(usp_rf_data_converter_0_vout21_V_N),
+        .vout21_p(usp_rf_data_converter_0_vout21_V_P),
+        .vout22_n(usp_rf_data_converter_0_vout22_V_N),
+        .vout22_p(usp_rf_data_converter_0_vout22_V_P),
+        .vout23_n(usp_rf_data_converter_0_vout23_V_N),
+        .vout23_p(usp_rf_data_converter_0_vout23_V_P),
+        .vout30_n(usp_rf_data_converter_0_vout30_V_N),
+        .vout30_p(usp_rf_data_converter_0_vout30_V_P),
+        .vout31_n(usp_rf_data_converter_0_vout31_V_N),
+        .vout31_p(usp_rf_data_converter_0_vout31_V_P),
+        .vout32_n(usp_rf_data_converter_0_vout32_V_N),
+        .vout32_p(usp_rf_data_converter_0_vout32_V_P),
+        .vout33_n(usp_rf_data_converter_0_vout33_V_N),
+        .vout33_p(usp_rf_data_converter_0_vout33_V_P));
   top_level_util_vector_logic_0_0 util_vector_logic_0
        (.Op1(resetn_1),
         .Res(util_vector_logic_0_Res));

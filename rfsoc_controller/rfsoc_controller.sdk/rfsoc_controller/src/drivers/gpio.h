@@ -24,6 +24,7 @@
 #define ZERO_SCLK 7
 #define CYCLES_SCLK 8
 #define CHANNEL_SELECT_SCLK 9
+#define PRE_WAVEFORM_SCLK 10
 
 #define RF_BANK 2
 #define LED_BANK 1
@@ -36,6 +37,7 @@ void gpio_set_bank(u8 bank, u16 value);
 void gpio_write_repeat_cycles(u32 cycles);
 u8 gpio_read_trigger();
 void gpio_set_leds(u8 value);
+void gpio_select_channel(u8 c);
 
 
 #endif /* SRC_DRIVERS_GPIO_H_ */

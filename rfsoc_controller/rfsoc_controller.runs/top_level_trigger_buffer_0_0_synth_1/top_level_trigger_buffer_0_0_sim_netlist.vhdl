@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jul  9 15:17:23 2019
+-- Date        : Mon Jul 15 10:43:50 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_level_trigger_buffer_0_0_sim_netlist.vhdl
@@ -19,10 +19,22 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer is
     trigger_out : out STD_LOGIC;
     clk : in STD_LOGIC;
     trigger_in : in STD_LOGIC;
-    pipeline_active_in_2 : in STD_LOGIC;
-    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     pipeline_active_in_1 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
+    pipeline_active_in_2 : in STD_LOGIC;
     pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
     reset : in STD_LOGIC
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer;
@@ -50,6 +62,10 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buff
   signal trigger_out_i_1_n_0 : STD_LOGIC;
   signal trigger_out_i_2_n_0 : STD_LOGIC;
   signal trigger_out_i_3_n_0 : STD_LOGIC;
+  signal trigger_out_i_4_n_0 : STD_LOGIC;
+  signal trigger_out_i_5_n_0 : STD_LOGIC;
+  signal trigger_out_i_6_n_0 : STD_LOGIC;
+  signal trigger_out_i_7_n_0 : STD_LOGIC;
   signal \NLW_count_reg[0]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   signal \NLW_count_reg[0]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   attribute FSM_ENCODED_STATES : string;
@@ -83,13 +99,13 @@ begin
     );
 \FSM_onehot_state[2]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0001"
+      INIT => X"0004"
     )
         port map (
-      I0 => pipeline_active_in_0,
-      I1 => pipeline_active_in_1,
-      I2 => pipeline_active_in_3,
-      I3 => pipeline_active_in_2,
+      I0 => trigger_out_i_7_n_0,
+      I1 => trigger_out_i_6_n_0,
+      I2 => trigger_out_i_5_n_0,
+      I3 => trigger_out_i_4_n_0,
       O => \FSM_onehot_state[2]_i_3_n_0\
     );
 \FSM_onehot_state_reg[0]\: unisim.vcomponents.FDPE
@@ -253,16 +269,60 @@ trigger_out_i_2: unisim.vcomponents.LUT1
     );
 trigger_out_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001000000000000"
+      INIT => X"0010000000000000"
     )
         port map (
-      I0 => pipeline_active_in_2,
-      I1 => pipeline_active_in_3,
-      I2 => pipeline_active_in_1,
-      I3 => pipeline_active_in_0,
+      I0 => trigger_out_i_4_n_0,
+      I1 => trigger_out_i_5_n_0,
+      I2 => trigger_out_i_6_n_0,
+      I3 => trigger_out_i_7_n_0,
       I4 => \FSM_onehot_state_reg_n_0_[0]\,
       I5 => trigger_in,
       O => trigger_out_i_3_n_0
+    );
+trigger_out_i_4: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_15,
+      I1 => pipeline_active_in_1,
+      I2 => pipeline_active_in_12,
+      I3 => pipeline_active_in_6,
+      O => trigger_out_i_4_n_0
+    );
+trigger_out_i_5: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_13,
+      I1 => pipeline_active_in_11,
+      I2 => pipeline_active_in_9,
+      I3 => pipeline_active_in_7,
+      O => trigger_out_i_5_n_0
+    );
+trigger_out_i_6: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => pipeline_active_in_0,
+      I1 => pipeline_active_in_3,
+      I2 => pipeline_active_in_10,
+      I3 => pipeline_active_in_5,
+      O => trigger_out_i_6_n_0
+    );
+trigger_out_i_7: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_14,
+      I1 => pipeline_active_in_4,
+      I2 => pipeline_active_in_8,
+      I3 => pipeline_active_in_2,
+      O => trigger_out_i_7_n_0
     );
 trigger_out_reg: unisim.vcomponents.FDCE
     generic map(
@@ -289,6 +349,18 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     pipeline_active_in_1 : in STD_LOGIC;
     pipeline_active_in_2 : in STD_LOGIC;
     pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     trigger_out : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -307,7 +379,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
@@ -316,8 +388,20 @@ inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_trigger_buffer
       clk => clk,
       pipeline_active_in_0 => pipeline_active_in_0,
       pipeline_active_in_1 => pipeline_active_in_1,
+      pipeline_active_in_10 => pipeline_active_in_10,
+      pipeline_active_in_11 => pipeline_active_in_11,
+      pipeline_active_in_12 => pipeline_active_in_12,
+      pipeline_active_in_13 => pipeline_active_in_13,
+      pipeline_active_in_14 => pipeline_active_in_14,
+      pipeline_active_in_15 => pipeline_active_in_15,
       pipeline_active_in_2 => pipeline_active_in_2,
       pipeline_active_in_3 => pipeline_active_in_3,
+      pipeline_active_in_4 => pipeline_active_in_4,
+      pipeline_active_in_5 => pipeline_active_in_5,
+      pipeline_active_in_6 => pipeline_active_in_6,
+      pipeline_active_in_7 => pipeline_active_in_7,
+      pipeline_active_in_8 => pipeline_active_in_8,
+      pipeline_active_in_9 => pipeline_active_in_9,
       reset => reset,
       trigger_in => trigger_in,
       trigger_out => trigger_out

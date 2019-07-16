@@ -32,6 +32,18 @@ module trigger_buffer
     input wire pipeline_active_in_1,
     input wire pipeline_active_in_2,
     input wire pipeline_active_in_3,
+    input wire pipeline_active_in_4,
+    input wire pipeline_active_in_5,
+    input wire pipeline_active_in_6,
+    input wire pipeline_active_in_7,
+    input wire pipeline_active_in_8,
+    input wire pipeline_active_in_9,
+    input wire pipeline_active_in_10,
+    input wire pipeline_active_in_11,
+    input wire pipeline_active_in_12,
+    input wire pipeline_active_in_13,
+    input wire pipeline_active_in_14,
+    input wire pipeline_active_in_15,
     output reg trigger_out
     );
     
@@ -39,7 +51,22 @@ module trigger_buffer
     reg [1:0] state;
     
     wire pipeline_active_in;
-    assign pipeline_active_in = pipeline_active_in_0 | pipeline_active_in_1 | pipeline_active_in_2 | pipeline_active_in_3;
+    assign pipeline_active_in = pipeline_active_in_0 | 
+                                pipeline_active_in_1 | 
+                                pipeline_active_in_2 | 
+                                pipeline_active_in_3 | 
+                                pipeline_active_in_4 | 
+                                pipeline_active_in_5 | 
+                                pipeline_active_in_6 | 
+                                pipeline_active_in_7 | 
+                                pipeline_active_in_8 | 
+                                pipeline_active_in_9 | 
+                                pipeline_active_in_10 | 
+                                pipeline_active_in_11 | 
+                                pipeline_active_in_12 | 
+                                pipeline_active_in_13 | 
+                                pipeline_active_in_14 | 
+                                pipeline_active_in_15;
         
      localparam [1:0] state_wait_trigger = 2'b00,
 		              state_trigger = 2'b01,

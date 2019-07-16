@@ -163,7 +163,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dfe110e2</spirit:value>
+            <spirit:value>e555d81f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -176,7 +176,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dfe110e2</spirit:value>
+            <spirit:value>e555d81f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -414,19 +414,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>is_locking</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>is_selected</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -476,6 +463,11 @@
         <spirit:displayName>Cycles Sclk</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.cycles_sclk">8</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>pre_waveform_sclk</spirit:name>
+        <spirit:displayName>Pre Waveform Sclk</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pre_waveform_sclk">10</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
@@ -484,7 +476,7 @@
       <spirit:file>
         <spirit:name>xgui/axis_tready_slice_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_bc7e102b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_012c7dd6</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -527,6 +519,11 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.cycles_sclk">8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>pre_waveform_sclk</spirit:name>
+      <spirit:displayName>Pre Waveform Sclk</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.pre_waveform_sclk">10</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">axis_tready_slice_v1_0</spirit:value>
     </spirit:parameter>
@@ -546,7 +543,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-07-11T21:28:51Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-07-16T00:23:15Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

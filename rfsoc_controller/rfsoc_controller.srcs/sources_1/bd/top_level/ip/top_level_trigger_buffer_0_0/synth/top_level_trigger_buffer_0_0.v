@@ -63,10 +63,22 @@ module top_level_trigger_buffer_0_0 (
   pipeline_active_in_1,
   pipeline_active_in_2,
   pipeline_active_in_3,
+  pipeline_active_in_4,
+  pipeline_active_in_5,
+  pipeline_active_in_6,
+  pipeline_active_in_7,
+  pipeline_active_in_8,
+  pipeline_active_in_9,
+  pipeline_active_in_10,
+  pipeline_active_in_11,
+  pipeline_active_in_12,
+  pipeline_active_in_13,
+  pipeline_active_in_14,
+  pipeline_active_in_15,
   trigger_out
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -77,6 +89,18 @@ input wire pipeline_active_in_0;
 input wire pipeline_active_in_1;
 input wire pipeline_active_in_2;
 input wire pipeline_active_in_3;
+input wire pipeline_active_in_4;
+input wire pipeline_active_in_5;
+input wire pipeline_active_in_6;
+input wire pipeline_active_in_7;
+input wire pipeline_active_in_8;
+input wire pipeline_active_in_9;
+input wire pipeline_active_in_10;
+input wire pipeline_active_in_11;
+input wire pipeline_active_in_12;
+input wire pipeline_active_in_13;
+input wire pipeline_active_in_14;
+input wire pipeline_active_in_15;
 output wire trigger_out;
 
   trigger_buffer #(
@@ -89,6 +113,18 @@ output wire trigger_out;
     .pipeline_active_in_1(pipeline_active_in_1),
     .pipeline_active_in_2(pipeline_active_in_2),
     .pipeline_active_in_3(pipeline_active_in_3),
+    .pipeline_active_in_4(pipeline_active_in_4),
+    .pipeline_active_in_5(pipeline_active_in_5),
+    .pipeline_active_in_6(pipeline_active_in_6),
+    .pipeline_active_in_7(pipeline_active_in_7),
+    .pipeline_active_in_8(pipeline_active_in_8),
+    .pipeline_active_in_9(pipeline_active_in_9),
+    .pipeline_active_in_10(pipeline_active_in_10),
+    .pipeline_active_in_11(pipeline_active_in_11),
+    .pipeline_active_in_12(pipeline_active_in_12),
+    .pipeline_active_in_13(pipeline_active_in_13),
+    .pipeline_active_in_14(pipeline_active_in_14),
+    .pipeline_active_in_15(pipeline_active_in_15),
     .trigger_out(trigger_out)
   );
 endmodule

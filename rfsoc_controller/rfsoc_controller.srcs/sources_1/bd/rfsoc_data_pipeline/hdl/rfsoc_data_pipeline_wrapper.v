@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jul 11 14:36:39 2019
+//Date        : Mon Jul 15 17:25:30 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_data_pipeline_wrapper.bd
 //Design      : rfsoc_data_pipeline_wrapper
@@ -15,7 +15,6 @@ module rfsoc_data_pipeline_wrapper
     S_AXIS_tvalid,
     ext_trigger,
     gpio_in,
-    is_locking,
     is_selected,
     m_axis_tdata,
     m_axis_tready,
@@ -30,7 +29,6 @@ module rfsoc_data_pipeline_wrapper
   input S_AXIS_tvalid;
   input ext_trigger;
   input [15:0]gpio_in;
-  input is_locking;
   input is_selected;
   output [255:0]m_axis_tdata;
   input m_axis_tready;
@@ -46,7 +44,6 @@ module rfsoc_data_pipeline_wrapper
   wire S_AXIS_tvalid;
   wire ext_trigger;
   wire [15:0]gpio_in;
-  wire is_locking;
   wire is_selected;
   wire [255:0]m_axis_tdata;
   wire m_axis_tready;
@@ -63,7 +60,6 @@ module rfsoc_data_pipeline_wrapper
         .S_AXIS_tvalid(S_AXIS_tvalid),
         .ext_trigger(ext_trigger),
         .gpio_in(gpio_in),
-        .is_locking(is_locking),
         .is_selected(is_selected),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tready(m_axis_tready),

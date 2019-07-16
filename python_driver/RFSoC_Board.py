@@ -18,6 +18,7 @@ DEFAULT_BAUD = 115200
 DAC_MAX_VALUE = 0x7FFF
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
 DAC_WORD_FREQ = 250250820
+NANOSECONDS_PER_DAC_WORD = 4
 
 #Commands
 PING_BOARD = 0x00
@@ -124,25 +125,31 @@ def int_to_bytestream(n, l):
 
 class Channel:
     number = 0
-    zero_delay = 0
     repeat_cycles = 0
+    repeat_clock_cycles = 0
     locking_wf = None
     experiment_wf = None
-    is_locking = 0
 
-    def __init__(self, n, zd, rc, lf, ef, il):
+    def __init__(self, n, rc, lf, ef):
         self.number = n
         self.repeat_cycles = rc
-        self.zero_delay = zd
         self.locking_wf = lf
         self.experiment_wf = ef
-        self.is_locking = il
         
     def get_byte_stream(self):
         return self.experiment_wf.bytestream
     
     def get_word_stream(self):
         return self.experiment_wf.wordstream
+    
+    def get_pre_waveform_byte_stream(self):
+        return self.experiment_wf.pre_waveform_bytestream
+    
+    def get_zero_delay_bytes(self):
+        return self.experiment_wf.zero_delay_bytestream
+    
+    def get_repeat_clock_cycle_bytes(self):
+        return int_to_bytestream((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)), 4)
         
    
     
@@ -152,18 +159,23 @@ class WaveFile:
     columName = ""
     wordstream = []
     bytestream = []
-    period = 0 #in seconds
-    shift = 0 #in number of DAC samples (16-bit samples)
+    period = 0 #in nanoseconds
+    delay = 0 #in number of DAC samples (16-bit samples), converted from nanoseconds
     amp_factor = 1
+    pre_waveform_bytestream = []
+    zero_delay_bytestream = []
+    is_locking = 0
+    locking_shift = 0
     
         
-    def __init__(self, fn, per, s, af):
-        self.shift = s
+    def __init__(self, fn, per, d, af, il, lshift):
+        self.delay = round(d * 4) #to get to number of 16-bit samples
         self.period = per
         self.fileName = fn
         self.amp_factor = af
+        self.is_locking = il
+        self.locking_shift = lshift
         self.gen_word_stream()
-        self.gen_byte_stream()
         
     def gen_word_stream(self):
         #read out the file as a string
@@ -182,7 +194,7 @@ class WaveFile:
             vals.append(float(string_val))
         
         #first we need to figure out how many samples our final wordstream will have
-        num_samples = round((self.period/DAC_WORD_PERIOD)*16)
+        num_samples = self.period * NANOSECONDS_PER_DAC_WORD
         
         #next we need to set up variables for interpolation
         disc_time = list(range(0,len(vals)))
@@ -196,22 +208,53 @@ class WaveFile:
             for i in range(0,len(final_wordstream)):
                 final_wordstream[i] = final_wordstream[i] * self.amp_factor
                 
-        if(self.shift == 0):
-            self.wordstream = final_wordstream
+        #if we're a locking waveform
+        if(self.is_locking):
+            #just shift the waveform and return
+            self.wordstream = stream_shift(final_wordstream, self.locking_shift)
+            self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
             return
-        self.wordstream = stream_shift(final_wordstream, self.shift)
+            
+        
+        #figure out the pre_waveform bytes
+        pre_waveform_wordstream = []
+        pr_index = 0
+        fine_delay = self.delay%16
+        for i in range (0, 16):
+            if(i >= fine_delay):
+                pre_waveform_wordstream.append(final_wordstream[pr_index])
+                pr_index += 1
+            else:
+                pre_waveform_wordstream.append(0x0000)
+        
+        #shift the final wordstream to match
+        self.wordstream = stream_shift(final_wordstream, (16 - fine_delay)*-1)
+        
+        #generate the bytestream
+        self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
+        
+        #generate the prewaveform bytestream
+        self.pre_waveform_bytestream = self.gen_byte_stream_from_wordstream(pre_waveform_wordstream)
+        
+        #generate the zero delay bytestream
+        self.zero_delay_bytestream = int_to_bytestream(round((self.delay - fine_delay)/16), 4)
+        
+        
+        
         
             
         
-    def gen_byte_stream(self):
-        self.bytestream = []
+    def gen_byte_stream_from_wordstream(self, wordstream):
+        bytestream = []
         #loop throuhg all the words
-        for i in range (0, len(self.wordstream)):
+        for i in range (0, len(wordstream)):
             #get the bytes
-            bytes = int_to_bytestream(self.wordstream[i], 2)
+            bytes = int_to_bytestream(wordstream[i], 2)
             #append the two bytes to the bytestream
-            self.bytestream.append(bytes[0])
-            self.bytestream.append(bytes[1])
+            bytestream.append(bytes[0])
+            bytestream.append(bytes[1])
+            
+        return bytestream
     
 
 class RFSoC_Board:
@@ -321,7 +364,7 @@ class RFSoC_Board:
         
         
         #send the repeat cycles
-        cycle_bytes = int_to_bytestream(target_channel.repeat_cycles, 4)
+        cycle_bytes = target_channel.get_repeat_clock_cycle_bytes()
         ack_val = self.write_bytes(cycle_bytes)
         
          #if we get a bad acknowledgement back
@@ -329,7 +372,7 @@ class RFSoC_Board:
             print("Error, bad acknowledgement recieved from board while sending set repeat cycles value, ack error code was: " + str(ack_val) + "\n")
           
         #send the zero cycles
-        zero_bytes = int_to_bytestream(target_channel.zero_delay, 4)
+        zero_bytes = target_channel.get_zero_delay_bytes()
         ack_val = self.write_bytes(zero_bytes)
         
          #if we get a bad acknowledgement back
@@ -343,6 +386,13 @@ class RFSoC_Board:
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
             
+        #send the prewaveform bytes
+        ack_val = self.write_bytes(target_channel.get_pre_waveform_byte_stream())
+         #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending prewaveform bytes, ack error code was: " + str(ack_val) + "\n")
+            
+        
         #send the length
         ack_val = self.write_bytes(int_to_bytestream(len(bs),4))
         
@@ -439,21 +489,23 @@ class RFSoC_Board:
             
     def set_locking_select(self):
         
-        bs = self.get_locking_bytes()
-        
-        #send the set lockign waveform command
-        ack_val = self.write_bytes([RF_SET_LOCKING_SELECT])
-        
-        #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending set locking select command, ack error code was: " + str(ack_val) + "\n")
-            
-        #send the locking bytes
-        ack_val = self.write_bytes(bs)
-        
-        #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
+        #depreciated function
+        return
+#        bs = self.get_locking_bytes()
+#        
+#        #send the set lockign waveform command
+#        ack_val = self.write_bytes([RF_SET_LOCKING_SELECT])
+#        
+#        #if we get a bad acknowledgement back
+#        if(ack_val != ACK_RESPONSE):
+#            print("Error, bad acknowledgement recieved from board while sending set locking select command, ack error code was: " + str(ack_val) + "\n")
+#            
+#        #send the locking bytes
+#        ack_val = self.write_bytes(bs)
+#        
+#        #if we get a bad acknowledgement back
+#        if(ack_val != ACK_RESPONSE):
+#            print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
 
     
     def get_locking_bytes(self):
