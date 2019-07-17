@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA1655F563E50F6C6",
+      "boundary_crc": "0xFD58CFCD84B9D246",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "trigger_controller",
       "synth_flow_mode": "Hierarchical",
@@ -9,9 +9,9 @@
       "validated": "true"
     },
     "design_tree": {
-      "trigger_module_0": "",
       "gpio_buffer_0": "",
-      "axis_data_fifo_0": ""
+      "axis_data_fifo_0": "",
+      "trigger_module_0": ""
     },
     "ports": {
       "rf_clk": {
@@ -130,74 +130,81 @@
       },
       "trigger_c0": {
         "direction": "O"
+      },
+      "pipeline_active_in_4": {
+        "direction": "I"
+      },
+      "pipeline_active_in_5": {
+        "direction": "I"
+      },
+      "pipeline_active_in_6": {
+        "direction": "I"
+      },
+      "pipeline_active_in_7": {
+        "direction": "I"
+      },
+      "pipeline_active_in_8": {
+        "direction": "I"
+      },
+      "pipeline_active_in_9": {
+        "direction": "I"
+      },
+      "pipeline_active_in_10": {
+        "direction": "I"
+      },
+      "pipeline_active_in_11": {
+        "direction": "I"
+      },
+      "pipeline_active_in_12": {
+        "direction": "I"
+      },
+      "pipeline_active_in_13": {
+        "direction": "I"
+      },
+      "pipeline_active_in_14": {
+        "direction": "I"
+      },
+      "pipeline_active_in_15": {
+        "direction": "I"
+      },
+      "trigger_c15": {
+        "direction": "O"
+      },
+      "trigger_c14": {
+        "direction": "O"
+      },
+      "trigger_c13": {
+        "direction": "O"
+      },
+      "trigger_c12": {
+        "direction": "O"
+      },
+      "trigger_c10": {
+        "direction": "O"
+      },
+      "trigger_c11": {
+        "direction": "O"
+      },
+      "trigger_c4": {
+        "direction": "O"
+      },
+      "trigger_c5": {
+        "direction": "O"
+      },
+      "trigger_c6": {
+        "direction": "O"
+      },
+      "trigger_c7": {
+        "direction": "O"
+      },
+      "trigger_c8": {
+        "direction": "O"
+      },
+      "trigger_c9": {
+        "direction": "O"
       }
     },
     "components": {
-      "trigger_module_0": {
-        "vlnv": "xilinx.com:module_ref:trigger_module:1.0",
-        "xci_name": "trigger_controller_trigger_module_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "trigger_module",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rf_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rf_reset",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "trigger_controller_rf_clk",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "250000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "rf_reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "trigger_in": {
-            "direction": "I"
-          },
-          "pipeline_active_in_0": {
-            "direction": "I"
-          },
-          "pipeline_active_in_1": {
-            "direction": "I"
-          },
-          "pipeline_active_in_2": {
-            "direction": "I"
-          },
-          "pipeline_active_in_3": {
-            "direction": "I"
-          },
-          "gpio_in": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "trigger_c0": {
-            "direction": "O"
-          },
-          "trigger_c1": {
-            "direction": "O"
-          },
-          "trigger_c2": {
-            "direction": "O"
-          },
-          "trigger_c3": {
-            "direction": "O"
-          }
-        }
-      },
       "gpio_buffer_0": {
         "vlnv": "xilinx.com:module_ref:gpio_buffer:1.0",
         "xci_name": "trigger_controller_gpio_buffer_0_0",
@@ -352,6 +359,143 @@
             "value": "2"
           }
         }
+      },
+      "trigger_module_0": {
+        "vlnv": "xilinx.com:module_ref:trigger_module:1.0",
+        "xci_name": "trigger_controller_trigger_module_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rf_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rf_reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "trigger_controller_rf_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rf_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "trigger_in": {
+            "direction": "I"
+          },
+          "pipeline_active_in_0": {
+            "direction": "I"
+          },
+          "pipeline_active_in_1": {
+            "direction": "I"
+          },
+          "pipeline_active_in_2": {
+            "direction": "I"
+          },
+          "pipeline_active_in_3": {
+            "direction": "I"
+          },
+          "pipeline_active_in_4": {
+            "direction": "I"
+          },
+          "pipeline_active_in_5": {
+            "direction": "I"
+          },
+          "pipeline_active_in_6": {
+            "direction": "I"
+          },
+          "pipeline_active_in_7": {
+            "direction": "I"
+          },
+          "pipeline_active_in_8": {
+            "direction": "I"
+          },
+          "pipeline_active_in_9": {
+            "direction": "I"
+          },
+          "pipeline_active_in_10": {
+            "direction": "I"
+          },
+          "pipeline_active_in_11": {
+            "direction": "I"
+          },
+          "pipeline_active_in_12": {
+            "direction": "I"
+          },
+          "pipeline_active_in_13": {
+            "direction": "I"
+          },
+          "pipeline_active_in_14": {
+            "direction": "I"
+          },
+          "pipeline_active_in_15": {
+            "direction": "I"
+          },
+          "gpio_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "trigger_c0": {
+            "direction": "O"
+          },
+          "trigger_c1": {
+            "direction": "O"
+          },
+          "trigger_c2": {
+            "direction": "O"
+          },
+          "trigger_c3": {
+            "direction": "O"
+          },
+          "trigger_c4": {
+            "direction": "O"
+          },
+          "trigger_c5": {
+            "direction": "O"
+          },
+          "trigger_c6": {
+            "direction": "O"
+          },
+          "trigger_c7": {
+            "direction": "O"
+          },
+          "trigger_c8": {
+            "direction": "O"
+          },
+          "trigger_c9": {
+            "direction": "O"
+          },
+          "trigger_c10": {
+            "direction": "O"
+          },
+          "trigger_c11": {
+            "direction": "O"
+          },
+          "trigger_c12": {
+            "direction": "O"
+          },
+          "trigger_c13": {
+            "direction": "O"
+          },
+          "trigger_c14": {
+            "direction": "O"
+          },
+          "trigger_c15": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -458,6 +602,150 @@
         "ports": [
           "trigger_module_0/trigger_c0",
           "trigger_c0"
+        ]
+      },
+      "pipeline_active_in_4_0_1": {
+        "ports": [
+          "pipeline_active_in_4",
+          "trigger_module_0/pipeline_active_in_4"
+        ]
+      },
+      "pipeline_active_in_5_0_1": {
+        "ports": [
+          "pipeline_active_in_5",
+          "trigger_module_0/pipeline_active_in_5"
+        ]
+      },
+      "pipeline_active_in_6_0_1": {
+        "ports": [
+          "pipeline_active_in_6",
+          "trigger_module_0/pipeline_active_in_6"
+        ]
+      },
+      "pipeline_active_in_7_0_1": {
+        "ports": [
+          "pipeline_active_in_7",
+          "trigger_module_0/pipeline_active_in_7"
+        ]
+      },
+      "pipeline_active_in_8_0_1": {
+        "ports": [
+          "pipeline_active_in_8",
+          "trigger_module_0/pipeline_active_in_8"
+        ]
+      },
+      "pipeline_active_in_9_0_1": {
+        "ports": [
+          "pipeline_active_in_9",
+          "trigger_module_0/pipeline_active_in_9"
+        ]
+      },
+      "pipeline_active_in_10_0_1": {
+        "ports": [
+          "pipeline_active_in_10",
+          "trigger_module_0/pipeline_active_in_10"
+        ]
+      },
+      "pipeline_active_in_11_0_1": {
+        "ports": [
+          "pipeline_active_in_11",
+          "trigger_module_0/pipeline_active_in_11"
+        ]
+      },
+      "pipeline_active_in_12_0_1": {
+        "ports": [
+          "pipeline_active_in_12",
+          "trigger_module_0/pipeline_active_in_12"
+        ]
+      },
+      "pipeline_active_in_13_0_1": {
+        "ports": [
+          "pipeline_active_in_13",
+          "trigger_module_0/pipeline_active_in_13"
+        ]
+      },
+      "pipeline_active_in_14_0_1": {
+        "ports": [
+          "pipeline_active_in_14",
+          "trigger_module_0/pipeline_active_in_14"
+        ]
+      },
+      "pipeline_active_in_15_0_1": {
+        "ports": [
+          "pipeline_active_in_15",
+          "trigger_module_0/pipeline_active_in_15"
+        ]
+      },
+      "trigger_module_0_trigger_c15": {
+        "ports": [
+          "trigger_module_0/trigger_c15",
+          "trigger_c15"
+        ]
+      },
+      "trigger_module_0_trigger_c14": {
+        "ports": [
+          "trigger_module_0/trigger_c14",
+          "trigger_c14"
+        ]
+      },
+      "trigger_module_0_trigger_c13": {
+        "ports": [
+          "trigger_module_0/trigger_c13",
+          "trigger_c13"
+        ]
+      },
+      "trigger_module_0_trigger_c12": {
+        "ports": [
+          "trigger_module_0/trigger_c12",
+          "trigger_c12"
+        ]
+      },
+      "trigger_module_0_trigger_c10": {
+        "ports": [
+          "trigger_module_0/trigger_c10",
+          "trigger_c10"
+        ]
+      },
+      "trigger_module_0_trigger_c11": {
+        "ports": [
+          "trigger_module_0/trigger_c11",
+          "trigger_c11"
+        ]
+      },
+      "trigger_module_0_trigger_c4": {
+        "ports": [
+          "trigger_module_0/trigger_c4",
+          "trigger_c4"
+        ]
+      },
+      "trigger_module_0_trigger_c5": {
+        "ports": [
+          "trigger_module_0/trigger_c5",
+          "trigger_c5"
+        ]
+      },
+      "trigger_module_0_trigger_c6": {
+        "ports": [
+          "trigger_module_0/trigger_c6",
+          "trigger_c6"
+        ]
+      },
+      "trigger_module_0_trigger_c7": {
+        "ports": [
+          "trigger_module_0/trigger_c7",
+          "trigger_c7"
+        ]
+      },
+      "trigger_module_0_trigger_c8": {
+        "ports": [
+          "trigger_module_0/trigger_c8",
+          "trigger_c8"
+        ]
+      },
+      "trigger_module_0_trigger_c9": {
+        "ports": [
+          "trigger_module_0/trigger_c9",
+          "trigger_c9"
         ]
       }
     }

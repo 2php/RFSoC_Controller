@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 16 18:10:52 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 16 21:51:49 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="trigger_controller" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -73,6 +73,126 @@
     <PORT DIR="O" NAME="trigger_c0" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_4" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_5" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_6" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_7" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_8" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_9" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_10" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_10">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_10"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_11" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_11">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_11"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_12" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_12">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_12"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_13" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_13">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_13"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_14" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_14">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_14"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="pipeline_active_in_15" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_15">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="pipeline_active_in_15"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c15" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c15">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c15"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c14" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c14">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c14"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c13" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c13">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c13"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c12" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c12">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c12"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c10" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c10">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c10"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c11" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c11">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c11"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c4" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c5" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c6" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c7" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c8" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="trigger_c9" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="trigger_module_0" PORT="trigger_c9"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -353,6 +473,66 @@
             <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_3"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_4" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_5" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_6" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_7" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_8" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_8">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_9" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_9">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_10" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_10">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_10"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_11" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_11">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_11"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_12" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_12">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_12"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_13" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_13">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_13"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_14" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_14"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_15" SIGIS="undef" SIGNAME="External_Ports_pipeline_active_in_15">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pipeline_active_in_15"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="gpio_buffer_0_gpio_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_buffer_0" PORT="gpio_out"/>
@@ -376,6 +556,66 @@
         <PORT DIR="O" NAME="trigger_c3" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="trigger_c3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c4" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c5" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c6" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c7" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c8" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c8">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c9" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c9">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c10" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c10">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c10"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c11" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c11">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c11"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c12" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c12">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c12"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c13" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c13">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c13"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c14" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c14"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c15" SIGIS="undef" SIGNAME="trigger_module_0_trigger_c15">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="trigger_c15"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

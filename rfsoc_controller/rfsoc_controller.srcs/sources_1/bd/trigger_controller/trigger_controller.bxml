@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="trigger_controller" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563325852"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563325852"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563325852"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563325852"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563339109"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563339109"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563339109"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563339109"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\trigger_controller_trigger_module_0_0\trigger_controller_trigger_module_0_0.xci" Type="IP">
         <Instance HierarchyPath="trigger_module_0"/>

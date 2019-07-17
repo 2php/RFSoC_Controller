@@ -61,14 +61,38 @@ module top_level_trigger_controller_0_0 (
   microblaze_reset,
   pipeline_active_in_0,
   pipeline_active_in_1,
+  pipeline_active_in_10,
+  pipeline_active_in_11,
+  pipeline_active_in_12,
+  pipeline_active_in_13,
+  pipeline_active_in_14,
+  pipeline_active_in_15,
   pipeline_active_in_2,
   pipeline_active_in_3,
+  pipeline_active_in_4,
+  pipeline_active_in_5,
+  pipeline_active_in_6,
+  pipeline_active_in_7,
+  pipeline_active_in_8,
+  pipeline_active_in_9,
   rf_clk,
   rf_reset,
   trigger_c0,
   trigger_c1,
+  trigger_c10,
+  trigger_c11,
+  trigger_c12,
+  trigger_c13,
+  trigger_c14,
+  trigger_c15,
   trigger_c2,
-  trigger_c3
+  trigger_c3,
+  trigger_c4,
+  trigger_c5,
+  trigger_c6,
+  trigger_c7,
+  trigger_c8,
+  trigger_c9
 );
 
 input wire ext_trigger_in;
@@ -83,8 +107,20 @@ input wire microblaze_clk;
 input wire microblaze_reset;
 input wire pipeline_active_in_0;
 input wire pipeline_active_in_1;
+input wire pipeline_active_in_10;
+input wire pipeline_active_in_11;
+input wire pipeline_active_in_12;
+input wire pipeline_active_in_13;
+input wire pipeline_active_in_14;
+input wire pipeline_active_in_15;
 input wire pipeline_active_in_2;
 input wire pipeline_active_in_3;
+input wire pipeline_active_in_4;
+input wire pipeline_active_in_5;
+input wire pipeline_active_in_6;
+input wire pipeline_active_in_7;
+input wire pipeline_active_in_8;
+input wire pipeline_active_in_9;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_RESET rf_reset, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLK CLK" *)
 input wire rf_clk;
@@ -93,8 +129,20 @@ input wire rf_clk;
 input wire rf_reset;
 output wire trigger_c0;
 output wire trigger_c1;
+output wire trigger_c10;
+output wire trigger_c11;
+output wire trigger_c12;
+output wire trigger_c13;
+output wire trigger_c14;
+output wire trigger_c15;
 output wire trigger_c2;
 output wire trigger_c3;
+output wire trigger_c4;
+output wire trigger_c5;
+output wire trigger_c6;
+output wire trigger_c7;
+output wire trigger_c8;
+output wire trigger_c9;
 
   trigger_controller inst (
     .ext_trigger_in(ext_trigger_in),
@@ -103,13 +151,37 @@ output wire trigger_c3;
     .microblaze_reset(microblaze_reset),
     .pipeline_active_in_0(pipeline_active_in_0),
     .pipeline_active_in_1(pipeline_active_in_1),
+    .pipeline_active_in_10(pipeline_active_in_10),
+    .pipeline_active_in_11(pipeline_active_in_11),
+    .pipeline_active_in_12(pipeline_active_in_12),
+    .pipeline_active_in_13(pipeline_active_in_13),
+    .pipeline_active_in_14(pipeline_active_in_14),
+    .pipeline_active_in_15(pipeline_active_in_15),
     .pipeline_active_in_2(pipeline_active_in_2),
     .pipeline_active_in_3(pipeline_active_in_3),
+    .pipeline_active_in_4(pipeline_active_in_4),
+    .pipeline_active_in_5(pipeline_active_in_5),
+    .pipeline_active_in_6(pipeline_active_in_6),
+    .pipeline_active_in_7(pipeline_active_in_7),
+    .pipeline_active_in_8(pipeline_active_in_8),
+    .pipeline_active_in_9(pipeline_active_in_9),
     .rf_clk(rf_clk),
     .rf_reset(rf_reset),
     .trigger_c0(trigger_c0),
     .trigger_c1(trigger_c1),
+    .trigger_c10(trigger_c10),
+    .trigger_c11(trigger_c11),
+    .trigger_c12(trigger_c12),
+    .trigger_c13(trigger_c13),
+    .trigger_c14(trigger_c14),
+    .trigger_c15(trigger_c15),
     .trigger_c2(trigger_c2),
-    .trigger_c3(trigger_c3)
+    .trigger_c3(trigger_c3),
+    .trigger_c4(trigger_c4),
+    .trigger_c5(trigger_c5),
+    .trigger_c6(trigger_c6),
+    .trigger_c7(trigger_c7),
+    .trigger_c8(trigger_c8),
+    .trigger_c9(trigger_c9)
   );
 endmodule

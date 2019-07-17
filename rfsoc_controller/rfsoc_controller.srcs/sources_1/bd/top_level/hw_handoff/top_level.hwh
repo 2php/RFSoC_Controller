@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 16 18:35:18 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 16 21:59:22 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -22,9 +22,6 @@
     <PORT DIR="I" NAME="ext_trigger_0_0" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="trigger_controller_0" PORT="ext_trigger_in"/>
-        <CONNECTION INSTANCE="trigger_controller_1" PORT="ext_trigger_in"/>
-        <CONNECTION INSTANCE="trigger_controller_2" PORT="ext_trigger_in"/>
-        <CONNECTION INSTANCE="trigger_controller_3" PORT="ext_trigger_in"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="vout02_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout02_n">
@@ -721,9 +718,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="gpio_in"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="trigger_controller_0" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1887,9 +1881,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_clk"/>
             <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="microblaze_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_1_locked">
@@ -6562,7 +6553,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_5" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_6" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="rf_resetn"/>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="rf_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6616,7 +6606,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="rf_resetn"/>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="rf_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6670,7 +6659,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="rf_resetn"/>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="rf_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6942,9 +6930,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M10_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c2">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c10">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="trigger_c2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -6984,7 +6972,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_10_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="pipeline_active_in_2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_10"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac2">
@@ -7063,9 +7051,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M11_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c3">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c11">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="trigger_c3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c11"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7105,7 +7093,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_11_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="pipeline_active_in_3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_11"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac2">
@@ -7184,9 +7172,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M12_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c0">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c12">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="trigger_c0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c12"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7226,7 +7214,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_12_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="pipeline_active_in_0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_12"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac3">
@@ -7305,9 +7293,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M13_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c1">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c13">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="trigger_c1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c13"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7347,7 +7335,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_13_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="pipeline_active_in_1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_13"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac3">
@@ -7426,9 +7414,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M14_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c2">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c14">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="trigger_c2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c14"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7468,7 +7456,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_14_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="pipeline_active_in_2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_14"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac3">
@@ -7547,9 +7535,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M15_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c3">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c15">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="trigger_c3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c15"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7589,7 +7577,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_15_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="pipeline_active_in_3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_15"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac3">
@@ -7910,9 +7898,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M4_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c0">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="trigger_c0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -7952,7 +7940,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_4_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="pipeline_active_in_0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_4"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac1">
@@ -8031,9 +8019,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M5_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c1">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c5">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="trigger_c1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -8073,7 +8061,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_5_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="pipeline_active_in_1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_5"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac1">
@@ -8152,9 +8140,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M6_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c2">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c6">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="trigger_c2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -8194,7 +8182,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_6_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="pipeline_active_in_2"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_6"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac1">
@@ -8273,9 +8261,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M7_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c3">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c7">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="trigger_c3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c7"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -8315,7 +8303,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_7_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="pipeline_active_in_3"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_7"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac1">
@@ -8394,9 +8382,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M8_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c0">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c8">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="trigger_c0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c8"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -8436,7 +8424,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_8_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="pipeline_active_in_0"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_8"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac2">
@@ -8515,9 +8503,9 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="M9_AXIS_TVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c1">
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c9">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="trigger_c1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c9"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
@@ -8557,7 +8545,7 @@
         </PORT>
         <PORT DIR="O" NAME="pipeline_active" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_9_pipeline_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="pipeline_active_in_1"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="pipeline_active_in_9"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clock" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac2">
@@ -8700,9 +8688,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_reset"/>
             <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_reset"/>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="microblaze_reset"/>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="microblaze_reset"/>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="microblaze_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -16517,6 +16502,36 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="pipeline_active"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_10" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_10_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_11" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_11_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_12" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_12_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_13" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_13_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_14" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_14_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_15" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_15_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="pipeline_active_in_2" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_2_pipeline_active">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="pipeline_active"/>
@@ -16525,6 +16540,36 @@
         <PORT DIR="I" NAME="pipeline_active_in_3" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_3_pipeline_active">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_4" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_4_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_4" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_5" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_5_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_5" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_6" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_6_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_6" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_7" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_7_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_8" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_8_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="pipeline_active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pipeline_active_in_9" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_9_pipeline_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="pipeline_active"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac0">
@@ -16549,6 +16594,36 @@
             <CONNECTION INSTANCE="system_ila_0" PORT="probe4"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="trigger_c10" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c10">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c11" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c11">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c12" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c12">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c13" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c13">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c14" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="trigger_c15" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c15">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="ext_trigger"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="trigger_c2" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="ext_trigger"/>
@@ -16559,244 +16634,34 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/trigger_controller_1" HWVERSION="1.0" INSTANCE="trigger_controller_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_controller" VLNV="xilinx.com:user:trigger_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="top_level_trigger_controller_1_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="ext_trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_0_gpio2_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="microblaze_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="microblaze_reset" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_0" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_4_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_4" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_1" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_5_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_5" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_2" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_6_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_6" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_3" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_7_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rf_reset" SIGIS="rst" SIGNAME="proc_sys_reset_1_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_1" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c0" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c0">
+        <PORT DIR="O" NAME="trigger_c4" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c4">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_4" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="trigger_c1" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c1">
+        <PORT DIR="O" NAME="trigger_c5" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c5">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_5" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="trigger_c2" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c2">
+        <PORT DIR="O" NAME="trigger_c6" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c6">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_6" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="trigger_c3" SIGIS="undef" SIGNAME="trigger_controller_1_trigger_c3">
+        <PORT DIR="O" NAME="trigger_c7" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c7">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/trigger_controller_2" HWVERSION="1.0" INSTANCE="trigger_controller_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_controller" VLNV="xilinx.com:user:trigger_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="top_level_trigger_controller_2_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="ext_trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_0_gpio2_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="microblaze_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="microblaze_reset" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_0" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_8_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_1" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_9_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_2" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_10_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_3" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_11_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rf_reset" SIGIS="rst" SIGNAME="proc_sys_reset_2_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_2" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c0" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c0">
+        <PORT DIR="O" NAME="trigger_c8" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c8">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="trigger_c1" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c1">
+        <PORT DIR="O" NAME="trigger_c9" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c9">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c2" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c3" SIGIS="undef" SIGNAME="trigger_controller_2_trigger_c3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/trigger_controller_3" HWVERSION="1.0" INSTANCE="trigger_controller_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="trigger_controller" VLNV="xilinx.com:user:trigger_controller:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="top_level_trigger_controller_3_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="ext_trigger_in" SIGIS="undef" SIGNAME="External_Ports_ext_trigger_0_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ext_trigger_0_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_0_gpio2_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="microblaze_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="microblaze_reset" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_0" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_12_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_1" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_13_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_2" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_14_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pipeline_active_in_3" SIGIS="undef" SIGNAME="rfsoc_data_pipeline_15_pipeline_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="pipeline_active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_dac3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_dac3"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rf_reset" SIGIS="rst" SIGNAME="proc_sys_reset_3_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_3" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c0" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c1" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c2" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="ext_trigger"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="trigger_c3" SIGIS="undef" SIGNAME="trigger_controller_3_trigger_c3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -18265,7 +18130,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_5" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_6" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="rf_clock"/>
-            <CONNECTION INSTANCE="trigger_controller_1" PORT="rf_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="dac2_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac2_clk_p">
@@ -18286,7 +18150,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="rf_clock"/>
-            <CONNECTION INSTANCE="trigger_controller_2" PORT="rf_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="dac3_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac3_clk_p">
@@ -18307,7 +18170,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="rf_clock"/>
-            <CONNECTION INSTANCE="trigger_controller_3" PORT="rf_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">

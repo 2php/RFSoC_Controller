@@ -1,17 +1,180 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Jul 16 18:36:25 2019
+// Date        : Tue Jul 16 22:00:31 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
-//               top_level_trigger_controller_0_0_ top_level_trigger_controller_2_0_sim_netlist.v
-// Design      : top_level_trigger_controller_2_0
+// Command     : write_verilog -force -mode funcsim
+//               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0_sim_netlist.v
+// Design      : top_level_trigger_controller_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "top_level_trigger_controller_0_0,trigger_controller,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
+(* X_CORE_INFO = "trigger_controller,Vivado 2019.1" *) 
+(* NotValidForBitStream *)
+module top_level_trigger_controller_0_0
+   (ext_trigger_in,
+    gpio_in,
+    microblaze_clk,
+    microblaze_reset,
+    pipeline_active_in_0,
+    pipeline_active_in_1,
+    pipeline_active_in_10,
+    pipeline_active_in_11,
+    pipeline_active_in_12,
+    pipeline_active_in_13,
+    pipeline_active_in_14,
+    pipeline_active_in_15,
+    pipeline_active_in_2,
+    pipeline_active_in_3,
+    pipeline_active_in_4,
+    pipeline_active_in_5,
+    pipeline_active_in_6,
+    pipeline_active_in_7,
+    pipeline_active_in_8,
+    pipeline_active_in_9,
+    rf_clk,
+    rf_reset,
+    trigger_c0,
+    trigger_c1,
+    trigger_c10,
+    trigger_c11,
+    trigger_c12,
+    trigger_c13,
+    trigger_c14,
+    trigger_c15,
+    trigger_c2,
+    trigger_c3,
+    trigger_c4,
+    trigger_c5,
+    trigger_c6,
+    trigger_c7,
+    trigger_c8,
+    trigger_c9);
+  input ext_trigger_in;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [15:0]gpio_in;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_RESET microblaze_reset, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_reset;
+  input pipeline_active_in_0;
+  input pipeline_active_in_1;
+  input pipeline_active_in_10;
+  input pipeline_active_in_11;
+  input pipeline_active_in_12;
+  input pipeline_active_in_13;
+  input pipeline_active_in_14;
+  input pipeline_active_in_15;
+  input pipeline_active_in_2;
+  input pipeline_active_in_3;
+  input pipeline_active_in_4;
+  input pipeline_active_in_5;
+  input pipeline_active_in_6;
+  input pipeline_active_in_7;
+  input pipeline_active_in_8;
+  input pipeline_active_in_9;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_RESET rf_reset, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_reset;
+  output trigger_c0;
+  output trigger_c1;
+  output trigger_c10;
+  output trigger_c11;
+  output trigger_c12;
+  output trigger_c13;
+  output trigger_c14;
+  output trigger_c15;
+  output trigger_c2;
+  output trigger_c3;
+  output trigger_c4;
+  output trigger_c5;
+  output trigger_c6;
+  output trigger_c7;
+  output trigger_c8;
+  output trigger_c9;
+
+  wire ext_trigger_in;
+  wire [15:0]gpio_in;
+  wire microblaze_clk;
+  wire microblaze_reset;
+  wire pipeline_active_in_0;
+  wire pipeline_active_in_1;
+  wire pipeline_active_in_10;
+  wire pipeline_active_in_11;
+  wire pipeline_active_in_12;
+  wire pipeline_active_in_13;
+  wire pipeline_active_in_14;
+  wire pipeline_active_in_15;
+  wire pipeline_active_in_2;
+  wire pipeline_active_in_3;
+  wire pipeline_active_in_4;
+  wire pipeline_active_in_5;
+  wire pipeline_active_in_6;
+  wire pipeline_active_in_7;
+  wire pipeline_active_in_8;
+  wire pipeline_active_in_9;
+  wire rf_clk;
+  wire rf_reset;
+  wire trigger_c0;
+  wire trigger_c1;
+  wire trigger_c10;
+  wire trigger_c11;
+  wire trigger_c12;
+  wire trigger_c13;
+  wire trigger_c14;
+  wire trigger_c15;
+  wire trigger_c2;
+  wire trigger_c3;
+  wire trigger_c4;
+  wire trigger_c5;
+  wire trigger_c6;
+  wire trigger_c7;
+  wire trigger_c8;
+  wire trigger_c9;
+
+  (* HW_HANDOFF = "trigger_controller.hwdef" *) 
+  top_level_trigger_controller_0_0_trigger_controller inst
+       (.ext_trigger_in(ext_trigger_in),
+        .gpio_in(gpio_in),
+        .microblaze_clk(microblaze_clk),
+        .microblaze_reset(microblaze_reset),
+        .pipeline_active_in_0(pipeline_active_in_0),
+        .pipeline_active_in_1(pipeline_active_in_1),
+        .pipeline_active_in_10(pipeline_active_in_10),
+        .pipeline_active_in_11(pipeline_active_in_11),
+        .pipeline_active_in_12(pipeline_active_in_12),
+        .pipeline_active_in_13(pipeline_active_in_13),
+        .pipeline_active_in_14(pipeline_active_in_14),
+        .pipeline_active_in_15(pipeline_active_in_15),
+        .pipeline_active_in_2(pipeline_active_in_2),
+        .pipeline_active_in_3(pipeline_active_in_3),
+        .pipeline_active_in_4(pipeline_active_in_4),
+        .pipeline_active_in_5(pipeline_active_in_5),
+        .pipeline_active_in_6(pipeline_active_in_6),
+        .pipeline_active_in_7(pipeline_active_in_7),
+        .pipeline_active_in_8(pipeline_active_in_8),
+        .pipeline_active_in_9(pipeline_active_in_9),
+        .rf_clk(rf_clk),
+        .rf_reset(rf_reset),
+        .trigger_c0(trigger_c0),
+        .trigger_c1(trigger_c1),
+        .trigger_c10(trigger_c10),
+        .trigger_c11(trigger_c11),
+        .trigger_c12(trigger_c12),
+        .trigger_c13(trigger_c13),
+        .trigger_c14(trigger_c14),
+        .trigger_c15(trigger_c15),
+        .trigger_c2(trigger_c2),
+        .trigger_c3(trigger_c3),
+        .trigger_c4(trigger_c4),
+        .trigger_c5(trigger_c5),
+        .trigger_c6(trigger_c6),
+        .trigger_c7(trigger_c7),
+        .trigger_c8(trigger_c8),
+        .trigger_c9(trigger_c9));
+endmodule
+
+(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
 module top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top
    (s_axis_tready,
     m_axis_tvalid,
@@ -137,73 +300,7 @@ module top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top
         .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_27 ,\gen_fifo.xpm_fifo_axis_inst_n_28 ,\gen_fifo.xpm_fifo_axis_inst_n_29 ,\gen_fifo.xpm_fifo_axis_inst_n_30 ,\gen_fifo.xpm_fifo_axis_inst_n_31 }));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "top_level_trigger_controller_2_0,trigger_controller,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
-(* X_CORE_INFO = "trigger_controller,Vivado 2019.1" *) 
-(* NotValidForBitStream *)
-module top_level_trigger_controller_0_0
-   (ext_trigger_in,
-    gpio_in,
-    microblaze_clk,
-    microblaze_reset,
-    pipeline_active_in_0,
-    pipeline_active_in_1,
-    pipeline_active_in_2,
-    pipeline_active_in_3,
-    rf_clk,
-    rf_reset,
-    trigger_c0,
-    trigger_c1,
-    trigger_c2,
-    trigger_c3);
-  input ext_trigger_in;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [15:0]gpio_in;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_RESET microblaze_reset, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_reset;
-  input pipeline_active_in_0;
-  input pipeline_active_in_1;
-  input pipeline_active_in_2;
-  input pipeline_active_in_3;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_RESET rf_reset, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0" *) input rf_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_reset;
-  output trigger_c0;
-  output trigger_c1;
-  output trigger_c2;
-  output trigger_c3;
-
-  wire ext_trigger_in;
-  wire [15:0]gpio_in;
-  wire microblaze_clk;
-  wire microblaze_reset;
-  wire pipeline_active_in_0;
-  wire pipeline_active_in_1;
-  wire pipeline_active_in_2;
-  wire pipeline_active_in_3;
-  wire rf_clk;
-  wire rf_reset;
-  wire trigger_c0;
-  wire trigger_c1;
-  wire trigger_c2;
-  wire trigger_c3;
-
-  (* HW_HANDOFF = "trigger_controller.hwdef" *) 
-  top_level_trigger_controller_0_0_trigger_controller inst
-       (.ext_trigger_in(ext_trigger_in),
-        .gpio_in(gpio_in),
-        .microblaze_clk(microblaze_clk),
-        .microblaze_reset(microblaze_reset),
-        .pipeline_active_in_0(pipeline_active_in_0),
-        .pipeline_active_in_1(pipeline_active_in_1),
-        .pipeline_active_in_2(pipeline_active_in_2),
-        .pipeline_active_in_3(pipeline_active_in_3),
-        .rf_clk(rf_clk),
-        .rf_reset(rf_reset),
-        .trigger_c0(trigger_c0),
-        .trigger_c1(trigger_c1),
-        .trigger_c2(trigger_c2),
-        .trigger_c3(trigger_c3));
-endmodule
-
-(* HW_HANDOFF = "trigger_controller.hwdef" *) 
+(* HW_HANDOFF = "trigger_controller.hwdef" *) (* ORIG_REF_NAME = "trigger_controller" *) 
 module top_level_trigger_controller_0_0_trigger_controller
    (ext_trigger_in,
     gpio_in,
@@ -211,28 +308,76 @@ module top_level_trigger_controller_0_0_trigger_controller
     microblaze_reset,
     pipeline_active_in_0,
     pipeline_active_in_1,
+    pipeline_active_in_10,
+    pipeline_active_in_11,
+    pipeline_active_in_12,
+    pipeline_active_in_13,
+    pipeline_active_in_14,
+    pipeline_active_in_15,
     pipeline_active_in_2,
     pipeline_active_in_3,
+    pipeline_active_in_4,
+    pipeline_active_in_5,
+    pipeline_active_in_6,
+    pipeline_active_in_7,
+    pipeline_active_in_8,
+    pipeline_active_in_9,
     rf_clk,
     rf_reset,
     trigger_c0,
     trigger_c1,
+    trigger_c10,
+    trigger_c11,
+    trigger_c12,
+    trigger_c13,
+    trigger_c14,
+    trigger_c15,
     trigger_c2,
-    trigger_c3);
+    trigger_c3,
+    trigger_c4,
+    trigger_c5,
+    trigger_c6,
+    trigger_c7,
+    trigger_c8,
+    trigger_c9);
   input ext_trigger_in;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef" *) input [15:0]gpio_in;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, ASSOCIATED_RESET microblaze_reset, CLK_DOMAIN trigger_controller_microblaze_clk, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input microblaze_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input microblaze_reset;
   input pipeline_active_in_0;
   input pipeline_active_in_1;
+  input pipeline_active_in_10;
+  input pipeline_active_in_11;
+  input pipeline_active_in_12;
+  input pipeline_active_in_13;
+  input pipeline_active_in_14;
+  input pipeline_active_in_15;
   input pipeline_active_in_2;
   input pipeline_active_in_3;
+  input pipeline_active_in_4;
+  input pipeline_active_in_5;
+  input pipeline_active_in_6;
+  input pipeline_active_in_7;
+  input pipeline_active_in_8;
+  input pipeline_active_in_9;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLK, ASSOCIATED_RESET rf_reset, CLK_DOMAIN trigger_controller_rf_clk, FREQ_HZ 250000000, INSERT_VIP 0, PHASE 0.000" *) input rf_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rf_reset;
   output trigger_c0;
   output trigger_c1;
+  output trigger_c10;
+  output trigger_c11;
+  output trigger_c12;
+  output trigger_c13;
+  output trigger_c14;
+  output trigger_c15;
   output trigger_c2;
   output trigger_c3;
+  output trigger_c4;
+  output trigger_c5;
+  output trigger_c6;
+  output trigger_c7;
+  output trigger_c8;
+  output trigger_c9;
 
   wire [15:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TVALID;
@@ -243,14 +388,38 @@ module top_level_trigger_controller_0_0_trigger_controller
   wire microblaze_reset;
   wire pipeline_active_in_0;
   wire pipeline_active_in_1;
+  wire pipeline_active_in_10;
+  wire pipeline_active_in_11;
+  wire pipeline_active_in_12;
+  wire pipeline_active_in_13;
+  wire pipeline_active_in_14;
+  wire pipeline_active_in_15;
   wire pipeline_active_in_2;
   wire pipeline_active_in_3;
+  wire pipeline_active_in_4;
+  wire pipeline_active_in_5;
+  wire pipeline_active_in_6;
+  wire pipeline_active_in_7;
+  wire pipeline_active_in_8;
+  wire pipeline_active_in_9;
   wire rf_clk;
   wire rf_reset;
   wire trigger_c0;
   wire trigger_c1;
+  wire trigger_c10;
+  wire trigger_c11;
+  wire trigger_c12;
+  wire trigger_c13;
+  wire trigger_c14;
+  wire trigger_c15;
   wire trigger_c2;
   wire trigger_c3;
+  wire trigger_c4;
+  wire trigger_c5;
+  wire trigger_c6;
+  wire trigger_c7;
+  wire trigger_c8;
+  wire trigger_c9;
 
   (* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
@@ -271,17 +440,42 @@ module top_level_trigger_controller_0_0_trigger_controller
         .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA[11]),
         .pipeline_active_in_0(pipeline_active_in_0),
         .pipeline_active_in_1(pipeline_active_in_1),
+        .pipeline_active_in_10(pipeline_active_in_10),
+        .pipeline_active_in_11(pipeline_active_in_11),
+        .pipeline_active_in_12(pipeline_active_in_12),
+        .pipeline_active_in_13(pipeline_active_in_13),
+        .pipeline_active_in_14(pipeline_active_in_14),
+        .pipeline_active_in_15(pipeline_active_in_15),
         .pipeline_active_in_2(pipeline_active_in_2),
         .pipeline_active_in_3(pipeline_active_in_3),
+        .pipeline_active_in_4(pipeline_active_in_4),
+        .pipeline_active_in_5(pipeline_active_in_5),
+        .pipeline_active_in_6(pipeline_active_in_6),
+        .pipeline_active_in_7(pipeline_active_in_7),
+        .pipeline_active_in_8(pipeline_active_in_8),
+        .pipeline_active_in_9(pipeline_active_in_9),
         .rf_clk(rf_clk),
         .rf_reset(rf_reset),
         .trigger_c0(trigger_c0),
         .trigger_c1(trigger_c1),
+        .trigger_c10(trigger_c10),
+        .trigger_c11(trigger_c11),
+        .trigger_c12(trigger_c12),
+        .trigger_c13(trigger_c13),
+        .trigger_c14(trigger_c14),
+        .trigger_c15(trigger_c15),
         .trigger_c2(trigger_c2),
-        .trigger_c3(trigger_c3));
+        .trigger_c3(trigger_c3),
+        .trigger_c4(trigger_c4),
+        .trigger_c5(trigger_c5),
+        .trigger_c6(trigger_c6),
+        .trigger_c7(trigger_c7),
+        .trigger_c8(trigger_c8),
+        .trigger_c9(trigger_c9));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "trigger_controller_axis_data_fifo_0_0" *) 
+(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0
    (s_axis_aresetn,
     s_axis_aclk,
@@ -324,84 +518,230 @@ module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
+(* ORIG_REF_NAME = "trigger_controller_trigger_module_0_0" *) 
 module top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0
    (trigger_c1,
     trigger_c2,
     trigger_c3,
+    trigger_c4,
+    trigger_c5,
+    trigger_c6,
+    trigger_c7,
+    trigger_c8,
+    trigger_c9,
+    trigger_c10,
+    trigger_c11,
+    trigger_c12,
+    trigger_c13,
+    trigger_c14,
+    trigger_c15,
     trigger_c0,
     rf_clk,
     m_axis_tdata,
     ext_trigger_in,
-    pipeline_active_in_0,
+    pipeline_active_in_13,
+    pipeline_active_in_11,
+    pipeline_active_in_9,
+    pipeline_active_in_7,
+    pipeline_active_in_15,
     pipeline_active_in_1,
-    pipeline_active_in_3,
+    pipeline_active_in_12,
+    pipeline_active_in_6,
+    pipeline_active_in_14,
+    pipeline_active_in_4,
+    pipeline_active_in_8,
     pipeline_active_in_2,
+    pipeline_active_in_0,
+    pipeline_active_in_3,
+    pipeline_active_in_10,
+    pipeline_active_in_5,
     rf_reset);
   output trigger_c1;
   output trigger_c2;
   output trigger_c3;
+  output trigger_c4;
+  output trigger_c5;
+  output trigger_c6;
+  output trigger_c7;
+  output trigger_c8;
+  output trigger_c9;
+  output trigger_c10;
+  output trigger_c11;
+  output trigger_c12;
+  output trigger_c13;
+  output trigger_c14;
+  output trigger_c15;
   output trigger_c0;
   input rf_clk;
   input [0:0]m_axis_tdata;
   input ext_trigger_in;
-  input pipeline_active_in_0;
+  input pipeline_active_in_13;
+  input pipeline_active_in_11;
+  input pipeline_active_in_9;
+  input pipeline_active_in_7;
+  input pipeline_active_in_15;
   input pipeline_active_in_1;
-  input pipeline_active_in_3;
+  input pipeline_active_in_12;
+  input pipeline_active_in_6;
+  input pipeline_active_in_14;
+  input pipeline_active_in_4;
+  input pipeline_active_in_8;
   input pipeline_active_in_2;
+  input pipeline_active_in_0;
+  input pipeline_active_in_3;
+  input pipeline_active_in_10;
+  input pipeline_active_in_5;
   input rf_reset;
 
   wire ext_trigger_in;
   wire [0:0]m_axis_tdata;
   wire pipeline_active_in_0;
   wire pipeline_active_in_1;
+  wire pipeline_active_in_10;
+  wire pipeline_active_in_11;
+  wire pipeline_active_in_12;
+  wire pipeline_active_in_13;
+  wire pipeline_active_in_14;
+  wire pipeline_active_in_15;
   wire pipeline_active_in_2;
   wire pipeline_active_in_3;
+  wire pipeline_active_in_4;
+  wire pipeline_active_in_5;
+  wire pipeline_active_in_6;
+  wire pipeline_active_in_7;
+  wire pipeline_active_in_8;
+  wire pipeline_active_in_9;
   wire rf_clk;
   wire rf_reset;
   wire trigger_c0;
   wire trigger_c1;
+  wire trigger_c10;
+  wire trigger_c11;
+  wire trigger_c12;
+  wire trigger_c13;
+  wire trigger_c14;
+  wire trigger_c15;
   wire trigger_c2;
   wire trigger_c3;
+  wire trigger_c4;
+  wire trigger_c5;
+  wire trigger_c6;
+  wire trigger_c7;
+  wire trigger_c8;
+  wire trigger_c9;
 
   top_level_trigger_controller_0_0_trigger_module inst
        (.ext_trigger_in(ext_trigger_in),
         .m_axis_tdata(m_axis_tdata),
         .pipeline_active_in_0(pipeline_active_in_0),
         .pipeline_active_in_1(pipeline_active_in_1),
+        .pipeline_active_in_10(pipeline_active_in_10),
+        .pipeline_active_in_11(pipeline_active_in_11),
+        .pipeline_active_in_12(pipeline_active_in_12),
+        .pipeline_active_in_13(pipeline_active_in_13),
+        .pipeline_active_in_14(pipeline_active_in_14),
+        .pipeline_active_in_15(pipeline_active_in_15),
         .pipeline_active_in_2(pipeline_active_in_2),
         .pipeline_active_in_3(pipeline_active_in_3),
+        .pipeline_active_in_4(pipeline_active_in_4),
+        .pipeline_active_in_5(pipeline_active_in_5),
+        .pipeline_active_in_6(pipeline_active_in_6),
+        .pipeline_active_in_7(pipeline_active_in_7),
+        .pipeline_active_in_8(pipeline_active_in_8),
+        .pipeline_active_in_9(pipeline_active_in_9),
         .rf_clk(rf_clk),
         .rf_reset(rf_reset),
         .trigger_c0(trigger_c0),
         .trigger_c1(trigger_c1),
+        .trigger_c10(trigger_c10),
+        .trigger_c11(trigger_c11),
+        .trigger_c12(trigger_c12),
+        .trigger_c13(trigger_c13),
+        .trigger_c14(trigger_c14),
+        .trigger_c15(trigger_c15),
         .trigger_c2(trigger_c2),
-        .trigger_c3(trigger_c3));
+        .trigger_c3(trigger_c3),
+        .trigger_c4(trigger_c4),
+        .trigger_c5(trigger_c5),
+        .trigger_c6(trigger_c6),
+        .trigger_c7(trigger_c7),
+        .trigger_c8(trigger_c8),
+        .trigger_c9(trigger_c9));
 endmodule
 
+(* ORIG_REF_NAME = "trigger_module" *) 
 module top_level_trigger_controller_0_0_trigger_module
    (trigger_c1,
     trigger_c2,
     trigger_c3,
+    trigger_c4,
+    trigger_c5,
+    trigger_c6,
+    trigger_c7,
+    trigger_c8,
+    trigger_c9,
+    trigger_c10,
+    trigger_c11,
+    trigger_c12,
+    trigger_c13,
+    trigger_c14,
+    trigger_c15,
     trigger_c0,
     rf_clk,
     m_axis_tdata,
     ext_trigger_in,
-    pipeline_active_in_0,
+    pipeline_active_in_13,
+    pipeline_active_in_11,
+    pipeline_active_in_9,
+    pipeline_active_in_7,
+    pipeline_active_in_15,
     pipeline_active_in_1,
-    pipeline_active_in_3,
+    pipeline_active_in_12,
+    pipeline_active_in_6,
+    pipeline_active_in_14,
+    pipeline_active_in_4,
+    pipeline_active_in_8,
     pipeline_active_in_2,
+    pipeline_active_in_0,
+    pipeline_active_in_3,
+    pipeline_active_in_10,
+    pipeline_active_in_5,
     rf_reset);
   output trigger_c1;
   output trigger_c2;
   output trigger_c3;
+  output trigger_c4;
+  output trigger_c5;
+  output trigger_c6;
+  output trigger_c7;
+  output trigger_c8;
+  output trigger_c9;
+  output trigger_c10;
+  output trigger_c11;
+  output trigger_c12;
+  output trigger_c13;
+  output trigger_c14;
+  output trigger_c15;
   output trigger_c0;
   input rf_clk;
   input [0:0]m_axis_tdata;
   input ext_trigger_in;
-  input pipeline_active_in_0;
+  input pipeline_active_in_13;
+  input pipeline_active_in_11;
+  input pipeline_active_in_9;
+  input pipeline_active_in_7;
+  input pipeline_active_in_15;
   input pipeline_active_in_1;
-  input pipeline_active_in_3;
+  input pipeline_active_in_12;
+  input pipeline_active_in_6;
+  input pipeline_active_in_14;
+  input pipeline_active_in_4;
+  input pipeline_active_in_8;
   input pipeline_active_in_2;
+  input pipeline_active_in_0;
+  input pipeline_active_in_3;
+  input pipeline_active_in_10;
+  input pipeline_active_in_5;
   input rf_reset;
 
   wire \FSM_onehot_state[2]_i_1_n_0 ;
@@ -409,6 +749,10 @@ module top_level_trigger_controller_0_0_trigger_module
   wire \FSM_onehot_state[2]_i_3_n_0 ;
   wire \FSM_onehot_state[2]_i_4_n_0 ;
   wire \FSM_onehot_state[2]_i_5_n_0 ;
+  wire \FSM_onehot_state[2]_i_6_n_0 ;
+  wire \FSM_onehot_state[2]_i_7_n_0 ;
+  wire \FSM_onehot_state[2]_i_8_n_0 ;
+  wire \FSM_onehot_state[2]_i_9_n_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
   wire \FSM_onehot_state_reg_n_0_[2] ;
   wire count;
@@ -424,20 +768,57 @@ module top_level_trigger_controller_0_0_trigger_module
   wire p_0_in;
   wire pipeline_active_in_0;
   wire pipeline_active_in_1;
+  wire pipeline_active_in_10;
+  wire pipeline_active_in_11;
+  wire pipeline_active_in_12;
+  wire pipeline_active_in_13;
+  wire pipeline_active_in_14;
+  wire pipeline_active_in_15;
   wire pipeline_active_in_2;
   wire pipeline_active_in_3;
+  wire pipeline_active_in_4;
+  wire pipeline_active_in_5;
+  wire pipeline_active_in_6;
+  wire pipeline_active_in_7;
+  wire pipeline_active_in_8;
+  wire pipeline_active_in_9;
   wire rf_clk;
   wire rf_reset;
   (* DONT_TOUCH *) wire trigger_c0;
   wire trigger_c0_i_1_n_0;
   (* DONT_TOUCH *) wire trigger_c1;
+  (* DONT_TOUCH *) wire trigger_c10;
+  wire trigger_c10_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c11;
+  wire trigger_c11_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c12;
+  wire trigger_c12_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c13;
+  wire trigger_c13_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c14;
+  wire trigger_c14_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c15;
+  wire trigger_c15_i_1_n_0;
   wire trigger_c1_i_1_n_0;
   wire trigger_c1_i_2_n_0;
   wire trigger_c1_i_3_n_0;
+  wire trigger_c1_i_4_n_0;
   (* DONT_TOUCH *) wire trigger_c2;
   wire trigger_c2_i_1_n_0;
   (* DONT_TOUCH *) wire trigger_c3;
   wire trigger_c3_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c4;
+  wire trigger_c4_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c5;
+  wire trigger_c5_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c6;
+  wire trigger_c6_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c7;
+  wire trigger_c7_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c8;
+  wire trigger_c8_i_1_n_0;
+  (* DONT_TOUCH *) wire trigger_c9;
+  wire trigger_c9_i_1_n_0;
   wire [7:1]\NLW_count_reg[0]_i_1_CO_UNCONNECTED ;
   wire [7:2]\NLW_count_reg[0]_i_1_O_UNCONNECTED ;
 
@@ -465,12 +846,12 @@ module top_level_trigger_controller_0_0_trigger_module
         .I2(count_reg[1]),
         .O(\FSM_onehot_state[2]_i_3_n_0 ));
   LUT4 #(
-    .INIT(16'h0001)) 
+    .INIT(16'h0004)) 
     \FSM_onehot_state[2]_i_4 
-       (.I0(pipeline_active_in_0),
-        .I1(pipeline_active_in_1),
-        .I2(pipeline_active_in_3),
-        .I3(pipeline_active_in_2),
+       (.I0(\FSM_onehot_state[2]_i_6_n_0 ),
+        .I1(\FSM_onehot_state[2]_i_7_n_0 ),
+        .I2(\FSM_onehot_state[2]_i_8_n_0 ),
+        .I3(\FSM_onehot_state[2]_i_9_n_0 ),
         .O(\FSM_onehot_state[2]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
@@ -478,6 +859,38 @@ module top_level_trigger_controller_0_0_trigger_module
        (.I0(m_axis_tdata),
         .I1(ext_trigger_in),
         .O(\FSM_onehot_state[2]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_onehot_state[2]_i_6 
+       (.I0(pipeline_active_in_14),
+        .I1(pipeline_active_in_4),
+        .I2(pipeline_active_in_8),
+        .I3(pipeline_active_in_2),
+        .O(\FSM_onehot_state[2]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \FSM_onehot_state[2]_i_7 
+       (.I0(pipeline_active_in_0),
+        .I1(pipeline_active_in_3),
+        .I2(pipeline_active_in_10),
+        .I3(pipeline_active_in_5),
+        .O(\FSM_onehot_state[2]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_onehot_state[2]_i_8 
+       (.I0(pipeline_active_in_13),
+        .I1(pipeline_active_in_11),
+        .I2(pipeline_active_in_9),
+        .I3(pipeline_active_in_7),
+        .O(\FSM_onehot_state[2]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_onehot_state[2]_i_9 
+       (.I0(pipeline_active_in_15),
+        .I1(pipeline_active_in_1),
+        .I2(pipeline_active_in_12),
+        .I3(pipeline_active_in_6),
+        .O(\FSM_onehot_state[2]_i_9_n_0 ));
   (* FSM_ENCODED_STATES = "state_wait_trigger:001,state_trigger:010,state_cleanup:100," *) 
   FDPE #(
     .INIT(1'b1)) 
@@ -556,15 +969,12 @@ module top_level_trigger_controller_0_0_trigger_module
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(\count_reg[0]_i_1_n_5 ),
         .Q(count_reg[2]));
-  LUT6 #(
-    .INIT(64'hFFFFA80000000000)) 
+  LUT3 #(
+    .INIT(8'hE0)) 
     trigger_c0_i_1
-       (.I0(\FSM_onehot_state[2]_i_4_n_0 ),
-        .I1(m_axis_tdata),
-        .I2(ext_trigger_in),
-        .I3(\FSM_onehot_state_reg_n_0_[0] ),
-        .I4(trigger_c0),
-        .I5(trigger_c1_i_3_n_0),
+       (.I0(trigger_c1_i_4_n_0),
+        .I1(trigger_c0),
+        .I2(trigger_c1_i_3_n_0),
         .O(trigger_c0_i_1_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
@@ -576,21 +986,120 @@ module top_level_trigger_controller_0_0_trigger_module
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(trigger_c0_i_1_n_0),
         .Q(trigger_c0));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c10_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c10),
+        .O(trigger_c10_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c10_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c10_i_1_n_0),
+        .Q(trigger_c10));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c11_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c11),
+        .O(trigger_c11_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c11_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c11_i_1_n_0),
+        .Q(trigger_c11));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c12_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c12),
+        .O(trigger_c12_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c12_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c12_i_1_n_0),
+        .Q(trigger_c12));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c13_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c13),
+        .O(trigger_c13_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c13_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c13_i_1_n_0),
+        .Q(trigger_c13));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c14_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c14),
+        .O(trigger_c14_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c14_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c14_i_1_n_0),
+        .Q(trigger_c14));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c15_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c15),
+        .O(trigger_c15_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c15_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c15_i_1_n_0),
+        .Q(trigger_c15));
   LUT2 #(
     .INIT(4'hE)) 
     trigger_c1_i_1
        (.I0(count),
         .I1(\FSM_onehot_state_reg_n_0_[0] ),
         .O(trigger_c1_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hAAAAAAAA88800000)) 
+  LUT3 #(
+    .INIT(8'hA8)) 
     trigger_c1_i_2
        (.I0(trigger_c1_i_3_n_0),
-        .I1(\FSM_onehot_state[2]_i_4_n_0 ),
-        .I2(m_axis_tdata),
-        .I3(ext_trigger_in),
-        .I4(\FSM_onehot_state_reg_n_0_[0] ),
-        .I5(trigger_c1),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c1),
         .O(trigger_c1_i_2_n_0));
   (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
@@ -602,6 +1111,16 @@ module top_level_trigger_controller_0_0_trigger_module
         .I3(count_reg[0]),
         .I4(count_reg[1]),
         .O(trigger_c1_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h0010000000000000)) 
+    trigger_c1_i_4
+       (.I0(\FSM_onehot_state[2]_i_9_n_0 ),
+        .I1(\FSM_onehot_state[2]_i_8_n_0 ),
+        .I2(\FSM_onehot_state[2]_i_7_n_0 ),
+        .I3(\FSM_onehot_state[2]_i_6_n_0 ),
+        .I4(\FSM_onehot_state[2]_i_5_n_0 ),
+        .I5(\FSM_onehot_state_reg_n_0_[0] ),
+        .O(trigger_c1_i_4_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
   FDCE #(
@@ -612,15 +1131,12 @@ module top_level_trigger_controller_0_0_trigger_module
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(trigger_c1_i_2_n_0),
         .Q(trigger_c1));
-  LUT6 #(
-    .INIT(64'hAAAAAAAA88800000)) 
+  LUT3 #(
+    .INIT(8'hA8)) 
     trigger_c2_i_1
        (.I0(trigger_c1_i_3_n_0),
-        .I1(\FSM_onehot_state[2]_i_4_n_0 ),
-        .I2(m_axis_tdata),
-        .I3(ext_trigger_in),
-        .I4(\FSM_onehot_state_reg_n_0_[0] ),
-        .I5(trigger_c2),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c2),
         .O(trigger_c2_i_1_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
@@ -632,15 +1148,12 @@ module top_level_trigger_controller_0_0_trigger_module
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(trigger_c2_i_1_n_0),
         .Q(trigger_c2));
-  LUT6 #(
-    .INIT(64'hAAAAAAAA88800000)) 
+  LUT3 #(
+    .INIT(8'hA8)) 
     trigger_c3_i_1
        (.I0(trigger_c1_i_3_n_0),
-        .I1(\FSM_onehot_state[2]_i_4_n_0 ),
-        .I2(m_axis_tdata),
-        .I3(ext_trigger_in),
-        .I4(\FSM_onehot_state_reg_n_0_[0] ),
-        .I5(trigger_c3),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c3),
         .O(trigger_c3_i_1_n_0));
   (* DONT_TOUCH *) 
   (* KEEP = "yes" *) 
@@ -652,11 +1165,114 @@ module top_level_trigger_controller_0_0_trigger_module
         .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
         .D(trigger_c3_i_1_n_0),
         .Q(trigger_c3));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c4_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c4),
+        .O(trigger_c4_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c4_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c4_i_1_n_0),
+        .Q(trigger_c4));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c5_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c5),
+        .O(trigger_c5_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c5_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c5_i_1_n_0),
+        .Q(trigger_c5));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c6_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c6),
+        .O(trigger_c6_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c6_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c6_i_1_n_0),
+        .Q(trigger_c6));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c7_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c7),
+        .O(trigger_c7_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c7_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c7_i_1_n_0),
+        .Q(trigger_c7));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c8_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c8),
+        .O(trigger_c8_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c8_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c8_i_1_n_0),
+        .Q(trigger_c8));
+  LUT3 #(
+    .INIT(8'hA8)) 
+    trigger_c9_i_1
+       (.I0(trigger_c1_i_3_n_0),
+        .I1(trigger_c1_i_4_n_0),
+        .I2(trigger_c9),
+        .O(trigger_c9_i_1_n_0));
+  (* DONT_TOUCH *) 
+  (* KEEP = "yes" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    trigger_c9_reg
+       (.C(rf_clk),
+        .CE(trigger_c1_i_1_n_0),
+        .CLR(\FSM_onehot_state[2]_i_2_n_0 ),
+        .D(trigger_c9_i_1_n_0),
+        .Q(trigger_c9));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
-(* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
+(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "GRAY" *) 
 module top_level_trigger_controller_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -1650,8 +2266,8 @@ module top_level_trigger_controller_0_0_xpm_cdc_gray__parameterized1
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "3" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module top_level_trigger_controller_0_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -1802,6 +2418,7 @@ module top_level_trigger_controller_0_0_xpm_cdc_sync_rst__4
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_trigger_controller_0_0_xpm_counter_updn
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -2449,15 +3066,16 @@ endmodule
 (* CLOCKING_MODE = "independent_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
 (* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* PACKET_FIFO = "false" *) (* PKT_SIZE_LT8 = "1'b0" *) 
-(* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) (* P_COMMON_CLOCK = "0" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_PKT_MODE = "0" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* TDATA_OFFSET = "16" *) (* TDATA_WIDTH = "16" *) (* TDEST_OFFSET = "22" *) 
-(* TDEST_WIDTH = "1" *) (* TID_OFFSET = "21" *) (* TID_WIDTH = "1" *) 
-(* TKEEP_OFFSET = "20" *) (* TSTRB_OFFSET = "18" *) (* TUSER_MAX_WIDTH = "4073" *) 
-(* TUSER_OFFSET = "23" *) (* TUSER_WIDTH = "1" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
+(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
+(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "16" *) (* TDATA_WIDTH = "16" *) 
+(* TDEST_OFFSET = "22" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "21" *) 
+(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "20" *) (* TSTRB_OFFSET = "18" *) 
+(* TUSER_MAX_WIDTH = "4073" *) (* TUSER_OFFSET = "23" *) (* TUSER_WIDTH = "1" *) 
+(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
+(* XPM_MODULE = "TRUE" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_axis
    (s_aresetn,
     s_aclk,
@@ -2701,18 +3319,18 @@ endmodule
 (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
 (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
 (* FIFO_SIZE = "384" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "11" *) 
-(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) (* PF_THRESH_MAX = "11" *) 
-(* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
-(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "24" *) 
-(* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "24" *) 
-(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "5" *) 
-(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
+(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
+(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) 
+(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
+(* READ_DATA_WIDTH = "24" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "24" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "5" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -3187,6 +3805,7 @@ module top_level_trigger_controller_0_0_xpm_fifo_base
         .wrst_busy(wrst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -3222,6 +3841,7 @@ module top_level_trigger_controller_0_0_xpm_fifo_reg_bit
         .O(clr_full));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_reg_vec
    (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
     \syncstages_ff_reg[2] ,
@@ -3432,6 +4052,7 @@ module top_level_trigger_controller_0_0_xpm_fifo_reg_vec_0
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_rst
    (SR,
     wrst_busy,
@@ -3814,23 +4435,24 @@ endmodule
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "384" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
-(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "24" *) 
-(* P_MIN_WIDTH_DATA_A = "24" *) (* P_MIN_WIDTH_DATA_B = "24" *) (* P_MIN_WIDTH_DATA_ECC = "24" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "24" *) (* P_NUM_COLS_WRITE_A = "1" *) 
-(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
-(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
-(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
-(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "24" *) 
-(* P_WIDTH_COL_WRITE_B = "24" *) (* READ_DATA_WIDTH_A = "24" *) (* READ_DATA_WIDTH_B = "24" *) 
-(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
-(* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "24" *) 
-(* WRITE_DATA_WIDTH_B = "24" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
-(* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "24" *) (* rstb_loop_iter = "24" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
+(* P_MIN_WIDTH_DATA = "24" *) (* P_MIN_WIDTH_DATA_A = "24" *) (* P_MIN_WIDTH_DATA_B = "24" *) 
+(* P_MIN_WIDTH_DATA_ECC = "24" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "24" *) 
+(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
+(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
+(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
+(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
+(* P_WIDTH_COL_WRITE_A = "24" *) (* P_WIDTH_COL_WRITE_B = "24" *) (* READ_DATA_WIDTH_A = "24" *) 
+(* READ_DATA_WIDTH_B = "24" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "24" *) (* WRITE_DATA_WIDTH_B = "24" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "24" *) 
+(* rstb_loop_iter = "24" *) 
 module top_level_trigger_controller_0_0_xpm_memory_base
    (sleep,
     clka,

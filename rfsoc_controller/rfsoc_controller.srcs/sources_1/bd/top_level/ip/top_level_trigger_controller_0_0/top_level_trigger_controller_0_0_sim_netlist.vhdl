@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jul 16 18:36:25 2019
+-- Date        : Tue Jul 16 22:00:31 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
---               top_level_trigger_controller_0_0_ top_level_trigger_controller_2_0_sim_netlist.vhdl
--- Design      : top_level_trigger_controller_2_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0_sim_netlist.vhdl
+-- Design      : top_level_trigger_controller_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu29dr-ffvf1760-2-e
@@ -19,16 +19,42 @@ entity top_level_trigger_controller_0_0_trigger_module is
     trigger_c1 : out STD_LOGIC;
     trigger_c2 : out STD_LOGIC;
     trigger_c3 : out STD_LOGIC;
+    trigger_c4 : out STD_LOGIC;
+    trigger_c5 : out STD_LOGIC;
+    trigger_c6 : out STD_LOGIC;
+    trigger_c7 : out STD_LOGIC;
+    trigger_c8 : out STD_LOGIC;
+    trigger_c9 : out STD_LOGIC;
+    trigger_c10 : out STD_LOGIC;
+    trigger_c11 : out STD_LOGIC;
+    trigger_c12 : out STD_LOGIC;
+    trigger_c13 : out STD_LOGIC;
+    trigger_c14 : out STD_LOGIC;
+    trigger_c15 : out STD_LOGIC;
     trigger_c0 : out STD_LOGIC;
     rf_clk : in STD_LOGIC;
     m_axis_tdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     ext_trigger_in : in STD_LOGIC;
-    pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     pipeline_active_in_1 : in STD_LOGIC;
-    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
     pipeline_active_in_2 : in STD_LOGIC;
+    pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
     rf_reset : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_module : entity is "trigger_module";
 end top_level_trigger_controller_0_0_trigger_module;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
@@ -37,6 +63,10 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
   signal \FSM_onehot_state[2]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_5_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_6_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_7_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_8_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_9_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
   signal count : STD_LOGIC;
@@ -54,15 +84,52 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
   signal trigger_c0_i_1_n_0 : STD_LOGIC;
   signal \^trigger_c1\ : STD_LOGIC;
   attribute DONT_TOUCH of trigger_c1 : signal is std.standard.true;
+  signal \^trigger_c10\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c10 : signal is std.standard.true;
+  signal trigger_c10_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c11\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c11 : signal is std.standard.true;
+  signal trigger_c11_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c12\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c12 : signal is std.standard.true;
+  signal trigger_c12_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c13\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c13 : signal is std.standard.true;
+  signal trigger_c13_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c14\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c14 : signal is std.standard.true;
+  signal trigger_c14_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c15\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c15 : signal is std.standard.true;
+  signal trigger_c15_i_1_n_0 : STD_LOGIC;
   signal trigger_c1_i_1_n_0 : STD_LOGIC;
   signal trigger_c1_i_2_n_0 : STD_LOGIC;
   signal trigger_c1_i_3_n_0 : STD_LOGIC;
+  signal trigger_c1_i_4_n_0 : STD_LOGIC;
   signal \^trigger_c2\ : STD_LOGIC;
   attribute DONT_TOUCH of trigger_c2 : signal is std.standard.true;
   signal trigger_c2_i_1_n_0 : STD_LOGIC;
   signal \^trigger_c3\ : STD_LOGIC;
   attribute DONT_TOUCH of trigger_c3 : signal is std.standard.true;
   signal trigger_c3_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c4\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c4 : signal is std.standard.true;
+  signal trigger_c4_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c5\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c5 : signal is std.standard.true;
+  signal trigger_c5_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c6\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c6 : signal is std.standard.true;
+  signal trigger_c6_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c7\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c7 : signal is std.standard.true;
+  signal trigger_c7_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c8\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c8 : signal is std.standard.true;
+  signal trigger_c8_i_1_n_0 : STD_LOGIC;
+  signal \^trigger_c9\ : STD_LOGIC;
+  attribute DONT_TOUCH of trigger_c9 : signal is std.standard.true;
+  signal trigger_c9_i_1_n_0 : STD_LOGIC;
   signal \NLW_count_reg[0]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal \NLW_count_reg[0]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 2 );
   attribute SOFT_HLUTNM : string;
@@ -74,6 +141,18 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
   attribute DONT_TOUCH of trigger_c0_reg : label is std.standard.true;
   attribute KEEP : string;
   attribute KEEP of trigger_c0_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c10_reg : label is std.standard.true;
+  attribute KEEP of trigger_c10_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c11_reg : label is std.standard.true;
+  attribute KEEP of trigger_c11_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c12_reg : label is std.standard.true;
+  attribute KEEP of trigger_c12_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c13_reg : label is std.standard.true;
+  attribute KEEP of trigger_c13_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c14_reg : label is std.standard.true;
+  attribute KEEP of trigger_c14_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c15_reg : label is std.standard.true;
+  attribute KEEP of trigger_c15_reg : label is "yes";
   attribute SOFT_HLUTNM of trigger_c1_i_3 : label is "soft_lutpair21";
   attribute DONT_TOUCH of trigger_c1_reg : label is std.standard.true;
   attribute KEEP of trigger_c1_reg : label is "yes";
@@ -81,11 +160,35 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
   attribute KEEP of trigger_c2_reg : label is "yes";
   attribute DONT_TOUCH of trigger_c3_reg : label is std.standard.true;
   attribute KEEP of trigger_c3_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c4_reg : label is std.standard.true;
+  attribute KEEP of trigger_c4_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c5_reg : label is std.standard.true;
+  attribute KEEP of trigger_c5_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c6_reg : label is std.standard.true;
+  attribute KEEP of trigger_c6_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c7_reg : label is std.standard.true;
+  attribute KEEP of trigger_c7_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c8_reg : label is std.standard.true;
+  attribute KEEP of trigger_c8_reg : label is "yes";
+  attribute DONT_TOUCH of trigger_c9_reg : label is std.standard.true;
+  attribute KEEP of trigger_c9_reg : label is "yes";
 begin
   trigger_c0 <= \^trigger_c0\;
   trigger_c1 <= \^trigger_c1\;
+  trigger_c10 <= \^trigger_c10\;
+  trigger_c11 <= \^trigger_c11\;
+  trigger_c12 <= \^trigger_c12\;
+  trigger_c13 <= \^trigger_c13\;
+  trigger_c14 <= \^trigger_c14\;
+  trigger_c15 <= \^trigger_c15\;
   trigger_c2 <= \^trigger_c2\;
   trigger_c3 <= \^trigger_c3\;
+  trigger_c4 <= \^trigger_c4\;
+  trigger_c5 <= \^trigger_c5\;
+  trigger_c6 <= \^trigger_c6\;
+  trigger_c7 <= \^trigger_c7\;
+  trigger_c8 <= \^trigger_c8\;
+  trigger_c9 <= \^trigger_c9\;
 \FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"F8F8F8888888F888"
@@ -119,13 +222,13 @@ begin
     );
 \FSM_onehot_state[2]_i_4\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0001"
+      INIT => X"0004"
     )
         port map (
-      I0 => pipeline_active_in_0,
-      I1 => pipeline_active_in_1,
-      I2 => pipeline_active_in_3,
-      I3 => pipeline_active_in_2,
+      I0 => \FSM_onehot_state[2]_i_6_n_0\,
+      I1 => \FSM_onehot_state[2]_i_7_n_0\,
+      I2 => \FSM_onehot_state[2]_i_8_n_0\,
+      I3 => \FSM_onehot_state[2]_i_9_n_0\,
       O => \FSM_onehot_state[2]_i_4_n_0\
     );
 \FSM_onehot_state[2]_i_5\: unisim.vcomponents.LUT2
@@ -136,6 +239,50 @@ begin
       I0 => m_axis_tdata(0),
       I1 => ext_trigger_in,
       O => \FSM_onehot_state[2]_i_5_n_0\
+    );
+\FSM_onehot_state[2]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_14,
+      I1 => pipeline_active_in_4,
+      I2 => pipeline_active_in_8,
+      I3 => pipeline_active_in_2,
+      O => \FSM_onehot_state[2]_i_6_n_0\
+    );
+\FSM_onehot_state[2]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => pipeline_active_in_0,
+      I1 => pipeline_active_in_3,
+      I2 => pipeline_active_in_10,
+      I3 => pipeline_active_in_5,
+      O => \FSM_onehot_state[2]_i_7_n_0\
+    );
+\FSM_onehot_state[2]_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_13,
+      I1 => pipeline_active_in_11,
+      I2 => pipeline_active_in_9,
+      I3 => pipeline_active_in_7,
+      O => \FSM_onehot_state[2]_i_8_n_0\
+    );
+\FSM_onehot_state[2]_i_9\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pipeline_active_in_15,
+      I1 => pipeline_active_in_1,
+      I2 => pipeline_active_in_12,
+      I3 => pipeline_active_in_6,
+      O => \FSM_onehot_state[2]_i_9_n_0\
     );
 \FSM_onehot_state_reg[0]\: unisim.vcomponents.FDPE
     generic map(
@@ -249,17 +396,14 @@ begin
       D => \count_reg[0]_i_1_n_5\,
       Q => count_reg(2)
     );
-trigger_c0_i_1: unisim.vcomponents.LUT6
+trigger_c0_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFA80000000000"
+      INIT => X"E0"
     )
         port map (
-      I0 => \FSM_onehot_state[2]_i_4_n_0\,
-      I1 => m_axis_tdata(0),
-      I2 => ext_trigger_in,
-      I3 => \FSM_onehot_state_reg_n_0_[0]\,
-      I4 => \^trigger_c0\,
-      I5 => trigger_c1_i_3_n_0,
+      I0 => trigger_c1_i_4_n_0,
+      I1 => \^trigger_c0\,
+      I2 => trigger_c1_i_3_n_0,
       O => trigger_c0_i_1_n_0
     );
 trigger_c0_reg: unisim.vcomponents.FDCE
@@ -273,6 +417,132 @@ trigger_c0_reg: unisim.vcomponents.FDCE
       D => trigger_c0_i_1_n_0,
       Q => \^trigger_c0\
     );
+trigger_c10_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c10\,
+      O => trigger_c10_i_1_n_0
+    );
+trigger_c10_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c10_i_1_n_0,
+      Q => \^trigger_c10\
+    );
+trigger_c11_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c11\,
+      O => trigger_c11_i_1_n_0
+    );
+trigger_c11_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c11_i_1_n_0,
+      Q => \^trigger_c11\
+    );
+trigger_c12_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c12\,
+      O => trigger_c12_i_1_n_0
+    );
+trigger_c12_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c12_i_1_n_0,
+      Q => \^trigger_c12\
+    );
+trigger_c13_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c13\,
+      O => trigger_c13_i_1_n_0
+    );
+trigger_c13_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c13_i_1_n_0,
+      Q => \^trigger_c13\
+    );
+trigger_c14_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c14\,
+      O => trigger_c14_i_1_n_0
+    );
+trigger_c14_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c14_i_1_n_0,
+      Q => \^trigger_c14\
+    );
+trigger_c15_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c15\,
+      O => trigger_c15_i_1_n_0
+    );
+trigger_c15_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c15_i_1_n_0,
+      Q => \^trigger_c15\
+    );
 trigger_c1_i_1: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
@@ -282,17 +552,14 @@ trigger_c1_i_1: unisim.vcomponents.LUT2
       I1 => \FSM_onehot_state_reg_n_0_[0]\,
       O => trigger_c1_i_1_n_0
     );
-trigger_c1_i_2: unisim.vcomponents.LUT6
+trigger_c1_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AAAAAAAA88800000"
+      INIT => X"A8"
     )
         port map (
       I0 => trigger_c1_i_3_n_0,
-      I1 => \FSM_onehot_state[2]_i_4_n_0\,
-      I2 => m_axis_tdata(0),
-      I3 => ext_trigger_in,
-      I4 => \FSM_onehot_state_reg_n_0_[0]\,
-      I5 => \^trigger_c1\,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c1\,
       O => trigger_c1_i_2_n_0
     );
 trigger_c1_i_3: unisim.vcomponents.LUT5
@@ -307,6 +574,19 @@ trigger_c1_i_3: unisim.vcomponents.LUT5
       I4 => count_reg(1),
       O => trigger_c1_i_3_n_0
     );
+trigger_c1_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0010000000000000"
+    )
+        port map (
+      I0 => \FSM_onehot_state[2]_i_9_n_0\,
+      I1 => \FSM_onehot_state[2]_i_8_n_0\,
+      I2 => \FSM_onehot_state[2]_i_7_n_0\,
+      I3 => \FSM_onehot_state[2]_i_6_n_0\,
+      I4 => \FSM_onehot_state[2]_i_5_n_0\,
+      I5 => \FSM_onehot_state_reg_n_0_[0]\,
+      O => trigger_c1_i_4_n_0
+    );
 trigger_c1_reg: unisim.vcomponents.FDCE
     generic map(
       INIT => '0'
@@ -318,17 +598,14 @@ trigger_c1_reg: unisim.vcomponents.FDCE
       D => trigger_c1_i_2_n_0,
       Q => \^trigger_c1\
     );
-trigger_c2_i_1: unisim.vcomponents.LUT6
+trigger_c2_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AAAAAAAA88800000"
+      INIT => X"A8"
     )
         port map (
       I0 => trigger_c1_i_3_n_0,
-      I1 => \FSM_onehot_state[2]_i_4_n_0\,
-      I2 => m_axis_tdata(0),
-      I3 => ext_trigger_in,
-      I4 => \FSM_onehot_state_reg_n_0_[0]\,
-      I5 => \^trigger_c2\,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c2\,
       O => trigger_c2_i_1_n_0
     );
 trigger_c2_reg: unisim.vcomponents.FDCE
@@ -342,17 +619,14 @@ trigger_c2_reg: unisim.vcomponents.FDCE
       D => trigger_c2_i_1_n_0,
       Q => \^trigger_c2\
     );
-trigger_c3_i_1: unisim.vcomponents.LUT6
+trigger_c3_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AAAAAAAA88800000"
+      INIT => X"A8"
     )
         port map (
       I0 => trigger_c1_i_3_n_0,
-      I1 => \FSM_onehot_state[2]_i_4_n_0\,
-      I2 => m_axis_tdata(0),
-      I3 => ext_trigger_in,
-      I4 => \FSM_onehot_state_reg_n_0_[0]\,
-      I5 => \^trigger_c3\,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c3\,
       O => trigger_c3_i_1_n_0
     );
 trigger_c3_reg: unisim.vcomponents.FDCE
@@ -365,6 +639,132 @@ trigger_c3_reg: unisim.vcomponents.FDCE
       CLR => \FSM_onehot_state[2]_i_2_n_0\,
       D => trigger_c3_i_1_n_0,
       Q => \^trigger_c3\
+    );
+trigger_c4_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c4\,
+      O => trigger_c4_i_1_n_0
+    );
+trigger_c4_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c4_i_1_n_0,
+      Q => \^trigger_c4\
+    );
+trigger_c5_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c5\,
+      O => trigger_c5_i_1_n_0
+    );
+trigger_c5_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c5_i_1_n_0,
+      Q => \^trigger_c5\
+    );
+trigger_c6_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c6\,
+      O => trigger_c6_i_1_n_0
+    );
+trigger_c6_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c6_i_1_n_0,
+      Q => \^trigger_c6\
+    );
+trigger_c7_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c7\,
+      O => trigger_c7_i_1_n_0
+    );
+trigger_c7_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c7_i_1_n_0,
+      Q => \^trigger_c7\
+    );
+trigger_c8_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c8\,
+      O => trigger_c8_i_1_n_0
+    );
+trigger_c8_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c8_i_1_n_0,
+      Q => \^trigger_c8\
+    );
+trigger_c9_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => trigger_c1_i_3_n_0,
+      I1 => trigger_c1_i_4_n_0,
+      I2 => \^trigger_c9\,
+      O => trigger_c9_i_1_n_0
+    );
+trigger_c9_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => rf_clk,
+      CE => trigger_c1_i_1_n_0,
+      CLR => \FSM_onehot_state[2]_i_2_n_0\,
+      D => trigger_c9_i_1_n_0,
+      Q => \^trigger_c9\
     );
 end STRUCTURE;
 library IEEE;
@@ -382,6 +782,8 @@ entity top_level_trigger_controller_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -1753,6 +2155,8 @@ entity top_level_trigger_controller_0_0_xpm_cdc_sync_rst is
   attribute INIT of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -1998,6 +2402,8 @@ entity top_level_trigger_controller_0_0_xpm_counter_updn is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end top_level_trigger_controller_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_counter_updn is
@@ -2806,6 +3212,8 @@ entity top_level_trigger_controller_0_0_xpm_fifo_reg_bit is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end top_level_trigger_controller_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_reg_bit is
@@ -2853,6 +3261,8 @@ entity top_level_trigger_controller_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end top_level_trigger_controller_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_reg_vec is
@@ -3132,6 +3542,8 @@ entity top_level_trigger_controller_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of top_level_trigger_controller_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of top_level_trigger_controller_0_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of top_level_trigger_controller_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -3977,16 +4389,42 @@ entity top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 is
     trigger_c1 : out STD_LOGIC;
     trigger_c2 : out STD_LOGIC;
     trigger_c3 : out STD_LOGIC;
+    trigger_c4 : out STD_LOGIC;
+    trigger_c5 : out STD_LOGIC;
+    trigger_c6 : out STD_LOGIC;
+    trigger_c7 : out STD_LOGIC;
+    trigger_c8 : out STD_LOGIC;
+    trigger_c9 : out STD_LOGIC;
+    trigger_c10 : out STD_LOGIC;
+    trigger_c11 : out STD_LOGIC;
+    trigger_c12 : out STD_LOGIC;
+    trigger_c13 : out STD_LOGIC;
+    trigger_c14 : out STD_LOGIC;
+    trigger_c15 : out STD_LOGIC;
     trigger_c0 : out STD_LOGIC;
     rf_clk : in STD_LOGIC;
     m_axis_tdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     ext_trigger_in : in STD_LOGIC;
-    pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     pipeline_active_in_1 : in STD_LOGIC;
-    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
     pipeline_active_in_2 : in STD_LOGIC;
+    pipeline_active_in_0 : in STD_LOGIC;
+    pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
     rf_reset : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 : entity is "trigger_controller_trigger_module_0_0";
 end top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 is
@@ -3997,14 +4435,38 @@ inst: entity work.top_level_trigger_controller_0_0_trigger_module
       m_axis_tdata(0) => m_axis_tdata(0),
       pipeline_active_in_0 => pipeline_active_in_0,
       pipeline_active_in_1 => pipeline_active_in_1,
+      pipeline_active_in_10 => pipeline_active_in_10,
+      pipeline_active_in_11 => pipeline_active_in_11,
+      pipeline_active_in_12 => pipeline_active_in_12,
+      pipeline_active_in_13 => pipeline_active_in_13,
+      pipeline_active_in_14 => pipeline_active_in_14,
+      pipeline_active_in_15 => pipeline_active_in_15,
       pipeline_active_in_2 => pipeline_active_in_2,
       pipeline_active_in_3 => pipeline_active_in_3,
+      pipeline_active_in_4 => pipeline_active_in_4,
+      pipeline_active_in_5 => pipeline_active_in_5,
+      pipeline_active_in_6 => pipeline_active_in_6,
+      pipeline_active_in_7 => pipeline_active_in_7,
+      pipeline_active_in_8 => pipeline_active_in_8,
+      pipeline_active_in_9 => pipeline_active_in_9,
       rf_clk => rf_clk,
       rf_reset => rf_reset,
       trigger_c0 => trigger_c0,
       trigger_c1 => trigger_c1,
+      trigger_c10 => trigger_c10,
+      trigger_c11 => trigger_c11,
+      trigger_c12 => trigger_c12,
+      trigger_c13 => trigger_c13,
+      trigger_c14 => trigger_c14,
+      trigger_c15 => trigger_c15,
       trigger_c2 => trigger_c2,
-      trigger_c3 => trigger_c3
+      trigger_c3 => trigger_c3,
+      trigger_c4 => trigger_c4,
+      trigger_c5 => trigger_c5,
+      trigger_c6 => trigger_c6,
+      trigger_c7 => trigger_c7,
+      trigger_c8 => trigger_c8,
+      trigger_c9 => trigger_c9
     );
 end STRUCTURE;
 library IEEE;
@@ -4026,6 +4488,8 @@ entity top_level_trigger_controller_0_0_xpm_fifo_rst is
     ram_empty_i : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end top_level_trigger_controller_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_rst is
@@ -4568,6 +5032,8 @@ entity top_level_trigger_controller_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of top_level_trigger_controller_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of top_level_trigger_controller_0_0_xpm_fifo_base : entity is "1'b1";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of top_level_trigger_controller_0_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -5269,6 +5735,8 @@ entity top_level_trigger_controller_0_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is 4;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -5571,6 +6039,8 @@ entity top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top is
     s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axis_tready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top : entity is "axis_data_fifo_v2_0_1_top";
 end top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top is
@@ -5738,6 +6208,8 @@ entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 is
   attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "trigger_controller_axis_data_fifo_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
 end top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0;
@@ -5785,17 +6257,43 @@ entity top_level_trigger_controller_0_0_trigger_controller is
     microblaze_reset : in STD_LOGIC;
     pipeline_active_in_0 : in STD_LOGIC;
     pipeline_active_in_1 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     pipeline_active_in_2 : in STD_LOGIC;
     pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
     rf_clk : in STD_LOGIC;
     rf_reset : in STD_LOGIC;
     trigger_c0 : out STD_LOGIC;
     trigger_c1 : out STD_LOGIC;
+    trigger_c10 : out STD_LOGIC;
+    trigger_c11 : out STD_LOGIC;
+    trigger_c12 : out STD_LOGIC;
+    trigger_c13 : out STD_LOGIC;
+    trigger_c14 : out STD_LOGIC;
+    trigger_c15 : out STD_LOGIC;
     trigger_c2 : out STD_LOGIC;
-    trigger_c3 : out STD_LOGIC
+    trigger_c3 : out STD_LOGIC;
+    trigger_c4 : out STD_LOGIC;
+    trigger_c5 : out STD_LOGIC;
+    trigger_c6 : out STD_LOGIC;
+    trigger_c7 : out STD_LOGIC;
+    trigger_c8 : out STD_LOGIC;
+    trigger_c9 : out STD_LOGIC
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of top_level_trigger_controller_0_0_trigger_controller : entity is "trigger_controller.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller : entity is "trigger_controller";
 end top_level_trigger_controller_0_0_trigger_controller;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
@@ -5840,14 +6338,38 @@ trigger_module_0: entity work.top_level_trigger_controller_0_0_trigger_controlle
       m_axis_tdata(0) => axis_data_fifo_0_M_AXIS_TDATA(11),
       pipeline_active_in_0 => pipeline_active_in_0,
       pipeline_active_in_1 => pipeline_active_in_1,
+      pipeline_active_in_10 => pipeline_active_in_10,
+      pipeline_active_in_11 => pipeline_active_in_11,
+      pipeline_active_in_12 => pipeline_active_in_12,
+      pipeline_active_in_13 => pipeline_active_in_13,
+      pipeline_active_in_14 => pipeline_active_in_14,
+      pipeline_active_in_15 => pipeline_active_in_15,
       pipeline_active_in_2 => pipeline_active_in_2,
       pipeline_active_in_3 => pipeline_active_in_3,
+      pipeline_active_in_4 => pipeline_active_in_4,
+      pipeline_active_in_5 => pipeline_active_in_5,
+      pipeline_active_in_6 => pipeline_active_in_6,
+      pipeline_active_in_7 => pipeline_active_in_7,
+      pipeline_active_in_8 => pipeline_active_in_8,
+      pipeline_active_in_9 => pipeline_active_in_9,
       rf_clk => rf_clk,
       rf_reset => rf_reset,
       trigger_c0 => trigger_c0,
       trigger_c1 => trigger_c1,
+      trigger_c10 => trigger_c10,
+      trigger_c11 => trigger_c11,
+      trigger_c12 => trigger_c12,
+      trigger_c13 => trigger_c13,
+      trigger_c14 => trigger_c14,
+      trigger_c15 => trigger_c15,
       trigger_c2 => trigger_c2,
-      trigger_c3 => trigger_c3
+      trigger_c3 => trigger_c3,
+      trigger_c4 => trigger_c4,
+      trigger_c5 => trigger_c5,
+      trigger_c6 => trigger_c6,
+      trigger_c7 => trigger_c7,
+      trigger_c8 => trigger_c8,
+      trigger_c9 => trigger_c9
     );
 end STRUCTURE;
 library IEEE;
@@ -5862,19 +6384,43 @@ entity top_level_trigger_controller_0_0 is
     microblaze_reset : in STD_LOGIC;
     pipeline_active_in_0 : in STD_LOGIC;
     pipeline_active_in_1 : in STD_LOGIC;
+    pipeline_active_in_10 : in STD_LOGIC;
+    pipeline_active_in_11 : in STD_LOGIC;
+    pipeline_active_in_12 : in STD_LOGIC;
+    pipeline_active_in_13 : in STD_LOGIC;
+    pipeline_active_in_14 : in STD_LOGIC;
+    pipeline_active_in_15 : in STD_LOGIC;
     pipeline_active_in_2 : in STD_LOGIC;
     pipeline_active_in_3 : in STD_LOGIC;
+    pipeline_active_in_4 : in STD_LOGIC;
+    pipeline_active_in_5 : in STD_LOGIC;
+    pipeline_active_in_6 : in STD_LOGIC;
+    pipeline_active_in_7 : in STD_LOGIC;
+    pipeline_active_in_8 : in STD_LOGIC;
+    pipeline_active_in_9 : in STD_LOGIC;
     rf_clk : in STD_LOGIC;
     rf_reset : in STD_LOGIC;
     trigger_c0 : out STD_LOGIC;
     trigger_c1 : out STD_LOGIC;
+    trigger_c10 : out STD_LOGIC;
+    trigger_c11 : out STD_LOGIC;
+    trigger_c12 : out STD_LOGIC;
+    trigger_c13 : out STD_LOGIC;
+    trigger_c14 : out STD_LOGIC;
+    trigger_c15 : out STD_LOGIC;
     trigger_c2 : out STD_LOGIC;
-    trigger_c3 : out STD_LOGIC
+    trigger_c3 : out STD_LOGIC;
+    trigger_c4 : out STD_LOGIC;
+    trigger_c5 : out STD_LOGIC;
+    trigger_c6 : out STD_LOGIC;
+    trigger_c7 : out STD_LOGIC;
+    trigger_c8 : out STD_LOGIC;
+    trigger_c9 : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of top_level_trigger_controller_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0 : entity is "top_level_trigger_controller_2_0,trigger_controller,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0 : entity is "top_level_trigger_controller_0_0,trigger_controller,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -5893,7 +6439,7 @@ architecture STRUCTURE of top_level_trigger_controller_0_0 is
   attribute X_INTERFACE_INFO of microblaze_reset : signal is "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESET RST";
   attribute X_INTERFACE_PARAMETER of microblaze_reset : signal is "XIL_INTERFACENAME RST.MICROBLAZE_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rf_clk : signal is "xilinx.com:signal:clock:1.0 CLK.RF_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of rf_clk : signal is "XIL_INTERFACENAME CLK.RF_CLK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_RESET rf_reset, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of rf_clk : signal is "XIL_INTERFACENAME CLK.RF_CLK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_RESET rf_reset, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rf_reset : signal is "xilinx.com:signal:reset:1.0 RST.RF_RESET RST";
   attribute X_INTERFACE_PARAMETER of rf_reset : signal is "XIL_INTERFACENAME RST.RF_RESET, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of gpio_in : signal is "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA";
@@ -5907,13 +6453,37 @@ inst: entity work.top_level_trigger_controller_0_0_trigger_controller
       microblaze_reset => microblaze_reset,
       pipeline_active_in_0 => pipeline_active_in_0,
       pipeline_active_in_1 => pipeline_active_in_1,
+      pipeline_active_in_10 => pipeline_active_in_10,
+      pipeline_active_in_11 => pipeline_active_in_11,
+      pipeline_active_in_12 => pipeline_active_in_12,
+      pipeline_active_in_13 => pipeline_active_in_13,
+      pipeline_active_in_14 => pipeline_active_in_14,
+      pipeline_active_in_15 => pipeline_active_in_15,
       pipeline_active_in_2 => pipeline_active_in_2,
       pipeline_active_in_3 => pipeline_active_in_3,
+      pipeline_active_in_4 => pipeline_active_in_4,
+      pipeline_active_in_5 => pipeline_active_in_5,
+      pipeline_active_in_6 => pipeline_active_in_6,
+      pipeline_active_in_7 => pipeline_active_in_7,
+      pipeline_active_in_8 => pipeline_active_in_8,
+      pipeline_active_in_9 => pipeline_active_in_9,
       rf_clk => rf_clk,
       rf_reset => rf_reset,
       trigger_c0 => trigger_c0,
       trigger_c1 => trigger_c1,
+      trigger_c10 => trigger_c10,
+      trigger_c11 => trigger_c11,
+      trigger_c12 => trigger_c12,
+      trigger_c13 => trigger_c13,
+      trigger_c14 => trigger_c14,
+      trigger_c15 => trigger_c15,
       trigger_c2 => trigger_c2,
-      trigger_c3 => trigger_c3
+      trigger_c3 => trigger_c3,
+      trigger_c4 => trigger_c4,
+      trigger_c5 => trigger_c5,
+      trigger_c6 => trigger_c6,
+      trigger_c7 => trigger_c7,
+      trigger_c8 => trigger_c8,
+      trigger_c9 => trigger_c9
     );
 end STRUCTURE;

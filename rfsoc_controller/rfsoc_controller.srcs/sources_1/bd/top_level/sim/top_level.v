@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Jul 16 18:34:58 2019
+//Date        : Tue Jul 16 21:59:09 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -917,7 +917,7 @@ module s00_couplers_imp_1XULX5P
   assign s00_couplers_to_s00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=48,numReposBlks=41,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=20,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=45,numReposBlks=38,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=17,bdsource=USER,da_axi4_cnt=3,da_board_cnt=5,da_clkrst_cnt=1,da_mb_cnt=1,da_rf_converter_usp_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (app_leds_tri_o,
     dac0_clk_clk_n,
@@ -1292,20 +1292,20 @@ module top_level
   wire sysref_in_1_diff_p;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire trigger_controller_0_trigger_c0;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire trigger_controller_0_trigger_c1;
+  wire trigger_controller_0_trigger_c10;
+  wire trigger_controller_0_trigger_c11;
+  wire trigger_controller_0_trigger_c12;
+  wire trigger_controller_0_trigger_c13;
+  wire trigger_controller_0_trigger_c14;
+  wire trigger_controller_0_trigger_c15;
   wire trigger_controller_0_trigger_c2;
   wire trigger_controller_0_trigger_c3;
-  wire trigger_controller_1_trigger_c0;
-  wire trigger_controller_1_trigger_c1;
-  wire trigger_controller_1_trigger_c2;
-  wire trigger_controller_1_trigger_c3;
-  wire trigger_controller_2_trigger_c0;
-  wire trigger_controller_2_trigger_c1;
-  wire trigger_controller_2_trigger_c2;
-  wire trigger_controller_2_trigger_c3;
-  wire trigger_controller_3_trigger_c0;
-  wire trigger_controller_3_trigger_c1;
-  wire trigger_controller_3_trigger_c2;
-  wire trigger_controller_3_trigger_c3;
+  wire trigger_controller_0_trigger_c4;
+  wire trigger_controller_0_trigger_c5;
+  wire trigger_controller_0_trigger_c6;
+  wire trigger_controller_0_trigger_c7;
+  wire trigger_controller_0_trigger_c8;
+  wire trigger_controller_0_trigger_c9;
   wire usp_rf_data_converter_0_clk_dac1;
   wire usp_rf_data_converter_0_clk_dac2;
   wire usp_rf_data_converter_0_clk_dac3;
@@ -1826,7 +1826,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M10_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M10_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M10_AXIS_TVALID),
-        .ext_trigger(trigger_controller_2_trigger_c2),
+        .ext_trigger(trigger_controller_0_trigger_c10),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch10),
         .m_axis_tdata(rfsoc_data_pipeline_10_m_axis_TDATA),
@@ -1841,7 +1841,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M11_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M11_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M11_AXIS_TVALID),
-        .ext_trigger(trigger_controller_2_trigger_c3),
+        .ext_trigger(trigger_controller_0_trigger_c11),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch11),
         .m_axis_tdata(rfsoc_data_pipeline_11_m_axis_TDATA),
@@ -1856,7 +1856,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M12_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M12_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M12_AXIS_TVALID),
-        .ext_trigger(trigger_controller_3_trigger_c0),
+        .ext_trigger(trigger_controller_0_trigger_c12),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch12),
         .m_axis_tdata(rfsoc_data_pipeline_12_m_axis_TDATA),
@@ -1871,7 +1871,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M13_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M13_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M13_AXIS_TVALID),
-        .ext_trigger(trigger_controller_3_trigger_c1),
+        .ext_trigger(trigger_controller_0_trigger_c13),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch13),
         .m_axis_tdata(rfsoc_data_pipeline_13_m_axis_TDATA),
@@ -1886,7 +1886,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M14_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M14_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M14_AXIS_TVALID),
-        .ext_trigger(trigger_controller_3_trigger_c2),
+        .ext_trigger(trigger_controller_0_trigger_c14),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch14),
         .m_axis_tdata(rfsoc_data_pipeline_14_m_axis_TDATA),
@@ -1901,7 +1901,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M15_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M15_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M15_AXIS_TVALID),
-        .ext_trigger(trigger_controller_3_trigger_c3),
+        .ext_trigger(trigger_controller_0_trigger_c15),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch15),
         .m_axis_tdata(rfsoc_data_pipeline_15_m_axis_TDATA),
@@ -1946,7 +1946,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M4_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M4_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M4_AXIS_TVALID),
-        .ext_trigger(trigger_controller_1_trigger_c0),
+        .ext_trigger(trigger_controller_0_trigger_c4),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch4),
         .m_axis_tdata(rfsoc_data_pipeline_4_m_axis_TDATA),
@@ -1961,7 +1961,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M5_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M5_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M5_AXIS_TVALID),
-        .ext_trigger(trigger_controller_1_trigger_c1),
+        .ext_trigger(trigger_controller_0_trigger_c5),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch5),
         .m_axis_tdata(rfsoc_data_pipeline_5_m_axis_TDATA),
@@ -1976,7 +1976,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M6_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M6_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M6_AXIS_TVALID),
-        .ext_trigger(trigger_controller_1_trigger_c2),
+        .ext_trigger(trigger_controller_0_trigger_c6),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch6),
         .m_axis_tdata(rfsoc_data_pipeline_6_m_axis_TDATA),
@@ -1991,7 +1991,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M7_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M7_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M7_AXIS_TVALID),
-        .ext_trigger(trigger_controller_1_trigger_c3),
+        .ext_trigger(trigger_controller_0_trigger_c7),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch7),
         .m_axis_tdata(rfsoc_data_pipeline_7_m_axis_TDATA),
@@ -2006,7 +2006,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M8_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M8_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M8_AXIS_TVALID),
-        .ext_trigger(trigger_controller_2_trigger_c0),
+        .ext_trigger(trigger_controller_0_trigger_c8),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch8),
         .m_axis_tdata(rfsoc_data_pipeline_8_m_axis_TDATA),
@@ -2021,7 +2021,7 @@ module top_level
        (.S_AXIS_tdata(microblaze_0_M9_AXIS_TDATA),
         .S_AXIS_tready(microblaze_0_M9_AXIS_TREADY),
         .S_AXIS_tvalid(microblaze_0_M9_AXIS_TVALID),
-        .ext_trigger(trigger_controller_2_trigger_c1),
+        .ext_trigger(trigger_controller_0_trigger_c9),
         .gpio_in(Net),
         .is_selected(channel_select_0_ch9),
         .m_axis_tdata(rfsoc_data_pipeline_9_m_axis_TDATA),
@@ -2066,59 +2066,38 @@ module top_level
         .microblaze_reset(rst_clk_wiz_1_100M_peripheral_aresetn),
         .pipeline_active_in_0(rfsoc_data_pipeline_0_pipeline_active),
         .pipeline_active_in_1(rfsoc_data_pipeline_1_pipeline_active),
+        .pipeline_active_in_10(rfsoc_data_pipeline_10_pipeline_active),
+        .pipeline_active_in_11(rfsoc_data_pipeline_11_pipeline_active),
+        .pipeline_active_in_12(rfsoc_data_pipeline_12_pipeline_active),
+        .pipeline_active_in_13(rfsoc_data_pipeline_13_pipeline_active),
+        .pipeline_active_in_14(rfsoc_data_pipeline_14_pipeline_active),
+        .pipeline_active_in_15(rfsoc_data_pipeline_15_pipeline_active),
         .pipeline_active_in_2(rfsoc_data_pipeline_2_pipeline_active),
         .pipeline_active_in_3(rfsoc_data_pipeline_3_pipeline_active),
+        .pipeline_active_in_4(rfsoc_data_pipeline_4_pipeline_active),
+        .pipeline_active_in_5(rfsoc_data_pipeline_5_pipeline_active),
+        .pipeline_active_in_6(rfsoc_data_pipeline_6_pipeline_active),
+        .pipeline_active_in_7(rfsoc_data_pipeline_7_pipeline_active),
+        .pipeline_active_in_8(rfsoc_data_pipeline_8_pipeline_active),
+        .pipeline_active_in_9(rfsoc_data_pipeline_9_pipeline_active),
         .rf_clk(Net3),
         .rf_reset(Net4),
         .trigger_c0(trigger_controller_0_trigger_c0),
         .trigger_c1(trigger_controller_0_trigger_c1),
+        .trigger_c10(trigger_controller_0_trigger_c10),
+        .trigger_c11(trigger_controller_0_trigger_c11),
+        .trigger_c12(trigger_controller_0_trigger_c12),
+        .trigger_c13(trigger_controller_0_trigger_c13),
+        .trigger_c14(trigger_controller_0_trigger_c14),
+        .trigger_c15(trigger_controller_0_trigger_c15),
         .trigger_c2(trigger_controller_0_trigger_c2),
-        .trigger_c3(trigger_controller_0_trigger_c3));
-  top_level_trigger_controller_1_0 trigger_controller_1
-       (.ext_trigger_in(ext_trigger_0_0_1),
-        .gpio_in(Net),
-        .microblaze_clk(microblaze_0_Clk),
-        .microblaze_reset(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .pipeline_active_in_0(rfsoc_data_pipeline_4_pipeline_active),
-        .pipeline_active_in_1(rfsoc_data_pipeline_5_pipeline_active),
-        .pipeline_active_in_2(rfsoc_data_pipeline_6_pipeline_active),
-        .pipeline_active_in_3(rfsoc_data_pipeline_7_pipeline_active),
-        .rf_clk(usp_rf_data_converter_0_clk_dac1),
-        .rf_reset(Net1),
-        .trigger_c0(trigger_controller_1_trigger_c0),
-        .trigger_c1(trigger_controller_1_trigger_c1),
-        .trigger_c2(trigger_controller_1_trigger_c2),
-        .trigger_c3(trigger_controller_1_trigger_c3));
-  top_level_trigger_controller_2_0 trigger_controller_2
-       (.ext_trigger_in(ext_trigger_0_0_1),
-        .gpio_in(Net),
-        .microblaze_clk(microblaze_0_Clk),
-        .microblaze_reset(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .pipeline_active_in_0(rfsoc_data_pipeline_8_pipeline_active),
-        .pipeline_active_in_1(rfsoc_data_pipeline_9_pipeline_active),
-        .pipeline_active_in_2(rfsoc_data_pipeline_10_pipeline_active),
-        .pipeline_active_in_3(rfsoc_data_pipeline_11_pipeline_active),
-        .rf_clk(usp_rf_data_converter_0_clk_dac2),
-        .rf_reset(Net2),
-        .trigger_c0(trigger_controller_2_trigger_c0),
-        .trigger_c1(trigger_controller_2_trigger_c1),
-        .trigger_c2(trigger_controller_2_trigger_c2),
-        .trigger_c3(trigger_controller_2_trigger_c3));
-  top_level_trigger_controller_3_0 trigger_controller_3
-       (.ext_trigger_in(ext_trigger_0_0_1),
-        .gpio_in(Net),
-        .microblaze_clk(microblaze_0_Clk),
-        .microblaze_reset(rst_clk_wiz_1_100M_peripheral_aresetn),
-        .pipeline_active_in_0(rfsoc_data_pipeline_12_pipeline_active),
-        .pipeline_active_in_1(rfsoc_data_pipeline_13_pipeline_active),
-        .pipeline_active_in_2(rfsoc_data_pipeline_14_pipeline_active),
-        .pipeline_active_in_3(rfsoc_data_pipeline_15_pipeline_active),
-        .rf_clk(usp_rf_data_converter_0_clk_dac3),
-        .rf_reset(proc_sys_reset_3_peripheral_aresetn),
-        .trigger_c0(trigger_controller_3_trigger_c0),
-        .trigger_c1(trigger_controller_3_trigger_c1),
-        .trigger_c2(trigger_controller_3_trigger_c2),
-        .trigger_c3(trigger_controller_3_trigger_c3));
+        .trigger_c3(trigger_controller_0_trigger_c3),
+        .trigger_c4(trigger_controller_0_trigger_c4),
+        .trigger_c5(trigger_controller_0_trigger_c5),
+        .trigger_c6(trigger_controller_0_trigger_c6),
+        .trigger_c7(trigger_controller_0_trigger_c7),
+        .trigger_c8(trigger_controller_0_trigger_c8),
+        .trigger_c9(trigger_controller_0_trigger_c9));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.clk_dac0(Net3),
         .clk_dac1(usp_rf_data_converter_0_clk_dac1),

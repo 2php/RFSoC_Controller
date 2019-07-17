@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x41B433324BEA9D32",
+      "boundary_crc": "0x41B43332EEC0C16E",
       "design_src": "SBD",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "bd_9bbd",
@@ -19,20 +19,20 @@
         "direction": "I",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "top_level_clk_wiz_1_0_clk_out1",
+            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
+            "value": "250000000",
+            "value_src": "default_prop"
           },
           "INSERT_VIP": {
             "value": "0",
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
-            "value_src": "default_prop"
+            "value": "0.000",
+            "value_src": "default"
           }
         }
       },
@@ -86,7 +86,7 @@
             "value": "0"
           },
           "C_ILA_CLK_FREQ": {
-            "value": "100000000"
+            "value": "250000000"
           },
           "C_INPUT_PIPE_STAGES": {
             "value": "0"

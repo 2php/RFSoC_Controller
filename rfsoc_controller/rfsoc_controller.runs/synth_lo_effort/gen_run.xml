@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_lo_effort" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1563327326">
+<GenRun Id="synth_lo_effort" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1563339569">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -197,8 +197,5 @@
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_8_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_3_0"/>
 </GenRun>

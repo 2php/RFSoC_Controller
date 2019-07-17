@@ -3735,3 +3735,662 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-54
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-07-16 16:24:18.429
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:35.407
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-922
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:35.466
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-922
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-07-17 08:42:36.422
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.427
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.446
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.451
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.468
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.472
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.480
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.484
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.501
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.504
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.535
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.538
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.542
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.545
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.548
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.551
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.559
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.562
+!MESSAGE XSCT Command: [version -server], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.602
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.606
+!MESSAGE XSCT Command: [version], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.611
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.615
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.622
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.626
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.644
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.647
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.655
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.658
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.679
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.683
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.691
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.694
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.714
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.717
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.725
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.728
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.746
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.749
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.767
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.771
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.775
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.778
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.783
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.786
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.819
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.823
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.841
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.844
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.881
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:36.884
+!MESSAGE XSCT Command: [dow C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:37.289
+!MESSAGE XSCT command with result: [dow C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:37.340
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:37.380
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:37.385
+!MESSAGE XSCT Command: [con], Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:42:37.394
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-147
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:45.448
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:45.481
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:45.486
+!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:45.510
+!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Result: [null, top_level.hwh top_level_bd.tcl top_level_wrapper.bit top_level_wrapper.mmi]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:45.905
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:46.045
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:46.048
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:48.905
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:48.923
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:49.404
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:49.420
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:49.433
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"channel_select_0": {"hier_name": "channel_select_0",
+"type": "channel_select",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_1": {"hier_name": "proc_sys_reset_1",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_2": {"hier_name": "proc_sys_reset_2",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_3": {"hier_name": "proc_sys_reset_3",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_0": {"hier_name": "rfsoc_data_pipeline_0",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_1": {"hier_name": "rfsoc_data_pipeline_1",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_10": {"hier_name": "rfsoc_data_pipeline_10",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_11": {"hier_name": "rfsoc_data_pipeline_11",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_12": {"hier_name": "rfsoc_data_pipeline_12",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_13": {"hier_name": "rfsoc_data_pipeline_13",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_14": {"hier_name": "rfsoc_data_pipeline_14",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_15": {"hier_name": "rfsoc_data_pipeline_15",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_2": {"hier_name": "rfsoc_data_pipeline_2",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_3": {"hier_name": "rfsoc_data_pipeline_3",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_4": {"hier_name": "rfsoc_data_pipeline_4",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_5": {"hier_name": "rfsoc_data_pipeline_5",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_6": {"hier_name": "rfsoc_data_pipeline_6",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_7": {"hier_name": "rfsoc_data_pipeline_7",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_8": {"hier_name": "rfsoc_data_pipeline_8",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_9": {"hier_name": "rfsoc_data_pipeline_9",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0": {"hier_name": "system_ila_0",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_1": {"hier_name": "system_ila_1",
+"type": "system_ila",
+"version": "1.1",
+"ip_type": "MONITOR",
+},
+"trigger_controller_0": {"hier_name": "trigger_controller_0",
+"type": "trigger_controller",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"usp_rf_data_converter_0": {"hier_name": "usp_rf_data_converter_0",
+"type": "usp_rf_data_converter",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_0_ila_lib": {"hier_name": "system_ila_0/system_ila_0_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"system_ila_1_g_inst": {"hier_name": "system_ila_1/system_ila_1_g_inst",
+"type": "gigantic_mux",
+"version": "1.0",
+"ip_type": "MONITOR",
+},
+"system_ila_1_ila_lib": {"hier_name": "system_ila_1/system_ila_1_ila_lib",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:49.437
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:49.448
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"channel_select_0": {"hier_name": "channel_select_0",
+"type": "channel_select",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_1": {"hier_name": "proc_sys_reset_1",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_2": {"hier_name": "proc_sys_reset_2",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_3": {"hier_name": "proc_sys_reset_3",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_0": {"hier_name": "rfsoc_data_pipeline_0",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_1": {"hier_name": "rfsoc_data_pipeline_1",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_10": {"hier_name": "rfsoc_data_pipeline_10",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_11": {"hier_name": "rfsoc_data_pipeline_11",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_12": {"hier_name": "rfsoc_data_pipeline_12",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_13": {"hier_name": "rfsoc_data_pipeline_13",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_14": {"hier_name": "rfsoc_data_pipeline_14",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_15": {"hier_name": "rfsoc_data_pipeline_15",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_2": {"hier_name": "rfsoc_data_pipeline_2",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_3": {"hier_name": "rfsoc_data_pipeline_3",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_4": {"hier_name": "rfsoc_data_pipeline_4",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_5": {"hier_name": "rfsoc_data_pipeline_5",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_6": {"hier_name": "rfsoc_data_pipeline_6",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_7": {"hier_name": "rfsoc_data_pipeline_7",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_8": {"hier_name": "rfsoc_data_pipeline_8",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rfsoc_data_pipeline_9": {"hier_name": "rfsoc_data_pipeline_9",
+"type": "rfsoc_data_pipeline",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"trigger_buffer_0": {"hier_name": "trigger_buffer_0",
+"type": "trigger_buffer",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"usp_rf_data_converter_0": {"hier_name": "usp_rf_data_converter_0",
+"type": "usp_rf_data_converter",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:50.221
+!MESSAGE XSCT Command: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf -sw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/system.mss -dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:57.936
+!MESSAGE XSCT command with result: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/MARAND~1/AppData/Local/Temp/system1632181378007463510.hdf -sw C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/system.mss -dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.780
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.786
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.791
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.795
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.798
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.803
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.807
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.813
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.816
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.821
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.827
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.831
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.835
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.840
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.843
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-07-17 08:57:58.847
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Result: [null, 0]. Thread: ModalContext

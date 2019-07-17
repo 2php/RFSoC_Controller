@@ -123,13 +123,4 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_syste
 # IP: bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_trigger_controller_0_0 || ORIG_REF_NAME==top_level_trigger_controller_0_0} -quiet] -quiet
 
-# IP: bd/top_level/ip/top_level_trigger_controller_1_0/top_level_trigger_controller_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_trigger_controller_1_0 || ORIG_REF_NAME==top_level_trigger_controller_1_0} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_trigger_controller_2_0/top_level_trigger_controller_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_trigger_controller_2_0 || ORIG_REF_NAME==top_level_trigger_controller_2_0} -quiet] -quiet
-
-# IP: bd/top_level/ip/top_level_trigger_controller_3_0/top_level_trigger_controller_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_trigger_controller_3_0 || ORIG_REF_NAME==top_level_trigger_controller_3_0} -quiet] -quiet
-
 # XDC: bd/top_level/top_level_ooc.xdc

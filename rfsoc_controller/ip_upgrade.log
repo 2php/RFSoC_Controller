@@ -1,6 +1,84 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 21:52:35 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_trigger_controller_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of top_level_trigger_controller_0_0 (xilinx.com:user:trigger_controller:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'top_level_trigger_controller_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'pipeline_active_in_10'
+
+-Upgrade has added port 'pipeline_active_in_11'
+
+-Upgrade has added port 'pipeline_active_in_12'
+
+-Upgrade has added port 'pipeline_active_in_13'
+
+-Upgrade has added port 'pipeline_active_in_14'
+
+-Upgrade has added port 'pipeline_active_in_15'
+
+-Upgrade has added port 'pipeline_active_in_4'
+
+-Upgrade has added port 'pipeline_active_in_5'
+
+-Upgrade has added port 'pipeline_active_in_6'
+
+-Upgrade has added port 'pipeline_active_in_7'
+
+-Upgrade has added port 'pipeline_active_in_8'
+
+-Upgrade has added port 'pipeline_active_in_9'
+
+-Upgrade has added port 'trigger_c10'
+
+-Upgrade has added port 'trigger_c11'
+
+-Upgrade has added port 'trigger_c12'
+
+-Upgrade has added port 'trigger_c13'
+
+-Upgrade has added port 'trigger_c14'
+
+-Upgrade has added port 'trigger_c15'
+
+-Upgrade has added port 'trigger_c4'
+
+-Upgrade has added port 'trigger_c5'
+
+-Upgrade has added port 'trigger_c6'
+
+-Upgrade has added port 'trigger_c7'
+
+-Upgrade has added port 'trigger_c8'
+
+-Upgrade has added port 'trigger_c9'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Tue Jul 16 15:38:44 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

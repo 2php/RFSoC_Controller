@@ -14,7 +14,7 @@ module bd_9bbd
     probe2,
     probe3,
     probe4);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, FREQ_HZ 250000000, INSERT_VIP 0, PHASE 0.000" *) input clk;
   input [15:0]probe0;
   input [0:0]probe1;
   input [0:0]probe2;
