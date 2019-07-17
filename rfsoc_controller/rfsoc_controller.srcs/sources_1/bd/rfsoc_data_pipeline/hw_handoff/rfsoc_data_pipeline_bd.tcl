@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# axis_mux, axis_tready_slice, gpio_and_select_buffer, pipeline_active_buffer
+# axis_mux, axis_tready_slice, gpio_and_select_buffer
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -209,13 +209,6 @@ proc create_root_design { parentCell } {
    CONFIG.TDATA_NUM_BYTES {4} \
  ] $axis_data_fifo_0
 
-  # Create instance: axis_data_fifo_1, and set properties
-  set axis_data_fifo_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_1 ]
-  set_property -dict [ list \
-   CONFIG.FIFO_DEPTH {16} \
-   CONFIG.IS_ACLK_ASYNC {1} \
- ] $axis_data_fifo_1
-
   # Create instance: axis_data_fifo_clock_crossing, and set properties
   set axis_data_fifo_clock_crossing [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_clock_crossing ]
   set_property -dict [ list \
@@ -278,22 +271,10 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: pipeline_active_buff_0, and set properties
-  set block_name pipeline_active_buffer
-  set block_cell_name pipeline_active_buff_0
-  if { [catch {set pipeline_active_buff_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $pipeline_active_buff_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create interface connections
   connect_bd_intf_net -intf_net S_AXIS_0_1 [get_bd_intf_ports S_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_dwidth_converter_0/S_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_fifo_clock_crossing/M_AXIS] [get_bd_intf_pins axis_mux_0/s0_axis]
-  connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS1 [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins pipeline_active_buff_0/s_axis]
   connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axis_data_fifo_waveform/M_AXIS] [get_bd_intf_pins axis_tready_slice_0/s_axis]
   connect_bd_intf_net -intf_net axis_data_fifo_gpio_M_AXIS [get_bd_intf_pins axis_data_fifo_gpio/M_AXIS] [get_bd_intf_pins gpio_and_select_buff_0/s_axis]
   connect_bd_intf_net -intf_net axis_dwidth_converter_0_M_AXIS [get_bd_intf_pins axis_data_fifo_clock_crossing/S_AXIS] [get_bd_intf_pins axis_dwidth_converter_0/M_AXIS]
@@ -301,21 +282,19 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axis_tready_slice_0_m_axis [get_bd_intf_ports m_axis] [get_bd_intf_pins axis_tready_slice_0/m_axis]
   connect_bd_intf_net -intf_net axis_tready_slice_0_mloop_axis [get_bd_intf_pins axis_mux_0/s1_axis] [get_bd_intf_pins axis_tready_slice_0/mloop_axis]
   connect_bd_intf_net -intf_net gpio_and_select_buff_0_m_axis [get_bd_intf_pins axis_data_fifo_gpio/S_AXIS] [get_bd_intf_pins gpio_and_select_buff_0/m_axis]
-  connect_bd_intf_net -intf_net pipeline_active_buff_0_m_axis [get_bd_intf_pins axis_data_fifo_1/S_AXIS] [get_bd_intf_pins pipeline_active_buff_0/m_axis]
 
   # Create port connections
   connect_bd_net -net Net [get_bd_pins axis_mux_0/gpio_in] [get_bd_pins axis_tready_slice_0/gpio_in] [get_bd_pins gpio_and_select_buff_0/gpio_out]
-  connect_bd_net -net axis_tready_slice_0_pipeline_active [get_bd_pins axis_tready_slice_0/pipeline_active] [get_bd_pins pipeline_active_buff_0/active_in]
-  connect_bd_net -net ext_trigger_1 [get_bd_ports ext_trigger] [get_bd_pins gpio_and_select_buff_0/ext_trigger_in]
-  connect_bd_net -net gpio_and_select_buff_0_ext_trigger_out [get_bd_pins axis_tready_slice_0/ext_trigger] [get_bd_pins gpio_and_select_buff_0/ext_trigger_out]
+  connect_bd_net -net axis_tready_slice_0_pipeline_active [get_bd_ports pipeline_active] [get_bd_pins axis_tready_slice_0/pipeline_active]
+  connect_bd_net -net ext_trigger_1 [get_bd_ports ext_trigger] [get_bd_pins axis_tready_slice_0/ext_trigger]
   connect_bd_net -net gpio_and_select_buff_0_select_out [get_bd_pins axis_tready_slice_0/is_selected] [get_bd_pins gpio_and_select_buff_0/select_out]
   connect_bd_net -net gpio_in_1 [get_bd_ports gpio_in] [get_bd_pins gpio_and_select_buff_0/gpio_in]
   connect_bd_net -net is_selected_1 [get_bd_ports is_selected] [get_bd_pins gpio_and_select_buff_0/select_in]
-  connect_bd_net -net microblaze_clk_1 [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aclk] [get_bd_pins axis_data_fifo_gpio/s_axis_aclk] [get_bd_pins axis_dwidth_converter_0/aclk]
+  connect_bd_net -net microblaze_clk_1 [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aclk] [get_bd_pins axis_data_fifo_gpio/s_axis_aclk] [get_bd_pins axis_dwidth_converter_0/aclk]
   connect_bd_net -net microblaze_reset_1 [get_bd_ports microblaze_resetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_clock_crossing/s_axis_aresetn] [get_bd_pins axis_data_fifo_gpio/s_axis_aresetn] [get_bd_pins axis_dwidth_converter_0/aresetn]
-  connect_bd_net -net pipeline_active_buff_0_active_out [get_bd_ports pipeline_active] [get_bd_pins pipeline_active_buff_0/active_out]
-  connect_bd_net -net rf_clock_1 [get_bd_ports rf_clock] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_data_fifo_clock_crossing/m_axis_aclk] [get_bd_pins axis_data_fifo_gpio/m_axis_aclk] [get_bd_pins axis_data_fifo_waveform/s_axis_aclk] [get_bd_pins axis_mux_0/clk] [get_bd_pins axis_tready_slice_0/clk]
-  connect_bd_net -net rf_reset_1 [get_bd_ports rf_resetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_data_fifo_waveform/s_axis_aresetn] [get_bd_pins axis_mux_0/reset] [get_bd_pins axis_tready_slice_0/reset]
+  connect_bd_net -net rf_clock_1 [get_bd_ports rf_clock] [get_bd_pins axis_data_fifo_clock_crossing/m_axis_aclk] [get_bd_pins axis_data_fifo_gpio/m_axis_aclk] [get_bd_pins axis_data_fifo_waveform/s_axis_aclk] [get_bd_pins axis_mux_0/clk] [get_bd_pins axis_tready_slice_0/clk]
+  connect_bd_net -net rf_reset_1 [get_bd_ports rf_resetn] [get_bd_pins axis_data_fifo_waveform/s_axis_aresetn] [get_bd_pins axis_mux_0/reset] [get_bd_pins axis_tready_slice_0/reset]
+  connect_bd_net -net state_out [get_bd_pins axis_tready_slice_0/state_out]
 
   # Create address segments
 

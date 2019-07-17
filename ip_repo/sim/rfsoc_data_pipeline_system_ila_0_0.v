@@ -57,39 +57,26 @@ module rfsoc_data_pipeline_system_ila_0_0 (
   clk,
   probe0,
   probe1,
-  SLOT_0_AXIS_tdata,
-  SLOT_0_AXIS_tlast,
-  SLOT_0_AXIS_tvalid,
-  SLOT_0_AXIS_tready,
-  resetn
+  probe2,
+  probe3,
+  probe4
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, ASSOCIATED_BUSIF SLOT_0_AXIS, ASSOCIATED_RESET resetn, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *)
 input wire clk;
-input wire [0 : 0] probe0;
-input wire [7 : 0] probe1;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TDATA" *)
-input wire [255 : 0] SLOT_0_AXIS_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TLAST" *)
-input wire SLOT_0_AXIS_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TVALID" *)
-input wire SLOT_0_AXIS_tvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_0_AXIS, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_data_pipeline_rf_clock, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TREADY" *)
-input wire SLOT_0_AXIS_tready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.resetn RST" *)
-input wire resetn;
+input wire [15 : 0] probe0;
+input wire [0 : 0] probe1;
+input wire [2 : 0] probe2;
+input wire [0 : 0] probe3;
+input wire [0 : 0] probe4;
 
   bd_9af0 inst (
     .clk(clk),
     .probe0(probe0),
     .probe1(probe1),
-    .SLOT_0_AXIS_tdata(SLOT_0_AXIS_tdata),
-    .SLOT_0_AXIS_tlast(SLOT_0_AXIS_tlast),
-    .SLOT_0_AXIS_tvalid(SLOT_0_AXIS_tvalid),
-    .SLOT_0_AXIS_tready(SLOT_0_AXIS_tready),
-    .resetn(resetn)
+    .probe2(probe2),
+    .probe3(probe3),
+    .probe4(probe4)
   );
 endmodule

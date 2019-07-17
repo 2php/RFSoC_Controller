@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jul 15 17:25:30 2019
+//Date        : Tue Jul 16 15:37:25 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_data_pipeline.bd
 //Design      : rfsoc_data_pipeline
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "rfsoc_data_pipeline,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rfsoc_data_pipeline,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+(* CORE_GENERATION_INFO = "rfsoc_data_pipeline,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rfsoc_data_pipeline,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
 module rfsoc_data_pipeline
    (S_AXIS_tdata,
     S_AXIS_tready,
@@ -47,9 +47,6 @@ module rfsoc_data_pipeline
   wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [7:0]axis_data_fifo_1_M_AXIS1_TDATA;
-  wire axis_data_fifo_1_M_AXIS1_TREADY;
-  wire axis_data_fifo_1_M_AXIS1_TVALID;
   wire [255:0]axis_data_fifo_1_M_AXIS_TDATA;
   wire axis_data_fifo_1_M_AXIS_TREADY;
   wire axis_data_fifo_1_M_AXIS_TVALID;
@@ -73,7 +70,6 @@ module rfsoc_data_pipeline
   wire axis_tready_slice_0_mloop_axis_TVALID;
   wire axis_tready_slice_0_pipeline_active;
   wire ext_trigger_1;
-  wire gpio_and_select_buff_0_ext_trigger_out;
   wire [31:0]gpio_and_select_buff_0_m_axis_TDATA;
   wire gpio_and_select_buff_0_m_axis_TREADY;
   wire gpio_and_select_buff_0_m_axis_TVALID;
@@ -82,12 +78,9 @@ module rfsoc_data_pipeline
   wire is_selected_1;
   wire microblaze_clk_1;
   wire microblaze_reset_1;
-  wire pipeline_active_buff_0_active_out;
-  wire [7:0]pipeline_active_buff_0_m_axis_TDATA;
-  wire pipeline_active_buff_0_m_axis_TREADY;
-  wire pipeline_active_buff_0_m_axis_TVALID;
   wire rf_clock_1;
   wire rf_reset_1;
+  wire [2:0]state_out;
 
   assign S_AXIS_0_1_TDATA = S_AXIS_tdata[31:0];
   assign S_AXIS_0_1_TVALID = S_AXIS_tvalid;
@@ -100,10 +93,10 @@ module rfsoc_data_pipeline
   assign m_axis_tvalid = axis_tready_slice_0_m_axis_TVALID;
   assign microblaze_clk_1 = microblaze_clk;
   assign microblaze_reset_1 = microblaze_resetn;
-  assign pipeline_active = pipeline_active_buff_0_active_out;
+  assign pipeline_active = axis_tready_slice_0_pipeline_active;
   assign rf_clock_1 = rf_clock;
   assign rf_reset_1 = rf_resetn;
-  rfsoc_data_pipeline_axis_data_fifo_0_5 axis_data_fifo_0
+  rfsoc_data_pipeline_axis_data_fifo_0_6 axis_data_fifo_0
        (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
@@ -112,17 +105,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(S_AXIS_0_1_TDATA),
         .s_axis_tready(S_AXIS_0_1_TREADY),
         .s_axis_tvalid(S_AXIS_0_1_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_1_7 axis_data_fifo_1
-       (.m_axis_aclk(microblaze_clk_1),
-        .m_axis_tdata(axis_data_fifo_1_M_AXIS1_TDATA),
-        .m_axis_tready(axis_data_fifo_1_M_AXIS1_TREADY),
-        .m_axis_tvalid(axis_data_fifo_1_M_AXIS1_TVALID),
-        .s_axis_aclk(rf_clock_1),
-        .s_axis_aresetn(rf_reset_1),
-        .s_axis_tdata(pipeline_active_buff_0_m_axis_TDATA),
-        .s_axis_tready(pipeline_active_buff_0_m_axis_TREADY),
-        .s_axis_tvalid(pipeline_active_buff_0_m_axis_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4 axis_data_fifo_clock_crossing
+  rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5 axis_data_fifo_clock_crossing
        (.m_axis_aclk(rf_clock_1),
         .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
@@ -132,7 +115,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
         .s_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
         .s_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_gpio_0 axis_data_fifo_gpio
+  rfsoc_data_pipeline_axis_data_fifo_gpio_1 axis_data_fifo_gpio
        (.m_axis_aclk(rf_clock_1),
         .m_axis_tdata(axis_data_fifo_gpio_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_gpio_M_AXIS_TREADY),
@@ -142,7 +125,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(gpio_and_select_buff_0_m_axis_TDATA),
         .s_axis_tready(gpio_and_select_buff_0_m_axis_TREADY),
         .s_axis_tvalid(gpio_and_select_buff_0_m_axis_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_waveform_4 axis_data_fifo_waveform
+  rfsoc_data_pipeline_axis_data_fifo_waveform_5 axis_data_fifo_waveform
        (.m_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
@@ -151,7 +134,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(axis_mux_0_m_axis_TDATA),
         .s_axis_tready(axis_mux_0_m_axis_TREADY),
         .s_axis_tvalid(axis_mux_0_m_axis_TVALID));
-  rfsoc_data_pipeline_axis_dwidth_converter_0_5 axis_dwidth_converter_0
+  rfsoc_data_pipeline_axis_dwidth_converter_0_6 axis_dwidth_converter_0
        (.aclk(microblaze_clk_1),
         .aresetn(microblaze_reset_1),
         .m_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
@@ -175,7 +158,7 @@ module rfsoc_data_pipeline
         .s1_axis_tvalid(axis_tready_slice_0_mloop_axis_TVALID));
   rfsoc_data_pipeline_axis_tready_slice_0_0 axis_tready_slice_0
        (.clk(rf_clock_1),
-        .ext_trigger(gpio_and_select_buff_0_ext_trigger_out),
+        .ext_trigger(ext_trigger_1),
         .gpio_in(Net),
         .is_selected(gpio_and_select_buff_0_select_out),
         .m_axis_tdata(axis_tready_slice_0_m_axis_TDATA),
@@ -189,10 +172,10 @@ module rfsoc_data_pipeline
         .s_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
         .s_axis_tlast(1'b0),
         .s_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
-        .s_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID));
+        .s_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
+        .state_out(state_out));
   rfsoc_data_pipeline_gpio_and_select_buff_0_0 gpio_and_select_buff_0
-       (.ext_trigger_in(ext_trigger_1),
-        .ext_trigger_out(gpio_and_select_buff_0_ext_trigger_out),
+       (.ext_trigger_in(1'b0),
         .gpio_in(gpio_in_1),
         .gpio_out(Net),
         .m_axis_tdata(gpio_and_select_buff_0_m_axis_TDATA),
@@ -203,13 +186,4 @@ module rfsoc_data_pipeline
         .s_axis_tvalid(axis_data_fifo_gpio_M_AXIS_TVALID),
         .select_in(is_selected_1),
         .select_out(gpio_and_select_buff_0_select_out));
-  rfsoc_data_pipeline_pipeline_active_buff_0_0 pipeline_active_buff_0
-       (.active_in(axis_tready_slice_0_pipeline_active),
-        .active_out(pipeline_active_buff_0_active_out),
-        .m_axis_tdata(pipeline_active_buff_0_m_axis_TDATA),
-        .m_axis_tready(pipeline_active_buff_0_m_axis_TREADY),
-        .m_axis_tvalid(pipeline_active_buff_0_m_axis_TVALID),
-        .s_axis_tdata(axis_data_fifo_1_M_AXIS1_TDATA),
-        .s_axis_tready(axis_data_fifo_1_M_AXIS1_TREADY),
-        .s_axis_tvalid(axis_data_fifo_1_M_AXIS1_TVALID));
 endmodule

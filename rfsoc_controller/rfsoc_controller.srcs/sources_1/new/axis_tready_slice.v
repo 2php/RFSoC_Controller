@@ -55,11 +55,14 @@ parameter pre_waveform_sclk = 10
     
     output wire pipeline_active,
     
-    input wire is_selected
+    input wire is_selected,
+    
+    output wire [2:0] state_out
 
     
     );
     
+    assign state_out = state;
     assign pipeline_active = state != state_wait_trigger;
     
     reg [2:0] state;

@@ -22,7 +22,8 @@
 
 module trigger_buffer
 #(
-    parameter count_cycles = 5
+    parameter count_cycles = 2,
+    parameter gpio_trigger = 11
 )
 (
     input wire clk,
@@ -44,7 +45,25 @@ module trigger_buffer
     input wire pipeline_active_in_13,
     input wire pipeline_active_in_14,
     input wire pipeline_active_in_15,
-    output reg trigger_out
+    
+    input wire [15:0] gpio_in,
+    
+    (* dont_touch = "true" *)output reg trigger_c0,
+    (* dont_touch = "true" *)output reg trigger_c1,
+    (* dont_touch = "true" *)output reg trigger_c2,
+    (* dont_touch = "true" *)output reg trigger_c3,
+    (* dont_touch = "true" *)output reg trigger_c4,
+    (* dont_touch = "true" *)output reg trigger_c5,
+    (* dont_touch = "true" *)output reg trigger_c6,
+    (* dont_touch = "true" *)output reg trigger_c7,
+    (* dont_touch = "true" *)output reg trigger_c8,
+    (* dont_touch = "true" *)output reg trigger_c9,
+    (* dont_touch = "true" *)output reg trigger_c10,
+    (* dont_touch = "true" *)output reg trigger_c11,
+    (* dont_touch = "true" *)output reg trigger_c12,
+    (* dont_touch = "true" *)output reg trigger_c13,
+    (* dont_touch = "true" *)output reg trigger_c14,
+    (* dont_touch = "true" *)output reg trigger_c15
     );
     
     reg [31:0] count;
@@ -75,7 +94,22 @@ module trigger_buffer
     initial begin
         count <= 0;
         state <= state_wait_trigger;
-        trigger_out <= 1'b0;
+        trigger_c0 <= 1'b0;
+        trigger_c1 <= 1'b0;
+        trigger_c2 <= 1'b0;
+        trigger_c3 <= 1'b0;
+        trigger_c4 <= 1'b0;
+        trigger_c5 <= 1'b0;
+        trigger_c6 <= 1'b0;
+        trigger_c7 <= 1'b0;
+        trigger_c8 <= 1'b0;
+        trigger_c9 <= 1'b0;
+        trigger_c10 <= 1'b0;
+        trigger_c11 <= 1'b0;
+        trigger_c12 <= 1'b0;
+        trigger_c13 <= 1'b0;
+        trigger_c14 <= 1'b0;
+        trigger_c15 <= 1'b0;
     end 
     
     
@@ -84,7 +118,22 @@ module trigger_buffer
         if(reset == 1'b0) begin
             count <= 0;
             state <= state_wait_trigger;
-            trigger_out <= 1'b0;
+            trigger_c0 <= 1'b0;
+            trigger_c1 <= 1'b0;
+            trigger_c2 <= 1'b0;
+            trigger_c3 <= 1'b0;
+            trigger_c4 <= 1'b0;
+            trigger_c5 <= 1'b0;
+            trigger_c6 <= 1'b0;
+            trigger_c7 <= 1'b0;
+            trigger_c8 <= 1'b0;
+            trigger_c9 <= 1'b0;
+            trigger_c10 <= 1'b0;
+            trigger_c11 <= 1'b0;
+            trigger_c12 <= 1'b0;
+            trigger_c13 <= 1'b0;
+            trigger_c14 <= 1'b0;
+            trigger_c15 <= 1'b0;
         end
         
         else begin
@@ -92,9 +141,24 @@ module trigger_buffer
             case(state)
             
                 state_wait_trigger: begin
-                    if(trigger_in == 1'b1 && pipeline_active_in == 1'b0) begin
+                    if((trigger_in == 1'b1 || gpio_in[gpio_trigger] == 1'b1)&& pipeline_active_in == 1'b0) begin
                         state <= state_trigger;
-                        trigger_out <= 1'b1;
+                        trigger_c0 <= 1'b1;
+                        trigger_c1 <= 1'b1;
+                        trigger_c2 <= 1'b1;
+                        trigger_c3 <= 1'b1;
+                        trigger_c4 <= 1'b1;
+                        trigger_c5 <= 1'b1;
+                        trigger_c6 <= 1'b1;
+                        trigger_c7 <= 1'b1;
+                        trigger_c8 <= 1'b1;
+                        trigger_c9 <= 1'b1;
+                        trigger_c10 <= 1'b1;
+                        trigger_c11 <= 1'b1;
+                        trigger_c12 <= 1'b1;
+                        trigger_c13 <= 1'b1;
+                        trigger_c14 <= 1'b1;
+                        trigger_c15 <= 1'b1;
                     end
                 end
                 
@@ -102,7 +166,22 @@ module trigger_buffer
                     if(count > count_cycles) begin
                         count <= 0;
                         state <= state_cleanup;
-                        trigger_out <= 1'b0;
+                        trigger_c0 <= 1'b0;
+                        trigger_c1 <= 1'b0;
+                        trigger_c2 <= 1'b0;
+                        trigger_c3 <= 1'b0;
+                        trigger_c4 <= 1'b0;
+                        trigger_c5 <= 1'b0;
+                        trigger_c6 <= 1'b0;
+                        trigger_c7 <= 1'b0;
+                        trigger_c8 <= 1'b0;
+                        trigger_c9 <= 1'b0;
+                        trigger_c10 <= 1'b0;
+                        trigger_c11 <= 1'b0;
+                        trigger_c12 <= 1'b0;
+                        trigger_c13 <= 1'b0;
+                        trigger_c14 <= 1'b0;
+                        trigger_c15 <= 1'b0;
                     end
                     else begin
                         count <= count + 1'b1;
@@ -110,7 +189,7 @@ module trigger_buffer
                 end
                 
                 state_cleanup: begin
-                    if(trigger_in == 1'b0 && pipeline_active_in == 1'b0) begin
+                    if(trigger_in == 1'b0 && gpio_in[gpio_trigger] == 1'b0 && pipeline_active_in == 1'b0) begin
                         state <= state_wait_trigger;
                     end
                 end

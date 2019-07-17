@@ -10,53 +10,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="645648fs"></ZoomEndTime>
+      <ZoomEndTime time="461379fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="351"></NameColumnWidth>
-      <ValueColumnWidth column_width="457"></ValueColumnWidth>
+      <ValueColumnWidth column_width="453"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
-   <wvobject fp_name="group90" type="group">
-      <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group91" type="group">
-         <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : TVALID</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tready" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
-            <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : TREADY</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tlast" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
-            <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : TLAST</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tdata" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/rfsoc_data_pipeline_3/inst/system_ila_0/inst/net_slot_0_axis_tdata[255:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[255:0]</obj_property>
-            <obj_property name="label">slot_0 : axis_tready_slice_0_m_axis : TDATA</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-   </wvobject>
+   <WVObjectSize size="0" />
 </wave_config>

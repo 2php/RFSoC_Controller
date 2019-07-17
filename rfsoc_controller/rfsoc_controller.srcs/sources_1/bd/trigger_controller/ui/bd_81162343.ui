@@ -1,0 +1,43 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port rf_clk -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port rf_reset -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port microblaze_clk -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
+preplace port microblaze_reset -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace port ext_trigger_in -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port pipeline_active_in_0 -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace port pipeline_active_in_1 -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port pipeline_active_in_2 -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
+preplace port pipeline_active_in_3 -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port trigger_c3 -pg 1 -lvl 3 -x 640 -y 340 -defaultsOSRD
+preplace port trigger_c2 -pg 1 -lvl 3 -x 640 -y 320 -defaultsOSRD
+preplace port trigger_c1 -pg 1 -lvl 3 -x 640 -y 300 -defaultsOSRD
+preplace port trigger_c0 -pg 1 -lvl 3 -x 640 -y 280 -defaultsOSRD
+preplace portBus gpio_in -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace inst trigger_module_0 -pg 1 -lvl 2 -x 470 -y 310 -defaultsOSRD
+preplace inst gpio_buffer_0 -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 470 -y 110 -defaultsOSRD
+preplace netloc rf_reset_1 1 0 2 NJ 260 NJ
+preplace netloc microblaze_reset_1 1 0 2 10J 10 320J
+preplace netloc microblaze_clk_1 1 0 2 NJ 160 310J
+preplace netloc rf_clk_1 1 0 2 NJ 180 320
+preplace netloc gpio_in_1 1 0 1 NJ 100
+preplace netloc gpio_buffer_0_gpio_out 1 1 1 300 100n
+preplace netloc trigger_in_0_1 1 0 2 NJ 280 NJ
+preplace netloc pipeline_active_in_0_0_1 1 0 2 NJ 300 NJ
+preplace netloc pipeline_active_in_1_0_1 1 0 2 NJ 320 NJ
+preplace netloc pipeline_active_in_2_0_1 1 0 2 NJ 340 NJ
+preplace netloc pipeline_active_in_3_0_1 1 0 2 NJ 360 NJ
+preplace netloc trigger_module_0_trigger_c3 1 2 1 NJ 340
+preplace netloc trigger_module_0_trigger_c2 1 2 1 NJ 320
+preplace netloc trigger_module_0_trigger_c1 1 2 1 NJ 300
+preplace netloc trigger_module_0_trigger_c0 1 2 1 NJ 280
+preplace netloc axis_data_fifo_0_M_AXIS 1 0 3 20 20 NJ 20 620
+preplace netloc gpio_buffer_0_m_axis 1 1 1 N 80
+levelinfo -pg 1 -10 160 470 640
+pagesize -pg 1 -db -bbox -sgen -190 0 760 440
+"
+}
+

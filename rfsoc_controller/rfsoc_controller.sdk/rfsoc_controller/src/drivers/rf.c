@@ -140,6 +140,7 @@ void rf_load_bitstream(u8* stream, u32 length, u8 channel)
 
 void rf_set_repeat_cycles(u8 channel, u32 cycles)
 {
+
 	gpio_select_channel(channel);
 	gpio_write_repeat_cycles(cycles);
 }
@@ -196,9 +197,9 @@ void rf_set_loopback(u8 option)
 
 void rf_trigger()
 {
-	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x01);
-	usleep(250000);
-	gpio_set_pin(RF_BANK, FIFO_TREADY_PIN, 0x00);
+	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x01);
+	//usleep();
+	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x00);
 }
 
 /////////////////////////////////////////////////////////////////////////

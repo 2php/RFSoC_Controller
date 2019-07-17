@@ -33,11 +33,11 @@
       "axi_gpio_0": "",
       "usp_rf_data_converter_0": "",
       "proc_sys_reset_0": "",
-      "channel_select_0": "",
-      "trigger_buffer_0": "",
       "proc_sys_reset_1": "",
       "proc_sys_reset_2": "",
       "proc_sys_reset_3": "",
+      "system_ila_0": "",
+      "system_ila_1": "",
       "rfsoc_data_pipeline_0": "",
       "rfsoc_data_pipeline_10": "",
       "rfsoc_data_pipeline_11": "",
@@ -53,7 +53,12 @@
       "rfsoc_data_pipeline_6": "",
       "rfsoc_data_pipeline_7": "",
       "rfsoc_data_pipeline_8": "",
-      "rfsoc_data_pipeline_9": ""
+      "rfsoc_data_pipeline_9": "",
+      "channel_select_0": "",
+      "trigger_controller_0": "",
+      "trigger_controller_1": "",
+      "trigger_controller_2": "",
+      "trigger_controller_3": ""
     },
     "interface_ports": {
       "diff_clock_rtl": {
@@ -331,16 +336,16 @@
               "dlmb_v10/LMB_M"
             ]
           },
+          "microblaze_0_dlmb_cntlr": {
+            "interface_ports": [
+              "dlmb_bram_if_cntlr/BRAM_PORT",
+              "lmb_bram/BRAM_PORTA"
+            ]
+          },
           "microblaze_0_dlmb_bus": {
             "interface_ports": [
               "dlmb_v10/LMB_Sl_0",
               "dlmb_bram_if_cntlr/SLMB"
-            ]
-          },
-          "microblaze_0_ilmb_cntlr": {
-            "interface_ports": [
-              "ilmb_bram_if_cntlr/BRAM_PORT",
-              "lmb_bram/BRAM_PORTB"
             ]
           },
           "microblaze_0_ilmb": {
@@ -349,16 +354,16 @@
               "ilmb_v10/LMB_M"
             ]
           },
+          "microblaze_0_ilmb_cntlr": {
+            "interface_ports": [
+              "ilmb_bram_if_cntlr/BRAM_PORT",
+              "lmb_bram/BRAM_PORTB"
+            ]
+          },
           "microblaze_0_ilmb_bus": {
             "interface_ports": [
               "ilmb_v10/LMB_Sl_0",
               "ilmb_bram_if_cntlr/SLMB"
-            ]
-          },
-          "microblaze_0_dlmb_cntlr": {
-            "interface_ports": [
-              "dlmb_bram_if_cntlr/BRAM_PORT",
-              "lmb_bram/BRAM_PORTA"
             ]
           }
         },
@@ -802,22 +807,16 @@
               "s00_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
           "m00_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
             ]
           },
-          "m01_couplers_to_microblaze_0_axi_periph": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -826,16 +825,22 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m01_couplers": {
+          "m01_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "m02_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M02_AXI",
               "m02_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           },
           "m03_couplers_to_microblaze_0_axi_periph": {
@@ -1194,6 +1199,152 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "top_level_proc_sys_reset_0_0"
       },
+      "proc_sys_reset_1": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "top_level_proc_sys_reset_1_0"
+      },
+      "proc_sys_reset_2": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "top_level_proc_sys_reset_1_1"
+      },
+      "proc_sys_reset_3": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "top_level_proc_sys_reset_2_0"
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "top_level_system_ila_0_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE3_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "system_ila_1": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "top_level_system_ila_1_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "INTERFACE"
+          },
+          "C_NUM_MONITOR_SLOTS": {
+            "value": "2"
+          },
+          "C_SLOT_0_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_0_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_0_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_0_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "C_SLOT_1_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_1_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_1_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_1_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "interface_ports": {
+          "SLOT_0_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "SLOT_1_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        }
+      },
+      "rfsoc_data_pipeline_0": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_0_0"
+      },
+      "rfsoc_data_pipeline_10": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_10_0"
+      },
+      "rfsoc_data_pipeline_11": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_11_0"
+      },
+      "rfsoc_data_pipeline_12": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_12_0"
+      },
+      "rfsoc_data_pipeline_13": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_13_0"
+      },
+      "rfsoc_data_pipeline_14": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_14_0"
+      },
+      "rfsoc_data_pipeline_15": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_15_0"
+      },
+      "rfsoc_data_pipeline_1": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_1_0"
+      },
+      "rfsoc_data_pipeline_2": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_2_0"
+      },
+      "rfsoc_data_pipeline_3": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_3_0"
+      },
+      "rfsoc_data_pipeline_4": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_4_0"
+      },
+      "rfsoc_data_pipeline_5": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_5_0"
+      },
+      "rfsoc_data_pipeline_6": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_6_0"
+      },
+      "rfsoc_data_pipeline_7": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_7_0"
+      },
+      "rfsoc_data_pipeline_8": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_8_0"
+      },
+      "rfsoc_data_pipeline_9": {
+        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
+        "xci_name": "top_level_rfsoc_data_pipeline_9_0"
+      },
       "channel_select_0": {
         "vlnv": "xilinx.com:module_ref:channel_select:1.0",
         "xci_name": "top_level_channel_select_0_0",
@@ -1276,164 +1427,21 @@
           }
         }
       },
-      "trigger_buffer_0": {
-        "vlnv": "xilinx.com:module_ref:trigger_buffer:1.0",
-        "xci_name": "top_level_trigger_buffer_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "trigger_buffer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "top_level_clk_wiz_1_0_clk_out1",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "trigger_in": {
-            "direction": "I"
-          },
-          "pipeline_active_in_0": {
-            "direction": "I"
-          },
-          "pipeline_active_in_1": {
-            "direction": "I"
-          },
-          "pipeline_active_in_2": {
-            "direction": "I"
-          },
-          "pipeline_active_in_3": {
-            "direction": "I"
-          },
-          "pipeline_active_in_4": {
-            "direction": "I"
-          },
-          "pipeline_active_in_5": {
-            "direction": "I"
-          },
-          "pipeline_active_in_6": {
-            "direction": "I"
-          },
-          "pipeline_active_in_7": {
-            "direction": "I"
-          },
-          "pipeline_active_in_8": {
-            "direction": "I"
-          },
-          "pipeline_active_in_9": {
-            "direction": "I"
-          },
-          "pipeline_active_in_10": {
-            "direction": "I"
-          },
-          "pipeline_active_in_11": {
-            "direction": "I"
-          },
-          "pipeline_active_in_12": {
-            "direction": "I"
-          },
-          "pipeline_active_in_13": {
-            "direction": "I"
-          },
-          "pipeline_active_in_14": {
-            "direction": "I"
-          },
-          "pipeline_active_in_15": {
-            "direction": "I"
-          },
-          "trigger_out": {
-            "direction": "O"
-          }
-        }
+      "trigger_controller_0": {
+        "vlnv": "xilinx.com:user:trigger_controller:1.0",
+        "xci_name": "top_level_trigger_controller_0_0"
       },
-      "proc_sys_reset_1": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "top_level_proc_sys_reset_1_0"
+      "trigger_controller_1": {
+        "vlnv": "xilinx.com:user:trigger_controller:1.0",
+        "xci_name": "top_level_trigger_controller_1_0"
       },
-      "proc_sys_reset_2": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "top_level_proc_sys_reset_1_1"
+      "trigger_controller_2": {
+        "vlnv": "xilinx.com:user:trigger_controller:1.0",
+        "xci_name": "top_level_trigger_controller_2_0"
       },
-      "proc_sys_reset_3": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "top_level_proc_sys_reset_2_0"
-      },
-      "rfsoc_data_pipeline_0": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_0_0"
-      },
-      "rfsoc_data_pipeline_10": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_10_0"
-      },
-      "rfsoc_data_pipeline_11": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_11_0"
-      },
-      "rfsoc_data_pipeline_12": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_12_0"
-      },
-      "rfsoc_data_pipeline_13": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_13_0"
-      },
-      "rfsoc_data_pipeline_14": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_14_0"
-      },
-      "rfsoc_data_pipeline_15": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_15_0"
-      },
-      "rfsoc_data_pipeline_1": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_1_0"
-      },
-      "rfsoc_data_pipeline_2": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_2_0"
-      },
-      "rfsoc_data_pipeline_3": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_3_0"
-      },
-      "rfsoc_data_pipeline_4": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_4_0"
-      },
-      "rfsoc_data_pipeline_5": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_5_0"
-      },
-      "rfsoc_data_pipeline_6": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_6_0"
-      },
-      "rfsoc_data_pipeline_7": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_7_0"
-      },
-      "rfsoc_data_pipeline_8": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_8_0"
-      },
-      "rfsoc_data_pipeline_9": {
-        "vlnv": "xilinx.com:user:rfsoc_data_pipeline:1.0",
-        "xci_name": "top_level_rfsoc_data_pipeline_9_0"
+      "trigger_controller_3": {
+        "vlnv": "xilinx.com:user:trigger_controller:1.0",
+        "xci_name": "top_level_trigger_controller_3_0"
       }
     },
     "interface_nets": {
@@ -1441,12 +1449,6 @@
         "interface_ports": [
           "rfsoc_data_pipeline_7/m_axis",
           "usp_rf_data_converter_0/s13_axis"
-        ]
-      },
-      "microblaze_0_M7_AXIS": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_7/S_AXIS",
-          "microblaze_0/M7_AXIS"
         ]
       },
       "usp_rf_data_converter_0_vout02": {
@@ -1467,160 +1469,10 @@
           "usp_rf_data_converter_0/vout01"
         ]
       },
-      "microblaze_0_debug": {
+      "microblaze_0_M7_AXIS": {
         "interface_ports": [
-          "mdm_1/MBDEBUG_0",
-          "microblaze_0/DEBUG"
-        ]
-      },
-      "dac0_clk_1": {
-        "interface_ports": [
-          "dac0_clk",
-          "usp_rf_data_converter_0/dac0_clk"
-        ]
-      },
-      "microblaze_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M01_AXI",
-          "axi_uartlite_0/S_AXI"
-        ]
-      },
-      "microblaze_0_mdm_axi": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M00_AXI",
-          "mdm_1/S_AXI"
-        ]
-      },
-      "usp_rf_data_converter_0_vout03": {
-        "interface_ports": [
-          "vout03",
-          "usp_rf_data_converter_0/vout03"
-        ]
-      },
-      "microblaze_0_M3_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M3_AXIS",
-          "rfsoc_data_pipeline_3/S_AXIS"
-        ]
-      },
-      "microblaze_0_M1_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M1_AXIS",
-          "rfsoc_data_pipeline_1/S_AXIS"
-        ]
-      },
-      "microblaze_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M02_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "rfsoc_data_pipeline_2_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_2/m_axis",
-          "usp_rf_data_converter_0/s02_axis"
-        ]
-      },
-      "microblaze_0_axi_dp": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/S00_AXI",
-          "microblaze_0/M_AXI_DP"
-        ]
-      },
-      "usp_rf_data_converter_0_vout00": {
-        "interface_ports": [
-          "vout00",
-          "usp_rf_data_converter_0/vout00"
-        ]
-      },
-      "microblaze_0_M2_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M2_AXIS",
-          "rfsoc_data_pipeline_2/S_AXIS"
-        ]
-      },
-      "rfsoc_data_pipeline_1_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_1/m_axis",
-          "usp_rf_data_converter_0/s01_axis"
-        ]
-      },
-      "diff_clock_rtl_1": {
-        "interface_ports": [
-          "diff_clock_rtl",
-          "clk_wiz_1/CLK_IN1_D"
-        ]
-      },
-      "microblaze_0_axi_periph_M03_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M03_AXI",
-          "usp_rf_data_converter_0/s_axi"
-        ]
-      },
-      "microblaze_0_dlmb_1": {
-        "interface_ports": [
-          "microblaze_0/DLMB",
-          "microblaze_0_local_memory/DLMB"
-        ]
-      },
-      "microblaze_0_M0_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M0_AXIS",
-          "rfsoc_data_pipeline_0/S_AXIS"
-        ]
-      },
-      "rfsoc_data_pipeline_3_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_3/m_axis",
-          "usp_rf_data_converter_0/s03_axis"
-        ]
-      },
-      "rfsoc_data_pipeline_0_m_axis_0": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_0/m_axis",
-          "usp_rf_data_converter_0/s00_axis"
-        ]
-      },
-      "sysref_in_1": {
-        "interface_ports": [
-          "sysref_in",
-          "usp_rf_data_converter_0/sysref_in"
-        ]
-      },
-      "usp_rf_data_converter_0_vout32": {
-        "interface_ports": [
-          "vout32",
-          "usp_rf_data_converter_0/vout32"
-        ]
-      },
-      "microblaze_0_M14_AXIS": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_14/S_AXIS",
-          "microblaze_0/M14_AXIS"
-        ]
-      },
-      "rfsoc_data_pipeline_13_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_13/m_axis",
-          "usp_rf_data_converter_0/s31_axis"
-        ]
-      },
-      "rfsoc_data_pipeline_9_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_9/m_axis",
-          "usp_rf_data_converter_0/s21_axis"
-        ]
-      },
-      "rfsoc_data_pipeline_4_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_4/m_axis",
-          "usp_rf_data_converter_0/s10_axis"
-        ]
-      },
-      "usp_rf_data_converter_0_vout13": {
-        "interface_ports": [
-          "vout13",
-          "usp_rf_data_converter_0/vout13"
+          "rfsoc_data_pipeline_7/S_AXIS",
+          "microblaze_0/M7_AXIS"
         ]
       },
       "microblaze_0_M6_AXIS": {
@@ -1633,12 +1485,6 @@
         "interface_ports": [
           "microblaze_0/M12_AXIS",
           "rfsoc_data_pipeline_12/S_AXIS"
-        ]
-      },
-      "microblaze_0_M15_AXIS": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_15/S_AXIS",
-          "microblaze_0/M15_AXIS"
         ]
       },
       "rfsoc_data_pipeline_11_m_axis": {
@@ -1659,22 +1505,262 @@
           "usp_rf_data_converter_0/s32_axis"
         ]
       },
+      "sysref_in_1": {
+        "interface_ports": [
+          "sysref_in",
+          "usp_rf_data_converter_0/sysref_in"
+        ]
+      },
+      "microblaze_0_M2_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M2_AXIS",
+          "rfsoc_data_pipeline_2/S_AXIS"
+        ]
+      },
       "dac2_clk_1": {
         "interface_ports": [
           "dac2_clk",
           "usp_rf_data_converter_0/dac2_clk"
         ]
       },
-      "rfsoc_data_pipeline_6_m_axis": {
+      "rfsoc_data_pipeline_3_m_axis_0": {
         "interface_ports": [
-          "rfsoc_data_pipeline_6/m_axis",
-          "usp_rf_data_converter_0/s12_axis"
+          "rfsoc_data_pipeline_3/m_axis",
+          "usp_rf_data_converter_0/s03_axis"
+        ]
+      },
+      "usp_rf_data_converter_0_vout32": {
+        "interface_ports": [
+          "vout32",
+          "usp_rf_data_converter_0/vout32"
+        ]
+      },
+      "microblaze_0_debug": {
+        "interface_ports": [
+          "mdm_1/MBDEBUG_0",
+          "microblaze_0/DEBUG"
+        ]
+      },
+      "rfsoc_data_pipeline_0_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_0/m_axis",
+          "usp_rf_data_converter_0/s00_axis",
+          "system_ila_1/SLOT_1_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "microblaze_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M02_AXI",
+          "axi_gpio_0/S_AXI"
+        ]
+      },
+      "rfsoc_data_pipeline_13_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_13/m_axis",
+          "usp_rf_data_converter_0/s31_axis"
+        ]
+      },
+      "microblaze_0_M15_AXIS": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_15/S_AXIS",
+          "microblaze_0/M15_AXIS"
+        ]
+      },
+      "usp_rf_data_converter_0_vout03": {
+        "interface_ports": [
+          "vout03",
+          "usp_rf_data_converter_0/vout03"
+        ]
+      },
+      "usp_rf_data_converter_0_vout13": {
+        "interface_ports": [
+          "vout13",
+          "usp_rf_data_converter_0/vout13"
+        ]
+      },
+      "microblaze_0_axi_dp": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/S00_AXI",
+          "microblaze_0/M_AXI_DP"
+        ]
+      },
+      "microblaze_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M01_AXI",
+          "axi_uartlite_0/S_AXI"
+        ]
+      },
+      "microblaze_0_mdm_axi": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M00_AXI",
+          "mdm_1/S_AXI"
+        ]
+      },
+      "rfsoc_data_pipeline_2_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_2/m_axis",
+          "usp_rf_data_converter_0/s02_axis"
+        ]
+      },
+      "diff_clock_rtl_1": {
+        "interface_ports": [
+          "diff_clock_rtl",
+          "clk_wiz_1/CLK_IN1_D"
+        ]
+      },
+      "microblaze_0_M14_AXIS": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_14/S_AXIS",
+          "microblaze_0/M14_AXIS"
+        ]
+      },
+      "microblaze_0_M1_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M1_AXIS",
+          "rfsoc_data_pipeline_1/S_AXIS"
+        ]
+      },
+      "microblaze_0_axi_periph_M03_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M03_AXI",
+          "usp_rf_data_converter_0/s_axi"
+        ]
+      },
+      "usp_rf_data_converter_0_vout00": {
+        "interface_ports": [
+          "vout00",
+          "usp_rf_data_converter_0/vout00"
+        ]
+      },
+      "microblaze_0_dlmb_1": {
+        "interface_ports": [
+          "microblaze_0/DLMB",
+          "microblaze_0_local_memory/DLMB"
+        ]
+      },
+      "microblaze_0_M0_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M0_AXIS",
+          "rfsoc_data_pipeline_0/S_AXIS"
+        ]
+      },
+      "rfsoc_data_pipeline_9_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_9/m_axis",
+          "usp_rf_data_converter_0/s21_axis"
+        ]
+      },
+      "rfsoc_data_pipeline_4_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_4/m_axis",
+          "usp_rf_data_converter_0/s10_axis"
+        ]
+      },
+      "dac0_clk_1": {
+        "interface_ports": [
+          "dac0_clk",
+          "usp_rf_data_converter_0/dac0_clk"
+        ]
+      },
+      "microblaze_0_M3_AXIS": {
+        "interface_ports": [
+          "microblaze_0/M3_AXIS",
+          "rfsoc_data_pipeline_3/S_AXIS"
+        ]
+      },
+      "rfsoc_data_pipeline_1_m_axis_0": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_1/m_axis",
+          "usp_rf_data_converter_0/s01_axis",
+          "system_ila_1/SLOT_0_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "microblaze_0_M4_AXIS": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_4/S_AXIS",
+          "microblaze_0/M4_AXIS"
+        ]
+      },
+      "usp_rf_data_converter_0_vout31": {
+        "interface_ports": [
+          "vout31",
+          "usp_rf_data_converter_0/vout31"
+        ]
+      },
+      "usp_rf_data_converter_0_vout30": {
+        "interface_ports": [
+          "vout30",
+          "usp_rf_data_converter_0/vout30"
+        ]
+      },
+      "rfsoc_data_pipeline_5_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_5/m_axis",
+          "usp_rf_data_converter_0/s11_axis"
+        ]
+      },
+      "microblaze_0_M5_AXIS": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_5/S_AXIS",
+          "microblaze_0/M5_AXIS"
+        ]
+      },
+      "usp_rf_data_converter_0_vout11": {
+        "interface_ports": [
+          "vout11",
+          "usp_rf_data_converter_0/vout11"
         ]
       },
       "usp_rf_data_converter_0_vout23": {
         "interface_ports": [
           "vout23",
           "usp_rf_data_converter_0/vout23"
+        ]
+      },
+      "rfsoc_data_pipeline_10_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_10/m_axis",
+          "usp_rf_data_converter_0/s22_axis"
+        ]
+      },
+      "usp_rf_data_converter_0_vout33": {
+        "interface_ports": [
+          "vout33",
+          "usp_rf_data_converter_0/vout33"
+        ]
+      },
+      "usp_rf_data_converter_0_vout12": {
+        "interface_ports": [
+          "vout12",
+          "usp_rf_data_converter_0/vout12"
+        ]
+      },
+      "microblaze_0_M8_AXIS": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_8/S_AXIS",
+          "microblaze_0/M8_AXIS"
+        ]
+      },
+      "rfsoc_data_pipeline_6_m_axis": {
+        "interface_ports": [
+          "rfsoc_data_pipeline_6/m_axis",
+          "usp_rf_data_converter_0/s12_axis"
         ]
       },
       "rfsoc_data_pipeline_12_m_axis": {
@@ -1687,42 +1773,6 @@
         "interface_ports": [
           "vout20",
           "usp_rf_data_converter_0/vout20"
-        ]
-      },
-      "rfsoc_data_pipeline_15_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_15/m_axis",
-          "usp_rf_data_converter_0/s33_axis"
-        ]
-      },
-      "microblaze_0_M13_AXIS": {
-        "interface_ports": [
-          "microblaze_0/M13_AXIS",
-          "rfsoc_data_pipeline_13/S_AXIS"
-        ]
-      },
-      "rfsoc_data_pipeline_8_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_8/m_axis",
-          "usp_rf_data_converter_0/s20_axis"
-        ]
-      },
-      "microblaze_0_M8_AXIS": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_8/S_AXIS",
-          "microblaze_0/M8_AXIS"
-        ]
-      },
-      "usp_rf_data_converter_0_vout30": {
-        "interface_ports": [
-          "vout30",
-          "usp_rf_data_converter_0/vout30"
-        ]
-      },
-      "usp_rf_data_converter_0_vout22": {
-        "interface_ports": [
-          "vout22",
-          "usp_rf_data_converter_0/vout22"
         ]
       },
       "dac3_clk_1": {
@@ -1743,58 +1793,40 @@
           "rfsoc_data_pipeline_11/S_AXIS"
         ]
       },
-      "rfsoc_data_pipeline_5_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_5/m_axis",
-          "usp_rf_data_converter_0/s11_axis"
-        ]
-      },
-      "rfsoc_data_pipeline_10_m_axis": {
-        "interface_ports": [
-          "rfsoc_data_pipeline_10/m_axis",
-          "usp_rf_data_converter_0/s22_axis"
-        ]
-      },
       "usp_rf_data_converter_0_vout21": {
         "interface_ports": [
           "vout21",
           "usp_rf_data_converter_0/vout21"
         ]
       },
-      "microblaze_0_M4_AXIS": {
+      "microblaze_0_M13_AXIS": {
         "interface_ports": [
-          "rfsoc_data_pipeline_4/S_AXIS",
-          "microblaze_0/M4_AXIS"
+          "microblaze_0/M13_AXIS",
+          "rfsoc_data_pipeline_13/S_AXIS"
         ]
       },
-      "usp_rf_data_converter_0_vout33": {
+      "rfsoc_data_pipeline_8_m_axis": {
         "interface_ports": [
-          "vout33",
-          "usp_rf_data_converter_0/vout33"
+          "rfsoc_data_pipeline_8/m_axis",
+          "usp_rf_data_converter_0/s20_axis"
         ]
       },
-      "microblaze_0_M5_AXIS": {
+      "usp_rf_data_converter_0_vout22": {
         "interface_ports": [
-          "rfsoc_data_pipeline_5/S_AXIS",
-          "microblaze_0/M5_AXIS"
+          "vout22",
+          "usp_rf_data_converter_0/vout22"
         ]
       },
-      "usp_rf_data_converter_0_vout12": {
+      "rfsoc_data_pipeline_15_m_axis": {
         "interface_ports": [
-          "vout12",
-          "usp_rf_data_converter_0/vout12"
+          "rfsoc_data_pipeline_15/m_axis",
+          "usp_rf_data_converter_0/s33_axis"
         ]
       },
-      "usp_rf_data_converter_0_vout31": {
+      "dac1_clk_1": {
         "interface_ports": [
-          "vout31",
-          "usp_rf_data_converter_0/vout31"
-        ]
-      },
-      "usp_rf_data_converter_0_vout11": {
-        "interface_ports": [
-          "vout11",
-          "usp_rf_data_converter_0/vout11"
+          "dac1_clk",
+          "usp_rf_data_converter_0/dac1_clk"
         ]
       },
       "axi_gpio_0_GPIO": {
@@ -1807,12 +1839,6 @@
         "interface_ports": [
           "vout10",
           "usp_rf_data_converter_0/vout10"
-        ]
-      },
-      "dac1_clk_1": {
-        "interface_ports": [
-          "dac1_clk",
-          "usp_rf_data_converter_0/dac1_clk"
         ]
       }
     },
@@ -1833,8 +1859,6 @@
           "microblaze_0_axi_periph/M02_ACLK",
           "usp_rf_data_converter_0/s_axi_aclk",
           "microblaze_0_axi_periph/M03_ACLK",
-          "channel_select_0/mb_clk",
-          "trigger_buffer_0/clk",
           "rfsoc_data_pipeline_0/microblaze_clk",
           "rfsoc_data_pipeline_10/microblaze_clk",
           "rfsoc_data_pipeline_11/microblaze_clk",
@@ -1850,7 +1874,12 @@
           "rfsoc_data_pipeline_6/microblaze_clk",
           "rfsoc_data_pipeline_7/microblaze_clk",
           "rfsoc_data_pipeline_8/microblaze_clk",
-          "rfsoc_data_pipeline_9/microblaze_clk"
+          "rfsoc_data_pipeline_9/microblaze_clk",
+          "channel_select_0/mb_clk",
+          "trigger_controller_0/microblaze_clk",
+          "trigger_controller_1/microblaze_clk",
+          "trigger_controller_2/microblaze_clk",
+          "trigger_controller_3/microblaze_clk"
         ]
       },
       "rst_clk_wiz_1_100M_mb_reset": {
@@ -1878,8 +1907,6 @@
           "microblaze_0_axi_periph/M02_ARESETN",
           "usp_rf_data_converter_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M03_ARESETN",
-          "channel_select_0/mb_reset",
-          "trigger_buffer_0/reset",
           "rfsoc_data_pipeline_0/microblaze_resetn",
           "rfsoc_data_pipeline_10/microblaze_resetn",
           "rfsoc_data_pipeline_11/microblaze_resetn",
@@ -1895,7 +1922,12 @@
           "rfsoc_data_pipeline_6/microblaze_resetn",
           "rfsoc_data_pipeline_7/microblaze_resetn",
           "rfsoc_data_pipeline_8/microblaze_resetn",
-          "rfsoc_data_pipeline_9/microblaze_resetn"
+          "rfsoc_data_pipeline_9/microblaze_resetn",
+          "channel_select_0/mb_reset",
+          "trigger_controller_0/microblaze_reset",
+          "trigger_controller_1/microblaze_reset",
+          "trigger_controller_2/microblaze_reset",
+          "trigger_controller_3/microblaze_reset"
         ]
       },
       "mdm_1_debug_sys_rst": {
@@ -1943,16 +1975,10 @@
           "tx_0"
         ]
       },
-      "ext_trigger_0_0_1": {
-        "ports": [
-          "ext_trigger_0_0",
-          "trigger_buffer_0/trigger_in"
-        ]
-      },
       "Net": {
         "ports": [
           "axi_gpio_0/gpio2_io_o",
-          "channel_select_0/gpio_in",
+          "system_ila_0/probe0",
           "rfsoc_data_pipeline_0/gpio_in",
           "rfsoc_data_pipeline_10/gpio_in",
           "rfsoc_data_pipeline_11/gpio_in",
@@ -1968,98 +1994,77 @@
           "rfsoc_data_pipeline_6/gpio_in",
           "rfsoc_data_pipeline_7/gpio_in",
           "rfsoc_data_pipeline_8/gpio_in",
-          "rfsoc_data_pipeline_9/gpio_in"
-        ]
+          "rfsoc_data_pipeline_9/gpio_in",
+          "channel_select_0/gpio_in",
+          "trigger_controller_0/gpio_in",
+          "trigger_controller_1/gpio_in",
+          "trigger_controller_2/gpio_in",
+          "trigger_controller_3/gpio_in"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "Net3": {
         "ports": [
           "usp_rf_data_converter_0/clk_dac0",
           "usp_rf_data_converter_0/s0_axis_aclk",
           "proc_sys_reset_0/slowest_sync_clk",
+          "system_ila_1/clk",
           "rfsoc_data_pipeline_0/rf_clock",
           "rfsoc_data_pipeline_1/rf_clock",
           "rfsoc_data_pipeline_2/rf_clock",
-          "rfsoc_data_pipeline_3/rf_clock"
+          "rfsoc_data_pipeline_3/rf_clock",
+          "system_ila_0/clk",
+          "trigger_controller_0/rf_clk"
         ]
       },
       "Net4": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
           "usp_rf_data_converter_0/s0_axis_aresetn",
+          "system_ila_1/resetn",
           "rfsoc_data_pipeline_0/rf_resetn",
           "rfsoc_data_pipeline_1/rf_resetn",
           "rfsoc_data_pipeline_2/rf_resetn",
-          "rfsoc_data_pipeline_3/rf_resetn"
-        ]
-      },
-      "trigger_buffer_0_trigger_out": {
-        "ports": [
-          "trigger_buffer_0/trigger_out",
-          "rfsoc_data_pipeline_0/ext_trigger",
-          "rfsoc_data_pipeline_10/ext_trigger",
-          "rfsoc_data_pipeline_11/ext_trigger",
-          "rfsoc_data_pipeline_12/ext_trigger",
-          "rfsoc_data_pipeline_13/ext_trigger",
-          "rfsoc_data_pipeline_14/ext_trigger",
-          "rfsoc_data_pipeline_15/ext_trigger",
-          "rfsoc_data_pipeline_1/ext_trigger",
-          "rfsoc_data_pipeline_2/ext_trigger",
-          "rfsoc_data_pipeline_3/ext_trigger",
-          "rfsoc_data_pipeline_4/ext_trigger",
-          "rfsoc_data_pipeline_5/ext_trigger",
-          "rfsoc_data_pipeline_6/ext_trigger",
-          "rfsoc_data_pipeline_7/ext_trigger",
-          "rfsoc_data_pipeline_8/ext_trigger",
-          "rfsoc_data_pipeline_9/ext_trigger"
+          "rfsoc_data_pipeline_3/rf_resetn",
+          "trigger_controller_0/rf_reset"
         ]
       },
       "rfsoc_data_pipeline_1_pipeline_active": {
         "ports": [
           "rfsoc_data_pipeline_1/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_1"
-        ]
+          "system_ila_0/probe2",
+          "trigger_controller_0/pipeline_active_in_1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "rfsoc_data_pipeline_0_pipeline_active": {
         "ports": [
           "rfsoc_data_pipeline_0/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_0"
-        ]
-      },
-      "rfsoc_data_pipeline_2_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_2/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_2"
-        ]
-      },
-      "rfsoc_data_pipeline_3_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_3/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_3"
-        ]
-      },
-      "channel_select_0_ch1": {
-        "ports": [
-          "channel_select_0/ch1",
-          "rfsoc_data_pipeline_1/is_selected"
-        ]
-      },
-      "channel_select_0_ch0": {
-        "ports": [
-          "channel_select_0/ch0",
-          "rfsoc_data_pipeline_0/is_selected"
-        ]
-      },
-      "channel_select_0_ch2": {
-        "ports": [
-          "channel_select_0/ch2",
-          "rfsoc_data_pipeline_2/is_selected"
-        ]
-      },
-      "channel_select_0_ch3": {
-        "ports": [
-          "channel_select_0/ch3",
-          "rfsoc_data_pipeline_3/is_selected"
-        ]
+          "system_ila_0/probe1",
+          "trigger_controller_0/pipeline_active_in_0"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "usp_rf_data_converter_0_clk_dac1": {
         "ports": [
@@ -2069,7 +2074,8 @@
           "rfsoc_data_pipeline_4/rf_clock",
           "rfsoc_data_pipeline_5/rf_clock",
           "rfsoc_data_pipeline_6/rf_clock",
-          "rfsoc_data_pipeline_7/rf_clock"
+          "rfsoc_data_pipeline_7/rf_clock",
+          "trigger_controller_1/rf_clk"
         ]
       },
       "usp_rf_data_converter_0_clk_dac2": {
@@ -2080,7 +2086,8 @@
           "rfsoc_data_pipeline_10/rf_clock",
           "rfsoc_data_pipeline_11/rf_clock",
           "rfsoc_data_pipeline_8/rf_clock",
-          "rfsoc_data_pipeline_9/rf_clock"
+          "rfsoc_data_pipeline_9/rf_clock",
+          "trigger_controller_2/rf_clk"
         ]
       },
       "usp_rf_data_converter_0_clk_dac3": {
@@ -2091,19 +2098,8 @@
           "rfsoc_data_pipeline_12/rf_clock",
           "rfsoc_data_pipeline_13/rf_clock",
           "rfsoc_data_pipeline_14/rf_clock",
-          "rfsoc_data_pipeline_15/rf_clock"
-        ]
-      },
-      "channel_select_0_ch4": {
-        "ports": [
-          "channel_select_0/ch4",
-          "rfsoc_data_pipeline_4/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_4_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_4/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_4"
+          "rfsoc_data_pipeline_15/rf_clock",
+          "trigger_controller_3/rf_clk"
         ]
       },
       "Net1": {
@@ -2113,55 +2109,8 @@
           "rfsoc_data_pipeline_4/rf_resetn",
           "rfsoc_data_pipeline_5/rf_resetn",
           "rfsoc_data_pipeline_6/rf_resetn",
-          "rfsoc_data_pipeline_7/rf_resetn"
-        ]
-      },
-      "channel_select_0_ch5": {
-        "ports": [
-          "channel_select_0/ch5",
-          "rfsoc_data_pipeline_5/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_5_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_5/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_5"
-        ]
-      },
-      "channel_select_0_ch6": {
-        "ports": [
-          "channel_select_0/ch6",
-          "rfsoc_data_pipeline_6/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_6_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_6/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_6"
-        ]
-      },
-      "channel_select_0_ch7": {
-        "ports": [
-          "channel_select_0/ch7",
-          "rfsoc_data_pipeline_7/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_7_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_7/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_7"
-        ]
-      },
-      "channel_select_0_ch8": {
-        "ports": [
-          "channel_select_0/ch8",
-          "rfsoc_data_pipeline_8/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_8_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_8/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_8"
+          "rfsoc_data_pipeline_7/rf_resetn",
+          "trigger_controller_1/rf_reset"
         ]
       },
       "Net2": {
@@ -2171,43 +2120,8 @@
           "rfsoc_data_pipeline_10/rf_resetn",
           "rfsoc_data_pipeline_11/rf_resetn",
           "rfsoc_data_pipeline_8/rf_resetn",
-          "rfsoc_data_pipeline_9/rf_resetn"
-        ]
-      },
-      "channel_select_0_ch9": {
-        "ports": [
-          "channel_select_0/ch9",
-          "rfsoc_data_pipeline_9/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_9_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_9/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_9"
-        ]
-      },
-      "channel_select_0_ch10": {
-        "ports": [
-          "channel_select_0/ch10",
-          "rfsoc_data_pipeline_10/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_10_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_10/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_10"
-        ]
-      },
-      "channel_select_0_ch11": {
-        "ports": [
-          "channel_select_0/ch11",
-          "rfsoc_data_pipeline_11/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_11_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_11/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_11"
+          "rfsoc_data_pipeline_9/rf_resetn",
+          "trigger_controller_2/rf_reset"
         ]
       },
       "proc_sys_reset_3_peripheral_aresetn": {
@@ -2217,43 +2131,32 @@
           "rfsoc_data_pipeline_12/rf_resetn",
           "rfsoc_data_pipeline_13/rf_resetn",
           "rfsoc_data_pipeline_14/rf_resetn",
-          "rfsoc_data_pipeline_15/rf_resetn"
+          "rfsoc_data_pipeline_15/rf_resetn",
+          "trigger_controller_3/rf_reset"
         ]
       },
-      "channel_select_0_ch12": {
+      "channel_select_0_ch9": {
         "ports": [
-          "channel_select_0/ch12",
-          "rfsoc_data_pipeline_12/is_selected"
+          "channel_select_0/ch9",
+          "rfsoc_data_pipeline_9/is_selected"
         ]
       },
-      "rfsoc_data_pipeline_12_pipeline_active": {
+      "channel_select_0_ch5": {
         "ports": [
-          "rfsoc_data_pipeline_12/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_12"
+          "channel_select_0/ch5",
+          "rfsoc_data_pipeline_5/is_selected"
         ]
       },
-      "channel_select_0_ch13": {
+      "channel_select_0_ch4": {
         "ports": [
-          "channel_select_0/ch13",
-          "rfsoc_data_pipeline_13/is_selected"
+          "channel_select_0/ch4",
+          "rfsoc_data_pipeline_4/is_selected"
         ]
       },
-      "rfsoc_data_pipeline_13_pipeline_active": {
+      "channel_select_0_ch3": {
         "ports": [
-          "rfsoc_data_pipeline_13/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_13"
-        ]
-      },
-      "channel_select_0_ch14": {
-        "ports": [
-          "channel_select_0/ch14",
-          "rfsoc_data_pipeline_14/is_selected"
-        ]
-      },
-      "rfsoc_data_pipeline_14_pipeline_active": {
-        "ports": [
-          "rfsoc_data_pipeline_14/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_14"
+          "channel_select_0/ch3",
+          "rfsoc_data_pipeline_3/is_selected"
         ]
       },
       "channel_select_0_ch15": {
@@ -2262,10 +2165,277 @@
           "rfsoc_data_pipeline_15/is_selected"
         ]
       },
+      "channel_select_0_ch14": {
+        "ports": [
+          "channel_select_0/ch14",
+          "rfsoc_data_pipeline_14/is_selected"
+        ]
+      },
+      "channel_select_0_ch13": {
+        "ports": [
+          "channel_select_0/ch13",
+          "rfsoc_data_pipeline_13/is_selected"
+        ]
+      },
+      "channel_select_0_ch10": {
+        "ports": [
+          "channel_select_0/ch10",
+          "rfsoc_data_pipeline_10/is_selected"
+        ]
+      },
+      "channel_select_0_ch7": {
+        "ports": [
+          "channel_select_0/ch7",
+          "rfsoc_data_pipeline_7/is_selected"
+        ]
+      },
+      "channel_select_0_ch6": {
+        "ports": [
+          "channel_select_0/ch6",
+          "rfsoc_data_pipeline_6/is_selected"
+        ]
+      },
+      "channel_select_0_ch2": {
+        "ports": [
+          "channel_select_0/ch2",
+          "rfsoc_data_pipeline_2/is_selected"
+        ]
+      },
+      "channel_select_0_ch0": {
+        "ports": [
+          "channel_select_0/ch0",
+          "rfsoc_data_pipeline_0/is_selected"
+        ]
+      },
+      "channel_select_0_ch12": {
+        "ports": [
+          "channel_select_0/ch12",
+          "rfsoc_data_pipeline_12/is_selected"
+        ]
+      },
+      "channel_select_0_ch11": {
+        "ports": [
+          "channel_select_0/ch11",
+          "rfsoc_data_pipeline_11/is_selected"
+        ]
+      },
+      "channel_select_0_ch8": {
+        "ports": [
+          "channel_select_0/ch8",
+          "rfsoc_data_pipeline_8/is_selected"
+        ]
+      },
+      "channel_select_0_ch1": {
+        "ports": [
+          "channel_select_0/ch1",
+          "rfsoc_data_pipeline_1/is_selected"
+        ]
+      },
+      "trigger_controller_0_trigger_c0": {
+        "ports": [
+          "trigger_controller_0/trigger_c0",
+          "rfsoc_data_pipeline_0/ext_trigger",
+          "system_ila_0/probe3"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "trigger_controller_0_trigger_c1": {
+        "ports": [
+          "trigger_controller_0/trigger_c1",
+          "rfsoc_data_pipeline_1/ext_trigger",
+          "system_ila_0/probe4"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "trigger_controller_0_trigger_c2": {
+        "ports": [
+          "trigger_controller_0/trigger_c2",
+          "rfsoc_data_pipeline_2/ext_trigger"
+        ]
+      },
+      "trigger_controller_0_trigger_c3": {
+        "ports": [
+          "trigger_controller_0/trigger_c3",
+          "rfsoc_data_pipeline_3/ext_trigger"
+        ]
+      },
+      "ext_trigger_0_0_1": {
+        "ports": [
+          "ext_trigger_0_0",
+          "trigger_controller_0/ext_trigger_in",
+          "trigger_controller_1/ext_trigger_in",
+          "trigger_controller_2/ext_trigger_in",
+          "trigger_controller_3/ext_trigger_in"
+        ]
+      },
+      "rfsoc_data_pipeline_2_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_2/pipeline_active",
+          "trigger_controller_0/pipeline_active_in_2"
+        ]
+      },
+      "rfsoc_data_pipeline_3_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_3/pipeline_active",
+          "trigger_controller_0/pipeline_active_in_3"
+        ]
+      },
+      "trigger_controller_1_trigger_c0": {
+        "ports": [
+          "trigger_controller_1/trigger_c0",
+          "rfsoc_data_pipeline_4/ext_trigger"
+        ]
+      },
+      "trigger_controller_1_trigger_c1": {
+        "ports": [
+          "trigger_controller_1/trigger_c1",
+          "rfsoc_data_pipeline_5/ext_trigger"
+        ]
+      },
+      "trigger_controller_1_trigger_c2": {
+        "ports": [
+          "trigger_controller_1/trigger_c2",
+          "rfsoc_data_pipeline_6/ext_trigger"
+        ]
+      },
+      "trigger_controller_1_trigger_c3": {
+        "ports": [
+          "trigger_controller_1/trigger_c3",
+          "rfsoc_data_pipeline_7/ext_trigger"
+        ]
+      },
+      "rfsoc_data_pipeline_4_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_4/pipeline_active",
+          "trigger_controller_1/pipeline_active_in_0"
+        ]
+      },
+      "rfsoc_data_pipeline_5_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_5/pipeline_active",
+          "trigger_controller_1/pipeline_active_in_1"
+        ]
+      },
+      "rfsoc_data_pipeline_6_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_6/pipeline_active",
+          "trigger_controller_1/pipeline_active_in_2"
+        ]
+      },
+      "rfsoc_data_pipeline_7_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_7/pipeline_active",
+          "trigger_controller_1/pipeline_active_in_3"
+        ]
+      },
+      "trigger_controller_2_trigger_c0": {
+        "ports": [
+          "trigger_controller_2/trigger_c0",
+          "rfsoc_data_pipeline_8/ext_trigger"
+        ]
+      },
+      "trigger_controller_2_trigger_c1": {
+        "ports": [
+          "trigger_controller_2/trigger_c1",
+          "rfsoc_data_pipeline_9/ext_trigger"
+        ]
+      },
+      "trigger_controller_2_trigger_c2": {
+        "ports": [
+          "trigger_controller_2/trigger_c2",
+          "rfsoc_data_pipeline_10/ext_trigger"
+        ]
+      },
+      "trigger_controller_2_trigger_c3": {
+        "ports": [
+          "trigger_controller_2/trigger_c3",
+          "rfsoc_data_pipeline_11/ext_trigger"
+        ]
+      },
+      "rfsoc_data_pipeline_8_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_8/pipeline_active",
+          "trigger_controller_2/pipeline_active_in_0"
+        ]
+      },
+      "rfsoc_data_pipeline_9_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_9/pipeline_active",
+          "trigger_controller_2/pipeline_active_in_1"
+        ]
+      },
+      "rfsoc_data_pipeline_10_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_10/pipeline_active",
+          "trigger_controller_2/pipeline_active_in_2"
+        ]
+      },
+      "rfsoc_data_pipeline_11_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_11/pipeline_active",
+          "trigger_controller_2/pipeline_active_in_3"
+        ]
+      },
+      "trigger_controller_3_trigger_c0": {
+        "ports": [
+          "trigger_controller_3/trigger_c0",
+          "rfsoc_data_pipeline_12/ext_trigger"
+        ]
+      },
+      "trigger_controller_3_trigger_c1": {
+        "ports": [
+          "trigger_controller_3/trigger_c1",
+          "rfsoc_data_pipeline_13/ext_trigger"
+        ]
+      },
+      "trigger_controller_3_trigger_c2": {
+        "ports": [
+          "trigger_controller_3/trigger_c2",
+          "rfsoc_data_pipeline_14/ext_trigger"
+        ]
+      },
+      "trigger_controller_3_trigger_c3": {
+        "ports": [
+          "trigger_controller_3/trigger_c3",
+          "rfsoc_data_pipeline_15/ext_trigger"
+        ]
+      },
+      "rfsoc_data_pipeline_12_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_12/pipeline_active",
+          "trigger_controller_3/pipeline_active_in_0"
+        ]
+      },
+      "rfsoc_data_pipeline_13_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_13/pipeline_active",
+          "trigger_controller_3/pipeline_active_in_1"
+        ]
+      },
+      "rfsoc_data_pipeline_14_pipeline_active": {
+        "ports": [
+          "rfsoc_data_pipeline_14/pipeline_active",
+          "trigger_controller_3/pipeline_active_in_2"
+        ]
+      },
       "rfsoc_data_pipeline_15_pipeline_active": {
         "ports": [
           "rfsoc_data_pipeline_15/pipeline_active",
-          "trigger_buffer_0/pipeline_active_in_15"
+          "trigger_controller_3/pipeline_active_in_3"
         ]
       }
     },

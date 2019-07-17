@@ -23,25 +23,6 @@
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
-				"/axis_data_fifo_1/M_AXIS": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "m_axis_aclk"},
-						"TDATA": { "actual": "m_axis_tdata"},
-						"TREADY": { "actual": "m_axis_tready"},
-						"TVALID": { "actual": "m_axis_tvalid"}
-					}
-				},
-				"/axis_data_fifo_1/S_AXIS": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_axis_aclk"},
-						"ARESETN": { "actual": "s_axis_aresetn"},
-						"TDATA": { "actual": "s_axis_tdata"},
-						"TREADY": { "actual": "s_axis_tready"},
-						"TVALID": { "actual": "s_axis_tvalid"}
-					}
-				},
 				"/axis_data_fifo_clock_crossing/M_AXIS": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
@@ -190,22 +171,6 @@
 					}
 				},
 				"/gpio_and_select_buff_0/s_axis": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"TDATA": { "actual": "s_axis_tdata"},
-						"TREADY": { "actual": "s_axis_tready"},
-						"TVALID": { "actual": "s_axis_tvalid"}
-					}
-				},
-				"/pipeline_active_buff_0/m_axis": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"TDATA": { "actual": "m_axis_tdata"},
-						"TREADY": { "actual": "m_axis_tready"},
-						"TVALID": { "actual": "m_axis_tvalid"}
-					}
-				},
-				"/pipeline_active_buff_0/s_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"TDATA": { "actual": "s_axis_tdata"},

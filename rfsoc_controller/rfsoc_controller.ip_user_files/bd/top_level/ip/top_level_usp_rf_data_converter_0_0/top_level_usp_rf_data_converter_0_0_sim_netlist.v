@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jul 15 10:45:29 2019
+// Date        : Mon Jul 15 10:45:23 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_level_usp_rf_data_converter_0_0 -prefix
+//               top_level_usp_rf_data_converter_0_0_ top_level_usp_rf_data_converter_0_0_sim_netlist.v
 // Design      : top_level_usp_rf_data_converter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -933,7 +933,6 @@ module top_level_usp_rf_data_converter_0_0
         .vout33_p(vout33_p));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_address_decoder" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_address_decoder
    (\drp_addr_reg[2] ,
     \GEN_BKEND_CE_REGISTERS[0].wrce_out_i_reg[0]_0 ,
@@ -18361,7 +18360,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_a
         .O(bank0_write[0]));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_axi_lite_ipif" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_axi_lite_ipif
    (axi_timeout,
     s_axi_awready,
@@ -20415,7 +20413,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_a
         .user_drp_drdy(user_drp_drdy));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_bgt_fsm" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_bgt_fsm
    (\trim_code_reg[5]_0 ,
     trim_code,
@@ -22306,55 +22303,55 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .O(\syncstages_ff_reg[3] ));
 endmodule
 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_block" *) (* adc00_data_type = "1'b0" *) 
-(* adc00_decimation = "3'b000" *) (* adc00_enable = "1'b0" *) (* adc00_mixer = "2'b10" *) 
-(* adc01_data_type = "1'b0" *) (* adc01_decimation = "3'b000" *) (* adc01_enable = "1'b0" *) 
-(* adc01_mixer = "2'b10" *) (* adc02_data_type = "1'b0" *) (* adc02_decimation = "3'b000" *) 
-(* adc02_enable = "1'b0" *) (* adc02_mixer = "2'b10" *) (* adc03_data_type = "1'b0" *) 
-(* adc03_decimation = "3'b000" *) (* adc03_enable = "1'b0" *) (* adc03_mixer = "2'b10" *) 
-(* adc10_data_type = "1'b0" *) (* adc10_decimation = "3'b000" *) (* adc10_enable = "1'b0" *) 
-(* adc10_mixer = "2'b10" *) (* adc11_data_type = "1'b0" *) (* adc11_decimation = "3'b000" *) 
-(* adc11_enable = "1'b0" *) (* adc11_mixer = "2'b10" *) (* adc12_data_type = "1'b0" *) 
-(* adc12_decimation = "3'b000" *) (* adc12_enable = "1'b0" *) (* adc12_mixer = "2'b10" *) 
-(* adc13_data_type = "1'b0" *) (* adc13_decimation = "3'b000" *) (* adc13_enable = "1'b0" *) 
-(* adc13_mixer = "2'b10" *) (* adc20_data_type = "1'b0" *) (* adc20_decimation = "3'b000" *) 
-(* adc20_enable = "1'b0" *) (* adc20_mixer = "2'b10" *) (* adc21_data_type = "1'b0" *) 
-(* adc21_decimation = "3'b000" *) (* adc21_enable = "1'b0" *) (* adc21_mixer = "2'b10" *) 
-(* adc22_data_type = "1'b0" *) (* adc22_decimation = "3'b000" *) (* adc22_enable = "1'b0" *) 
-(* adc22_mixer = "2'b10" *) (* adc23_data_type = "1'b0" *) (* adc23_decimation = "3'b000" *) 
-(* adc23_enable = "1'b0" *) (* adc23_mixer = "2'b10" *) (* adc30_data_type = "1'b0" *) 
-(* adc30_decimation = "3'b000" *) (* adc30_enable = "1'b0" *) (* adc30_mixer = "2'b10" *) 
-(* adc31_data_type = "1'b0" *) (* adc31_decimation = "3'b000" *) (* adc31_enable = "1'b0" *) 
-(* adc31_mixer = "2'b10" *) (* adc32_data_type = "1'b0" *) (* adc32_decimation = "3'b000" *) 
-(* adc32_enable = "1'b0" *) (* adc32_mixer = "2'b10" *) (* adc33_data_type = "1'b0" *) 
-(* adc33_decimation = "3'b000" *) (* adc33_enable = "1'b0" *) (* adc33_mixer = "2'b10" *) 
-(* dac00_data_type = "1'b0" *) (* dac00_enable = "1'b1" *) (* dac00_interpolation = "3'b001" *) 
-(* dac00_mixer = "2'b10" *) (* dac00_sinc = "1'b0" *) (* dac01_data_type = "1'b0" *) 
-(* dac01_enable = "1'b1" *) (* dac01_interpolation = "3'b001" *) (* dac01_mixer = "2'b10" *) 
-(* dac01_sinc = "1'b0" *) (* dac02_data_type = "1'b0" *) (* dac02_enable = "1'b1" *) 
-(* dac02_interpolation = "3'b001" *) (* dac02_mixer = "2'b10" *) (* dac02_sinc = "1'b0" *) 
-(* dac03_data_type = "1'b0" *) (* dac03_enable = "1'b1" *) (* dac03_interpolation = "3'b001" *) 
-(* dac03_mixer = "2'b10" *) (* dac03_sinc = "1'b0" *) (* dac10_data_type = "1'b0" *) 
-(* dac10_enable = "1'b1" *) (* dac10_interpolation = "3'b001" *) (* dac10_mixer = "2'b10" *) 
-(* dac10_sinc = "1'b0" *) (* dac11_data_type = "1'b0" *) (* dac11_enable = "1'b1" *) 
-(* dac11_interpolation = "3'b001" *) (* dac11_mixer = "2'b10" *) (* dac11_sinc = "1'b0" *) 
-(* dac12_data_type = "1'b0" *) (* dac12_enable = "1'b1" *) (* dac12_interpolation = "3'b001" *) 
-(* dac12_mixer = "2'b10" *) (* dac12_sinc = "1'b0" *) (* dac13_data_type = "1'b0" *) 
-(* dac13_enable = "1'b1" *) (* dac13_interpolation = "3'b001" *) (* dac13_mixer = "2'b10" *) 
-(* dac13_sinc = "1'b0" *) (* dac20_data_type = "1'b0" *) (* dac20_enable = "1'b1" *) 
-(* dac20_interpolation = "3'b001" *) (* dac20_mixer = "2'b10" *) (* dac20_sinc = "1'b0" *) 
-(* dac21_data_type = "1'b0" *) (* dac21_enable = "1'b1" *) (* dac21_interpolation = "3'b001" *) 
-(* dac21_mixer = "2'b10" *) (* dac21_sinc = "1'b0" *) (* dac22_data_type = "1'b0" *) 
-(* dac22_enable = "1'b1" *) (* dac22_interpolation = "3'b001" *) (* dac22_mixer = "2'b10" *) 
-(* dac22_sinc = "1'b0" *) (* dac23_data_type = "1'b0" *) (* dac23_enable = "1'b1" *) 
-(* dac23_interpolation = "3'b001" *) (* dac23_mixer = "2'b10" *) (* dac23_sinc = "1'b0" *) 
-(* dac30_data_type = "1'b0" *) (* dac30_enable = "1'b1" *) (* dac30_interpolation = "3'b001" *) 
-(* dac30_mixer = "2'b10" *) (* dac30_sinc = "1'b0" *) (* dac31_data_type = "1'b0" *) 
-(* dac31_enable = "1'b1" *) (* dac31_interpolation = "3'b001" *) (* dac31_mixer = "2'b10" *) 
-(* dac31_sinc = "1'b0" *) (* dac32_data_type = "1'b0" *) (* dac32_enable = "1'b1" *) 
-(* dac32_interpolation = "3'b001" *) (* dac32_mixer = "2'b10" *) (* dac32_sinc = "1'b0" *) 
-(* dac33_data_type = "1'b0" *) (* dac33_enable = "1'b1" *) (* dac33_interpolation = "3'b001" *) 
-(* dac33_mixer = "2'b10" *) (* dac33_sinc = "1'b0" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* adc00_data_type = "1'b0" *) (* adc00_decimation = "3'b000" *) 
+(* adc00_enable = "1'b0" *) (* adc00_mixer = "2'b10" *) (* adc01_data_type = "1'b0" *) 
+(* adc01_decimation = "3'b000" *) (* adc01_enable = "1'b0" *) (* adc01_mixer = "2'b10" *) 
+(* adc02_data_type = "1'b0" *) (* adc02_decimation = "3'b000" *) (* adc02_enable = "1'b0" *) 
+(* adc02_mixer = "2'b10" *) (* adc03_data_type = "1'b0" *) (* adc03_decimation = "3'b000" *) 
+(* adc03_enable = "1'b0" *) (* adc03_mixer = "2'b10" *) (* adc10_data_type = "1'b0" *) 
+(* adc10_decimation = "3'b000" *) (* adc10_enable = "1'b0" *) (* adc10_mixer = "2'b10" *) 
+(* adc11_data_type = "1'b0" *) (* adc11_decimation = "3'b000" *) (* adc11_enable = "1'b0" *) 
+(* adc11_mixer = "2'b10" *) (* adc12_data_type = "1'b0" *) (* adc12_decimation = "3'b000" *) 
+(* adc12_enable = "1'b0" *) (* adc12_mixer = "2'b10" *) (* adc13_data_type = "1'b0" *) 
+(* adc13_decimation = "3'b000" *) (* adc13_enable = "1'b0" *) (* adc13_mixer = "2'b10" *) 
+(* adc20_data_type = "1'b0" *) (* adc20_decimation = "3'b000" *) (* adc20_enable = "1'b0" *) 
+(* adc20_mixer = "2'b10" *) (* adc21_data_type = "1'b0" *) (* adc21_decimation = "3'b000" *) 
+(* adc21_enable = "1'b0" *) (* adc21_mixer = "2'b10" *) (* adc22_data_type = "1'b0" *) 
+(* adc22_decimation = "3'b000" *) (* adc22_enable = "1'b0" *) (* adc22_mixer = "2'b10" *) 
+(* adc23_data_type = "1'b0" *) (* adc23_decimation = "3'b000" *) (* adc23_enable = "1'b0" *) 
+(* adc23_mixer = "2'b10" *) (* adc30_data_type = "1'b0" *) (* adc30_decimation = "3'b000" *) 
+(* adc30_enable = "1'b0" *) (* adc30_mixer = "2'b10" *) (* adc31_data_type = "1'b0" *) 
+(* adc31_decimation = "3'b000" *) (* adc31_enable = "1'b0" *) (* adc31_mixer = "2'b10" *) 
+(* adc32_data_type = "1'b0" *) (* adc32_decimation = "3'b000" *) (* adc32_enable = "1'b0" *) 
+(* adc32_mixer = "2'b10" *) (* adc33_data_type = "1'b0" *) (* adc33_decimation = "3'b000" *) 
+(* adc33_enable = "1'b0" *) (* adc33_mixer = "2'b10" *) (* dac00_data_type = "1'b0" *) 
+(* dac00_enable = "1'b1" *) (* dac00_interpolation = "3'b001" *) (* dac00_mixer = "2'b10" *) 
+(* dac00_sinc = "1'b0" *) (* dac01_data_type = "1'b0" *) (* dac01_enable = "1'b1" *) 
+(* dac01_interpolation = "3'b001" *) (* dac01_mixer = "2'b10" *) (* dac01_sinc = "1'b0" *) 
+(* dac02_data_type = "1'b0" *) (* dac02_enable = "1'b1" *) (* dac02_interpolation = "3'b001" *) 
+(* dac02_mixer = "2'b10" *) (* dac02_sinc = "1'b0" *) (* dac03_data_type = "1'b0" *) 
+(* dac03_enable = "1'b1" *) (* dac03_interpolation = "3'b001" *) (* dac03_mixer = "2'b10" *) 
+(* dac03_sinc = "1'b0" *) (* dac10_data_type = "1'b0" *) (* dac10_enable = "1'b1" *) 
+(* dac10_interpolation = "3'b001" *) (* dac10_mixer = "2'b10" *) (* dac10_sinc = "1'b0" *) 
+(* dac11_data_type = "1'b0" *) (* dac11_enable = "1'b1" *) (* dac11_interpolation = "3'b001" *) 
+(* dac11_mixer = "2'b10" *) (* dac11_sinc = "1'b0" *) (* dac12_data_type = "1'b0" *) 
+(* dac12_enable = "1'b1" *) (* dac12_interpolation = "3'b001" *) (* dac12_mixer = "2'b10" *) 
+(* dac12_sinc = "1'b0" *) (* dac13_data_type = "1'b0" *) (* dac13_enable = "1'b1" *) 
+(* dac13_interpolation = "3'b001" *) (* dac13_mixer = "2'b10" *) (* dac13_sinc = "1'b0" *) 
+(* dac20_data_type = "1'b0" *) (* dac20_enable = "1'b1" *) (* dac20_interpolation = "3'b001" *) 
+(* dac20_mixer = "2'b10" *) (* dac20_sinc = "1'b0" *) (* dac21_data_type = "1'b0" *) 
+(* dac21_enable = "1'b1" *) (* dac21_interpolation = "3'b001" *) (* dac21_mixer = "2'b10" *) 
+(* dac21_sinc = "1'b0" *) (* dac22_data_type = "1'b0" *) (* dac22_enable = "1'b1" *) 
+(* dac22_interpolation = "3'b001" *) (* dac22_mixer = "2'b10" *) (* dac22_sinc = "1'b0" *) 
+(* dac23_data_type = "1'b0" *) (* dac23_enable = "1'b1" *) (* dac23_interpolation = "3'b001" *) 
+(* dac23_mixer = "2'b10" *) (* dac23_sinc = "1'b0" *) (* dac30_data_type = "1'b0" *) 
+(* dac30_enable = "1'b1" *) (* dac30_interpolation = "3'b001" *) (* dac30_mixer = "2'b10" *) 
+(* dac30_sinc = "1'b0" *) (* dac31_data_type = "1'b0" *) (* dac31_enable = "1'b1" *) 
+(* dac31_interpolation = "3'b001" *) (* dac31_mixer = "2'b10" *) (* dac31_sinc = "1'b0" *) 
+(* dac32_data_type = "1'b0" *) (* dac32_enable = "1'b1" *) (* dac32_interpolation = "3'b001" *) 
+(* dac32_mixer = "2'b10" *) (* dac32_sinc = "1'b0" *) (* dac33_data_type = "1'b0" *) 
+(* dac33_enable = "1'b1" *) (* dac33_interpolation = "3'b001" *) (* dac33_mixer = "2'b10" *) 
+(* dac33_sinc = "1'b0" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_block
    (s_axi_aclk,
     s_axi_aresetn,
@@ -31120,7 +31117,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .vout33_p(vout33_p));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl
    (clk_dac0,
     clk_dac1,
@@ -31246,7 +31242,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .O(clk_dac3));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_counter_f" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_counter_f
    (s_axi_awvalid_0,
     cs_ce_ld_enable_i,
@@ -31755,7 +31750,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_c
         .O(\FSM_sequential_access_cs_reg[1]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_device_rom" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_device_rom
    (\data_reg[29]_0 ,
     \data_reg[28]_0 ,
@@ -34069,7 +34063,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_arbiter" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_arbiter
    (access_type_reg,
     user_drp_drdy,
@@ -40903,7 +40896,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(p_8_in));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_control" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_control
    (access_type_reg_0,
     \FSM_onehot_state_reg[4]_0 ,
@@ -42131,7 +42123,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .O(dac3_drp_we));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_control_top" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_control_top
    (access_type_reg,
     access_type_reg_0,
@@ -42522,7 +42513,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_irq_req_ack" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_irq_req_ack
    (read_ack_tog,
     read_ack_tog_r,
@@ -44692,7 +44682,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_i
         .O(s_axi_aresetn_0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_irq_sync" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_irq_sync
    (dac03_irq_en_reg,
     dac03_irq_sync,
@@ -47225,7 +47214,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_i
         .src_in(dac33_status[1]));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_overvol_irq" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_overvol_irq
    (s_axi_aresetn_0,
     axi_RdAck0,
@@ -47839,7 +47827,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_o
         .O(adc12_overvol_out_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm
    (p_8_in,
     dac3_drpen_por,
@@ -67121,7 +67108,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm_disabled" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm_disabled
    (adc0_drpen_por,
     adc0_reset_i,
@@ -72617,7 +72603,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .R(p_4_in));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm_top" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm_top
    (user_drp_drdy_reg,
     dac0_dgnt_mon,
@@ -78761,7 +78746,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .tile_config_drp_drdy(adc0_drprdy_tc));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_powerup_state_irq" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_powerup_state_irq
    (read_ack_tog_r_reg,
     read_ack_tog_reg,
@@ -78977,7 +78961,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .s_axi_aresetn(s_axi_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_register_decode" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_register_decode
    (\bus2ip_addr_reg_reg[4] ,
     \bus2ip_addr_reg_reg[6] ,
@@ -79436,7 +79419,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .O(\bus2ip_addr_reg_reg[3] ));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_reset_count" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_reset_count
    (read_ack_tog_reg_0,
     read_ack_tog_r_reg_0,
@@ -80402,7 +80384,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .R(sm_reset_r_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_rf_wrapper" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_rf_wrapper
    (s03_axis_tready,
     s13_axis_tready,
@@ -82778,7 +82759,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .VOUT3_P(vout33_p));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_slave_attachment" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_slave_attachment
    (\DATA_PHASE_WDT.data_timeout_reg_0 ,
     s_axi_awready,
@@ -86316,7 +86296,6 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_s
         .R(s_axi_rvalid_reg_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_tile_config" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_tile_config
    (tc_req_adc0,
     tc_req_adc1,
@@ -89496,9 +89475,9 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .O(adc0_restart_i_reg));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "SINGLE" *) 
 module top_level_usp_rf_data_converter_0_0_xpm_cdc_single
    (src_clk,
     src_in,

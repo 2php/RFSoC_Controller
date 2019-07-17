@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="rfsoc_data_pipeline" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563236730"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563236730"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563236730"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563236730"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563316646"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563316646"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563316646"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563316646"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_0\rfsoc_data_pipeline_axis_data_fifo_0_0.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -206,14 +206,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\rfsoc_data_pipeline_pipeline_active_buff_0_0\rfsoc_data_pipeline_pipeline_active_buff_0_0.xci" Type="IP">
-        <Instance HierarchyPath="pipeline_active_buff_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_1_6\rfsoc_data_pipeline_axis_data_fifo_1_6.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -222,7 +214,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_5\rfsoc_data_pipeline_axis_data_fifo_0_5.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -230,7 +221,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_dwidth_converter_0_5\rfsoc_data_pipeline_axis_dwidth_converter_0_5.xci" Type="IP">
-        <Instance HierarchyPath="axis_dwidth_converter_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -238,7 +228,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4\rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_clock_crossing"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -246,7 +235,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_waveform_4\rfsoc_data_pipeline_axis_data_fifo_waveform_4.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_waveform"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -254,7 +242,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_gpio_0\rfsoc_data_pipeline_axis_data_fifo_gpio_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_gpio"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -262,7 +249,53 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_1_7\rfsoc_data_pipeline_axis_data_fifo_1_7.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_6\rfsoc_data_pipeline_axis_data_fifo_0_6.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_dwidth_converter_0_6\rfsoc_data_pipeline_axis_dwidth_converter_0_6.xci" Type="IP">
+        <Instance HierarchyPath="axis_dwidth_converter_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5\rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_clock_crossing"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_waveform_5\rfsoc_data_pipeline_axis_data_fifo_waveform_5.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_waveform"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_gpio_1\rfsoc_data_pipeline_axis_data_fifo_gpio_1.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_gpio"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_1_8\rfsoc_data_pipeline_axis_data_fifo_1_8.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

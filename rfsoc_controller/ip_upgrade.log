@@ -1,6 +1,1686 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_9_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_9_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_8_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_8_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_7_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_7_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_6_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_6_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_5_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_5_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_4_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_15_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_15_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_14_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_14_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_13_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_13_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_12_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_12_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_11_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_11_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_10_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_10_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 15:38:44 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_9_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_9_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_8_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_8_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_7_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_7_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_6_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_6_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_5_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_5_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_4_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_15_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_15_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_14_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_14_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_13_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_13_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_12_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_12_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_11_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_11_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_10_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_10_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 14:40:57 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 3) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_9_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_9_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_8_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_8_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_7_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_7_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_6_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_6_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_5_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_5_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_4_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_15_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_15_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_14_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_14_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_13_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_13_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_12_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_12_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_11_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_11_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_10_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_10_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:26:29 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_9_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_9_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_8_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_8_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_7_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_7_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_6_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_6_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_5_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_5_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_4_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_15_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_15_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_14_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_14_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_13_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_13_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_12_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_12_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_11_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_11_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_10_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_10_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 10:11:07 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_9_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_9_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_8_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_8_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_7_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_7_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_6_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_6_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_5_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_5_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_4_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_4_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_3_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_2_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_1_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_15_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_15_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_14_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_14_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_13_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_13_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_12_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_12_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_11_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_11_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_10_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_10_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Jul 16 09:35:10 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_data_pipeline_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_data_pipeline_0_0 (xilinx.com:user:rfsoc_data_pipeline:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Mon Jul 15 17:26:17 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
