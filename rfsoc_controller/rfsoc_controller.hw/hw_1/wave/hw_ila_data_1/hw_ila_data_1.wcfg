@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <ZoomEndTime time="7096fs"></ZoomEndTime>
       <Cursor1Time time="20000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="351"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="top_level_i/system_ila_0/inst/probe0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">top_level_i/system_ila_0/inst/probe0_1[15:0]</obj_property>
@@ -33,7 +31,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">top_level_i/system_ila_0/inst/probe1_1</obj_property>
       <obj_property name="ObjectShortName">probe1_1</obj_property>
-      <obj_property name="label">trigger_buffer_0_trigger_c0</obj_property>
+      <obj_property name="label">rfsoc_data_pipeline_0_pipeline_active</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -41,7 +39,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">top_level_i/system_ila_0/inst/probe2_1</obj_property>
       <obj_property name="ObjectShortName">probe2_1</obj_property>
-      <obj_property name="label">trigger_buffer_0_trigger_c1</obj_property>
+      <obj_property name="label">rfsoc_data_pipeline_1_pipeline_active</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -49,7 +47,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">top_level_i/system_ila_0/inst/probe3_1</obj_property>
       <obj_property name="ObjectShortName">probe3_1</obj_property>
-      <obj_property name="label">rfsoc_data_pipeline_0_pipeline_active</obj_property>
+      <obj_property name="label">trigger_controller_0_trigger_c0</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -57,7 +55,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">top_level_i/system_ila_0/inst/probe4_1</obj_property>
       <obj_property name="ObjectShortName">probe4_1</obj_property>
-      <obj_property name="label">rfsoc_data_pipeline_1_pipeline_active</obj_property>
+      <obj_property name="label">trigger_controller_0_trigger_c1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

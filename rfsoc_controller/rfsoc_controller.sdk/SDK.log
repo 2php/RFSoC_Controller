@@ -4393,3 +4393,67 @@ con
 08:57:43 INFO  : Project top_level_wrapper_hw_platform_0's source hardware specification located at C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf is now different from the local copy.
 		 The local copy will be replaced with the source specification and your workspace will be updated.
 08:57:45 INFO  : Copied contents of C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf into \top_level_wrapper_hw_platform_0\system.hdf.
+08:57:49 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+08:57:57 INFO  : 
+08:57:58 INFO  : Updating hardware inferred compiler options for rfsoc_controller.
+08:57:58 INFO  : Clearing existing target manager status.
+10:26:42 INFO  : Disconnected from the channel tcfchan#17.
+10:26:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+10:26:43 INFO  : 'fpga -state' command is executed.
+10:26:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:43 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+10:26:43 INFO  : 'jtag frequency' command is executed.
+10:26:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:26:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:26:44 INFO  : Processor reset is completed for 'microblaze_0'.
+10:26:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:26:44 INFO  : The application 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf' is downloaded to processor 'microblaze_0'.
+10:26:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf
+----------------End of Script----------------
+
+10:26:44 INFO  : Memory regions updated for context MicroBlaze #0
+10:26:44 INFO  : Memory regions updated for context MicroBlaze #0
+10:26:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:26:44 INFO  : 'con' command is executed.
+10:26:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+10:26:44 INFO  : Launch script is exported to file 'C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rfsoc_controller.elf_on_local.tcl'
+10:27:08 INFO  : Disconnected from the channel tcfchan#18.
+10:27:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+10:27:09 INFO  : 'fpga -state' command is executed.
+10:27:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:27:09 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+10:27:09 INFO  : 'jtag frequency' command is executed.
+10:27:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:27:09 INFO  : Context for processor 'microblaze_0' is selected.
+10:27:09 INFO  : Processor reset is completed for 'microblaze_0'.
+10:27:09 INFO  : Context for processor 'microblaze_0' is selected.
+10:27:09 INFO  : The application 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf' is downloaded to processor 'microblaze_0'.
+10:27:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+dow C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf
+----------------End of Script----------------
+
+10:27:09 INFO  : Memory regions updated for context MicroBlaze #0
+10:27:09 INFO  : Memory regions updated for context MicroBlaze #0
+10:27:09 INFO  : Context for processor 'microblaze_0' is selected.
+10:27:09 INFO  : 'con' command is executed.
+10:27:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
+con
+----------------End of Script----------------
+
+10:27:09 INFO  : Launch script is exported to file 'C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rfsoc_controller.elf_on_local.tcl'

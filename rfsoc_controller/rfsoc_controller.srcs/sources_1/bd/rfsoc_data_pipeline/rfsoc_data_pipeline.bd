@@ -227,7 +227,7 @@
     "components": {
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_0_6",
+        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_0_7",
         "parameters": {
           "FIFO_DEPTH": {
             "value": "16"
@@ -239,7 +239,7 @@
       },
       "axis_dwidth_converter_0": {
         "vlnv": "xilinx.com:ip:axis_dwidth_converter:1.1",
-        "xci_name": "rfsoc_data_pipeline_axis_dwidth_converter_0_6",
+        "xci_name": "rfsoc_data_pipeline_axis_dwidth_converter_0_7",
         "parameters": {
           "M_TDATA_NUM_BYTES": {
             "value": "32"
@@ -251,7 +251,7 @@
       },
       "axis_data_fifo_clock_crossing": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5",
+        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6",
         "parameters": {
           "FIFO_DEPTH": {
             "value": "16"
@@ -266,8 +266,11 @@
       },
       "axis_data_fifo_waveform": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_waveform_5",
+        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_waveform_6",
         "parameters": {
+          "FIFO_DEPTH": {
+            "value": "4096"
+          },
           "TDATA_NUM_BYTES": {
             "value": "32"
           }
@@ -275,7 +278,7 @@
       },
       "axis_data_fifo_gpio": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_gpio_1",
+        "xci_name": "rfsoc_data_pipeline_axis_data_fifo_gpio_2",
         "parameters": {
           "FIFO_DEPTH": {
             "value": "16"
@@ -926,22 +929,22 @@
           "axis_data_fifo_0/M_AXIS"
         ]
       },
-      "axis_data_fifo_1_M_AXIS": {
-        "interface_ports": [
-          "axis_mux_0/s0_axis",
-          "axis_data_fifo_clock_crossing/M_AXIS"
-        ]
-      },
       "axis_data_fifo_2_M_AXIS": {
         "interface_ports": [
           "axis_data_fifo_waveform/M_AXIS",
           "axis_tready_slice_0/s_axis"
         ]
       },
-      "S_AXIS_0_1": {
+      "axis_data_fifo_1_M_AXIS": {
         "interface_ports": [
-          "S_AXIS",
-          "axis_data_fifo_0/S_AXIS"
+          "axis_mux_0/s0_axis",
+          "axis_data_fifo_clock_crossing/M_AXIS"
+        ]
+      },
+      "axis_tready_slice_0_mloop_axis": {
+        "interface_ports": [
+          "axis_tready_slice_0/mloop_axis",
+          "axis_mux_0/s1_axis"
         ]
       },
       "gpio_and_select_buff_0_m_axis": {
@@ -962,10 +965,10 @@
           "axis_tready_slice_0/m_axis"
         ]
       },
-      "axis_tready_slice_0_mloop_axis": {
+      "S_AXIS_0_1": {
         "interface_ports": [
-          "axis_tready_slice_0/mloop_axis",
-          "axis_mux_0/s1_axis"
+          "S_AXIS",
+          "axis_data_fifo_0/S_AXIS"
         ]
       },
       "axis_data_fifo_gpio_M_AXIS": {

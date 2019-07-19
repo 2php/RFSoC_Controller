@@ -228,6 +228,7 @@ proc create_root_design { parentCell } {
   # Create instance: axis_data_fifo_waveform, and set properties
   set axis_data_fifo_waveform [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_waveform ]
   set_property -dict [ list \
+   CONFIG.FIFO_DEPTH {4096} \
    CONFIG.TDATA_NUM_BYTES {32} \
  ] $axis_data_fifo_waveform
 

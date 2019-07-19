@@ -17,10 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
@@ -35,7 +32,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
-set_property ip_repo_paths c:/james/fpga_projects/ip_repo [current_project]
+set_property ip_repo_paths {
+  c:/james/fpga_projects/trigger_controller_ip
+  c:/james/fpga_projects/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

@@ -118,6 +118,21 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipe
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_1_8/rfsoc_data_pipeline_axis_data_fifo_1_8.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_8} -quiet] -quiet
 
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_0_7/rfsoc_data_pipeline_axis_data_fifo_0_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_7 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_dwidth_converter_0_7/rfsoc_data_pipeline_axis_dwidth_converter_0_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_7 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_waveform_6/rfsoc_data_pipeline_axis_data_fifo_waveform_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_6 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_gpio_2/rfsoc_data_pipeline_axis_data_fifo_gpio_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_gpio_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_gpio_2} -quiet] -quiet
+
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_14_0'. Do not add the DONT_TOUCH constraint.
 set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
@@ -238,6 +253,21 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_1_8/rfsoc_data_pipeline_axis_data_fifo_1_8.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_1_8} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_0_7/rfsoc_data_pipeline_axis_data_fifo_0_7.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_7 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_0_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_dwidth_converter_0_7/rfsoc_data_pipeline_axis_dwidth_converter_0_7.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_7 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_dwidth_converter_0_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_waveform_6/rfsoc_data_pipeline_axis_data_fifo_waveform_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_6 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_waveform_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_gpio_2/rfsoc_data_pipeline_axis_data_fifo_gpio_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_data_pipeline_axis_data_fifo_gpio_2 || ORIG_REF_NAME==rfsoc_data_pipeline_axis_data_fifo_gpio_2} -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_data_pipeline_14_0'. Do not add the DONT_TOUCH constraint.
