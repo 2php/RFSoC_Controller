@@ -66,6 +66,8 @@ set_property LOC HSDAC_X0Y3 [get_cells -hier -filter {name =~ */tx3_u_dac}]
 #------------------------------------------
 
 set ipif_read   [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]
+set rfams_clock_adc0 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx0_u_adc]]
+set_false_path -through $rfams_clock_adc0 -to $ipif_read
 
 set rfams_clock_dac0 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx0_u_dac]]
 set_false_path -through $rfams_clock_dac0 -to $ipif_read
@@ -81,6 +83,9 @@ set_false_path -through $rfams_clock_dac3 -to $ipif_read
 # Fabric clock timing constraints
 ###############################################################################
 set top_level_usp_rf_data_converter_0_0_axi_aclk  [get_clocks -of_objects [get_ports s_axi_aclk]]
+
+# Workaround to exclude paths that are wrongly related to DRP clock
+set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_ADC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx0_u_adc]]
 
 # Workaround to exclude paths that are wrongly related to DCLK
 set_false_path -from $top_level_usp_rf_data_converter_0_0_axi_aclk -through [get_pins -filter {REF_PIN_NAME =~ DATA_DAC*} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx0_u_dac]]

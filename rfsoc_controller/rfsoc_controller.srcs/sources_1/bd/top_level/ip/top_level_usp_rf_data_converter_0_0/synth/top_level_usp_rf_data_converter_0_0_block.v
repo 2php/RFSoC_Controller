@@ -79,6 +79,23 @@ module top_level_usp_rf_data_converter_0_0_block (
   input             sysref_in_p,
   input             sysref_in_n,
 
+  // ADC Reference Clock for Tile 0
+  input             adc0_clk_p,
+  input             adc0_clk_n,
+
+  // ADC Fabric Feedback Clock for Tile 0
+  output            clk_adc0,
+
+  // ADC AXI Streaming Clock and Reset for ADC0
+  input             m0_axis_aclk,
+  input             m0_axis_aresetn,
+
+  input             vin00_p,
+  input             vin00_n,
+
+  // ADC Signal Lost Indicator for ADC00
+  input             adc00_int_cal_freeze,
+  output            adc00_cal_frozen,
 
 
 
@@ -94,6 +111,11 @@ module top_level_usp_rf_data_converter_0_0_block (
 
 
 
+
+  // ADC AXI Streaming Data for ADC00
+  output [127:0]    m00_axis_tdata,
+  output            m00_axis_tvalid,
+  input             m00_axis_tready,
 
   // DAC Reference Clock for Tile 0
   input             dac0_clk_p,
@@ -542,9 +564,9 @@ module top_level_usp_rf_data_converter_0_0_block (
 
   // ADC Default Configuration Settings
   // NO NOT MODIFY
-  localparam       adc00_enable        = 1'b0;
+  localparam       adc00_enable        = 1'b1;
   localparam       adc00_data_type     = 1'b0;
-  localparam [2:0] adc00_decimation    = 3'd0;
+  localparam [2:0] adc00_decimation    = 3'd1;
   localparam [1:0] adc00_mixer         = 2'd2;
   localparam       adc01_enable        = 1'b0;
   localparam       adc01_data_type     = 1'b0;
@@ -1096,6 +1118,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire             adc3_read;
   wire   [7:0]     adc3_reset_cnt;
 
+  wire   [0:0]     adc_reset_cnt_ack;
   wire               adc_reset_cnt_ack_i;
 
   wire             clk_dac0_i;
@@ -1107,6 +1130,8 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire             clk_dac3_i;
   wire             s3_axis_aclk_val_sync;
 
+  wire             clk_adc0_i;
+  wire             m0_axis_aclk_val_sync;
 
   wire  [15:0]     adc00_stat;
   wire   [3:0]     adc00_stat_sync;
@@ -1287,6 +1312,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire  [255:0]    dac32_data_i;
   wire  [255:0]    dac33_data_i;
 
+  wire  [127:0]    adc00_data_i;
 
   assign  dac00_data_i  =  s00_axis_tdata;
   assign  dac01_data_i  =  s01_axis_tdata;
@@ -1308,18 +1334,19 @@ module top_level_usp_rf_data_converter_0_0_block (
   top_level_usp_rf_data_converter_0_0_rf_wrapper
   top_level_usp_rf_data_converter_0_0_rf_wrapper_i(
     // ADC Reference Clock for Tile 0
-    .adc0_clk_p            (1'b0),
-    .adc0_clk_n            (1'b0),
+    .adc0_clk_p            (adc0_clk_p),
+    .adc0_clk_n            (adc0_clk_n),
 
     // ADC PLL Reference Clock for Tile 0
+    // TODO. How to connect this?
     .adc0_pll_clk          (1'b0),
 
     // ADC Fabric Feedback Clock for Tile 0
-    .clk_adc0              (),
+    .clk_adc0              (clk_adc0_i),
 
     // ADC0 Fabric Clock
-    .adc0_fabricclk        (1'b0),
-    .adc0_fabricclk_val    (1'b0),
+    .adc0_fabricclk        (m0_axis_aclk),
+    .adc0_fabricclk_val    (m0_axis_aclk_val_sync),
 
     // ADC0 Observation Clock
     .adc0_clk_fifo_lm      (1'b0),
@@ -1387,6 +1414,8 @@ module top_level_usp_rf_data_converter_0_0_block (
     // ADC Common Status for Tile 3
     .adc3_common_stat      (adc3_common_stat),
 
+  .vin00_p               (vin00_p),
+  .vin00_n               (vin00_n),
 
 
 
@@ -1402,6 +1431,11 @@ module top_level_usp_rf_data_converter_0_0_block (
 
 
 
+
+    // ADC AXI Streaming Data for ADC00
+    .adc00_data_out        (adc00_data_i),
+    .adc00_valid_out       (m00_axis_tvalid),
+    .adc00_ready_in        (m00_axis_tready),
 
     .adc00_stat            (adc00_stat),
 
@@ -2057,6 +2091,7 @@ module top_level_usp_rf_data_converter_0_0_block (
     .reset                  (master_reset)
  );
 
+  assign  m00_axis_tdata  =  adc00_data_i[127:0];
 
 
 
@@ -2108,6 +2143,13 @@ module top_level_usp_rf_data_converter_0_0_block (
   assign  dac33_status  =  dac33_stat;
 
   // Synchronize the asynchronous ADC clock valid inputs onto the DRP clock
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_adc0_clk_valid_i (
+      .src_clk  (1'b0                              ),
+      .src_in   (m0_axis_aresetn      ),
+      .dest_clk (s_axi_aclk                        ),
+      .dest_out (m0_axis_aclk_val_sync)
+    );
   // Synchronize the asynchronous ADC clock valid inputs onto the DRP clock
   // Synchronize the asynchronous ADC clock valid inputs onto the DRP clock
   // Synchronize the asynchronous ADC clock valid inputs onto the DRP clock
@@ -3197,7 +3239,8 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      adc0_slice0_irq_en <= 16'h0000;
+
+      adc0_slice0_irq_en <= 16'hC00C;
     end
     else if (bank9_write[131])
     begin
@@ -3276,7 +3319,7 @@ module top_level_usp_rf_data_converter_0_0_block (
   always @(posedge Bus2IP_Clk)
     if (~Bus2IP_Resetn)
     begin
-      adc0_ref_clk_freq <= 32'd2000000;
+      adc0_ref_clk_freq <= 32'd250000;
     end
     else if (bank9_write[192])
     begin
@@ -4442,7 +4485,7 @@ module top_level_usp_rf_data_converter_0_0_block (
                                bank0_read[16] ? {3'b000, dac31_sinc, 2'b00, dac31_mixer, 1'b0, dac31_interpolation, 2'b0, dac31_data_type, dac31_enable,  3'b000, dac30_sinc, 2'b00, dac30_mixer, 1'b0, dac30_interpolation, 2'b00, dac30_data_type, dac30_enable} :
                                bank0_read[17] ? {3'b000, dac33_sinc, 2'b00, dac33_mixer, 1'b0, dac33_interpolation, 2'b00, dac33_data_type, dac33_enable,  3'b000, dac32_sinc, 2'b00, dac32_mixer, 1'b0, dac32_interpolation, 2'b00, dac32_data_type, dac32_enable} :
                                // ADC Tile Config Bit 0:ADC Tile 0 Enable, Bit 1 ADC Tile 0 PLL Enable Bits 3:2 Reserved, Bit 4: ADC Tile 1 Enabled, Bit 5: ADC Tile 1 PLL Enable Bits 7:6 Reserved...
-                               bank0_read[25] ? {4'h0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0} :
+                               bank0_read[25] ? {4'h0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b0, 1'b0, 2'b00, 1'b1, 1'b1} :
                                bank0_read[26] ? {6'b0, adc01_mixer, 1'b0, adc01_decimation, 2'b00, adc01_data_type, adc01_enable,  6'b0, adc00_mixer, 1'b0, adc00_decimation, 2'b00, adc00_data_type, adc00_enable} :
                                bank0_read[27] ? {6'b0, adc03_mixer, 1'b0, adc03_decimation, 2'b00, adc03_data_type, adc03_enable,  6'b0, adc02_mixer, 1'b0, adc02_decimation, 2'b00, adc02_data_type, adc02_enable} :
                                bank0_read[28] ? {6'b0, adc11_mixer, 1'b0, adc11_decimation, 2'b00, adc11_data_type, adc11_enable,  6'b0, adc10_mixer, 1'b0, adc10_decimation, 2'b00, adc10_data_type, adc10_enable} :
@@ -4587,6 +4630,7 @@ module top_level_usp_rf_data_converter_0_0_block (
                                     bank9_read[138]  ? {16'h0000, adc0_common_stat} :
                                     bank9_read[139]  ? {16'h0000, adc0_cmn_en} :
                                     bank9_read[140]  ? {16'h0000, adc0_fifo_disable} :
+                                    bank9_read[141]  ? {29'b0, adc00_disable_cal_freeze_input, adc00_cal_frozen, adc00_cal_freeze_reg} :
                                     bank9_read[192]  ? adc0_ref_clk_freq :
                                     bank9_read[193]  ? adc0_sample_rate :
                                     32'h00000000;
@@ -4807,7 +4851,10 @@ module top_level_usp_rf_data_converter_0_0_block (
     .clk_dac2_buf     (clk_dac2),
   // DAC Fabric Feedback Clock for Tile 3
     .clk_dac3         (clk_dac3_i),
-    .clk_dac3_buf     (clk_dac3)
+    .clk_dac3_buf     (clk_dac3),
+  // ADC Fabric Feedback Clock for Tile 0
+    .clk_adc0         (clk_adc0_i),
+    .clk_adc0_buf     (clk_adc0)
   );
 
   // DAC Reset Module Counter for Tile 0
@@ -4852,13 +4899,54 @@ module top_level_usp_rf_data_converter_0_0_block (
 
   assign dac_reset_cnt_ack_i = |dac_reset_cnt_ack;
 
+  // ADC Reset Module Counter for Tile 0
+  top_level_usp_rf_data_converter_0_0_reset_count i_adc0_reset_count (
+    .clk          (s_axi_aclk),
+    .reset        (~s_axi_aresetn),
+    .sm_reset     (adc0_sm_reset_i),
+    .axi_read_req (bank9_read[14]),
+    .read_ack     (adc_reset_cnt_ack[0]),
+    .count        (adc0_reset_cnt)
+  );
 
 
 
 
-  assign adc_reset_cnt_ack_i = 1'b0;
+  assign adc_reset_cnt_ack_i = |adc_reset_cnt_ack;
 
 
+  assign adc00_signal_lost_i = adc00_cal_freeze_reg;
+  assign adc00_cal_frozen = adc00_bg_cal_off_i;
+  assign adc01_signal_lost_i = 1'b0;
+  assign adc01_cal_frozen = 1'b0;
+  assign adc02_signal_lost_i = 1'b0;
+  assign adc02_cal_frozen = 1'b0;
+  assign adc03_signal_lost_i = 1'b0;
+  assign adc03_cal_frozen = 1'b0;
+  assign adc10_signal_lost_i = 1'b0;
+  assign adc10_cal_frozen = 1'b0;
+  assign adc11_signal_lost_i = 1'b0;
+  assign adc11_cal_frozen = 1'b0;
+  assign adc12_signal_lost_i = 1'b0;
+  assign adc12_cal_frozen = 1'b0;
+  assign adc13_signal_lost_i = 1'b0;
+  assign adc13_cal_frozen = 1'b0;
+  assign adc20_signal_lost_i = 1'b0;
+  assign adc20_cal_frozen = 1'b0;
+  assign adc21_signal_lost_i = 1'b0;
+  assign adc21_cal_frozen = 1'b0;
+  assign adc22_signal_lost_i = 1'b0;
+  assign adc22_cal_frozen = 1'b0;
+  assign adc23_signal_lost_i = 1'b0;
+  assign adc23_cal_frozen = 1'b0;
+  assign adc30_signal_lost_i = 1'b0;
+  assign adc30_cal_frozen = 1'b0;
+  assign adc31_signal_lost_i = 1'b0;
+  assign adc31_cal_frozen = 1'b0;
+  assign adc32_signal_lost_i = 1'b0;
+  assign adc32_cal_frozen = 1'b0;
+  assign adc33_signal_lost_i = 1'b0;
+  assign adc33_cal_frozen = 1'b0;
   // Assign DAC Debug Ports
   // DAC0
   assign dac0_pll_dmon       = dac0_pll_dmon;

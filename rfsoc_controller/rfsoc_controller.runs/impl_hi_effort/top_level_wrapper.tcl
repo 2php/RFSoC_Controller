@@ -75,8 +75,9 @@ set rc [catch {
   set_property webtalk.parent_dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/wt [current_project]
   set_property parent.project_path C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.xpr [current_project]
   set_property ip_repo_paths {
-  C:/james/fpga_projects/trigger_controller_ip
-  C:/james/fpga_projects/ip_repo
+  c:/james/fpga_projects/adc_ip
+  c:/james/fpga_projects/trigger_controller_ip
+  c:/james/fpga_projects/ip_repo
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/ip [current_project]

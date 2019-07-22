@@ -248,6 +248,8 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set adc0_clk_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 adc0_clk_0 ]
+
   set app_leds [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 app_leds ]
 
   set dac0_clk [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 dac0_clk ]
@@ -276,6 +278,8 @@ proc create_root_design { parentCell } {
    ] $diff_clock_rtl
 
   set sysref_in [ create_bd_intf_port -mode Slave -vlnv xilinx.com:display_usp_rf_data_converter:diff_pins_rtl:1.0 sysref_in ]
+
+  set vin00_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 vin00_0 ]
 
   set vout00 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 vout00 ]
 
@@ -403,6 +407,12 @@ proc create_root_design { parentCell } {
   # Create instance: proc_sys_reset_3, and set properties
   set proc_sys_reset_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_3 ]
 
+  # Create instance: proc_sys_reset_4, and set properties
+  set proc_sys_reset_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_4 ]
+
+  # Create instance: rfsoc_adc_data_captu_0, and set properties
+  set rfsoc_adc_data_captu_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:rfsoc_adc_data_capture:1.0 rfsoc_adc_data_captu_0 ]
+
   # Create instance: rfsoc_data_pipeline_0, and set properties
   set rfsoc_data_pipeline_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:rfsoc_data_pipeline:1.0 rfsoc_data_pipeline_0 ]
 
@@ -460,11 +470,14 @@ proc create_root_design { parentCell } {
   # Create instance: usp_rf_data_converter_0, and set properties
   set usp_rf_data_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:usp_rf_data_converter:2.1 usp_rf_data_converter_0 ]
   set_property -dict [ list \
-   CONFIG.ADC0_Enable {0} \
-   CONFIG.ADC0_Fabric_Freq {0.0} \
-   CONFIG.ADC_Decimation_Mode00 {0} \
-   CONFIG.ADC_Mixer_Type00 {3} \
-   CONFIG.ADC_Slice00_Enable {false} \
+   CONFIG.ADC0_Enable {1} \
+   CONFIG.ADC0_Fabric_Freq {250.000} \
+   CONFIG.ADC0_PLL_Enable {true} \
+   CONFIG.ADC0_Refclk_Freq {250.000} \
+   CONFIG.ADC_Decimation_Mode00 {1} \
+   CONFIG.ADC_Dither00 {true} \
+   CONFIG.ADC_Mixer_Type00 {0} \
+   CONFIG.ADC_Slice00_Enable {true} \
    CONFIG.DAC0_Enable {1} \
    CONFIG.DAC0_Fabric_Freq {250.000} \
    CONFIG.DAC0_Outclk_Freq {250.000} \
@@ -548,6 +561,7 @@ proc create_root_design { parentCell } {
  ] $util_vector_logic_0
 
   # Create interface connections
+  connect_bd_intf_net -intf_net adc0_clk_0_1 [get_bd_intf_ports adc0_clk_0] [get_bd_intf_pins usp_rf_data_converter_0/adc0_clk]
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports app_leds] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net dac0_clk_1 [get_bd_intf_ports dac0_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac0_clk]
   connect_bd_intf_net -intf_net dac1_clk_1 [get_bd_intf_ports dac1_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac1_clk]
@@ -578,6 +592,10 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net microblaze_0_dlmb_1 [get_bd_intf_pins microblaze_0/DLMB] [get_bd_intf_pins microblaze_0_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
   connect_bd_intf_net -intf_net microblaze_0_mdm_axi [get_bd_intf_pins mdm_1/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net rfsoc_adc_data_captu_0_M_AXIS_0 [get_bd_intf_pins microblaze_0/S0_AXIS] [get_bd_intf_pins rfsoc_adc_data_captu_0/M_AXIS_0]
+  connect_bd_intf_net -intf_net rfsoc_adc_data_captu_0_M_AXIS_1 [get_bd_intf_pins microblaze_0/S1_AXIS] [get_bd_intf_pins rfsoc_adc_data_captu_0/M_AXIS_1]
+  connect_bd_intf_net -intf_net rfsoc_adc_data_captu_0_M_AXIS_2 [get_bd_intf_pins microblaze_0/S2_AXIS] [get_bd_intf_pins rfsoc_adc_data_captu_0/M_AXIS_2]
+  connect_bd_intf_net -intf_net rfsoc_adc_data_captu_0_M_AXIS_3 [get_bd_intf_pins microblaze_0/S3_AXIS] [get_bd_intf_pins rfsoc_adc_data_captu_0/M_AXIS_3]
   connect_bd_intf_net -intf_net rfsoc_data_pipeline_0_m_axis_0 [get_bd_intf_pins rfsoc_data_pipeline_0/m_axis] [get_bd_intf_pins usp_rf_data_converter_0/s00_axis]
   connect_bd_intf_net -intf_net rfsoc_data_pipeline_10_m_axis [get_bd_intf_pins rfsoc_data_pipeline_10/m_axis] [get_bd_intf_pins usp_rf_data_converter_0/s22_axis]
   connect_bd_intf_net -intf_net rfsoc_data_pipeline_11_m_axis [get_bd_intf_pins rfsoc_data_pipeline_11/m_axis] [get_bd_intf_pins usp_rf_data_converter_0/s23_axis]
@@ -595,6 +613,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net rfsoc_data_pipeline_8_m_axis [get_bd_intf_pins rfsoc_data_pipeline_8/m_axis] [get_bd_intf_pins usp_rf_data_converter_0/s20_axis]
   connect_bd_intf_net -intf_net rfsoc_data_pipeline_9_m_axis [get_bd_intf_pins rfsoc_data_pipeline_9/m_axis] [get_bd_intf_pins usp_rf_data_converter_0/s21_axis]
   connect_bd_intf_net -intf_net sysref_in_1 [get_bd_intf_ports sysref_in] [get_bd_intf_pins usp_rf_data_converter_0/sysref_in]
+  connect_bd_intf_net -intf_net usp_rf_data_converter_0_m00_axis [get_bd_intf_pins rfsoc_adc_data_captu_0/s_axis] [get_bd_intf_pins usp_rf_data_converter_0/m00_axis]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout00 [get_bd_intf_ports vout00] [get_bd_intf_pins usp_rf_data_converter_0/vout00]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout01 [get_bd_intf_ports vout01] [get_bd_intf_pins usp_rf_data_converter_0/vout01]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout02 [get_bd_intf_ports vout02] [get_bd_intf_pins usp_rf_data_converter_0/vout02]
@@ -611,9 +630,10 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout31 [get_bd_intf_ports vout31] [get_bd_intf_pins usp_rf_data_converter_0/vout31]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout32 [get_bd_intf_ports vout32] [get_bd_intf_pins usp_rf_data_converter_0/vout32]
   connect_bd_intf_net -intf_net usp_rf_data_converter_0_vout33 [get_bd_intf_ports vout33] [get_bd_intf_pins usp_rf_data_converter_0/vout33]
+  connect_bd_intf_net -intf_net vin00_0_1 [get_bd_intf_ports vin00_0] [get_bd_intf_pins usp_rf_data_converter_0/vin00]
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins channel_select_0/gpio_in] [get_bd_pins rfsoc_data_pipeline_0/gpio_in] [get_bd_pins rfsoc_data_pipeline_1/gpio_in] [get_bd_pins rfsoc_data_pipeline_10/gpio_in] [get_bd_pins rfsoc_data_pipeline_11/gpio_in] [get_bd_pins rfsoc_data_pipeline_12/gpio_in] [get_bd_pins rfsoc_data_pipeline_13/gpio_in] [get_bd_pins rfsoc_data_pipeline_14/gpio_in] [get_bd_pins rfsoc_data_pipeline_15/gpio_in] [get_bd_pins rfsoc_data_pipeline_2/gpio_in] [get_bd_pins rfsoc_data_pipeline_3/gpio_in] [get_bd_pins rfsoc_data_pipeline_4/gpio_in] [get_bd_pins rfsoc_data_pipeline_5/gpio_in] [get_bd_pins rfsoc_data_pipeline_6/gpio_in] [get_bd_pins rfsoc_data_pipeline_7/gpio_in] [get_bd_pins rfsoc_data_pipeline_8/gpio_in] [get_bd_pins rfsoc_data_pipeline_9/gpio_in] [get_bd_pins trigger_controller_0/gpio_in]
+  connect_bd_net -net Net [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins channel_select_0/gpio_in] [get_bd_pins rfsoc_adc_data_captu_0/gpio_in] [get_bd_pins rfsoc_data_pipeline_0/gpio_in] [get_bd_pins rfsoc_data_pipeline_1/gpio_in] [get_bd_pins rfsoc_data_pipeline_10/gpio_in] [get_bd_pins rfsoc_data_pipeline_11/gpio_in] [get_bd_pins rfsoc_data_pipeline_12/gpio_in] [get_bd_pins rfsoc_data_pipeline_13/gpio_in] [get_bd_pins rfsoc_data_pipeline_14/gpio_in] [get_bd_pins rfsoc_data_pipeline_15/gpio_in] [get_bd_pins rfsoc_data_pipeline_2/gpio_in] [get_bd_pins rfsoc_data_pipeline_3/gpio_in] [get_bd_pins rfsoc_data_pipeline_4/gpio_in] [get_bd_pins rfsoc_data_pipeline_5/gpio_in] [get_bd_pins rfsoc_data_pipeline_6/gpio_in] [get_bd_pins rfsoc_data_pipeline_7/gpio_in] [get_bd_pins rfsoc_data_pipeline_8/gpio_in] [get_bd_pins rfsoc_data_pipeline_9/gpio_in] [get_bd_pins trigger_controller_0/gpio_in]
   connect_bd_net -net Net1 [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins rfsoc_data_pipeline_4/rf_resetn] [get_bd_pins rfsoc_data_pipeline_5/rf_resetn] [get_bd_pins rfsoc_data_pipeline_6/rf_resetn] [get_bd_pins rfsoc_data_pipeline_7/rf_resetn] [get_bd_pins usp_rf_data_converter_0/s1_axis_aresetn]
   connect_bd_net -net Net2 [get_bd_pins proc_sys_reset_2/peripheral_aresetn] [get_bd_pins rfsoc_data_pipeline_10/rf_resetn] [get_bd_pins rfsoc_data_pipeline_11/rf_resetn] [get_bd_pins rfsoc_data_pipeline_8/rf_resetn] [get_bd_pins rfsoc_data_pipeline_9/rf_resetn] [get_bd_pins usp_rf_data_converter_0/s2_axis_aresetn]
   connect_bd_net -net Net3 [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_0/rf_clock] [get_bd_pins rfsoc_data_pipeline_1/rf_clock] [get_bd_pins rfsoc_data_pipeline_2/rf_clock] [get_bd_pins rfsoc_data_pipeline_3/rf_clock] [get_bd_pins trigger_controller_0/rf_clk] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk]
@@ -637,9 +657,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net channel_select_0_ch15 [get_bd_pins channel_select_0/ch15] [get_bd_pins rfsoc_data_pipeline_15/is_selected]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
   connect_bd_net -net ext_trigger_0_0_1 [get_bd_ports ext_trigger_0_0] [get_bd_pins trigger_controller_0/ext_trigger_in]
-  connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins clk_wiz_1/reset] [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_1/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_2/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_3/mb_debug_sys_rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins channel_select_0/mb_clk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rfsoc_data_pipeline_0/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_1/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_10/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_11/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_12/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_13/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_14/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_15/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_2/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_3/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_4/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_5/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_6/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_7/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_8/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_9/microblaze_clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins trigger_controller_0/microblaze_clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk]
+  connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins clk_wiz_1/reset] [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_1/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_2/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_3/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_4/mb_debug_sys_rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins channel_select_0/mb_clk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rfsoc_adc_data_captu_0/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_0/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_1/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_10/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_11/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_12/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_13/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_14/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_15/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_2/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_3/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_4/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_5/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_6/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_7/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_8/microblaze_clk] [get_bd_pins rfsoc_data_pipeline_9/microblaze_clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk] [get_bd_pins trigger_controller_0/microblaze_clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk]
   connect_bd_net -net proc_sys_reset_3_peripheral_aresetn [get_bd_pins proc_sys_reset_3/peripheral_aresetn] [get_bd_pins rfsoc_data_pipeline_12/rf_resetn] [get_bd_pins rfsoc_data_pipeline_13/rf_resetn] [get_bd_pins rfsoc_data_pipeline_14/rf_resetn] [get_bd_pins rfsoc_data_pipeline_15/rf_resetn] [get_bd_pins usp_rf_data_converter_0/s3_axis_aresetn]
+  connect_bd_net -net proc_sys_reset_4_peripheral_aresetn [get_bd_pins proc_sys_reset_4/peripheral_aresetn] [get_bd_pins rfsoc_adc_data_captu_0/rf_reset] [get_bd_pins usp_rf_data_converter_0/m0_axis_aresetn]
   connect_bd_net -net resetn_1 [get_bd_ports resetn] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net rfsoc_data_pipeline_0_pipeline_active [get_bd_pins rfsoc_data_pipeline_0/pipeline_active] [get_bd_pins trigger_controller_0/pipeline_active_in_0]
   connect_bd_net -net rfsoc_data_pipeline_10_pipeline_active [get_bd_pins rfsoc_data_pipeline_10/pipeline_active] [get_bd_pins trigger_controller_0/pipeline_active_in_10]
@@ -659,7 +680,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net rfsoc_data_pipeline_9_pipeline_active [get_bd_pins rfsoc_data_pipeline_9/pipeline_active] [get_bd_pins trigger_controller_0/pipeline_active_in_9]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]
-  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins channel_select_0/mb_reset] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rfsoc_data_pipeline_0/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_1/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_10/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_11/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_12/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_13/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_14/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_15/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_2/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_3/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_4/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_5/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_6/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_7/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_8/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_9/microblaze_resetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn] [get_bd_pins trigger_controller_0/microblaze_reset] [get_bd_pins usp_rf_data_converter_0/s_axi_aresetn]
+  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins channel_select_0/mb_reset] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rfsoc_adc_data_captu_0/microblaze_reset] [get_bd_pins rfsoc_data_pipeline_0/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_1/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_10/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_11/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_12/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_13/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_14/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_15/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_2/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_3/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_4/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_5/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_6/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_7/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_8/microblaze_resetn] [get_bd_pins rfsoc_data_pipeline_9/microblaze_resetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn] [get_bd_pins trigger_controller_0/microblaze_reset] [get_bd_pins usp_rf_data_converter_0/s_axi_aresetn]
   connect_bd_net -net rx_0_1 [get_bd_ports rx_0] [get_bd_pins axi_uartlite_0/rx]
   connect_bd_net -net trigger_controller_0_trigger_c0 [get_bd_pins rfsoc_data_pipeline_0/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c0]
   connect_bd_net -net trigger_controller_0_trigger_c1 [get_bd_pins rfsoc_data_pipeline_1/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c1]
@@ -670,17 +691,18 @@ proc create_root_design { parentCell } {
   connect_bd_net -net trigger_controller_0_trigger_c6 [get_bd_pins rfsoc_data_pipeline_6/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c6]
   connect_bd_net -net trigger_controller_0_trigger_c7 [get_bd_pins rfsoc_data_pipeline_7/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c7]
   connect_bd_net -net trigger_controller_0_trigger_c8 [get_bd_pins rfsoc_data_pipeline_8/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c8]
-  connect_bd_net -net trigger_controller_0_trigger_c9 [get_bd_pins rfsoc_data_pipeline_9/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c9]
+  connect_bd_net -net trigger_controller_0_trigger_c9 [get_bd_pins rfsoc_adc_data_captu_0/ext_trigger] [get_bd_pins rfsoc_data_pipeline_9/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c9]
   connect_bd_net -net trigger_controller_0_trigger_c10 [get_bd_pins rfsoc_data_pipeline_10/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c10]
   connect_bd_net -net trigger_controller_0_trigger_c11 [get_bd_pins rfsoc_data_pipeline_11/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c11]
   connect_bd_net -net trigger_controller_0_trigger_c12 [get_bd_pins rfsoc_data_pipeline_12/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c12]
   connect_bd_net -net trigger_controller_0_trigger_c13 [get_bd_pins rfsoc_data_pipeline_13/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c13]
   connect_bd_net -net trigger_controller_0_trigger_c14 [get_bd_pins rfsoc_data_pipeline_14/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c14]
   connect_bd_net -net trigger_controller_0_trigger_c15 [get_bd_pins rfsoc_data_pipeline_15/ext_trigger] [get_bd_pins trigger_controller_0/trigger_c15]
+  connect_bd_net -net usp_rf_data_converter_0_clk_adc0 [get_bd_pins proc_sys_reset_4/slowest_sync_clk] [get_bd_pins rfsoc_adc_data_captu_0/rf_clk] [get_bd_pins usp_rf_data_converter_0/clk_adc0] [get_bd_pins usp_rf_data_converter_0/m0_axis_aclk]
   connect_bd_net -net usp_rf_data_converter_0_clk_dac1 [get_bd_pins proc_sys_reset_1/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_4/rf_clock] [get_bd_pins rfsoc_data_pipeline_5/rf_clock] [get_bd_pins rfsoc_data_pipeline_6/rf_clock] [get_bd_pins rfsoc_data_pipeline_7/rf_clock] [get_bd_pins usp_rf_data_converter_0/clk_dac1] [get_bd_pins usp_rf_data_converter_0/s1_axis_aclk]
   connect_bd_net -net usp_rf_data_converter_0_clk_dac2 [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_10/rf_clock] [get_bd_pins rfsoc_data_pipeline_11/rf_clock] [get_bd_pins rfsoc_data_pipeline_8/rf_clock] [get_bd_pins rfsoc_data_pipeline_9/rf_clock] [get_bd_pins usp_rf_data_converter_0/clk_dac2] [get_bd_pins usp_rf_data_converter_0/s2_axis_aclk]
   connect_bd_net -net usp_rf_data_converter_0_clk_dac3 [get_bd_pins proc_sys_reset_3/slowest_sync_clk] [get_bd_pins rfsoc_data_pipeline_12/rf_clock] [get_bd_pins rfsoc_data_pipeline_13/rf_clock] [get_bd_pins rfsoc_data_pipeline_14/rf_clock] [get_bd_pins rfsoc_data_pipeline_15/rf_clock] [get_bd_pins usp_rf_data_converter_0/clk_dac3] [get_bd_pins usp_rf_data_converter_0/s3_axis_aclk]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins proc_sys_reset_2/ext_reset_in] [get_bd_pins proc_sys_reset_3/ext_reset_in] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins proc_sys_reset_2/ext_reset_in] [get_bd_pins proc_sys_reset_3/ext_reset_in] [get_bd_pins proc_sys_reset_4/ext_reset_in] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg

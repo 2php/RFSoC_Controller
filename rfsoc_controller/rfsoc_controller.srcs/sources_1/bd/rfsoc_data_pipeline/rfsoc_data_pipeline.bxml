@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="rfsoc_data_pipeline" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563474344"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563474344"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563474344"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563474344"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1563811836"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1563811836"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1563811836"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1563811836"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\rfsoc_data_pipeline_axis_data_fifo_0_0\rfsoc_data_pipeline_axis_data_fifo_0_0.xci" Type="IP">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>

@@ -32,6 +32,8 @@ RF_SET_TRIGGER = 0x07
 RF_SET_LOCKING_WAVEFORM = 0x08
 RF_SET_LOCKING_SELECT = 0x09
 RF_SET_ZERO_DELAY = 0x0A
+RF_SET_ADC_CYCLES = 0x10
+RF_READ_ADC = 0x11
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -267,7 +269,7 @@ class RFSoC_Board:
         self.port = serial.Serial()
         self.port.baudrate = DEFAULT_BAUD
         self.port.port = portname
-        self.port.timeout = 1
+        self.port.timeout = 3
         
     def close(self):
         self.port.close()
@@ -330,6 +332,15 @@ class RFSoC_Board:
         except:
             return 15
         
+    def receive_bytes(self, num_bytes):
+        try:
+            self.port.open()
+            self.port.reset_input_buffer()
+            retval = self.port.read(num_bytes)
+            self.port.close()
+            return retval
+        except:
+            return None
         
     def write_channel(self, channel_num):
         if(channel_num >= 16):
@@ -507,6 +518,46 @@ class RFSoC_Board:
 #        if(ack_val != ACK_RESPONSE):
 #            print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
 
+    def set_adc_cycles(self, cycles):
+        
+        #send the set adc cycles command
+        ack_val = self.write_bytes([RF_SET_ADC_CYCLES])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
+           
+        #send the cycle bytes
+        ack_val = self.write_bytes(int_to_bytestream(int(cycles), 4))
+    
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending adc cycles, ack error code was: " + str(ack_val) + "\n")
+         
+     #Returns an array of adc samples       
+    def read_adc(self):
+         #send the read command
+        ack_val = self.write_bytes([RF_READ_ADC])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
+           
+        #read the length of the bytestream
+        len_bytes = self.receive_bytes(4)
+        
+        if(len(len_bytes) != 4):
+            print("Error while receiving ADC bytestream, stream length bytes not correct! Board must be reset to continue.")
+            return
+        
+        leng = (len_bytes[0] << 24) | (len_bytes[1] << 16) | (len_bytes[2] << 8) | len_bytes[3]
+        
+        #get the bytestream
+        adc_bytestream = self.receive_bytes(leng)
+        
+        #return the rebuilt samples
+        return self.rebuild_adc_stream(adc_bytestream)
+         
     
     def get_locking_bytes(self):
         
@@ -516,3 +567,13 @@ class RFSoC_Board:
                 locking_val = locking_val | (1 << c.number)
                 
         return int_to_bytestream(locking_val, 2)
+    
+    def rebuild_adc_stream(self, stream):
+        
+        samples = []
+        for i in range(0, len(stream)/2):
+            #Conbine the two bytes
+            sample = (stream[2*i] << 8) | stream[(2*i) + 1]
+            samples.append(sample)
+            
+        return samples

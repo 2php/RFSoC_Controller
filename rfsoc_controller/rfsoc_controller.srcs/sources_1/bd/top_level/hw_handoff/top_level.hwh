@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jul 18 13:26:30 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 09:59:28 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -249,6 +249,26 @@
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout10_p"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="vin00_0_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="vin00_0_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -397,6 +417,20 @@
       <PORTMAPS>
         <PORTMAP LOGICAL="V_N" PHYSICAL="vout33_v_n"/>
         <PORTMAP LOGICAL="V_P" PHYSICAL="vout33_v_p"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_vin00_0" NAME="vin00_0" TYPE="TARGET">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="V_N" PHYSICAL="vin00_0_v_n"/>
+        <PORTMAP LOGICAL="V_P" PHYSICAL="vin00_0_v_p"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_adc0_clk_0" NAME="adc0_clk_0" TYPE="TARGET">
+      <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="adc0_clk_0_clk_n"/>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="adc0_clk_0_clk_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -717,6 +751,7 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1880,6 +1915,7 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_1_locked">
@@ -2730,6 +2766,7 @@
             <CONNECTION INSTANCE="proc_sys_reset_1" PORT="mb_debug_sys_rst"/>
             <CONNECTION INSTANCE="proc_sys_reset_2" PORT="mb_debug_sys_rst"/>
             <CONNECTION INSTANCE="proc_sys_reset_3" PORT="mb_debug_sys_rst"/>
+            <CONNECTION INSTANCE="proc_sys_reset_4" PORT="mb_debug_sys_rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="S_AXI_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="mdm_1_S_AXI_AWADDR">
@@ -3668,21 +3705,69 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="S0_AXIS_TLAST" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="S0_AXIS_TDATA" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S0_AXIS_TVALID" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S0_AXIS_TREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S0_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_0_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S0_AXIS_TVALID" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_0_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S0_AXIS_TREADY" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_0_tready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="S1_AXIS_TLAST" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="S1_AXIS_TDATA" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S1_AXIS_TVALID" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S1_AXIS_TREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S1_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_1_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S1_AXIS_TVALID" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_1_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S1_AXIS_TREADY" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_1_tready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="S2_AXIS_TLAST" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="S2_AXIS_TDATA" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S2_AXIS_TVALID" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S2_AXIS_TREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S2_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_2_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S2_AXIS_TVALID" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_2_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S2_AXIS_TREADY" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_2_tready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="S3_AXIS_TLAST" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="S3_AXIS_TDATA" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S3_AXIS_TVALID" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S3_AXIS_TREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S3_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_3_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S3_AXIS_TVALID" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_3_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S3_AXIS_TREADY" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="M_AXIS_3_tready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="S4_AXIS_TLAST" SIGIS="undef"/>
         <PORT DIR="I" LEFT="31" NAME="S4_AXIS_TDATA" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="S4_AXIS_TVALID" SIGIS="undef"/>
@@ -3850,7 +3935,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="M0_AXIS_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="S0_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_0" NAME="S0_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -3892,7 +3977,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="M1_AXIS_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="S1_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_1" NAME="S1_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -3934,7 +4019,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="M2_AXIS_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="S2_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_2" NAME="S2_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -3976,7 +4061,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="M3_AXIS_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="S3_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_3" NAME="S3_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -6662,6 +6747,272 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="13" FULLNAME="/proc_sys_reset_4" HWVERSION="5.0" INSTANCE="proc_sys_reset_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="top_level_proc_sys_reset_4_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_adc0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_adc0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst" SIGNAME="mdm_1_Debug_SYS_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mdm_1" PORT="Debug_SYS_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_4_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m0_axis_aresetn"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="rf_reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/rfsoc_adc_data_captu_0" HWVERSION="1.0" INSTANCE="rfsoc_adc_data_captu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_adc_data_capture" VLNV="xilinx.com:user:rfsoc_adc_data_capture:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="top_level_rfsoc_adc_data_captu_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="M_AXIS_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S0_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_0_tready" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S0_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_0_tvalid" SIGIS="undef" SIGNAME="microblaze_0_S0_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S0_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M_AXIS_1_tdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S1_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_1_tready" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S1_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_1_tvalid" SIGIS="undef" SIGNAME="microblaze_0_S1_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S1_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M_AXIS_2_tdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S2_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_2_tready" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S2_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_2_tvalid" SIGIS="undef" SIGNAME="microblaze_0_S2_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S2_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M_AXIS_3_tdata" RIGHT="0" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S3_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_3_tready" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S3_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_3_tvalid" SIGIS="undef" SIGNAME="microblaze_0_S3_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0" PORT="S3_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c9">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="trigger_c9"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="microblaze_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="microblaze_reset" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="rf_clk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_adc0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_adc0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rf_reset" SIGIS="rst" SIGNAME="proc_sys_reset_4_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_4" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m00_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m00_axis" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_adc0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_0" NAME="M_AXIS_0" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_clk_wiz_1_0_clk_out1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_0_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_0_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_0_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_1" NAME="M_AXIS_1" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_clk_wiz_1_0_clk_out1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_1_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_1_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_1_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_2" NAME="M_AXIS_2" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_clk_wiz_1_0_clk_out1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_2_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_2_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_2_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_adc_data_captu_0_M_AXIS_3" NAME="M_AXIS_3" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_clk_wiz_1_0_clk_out1"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_3_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_3_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_3_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="2" FULLNAME="/rfsoc_data_pipeline_0" HWVERSION="1.0" INSTANCE="rfsoc_data_pipeline_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_data_pipeline" VLNV="xilinx.com:user:rfsoc_data_pipeline:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -8684,6 +9035,7 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8884,6 +9236,7 @@
         <PORT DIR="O" NAME="trigger_c9" SIGIS="undef" SIGNAME="trigger_controller_0_trigger_c9">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="ext_trigger"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="ext_trigger"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8912,30 +9265,30 @@
         <PARAMETER NAME="C_Calibration_Time" VALUE="10"/>
         <PARAMETER NAME="C_DAC_NCO_RTS" VALUE="false"/>
         <PARAMETER NAME="C_ADC_NCO_RTS" VALUE="false"/>
-        <PARAMETER NAME="C_ADC0_Enable" VALUE="0"/>
-        <PARAMETER NAME="C_ADC0_PLL_Enable" VALUE="false"/>
+        <PARAMETER NAME="C_ADC0_Enable" VALUE="1"/>
+        <PARAMETER NAME="C_ADC0_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="C_ADC0_Sampling_Rate" VALUE="2.0"/>
         <PARAMETER NAME="C_ADC0_Fs_Max" VALUE="2.058"/>
-        <PARAMETER NAME="C_ADC0_Refclk_Freq" VALUE="2000.000"/>
+        <PARAMETER NAME="C_ADC0_Refclk_Freq" VALUE="250.000"/>
         <PARAMETER NAME="C_ADC0_Outclk_Freq" VALUE="250.000"/>
-        <PARAMETER NAME="C_ADC0_FBDIV" VALUE="10"/>
-        <PARAMETER NAME="C_ADC0_OutDiv" VALUE="2"/>
-        <PARAMETER NAME="C_ADC0_Vco" VALUE="8500.0"/>
-        <PARAMETER NAME="C_ADC0_Fabric_Freq" VALUE="0.0"/>
+        <PARAMETER NAME="C_ADC0_FBDIV" VALUE="48"/>
+        <PARAMETER NAME="C_ADC0_OutDiv" VALUE="6"/>
+        <PARAMETER NAME="C_ADC0_Vco" VALUE="12000.0"/>
+        <PARAMETER NAME="C_ADC0_Fabric_Freq" VALUE="250.000"/>
         <PARAMETER NAME="C_ADC0_Multi_Tile_Sync" VALUE="false"/>
         <PARAMETER NAME="C_ADC0_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="C_ADC0_Band" VALUE="0"/>
         <PARAMETER NAME="C_ADC0_Refclk_Div" VALUE="1"/>
         <PARAMETER NAME="C_ADC0_Slices" VALUE="4"/>
-        <PARAMETER NAME="C_ADC0_Decimation" VALUE="0"/>
+        <PARAMETER NAME="C_ADC0_Decimation" VALUE="1"/>
         <PARAMETER NAME="C_ADC0_Clock_Source" VALUE="0"/>
         <PARAMETER NAME="C_ADC0_Clock_Dist" VALUE="0"/>
-        <PARAMETER NAME="C_ADC_Slice00_Enable" VALUE="false"/>
+        <PARAMETER NAME="C_ADC_Slice00_Enable" VALUE="true"/>
         <PARAMETER NAME="C_ADC_Dither00" VALUE="true"/>
         <PARAMETER NAME="C_ADC_Data_Type00" VALUE="0"/>
-        <PARAMETER NAME="C_ADC_Decimation_Mode00" VALUE="0"/>
+        <PARAMETER NAME="C_ADC_Decimation_Mode00" VALUE="1"/>
         <PARAMETER NAME="C_ADC_CalOpt_Mode00" VALUE="1"/>
-        <PARAMETER NAME="C_ADC_Mixer_Type00" VALUE="3"/>
+        <PARAMETER NAME="C_ADC_Mixer_Type00" VALUE="0"/>
         <PARAMETER NAME="C_ADC_Mixer_Mode00" VALUE="2"/>
         <PARAMETER NAME="C_ADC_Data_Width00" VALUE="8"/>
         <PARAMETER NAME="C_ADC_Coarse_Mixer_Freq00" VALUE="0"/>
@@ -8945,7 +9298,7 @@
         <PARAMETER NAME="C_ADC_Nyquist00" VALUE="0"/>
         <PARAMETER NAME="C_ADC_Bypass_BG_Cal00" VALUE="false"/>
         <PARAMETER NAME="C_ADC_LM00" VALUE="0"/>
-        <PARAMETER NAME="C_ADC00_Dig_Port" VALUE="0"/>
+        <PARAMETER NAME="C_ADC00_Dig_Port" VALUE="1"/>
         <PARAMETER NAME="C_ADC_Slice01_Enable" VALUE="false"/>
         <PARAMETER NAME="C_ADC_Dither01" VALUE="true"/>
         <PARAMETER NAME="C_ADC_Data_Type01" VALUE="0"/>
@@ -9583,25 +9936,25 @@
         <PARAMETER NAME="Calibration_Time" VALUE="10"/>
         <PARAMETER NAME="DAC_NCO_RTS" VALUE="false"/>
         <PARAMETER NAME="ADC_NCO_RTS" VALUE="false"/>
-        <PARAMETER NAME="ADC0_Enable" VALUE="0"/>
-        <PARAMETER NAME="ADC0_PLL_Enable" VALUE="false"/>
+        <PARAMETER NAME="ADC0_Enable" VALUE="1"/>
+        <PARAMETER NAME="ADC0_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="ADC0_Sampling_Rate" VALUE="2.0"/>
-        <PARAMETER NAME="ADC0_Refclk_Freq" VALUE="2000.000"/>
+        <PARAMETER NAME="ADC0_Refclk_Freq" VALUE="250.000"/>
         <PARAMETER NAME="ADC0_Outclk_Freq" VALUE="250.000"/>
-        <PARAMETER NAME="ADC0_Outdiv" VALUE="2"/>
-        <PARAMETER NAME="ADC0_Fabric_Freq" VALUE="0.0"/>
+        <PARAMETER NAME="ADC0_Outdiv" VALUE="6"/>
+        <PARAMETER NAME="ADC0_Fabric_Freq" VALUE="250.000"/>
         <PARAMETER NAME="ADC0_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="ADC0_Multi_Tile_Sync" VALUE="false"/>
         <PARAMETER NAME="ADC0_Band" VALUE="0"/>
         <PARAMETER NAME="ADC0_Refclk_Div" VALUE="1"/>
         <PARAMETER NAME="ADC0_Clock_Source" VALUE="0"/>
         <PARAMETER NAME="ADC0_Clock_Dist" VALUE="0"/>
-        <PARAMETER NAME="ADC_Slice00_Enable" VALUE="false"/>
+        <PARAMETER NAME="ADC_Slice00_Enable" VALUE="true"/>
         <PARAMETER NAME="ADC_Dither00" VALUE="true"/>
         <PARAMETER NAME="ADC_Data_Type00" VALUE="0"/>
-        <PARAMETER NAME="ADC_Decimation_Mode00" VALUE="0"/>
+        <PARAMETER NAME="ADC_Decimation_Mode00" VALUE="1"/>
         <PARAMETER NAME="ADC_CalOpt_Mode00" VALUE="1"/>
-        <PARAMETER NAME="ADC_Mixer_Type00" VALUE="3"/>
+        <PARAMETER NAME="ADC_Mixer_Type00" VALUE="0"/>
         <PARAMETER NAME="ADC_Mixer_Mode00" VALUE="2"/>
         <PARAMETER NAME="ADC_Data_Width00" VALUE="8"/>
         <PARAMETER NAME="ADC_Coarse_Mixer_Freq00" VALUE="0"/>
@@ -10311,6 +10664,23 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x44A3FFFF"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="adc0_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_imp" PORT="adc0_clk_0_clk_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="adc0_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_imp" PORT="adc0_clk_0_clk_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="250000000" DIR="O" NAME="clk_adc0" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_adc0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="m0_axis_aclk"/>
+            <CONNECTION INSTANCE="proc_sys_reset_4" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="rf_clk"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="dac0_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_level_imp" PORT="dac0_clk_clk_p"/>
@@ -10498,6 +10868,16 @@
             <CONNECTION INSTANCE="top_level_imp" PORT="sysref_in_diff_n"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="vin00_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_imp" PORT="vin00_0_v_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vin00_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_level_imp" PORT="vin00_0_v_n"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="vout00_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_level_imp" PORT="vout00_v_p"/>
@@ -10656,6 +11036,31 @@
         <PORT DIR="O" NAME="vout33_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout33_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="top_level_imp" PORT="vout33_v_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m0_axis_aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_4_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_4" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="m0_axis_aclk" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_clk_adc0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="clk_adc0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="m00_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m00_axis_tvalid" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m00_axis_tready" SIGIS="undef" SIGNAME="rfsoc_adc_data_captu_0_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s0_axis_aresetn" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
@@ -10992,6 +11397,26 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_m00_axis" NAME="m00_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_adc0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m00_axis_tdata"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m00_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m00_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="rfsoc_data_pipeline_0_m_axis" NAME="s00_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="32"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
@@ -11312,6 +11737,14 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s33_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="External_Interface_adc0_clk_0" NAME="adc0_clk" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK_N" PHYSICAL="adc0_clk_n"/>
+            <PORTMAP LOGICAL="CLK_P" PHYSICAL="adc0_clk_p"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="External_Interface_dac0_clk" NAME="dac0_clk" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
           <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="4000000000.0"/>
@@ -11342,6 +11775,12 @@
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="dac3_clk_n"/>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="dac3_clk_p"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="External_Interface_vin00_0" NAME="vin00" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="V_N" PHYSICAL="vin00_n"/>
+            <PORTMAP LOGICAL="V_P" PHYSICAL="vin00_p"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="usp_rf_data_converter_0_vout00" NAME="vout00" TYPE="INITIATOR" VLNV="xilinx.com:interface:diff_analog_io:1.0">
@@ -11470,6 +11909,7 @@
             <CONNECTION INSTANCE="proc_sys_reset_1" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="proc_sys_reset_2" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="proc_sys_reset_3" PORT="ext_reset_in"/>
+            <CONNECTION INSTANCE="proc_sys_reset_4" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

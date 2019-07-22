@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Jul 19 09:25:14 2019
+| Date         : Mon Jul 22 09:38:19 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,15 +23,17 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 69
 +-----------+------------------+------------------------------------------------+------------+
 | Rule      | Severity         | Description                                    | Violations |
 +-----------+------------------+------------------------------------------------+------------+
-| TIMING-6  | Critical Warning | No common primary clock between related clocks | 6          |
-| TIMING-7  | Critical Warning | No common node between related clocks          | 6          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                   | 19         |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 9          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 9          |
+| TIMING-8  | Critical Warning | No common period between related clocks        | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 24         |
 | TIMING-9  | Warning          | Unknown CDC Logic                              | 1          |
 | TIMING-10 | Warning          | Missing property on synchronizer               | 1          |
+| TIMING-16 | Warning          | Large setup violation                          | 21         |
 | TIMING-18 | Warning          | Missing input or output delay                  | 2          |
 +-----------+------------------+------------------------------------------------+------------+
 
@@ -39,155 +41,220 @@ Table of Contents
 -----------------
 TIMING-6#1 Critical Warning
 No common primary clock between related clocks  
-The clocks RFDAC0_CLK and RFDAC1_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC1_CLK]
+The clocks RFADC0_CLK and clk_out1_top_level_clk_wiz_1_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFADC0_CLK] -to [get_clocks clk_out1_top_level_clk_wiz_1_0]
 Related violations: <none>
 
 TIMING-6#2 Critical Warning
 No common primary clock between related clocks  
-The clocks RFDAC0_CLK and RFDAC2_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC2_CLK]
+The clocks RFDAC0_CLK and RFADC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFADC0_CLK]
 Related violations: <none>
 
 TIMING-6#3 Critical Warning
 No common primary clock between related clocks  
-The clocks RFDAC0_CLK and RFDAC3_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC3_CLK]
+The clocks RFDAC0_CLK and RFDAC1_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC1_CLK]
 Related violations: <none>
 
 TIMING-6#4 Critical Warning
 No common primary clock between related clocks  
-The clocks RFDAC1_CLK and RFDAC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC1_CLK] -to [get_clocks RFDAC0_CLK]
+The clocks RFDAC0_CLK and RFDAC2_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC2_CLK]
 Related violations: <none>
 
 TIMING-6#5 Critical Warning
 No common primary clock between related clocks  
-The clocks RFDAC2_CLK and RFDAC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC2_CLK] -to [get_clocks RFDAC0_CLK]
+The clocks RFDAC0_CLK and RFDAC3_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC3_CLK]
 Related violations: <none>
 
 TIMING-6#6 Critical Warning
 No common primary clock between related clocks  
+The clocks RFDAC1_CLK and RFDAC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC1_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-6#7 Critical Warning
+No common primary clock between related clocks  
+The clocks RFDAC2_CLK and RFDAC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC2_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-6#8 Critical Warning
+No common primary clock between related clocks  
 The clocks RFDAC3_CLK and RFDAC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC3_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-6#9 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_top_level_clk_wiz_1_0 and RFADC0_CLK are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_top_level_clk_wiz_1_0] -to [get_clocks RFADC0_CLK]
 Related violations: <none>
 
 TIMING-7#1 Critical Warning
 No common node between related clocks  
-The clocks RFDAC0_CLK and RFDAC1_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC1_CLK]
+The clocks RFADC0_CLK and clk_out1_top_level_clk_wiz_1_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFADC0_CLK] -to [get_clocks clk_out1_top_level_clk_wiz_1_0]
 Related violations: <none>
 
 TIMING-7#2 Critical Warning
 No common node between related clocks  
-The clocks RFDAC0_CLK and RFDAC2_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC2_CLK]
+The clocks RFDAC0_CLK and RFADC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFADC0_CLK]
 Related violations: <none>
 
 TIMING-7#3 Critical Warning
 No common node between related clocks  
-The clocks RFDAC0_CLK and RFDAC3_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC3_CLK]
+The clocks RFDAC0_CLK and RFDAC1_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC1_CLK]
 Related violations: <none>
 
 TIMING-7#4 Critical Warning
 No common node between related clocks  
-The clocks RFDAC1_CLK and RFDAC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC1_CLK] -to [get_clocks RFDAC0_CLK]
+The clocks RFDAC0_CLK and RFDAC2_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC2_CLK]
 Related violations: <none>
 
 TIMING-7#5 Critical Warning
 No common node between related clocks  
-The clocks RFDAC2_CLK and RFDAC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC2_CLK] -to [get_clocks RFDAC0_CLK]
+The clocks RFDAC0_CLK and RFDAC3_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC0_CLK] -to [get_clocks RFDAC3_CLK]
 Related violations: <none>
 
 TIMING-7#6 Critical Warning
 No common node between related clocks  
+The clocks RFDAC1_CLK and RFDAC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC1_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-7#7 Critical Warning
+No common node between related clocks  
+The clocks RFDAC2_CLK and RFDAC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC2_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-7#8 Critical Warning
+No common node between related clocks  
 The clocks RFDAC3_CLK and RFDAC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks RFDAC3_CLK] -to [get_clocks RFDAC0_CLK]
+Related violations: <none>
+
+TIMING-7#9 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_top_level_clk_wiz_1_0 and RFADC0_CLK are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_top_level_clk_wiz_1_0] -to [get_clocks RFADC0_CLK]
+Related violations: <none>
+
+TIMING-8#1 Critical Warning
+No common period between related clocks  
+The clocks RFADC0_CLK and clk_out1_top_level_clk_wiz_1_0 are found related (timed together) but have no common (expandable) period
+Related violations: <none>
+
+TIMING-8#2 Critical Warning
+No common period between related clocks  
+The clocks clk_out1_top_level_clk_wiz_1_0 and RFADC0_CLK are found related (timed together) but have no common (expandable) period
 Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#6 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_UART.execute_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#7 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_0/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_1/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#10 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_10/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#11 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_11/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#12 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_12/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#13 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_13/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#14 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_14/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#15 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_15/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#16 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_2/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#17 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_3/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#18 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_4/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_5/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_6/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_7/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_8/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/sr_pre_waveform/state_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/mloop_axis_tvalid_reg/CLR, top_level_i/rfsoc_data_pipeline_9/inst/axis_tready_slice_0/inst/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/trigger_controller_0/inst/trigger_module_0/inst/FSM_onehot_state[2]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c0_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c10_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c11_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c12_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c13_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c14_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c15_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c1_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c2_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c3_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c4_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c5_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c6_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c7_reg/CLR, top_level_i/trigger_controller_0/inst/trigger_module_0/inst/trigger_c8_reg/CLR (the first 15 of 16 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
@@ -202,6 +269,111 @@ Missing property on synchronizer
 One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
 Related violations: <none>
 
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.329 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[14].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[14].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.407 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[15].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[15].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.439 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.478 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.488 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[13].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[13].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.497 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.536 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.578 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/N_DDR_TC.N_DDR_TC_INST[0].U_TC/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlD/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/N_DDR_TC.N_DDR_TC_INST[0].U_TC/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.603 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[6].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[6].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.662 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[4].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[4].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.674 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.737 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[3].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[3].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.752 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.781 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[5].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[5].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.809 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlB/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.837 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[7].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[7].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.841 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[15].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.873 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/STRG_QUAL.U_STRG_QUAL/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/STRG_QUAL.U_STRG_QUAL/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.879 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[3].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.887 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[3].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.938 ns between top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE/u_srlA/S1/CLK (clocked by clk_out1_top_level_clk_wiz_1_0) and top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[1].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[15].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D (clocked by RFADC0_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on ext_trigger_0_0 relative to clock(s) RFDAC0_CLK
@@ -209,7 +381,7 @@ Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on resetn relative to clock(s) RFDAC0_CLK, RFDAC1_CLK, RFDAC2_CLK, RFDAC3_CLK
+An input delay is missing on resetn relative to clock(s) RFADC0_CLK, RFDAC0_CLK, RFDAC1_CLK, RFDAC2_CLK, RFDAC3_CLK
 Related violations: <none>
 
 

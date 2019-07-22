@@ -49,6 +49,9 @@ if(amp_mul_factor < 0 or amp_mul_factor > 1):
     sys.exit()
 
 num_cycles = int(sys.argv[6])
+if(num_cycles < 1):
+    print("Error, number of cycles must be greater than 0")
+    sys.exit()
 
 zero_delay = float(sys.argv[7]) #in nanoseconds, must be positive
 if(zero_delay < 0):
@@ -99,5 +102,14 @@ if(ib.save_board(board)):
     print("Error while saving board to disk")
 else:
     print("Successfully added channel #" + str(channel_number+1))
+    print("Waveform file: " + waveform_filename + 
+          "\nPeriod: " + str(waveform_period) + 
+          " (ns)\nPhase: " + str(waveform_phase) + 
+          " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
+          "\nNumber of playback cycles: " + str(num_cycles) + 
+          "\nDelay before experiment: " + str() + 
+          " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
+          "\nLocking file: " + locking_filename + 
+          "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)")
 
 

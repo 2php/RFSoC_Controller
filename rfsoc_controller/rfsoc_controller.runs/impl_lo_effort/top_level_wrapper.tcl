@@ -66,7 +66,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -74,8 +76,9 @@ set rc [catch {
   set_property webtalk.parent_dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/wt [current_project]
   set_property parent.project_path C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.xpr [current_project]
   set_property ip_repo_paths {
-  C:/james/fpga_projects/trigger_controller_ip
-  C:/james/fpga_projects/ip_repo
+  c:/james/fpga_projects/adc_ip
+  c:/james/fpga_projects/trigger_controller_ip
+  c:/james/fpga_projects/ip_repo
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/ip [current_project]
@@ -105,7 +108,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design -directive Explore
+  opt_design 
   write_checkpoint -force top_level_wrapper_opt.dcp
   create_report "impl_lo_effort_opt_report_drc_0" "report_drc -file top_level_wrapper_drc_opted.rpt -pb top_level_wrapper_drc_opted.pb -rpx top_level_wrapper_drc_opted.rpx"
   close_msg_db -file opt_design.pb
@@ -125,7 +128,7 @@ set rc [catch {
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 
-  place_design -directive Explore
+  place_design 
   write_checkpoint -force top_level_wrapper_placed.dcp
   create_report "impl_lo_effort_place_report_io_0" "report_io -file top_level_wrapper_io_placed.rpt"
   create_report "impl_lo_effort_place_report_utilization_0" "report_utilization -file top_level_wrapper_utilization_placed.rpt -pb top_level_wrapper_utilization_placed.pb"
@@ -140,28 +143,12 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-  phys_opt_design -directive Explore
-  write_checkpoint -force top_level_wrapper_physopt.dcp
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
   set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
 start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design -directive Explore
+  route_design 
   write_checkpoint -force top_level_wrapper_routed.dcp
   create_report "impl_lo_effort_route_report_drc_0" "report_drc -file top_level_wrapper_drc_routed.rpt -pb top_level_wrapper_drc_routed.pb -rpx top_level_wrapper_drc_routed.rpx"
   create_report "impl_lo_effort_route_report_methodology_0" "report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx"

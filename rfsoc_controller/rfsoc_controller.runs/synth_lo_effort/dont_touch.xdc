@@ -117,4 +117,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_rfsoc
 # IP: bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_trigger_controller_0_0 || ORIG_REF_NAME==top_level_trigger_controller_0_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_rfsoc_adc_data_captu_0_0 || ORIG_REF_NAME==top_level_rfsoc_adc_data_captu_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_proc_sys_reset_4_0/top_level_proc_sys_reset_4_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_proc_sys_reset_4_0 || ORIG_REF_NAME==top_level_proc_sys_reset_4_0} -quiet] -quiet
+
 # XDC: bd/top_level/top_level_ooc.xdc

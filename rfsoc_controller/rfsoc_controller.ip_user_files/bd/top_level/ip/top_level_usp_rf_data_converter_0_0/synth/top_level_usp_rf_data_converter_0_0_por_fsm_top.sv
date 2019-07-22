@@ -471,7 +471,7 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     input dac3_reset;
     input dac3_restart;
 
-    output adc0_done;
+    output reg adc0_done;
     output adc1_done;
     output adc2_done;
     output adc3_done;
@@ -609,6 +609,10 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     wire tc_gnt_adc2;
     wire tc_req_adc3;
     wire tc_gnt_adc3;
+    wire const_req_adc0;
+    wire const_gnt_adc0;
+    wire adc0_cal_start;
+    wire adc0_cal_done;
     reg  adc0_restart_pending;
     reg  adc0_restart_i;
     reg  adc1_restart_pending;
@@ -649,6 +653,12 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     wire adc_drp_den_bgt;
     wire adc_drp_wen_bgt;
 
+    wire [11:0] adc0_drpaddr_const;
+    wire adc0_drpen_const;
+    wire [15:0] adc0_drpdi_const;
+    wire [15:0] adc0_drpdo_const;
+    wire adc0_drpwe_const;
+    wire adc0_drprdy_const;
     // Tile ADC0
     wire [11:0] adc0_drpaddr_tc;
     wire adc0_drpen_tc;
@@ -1201,6 +1211,79 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
       .done(tile_config_done)
     );
 
+    //-------------------------------------------------------------------------
+    // For the ADC the constants for calibration and static config
+    // are programmed into each tile
+    //-------------------------------------------------------------------------
+   top_level_usp_rf_data_converter_0_0_constants_config constants_config (
+      .drp_req_adc0(const_req_adc0),
+      .drp_gnt_adc0(const_gnt_adc0),
+      .drp_req_adc1(),
+      .drp_gnt_adc1(1'b0),
+      .drp_req_adc2(),
+      .drp_gnt_adc2(1'b0),
+      .drp_req_adc3(),
+      .drp_gnt_adc3(1'b0),
+      .adc0_drpaddr(adc0_drpaddr_const),
+      .adc0_drpen(adc0_drpen_const),
+      .adc0_drpdi(adc0_drpdi_const),
+      .adc0_drpdo(adc0_drpdo_const),
+      .adc0_drpwe(adc0_drpwe_const),
+      .adc0_drprdy(adc0_drprdy_const),
+      .adc1_drpaddr(),
+      .adc1_drpen(),
+      .adc1_drpdi(),
+      .adc1_drpdo(16'd0),
+      .adc1_drpwe(),
+      .adc1_drprdy(1'b0),
+      .adc2_drpaddr(),
+      .adc2_drpen(),
+      .adc2_drpdi(),
+      .adc2_drpdo(16'd0),
+      .adc2_drpwe(),
+      .adc2_drprdy(1'b0),
+      .adc3_drpaddr(),
+      .adc3_drpen(),
+      .adc3_drpdi(),
+      .adc3_drpdo(16'd0),
+      .adc3_drpwe(),
+      .adc3_drprdy(1'b0),
+      .adc0_tc_enable(adc0_const_enable),
+      .adc1_tc_enable(adc1_const_enable),
+      .adc2_tc_enable(adc2_const_enable),
+      .adc3_tc_enable(adc3_const_enable),
+      .adc0_start(adc0_cal_start),
+      .adc0_done(adc0_cal_done),
+      .adc0_sm_reset(adc0_sm_reset),
+      .adc0_operation(adc0_operation),
+      .adc0_speedup(adc0_const_speedup),
+      .adc0_signal_lost(adc0_signal_lost_out),
+      .adc0_bg_cal_off(adc0_bg_cal_off),
+      .adc1_start(1'b0),
+      .adc1_done(),
+      .adc1_sm_reset(1'b0),
+      .adc1_operation(10'b0000000000),
+      .adc1_speedup(1'b0),
+      .adc1_signal_lost(4'b0000),
+      .adc1_bg_cal_off(),
+      .adc2_start(1'b0),
+      .adc2_done(),
+      .adc2_sm_reset(1'b0),
+      .adc2_operation(10'b0000000000),
+      .adc2_speedup(1'b0),
+      .adc2_signal_lost(4'b0000),
+      .adc2_bg_cal_off(),
+      .adc3_start(1'b0),
+      .adc3_done(),
+      .adc3_sm_reset(1'b0),
+      .adc3_operation(10'b0000000000),
+      .adc3_speedup(1'b0),
+      .adc3_signal_lost(4'b0000),
+      .adc3_bg_cal_off(),
+      .reset(reset_const_i),
+      .aux_clk(aux_clk)
+    );
+
 
     //-------------------------------------------------------------------------
     // For each tile instantiate:
@@ -1219,16 +1302,179 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
     //
     //-------------------------------------------------------------------------
 
+    //ADC Bandgap trim state machine
+    top_level_usp_rf_data_converter_0_0_bgt_fsm bgt_fsm_adc (
+      .reset(adc0_bgt_reset_i),
+      .aux_clk(aux_clk),
+      .bgt_sm_start(bgt_sm_start_adc),
+      .drp_req(adc_bgt_req),
+      .drp_gnt(adc_bgt_gnt),
+      .drp_rdy(adc_drp_rdy_bgt),
+      .drp_do(adc_drp_do_bgt),
+      .drp_addr(adc_drp_addr_bgt),
+      .drp_di(adc_drp_di_bgt),
+      .drp_den(adc_drp_den_bgt),
+      .drp_wen(adc_drp_wen_bgt),
+      .trim_code(trim_code_adc),
+      .done(bgt_sm_done_adc)
+    );
+
+    // Reset the bandgap trim state machine if the supplies are down.
+    assign adc0_bgt_reset_i = adc0_reset_i | ~adc0_status_bits[1] | adc0_sm_reset;
+
+    // The 33-bit data in the array follows the format below:
+    // Toggle bits via DRP:
+    // 32:29 |      28:27        |    26:16    |         15:0       |
+    // Stage |  Instruction = 00 | DRP Address |  Bit(s) to toggle  |
+    // Wait for event:
+    // 32:29 |      28:27        |          26:24        |    23:0  |
+    // Stage |  Instruction = 01 |          Event        |    Time  |
+    //                           | 000 = Timer           |
+    //                           | 001 = BGT             |
+    //                           | 010 = Supplies up     |
+    //                           | 011 = Clocks OK       |
+    //                           | 100 = PLL lock        |
+    //                           | 101 = ADC constants   |
+    //                           | 110 = ADC calibration | Cal info |
+    // Clear:
+    // 32:29 |      28:27        |    26:16    |         15:0       |
+    // Stage |  Instruction = 11 | DRP Address |  Bit(s) to clear   |
+    // End:
+    // 32;29 |      28:27        |             Data                 |
+    // Stage | Instruction = 10  |              X                   |
+
     //-------------------------------------------------------------------------
     // ADC0
     //-------------------------------------------------------------------------
+    // Instruction sequence for ADC0
+    reg [0:61][32:0] instr_adc0 = '{
+    // Reset digital clocks
+    {4'h1, 2'b11, 11'h000, 16'h000F},
+    {4'h1, 2'b11, 11'h100, 16'h0001},
+    // Clear HSCOM_PWR[15]
+    {4'h1, 2'b11, 11'h725, 16'h8000},
+    // Wait for external supplies
+    {4'h2, 2'b01, 3'b010, 24'h000000},
+    // Wait for 25 ms
+    {4'h2, 2'b01, 3'b000, 24'h000000},
+    // Write to HSCOM_PWR[15]
+    {4'h2, 2'b00, 11'h725, 16'h8000},
+    // Write to HSCOM_PWR[14]
+    {4'h3, 2'b00, 11'h725, 16'h4000},
+    // Wait for 20 us
+    {4'h3, 2'b01, 3'b000, start_val_20_microsecs},
+    // Wait for the bandgap trim state machine
+    {4'h3, 2'b01, 3'b001, 24'h000000},
+    // Return the trim code (code will be inserted by BGT state machine)
+    {4'h3, 2'b00, 11'h72B, 16'h0000},
+    // Wait for 500 ns
+    {4'h3, 2'b01, 3'b000, start_val_500_nanosecs},
+    // Enable VCM buffers
+    {4'h4, 2'b00, 11'h070, 16'h0020},
+    // Write trim code to CLK_NETWORK_CTRL0
+    {4'h4, 2'b00, 11'h723, 16'h0000},
+    // Write trim code to RX_PAIR_MC_CONFIG0
+    {4'h4, 2'b00, 11'h074, 16'he6df},
+    // Write to HSCOM_PWR[13:10]
+    {4'h5, 2'b00, 11'h725, 16'h3C00},
+    // Wait for 2 ms
+    {4'h5, 2'b01, 3'b000, 24'h000000},
+    // Wait for clock detection
+    {4'h6, 2'b01, 3'b011, 24'h000000},
+    // Write to HSCOM_PWR[9]
+    {4'h6, 2'b00, 11'h725, 16'h0200},
+    // Write to PLL_CRS1
+    {4'h7, 2'b00, 11'h70A, 16'h8000},
+    // Write to HSCOM_PWR[8:7]
+    {4'h7, 2'b00, 11'h725, 16'h0180},
+    // Wait for PLL lock
+    {4'h7, 2'b01, 3'b100, 24'h000000},
+    // Read from PLL_SPARE_OUT0
+    {4'h7, 2'b00, 11'h740, 16'h0000},
+    // Write to PLL_CRS1
+    {4'h7, 2'b00, 11'h70A, 16'h8001},
+    // Toggle HSCOM_PWR[7]
+    {4'h7, 2'b00, 11'h725, 16'h0080},
+    {4'h7, 2'b00, 11'h725, 16'h0080},
+    // Wait for PLL lock
+    {4'h7, 2'b01, 3'b100, 24'h000000},
+    // Write to PLL_VREG[7]
+    {4'h7, 2'b00, 11'h711, 16'h0080},
+    // Write to HSCOM_PWR[6]
+    {4'h8, 2'b00, 11'h725, 16'h0040},
+    // Write to RX_MC_PWRDWN
+    {4'h8, 2'b00, 11'h070, 16'h001F},
+    // Startup delay
+    {4'h8, 2'b01, 3'b000, 24'h000000},
+    // Digital clock release
+    {4'h9, 2'b00, 11'h72C, 16'h0022},
+    {4'h9, 2'b00, 11'h000, 16'h000F},
+    {4'h9, 2'b00, 11'h100, 16'h0001},
+    // Wait for 20 cycles
+    {4'h9, 2'b01, 3'b000, 24'h000014},
+    {4'h9, 2'b00, 11'h000, 16'h0000},
+    // Tile sync
+    {4'hA, 2'b00, 11'h724, 16'h1000},
+    // Write to RX_MC_PWRDWN
+    {4'hA, 2'b00, 11'h070, 16'h0040},
+    {4'hA, 2'b00, 11'h724, 16'h1000},
+    {4'hA, 2'b00, 11'h000, 16'h0000},
+    {4'hA, 2'b00, 11'h000, 16'h0000},
+    // Update the NCO values
+    {4'hA, 2'b00, 11'h023, 16'h0002},
+    {4'hA, 2'b00, 11'h024, 16'h0001},
+    {4'hA, 2'b00, 11'h72E, 16'h0001},
+    // Foreground calibration
+    // Wait for calibration constants to be written
+    {4'hB, 2'b01, 3'b101, 24'h000000},
+    // Enable foreground calibration
+    {4'hC, 2'b00, 11'h052, 16'h0820},
+    {4'hC, 2'b00, 11'h054, 16'h0020},
+    {4'hC, 2'b01, 3'b110, 18'h00000, 1'b0, 1'b1, 4'b0001},
+    // Check for RX_MC_CONFIG1
+    {4'hC, 2'b00, 11'h072, 16'h0000},
+    {4'hC, 2'b01, 3'b110, 18'h00001, 1'b0, 1'b0, 4'b0001},
+    {4'hC, 2'b01, 3'b110, 18'h00000, 1'b1, 1'b0, 4'b0001},
+    // Wait for calibration
+    {4'hC, 2'b01, 3'b000, 24'h000000},
+    {4'hC, 2'b01, 3'b110, 14'h0000, 4'b0010, 1'b1, 1'b0, 4'b0001},
+    {4'hC, 2'b01, 3'b000, 24'h000000},
+    {4'hC, 2'b01, 3'b110, 14'h0000, 4'b0110, 1'b1, 1'b0, 4'b0001},
+    {4'hC, 2'b01, 3'b000, 24'h000001},
+    {4'hC, 2'b11, 11'h004, 16'h000F},
+    {4'hC, 2'b11, 11'h00C, 16'h00FF},
+    {4'hC, 2'b11, 11'h00E, 16'h00FF},
+    // Background calibration
+    {4'hD, 2'b00, 11'h055, 16'h0001},
+    {4'hD, 2'b01, 3'b110, 18'h00000, 1'b1, 1'b1, 4'b0001},
+    // Wait for clocks to be OK
+    {4'hE, 2'b01, 3'b111, 24'h000000},
+    // End of sequence
+    {4'hF, 2'b10, 27'h0000000}};
+
+    always @(posedge aux_clk)
+    begin
+      mem_data_adc0 <= instr_adc0[mem_addr_adc0];
+    end
 
     // ADC0 POR State machine
-    top_level_usp_rf_data_converter_0_0_por_fsm_disabled  #(.ADC(1))
+    top_level_usp_rf_data_converter_0_0_por_fsm  #(.ADC(1),
+                                .NO_OF_SLICES(1),
+                                .PLL(1))
     por_fsm_adc0 (
       .reset(adc0_reset_i),
       .aux_clk(aux_clk),
+      .mem_addr(mem_addr_adc0),
+      .mem_data(mem_data_adc0),
       .tile_enable(1'b1),
+      .drpaddr_status(adc0_drpaddr_status),
+      .drpen_status(adc0_drpen_status),
+      .drpdi_status(adc0_drpdi_status),
+      .drpdo_status(adc0_drpdo_status),
+      .drpwe_status(adc0_drpwe_status),
+      .drprdy_status(adc0_drprdy_status),
+      .status_req(adc0_status_req),
+      .status_gnt(adc0_status_gnt),
       .drpaddr_por(adc0_drpaddr_por),
       .drpen_por(adc0_drpen_por),
       .drpdi_por(adc0_drpdi_por),
@@ -1237,17 +1483,48 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
       .drprdy_por(adc0_drprdy_por),
       .por_req(adc0_por_req),
       .por_gnt(adc0_por_gnt),
-      .config_done(tile_config_done),
+      .config_done(adc0_tile_config_done),
+      .bgt_sm_start(bgt_sm_start_adc),
+      .bgt_sm_done(bgt_sm_done_adc),
+      .sm_reset(adc0_sm_reset),
+      .cal_const_start(adc0_cal_start),
+      .cal_const_done(adc0_cal_done),
+      .trim_code(trim_code_adc),
+      .start_stage(adc0_start_stage_r),
+      .end_stage(adc0_end_stage_r),
       .done(adc0_done_i),
+      .fabricclk_val(adc0_fabricclk_val),
       .status(adc0_status),
+      .pll_error(adc0_pll_error),
+      .adc0_status(adc00_status),
+      .adc1_status(adc01_status),
+      .adc2_status(adc02_status),
+      .adc3_status(adc03_status),
+      .bg_cal_en_written(adc0_bg_cal_en_written),
+      .const_operation(adc0_operation),
       .supply_timer(adc0_supply_timer),
-      .status_bits(adc0_status_bits)
+      .regulator_timer(adc0_regulator_timer),
+      .calibration_timer(adc0_calibration_timer),
+      .startup_delay(adc0_startup_delay),
+      .status_bits(adc0_status_bits),
+      .signal_lost(adc0_signal_lost),
+      .signal_lost_out(adc0_signal_lost_out),
+      .powerup_state(adc0_powerup_state)
     );
 
-    assign adc0_done = adc0_done_i;
+    always @(posedge aux_clk)
+    begin
+      if (adc0_bg_cal_en_written == 1'b1 || adc0_end_stage_r <= 4'hD) begin
+        adc0_done <= adc0_done_i;
+      end
+      else
+      begin
+        adc0_done <= 1'b0;
+      end
+    end
 
     //ADC0 DRP Arbiter
-    top_level_usp_rf_data_converter_0_0_drp_arbiter #(.DRP_WRITE_DELAY(4))
+    top_level_usp_rf_data_converter_0_0_drp_arbiter_adc #(.DRP_WRITE_DELAY(4))
     drp_arbiter_adc0 (
       .clk(aux_clk),
       .reset(adc0_reset_i),
@@ -1269,14 +1546,22 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
       .tile_config_drp_din(adc0_drpdo_tc),
       .tile_config_drp_den(adc0_drpen_tc),
       .tile_config_drp_drdy(adc0_drprdy_tc),
-      .status_drp_arb_req(1'b0),
-      .status_drp_arb_gnt(),
-      .status_drp_dout(16'h0000),
-      .status_drp_daddr(12'h000),
-      .status_drp_dwe(1'b0),
-      .status_drp_din(),
-      .status_drp_den(1'b0),
-      .status_drp_drdy(),
+      .const_config_drp_arb_req(const_req_adc0),
+      .const_config_drp_arb_gnt(const_gnt_adc0),
+      .const_config_drp_dout(adc0_drpdi_const),
+      .const_config_drp_daddr(adc0_drpaddr_const),
+      .const_config_drp_dwe(adc0_drpwe_const),
+      .const_config_drp_din(adc0_drpdo_const),
+      .const_config_drp_den(adc0_drpen_const),
+      .const_config_drp_drdy(adc0_drprdy_const),
+      .status_drp_arb_req(adc0_status_req),
+      .status_drp_arb_gnt(adc0_status_gnt),
+      .status_drp_dout(adc0_drpdi_status),
+      .status_drp_daddr(adc0_drpaddr_status),
+      .status_drp_dwe(adc0_drpwe_status),
+      .status_drp_din(adc0_drpdo_status),
+      .status_drp_den(adc0_drpen_status),
+      .status_drp_drdy(adc0_drprdy_status),
       .por_drp_arb_req(adc0_por_req),
       .por_drp_arb_gnt(adc0_por_gnt),
       .por_drp_dout(adc0_drpdi_por),
@@ -1285,14 +1570,14 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
       .por_drp_din(adc0_drpdo_por),
       .por_drp_den(adc0_drpen_por),
       .por_drp_drdy(adc0_drprdy_por),
-      .bgt_drp_arb_req(1'b0),
-      .bgt_drp_arb_gnt(),
-      .bgt_drp_dout(16'h0000),
-      .bgt_drp_daddr(12'h000),
-      .bgt_drp_dwe(1'b0),
-      .bgt_drp_din(),
-      .bgt_drp_den(1'b0),
-      .bgt_drp_drdy(),
+      .bgt_drp_arb_req(adc_bgt_req),
+      .bgt_drp_arb_gnt(adc_bgt_gnt),
+      .bgt_drp_dout(adc_drp_di_bgt),
+      .bgt_drp_daddr(adc_drp_addr_bgt),
+      .bgt_drp_dwe(adc_drp_wen_bgt),
+      .bgt_drp_din(adc_drp_do_bgt),
+      .bgt_drp_den(adc_drp_den_bgt),
+      .bgt_drp_drdy(adc_drp_rdy_bgt),
       .drp_dout(adc0_drpdo),
       .drp_daddr(adc0_drpaddr),
       .drp_dwe(adc0_drpwe),
@@ -1300,6 +1585,7 @@ module top_level_usp_rf_data_converter_0_0_por_fsm_top (
       .drp_den(adc0_drpen),
       .drp_drdy(adc0_drprdy)
     );
+
 
     // Small startup delay to stagger the enables of the digital clocks
     assign adc0_startup_delay = {8'd0, startup_delay} << 0;

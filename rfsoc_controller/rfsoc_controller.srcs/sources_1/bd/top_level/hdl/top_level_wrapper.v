@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jul 18 13:25:19 2019
+//Date        : Mon Jul 22 09:59:20 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -10,7 +10,9 @@
 `timescale 1 ps / 1 ps
 
 module top_level_wrapper
-   (app_leds_tri_o,
+   (adc0_clk_0_clk_n,
+    adc0_clk_0_clk_p,
+    app_leds_tri_o,
     dac0_clk_clk_n,
     dac0_clk_clk_p,
     dac1_clk_clk_n,
@@ -27,6 +29,8 @@ module top_level_wrapper
     sysref_in_diff_n,
     sysref_in_diff_p,
     tx_0,
+    vin00_0_v_n,
+    vin00_0_v_p,
     vout00_v_n,
     vout00_v_p,
     vout01_v_n,
@@ -59,6 +63,8 @@ module top_level_wrapper
     vout32_v_p,
     vout33_v_n,
     vout33_v_p);
+  input adc0_clk_0_clk_n;
+  input adc0_clk_0_clk_p;
   output [7:0]app_leds_tri_o;
   input dac0_clk_clk_n;
   input dac0_clk_clk_p;
@@ -76,6 +82,8 @@ module top_level_wrapper
   input sysref_in_diff_n;
   input sysref_in_diff_p;
   output tx_0;
+  input vin00_0_v_n;
+  input vin00_0_v_p;
   output vout00_v_n;
   output vout00_v_p;
   output vout01_v_n;
@@ -109,6 +117,8 @@ module top_level_wrapper
   output vout33_v_n;
   output vout33_v_p;
 
+  wire adc0_clk_0_clk_n;
+  wire adc0_clk_0_clk_p;
   wire [7:0]app_leds_tri_o;
   wire dac0_clk_clk_n;
   wire dac0_clk_clk_p;
@@ -126,6 +136,8 @@ module top_level_wrapper
   wire sysref_in_diff_n;
   wire sysref_in_diff_p;
   wire tx_0;
+  wire vin00_0_v_n;
+  wire vin00_0_v_p;
   wire vout00_v_n;
   wire vout00_v_p;
   wire vout01_v_n;
@@ -160,7 +172,9 @@ module top_level_wrapper
   wire vout33_v_p;
 
   top_level top_level_i
-       (.app_leds_tri_o(app_leds_tri_o),
+       (.adc0_clk_0_clk_n(adc0_clk_0_clk_n),
+        .adc0_clk_0_clk_p(adc0_clk_0_clk_p),
+        .app_leds_tri_o(app_leds_tri_o),
         .dac0_clk_clk_n(dac0_clk_clk_n),
         .dac0_clk_clk_p(dac0_clk_clk_p),
         .dac1_clk_clk_n(dac1_clk_clk_n),
@@ -177,6 +191,8 @@ module top_level_wrapper
         .sysref_in_diff_n(sysref_in_diff_n),
         .sysref_in_diff_p(sysref_in_diff_p),
         .tx_0(tx_0),
+        .vin00_0_v_n(vin00_0_v_n),
+        .vin00_0_v_p(vin00_0_v_p),
         .vout00_v_n(vout00_v_n),
         .vout00_v_p(vout00_v_p),
         .vout01_v_n(vout01_v_n),

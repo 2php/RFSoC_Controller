@@ -30,7 +30,7 @@ void gpio_init()
 
 
 	//turn off everything on the RF bank
-	gpio_set_bank(RF_BANK, 0x00);
+	gpio_set_bank(RF_BANK, 0x0000);
 
 }
 

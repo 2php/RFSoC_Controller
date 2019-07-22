@@ -1,6 +1,48 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Jul 22 09:58:37 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_adc_data_captu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_adc_data_captu_0_0 (xilinx.com:user:rfsoc_adc_data_capture:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Jul 22 09:11:47 2019
+| Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu29dr-ffvf1760-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'top_level_rfsoc_adc_data_captu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of top_level_rfsoc_adc_data_captu_0_0 (xilinx.com:user:rfsoc_adc_data_capture:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Thu Jul 18 11:26:18 2019
 | Host         : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

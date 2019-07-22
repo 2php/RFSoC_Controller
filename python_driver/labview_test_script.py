@@ -21,10 +21,9 @@ Created on Fri Jul 12 10:26:47 2019
 
 import os
 
-os.system("python init_board.py COM4 && PAUSE")
+#os.system("python init_board.py COM4 && PAUSE")
 
 #os.system("python add_channel.py 2 2_dc_square_wave.txt 200 0 1 10 0 1 1 0 locking_waveform.txt && PAUSE")
 os.system("python add_channel.py 2 2_dc_square_wave.txt 200 0 1 10 0 0 && PAUSE")
-os.system("python add_channel.py 5 2_dc_square_wave.txt 200 0 1 10 1.75 0 && PAUSE")
-os.system("python arm_board.py && PAUSE")
-os.system("python trigger_board.py && PAUSE")
+##os.system("python arm_board.py && PAUSE")
+#os.system("python trigger_board.py && PAUSE")

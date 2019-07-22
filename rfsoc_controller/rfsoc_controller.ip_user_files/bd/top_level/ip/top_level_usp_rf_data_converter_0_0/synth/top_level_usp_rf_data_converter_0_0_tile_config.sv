@@ -303,7 +303,7 @@ module top_level_usp_rf_data_converter_0_0_tile_config (
               tc_sm_state       <= write_drp;
             end
             else begin
-              if (data_index < 287) begin
+              if (data_index < 316) begin
                 data_index <= data_index + 1;
                 tc_sm_state  <= memory_delay;
               end
@@ -323,7 +323,7 @@ module top_level_usp_rf_data_converter_0_0_tile_config (
             drp_den      <= 1'b0;
             drp_wen      <= 1'b0;
             if (drp_rdy == 1'b1) begin
-              if (data_index < 287) begin
+              if (data_index < 316) begin
                 data_index <= data_index + 1;
                 tc_sm_state <= memory_delay;
               end

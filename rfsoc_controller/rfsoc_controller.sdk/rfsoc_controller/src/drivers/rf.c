@@ -19,6 +19,9 @@ u16 zeros [16];
 u8 pulse_bitstream[32] = {0x0, 0x0, 0x3F, 0xFF, 0x7F, 0xFF, 0x7F, 0xFF, 0x3F, 0xFF, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
 u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
 
+u32 last_adc_cycles;
+
+
 /////////////////////////////////////////////////////////////////////////
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -202,6 +205,50 @@ void rf_trigger()
 	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x00);
 }
 
+void rf_set_adc_cycles(u32 cycles)
+{
+	//Stream will alway be 32 bytes long
+	for(int i = 0; i < 32; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (cycles & (1 << i)) == 0 ? 0 : 1;
+		gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+		//cycle locking_sclk
+		gpio_set_pin(RF_BANK, ADC_CYCLES, 0x01);
+		gpio_set_pin(RF_BANK, ADC_CYCLES, 0x00);
+
+	}
+	last_adc_cycles = cycles;
+}
+
+u32 rf_get_last_adc_cycles()
+{
+	return last_adc_cycles;
+}
+
+
+//Writes samples into buffer with MSB first
+void rf_read_adc_buffer(u8* buffer, u32 num_samples)
+{
+	//Each buffer will have 2 samples, and there are 4 buffers, so one loop through all buffers will read 8 samples
+	u32 num_loops = num_samples / 8;
+	u32 buffer_pos = 0;
+	for(int i = 0; i < num_loops; i++)
+	{
+		for(int j = 0; j < 4; j++)
+		{
+			//Read the word from the stream
+			u32 word = rf_read_stream(j);
+			//Write the 4 bytes to the buffer
+			buffer[buffer_pos + 0] = (word >> 24) & 0xFF;
+			buffer[buffer_pos + 1] = (word >> 16) & 0xFF;
+			buffer[buffer_pos + 2] = (word >> 8) & 0xFF;
+			buffer[buffer_pos + 3] = word & 0xFF;
+			buffer_pos += 4;
+		}
+	}
+}
+
 /////////////////////////////////////////////////////////////////////////
 //TESTING FUNCTIONS//////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -365,6 +412,28 @@ void rf_pulse_test()
 //INTERNAL FUNCTIONS/////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
 
+u32 rf_read_stream(u8 stream_num)
+{
+	register int a0;
+	switch(stream_num){
+
+	case 0:
+		getfsl(a0,  0);
+		break;
+	case 1:
+		getfsl(a0,  1);
+		break;
+	case 2:
+		getfsl(a0,  2);
+		break;
+	case 3:
+		getfsl(a0,  3);
+		break;
+
+	}
+	return (u32) a0;
+}
+
 void write_sample_stream(u16* samples, u16 length, u8 channel)
 {
 #define sample_0 0
@@ -444,6 +513,7 @@ void write_sample_stream(u16* samples, u16 length, u8 channel)
 void rf_init()
 {
 
+	last_adc_cycles = 0;
 
 	debug_print("Running RF self test...");
 

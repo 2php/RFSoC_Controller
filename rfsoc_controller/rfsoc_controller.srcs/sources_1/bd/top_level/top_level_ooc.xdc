@@ -11,5 +11,6 @@ create_clock -name dac0_clk_clk_p -period 0.250 [get_ports dac0_clk_clk_p]
 create_clock -name dac1_clk_clk_p -period 4 [get_ports dac1_clk_clk_p]
 create_clock -name dac2_clk_clk_p -period 4 [get_ports dac2_clk_clk_p]
 create_clock -name dac3_clk_clk_p -period 4 [get_ports dac3_clk_clk_p]
+create_clock -name adc0_clk_0_clk_p -period 10 [get_ports adc0_clk_0_clk_p]
 
 ################################################################################

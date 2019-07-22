@@ -124,6 +124,14 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   // ADC Common Status for Tile 3
   output  [15:0]    adc3_common_stat,
 
+  input             vin00_p,
+  input             vin00_n,
+
+  // ADC AXI Streaming Data for ADC00
+  output [127:0]    adc00_data_out,
+  output            adc00_valid_out,
+  input             adc00_ready_in,
+
   output  [15:0]    adc00_stat,
 
   output  [15:0]    adc01_stat,
@@ -940,8 +948,6 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   wire                            por_sm_reset_i;
   reg                             por_sm_reset;
 
-  wire                    [127:0] adc00_data_out;
-  wire                            adc00_valid_out;
   wire                    [127:0] adc01_data_out;
   wire                            adc01_valid_out;
   wire                    [127:0] adc02_data_out;
@@ -1123,7 +1129,30 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
 
   // Synchronize common control bus onto the fabric clock for input
   // to the common control bus of the converters
-  assign adc0_done_sync = 1'b0;
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_adc0_done_i (
+      .src_clk(1'b0),
+      .src_in(adc0_done_i),
+      .dest_clk(adc_fabric_clk[0]),
+      .dest_out(adc0_done_sync)
+    );
+
+  // Only assert common control bit 15 if the clocks are active
+  always @(posedge drpclk)
+  begin
+    if (adc0_end_stage >= 4'hA && adc0_fabricclk_val == 1'b1) begin
+      if (adc0_fifo_disable == 1'b0) begin
+        adc0_done_i <= adc0_done;
+      end
+      else begin
+        adc0_done_i <= 1'b0;
+      end
+    end
+    else begin
+      adc0_done_i <= 1'b0;
+    end
+  end
+
   assign adc1_done_sync = 1'b0;
   assign adc2_done_sync = 1'b0;
   assign adc3_done_sync = 1'b0;
@@ -1158,7 +1187,7 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   assign adc32_data_out  = data_adc2[511 :384];
   assign adc33_data_out  = data_adc3[511 :384];
 
-  assign adc00_valid_out = 1'b0;
+  assign adc00_valid_out = adc0_done_sync;
   assign adc01_valid_out = 1'b0;
   assign adc02_valid_out = 1'b0;
   assign adc03_valid_out = 1'b0;
@@ -1203,11 +1232,21 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
 
   // Synchronize common status bus onto the DRP clock for input
   // to the status_bits bus of the converters (ADC0)
-  assign adc0_pll_lock_sync = 1'b0;
-  assign adc0_clk_present_sync = 1'b0;
-  assign adc0_powerup_state_sync = 1'b0;
-  assign adc0_powerup_state_interrupt = 1'b0;
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_adc0_pll_lock_i (
+      .src_clk(1'b0),
+      .src_in(adc_common_stat[3]),
+      .dest_clk(drpclk),
+      .dest_out(adc0_pll_lock_sync)
+    );
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_adc0_powerup_state_i (
+      .src_clk(1'b0),
+      .src_in(adc_common_stat[2]),
+      .dest_clk(drpclk),
+      .dest_out(adc0_powerup_state_sync)
+    );
+  assign adc0_powerup_state_interrupt = (adc0_status == 4'hf) ? ~adc0_powerup_state_sync : 1'b0;
   xpm_cdc_single #(.SRC_INPUT_REG(0))
     cdc_adc0_supplies_up_i (
       .src_clk(1'b0),
@@ -1215,7 +1254,13 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
       .dest_clk(drpclk),
       .dest_out(adc0_supplies_up_sync)
     );
-
+  xpm_cdc_single #(.SRC_INPUT_REG(0))
+    cdc_adc0_clk_present_i (
+      .src_clk(1'b0),
+      .src_in(adc_common_stat[0]),
+      .dest_clk(drpclk),
+      .dest_out(adc0_clk_present_sync)
+    );
   assign adc0_status_bits    = {adc_common_stat[6], adc0_pll_lock_sync, adc0_supplies_up_sync, adc0_clk_present_sync};
   assign adc0_pll_lock       = adc0_pll_lock_sync;
 
@@ -1978,10 +2023,10 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   HSADC #(
     .SIM_DEVICE           ("ULTRASCALE_PLUS"),
     .XPA_SAMPLE_RATE_MSPS (2000.0),
-    .XPA_NUM_ADCS         ("0"),
-    .XPA_PLL_USED         ("No"),
+    .XPA_NUM_ADCS         ("1"),
+    .XPA_PLL_USED         ("Yes"),
     .XPA_NUM_DDCS         (0),
-    .XPA_CFG0             (0),
+    .XPA_CFG0             (1),
     .XPA_CFG1             (0)
   ) rx0_u_adc (
     .CONTROL_COMMON       ( {adc_common_ctrl[0], adc0_cmn_control[14:0]} ),   // input  [15:0]
@@ -2035,8 +2080,9 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
     .VIN_I23_P            (),
     .VIN_I23_N            (),
 
-    .VIN0_N               (),                                // input
-    .VIN0_P               (),                                // input
+    // 2gsps bonding points
+    .VIN0_N               (vin00_n),                                // input
+    .VIN0_P               (vin00_p),                                // input
     .VIN1_N               (),                                // input
     .VIN1_P               (),                                // input
     .VIN2_N               (),                                // input
@@ -2364,7 +2410,7 @@ module top_level_usp_rf_data_converter_0_0_rf_wrapper (
   assign adc32_bg_cal_off = adc3_bg_cal_off[2];
   assign adc33_bg_cal_off = adc3_bg_cal_off[3];
 
-  assign adc0_sm_reset = 1'b0;
+  assign adc0_sm_reset = (adc0_sm_reset_i | ~adc0_supplies_up_sync) & adc0_done;
   assign adc1_sm_reset = 1'b0;
   assign adc2_sm_reset = 1'b0;
   assign adc3_sm_reset = 1'b0;

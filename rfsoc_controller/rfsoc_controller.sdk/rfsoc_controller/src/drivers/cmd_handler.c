@@ -73,6 +73,16 @@ void handle_cmd()
 		cmd_set_locking_select();
 		break;
 
+	case RF_SET_ADC_CYCLES:
+		uart_send_ack();
+		cmd_set_adc_cycles();
+		break;
+
+	case RF_READ_ADC:
+		uart_send_ack();
+		cmd_read_adc();
+		break;
+
 
 		//Test command cases
 	case PULSE_TEST:
@@ -101,6 +111,40 @@ void handle_cmd()
 ////////////////////////////////////////////
 //Python command implementations////////////
 ////////////////////////////////////////////
+
+void cmd_read_adc()
+{
+	//Send the number of bytes first
+	u8 bytes[4];
+	u32 num_bytes = rf_get_last_adc_cycles() * 16;
+	for(int i = 0; i < 4; i++)
+	{
+		bytes[i] = (num_bytes >> (24 - (i*8))) & 0xFF;
+	}
+
+	uart_send(bytes, 4);
+
+	//allocate the buffer
+	u8* sample_buffer = malloc(num_bytes);
+	rf_read_adc_buffer(sample_buffer, num_bytes / 2);
+
+	//Send the buffer
+	uart_send(sample_buffer, num_bytes);
+
+	//free the buffer
+	free(sample_buffer);
+}
+
+void cmd_set_adc_cycles()
+{
+	//Recieve the repeat cycles in 4 bytes with MSB first
+	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
+	uart_recieve(repeat, 4);
+	u32 final_repeat = (repeat[0] << 24) | (repeat[1] << 16) | (repeat[2] << 8) | repeat[3];
+	rf_set_adc_cycles(final_repeat);
+	//Send an ack back to Python
+	uart_send_ack();
+}
 
 void cmd_set_locking_select()
 {

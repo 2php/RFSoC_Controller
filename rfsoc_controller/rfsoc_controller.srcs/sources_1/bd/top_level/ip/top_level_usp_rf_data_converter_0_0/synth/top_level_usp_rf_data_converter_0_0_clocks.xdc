@@ -50,20 +50,18 @@
 ###############################################################################
 # Fabric clock timing constraints
 ###############################################################################
-# Workarounds for disabled tiles
-create_clock -period 10.000 -name RFADC0_FABCLK0 [get_pins -hier rx0_u_adc/INTERNAL_FABRIC_CLK0*]
-create_clock -period 10.000 -name RFADC0_FABCLK1 [get_pins -hier rx0_u_adc/INTERNAL_FABRIC_CLK1*]
-create_clock -period 10.000 -name RFADC0_FABCLK2 [get_pins -hier rx0_u_adc/INTERNAL_FABRIC_CLK2*]
-create_clock -period 10.000 -name RFADC0_FABCLK3 [get_pins -hier rx0_u_adc/INTERNAL_FABRIC_CLK3*]
-create_clock -period 10.000 -name RFADC0_CLK [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV2_MUX*]
+
+#Generated clocks on internal nodes inside IP
+create_clock -period 4.000 -name RFADC0_CLK [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV2_MUX*]
 set RFADC0_CLK  [get_clocks -of_objects [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV2_MUX*]]
-create_clock -period 10.000 -name RFADC0_CLK_dummy [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV1_MUX*]
+create_clock -period 4.000 -name RFADC0_CLK_dummy [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV1_MUX*]
 set RFADC0_CLK_dummy  [get_clocks -of_objects [get_pins -hier rx0_u_adc/INTERNAL_FBRC_DIV1_MUX*]]
 set_clock_sense -stop_propagation [get_pins -hier rx*_u_adc/INTERNAL_FBRC_DIV1_MUX*]
 
 # Exclude paths from the fabric clock to the status registers
 set_false_path -from $RFADC0_CLK -to [get_pins -filter {REF_PIN_NAME == D} -of [get_cells -hier IP2Bus_Data_reg[*]]]
 set_false_path -from $RFADC0_CLK_dummy -to [get_pins -filter {REF_PIN_NAME == D} -of [get_cells -hier IP2Bus_Data_reg[*]]]
+
 
 # Workarounds for disabled tiles
 create_clock -period 10.000 -name RFADC1_FABCLK0 [get_pins -hier rx1_u_adc/INTERNAL_FABRIC_CLK0*]

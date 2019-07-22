@@ -38,6 +38,7 @@ void rf_sine_test();
 void rf_ext_trigger_test();
 void rf_init();
 void rf_repeat_test();
+u32 rf_read_stream(u8 stream_num);
 
 
 //Core defines
@@ -61,6 +62,9 @@ void rf_set_locking_waveform(u8 channel, u8* stream);
 void rf_set_locking_select(u8* bytes);
 void rf_set_zero_delay(u8 channel, u32 value);
 void rf_set_pre_waveform(u8 channel, u8* stream);
+void rf_read_adc_buffer(u8* buffer, u32 num_samples);
+void rf_set_adc_cycles(u32 cycles);
+u32 rf_get_last_adc_cycles();
 
 
 
