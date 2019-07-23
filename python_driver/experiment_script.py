@@ -26,7 +26,7 @@ wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 1, 0, 0)
 wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
 #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
 #wf4 = rf.WaveFile("2_dc_square_wave.txt", 50*rf.DAC_WORD_PERIOD, 0*4, 1)
-c0 = rf.Channel(0, 1, wf_dummy_locking, wf0)
+c0 = rf.Channel(0, 10, wf_dummy_locking, wf0)
 c1 = rf.Channel(1, 10, wf_dummy_locking, wf1)
 #c2 = rf.Channel(4, 10, wf_dummy_locking, wf2)
 #c2 = rf.Channel(2, 500, 200*50, wf_locking, wf2, 0)
@@ -52,7 +52,7 @@ board.set_trigger_mode(rf.TRIGGER_CYCLES)
 board.set_loopback(rf.YES)
 
 #set the adc to collect 800 samples
-board.set_adc_cycles(100)
+board.set_adc_cycles(1000)
 
 num_triggers = 1
 #trigger once

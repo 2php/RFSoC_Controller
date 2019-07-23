@@ -140,7 +140,7 @@ void cmd_read_adc()
 		//Send the buffer
 		uart_send(sample_buffer, 16);
 	}
-	rf_flush_adc_buffer();
+
 	//free the buffer
 	//free(sample_buffer);
 }

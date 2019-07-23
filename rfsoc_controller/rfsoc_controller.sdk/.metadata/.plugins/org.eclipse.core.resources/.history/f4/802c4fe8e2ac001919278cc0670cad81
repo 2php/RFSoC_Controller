@@ -171,7 +171,7 @@ void rf_flush_buffer()
 	{
 		rf_set_locking_waveform(i, zeros_bitstream);
 	}
-	rf_flush_adc_buffer();
+
 }
 
 void rf_set_trigger_mode(u8 mode)
@@ -233,7 +233,7 @@ void rf_read_adc_buffer(u8* buffer, u32 num_samples)
 	//Each buffer will have 2 samples, and there are 4 buffers, so one loop through all buffers will read 8 samples
 	u32 num_loops = num_samples / 8;
 	u32 buffer_pos = 0;
-	for(int i = 0; i < num_loops; i++)
+	for(int i = 0; i <= num_loops; i++)
 	{
 		for(int j = 0; j < 4; j++)
 		{
@@ -246,21 +246,6 @@ void rf_read_adc_buffer(u8* buffer, u32 num_samples)
 			buffer[buffer_pos + 3] = word & 0xFF;
 			buffer_pos += 4;
 		}
-	}
-}
-
-void rf_flush_adc_buffer()
-{
-	for(int i = 0; i < ADC_BUFFER_DEPTH; i++)
-	{
-		register int a0;
-		register int a1;
-		register int a2;
-		register int a3;
-		ngetfsl(a0,  0);
-		ngetfsl(a1,  1);
-		ngetfsl(a2,  2);
-		ngetfsl(a3,  3);
 	}
 }
 
@@ -448,7 +433,6 @@ u32 rf_read_stream(u8 stream_num)
 	}
 	return (u32) a0;
 }
-
 
 void write_sample_stream(u16* samples, u16 length, u8 channel)
 {

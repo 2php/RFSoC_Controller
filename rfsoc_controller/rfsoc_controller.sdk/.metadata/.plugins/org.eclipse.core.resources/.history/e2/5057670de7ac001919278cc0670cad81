@@ -49,7 +49,6 @@ u32 rf_read_stream(u8 stream_num);
 #define NUM_CHANNELS 4
 #define ON 0x01
 #define OFF 0x00
-#define ADC_BUFFER_DEPTH 4096
 
 //Core functions
 void rf_load_bitstream(u8* stream, u32 length, u8 channel);
@@ -66,7 +65,7 @@ void rf_set_pre_waveform(u8 channel, u8* stream);
 void rf_read_adc_buffer(u8* buffer, u32 num_samples);
 void rf_set_adc_cycles(u32 cycles);
 u32 rf_get_last_adc_cycles();
-void rf_flush_adc_buffer();
+
 
 
 #endif /* SRC_DRIVERS_RF_H_ */

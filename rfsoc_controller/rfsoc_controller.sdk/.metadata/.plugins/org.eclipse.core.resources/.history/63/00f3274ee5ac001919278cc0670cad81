@@ -124,25 +124,15 @@ void cmd_read_adc()
 
 	uart_send(bytes, 4);
 
-//	//allocate the buffer
-//	u8* sample_buffer = malloc(num_bytes + 100);
-//
-//	rf_read_adc_buffer(sample_buffer, num_bytes / 2);
-//
-//			//Send the buffer
-//			uart_send(sample_buffer, num_bytes);
+	//allocate the buffer
+	u8* sample_buffer = malloc(num_bytes + 100);
+	rf_read_adc_buffer(sample_buffer, num_bytes / 2);
 
-	for(int i = 0; i < num_bytes; i+=16){
+	//Send the buffer
+	uart_send(sample_buffer, num_bytes);
 
-		u8 sample_buffer[16];
-		rf_read_adc_buffer(sample_buffer, 8);
-
-		//Send the buffer
-		uart_send(sample_buffer, 16);
-	}
-	rf_flush_adc_buffer();
 	//free the buffer
-	//free(sample_buffer);
+	free(sample_buffer);
 }
 
 void cmd_set_adc_cycles()
