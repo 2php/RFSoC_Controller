@@ -281,7 +281,7 @@ class RFSoC_Board:
             self.port.write([PING_BOARD])
             self.port.flush()
             result = self.wait_ack()
-            self.port.reset_input_buffer()
+            #self.port.reset_input_buffer()
             self.close()
             if result == ACK_RESPONSE:
                 return 1
@@ -296,7 +296,7 @@ class RFSoC_Board:
             self.port.open()
             if not self.port.is_open:
                 return 0
-            self.port.reset_input_buffer()
+            #self.port.reset_input_buffer()
             self.port.write(b)
             #Wait until everything is written
             self.port.flush()
@@ -327,17 +327,17 @@ class RFSoC_Board:
     def wait_ack(self):
         try:
             retval = self.port.read(1)
-            self.port.reset_input_buffer()
+            #self.port.reset_input_buffer()
             return retval[0]
         except:
             return 15
         
     def receive_bytes(self, num_bytes):
         try:
-            self.port.open()
-            self.port.reset_input_buffer()
+            #self.port.open()
+            #self.port.reset_input_buffer()
             retval = self.port.read(num_bytes)
-            self.port.close()
+            #self.port.close()
             return retval
         except:
             return None
@@ -537,8 +537,10 @@ class RFSoC_Board:
      #Returns an array of adc samples       
     def read_adc(self):
          #send the read command
-        ack_val = self.write_bytes([RF_READ_ADC])
-        
+        #ack_val = self.write_bytes([RF_READ_ADC])
+        self.port.open()
+        self.port.write([RF_READ_ADC])
+        ack_val = (self.port.read(1))[0]
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
@@ -554,7 +556,7 @@ class RFSoC_Board:
         
         #get the bytestream
         adc_bytestream = self.receive_bytes(leng)
-        
+        self.port.close()
         #return the rebuilt samples
         return self.rebuild_adc_stream(adc_bytestream)
          
@@ -571,9 +573,17 @@ class RFSoC_Board:
     def rebuild_adc_stream(self, stream):
         
         samples = []
-        for i in range(0, len(stream)/2):
+        for i in range(0, int(len(stream)/2)):
             #Conbine the two bytes
             sample = (stream[2*i] << 8) | stream[(2*i) + 1]
-            samples.append(sample)
+            samples.append(self.s16(sample))
+            
+        for i in range(0, int(len(samples)/2)):
+            temp = samples[2*i]
+            samples[2*i] = samples[(2*i)+1]
+            samples[(2*i)+1] = temp
             
         return samples
+    
+    def s16(self, value):
+        return -(value & 0x8000) | (value & 0x7fff)

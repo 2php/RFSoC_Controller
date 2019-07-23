@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 09:59:28 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 15:32:45 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -6797,7 +6797,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/rfsoc_adc_data_captu_0" HWVERSION="1.0" INSTANCE="rfsoc_adc_data_captu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_adc_data_capture" VLNV="xilinx.com:user:rfsoc_adc_data_capture:1.0">
+    <MODULE COREREVISION="3" FULLNAME="/rfsoc_adc_data_captu_0" HWVERSION="1.0" INSTANCE="rfsoc_adc_data_captu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_adc_data_capture" VLNV="xilinx.com:user:rfsoc_adc_data_capture:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="top_level_rfsoc_adc_data_captu_0_0"/>

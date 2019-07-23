@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jul 22 09:57:47 2019
+//Date        : Mon Jul 22 15:30:57 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_adc_data_capture.bd
 //Design      : rfsoc_adc_data_capture
@@ -55,6 +55,7 @@ module rfsoc_adc_data_capture
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis " *) input s_axis_tvalid;
 
   wire Net;
+  wire [31:0]adc_controller_0_count_val_out;
   (* CONN_BUS_INFO = "adc_controller_0_m_axis_0 xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]adc_controller_0_m_axis_0_TDATA;
   (* CONN_BUS_INFO = "adc_controller_0_m_axis_0 xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire adc_controller_0_m_axis_0_TREADY;
   (* CONN_BUS_INFO = "adc_controller_0_m_axis_0 xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire adc_controller_0_m_axis_0_TVALID;
@@ -85,7 +86,6 @@ module rfsoc_adc_data_capture
   wire axis_data_fifo_4_M_AXIS_TREADY;
   wire axis_data_fifo_4_M_AXIS_TVALID;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]count_out;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]count_val_out;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire ext_trigger_0_1;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]gpio_buffer_0_gpio_out;
   wire [15:0]gpio_buffer_0_m_axis_TDATA;
@@ -123,7 +123,7 @@ module rfsoc_adc_data_capture
   assign s_axis_tready = s_axis_0_1_TREADY;
   rfsoc_adc_data_capture_adc_controller_0_0 adc_controller_0
        (.count_out(count_out),
-        .count_val_out(count_val_out),
+        .count_val_out(adc_controller_0_count_val_out),
         .ext_trigger(ext_trigger_0_1),
         .gpio_in(gpio_buffer_0_gpio_out),
         .m_axis_tdata_0(adc_controller_0_m_axis_0_TDATA),
@@ -218,7 +218,7 @@ module rfsoc_adc_data_capture
         .probe0(count_out),
         .probe1(ext_trigger_0_1),
         .probe2(state_out),
-        .probe3(count_val_out),
+        .probe3(adc_controller_0_count_val_out),
         .probe4(gpio_buffer_0_gpio_out),
         .resetn(rf_reset_0_1));
   rfsoc_adc_data_capture_system_ila_1_0 system_ila_1

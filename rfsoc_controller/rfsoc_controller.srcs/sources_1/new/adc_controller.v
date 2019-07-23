@@ -68,10 +68,10 @@ parameter adc_capture_count_sclk = 12
     //assign m_axis_tdtata_6 = s_axis_tdata[223:192];
     //assign m_axis_tdtata_5 = s_axis_tdata[191:160];
     //assign m_axis_tdtata_4 = s_axis_tdata[159:128];
-    assign m_axis_tdtata_3 = s_axis_tdata[127:96];
-    assign m_axis_tdtata_2 = s_axis_tdata[95:64];
-    assign m_axis_tdtata_1 = s_axis_tdata[63:32];
-    assign m_axis_tdtata_0 = s_axis_tdata[31:0];
+    assign m_axis_tdata_3 = s_axis_tdata[127:96];
+    assign m_axis_tdata_2 = s_axis_tdata[95:64];
+    assign m_axis_tdata_1 = s_axis_tdata[63:32];
+    assign m_axis_tdata_0 = s_axis_tdata[31:0];
     
     reg [3:0] data_valid;
     assign m_axis_tvalid_0 = data_valid[0];
@@ -87,7 +87,7 @@ parameter adc_capture_count_sclk = 12
     assign count_out = count;
     
     wire [31:0] count_val;
-    shift_register #(32) sr_cycles(.clk(clk), .sclk(gpio_in[adc_capture_count_sclk]), .reset(reset), .data_in(gpio_in[sdata]), .data_out(count_val));
+    shift_register #(32) sr_cycles(.clk(rf_clk), .sclk(gpio_in[adc_capture_count_sclk]), .reset(rf_reset), .data_in(gpio_in[sdata]), .data_out(count_val));
     
     
     localparam [1:0] state_wait_trigger = 2'b00,

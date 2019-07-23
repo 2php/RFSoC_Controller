@@ -7,15 +7,16 @@
   <device name="xczu29dr_0" gui_info="dashboard1=hw_ila_1[xczu29dr_0/hw_ila_1/Status=ILA_STATUS_1;xczu29dr_0/hw_ila_1/Settings=ILA_SETTINGS_1;xczu29dr_0/hw_ila_1/Waveform=ILA_WAVE_1;xczu29dr_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xczu29dr_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;],dashboard2=hw_ila_2[xczu29dr_0/hw_ila_2/Status=ILA_STATUS_1;xczu29dr_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xczu29dr_0/hw_ila_2/Settings=ILA_SETTINGS_1;xczu29dr_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xczu29dr_0/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xczu29dr_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_hi_effort/top_level_wrapper.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_hi_effort/top_level_wrapper.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_hi_effort/top_level_wrapper.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_lo_effort/top_level_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_lo_effort/top_level_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_lo_effort/top_level_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/ila_lib" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="20"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_1/inst/ila_lib" gui_info="">
@@ -128,7 +129,9 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/net_slot_1_axis_tvalid" gui_info="Trigger Setup=0"/>
+    <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/net_slot_1_axis_tvalid" gui_info=""/>
+    <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe1_1" gui_info=""/>
+    <Object name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[15:0]" gui_info="Trigger Setup=0"/>
     <Object name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_0/inst/probe1_1" gui_info="Trigger Setup=0"/>
     <Object name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_0/inst/probe1_1[7:0]" gui_info="Trigger Setup=0"/>
     <Object name="top_level_i/rfsoc_data_pipeline_0/inst/system_ila_fast/inst/net_slot_0_axis_tready" gui_info=""/>
@@ -153,7 +156,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[127:0]"/>
+        <Option Id="MAP" value="probe5[127:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : s_axis_0_1 : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -301,7 +304,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : s_axis_0_1 : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -322,7 +325,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe7[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : s_axis_0_1 : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -343,7 +346,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_0 : s_axis_0_1 : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -364,7 +367,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="MAP" value="probe9[31:0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : adc_controller_0_m_axis_0 : TDATA"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -416,7 +419,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="MAP" value="probe12[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : adc_controller_0_m_axis_0 : TLAST"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -437,7 +440,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="MAP" value="probe11[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : adc_controller_0_m_axis_0 : TREADY"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -451,22 +454,209 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="MAP" value="probe10[0]"/>
         <Option Id="NAME.CUSTOM" value="slot_1 : adc_controller_0_m_axis_0 : TVALID"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
         <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/net_slot_1_axis_tvalid"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="count_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[31]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[30]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[29]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[28]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[27]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[26]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[25]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[24]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[23]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[22]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[21]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[20]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[19]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[18]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[17]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[16]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[15]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[14]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[13]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[12]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[11]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[10]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[9]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[8]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[7]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[6]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[5]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[4]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[3]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[2]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[1]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe0_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value="ext_trigger_0_1"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe1_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[1:0]"/>
+        <Option Id="NAME.CUSTOM" value="state_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+        <Option Id="ENUM.iSTATE" value="eq2&apos;b11"/>
+        <Option Id="ENUM.state_cleanup" value="eq2&apos;b10"/>
+        <Option Id="ENUM.state_trigger" value="eq2&apos;b01"/>
+        <Option Id="ENUM.state_wait_trigger" value="eq2&apos;b00"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe2_1[1]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe2_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="adc_controller_0_count_val_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[31]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[30]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[29]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[28]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[27]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[26]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[25]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[24]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[23]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[22]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[21]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[20]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[19]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[18]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[17]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[16]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[15]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[14]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[13]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[12]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[11]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[10]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[9]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[8]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[7]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[6]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[5]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[4]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[3]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[2]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[1]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe3_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;bXXX1_XXXX_XXX1_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="gpio_buffer_0_gpio_out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;bXXX1_XXXX_XXX1_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[15]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[14]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[13]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[12]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[11]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[10]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[9]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[8]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[7]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[6]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[5]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[4]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[3]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[2]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[1]"/>
+        <net name="top_level_i/rfsoc_adc_data_captu_0/inst/system_ila_0/inst/probe4_1[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">

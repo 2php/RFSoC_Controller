@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Jul 22 10:03:50 2019
+-- Date        : Mon Jul 22 15:37:08 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0_stub.vhdl

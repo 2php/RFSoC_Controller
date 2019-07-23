@@ -1198,8 +1198,8 @@
       "ext_trigger_0_1": {
         "ports": [
           "ext_trigger",
-          "adc_controller_0/ext_trigger",
-          "system_ila_0/probe1"
+          "system_ila_0/probe1",
+          "adc_controller_0/ext_trigger"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1224,8 +1224,8 @@
       "gpio_buffer_0_gpio_out": {
         "ports": [
           "gpio_buffer_0/gpio_out",
-          "adc_controller_0/gpio_in",
-          "system_ila_0/probe4"
+          "system_ila_0/probe4",
+          "adc_controller_0/gpio_in"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1289,19 +1289,11 @@
           }
         }
       },
-      "count_val_out": {
+      "adc_controller_0_count_val_out": {
         "ports": [
           "adc_controller_0/count_val_out",
           "system_ila_0/probe3"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       }
     }
   }

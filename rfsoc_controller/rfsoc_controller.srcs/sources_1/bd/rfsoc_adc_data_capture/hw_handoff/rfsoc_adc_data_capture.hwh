@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 09:57:55 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 22 15:31:04 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="rfsoc_adc_data_capture" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -42,8 +42,8 @@
     </PORT>
     <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="ext_trigger"/>
         <CONNECTION INSTANCE="system_ila_0" PORT="probe1"/>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="ext_trigger"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="microblaze_clk" SIGIS="clk" SIGNAME="External_Ports_microblaze_clk">
@@ -1177,8 +1177,8 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="gpio_out" RIGHT="0" SIGIS="undef" SIGNAME="gpio_buffer_0_gpio_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="adc_controller_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="probe4"/>
+            <CONNECTION INSTANCE="adc_controller_0" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_4_m_axis_tvalid">

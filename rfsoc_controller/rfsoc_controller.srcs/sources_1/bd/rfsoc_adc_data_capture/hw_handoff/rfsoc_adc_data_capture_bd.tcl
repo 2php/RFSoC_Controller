@@ -324,12 +324,11 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets s_axis_0_1] [get_bd_intf_ports s
 
   # Create port connections
   connect_bd_net -net Net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins axis_data_fifo_2/m_axis_aclk] [get_bd_pins axis_data_fifo_3/m_axis_aclk] [get_bd_pins axis_data_fifo_4/s_axis_aclk] [get_bd_pins system_ila_1/clk]
+  connect_bd_net -net adc_controller_0_count_val_out [get_bd_pins adc_controller_0/count_val_out] [get_bd_pins system_ila_0/probe3]
   connect_bd_net -net axis_data_fifo_0_axis_rd_data_count [get_bd_pins axis_data_fifo_0/axis_rd_data_count] [get_bd_pins system_ila_1/probe1]
   connect_bd_net -net axis_data_fifo_0_axis_wr_data_count [get_bd_pins axis_data_fifo_0/axis_wr_data_count] [get_bd_pins system_ila_1/probe0]
   connect_bd_net -net count_out [get_bd_pins adc_controller_0/count_out] [get_bd_pins system_ila_0/probe0]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets count_out]
-  connect_bd_net -net count_val_out [get_bd_pins adc_controller_0/count_val_out] [get_bd_pins system_ila_0/probe3]
-  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets count_val_out]
   connect_bd_net -net ext_trigger_0_1 [get_bd_ports ext_trigger] [get_bd_pins adc_controller_0/ext_trigger] [get_bd_pins system_ila_0/probe1]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets ext_trigger_0_1]
   connect_bd_net -net gpio_buffer_0_gpio_out [get_bd_pins adc_controller_0/gpio_in] [get_bd_pins gpio_buffer_0/gpio_out] [get_bd_pins system_ila_0/probe4]

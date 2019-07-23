@@ -107,7 +107,7 @@ else:
           " (ns)\nPhase: " + str(waveform_phase) + 
           " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
           "\nNumber of playback cycles: " + str(num_cycles) + 
-          "\nDelay before experiment: " + str() + 
+          "\nDelay before experiment: " + str(zero_delay) + 
           " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
           "\nLocking file: " + locking_filename + 
           "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)")

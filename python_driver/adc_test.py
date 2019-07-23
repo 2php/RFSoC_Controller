@@ -11,7 +11,7 @@ import init_board_int as ib
 board = ib.init_board_object("COM4")
 
 #set the adc to collect 800 samples
-board.set_adc_cycles(100)
+board.set_adc_cycles(10)
 
 #trigger the board
 board.trigger()
@@ -21,6 +21,6 @@ samples = board.read_adc()
 
 
 plt.plot(samples)
-plt.ylabel('ADC Value')
-plt.xlabel('ADC Sample Number')
+#plt.ylabel('ADC Value')
+#plt.xlabel('ADC Sample Number')
 plt.show()

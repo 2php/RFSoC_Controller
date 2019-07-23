@@ -55,7 +55,11 @@ void uart_recieve(u8* buff, u16 num_char)
 
 void uart_send(u8* buff, u32 len)
 {
-	XUartLite_Send(&UartLite, buff, len);
+	for(int i = 0; i < len; i++){
+		u8 l_buff[1] = {buff[i]};
+		while(XUartLite_IsSending(&UartLite));
+		XUartLite_Send(&UartLite, l_buff, 1);
+	}
 }
 
 //returns 1 if cmd is availabe, also writes command to first position of buffer

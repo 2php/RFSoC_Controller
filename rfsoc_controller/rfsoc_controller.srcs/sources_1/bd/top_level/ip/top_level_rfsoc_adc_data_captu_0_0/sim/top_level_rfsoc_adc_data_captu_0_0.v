@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:rfsoc_adc_data_capture:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
