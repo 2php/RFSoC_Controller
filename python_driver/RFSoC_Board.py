@@ -19,7 +19,7 @@ DAC_MAX_VALUE = 0x7FFF
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
 DAC_WORD_FREQ = 250250820
 NANOSECONDS_PER_DAC_WORD = 4
-
+ADC_TIMEOUT = 120
 #Commands
 PING_BOARD = 0x00
 RF_LOAD_WAVEFORM = 0x01
@@ -269,7 +269,7 @@ class RFSoC_Board:
         self.port = serial.Serial()
         self.port.baudrate = DEFAULT_BAUD
         self.port.port = portname
-        self.port.timeout = 3
+        self.port.timeout = 1
         
     def close(self):
         self.port.close()
@@ -536,6 +536,7 @@ class RFSoC_Board:
          
      #Returns an array of adc samples       
     def read_adc(self):
+        self.port.timeout = ADC_TIMEOUT
          #send the read command
         #ack_val = self.write_bytes([RF_READ_ADC])
         self.port.open()
@@ -557,6 +558,11 @@ class RFSoC_Board:
         #get the bytestream
         adc_bytestream = self.receive_bytes(leng)
         self.port.close()
+        self.port.timeout = 1
+        
+        if(len(adc_bytestream) != leng):
+            print("Warning, expected " + str(leng) + " bytes from board for ADC capture, received " + str(len(adc_bytestream)))
+        
         #return the rebuilt samples
         return self.rebuild_adc_stream(adc_bytestream)
          
@@ -580,9 +586,10 @@ class RFSoC_Board:
             
         for i in range(0, int(len(samples)/2)):
             temp = samples[2*i]
-            samples[2*i] = samples[(2*i)+1]
-            samples[(2*i)+1] = temp
+            samples[2*i] = samples[(2*i)+1] * (1800/32768)
+            samples[(2*i)+1] = temp * (1800/32768)
             
+        #return stream_scale(samples, -32768, +32768, -1800, +1800)
         return samples
     
     def s16(self, value):

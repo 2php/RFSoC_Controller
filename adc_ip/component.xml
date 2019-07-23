@@ -505,7 +505,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>119990bd</spirit:value>
+            <spirit:value>6099ec78</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -524,7 +524,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6816523b</spirit:value>
+            <spirit:value>634f7f05</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -857,320 +857,6 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/ltlib_v1_0_0/ltlib_v1_0_0_ver.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ltlib_v1_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ltlib_v1_0_0/ltlib_v1_0_0_lib_fn.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ltlib_v1_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ltlib_v1_0_0/ltlib_v1_0_vl_rfs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>ltlib_v1_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbs_v1_0_2/xsdbs_v1_0_2_i2x.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbs_v1_0_2</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbs_v1_0_2/xsdbs_v1_0_2_in.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbs_v1_0_2</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbs_v1_0_2/xsdbs_v1_0_vl_rfs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>xsdbs_v1_0_2</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/blk_mem_gen_v8_3_6/blk_mem_gen_v8_3_vhsyn_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>blk_mem_gen_v8_3_6</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/fifo_generator_v13_1_4/fifo_generator_v13_1_vhsyn_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>fifo_generator_v13_1_4</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_i2x.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_in.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_icn.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_ext.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_core.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_core_ext.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_ports.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bsid_ports.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bsid_vec_ports.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_vec.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_bs_core_vec.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_sl_prt_map.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_id_map.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_0_id_vec_map.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/xsdbm_v3_0_0/xsdbm_v3_0_vl_rfs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>xsdbm_v3_0_0</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/blk_mem_gen_v8_4_3/blk_mem_gen_v8_4_vhsyn_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>blk_mem_gen_v8_4_3</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_9_ila_ver.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_syn_rfs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_9_ila_in.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_9_ila_param.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_9_ila_lparam.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila_v6_2_9/ila_v6_2_9_ila_lib_fn.vh</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>ila_v6_2_9</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ila.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_ila_lib_0_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_ila_lib_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/gigantic_mux/gigantic_mux_v1_0_cntr.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:logicalName>gigantic_mux</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/mux_core.txt</spirit:name>
-        <spirit:userFileType>text</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_g_inst_0_gigantic_mux.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_g_inst_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>SCOPED_TO_REF_bd_6b6e</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/rfsoc_adc_data_capture_system_ila_0_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/rfsoc_adc_data_capture_system_ila_0_0_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_ila_lib_0_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_ila_lib_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_g_inst_0_gigantic_mux.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_g_inst_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>SCOPED_TO_REF_bd_ab3f</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/rfsoc_adc_data_capture_system_ila_1_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/rfsoc_adc_data_capture_system_ila_1_0_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/shift_register.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -1184,25 +870,37 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_0/rfsoc_adc_data_capture_axis_data_fifo_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_1/rfsoc_adc_data_capture_axis_data_fifo_0_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_2/rfsoc_adc_data_capture_axis_data_fifo_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_3/rfsoc_adc_data_capture_axis_data_fifo_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/gpio_buffer.v</spirit:name>
@@ -1213,7 +911,64 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_0/rfsoc_adc_data_capture_axis_data_fifo_4_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_4/rfsoc_adc_data_capture_axis_data_fifo_0_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_0/rfsoc_adc_data_capture_axis_data_fifo_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_0/rfsoc_adc_data_capture_axis_data_fifo_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_0/rfsoc_adc_data_capture_axis_data_fifo_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_1/rfsoc_adc_data_capture_axis_data_fifo_4_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_1/rfsoc_adc_data_capture_axis_data_fifo_5_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_2/rfsoc_adc_data_capture_axis_data_fifo_5_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_3/rfsoc_adc_data_capture_axis_data_fifo_5_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_4/rfsoc_adc_data_capture_axis_data_fifo_5_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_8</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_ooc.xdc</spirit:name>
@@ -1225,8 +980,12 @@
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_0f8c57b7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e0b6d586</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1252,78 +1011,6 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/bd_6b6e_ila_lib_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/gigantic_mux/gigantic_mux_v1_0_cntr.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>gigantic_mux</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/mux_core.txt</spirit:name>
-        <spirit:userFileType>text</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_6b6e_g_inst_0_gigantic_mux.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_6b6e_g_inst_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_6b6e.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_6b6e.protoinst</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/rfsoc_adc_data_capture_system_ila_0_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_ab3f_ila_lib_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/bd_ab3f_g_inst_0_gigantic_mux.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_ab3f_g_inst_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_ab3f.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/bd_ab3f.protoinst</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/rfsoc_adc_data_capture_system_ila_1_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/shift_register.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -1337,25 +1024,37 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_0/rfsoc_adc_data_capture_axis_data_fifo_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_1/rfsoc_adc_data_capture_axis_data_fifo_0_1.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_2/rfsoc_adc_data_capture_axis_data_fifo_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_3/rfsoc_adc_data_capture_axis_data_fifo_0_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/gpio_buffer.v</spirit:name>
@@ -1366,7 +1065,64 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_0/rfsoc_adc_data_capture_axis_data_fifo_4_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_4/rfsoc_adc_data_capture_axis_data_fifo_0_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_0/rfsoc_adc_data_capture_axis_data_fifo_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_0/rfsoc_adc_data_capture_axis_data_fifo_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_0/rfsoc_adc_data_capture_axis_data_fifo_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_1/rfsoc_adc_data_capture_axis_data_fifo_4_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_1/rfsoc_adc_data_capture_axis_data_fifo_5_1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_2/rfsoc_adc_data_capture_axis_data_fifo_5_2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_3/rfsoc_adc_data_capture_axis_data_fifo_5_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_4/rfsoc_adc_data_capture_axis_data_fifo_5_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_8</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sim/rfsoc_adc_data_capture.protoinst</spirit:name>
@@ -1377,13 +1133,17 @@
         <spirit:name>sim/rfsoc_adc_data_capture.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_data_fifo_2_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_data_fifo" xilinx:version="2.0">
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_data_fifo" xilinx:version="2.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1416,26 +1176,20 @@
       </xilinx:taxonomies>
       <xilinx:displayName>rfsoc_adc_data_capture_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:xpmLibraries>
-        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
-        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
-      </xilinx:xpmLibraries>
       <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-07-22T22:31:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-07-23T19:06:33Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b82cdda_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@f074852_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@541006e8_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f28338_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67899737_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e853d84_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfc2296_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eebed0f_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ea1909_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e88c1ee_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e7f92b6_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@210c19f2_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d65cffd_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c30151_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51143ab6_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b11569e_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57ed3b5_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f5c56d_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a54ccbb_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@411a9154_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ad7afde_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c56924f_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d732a03_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@768f50c0_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.RF_CLK.ASSOCIATED_BUSIF" xilinx:valueSource="user"/>
@@ -1490,7 +1244,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="df4c7e76"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="91fcf22b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ab3f04bb"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="27aa338a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="75523bff"/>
     </xilinx:packagingInfo>

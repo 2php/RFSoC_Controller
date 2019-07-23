@@ -28,4 +28,6 @@ board.set_loopback(rf.YES)
 #set the trigger mode
 board.set_trigger_mode(rf.TRIGGER_CYCLES)
 
+board.set_adc_cycles(3000)
+
 print("Board is armed, trigger using trigger_board.py")

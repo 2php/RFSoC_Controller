@@ -200,6 +200,8 @@ void rf_set_loopback(u8 option)
 
 void rf_trigger()
 {
+	//empty the buffer before we capture anything
+	//rf_flush_adc_buffer();
 	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x01);
 	//usleep();
 	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x00);

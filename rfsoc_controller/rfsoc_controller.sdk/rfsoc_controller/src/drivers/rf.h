@@ -49,7 +49,7 @@ u32 rf_read_stream(u8 stream_num);
 #define NUM_CHANNELS 4
 #define ON 0x01
 #define OFF 0x00
-#define ADC_BUFFER_DEPTH 4096
+#define ADC_BUFFER_DEPTH 65536
 
 //Core functions
 void rf_load_bitstream(u8* stream, u32 length, u8 channel);

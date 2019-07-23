@@ -61,13 +61,20 @@ proc step_failed { step } {
 }
 
 set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
+  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 3
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
+  set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6288-DESKTOP-6ILET8A/incrSyn}
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]

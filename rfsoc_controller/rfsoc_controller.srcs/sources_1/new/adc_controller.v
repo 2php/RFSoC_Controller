@@ -56,11 +56,11 @@ parameter adc_capture_count_sclk = 12
     
     output wire [31:0] m_axis_tdata_3,
     output wire m_axis_tvalid_3,
-    input wire m_axis_tready_3,
+    input wire m_axis_tready_3
     
-    output wire [1:0] state_out,
-    output wire [31:0] count_out,
-    output wire [31:0] count_val_out
+    //output wire [1:0] state_out,
+    //output wire [31:0] count_out,
+    //output wire [31:0] count_val_out
     
     );
     
@@ -82,9 +82,9 @@ parameter adc_capture_count_sclk = 12
     reg [1:0] state;
     reg [31:0] count;
     
-    assign state_out = state;
-    assign count_val_out = count_val;
-    assign count_out = count;
+    //assign state_out = state;
+    //assign count_val_out = count_val;
+    //assign count_out = count;
     
     wire [31:0] count_val;
     shift_register #(32) sr_cycles(.clk(rf_clk), .sclk(gpio_in[adc_capture_count_sclk]), .reset(rf_reset), .data_in(gpio_in[sdata]), .data_out(count_val));

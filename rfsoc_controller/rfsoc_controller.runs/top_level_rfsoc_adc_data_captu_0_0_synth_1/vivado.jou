@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Jul 22 15:32:59 2019
-# Process ID: 5192
+# Start of session at: Tue Jul 23 12:08:07 2019
+# Process ID: 10192
 # Current directory: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1
 # Command line: vivado.exe -log top_level_rfsoc_adc_data_captu_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_rfsoc_adc_data_captu_0_0.tcl
 # Log file: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1/top_level_rfsoc_adc_data_captu_0_0.vds

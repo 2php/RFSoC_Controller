@@ -5,31 +5,31 @@
 preplace port diff_clock_rtl -pg 1 -lvl 0 -x 0 -y 3410 -defaultsOSRD
 preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 4400 -defaultsOSRD
 preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 4300 -defaultsOSRD
-preplace port vout00 -pg 1 -lvl 8 -x 3540 -y 4010 -defaultsOSRD
-preplace port vout01 -pg 1 -lvl 8 -x 3540 -y 4030 -defaultsOSRD
-preplace port vout02 -pg 1 -lvl 8 -x 3540 -y 4050 -defaultsOSRD
-preplace port vout03 -pg 1 -lvl 8 -x 3540 -y 4070 -defaultsOSRD
-preplace port app_leds -pg 1 -lvl 8 -x 3540 -y 4720 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 8 -x 3560 -y 4010 -defaultsOSRD
+preplace port vout01 -pg 1 -lvl 8 -x 3560 -y 4030 -defaultsOSRD
+preplace port vout02 -pg 1 -lvl 8 -x 3560 -y 4050 -defaultsOSRD
+preplace port vout03 -pg 1 -lvl 8 -x 3560 -y 4070 -defaultsOSRD
+preplace port app_leds -pg 1 -lvl 8 -x 3560 -y 4720 -defaultsOSRD
 preplace port dac1_clk -pg 1 -lvl 0 -x 0 -y 4320 -defaultsOSRD
-preplace port vout10 -pg 1 -lvl 8 -x 3540 -y 4090 -defaultsOSRD
-preplace port vout11 -pg 1 -lvl 8 -x 3540 -y 4110 -defaultsOSRD
-preplace port vout12 -pg 1 -lvl 8 -x 3540 -y 4130 -defaultsOSRD
-preplace port vout13 -pg 1 -lvl 8 -x 3540 -y 4150 -defaultsOSRD
+preplace port vout10 -pg 1 -lvl 8 -x 3560 -y 4090 -defaultsOSRD
+preplace port vout11 -pg 1 -lvl 8 -x 3560 -y 4110 -defaultsOSRD
+preplace port vout12 -pg 1 -lvl 8 -x 3560 -y 4130 -defaultsOSRD
+preplace port vout13 -pg 1 -lvl 8 -x 3560 -y 4150 -defaultsOSRD
 preplace port dac2_clk -pg 1 -lvl 0 -x 0 -y 4340 -defaultsOSRD
-preplace port vout20 -pg 1 -lvl 8 -x 3540 -y 4170 -defaultsOSRD
-preplace port vout21 -pg 1 -lvl 8 -x 3540 -y 4190 -defaultsOSRD
-preplace port vout22 -pg 1 -lvl 8 -x 3540 -y 4210 -defaultsOSRD
-preplace port vout23 -pg 1 -lvl 8 -x 3540 -y 4230 -defaultsOSRD
+preplace port vout20 -pg 1 -lvl 8 -x 3560 -y 4170 -defaultsOSRD
+preplace port vout21 -pg 1 -lvl 8 -x 3560 -y 4190 -defaultsOSRD
+preplace port vout22 -pg 1 -lvl 8 -x 3560 -y 4210 -defaultsOSRD
+preplace port vout23 -pg 1 -lvl 8 -x 3560 -y 4230 -defaultsOSRD
 preplace port dac3_clk -pg 1 -lvl 0 -x 0 -y 4360 -defaultsOSRD
-preplace port vout30 -pg 1 -lvl 8 -x 3540 -y 4250 -defaultsOSRD
-preplace port vout31 -pg 1 -lvl 8 -x 3540 -y 4270 -defaultsOSRD
-preplace port vout32 -pg 1 -lvl 8 -x 3540 -y 4290 -defaultsOSRD
-preplace port vout33 -pg 1 -lvl 8 -x 3540 -y 4310 -defaultsOSRD
+preplace port vout30 -pg 1 -lvl 8 -x 3560 -y 4250 -defaultsOSRD
+preplace port vout31 -pg 1 -lvl 8 -x 3560 -y 4270 -defaultsOSRD
+preplace port vout32 -pg 1 -lvl 8 -x 3560 -y 4290 -defaultsOSRD
+preplace port vout33 -pg 1 -lvl 8 -x 3560 -y 4310 -defaultsOSRD
 preplace port vin00_0 -pg 1 -lvl 0 -x 0 -y 4380 -defaultsOSRD
 preplace port adc0_clk_0 -pg 1 -lvl 0 -x 0 -y 4280 -defaultsOSRD
 preplace port resetn -pg 1 -lvl 0 -x 0 -y 3530 -defaultsOSRD
 preplace port rx_0 -pg 1 -lvl 0 -x 0 -y 4840 -defaultsOSRD
-preplace port tx_0 -pg 1 -lvl 8 -x 3540 -y 4920 -defaultsOSRD
+preplace port tx_0 -pg 1 -lvl 8 -x 3560 -y 4920 -defaultsOSRD
 preplace port ext_trigger_0_0 -pg 1 -lvl 0 -x 0 -y 1870 -defaultsOSRD
 preplace inst microblaze_0 -pg 1 -lvl 5 -x 1930 -y 3040 -defaultsOSRD
 preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 2810 -y 4230 -defaultsOSRD
@@ -38,9 +38,9 @@ preplace inst mdm_1 -pg 1 -lvl 4 -x 1460 -y 3360 -defaultsOSRD
 preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 170 -y 3420 -defaultsOSRD
 preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 510 -y 3420 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 170 -y 3530 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 7 -x 3350 -y 4910 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 3350 -y 4740 -defaultsOSRD
-preplace inst usp_rf_data_converter_0 -pg 1 -lvl 7 -x 3350 -y 4210 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 7 -x 3360 -y 4910 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 3360 -y 4740 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 7 -x 3360 -y 4210 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 510 -y 3220 -defaultsOSRD
 preplace inst proc_sys_reset_1 -pg 1 -lvl 5 -x 1930 -y 3730 -defaultsOSRD
 preplace inst proc_sys_reset_2 -pg 1 -lvl 5 -x 1930 -y 3930 -defaultsOSRD
@@ -73,16 +73,16 @@ preplace netloc mdm_1_debug_sys_rst 1 0 5 20 3590 340 3520 690 3590 NJ 3590 1620
 preplace netloc clk_wiz_1_locked 1 1 1 320 3430n
 preplace netloc resetn_1 1 0 1 NJ 3530
 preplace netloc util_vector_logic_0_Res 1 1 4 330 3530 680 3710 NJ 3710 1650
-preplace netloc rx_0_1 1 0 8 NJ 4840 NJ 4840 NJ 4840 NJ 4840 NJ 4840 NJ 4840 3210J 4820 3490
+preplace netloc rx_0_1 1 0 8 NJ 4840 NJ 4840 NJ 4840 NJ 4840 NJ 4840 NJ 4840 3210J 4820 3500
 preplace netloc axi_uartlite_0_tx 1 7 1 NJ 4920
-preplace netloc Net 1 2 6 720 2880 1260 3020 1690 3290 2500 3870 3000J 3800 3520
-preplace netloc Net3 1 1 7 340 2360 710 2360 1300J 2330 NJ 2330 2530 4130 3130 3790 3490
+preplace netloc Net 1 2 6 720 2880 1260 3020 1690 3290 2500 3870 3000J 3800 3530
+preplace netloc Net3 1 1 7 340 2360 710 2360 1300J 2330 NJ 2330 2530 4130 3130 3790 3500
 preplace netloc Net4 1 2 5 680 1790 NJ 1790 NJ 1790 2410 1790 3090J
 preplace netloc rfsoc_data_pipeline_1_pipeline_active 1 2 5 730 520 NJ 520 NJ 520 NJ 520 3010
 preplace netloc rfsoc_data_pipeline_0_pipeline_active 1 2 5 830 1750 NJ 1750 NJ 1750 NJ 1750 3140
-preplace netloc usp_rf_data_converter_0_clk_dac1 1 4 4 1670 3630 2580 4480 3090 4620 3510
-preplace netloc usp_rf_data_converter_0_clk_dac2 1 4 4 1660 4380 2210 4430 2970 4630 3500
-preplace netloc usp_rf_data_converter_0_clk_dac3 1 4 4 1670 4390 2650 4390 2980 4640 3490
+preplace netloc usp_rf_data_converter_0_clk_dac1 1 4 4 1670 3630 2580 4480 3090 4620 3520
+preplace netloc usp_rf_data_converter_0_clk_dac2 1 4 4 1660 4380 2210 4430 2970 4630 3510
+preplace netloc usp_rf_data_converter_0_clk_dac3 1 4 4 1670 4390 2650 4390 2980 4640 3500
 preplace netloc Net1 1 5 2 2170 4460 NJ
 preplace netloc Net2 1 5 2 2410 4140 3000J
 preplace netloc proc_sys_reset_3_peripheral_aresetn 1 5 2 2660 4470 2990J
@@ -133,80 +133,80 @@ preplace netloc trigger_controller_0_trigger_c13 1 3 3 1290 2280 NJ 2280 2590J
 preplace netloc rfsoc_data_pipeline_13_pipeline_active 1 2 5 780 2780 NJ 2780 1610J 2790 2460J 2840 3010
 preplace netloc trigger_controller_0_trigger_c12 1 3 3 1300 2270 NJ 2270 2570J
 preplace netloc rfsoc_data_pipeline_12_pipeline_active 1 2 5 770 2770 NJ 2770 1620J 2780 2400J 3100 3010
-preplace netloc usp_rf_data_converter_0_clk_adc0 1 2 6 850 3610 1270 3610 NJ 3610 NJ 3610 3020 3780 3500
+preplace netloc usp_rf_data_converter_0_clk_adc0 1 2 6 850 3610 1270 3610 NJ 3610 NJ 3610 3020 3780 3510
 preplace netloc proc_sys_reset_4_peripheral_aresetn 1 3 4 1290 3580 NJ 3580 2220J 4380 NJ
-preplace netloc rfsoc_data_pipeline_7_m_axis 1 6 1 3140 1920n
-preplace netloc usp_rf_data_converter_0_vout02 1 7 1 NJ 4050
-preplace netloc microblaze_0_ilmb_1 1 5 1 2260 2880n
-preplace netloc usp_rf_data_converter_0_vout01 1 7 1 NJ 4030
-preplace netloc microblaze_0_M7_AXIS 1 5 1 2550 1860n
-preplace netloc microblaze_0_M6_AXIS 1 5 1 2510 1540n
-preplace netloc microblaze_0_M12_AXIS 1 5 1 N 3160
-preplace netloc rfsoc_data_pipeline_11_m_axis 1 6 1 3100 2700n
-preplace netloc microblaze_0_M9_AXIS 1 5 1 2290 3100n
-preplace netloc rfsoc_data_pipeline_14_m_axis 1 6 1 3030 3460n
-preplace netloc sysref_in_1 1 0 7 NJ 4400 NJ 4400 NJ 4400 1250J 4410 NJ 4410 NJ 4410 3110J
-preplace netloc microblaze_0_M2_AXIS 1 5 1 2320 580n
-preplace netloc dac2_clk_1 1 0 7 NJ 4340 NJ 4340 NJ 4340 NJ 4340 NJ 4340 NJ 4340 3080J
-preplace netloc rfsoc_data_pipeline_3_m_axis_0 1 6 1 3180 880n
-preplace netloc usp_rf_data_converter_0_vout32 1 7 1 NJ 4290
-preplace netloc microblaze_0_debug 1 4 1 1630 3190n
-preplace netloc rfsoc_data_pipeline_0_m_axis_0 1 6 1 3210 120n
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 2970 4670n
 preplace netloc rfsoc_data_pipeline_13_m_axis 1 6 1 3060 2960n
-preplace netloc microblaze_0_M15_AXIS 1 5 1 2300 3220n
-preplace netloc usp_rf_data_converter_0_vout03 1 7 1 NJ 4070
-preplace netloc usp_rf_data_converter_0_vout13 1 7 1 NJ 4150
-preplace netloc microblaze_0_axi_dp 1 5 1 2230 2900n
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2990 4650n
-preplace netloc microblaze_0_mdm_axi 1 3 4 1310 4400 NJ 4400 NJ 4400 2960
-preplace netloc rfsoc_data_pipeline_2_m_axis_0 1 6 1 3190 640n
-preplace netloc diff_clock_rtl_1 1 0 1 NJ 3410
-preplace netloc microblaze_0_M14_AXIS 1 5 1 2320 3200n
-preplace netloc microblaze_0_M1_AXIS 1 5 1 2290 320n
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 3070 3860n
-preplace netloc usp_rf_data_converter_0_vout00 1 7 1 NJ 4010
-preplace netloc microblaze_0_dlmb_1 1 5 1 2270 2860n
-preplace netloc microblaze_0_M0_AXIS 1 5 1 2240 60n
-preplace netloc rfsoc_data_pipeline_9_m_axis 1 6 1 3040 3990n
-preplace netloc rfsoc_data_pipeline_4_m_axis 1 6 1 3170 1120n
-preplace netloc dac0_clk_1 1 0 7 20J 4330 NJ 4330 NJ 4330 NJ 4330 NJ 4330 NJ 4330 3040J
-preplace netloc microblaze_0_M3_AXIS 1 5 1 2350 820n
-preplace netloc rfsoc_data_pipeline_1_m_axis_0 1 6 1 3200 380n
-preplace netloc microblaze_0_M4_AXIS 1 5 1 2190 1060n
-preplace netloc usp_rf_data_converter_0_vout31 1 7 1 NJ 4270
-preplace netloc usp_rf_data_converter_0_vout30 1 7 1 NJ 4250
-preplace netloc rfsoc_data_pipeline_5_m_axis 1 6 1 3160 1360n
-preplace netloc microblaze_0_M5_AXIS 1 5 1 2450 1300n
-preplace netloc usp_rf_data_converter_0_vout11 1 7 1 NJ 4110
-preplace netloc usp_rf_data_converter_0_vout23 1 7 1 NJ 4230
-preplace netloc rfsoc_data_pipeline_10_m_axis 1 6 1 3110 2180n
-preplace netloc usp_rf_data_converter_0_vout33 1 7 1 NJ 4310
-preplace netloc usp_rf_data_converter_0_vout12 1 7 1 NJ 4130
-preplace netloc microblaze_0_M8_AXIS 1 5 1 2630 2360n
-preplace netloc rfsoc_data_pipeline_6_m_axis 1 6 1 3150 1600n
-preplace netloc rfsoc_data_pipeline_12_m_axis 1 6 1 3050 3220n
-preplace netloc usp_rf_data_converter_0_vout20 1 7 1 NJ 4170
-preplace netloc dac3_clk_1 1 0 7 20J 4350 NJ 4350 NJ 4350 NJ 4350 NJ 4350 NJ 4350 3100J
-preplace netloc microblaze_0_M10_AXIS 1 5 1 2610 2120n
-preplace netloc microblaze_0_M11_AXIS 1 5 1 2640 2640n
-preplace netloc usp_rf_data_converter_0_vout21 1 7 1 NJ 4190
-preplace netloc microblaze_0_M13_AXIS 1 5 1 2280 2900n
-preplace netloc rfsoc_data_pipeline_8_m_axis 1 6 1 3120 2420n
-preplace netloc usp_rf_data_converter_0_vout22 1 7 1 NJ 4210
-preplace netloc rfsoc_data_pipeline_15_m_axis 1 6 1 3010 3730n
-preplace netloc dac1_clk_1 1 0 7 NJ 4320 NJ 4320 NJ 4320 NJ 4320 NJ 4320 NJ 4320 3050J
-preplace netloc axi_gpio_0_GPIO 1 7 1 NJ 4720
-preplace netloc usp_rf_data_converter_0_vout10 1 7 1 NJ 4090
-preplace netloc rfsoc_adc_data_captu_0_M_AXIS_0 1 4 1 N 2870
+preplace netloc microblaze_0_debug 1 4 1 1630 3190n
 preplace netloc rfsoc_adc_data_captu_0_M_AXIS_1 1 4 1 N 2890
-preplace netloc rfsoc_adc_data_captu_0_M_AXIS_2 1 4 1 N 2910
+preplace netloc rfsoc_adc_data_captu_0_M_AXIS_0 1 4 1 N 2870
+preplace netloc usp_rf_data_converter_0_m00_axis 1 3 5 1310 260 NJ 260 NJ 260 NJ 260 3520
 preplace netloc rfsoc_adc_data_captu_0_M_AXIS_3 1 4 1 N 2930
-preplace netloc usp_rf_data_converter_0_m00_axis 1 3 5 1310 260 NJ 260 NJ 260 NJ 260 3510
+preplace netloc rfsoc_adc_data_captu_0_M_AXIS_2 1 4 1 N 2910
 preplace netloc vin00_0_1 1 0 7 20J 4420 NJ 4420 NJ 4420 NJ 4420 NJ 4420 NJ 4420 3010J
 preplace netloc adc0_clk_0_1 1 0 7 NJ 4280 NJ 4280 NJ 4280 NJ 4280 NJ 4280 2180J 4310 3030J
-levelinfo -pg 1 0 170 510 1020 1460 1930 2810 3350 3540
-pagesize -pg 1 -db -bbox -sgen -150 0 3650 5000
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 2970 4670n
+preplace netloc usp_rf_data_converter_0_vout31 1 7 1 NJ 4270
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 3070 3860n
+preplace netloc microblaze_0_M5_AXIS 1 5 1 2450 1300n
+preplace netloc rfsoc_data_pipeline_1_m_axis_0 1 6 1 3200 380n
+preplace netloc microblaze_0_M1_AXIS 1 5 1 2290 320n
+preplace netloc rfsoc_data_pipeline_9_m_axis 1 6 1 3040 3990n
+preplace netloc usp_rf_data_converter_0_vout30 1 7 1 NJ 4250
+preplace netloc microblaze_0_axi_dp 1 5 1 2230 2900n
+preplace netloc usp_rf_data_converter_0_vout23 1 7 1 NJ 4230
+preplace netloc microblaze_0_M3_AXIS 1 5 1 2350 820n
+preplace netloc usp_rf_data_converter_0_vout03 1 7 1 NJ 4070
+preplace netloc microblaze_0_mdm_axi 1 3 4 1310 4400 NJ 4400 NJ 4400 2960
+preplace netloc microblaze_0_M0_AXIS 1 5 1 2240 60n
+preplace netloc usp_rf_data_converter_0_vout11 1 7 1 NJ 4110
+preplace netloc rfsoc_data_pipeline_5_m_axis 1 6 1 3160 1360n
+preplace netloc rfsoc_data_pipeline_10_m_axis 1 6 1 3110 2180n
+preplace netloc rfsoc_data_pipeline_2_m_axis_0 1 6 1 3190 640n
+preplace netloc usp_rf_data_converter_0_vout33 1 7 1 NJ 4310
+preplace netloc microblaze_0_M15_AXIS 1 5 1 2300 3220n
+preplace netloc usp_rf_data_converter_0_vout13 1 7 1 NJ 4150
+preplace netloc rfsoc_data_pipeline_4_m_axis 1 6 1 3170 1120n
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 3410
+preplace netloc microblaze_0_M14_AXIS 1 5 1 2320 3200n
+preplace netloc usp_rf_data_converter_0_vout00 1 7 1 NJ 4010
+preplace netloc dac0_clk_1 1 0 7 20J 4330 NJ 4330 NJ 4330 NJ 4330 NJ 4330 NJ 4330 3040J
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2990 4650n
+preplace netloc microblaze_0_dlmb_1 1 5 1 2270 2860n
+preplace netloc microblaze_0_M4_AXIS 1 5 1 2190 1060n
+preplace netloc rfsoc_data_pipeline_8_m_axis 1 6 1 3120 2420n
+preplace netloc rfsoc_data_pipeline_15_m_axis 1 6 1 3010 3730n
+preplace netloc dac1_clk_1 1 0 7 NJ 4320 NJ 4320 NJ 4320 NJ 4320 NJ 4320 NJ 4320 3050J
+preplace netloc microblaze_0_M8_AXIS 1 5 1 2630 2360n
+preplace netloc rfsoc_data_pipeline_12_m_axis 1 6 1 3050 3220n
+preplace netloc microblaze_0_M11_AXIS 1 5 1 2640 2640n
+preplace netloc usp_rf_data_converter_0_vout20 1 7 1 NJ 4170
+preplace netloc usp_rf_data_converter_0_vout22 1 7 1 NJ 4210
+preplace netloc axi_gpio_0_GPIO 1 7 1 NJ 4720
+preplace netloc dac3_clk_1 1 0 7 20J 4350 NJ 4350 NJ 4350 NJ 4350 NJ 4350 NJ 4350 3100J
+preplace netloc rfsoc_data_pipeline_6_m_axis 1 6 1 3150 1600n
+preplace netloc usp_rf_data_converter_0_vout10 1 7 1 NJ 4090
+preplace netloc usp_rf_data_converter_0_vout21 1 7 1 NJ 4190
+preplace netloc microblaze_0_M13_AXIS 1 5 1 2280 2900n
+preplace netloc usp_rf_data_converter_0_vout12 1 7 1 NJ 4130
+preplace netloc microblaze_0_M10_AXIS 1 5 1 2610 2120n
+preplace netloc microblaze_0_M9_AXIS 1 5 1 2290 3100n
+preplace netloc microblaze_0_M6_AXIS 1 5 1 2510 1540n
+preplace netloc rfsoc_data_pipeline_3_m_axis_0 1 6 1 3180 880n
+preplace netloc usp_rf_data_converter_0_vout01 1 7 1 NJ 4030
+preplace netloc dac2_clk_1 1 0 7 NJ 4340 NJ 4340 NJ 4340 NJ 4340 NJ 4340 NJ 4340 3080J
+preplace netloc microblaze_0_M12_AXIS 1 5 1 N 3160
+preplace netloc rfsoc_data_pipeline_14_m_axis 1 6 1 3030 3460n
+preplace netloc microblaze_0_ilmb_1 1 5 1 2260 2880n
+preplace netloc microblaze_0_M2_AXIS 1 5 1 2320 580n
+preplace netloc usp_rf_data_converter_0_vout32 1 7 1 NJ 4290
+preplace netloc rfsoc_data_pipeline_0_m_axis_0 1 6 1 3210 120n
+preplace netloc rfsoc_data_pipeline_11_m_axis 1 6 1 3100 2700n
+preplace netloc sysref_in_1 1 0 7 NJ 4400 NJ 4400 NJ 4400 1250J 4410 NJ 4410 NJ 4410 3110J
+preplace netloc microblaze_0_M7_AXIS 1 5 1 2550 1860n
+preplace netloc usp_rf_data_converter_0_vout02 1 7 1 NJ 4050
+preplace netloc rfsoc_data_pipeline_7_m_axis 1 6 1 3140 1920n
+levelinfo -pg 1 0 170 510 1020 1460 1930 2810 3360 3560
+pagesize -pg 1 -db -bbox -sgen -150 0 3670 5000
 "
 }
 {

@@ -73,10 +73,7 @@ module rfsoc_adc_data_capture_adc_controller_0_0 (
   m_axis_tready_2,
   m_axis_tdata_3,
   m_axis_tvalid_3,
-  m_axis_tready_3,
-  state_out,
-  count_out,
-  count_val_out
+  m_axis_tready_3
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rf_clk, ASSOCIATED_RESET rf_reset, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN rfsoc_adc_data_capture_rf_clk_0, INSERT_VIP 0" *)
@@ -122,9 +119,6 @@ output wire m_axis_tvalid_3;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_3, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_3 TREADY" *)
 input wire m_axis_tready_3;
-output wire [1 : 0] state_out;
-output wire [31 : 0] count_out;
-output wire [31 : 0] count_val_out;
 
   adc_controller #(
     .trigger_override_bit(0),
@@ -155,9 +149,6 @@ output wire [31 : 0] count_val_out;
     .m_axis_tready_2(m_axis_tready_2),
     .m_axis_tdata_3(m_axis_tdata_3),
     .m_axis_tvalid_3(m_axis_tvalid_3),
-    .m_axis_tready_3(m_axis_tready_3),
-    .state_out(state_out),
-    .count_out(count_out),
-    .count_val_out(count_val_out)
+    .m_axis_tready_3(m_axis_tready_3)
   );
 endmodule
