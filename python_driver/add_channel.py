@@ -22,6 +22,10 @@ import RFSoC_Board as rf
 #10 locking phase in nanoseconds, can be a float but will be rounded to nearest quarter nanosecond
 #11 is the locking file name
 
+if(len(sys.argv) < 9):
+    print("Error, not enough arguments, please see top of script for list of arguments.")
+    sys.exit()
+
 #get all of our variables first
 channel_number = int(sys.argv[1])
 if channel_number > 16 or channel_number < 1:
@@ -68,6 +72,10 @@ locking_phase = 0
 locking_filename = "dummy_locking_file.txt"
 
 if(is_locking):
+    
+    if(len(sys.argv) < 12):
+        print("Error, not enough arguments to parse locking channel.")
+        sys.exit()
 
     locking_amp_factor = int(sys.argv[9]) #between 0 and 1
     if(locking_amp_factor < 0 or locking_amp_factor > 1):

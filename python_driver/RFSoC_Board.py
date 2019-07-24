@@ -320,8 +320,9 @@ class RFSoC_Board:
         
     def write_all_channels(self):
         for c in self.channels:
-            self.write_channel(c.number)
-        return
+            if self.write_channel(c.number) == 1:
+                return 1
+        return 0
     
     #returns ACK_RESPONSE if ack successfully recieved
     def wait_ack(self):
@@ -345,7 +346,7 @@ class RFSoC_Board:
     def write_channel(self, channel_num):
         if(channel_num >= 16):
             print("Error, target channel not found: " + str(channel_num) + "\n")
-            return
+            return 1
         #look up the appropriate channel
         target_channel = None
         for i in range(0,len(self.channels)):
@@ -355,7 +356,7 @@ class RFSoC_Board:
             
         if(target_channel == None):
             print("Error, target channel not found: " + str(channel_num) + "\n")
-            return
+            return 1
         
         #get the channel bytestream
         bs = target_channel.get_byte_stream();
@@ -366,13 +367,14 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending write_channel command, ack error code was: " + str(ack_val) + "\n")
+            return 1 
         
         #send the channel number
         ack_val = self.write_bytes([channel_num & 0xFF])
          #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending channel number, ack error code was: " + str(ack_val) + "\n")
-        
+            return 1
         
         #send the repeat cycles
         cycle_bytes = target_channel.get_repeat_clock_cycle_bytes()
@@ -381,7 +383,8 @@ class RFSoC_Board:
          #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set repeat cycles value, ack error code was: " + str(ack_val) + "\n")
-          
+            return 1
+        
         #send the zero cycles
         zero_bytes = target_channel.get_zero_delay_bytes()
         ack_val = self.write_bytes(zero_bytes)
@@ -389,20 +392,22 @@ class RFSoC_Board:
          #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set zero cycles value, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1 
+        
         #send the locking waveform
         ack_val = self.write_bytes(target_channel.locking_wf.bytestream)
         
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1 
+        
         #send the prewaveform bytes
         ack_val = self.write_bytes(target_channel.get_pre_waveform_byte_stream())
          #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending prewaveform bytes, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1 
         
         #send the length
         ack_val = self.write_bytes(int_to_bytestream(len(bs),4))
@@ -410,14 +415,17 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending bytestream size, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1 
+        
         #send the bytestream
         ack_val = self.write_bytes(bs)
         
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending bytestream, ack error code was: " + str(ack_val) + "\n")
-                
+            return 1  
+            
+        return 0
         
     def set_loopback(self, choice):
         
@@ -430,7 +438,7 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set loopback command, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1
         
         #send the choice byte
         ack_val = self.write_bytes([choice_byte])
@@ -438,7 +446,10 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending loopback choice, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1
+        
+        return 0
+        
     def set_trigger_mode(self, mode):
         
         #send the set trigger mode command
@@ -447,7 +458,7 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set trigger mode, ack error code was: " + str(ack_val) + "\n")
-            
+            return 1
         
         #send the mode byte
         ack_val = self.write_bytes([mode & 0xFF])
@@ -455,7 +466,9 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending trigger mode value, ack error code was: " + str(ack_val) + "\n")
+            return 1
         
+        return 0
         
     def trigger(self):
         
@@ -526,14 +539,19 @@ class RFSoC_Board:
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
-           
+            return 1
+        
         #send the cycle bytes
         ack_val = self.write_bytes(int_to_bytestream(int(cycles), 4))
     
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending adc cycles, ack error code was: " + str(ack_val) + "\n")
-         
+            return 1
+        
+        return 0
+    
+    
      #Returns an array of adc samples       
     def read_adc(self):
         self.port.timeout = ADC_TIMEOUT

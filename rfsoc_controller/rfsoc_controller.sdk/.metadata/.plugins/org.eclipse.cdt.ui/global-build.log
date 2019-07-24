@@ -3010,3 +3010,6 @@ make: Nothing to be done for 'all'.
 13:35:06 **** Incremental Build of configuration Debug for project rfsoc_controller ****
 make all 
 make: Nothing to be done for 'all'.
+16:34:56 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
