@@ -46,7 +46,7 @@ u32 rf_read_stream(u8 stream_num);
 #define TRIGGER_CYCLES 0x01
 #define YES 0x00
 #define NO 0x01
-#define NUM_CHANNELS 8
+#define NUM_CHANNELS 4
 #define ON 0x01
 #define OFF 0x00
 #define ADC_BUFFER_DEPTH 65536

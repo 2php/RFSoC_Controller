@@ -35,7 +35,7 @@ if board.set_trigger_mode(rf.TRIGGER_CYCLES) != 0:
     print("Error while setting buffer trigger mode, check to make sure board connection is up")
     sys.exit()
 
-adc_cycles = 3000
+adc_cycles = 0
 if(len(sys.argv) > 1):
     adc_cycles = round(int(sys.argv[1])/4)
 
@@ -43,4 +43,5 @@ if board.set_adc_cycles(adc_cycles) != 0:
     print("Error while setting ADC trigger time, check to make sure board connection is up")
     sys.exit()
 
+print("ADC capture time set to " + str(adc_cycles*4) + " ns")
 print("Board is armed, trigger using trigger_board.py")
