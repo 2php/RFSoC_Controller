@@ -34,6 +34,7 @@ RF_SET_LOCKING_SELECT = 0x09
 RF_SET_ZERO_DELAY = 0x0A
 RF_SET_ADC_CYCLES = 0x10
 RF_READ_ADC = 0x11
+RF_FLUSH_ADC = 0x12
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -583,7 +584,18 @@ class RFSoC_Board:
         
         #return the rebuilt samples
         return self.rebuild_adc_stream(adc_bytestream)
-         
+     
+    
+    def flush_adc_buffer(self):
+        #send the set adc cycles command
+        ack_val = self.write_bytes([RF_FLUSH_ADC])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending flush adc buffer command, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        
+        return 0
     
     def get_locking_bytes(self):
         

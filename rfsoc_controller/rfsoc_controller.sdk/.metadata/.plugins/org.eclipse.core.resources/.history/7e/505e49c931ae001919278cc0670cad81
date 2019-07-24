@@ -86,7 +86,7 @@ void handle_cmd()
 	case RF_FLUSH_ADC:
 		rf_flush_adc_buffer();
 		uart_send_ack();
-		break;
+
 
 		//Test command cases
 	case PULSE_TEST:

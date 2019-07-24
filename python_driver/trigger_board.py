@@ -23,6 +23,11 @@ def save_waveform(data):
 #load the board state
 board = ib.load_board()
 
+#flush the adc buffer
+if(board.flush_adc_buffer() != 0):
+    print("Error while trying to flush adc buffer, is the connection up?")
+    sys.exit()
+
 if(board == None):
     print("Error, unable to load board state from disk.")
     sys.exit()

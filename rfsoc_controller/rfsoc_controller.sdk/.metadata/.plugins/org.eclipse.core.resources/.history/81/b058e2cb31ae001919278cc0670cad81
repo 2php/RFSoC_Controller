@@ -31,7 +31,6 @@
 #define RF_SET_LOCKING_SELECT 0x09
 #define RF_SET_ADC_CYCLES 0x10
 #define RF_READ_ADC 0x11
-#define RF_FLUSH_ADC 0x12
 
 
 //Python commands
