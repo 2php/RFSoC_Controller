@@ -45,3 +45,9 @@ if board.set_adc_cycles(adc_cycles) != 0:
 
 print("ADC capture time set to " + str(adc_cycles*4) + " ns")
 print("Board is armed, trigger using trigger_board.py")
+
+
+board.adc_capture_time = adc_cycles * 4
+
+if(ib.save_board(board)):
+    print("Error while saving board to disk")

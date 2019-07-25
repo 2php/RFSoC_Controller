@@ -19,7 +19,7 @@ DAC_MAX_VALUE = 0x7FFF
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
 DAC_WORD_FREQ = 250250820
 NANOSECONDS_PER_DAC_WORD = 4
-ADC_TIMEOUT = 120
+ADC_TIMEOUT = 1
 #Commands
 PING_BOARD = 0x00
 RF_LOAD_WAVEFORM = 0x01
@@ -264,6 +264,7 @@ class RFSoC_Board:
     port = None
     channels = []
     locking_waveform = None
+    adc_capture_time = 0 #in nanoseconds
     
     def __init__(self, portname):
         self.channels = []
@@ -560,9 +561,9 @@ class RFSoC_Board:
         #ack_val = self.write_bytes([RF_READ_ADC])
         self.port.open()
         self.port.write([RF_READ_ADC])
-        ack_val = (self.port.read(1))[0]
+        ack_val = self.port.read(1)
         #if we get a bad acknowledgement back
-        if(ack_val != ACK_RESPONSE):
+        if(len(ack_val) != 1 or ack_val[0] != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
            
         #read the length of the bytestream
@@ -575,7 +576,16 @@ class RFSoC_Board:
         leng = (len_bytes[0] << 24) | (len_bytes[1] << 16) | (len_bytes[2] << 8) | len_bytes[3]
         
         #get the bytestream
-        adc_bytestream = self.receive_bytes(leng)
+        #adc_bytestream = self.receive_bytes(leng)
+        adc_bytestream = []
+        
+        for i in range(0, leng):
+            bs = self.receive_bytes(1)
+            if(len(bs) != 1):
+                print("Error while receiving adc bytestream, timeout occured")
+                return None
+            adc_bytestream.append(bs[0])
+        
         self.port.close()
         self.port.timeout = 1
         

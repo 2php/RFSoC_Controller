@@ -11,6 +11,11 @@ from matplotlib import pyplot as plt
 #print ("Switched to:",matplotlib.get_backend())
 
 def plot_waveform(data):
+    
+    if(data == None):
+        print("Error, unable to plot waveform, adc bytestream was empty.")
+        return
+    
     fig, ax = plt.subplots()
     
     #rebuild the time array

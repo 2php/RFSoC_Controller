@@ -16,7 +16,7 @@ import time
 #argument 2 is plot waveform?
 
 def save_waveform(data):
-    timestr = time.strftime("%Y%m%d-%H%M%S")
+    timestr = time.strftime("%Y-%m-%d--%H-%M-%S")
     numpy.savetxt(timestr + "_adc_data", data, delimiter=",")
     return
 
@@ -38,6 +38,10 @@ else:
     print("Board triggered!")
     
     if(len(sys.argv) > 1):
+        
+        if(board.adc_capture_time == 0):
+            print("Cannot save or display waveform, capture time was set to 0 ns")
+            sys.exit()
         
         #If we need to save the waveform as a csv or plot it
         if(int(sys.argv[1]) == 1 or int(sys.argv[2]) == 1):

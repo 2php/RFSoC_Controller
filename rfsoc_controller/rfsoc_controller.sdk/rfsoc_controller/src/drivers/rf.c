@@ -22,6 +22,8 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 u32 last_adc_cycles;
 
 
+
+
 /////////////////////////////////////////////////////////////////////////
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
@@ -530,6 +532,13 @@ void write_sample_stream(u16* samples, u16 length, u8 channel)
 
 void rf_init()
 {
+
+	waveform_buffer = malloc(WAVEFORM_BUFFER_SIZE);
+
+	if(waveform_buffer == NULL)
+	{
+		debug_print("Error, unable to allocate waveform buffer.");
+	}
 
 	last_adc_cycles = 0;
 

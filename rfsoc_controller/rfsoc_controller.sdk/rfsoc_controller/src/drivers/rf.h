@@ -29,6 +29,9 @@ XRFdc RFdcInst;      /* RFdc driver instance */
 #define RFDC_DEV_NAME    "a0000000.usp_rf_data_converter"
 #endif
 
+u8* waveform_buffer;
+
+
 void rf_wave_test();
 void write_sample_stream(u16* samples, u16 length, u8 channel);
 int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
@@ -50,7 +53,7 @@ u32 rf_read_stream(u8 stream_num);
 #define ON 0x01
 #define OFF 0x00
 #define ADC_BUFFER_DEPTH 65536
-
+#define WAVEFORM_BUFFER_SIZE (4096 * 32)
 //Core functions
 void rf_load_bitstream(u8* stream, u32 length, u8 channel);
 void rf_set_repeat_cycles(u8 channel, u32 cycles);

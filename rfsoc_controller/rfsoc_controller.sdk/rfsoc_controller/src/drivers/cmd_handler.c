@@ -225,15 +225,15 @@ void cmd_load_waveform()
 
 
 	//Get the bitstream
-	u8* bitstream = malloc(final_size);
-	uart_recieve(bitstream, final_size);
+	//u8* bitstream = malloc(final_size + 100);
+	uart_recieve(waveform_buffer, final_size);
 
 
 	//write the bitstream to the selected channel
-	rf_load_bitstream(bitstream, final_size, channel);
+	rf_load_bitstream(waveform_buffer, final_size, channel);
 	//Send an ack back to Python
 
-	free(bitstream);
+	//free(bitstream);
 	uart_send_ack();
 
 }
