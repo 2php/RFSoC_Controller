@@ -1,0 +1,619 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 26 12:20:26 2019
+# Process ID: 7676
+# Current directory: C:/james/old_testing/repo/rfsoc_controller
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11040 C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.xpr
+# Log file: C:/james/old_testing/repo/rfsoc_controller/vivado.log
+# Journal file: C:/james/old_testing/repo/rfsoc_controller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.xpr
+WARNING: [Board 49-91] Board repository path 'C:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+INFO: [Project 1-313] Project file moved from 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Group'.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_0_0/top_level_rfsoc_data_pipeline_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_1_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_1_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_1_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_1_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_1_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_2_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_2_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_2_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_2_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_2_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_2_0/top_level_rfsoc_data_pipeline_2_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_3_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_3_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_3_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_3_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_3_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_3_0/top_level_rfsoc_data_pipeline_3_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_4_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_4_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_4_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_4_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_4_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_4_0/top_level_rfsoc_data_pipeline_4_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_5_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_5_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_5_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_5_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_5_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_5_0/top_level_rfsoc_data_pipeline_5_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_6_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_6_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_6_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_6_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_6_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_6_0/top_level_rfsoc_data_pipeline_6_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_7_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_7_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_7_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_7_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_7_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_7_0/top_level_rfsoc_data_pipeline_7_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_8_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_8_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_8_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_8_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_8_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_9_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_9_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_9_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_9_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_9_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_9_0/top_level_rfsoc_data_pipeline_9_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_14_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_14_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_14_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_14_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_14_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/top_level_rfsoc_data_pipeline_14_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_15_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_15_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_15_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_15_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_15_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/top_level_rfsoc_data_pipeline_15_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_adc_data_captu_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_adc_data_captu_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_adc_data_captu_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_adc_data_captu_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_adc_data_captu_0_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_10_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0_1/top_level_rfsoc_data_pipeline_10_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_10_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0_1/top_level_rfsoc_data_pipeline_10_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_10_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0_1/top_level_rfsoc_data_pipeline_10_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_10_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0_1/top_level_rfsoc_data_pipeline_10_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_10_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0_1/top_level_rfsoc_data_pipeline_10_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_11_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0_1/top_level_rfsoc_data_pipeline_11_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_11_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0_1/top_level_rfsoc_data_pipeline_11_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_11_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0_1/top_level_rfsoc_data_pipeline_11_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_11_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0_1/top_level_rfsoc_data_pipeline_11_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_11_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0_1/top_level_rfsoc_data_pipeline_11_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_12_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0_1/top_level_rfsoc_data_pipeline_12_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_12_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0_1/top_level_rfsoc_data_pipeline_12_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_12_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0_1/top_level_rfsoc_data_pipeline_12_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_12_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0_1/top_level_rfsoc_data_pipeline_12_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_12_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0_1/top_level_rfsoc_data_pipeline_12_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_13_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0_1/top_level_rfsoc_data_pipeline_13_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_13_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0_1/top_level_rfsoc_data_pipeline_13_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_13_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0_1/top_level_rfsoc_data_pipeline_13_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_13_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0_1/top_level_rfsoc_data_pipeline_13_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_level_rfsoc_data_pipeline_13_0' generated file not found 'c:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0_1/top_level_rfsoc_data_pipeline_13_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1113.156 ; gain = 498.199
+reset_run top_level_rfsoc_data_pipeline_10_0_synth_1
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+[Fri Jul 26 12:22:12 2019] Launched top_level_rfsoc_data_pipeline_10_0_synth_1, top_level_rfsoc_data_pipeline_4_0_synth_1, top_level_rfsoc_data_pipeline_14_0_synth_1, top_level_rfsoc_data_pipeline_15_0_synth_1, top_level_rfsoc_data_pipeline_0_0_synth_1, top_level_rfsoc_data_pipeline_8_0_synth_1, top_level_rfsoc_data_pipeline_3_0_synth_1, top_level_rfsoc_data_pipeline_7_0_synth_1, top_level_rfsoc_data_pipeline_9_0_synth_1, top_level_rfsoc_data_pipeline_2_0_synth_1, top_level_rfsoc_data_pipeline_6_0_synth_1, top_level_rfsoc_data_pipeline_5_0_synth_1, top_level_trigger_controller_0_0_synth_1, top_level_rfsoc_adc_data_captu_0_0_synth_1, top_level_rfsoc_data_pipeline_1_0_synth_1, top_level_rfsoc_data_pipeline_12_0_synth_1, top_level_rfsoc_data_pipeline_13_0_synth_1, top_level_rfsoc_data_pipeline_11_0_synth_1, synth_lo_effort...
+Run output will be captured here:
+top_level_rfsoc_data_pipeline_10_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_10_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_4_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_4_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_14_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_14_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_15_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_15_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_0_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_0_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_8_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_8_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_3_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_3_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_7_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_7_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_9_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_9_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_2_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_2_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_6_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_6_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_5_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_5_0_synth_1/runme.log
+top_level_trigger_controller_0_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_trigger_controller_0_0_synth_1/runme.log
+top_level_rfsoc_adc_data_captu_0_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_1_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_1_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_12_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_12_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_13_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_13_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_11_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_11_0_synth_1/runme.log
+synth_lo_effort: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Fri Jul 26 12:22:16 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 1154.258 ; gain = 36.203
+update_compile_order -fileset sources_1
+reset_run synth_lo_effort
+reset_run top_level_rfsoc_data_pipeline_10_0_synth_1
+reset_run top_level_rfsoc_data_pipeline_14_0_synth_1
+reset_run top_level_rfsoc_data_pipeline_15_0_synth_1
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_level_rfsoc_data_pipeline_10_0, cache-ID = c23aebe4e7f4c05d; cache size = 588.035 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_level_rfsoc_data_pipeline_14_0, cache-ID = c23aebe4e7f4c05d; cache size = 588.035 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_level_rfsoc_data_pipeline_15_0, cache-ID = c23aebe4e7f4c05d; cache size = 588.035 MB.
+[Fri Jul 26 12:25:37 2019] Launched synth_lo_effort...
+Run output will be captured here: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Fri Jul 26 12:25:37 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1320.055 ; gain = 61.363
+file copy -force C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+launch_sdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file mkdir C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk
+file copy -force C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+launch_sdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd}
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:usp_rf_data_converter:2.1 - usp_rf_data_converter_0
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'adc0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac1_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac2_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac3_clk' frequency is set to 250000000
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+Adding component instance block -- xilinx.com:module_ref:channel_select:1.0 - channel_select_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_4
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_0
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_10
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_11
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_12
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_13
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_1
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_2
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_3
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_4
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_5
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_6
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_7
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_8
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_9
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_14
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_15
+Adding component instance block -- xilinx.com:user:trigger_controller:1.0 - trigger_controller_0
+Adding component instance block -- xilinx.com:user:rfsoc_adc_data_capture:1.0 - rfsoc_adc_data_captu_0
+Successfully read diagram <top_level> from BD file <C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1476.785 ; gain = 92.340
+startgroup
+set_property -dict [list CONFIG.C_BAUDRATE {230400}] [get_bd_cells axi_uartlite_0]
+endgroup
+set_property range 512K [get_bd_addr_segs {microblaze_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property range 512K [get_bd_addr_segs {microblaze_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+save_bd_design
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+Wrote  : <C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /channel_select_0/mb_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_adc0 
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/sim/top_level.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block usp_rf_data_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block channel_select_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block trigger_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_adc_data_captu_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_13 .
+Exporting to file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Block Design Tcl file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.hwdef
+[Fri Jul 26 12:58:45 2019] Launched top_level_lmb_bram_0_synth_1, top_level_ilmb_bram_if_cntlr_0_synth_1, top_level_dlmb_bram_if_cntlr_0_synth_1, top_level_axi_uartlite_0_0_synth_1, synth_lo_effort...
+Run output will be captured here:
+top_level_lmb_bram_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_lmb_bram_0_synth_1/runme.log
+top_level_ilmb_bram_if_cntlr_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_ilmb_bram_if_cntlr_0_synth_1/runme.log
+top_level_dlmb_bram_if_cntlr_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_dlmb_bram_if_cntlr_0_synth_1/runme.log
+top_level_axi_uartlite_0_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_axi_uartlite_0_0_synth_1/runme.log
+synth_lo_effort: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Fri Jul 26 12:58:45 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1717.945 ; gain = 240.434
+open_bd_design {C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd}
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_2
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_3
+Adding component instance block -- xilinx.com:module_ref:gpio_buffer:1.0 - gpio_buffer_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_4
+Adding component instance block -- xilinx.com:module_ref:adc_controller:1.0 - adc_controller_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_5
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_6
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_7
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_8
+Successfully read diagram <rfsoc_adc_data_capture> from BD file <C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/repo/ip_repo'.
+Upgrading 'C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1751.070 ; gain = 2.059
+ipx::package_project -root_dir C:/james/old_testing/repo/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_0 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_1 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_2 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_3 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/s_axis is not associated to any clock pin. It may not work correctly.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /adc_controller_0/s_axis(100000000) and /s_axis(250000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_5/S_AXIS(250000000) and /adc_controller_0/m_axis_0(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_6/S_AXIS(250000000) and /adc_controller_0/m_axis_1(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_7/S_AXIS(250000000) and /adc_controller_0/m_axis_2(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_8/S_AXIS(250000000) and /adc_controller_0/m_axis_3(100000000)
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd 
+ERROR: [Ipptcl 7-1461] The block diagram rfsoc_adc_data_capture must be generated to package
+ERROR: [Common 17-39] 'ipx::package_project' failed due to earlier errors.
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/s_axis]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_0]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_1]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_2]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_3]
+save_bd_design
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+ipx::package_project -root_dir C:/james/old_testing/repo/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/sim/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hdl/rfsoc_adc_data_capture_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_8 .
+Exporting to file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture.hwh
+Generated Block Design Tcl file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_2 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_3 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/repo/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/old_testing/repo/adc_ip'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:rfsoc_adc_data_capture:1.0 [get_ips  top_level_rfsoc_adc_data_captu_0_0] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_adc_data_captu_0_0 to use current project options
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/james/old_testing/repo/rfsoc_controller/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips top_level_rfsoc_adc_data_captu_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /channel_select_0/mb_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_adc0 
+Wrote  : <C:\james\old_testing\repo\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/sim/top_level.v
+VHDL Output written to : C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block usp_rf_data_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block channel_select_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block trigger_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_adc_data_captu_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_13 .
+Exporting to file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Block Design Tcl file C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.hwdef
+[Fri Jul 26 13:04:10 2019] Launched top_level_rfsoc_adc_data_captu_0_0_synth_1, synth_lo_effort...
+Run output will be captured here:
+top_level_rfsoc_adc_data_captu_0_0_synth_1: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1/runme.log
+synth_lo_effort: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Fri Jul 26 13:04:10 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 2483.008 ; gain = 0.000
+file copy -force C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+startgroup
+endgroup
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 13:38:20 2019...

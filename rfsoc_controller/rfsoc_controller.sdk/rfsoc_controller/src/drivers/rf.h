@@ -41,6 +41,7 @@ void rf_sine_test();
 void rf_ext_trigger_test();
 void rf_init();
 void rf_repeat_test();
+int rf_self_test();
 u32 rf_read_stream(u8 stream_num);
 
 

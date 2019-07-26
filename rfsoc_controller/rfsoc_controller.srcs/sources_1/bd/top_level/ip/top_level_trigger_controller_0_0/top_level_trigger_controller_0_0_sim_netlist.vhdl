@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jul 16 22:00:31 2019
+-- Date        : Fri Jul 26 12:19:34 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
+--               top_level_trigger_controller_0_0_ top_level_trigger_controller_0_0_sim_netlist.vhdl
 -- Design      : top_level_trigger_controller_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -53,8 +53,6 @@ entity top_level_trigger_controller_0_0_trigger_module is
     pipeline_active_in_5 : in STD_LOGIC;
     rf_reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_module : entity is "trigger_module";
 end top_level_trigger_controller_0_0_trigger_module;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_module is
@@ -782,8 +780,6 @@ entity top_level_trigger_controller_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_level_trigger_controller_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -2155,8 +2151,6 @@ entity top_level_trigger_controller_0_0_xpm_cdc_sync_rst is
   attribute INIT of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_level_trigger_controller_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -2402,8 +2396,6 @@ entity top_level_trigger_controller_0_0_xpm_counter_updn is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end top_level_trigger_controller_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_counter_updn is
@@ -3212,8 +3204,6 @@ entity top_level_trigger_controller_0_0_xpm_fifo_reg_bit is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end top_level_trigger_controller_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_reg_bit is
@@ -3261,8 +3251,6 @@ entity top_level_trigger_controller_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end top_level_trigger_controller_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_reg_vec is
@@ -3542,8 +3530,6 @@ entity top_level_trigger_controller_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of top_level_trigger_controller_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of top_level_trigger_controller_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of top_level_trigger_controller_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -4423,8 +4409,6 @@ entity top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 is
     pipeline_active_in_5 : in STD_LOGIC;
     rf_reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 : entity is "trigger_controller_trigger_module_0_0";
 end top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0 is
@@ -4488,8 +4472,6 @@ entity top_level_trigger_controller_0_0_xpm_fifo_rst is
     ram_empty_i : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end top_level_trigger_controller_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_xpm_fifo_rst is
@@ -5032,8 +5014,6 @@ entity top_level_trigger_controller_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of top_level_trigger_controller_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of top_level_trigger_controller_0_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of top_level_trigger_controller_0_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -5735,8 +5715,6 @@ entity top_level_trigger_controller_0_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of top_level_trigger_controller_0_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -6039,8 +6017,6 @@ entity top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top is
     s_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axis_tready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top : entity is "axis_data_fifo_v2_0_1_top";
 end top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top is
@@ -6192,7 +6168,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 is
+entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -6205,16 +6181,14 @@ entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 is
     m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "trigger_controller_axis_data_fifo_0_0";
+  attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0;
+  attribute X_CORE_INFO of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2;
 
-architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 is
+architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -6292,8 +6266,6 @@ entity top_level_trigger_controller_0_0_trigger_controller is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of top_level_trigger_controller_0_0_trigger_controller : entity is "trigger_controller.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_trigger_controller_0_0_trigger_controller : entity is "trigger_controller";
 end top_level_trigger_controller_0_0_trigger_controller;
 
 architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
@@ -6301,7 +6273,7 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
   signal axis_data_fifo_0_M_AXIS_TVALID : STD_LOGIC;
   signal gpio_buffer_0_m_axis_TREADY : STD_LOGIC;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_0 : label is "yes";
   attribute X_CORE_INFO : string;
@@ -6320,7 +6292,7 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
   attribute X_INTERFACE_INFO of gpio_in : signal is "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA";
   attribute X_INTERFACE_PARAMETER of gpio_in : signal is "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef";
 begin
-axis_data_fifo_0: entity work.top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0
+axis_data_fifo_0: entity work.top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2
      port map (
       m_axis_aclk => rf_clk,
       m_axis_tdata(15 downto 0) => axis_data_fifo_0_M_AXIS_TDATA(15 downto 0),

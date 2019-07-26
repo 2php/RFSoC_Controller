@@ -347,7 +347,7 @@
       },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "trigger_controller_axis_data_fifo_0_0",
+        "xci_name": "trigger_controller_axis_data_fifo_0_2",
         "parameters": {
           "FIFO_DEPTH": {
             "value": "16"
@@ -499,16 +499,16 @@
       }
     },
     "interface_nets": {
-      "gpio_buffer_0_m_axis": {
-        "interface_ports": [
-          "axis_data_fifo_0/S_AXIS",
-          "gpio_buffer_0/m_axis"
-        ]
-      },
       "axis_data_fifo_0_M_AXIS": {
         "interface_ports": [
           "axis_data_fifo_0/M_AXIS",
           "gpio_buffer_0/s_axis"
+        ]
+      },
+      "gpio_buffer_0_m_axis": {
+        "interface_ports": [
+          "axis_data_fifo_0/S_AXIS",
+          "gpio_buffer_0/m_axis"
         ]
       }
     },

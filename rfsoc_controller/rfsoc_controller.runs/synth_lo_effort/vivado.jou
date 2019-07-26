@@ -2,7 +2,7 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Jul 22 18:22:57 2019
+# Start of session at: Fri Jul 26 13:46:48 2019
 # Process ID: 1856
 # Current directory: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort
 # Command line: vivado.exe -log top_level_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl

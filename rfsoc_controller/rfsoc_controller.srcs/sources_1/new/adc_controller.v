@@ -64,6 +64,8 @@ parameter adc_capture_count_sclk = 12
     
     );
     
+    assign s_axis_tready = 1'b1;
+    
     //assign m_axis_tdtata_7 = s_axis_tdata[255:224];
     //assign m_axis_tdtata_6 = s_axis_tdata[223:192];
     //assign m_axis_tdtata_5 = s_axis_tdata[191:160];

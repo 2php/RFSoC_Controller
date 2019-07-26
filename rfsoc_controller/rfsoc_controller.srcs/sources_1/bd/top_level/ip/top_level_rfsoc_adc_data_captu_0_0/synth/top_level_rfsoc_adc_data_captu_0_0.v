@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:rfsoc_adc_data_capture:1.0
-// IP Revision: 3
+// IP Revision: 2
 
 (* X_CORE_INFO = "rfsoc_adc_data_capture,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "top_level_rfsoc_adc_data_captu_0_0,rfsoc_adc_data_capture,{}" *)
-(* CORE_GENERATION_INFO = "top_level_rfsoc_adc_data_captu_0_0,rfsoc_adc_data_capture,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=rfsoc_adc_data_capture,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "top_level_rfsoc_adc_data_captu_0_0,rfsoc_adc_data_capture,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=rfsoc_adc_data_capture,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "IPI" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_rfsoc_adc_data_captu_0_0 (

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Fri Jul 26 13:33:27 2019
+# Process ID: 10852
+# Current directory: C:/james/old_testing/repo/rfsoc_controller
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2019.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/top_level_wrapper.mmi -data C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc top_level_i/microblaze_0 -bit C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/top_level_wrapper.bit -out C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/james/old_testing/repo/rfsoc_controller/updatemem.log
+# Journal file: C:/james/old_testing/repo/rfsoc_controller\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2019.1/scripts/updatemem/main.tcl -notrace
+ Loading bitfile C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/top_level_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 315.367 ; gain = 223.891
+INFO: [Common 17-206] Exiting updatemem at Fri Jul 26 13:34:06 2019...

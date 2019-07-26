@@ -1,16 +1,141 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Jul 16 22:00:31 2019
+// Date        : Fri Jul 26 12:19:34 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_trigger_controller_0_0/top_level_trigger_controller_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
+//               top_level_trigger_controller_0_0_ top_level_trigger_controller_0_0_sim_netlist.v
 // Design      : top_level_trigger_controller_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
+
+module top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top
+   (s_axis_tready,
+    m_axis_tvalid,
+    m_axis_tdata,
+    s_axis_aresetn,
+    s_axis_aclk,
+    m_axis_aclk,
+    s_axis_tvalid,
+    s_axis_tdata,
+    m_axis_tready);
+  output s_axis_tready;
+  output m_axis_tvalid;
+  output [15:0]m_axis_tdata;
+  input s_axis_aresetn;
+  input s_axis_aclk;
+  input m_axis_aclk;
+  input s_axis_tvalid;
+  input [15:0]s_axis_tdata;
+  input m_axis_tready;
+
+  wire \gen_fifo.xpm_fifo_axis_inst_n_26 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_27 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_28 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_29 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_30 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_31 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_32 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_33 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_34 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_35 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_36 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_37 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_38 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_39 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_40 ;
+  wire \gen_fifo.xpm_fifo_axis_inst_n_41 ;
+  wire m_axis_aclk;
+  wire [15:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire s_axis_aclk;
+  wire s_axis_aresetn;
+  wire [15:0]s_axis_tdata;
+  wire s_axis_tready;
+  wire s_axis_tvalid;
+  wire \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED ;
+  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED ;
+  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED ;
+  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED ;
+
+  (* AXIS_DATA_WIDTH = "24" *) 
+  (* AXIS_FINAL_DATA_WIDTH = "24" *) 
+  (* CDC_SYNC_STAGES = "3" *) 
+  (* CLOCKING_MODE = "independent_clock" *) 
+  (* ECC_MODE = "no_ecc" *) 
+  (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
+  (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) 
+  (* EN_ALMOST_EMPTY_INT = "1'b0" *) 
+  (* EN_ALMOST_FULL_INT = "1'b0" *) 
+  (* EN_DATA_VALID_INT = "1'b1" *) 
+  (* FIFO_DEPTH = "16" *) 
+  (* FIFO_MEMORY_TYPE = "auto" *) 
+  (* LOG_DEPTH_AXIS = "4" *) 
+  (* PACKET_FIFO = "false" *) 
+  (* PKT_SIZE_LT8 = "1'b0" *) 
+  (* PROG_EMPTY_THRESH = "5" *) 
+  (* PROG_FULL_THRESH = "11" *) 
+  (* P_COMMON_CLOCK = "0" *) 
+  (* P_ECC_MODE = "0" *) 
+  (* P_FIFO_MEMORY_TYPE = "0" *) 
+  (* P_PKT_MODE = "0" *) 
+  (* RD_DATA_COUNT_WIDTH = "5" *) 
+  (* RELATED_CLOCKS = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* TDATA_OFFSET = "16" *) 
+  (* TDATA_WIDTH = "16" *) 
+  (* TDEST_OFFSET = "22" *) 
+  (* TDEST_WIDTH = "1" *) 
+  (* TID_OFFSET = "21" *) 
+  (* TID_WIDTH = "1" *) 
+  (* TKEEP_OFFSET = "20" *) 
+  (* TSTRB_OFFSET = "18" *) 
+  (* TUSER_MAX_WIDTH = "4073" *) 
+  (* TUSER_OFFSET = "23" *) 
+  (* TUSER_WIDTH = "1" *) 
+  (* USE_ADV_FEATURES = "825241648" *) 
+  (* USE_ADV_FEATURES_INT = "825241648" *) 
+  (* WR_DATA_COUNT_WIDTH = "5" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  top_level_trigger_controller_0_0_xpm_fifo_axis \gen_fifo.xpm_fifo_axis_inst 
+       (.almost_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_39 ),
+        .almost_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_32 ),
+        .dbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_41 ),
+        .injectdbiterr_axis(1'b0),
+        .injectsbiterr_axis(1'b0),
+        .m_aclk(m_axis_aclk),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tdest(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED [0]),
+        .m_axis_tid(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED [0]),
+        .m_axis_tkeep(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED [1:0]),
+        .m_axis_tlast(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tstrb(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED [1:0]),
+        .m_axis_tuser(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED [0]),
+        .m_axis_tvalid(m_axis_tvalid),
+        .prog_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_33 ),
+        .prog_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_26 ),
+        .rd_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_34 ,\gen_fifo.xpm_fifo_axis_inst_n_35 ,\gen_fifo.xpm_fifo_axis_inst_n_36 ,\gen_fifo.xpm_fifo_axis_inst_n_37 ,\gen_fifo.xpm_fifo_axis_inst_n_38 }),
+        .s_aclk(s_axis_aclk),
+        .s_aresetn(s_axis_aresetn),
+        .s_axis_tdata(s_axis_tdata),
+        .s_axis_tdest(1'b0),
+        .s_axis_tid(1'b0),
+        .s_axis_tkeep({1'b0,1'b0}),
+        .s_axis_tlast(1'b0),
+        .s_axis_tready(s_axis_tready),
+        .s_axis_tstrb({1'b0,1'b0}),
+        .s_axis_tuser(1'b0),
+        .s_axis_tvalid(s_axis_tvalid),
+        .sbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_40 ),
+        .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_27 ,\gen_fifo.xpm_fifo_axis_inst_n_28 ,\gen_fifo.xpm_fifo_axis_inst_n_29 ,\gen_fifo.xpm_fifo_axis_inst_n_30 ,\gen_fifo.xpm_fifo_axis_inst_n_31 }));
+endmodule
 
 (* CHECK_LICENSE_TYPE = "top_level_trigger_controller_0_0,trigger_controller,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
 (* X_CORE_INFO = "trigger_controller,Vivado 2019.1" *) 
@@ -174,133 +299,7 @@ module top_level_trigger_controller_0_0
         .trigger_c9(trigger_c9));
 endmodule
 
-(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
-module top_level_trigger_controller_0_0_axis_data_fifo_v2_0_1_top
-   (s_axis_tready,
-    m_axis_tvalid,
-    m_axis_tdata,
-    s_axis_aresetn,
-    s_axis_aclk,
-    m_axis_aclk,
-    s_axis_tvalid,
-    s_axis_tdata,
-    m_axis_tready);
-  output s_axis_tready;
-  output m_axis_tvalid;
-  output [15:0]m_axis_tdata;
-  input s_axis_aresetn;
-  input s_axis_aclk;
-  input m_axis_aclk;
-  input s_axis_tvalid;
-  input [15:0]s_axis_tdata;
-  input m_axis_tready;
-
-  wire \gen_fifo.xpm_fifo_axis_inst_n_26 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_27 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_28 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_29 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_30 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_31 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_32 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_33 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_34 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_35 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_36 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_37 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_38 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_39 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_40 ;
-  wire \gen_fifo.xpm_fifo_axis_inst_n_41 ;
-  wire m_axis_aclk;
-  wire [15:0]m_axis_tdata;
-  wire m_axis_tready;
-  wire m_axis_tvalid;
-  wire s_axis_aclk;
-  wire s_axis_aresetn;
-  wire [15:0]s_axis_tdata;
-  wire s_axis_tready;
-  wire s_axis_tvalid;
-  wire \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED ;
-  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED ;
-  wire [1:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED ;
-  wire [0:0]\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED ;
-
-  (* AXIS_DATA_WIDTH = "24" *) 
-  (* AXIS_FINAL_DATA_WIDTH = "24" *) 
-  (* CDC_SYNC_STAGES = "3" *) 
-  (* CLOCKING_MODE = "independent_clock" *) 
-  (* ECC_MODE = "no_ecc" *) 
-  (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
-  (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) 
-  (* EN_ALMOST_EMPTY_INT = "1'b0" *) 
-  (* EN_ALMOST_FULL_INT = "1'b0" *) 
-  (* EN_DATA_VALID_INT = "1'b1" *) 
-  (* FIFO_DEPTH = "16" *) 
-  (* FIFO_MEMORY_TYPE = "auto" *) 
-  (* LOG_DEPTH_AXIS = "4" *) 
-  (* PACKET_FIFO = "false" *) 
-  (* PKT_SIZE_LT8 = "1'b0" *) 
-  (* PROG_EMPTY_THRESH = "5" *) 
-  (* PROG_FULL_THRESH = "11" *) 
-  (* P_COMMON_CLOCK = "0" *) 
-  (* P_ECC_MODE = "0" *) 
-  (* P_FIFO_MEMORY_TYPE = "0" *) 
-  (* P_PKT_MODE = "0" *) 
-  (* RD_DATA_COUNT_WIDTH = "5" *) 
-  (* RELATED_CLOCKS = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* TDATA_OFFSET = "16" *) 
-  (* TDATA_WIDTH = "16" *) 
-  (* TDEST_OFFSET = "22" *) 
-  (* TDEST_WIDTH = "1" *) 
-  (* TID_OFFSET = "21" *) 
-  (* TID_WIDTH = "1" *) 
-  (* TKEEP_OFFSET = "20" *) 
-  (* TSTRB_OFFSET = "18" *) 
-  (* TUSER_MAX_WIDTH = "4073" *) 
-  (* TUSER_OFFSET = "23" *) 
-  (* TUSER_WIDTH = "1" *) 
-  (* USE_ADV_FEATURES = "825241648" *) 
-  (* USE_ADV_FEATURES_INT = "825241648" *) 
-  (* WR_DATA_COUNT_WIDTH = "5" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  top_level_trigger_controller_0_0_xpm_fifo_axis \gen_fifo.xpm_fifo_axis_inst 
-       (.almost_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_39 ),
-        .almost_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_32 ),
-        .dbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_41 ),
-        .injectdbiterr_axis(1'b0),
-        .injectsbiterr_axis(1'b0),
-        .m_aclk(m_axis_aclk),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tdest(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED [0]),
-        .m_axis_tid(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED [0]),
-        .m_axis_tkeep(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED [1:0]),
-        .m_axis_tlast(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED ),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tstrb(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED [1:0]),
-        .m_axis_tuser(\NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED [0]),
-        .m_axis_tvalid(m_axis_tvalid),
-        .prog_empty_axis(\gen_fifo.xpm_fifo_axis_inst_n_33 ),
-        .prog_full_axis(\gen_fifo.xpm_fifo_axis_inst_n_26 ),
-        .rd_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_34 ,\gen_fifo.xpm_fifo_axis_inst_n_35 ,\gen_fifo.xpm_fifo_axis_inst_n_36 ,\gen_fifo.xpm_fifo_axis_inst_n_37 ,\gen_fifo.xpm_fifo_axis_inst_n_38 }),
-        .s_aclk(s_axis_aclk),
-        .s_aresetn(s_axis_aresetn),
-        .s_axis_tdata(s_axis_tdata),
-        .s_axis_tdest(1'b0),
-        .s_axis_tid(1'b0),
-        .s_axis_tkeep({1'b0,1'b0}),
-        .s_axis_tlast(1'b0),
-        .s_axis_tready(s_axis_tready),
-        .s_axis_tstrb({1'b0,1'b0}),
-        .s_axis_tuser(1'b0),
-        .s_axis_tvalid(s_axis_tvalid),
-        .sbiterr_axis(\gen_fifo.xpm_fifo_axis_inst_n_40 ),
-        .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_27 ,\gen_fifo.xpm_fifo_axis_inst_n_28 ,\gen_fifo.xpm_fifo_axis_inst_n_29 ,\gen_fifo.xpm_fifo_axis_inst_n_30 ,\gen_fifo.xpm_fifo_axis_inst_n_31 }));
-endmodule
-
-(* HW_HANDOFF = "trigger_controller.hwdef" *) (* ORIG_REF_NAME = "trigger_controller" *) 
+(* HW_HANDOFF = "trigger_controller.hwdef" *) 
 module top_level_trigger_controller_0_0_trigger_controller
    (ext_trigger_in,
     gpio_in,
@@ -421,10 +420,10 @@ module top_level_trigger_controller_0_0_trigger_controller
   wire trigger_c8;
   wire trigger_c9;
 
-  (* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}" *) 
+  (* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
-  top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0 axis_data_fifo_0
+  top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 axis_data_fifo_0
        (.m_axis_aclk(rf_clk),
         .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(1'b1),
@@ -474,9 +473,8 @@ module top_level_trigger_controller_0_0_trigger_controller
         .trigger_c9(trigger_c9));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_0,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "trigger_controller_axis_data_fifo_0_0" *) 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
-module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0
+(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2
    (s_axis_aresetn,
     s_axis_aclk,
     s_axis_tvalid,
@@ -518,7 +516,6 @@ module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_0
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "trigger_controller_trigger_module_0_0" *) 
 module top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0
    (trigger_c1,
     trigger_c2,
@@ -669,7 +666,6 @@ module top_level_trigger_controller_0_0_trigger_controller_trigger_module_0_0
         .trigger_c9(trigger_c9));
 endmodule
 
-(* ORIG_REF_NAME = "trigger_module" *) 
 module top_level_trigger_controller_0_0_trigger_module
    (trigger_c1,
     trigger_c2,
@@ -1269,10 +1265,9 @@ module top_level_trigger_controller_0_0_trigger_module
         .Q(trigger_c9));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
-(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
+(* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
 module top_level_trigger_controller_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -2266,8 +2261,8 @@ module top_level_trigger_controller_0_0_xpm_cdc_gray__parameterized1
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "3" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module top_level_trigger_controller_0_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -2418,7 +2413,6 @@ module top_level_trigger_controller_0_0_xpm_cdc_sync_rst__4
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_trigger_controller_0_0_xpm_counter_updn
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -3066,16 +3060,15 @@ endmodule
 (* CLOCKING_MODE = "independent_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
 (* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
-(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* P_COMMON_CLOCK = "0" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
-(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "16" *) (* TDATA_WIDTH = "16" *) 
-(* TDEST_OFFSET = "22" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "21" *) 
-(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "20" *) (* TSTRB_OFFSET = "18" *) 
-(* TUSER_MAX_WIDTH = "4073" *) (* TUSER_OFFSET = "23" *) (* TUSER_WIDTH = "1" *) 
-(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
-(* XPM_MODULE = "TRUE" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* PACKET_FIFO = "false" *) (* PKT_SIZE_LT8 = "1'b0" *) 
+(* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) (* P_COMMON_CLOCK = "0" *) 
+(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_PKT_MODE = "0" *) 
+(* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* TDATA_OFFSET = "16" *) (* TDATA_WIDTH = "16" *) (* TDEST_OFFSET = "22" *) 
+(* TDEST_WIDTH = "1" *) (* TID_OFFSET = "21" *) (* TID_WIDTH = "1" *) 
+(* TKEEP_OFFSET = "20" *) (* TSTRB_OFFSET = "18" *) (* TUSER_MAX_WIDTH = "4073" *) 
+(* TUSER_OFFSET = "23" *) (* TUSER_WIDTH = "1" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_axis
    (s_aresetn,
     s_aclk,
@@ -3319,18 +3312,18 @@ endmodule
 (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
 (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
 (* FIFO_SIZE = "384" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
-(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
-(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) 
-(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
-(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
-(* READ_DATA_WIDTH = "24" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
-(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
-(* WRITE_DATA_WIDTH = "24" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
-(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
-(* WR_WIDTH_LOG = "5" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
-(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "11" *) 
+(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) (* PF_THRESH_MAX = "11" *) 
+(* PF_THRESH_MIN = "8" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
+(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "24" *) 
+(* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "24" *) 
+(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
+(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "5" *) 
+(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
+(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -3805,7 +3798,6 @@ module top_level_trigger_controller_0_0_xpm_fifo_base
         .wrst_busy(wrst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -3841,7 +3833,6 @@ module top_level_trigger_controller_0_0_xpm_fifo_reg_bit
         .O(clr_full));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_reg_vec
    (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
     \syncstages_ff_reg[2] ,
@@ -4052,7 +4043,6 @@ module top_level_trigger_controller_0_0_xpm_fifo_reg_vec_0
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module top_level_trigger_controller_0_0_xpm_fifo_rst
    (SR,
     wrst_busy,
@@ -4435,24 +4425,23 @@ endmodule
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "384" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "24" *) (* P_MIN_WIDTH_DATA_A = "24" *) (* P_MIN_WIDTH_DATA_B = "24" *) 
-(* P_MIN_WIDTH_DATA_ECC = "24" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "24" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
-(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "24" *) (* P_WIDTH_COL_WRITE_B = "24" *) (* READ_DATA_WIDTH_A = "24" *) 
-(* READ_DATA_WIDTH_B = "24" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "24" *) (* WRITE_DATA_WIDTH_B = "24" *) (* WRITE_MODE_A = "2" *) 
-(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "24" *) 
-(* rstb_loop_iter = "24" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "24" *) 
+(* P_MIN_WIDTH_DATA_A = "24" *) (* P_MIN_WIDTH_DATA_B = "24" *) (* P_MIN_WIDTH_DATA_ECC = "24" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "24" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
+(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "24" *) 
+(* P_WIDTH_COL_WRITE_B = "24" *) (* READ_DATA_WIDTH_A = "24" *) (* READ_DATA_WIDTH_B = "24" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "24" *) 
+(* WRITE_DATA_WIDTH_B = "24" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
+(* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "24" *) (* rstb_loop_iter = "24" *) 
 module top_level_trigger_controller_0_0_xpm_memory_base
    (sleep,
     clka,

@@ -60,22 +60,14 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config  -id {[BD 41-1306]}  -suppress 
+set_msg_config  -id {[BD 41-1271]}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 3
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
-  set_param synth.incrementalSynthesisCache {C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-6288-DESKTOP-6ILET8A/incrSyn}
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -83,9 +75,9 @@ set rc [catch {
   set_property webtalk.parent_dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/wt [current_project]
   set_property parent.project_path C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.xpr [current_project]
   set_property ip_repo_paths {
-  c:/james/fpga_projects/adc_ip
-  c:/james/fpga_projects/trigger_controller_ip
-  c:/james/fpga_projects/ip_repo
+  C:/james/fpga_projects/adc_ip
+  C:/james/fpga_projects/trigger_controller_ip
+  C:/james/fpga_projects/ip_repo
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/ip [current_project]

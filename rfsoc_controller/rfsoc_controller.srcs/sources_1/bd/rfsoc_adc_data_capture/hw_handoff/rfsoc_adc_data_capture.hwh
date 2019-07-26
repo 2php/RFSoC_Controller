@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 23 12:05:27 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 13:03:07 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="rfsoc_adc_data_capture" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -11,11 +11,11 @@
         <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_4" PORT="m_axis_aclk"/>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="rf_clk"/>
         <CONNECTION INSTANCE="axis_data_fifo_8" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_7" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_6" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_5" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="rf_clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rf_reset" SIGIS="rst" SIGNAME="External_Ports_rf_reset">
@@ -24,11 +24,11 @@
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_2" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aresetn"/>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="rf_reset"/>
         <CONNECTION INSTANCE="axis_data_fifo_8" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_7" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_6" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_5" PORT="s_axis_aresetn"/>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="rf_reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="ext_trigger" SIGIS="undef" SIGNAME="External_Ports_ext_trigger">
@@ -53,6 +53,51 @@
     <PORT DIR="I" LEFT="15" NAME="gpio_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_in">
       <CONNECTIONS>
         <CONNECTION INSTANCE="gpio_buffer_0" PORT="gpio_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="M_AXIS_2_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="M_AXIS_2_tready" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="M_AXIS_2_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="127" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="M_AXIS_1_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="M_AXIS_1_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="M_AXIS_1_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tvalid"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="31" NAME="M_AXIS_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tdata">
@@ -83,51 +128,6 @@
     <PORT DIR="O" NAME="M_AXIS_3_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_3_m_axis_tvalid">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_data_fifo_3" PORT="m_axis_tvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="M_AXIS_2_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tdata">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tdata"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="M_AXIS_2_tready" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tready"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="M_AXIS_2_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_2_m_axis_tvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_2" PORT="m_axis_tvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="M_AXIS_1_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tdata">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tdata"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="M_AXIS_1_tready" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tready"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="M_AXIS_1_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_1_m_axis_tvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_data_fifo_1" PORT="m_axis_tvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="127" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tdata">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tdata"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="adc_controller_0_s_axis_tready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="adc_controller_0" PORT="s_axis_tready"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -496,7 +496,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_0_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_0_7"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -634,7 +634,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_1_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_1_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -772,7 +772,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_2_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_2_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -910,7 +910,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_3_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_3_3"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1048,7 +1048,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_4_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_4_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1186,7 +1186,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_5_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_5_7"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1319,7 +1319,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_5_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_6_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1452,7 +1452,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_5_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_7_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -1585,7 +1585,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_5_4"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_adc_data_capture_axis_data_fifo_8_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>

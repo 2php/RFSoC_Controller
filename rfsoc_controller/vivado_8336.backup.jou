@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 26 11:51:57 2019
+# Process ID: 8336
+# Current directory: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1232 C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.xpr
+# Log file: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/vivado.log
+# Journal file: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.xpr
+current_run [get_runs synth_lo_effort]
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_data_pipeline -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/ip_repo
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip -vendor xilinx.com -library user -taxonomy /UserIP -module trigger_controller -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/adc_ip
+open_bd_design {C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd}
+open_bd_design {C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_11_0 top_level_trigger_controller_0_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_1_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_adc_data_captu_0_0 top_level_rfsoc_data_pipeline_0_0}] -log ip_upgrade.log
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log

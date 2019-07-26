@@ -539,6 +539,10 @@ void rf_init()
 	{
 		debug_print("Error, unable to allocate waveform buffer.");
 	}
+	else
+	{
+		debug_print("Successfully allocated waveform buffer!");
+	}
 
 	last_adc_cycles = 0;
 
@@ -676,6 +680,7 @@ int rf_self_test()
 	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_ADC_TILE, Tile);
 	if (Status != XRFDC_SUCCESS) {
 		//return XRFDC_FAILURE;
+		debug_print("Failed to reset ADC tile");
 	}
 	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_DAC_TILE, Tile);
 	if (Status != XRFDC_SUCCESS) {

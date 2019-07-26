@@ -1,0 +1,483 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 26 11:51:57 2019
+# Process ID: 8336
+# Current directory: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1232 C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.xpr
+# Log file: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/vivado.log
+# Journal file: C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.xpr
+WARNING: [Board 49-91] Board repository path 'C:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'c:/Users/Marandi' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Group' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+INFO: [Project 1-313] Project file moved from 'C:/james/fpga_projects/rfsoc_controller' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store', nor could it be found using path 'C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi', nor could it be found using path 'C:/Users/Marandi'.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Group', nor could it be found using path 'C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Group'.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/james/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store', nor could it be found using path 'C:/Users/Marandi Group Vivado/AppData/Roaming/Xilinx/Vivado/Vivado/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_14_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_1.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_2.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_3.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_4.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_5.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6' generated file not found 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_15_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_6.v'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1154.965 ; gain = 536.270
+current_run [get_runs synth_lo_effort]
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_data_pipeline -import_files -force
+WARNING: [BD 41-1753] The name 'axis_data_fifo_clock_crossing' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_and_select_buff_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /axis_mux_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_data_pipeline_rf_clock 
+WARNING: [BD 41-927] Following properties on pin /axis_tready_slice_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_data_pipeline_rf_clock 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/gpio_and_select_buff_0/ext_trigger_in
+
+Wrote  : <C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_data_pipeline\rfsoc_data_pipeline.bd> 
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/synth/rfsoc_data_pipeline.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/sim/rfsoc_data_pipeline.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/hdl/rfsoc_data_pipeline_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_mux_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_tready_slice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_and_select_buff_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_dwidth_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_clock_crossing .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_waveform .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_gpio .
+Exporting to file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/hw_handoff/rfsoc_data_pipeline.hwh
+Generated Block Design Tcl file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/hw_handoff/rfsoc_data_pipeline_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/synth/rfsoc_data_pipeline.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_and_select_buff_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_and_select_buff_0
+WARNING: [IP_Flow 19-4963] rfsoc_data_pipeline_axis_data_fifo_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_data_pipeline.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1681.668 ; gain = 160.000
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/ip_repo'
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip -vendor xilinx.com -library user -taxonomy /UserIP -module trigger_controller -import_files -force
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /trigger_module_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=trigger_controller_rf_clk 
+Wrote  : <C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\trigger_controller\trigger_controller.bd> 
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/synth/trigger_controller.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/sim/trigger_controller.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/hdl/trigger_controller_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block trigger_module_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+Exporting to file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/hw_handoff/trigger_controller.hwh
+Generated Block Design Tcl file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/hw_handoff/trigger_controller_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/trigger_controller/synth/trigger_controller.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [IP_Flow 19-4963] trigger_controller_trigger_module_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK.RF_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK.MICROBLAZE_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/trigger_controller.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:trigger_controller:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip'
+ipx::package_project -root_dir C:/james/old_testing/RFSoC_Controller-master/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+Wrote  : <C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/sim/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hdl/rfsoc_adc_data_capture_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_8 .
+Exporting to file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture.hwh
+Generated Block Design Tcl file C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture_bd.tcl
+Generated Hardware Definition File C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_2 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_3 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1786.621 ; gain = 25.293
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/old_testing/RFSoC_Controller-master/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/old_testing/RFSoC_Controller-master/adc_ip'
+open_bd_design {C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd}
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_clock_crossing
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_waveform
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_gpio
+Adding component instance block -- xilinx.com:module_ref:axis_mux:1.0 - axis_mux_0
+Adding component instance block -- xilinx.com:module_ref:gpio_and_select_buffer:1.0 - gpio_and_select_buff_0
+Adding component instance block -- xilinx.com:module_ref:axis_tready_slice:1.0 - axis_tready_slice_0
+Successfully read diagram <rfsoc_data_pipeline> from BD file <C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1853.453 ; gain = 50.289
+open_bd_design {C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd}
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:usp_rf_data_converter:2.1 - usp_rf_data_converter_0
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'adc0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac1_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac2_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac3_clk' frequency is set to 250000000
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+Adding component instance block -- xilinx.com:module_ref:channel_select:1.0 - channel_select_0
+Adding component instance block -- xilinx.com:user:trigger_controller:1.0 - trigger_controller_0
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_0
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_10
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_11
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_12
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_13
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_14
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_15
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_1
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_2
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_3
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_4
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_5
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_6
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_7
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_8
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_9
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_4
+Adding component instance block -- xilinx.com:user:rfsoc_adc_data_capture:1.0 - rfsoc_adc_data_captu_0
+Successfully read diagram <top_level> from BD file <C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd>
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_11_0 top_level_trigger_controller_0_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_1_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_adc_data_captu_0_0 top_level_rfsoc_data_pipeline_0_0}] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3422] Upgraded top_level_rfsoc_adc_data_captu_0_0 (rfsoc_adc_data_capture_v1_0 1.0) from revision 3 to revision 2
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_0_0 to use current project options
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_10_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_10) - Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_10_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_11_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_11) - Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_11_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_12_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_12) - Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_12_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_13_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_13) - Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_13_0'.
+If the problem persists, please contact Xilinx support.
+ 
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_14_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_15_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_2_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_3_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_4_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_5_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_6_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_7_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_8_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_9_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_trigger_controller_0_0 to use current project options
+Wrote  : <C:\james\old_testing\RFSoC_Controller-master\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+Wrote  : <C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2018.441 ; gain = 22.465
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_10_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_10) - Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_10_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_11_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_11) - Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_11_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_12_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_12) - Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_12_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_13_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_13) - Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_13_0'.
+If the problem persists, please contact Xilinx support.
+ 
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_10_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_10) - Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_10_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_11_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_11) - Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_11_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_12_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_12) - Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_12_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_13_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_13) - Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_13_0'.
+If the problem persists, please contact Xilinx support.
+ 
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_10_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_10) - Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_10_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_11_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_11) - Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_11_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_12_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_12) - Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_12_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_13_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_13) - Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_13_0'.
+If the problem persists, please contact Xilinx support.
+ 
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_11_0}] -log ip_upgrade.log
+Upgrading 'C:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_10_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_10_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_10) - Failed to reset IP 'top_level_rfsoc_data_pipeline_10_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_10_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_11_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_11_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_11) - Failed to reset IP 'top_level_rfsoc_data_pipeline_11_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_11_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_12_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_12_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_12) - Failed to reset IP 'top_level_rfsoc_data_pipeline_12_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_12_0'.
+If the problem persists, please contact Xilinx support.
+ 
+WARNING: [IP_Flow 19-3810] Could not remove generated file 'c:/james/old_testing/RFSoC_Controller-master/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_13_0/src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0/synth/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0.v' from disk; file path is too long.
+ERROR: [IP_Flow 19-3506] IP Reset error: Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+WARNING: [IP_Flow 19-2162] IP 'top_level_rfsoc_data_pipeline_13_0' is locked:
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs. * Detected changes to IP definition 'rfsoc_data_pipeline_v1_0 (1.0)' file(s).
+ERROR: [BD 41-1081] Could not upgrade cell (rfsoc_data_pipeline_13) - Failed to reset IP 'top_level_rfsoc_data_pipeline_13_0/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_0'. Target 'Synthesis' failed to remove previously generated files from disk.
+Unable to reset IP before upgrading to 'xilinx.com:user:rfsoc_data_pipeline:1.0'
+Upgrade IP was unsuccessful for 'top_level_rfsoc_data_pipeline_13_0'.
+If the problem persists, please contact Xilinx support.
+ 
+ERROR: [Common 17-39] 'upgrade_ip' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 12:03:53 2019...

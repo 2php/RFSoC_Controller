@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 23 12:07:54 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 13:45:40 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -24,144 +24,14 @@
         <CONNECTION INSTANCE="trigger_controller_0" PORT="ext_trigger_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="vin00_0_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_n">
+    <PORT DIR="O" NAME="vout10_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout10_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_n"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout10_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="vin00_0_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_p">
+    <PORT DIR="O" NAME="vout10_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout10_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout31_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout31_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout31_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout31_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout31_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout31_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout30_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout30_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout30_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout30_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout30_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout30_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout23_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout23_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout23_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout23_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout23_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout23_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout03_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout03_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout03_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout03_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout03_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout03_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout11_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout11_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout11_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout11_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout11_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout11_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout33_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout33_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout33_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout33_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout33_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout33_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout13_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout13_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout13_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout13_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout13_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout13_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_n" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_p" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout00_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout00_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout00_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout00_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac1_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac1_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac1_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac1_clk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout20_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout20_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout20_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout20_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout20_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout20_p"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout10_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="vout22_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout22_n">
@@ -174,69 +44,14 @@
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout22_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="app_leds_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+    <PORT DIR="O" NAME="vout13_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout13_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout13_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac3_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac3_clk_n">
+    <PORT DIR="O" NAME="vout13_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout13_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac3_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac3_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac3_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac3_clk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout10_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout10_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout10_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout10_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout10_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout10_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout21_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout21_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout21_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout21_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout21_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout21_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout12_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout12_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout12_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout12_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout12_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout12_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout01_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout01_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout01_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vout01_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout01_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout01_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac2_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac2_clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac2_clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac2_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac2_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac2_clk_p"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout13_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="vout32_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout32_n">
@@ -249,14 +64,94 @@
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout32_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="sysref_in_diff_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_n">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="sysref_in_n"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="sysref_in_diff_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_p">
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac0_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac0_clk_p">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="sysref_in_p"/>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac0_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout31_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout31_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout31_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout31_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout31_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout31_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac3_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac3_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac3_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac3_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac3_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac3_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout00_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout00_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout00_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout00_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout00_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_n" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="diff_clock_rtl_clk_p" SIGIS="clk" SIGNAME="clk_wiz_1_clk_in1_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_in1_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac1_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac1_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac1_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac1_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout30_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout30_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout30_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout30_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout30_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout30_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout21_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout21_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout21_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout21_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout21_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout21_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout11_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout11_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout11_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout11_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout11_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout11_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="vout02_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout02_n">
@@ -267,6 +162,111 @@
     <PORT DIR="O" NAME="vout02_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout02_p">
       <CONNECTIONS>
         <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout02_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac2_clk_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac2_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac2_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dac2_clk_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac2_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="dac2_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout01_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout01_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout01_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout01_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout01_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout01_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout12_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout12_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout12_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout12_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout12_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout12_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout33_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout33_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout33_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout33_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout33_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout33_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysref_in_diff_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="sysref_in_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysref_in_diff_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_sysref_in_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="sysref_in_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout03_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout03_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout03_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout03_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout03_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout03_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout23_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout23_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout23_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout23_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout23_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout23_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="app_leds_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_n" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc0_clk_0_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_adc0_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="adc0_clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="vin00_0_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="vin00_0_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vin00_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vin00_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout20_v_n" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout20_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout20_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="vout20_v_p" SIGIS="undef" SIGNAME="usp_rf_data_converter_0_vout20_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="vout20_p"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -734,14 +734,11 @@
         <PORT DIR="O" LEFT="15" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="channel_select_0" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="gpio_in"/>
@@ -751,6 +748,9 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
@@ -1005,7 +1005,7 @@
         <PARAMETER NAME="C_S_AXI_ACLK_FREQ_HZ" VALUE="100000000"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_BAUDRATE" VALUE="115200"/>
+        <PARAMETER NAME="C_BAUDRATE" VALUE="230400"/>
         <PARAMETER NAME="C_DATA_BITS" VALUE="8"/>
         <PARAMETER NAME="C_USE_PARITY" VALUE="0"/>
         <PARAMETER NAME="C_ODD_PARITY" VALUE="0"/>
@@ -1898,14 +1898,11 @@
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="microblaze_clk"/>
@@ -1915,6 +1912,9 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -4601,8 +4601,8 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="Mem" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0001FFFF" INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="DLMB" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="SLMB"/>
-        <MEMRANGE ADDRESSBLOCK="Mem" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0001FFFF" INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="ILMB" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="SLMB"/>
+        <MEMRANGE ADDRESSBLOCK="Mem" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0007FFFF" INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="DLMB" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="SLMB"/>
+        <MEMRANGE ADDRESSBLOCK="Mem" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x0007FFFF" INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="ILMB" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="SLMB"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x40000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4000FFFF" INSTANCE="axi_gpio_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x40600000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4060FFFF" INSTANCE="axi_uartlite_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x41400000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x41400FFF" INSTANCE="mdm_1" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MASTERBUSINTERFACE="M_AXI_DP" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
@@ -5613,7 +5613,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="EDK_SPECIAL" VALUE="BRAM_CTRL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0001FFFF"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0007FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="LMB_Clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
@@ -5737,7 +5737,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="microblaze_0_local_memory_dlmb_bram_if_cntlr_BRAM_PORT" NAME="BRAM_PORT" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
-          <PARAMETER NAME="MEM_SIZE" VALUE="131072"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="524288"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -5963,7 +5963,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="EDK_SPECIAL" VALUE="BRAM_CTRL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0001FFFF"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x0007FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="LMB_Clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
@@ -6087,7 +6087,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="microblaze_0_local_memory_ilmb_bram_if_cntlr_BRAM_PORT" NAME="BRAM_PORT" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
-          <PARAMETER NAME="MEM_SIZE" VALUE="131072"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="524288"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
@@ -6305,8 +6305,8 @@
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_A" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="32768"/>
-        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="32768"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="131072"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="131072"/>
         <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_HAS_RSTB" VALUE="1"/>
         <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
@@ -6319,8 +6319,8 @@
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="32"/>
         <PARAMETER NAME="C_READ_WIDTH_B" VALUE="32"/>
-        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="32768"/>
-        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="32768"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="131072"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="131072"/>
         <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
         <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
@@ -6346,9 +6346,9 @@
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="1"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="32"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="128"/>
         <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     24.490494 mW"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     53.467544 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="top_level_lmb_bram_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -6375,7 +6375,7 @@
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
         <PARAMETER NAME="Write_Width_A" VALUE="32"/>
-        <PARAMETER NAME="Write_Depth_A" VALUE="32768"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="131072"/>
         <PARAMETER NAME="Read_Width_A" VALUE="32"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
@@ -6499,7 +6499,7 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="microblaze_0_local_memory_dlmb_bram_if_cntlr_BRAM_PORT" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
-          <PARAMETER NAME="MEM_SIZE" VALUE="131072"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="524288"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
@@ -6516,7 +6516,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="microblaze_0_local_memory_ilmb_bram_if_cntlr_BRAM_PORT" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
-          <PARAMETER NAME="MEM_SIZE" VALUE="131072"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="524288"/>
           <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
@@ -6578,11 +6578,11 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s0_axis_aresetn"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_reset"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="rf_resetn"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6797,7 +6797,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="3" FULLNAME="/rfsoc_adc_data_captu_0" HWVERSION="1.0" INSTANCE="rfsoc_adc_data_captu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_adc_data_capture" VLNV="xilinx.com:user:rfsoc_adc_data_capture:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/rfsoc_adc_data_captu_0" HWVERSION="1.0" INSTANCE="rfsoc_adc_data_captu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rfsoc_adc_data_capture" VLNV="xilinx.com:user:rfsoc_adc_data_capture:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="top_level_rfsoc_adc_data_captu_0_0"/>
@@ -9018,14 +9018,11 @@
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_reset"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_reset"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="microblaze_resetn"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_resetn"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="microblaze_resetn"/>
@@ -9035,6 +9032,9 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_reset"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_reset"/>
           </CONNECTIONS>
         </PORT>
@@ -10695,11 +10695,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s0_axis_aclk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="rf_clock"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="dac1_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_p">

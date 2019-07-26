@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 26 13:41:42 2019
+# Process ID: 8096
+# Current directory: C:/james/fpga_projects/rfsoc_controller
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6484 C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.xpr
+# Log file: C:/james/fpga_projects/rfsoc_controller/vivado.log
+# Journal file: C:/james/fpga_projects/rfsoc_controller\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.xpr

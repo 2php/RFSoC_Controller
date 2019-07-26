@@ -1,16 +1,16 @@
 The target system is: Generic -  - microblaze
 The host system is: Windows - 6.2 - AMD64
 Determining if files stdatomic.h exist passed with the following output:
-Change Dir: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp
+Change Dir: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe" "cmTC_3044d/fast"
-C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_3044d.dir/build.make CMakeFiles/cmTC_3044d.dir/build
-make.exe[1]: Entering directory 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3044d.dir/CheckIncludeFiles.c.obj
-C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include -c   -o CMakeFiles/cmTC_3044d.dir/CheckIncludeFiles.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_3044d
-C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include -c    "CMakeFiles/cmTC_3044d.dir/CheckIncludeFiles.c.obj"   -o cmTC_3044d  
-mb-gcc.exe: warning: CMakeFiles/cmTC_3044d.dir/CheckIncludeFiles.c.obj: linker input file unused because linking not done
-make.exe[1]: Leaving directory 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe" "cmTC_851d9/fast"
+C:/Xilinx/SDK/2019.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_851d9.dir/build.make CMakeFiles/cmTC_851d9.dir/build
+make.exe[1]: Entering directory 'C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_851d9.dir/CheckIncludeFiles.c.obj
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include -c   -o CMakeFiles/cmTC_851d9.dir/CheckIncludeFiles.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_851d9
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe   -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include -c    "CMakeFiles/cmTC_851d9.dir/CheckIncludeFiles.c.obj"   -o cmTC_851d9  
+mb-gcc.exe: warning: CMakeFiles/cmTC_851d9.dir/CheckIncludeFiles.c.obj: linker input file unused because linking not done
+make.exe[1]: Leaving directory 'C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/CMakeTmp'
 
 
