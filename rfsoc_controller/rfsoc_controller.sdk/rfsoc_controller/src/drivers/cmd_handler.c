@@ -153,7 +153,10 @@ void cmd_set_adc_cycles()
 {
 	//Recieve the repeat cycles in 4 bytes with MSB first
 	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
-	uart_recieve(repeat, 4);
+	if(uart_receive(repeat, 4))
+	{
+		return;
+	}
 	u32 final_repeat = (repeat[0] << 24) | (repeat[1] << 16) | (repeat[2] << 8) | repeat[3];
 	rf_set_adc_cycles(final_repeat);
 	//Send an ack back to Python
@@ -164,9 +167,10 @@ void cmd_set_locking_select()
 {
 	//Recieve 2 bytes from python as our select
 	u8 bytes[2];
-	uart_recieve(bytes, 2);
-
-
+	if(uart_receive(bytes, 2))
+	{
+		return;
+	}
 	//Write that as our locking waveform
 	rf_set_locking_select(bytes);
 
@@ -181,14 +185,20 @@ void cmd_load_waveform()
 
 	//Get the channel number first
 	u8 cn[1] = {0x00};
-	uart_recieve(cn, 1);
+	if(uart_receive(cn, 1))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	uart_send_ack();
 	u8 channel = cn[0];
 
 	//Recieve the repeat cycles in 4 bytes with MSB first
 	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
-	uart_recieve(repeat, 4);
+	if(uart_receive(repeat, 4))
+	{
+		return;
+	}
 	u32 final_repeat = (repeat[0] << 24) | (repeat[1] << 16) | (repeat[2] << 8) | repeat[3];
 	rf_set_repeat_cycles(channel, final_repeat);
 	//Send an ack back to Python
@@ -196,7 +206,10 @@ void cmd_load_waveform()
 
 	//Recieve the zero cycles in 4 bytes with MSB first
 	u8 zeros[4] = {0x00, 0x00, 0x00, 0x00};
-	uart_recieve(zeros, 4);
+	if(uart_receive(zeros, 4))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	u32 final_zeros = (zeros[0] << 24) | (zeros[1] << 16) | (zeros[2] << 8) | zeros[3];
 	rf_set_zero_delay(channel, final_zeros);
@@ -204,13 +217,19 @@ void cmd_load_waveform()
 
 	//Recieve 32 bytes from python as our locking waveform
 	u8 waveform[32];
-	uart_recieve(waveform, 32);
+	if(uart_receive(waveform, 32))
+	{
+		return;
+	}
 	//Write that as our locking waveform
 	rf_set_locking_waveform(channel, waveform);
 	uart_send_ack();
 
 	//Recieve 32 bytes from python as our pre-waveform
-	uart_recieve(waveform, 32);
+	if(uart_receive(waveform, 32))
+	{
+		return;
+	}
 	//Write that as our locking waveform
 	rf_set_pre_waveform(channel, waveform);
 	uart_send_ack();
@@ -218,7 +237,10 @@ void cmd_load_waveform()
 
 	//Get the bitstream length
 	u8 size[4] = {0x00, 0x00, 0x00, 0x00};
-	uart_recieve(size, 4);
+	if(uart_receive(size, 4))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	uart_send_ack();
 	u32 final_size = (size[0] << 24) | (size[1] << 16) | (size[2] << 8) | size[3];
@@ -226,7 +248,10 @@ void cmd_load_waveform()
 
 	//Get the bitstream
 	//u8* bitstream = malloc(final_size + 100);
-	uart_recieve(waveform_buffer, final_size);
+	if(uart_receive(waveform_buffer, final_size))
+	{
+		return;
+	}
 
 
 	//write the bitstream to the selected channel
@@ -242,7 +267,10 @@ void cmd_set_trigger_mode()
 {
 	//Recieve the trigger mode as a single byte
 	u8 tm[1] = {0x00};
-	uart_recieve(tm, 1);
+	if(uart_receive(tm, 1))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	uart_send_ack();
 
@@ -254,7 +282,10 @@ void cmd_set_loopback()
 {
 	//Recieve the loopback mode as a single byte
 	u8 tm[1] = {0x00};
-	uart_recieve(tm, 1);
+	if(uart_receive(tm, 1))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	uart_send_ack();
 
@@ -266,7 +297,10 @@ void cmd_set_trigger()
 {
 	//Recieve the trigger setting in one byte
 	u8 tm[1] = {0x00};
-	uart_recieve(tm, 1);
+	if(uart_receive(tm, 1))
+	{
+		return;
+	}
 	//Send an ack back to Python
 	uart_send_ack();
 

@@ -46,10 +46,10 @@ RM = C:/Xilinx/SDK/2019.1/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
+CMAKE_SOURCE_DIR = C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal
+CMAKE_BINARY_DIR = C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal
 
 # Include any dependencies generated for this target.
 include lib/CMakeFiles/metal-static.dir/depend.make
@@ -61,17 +61,17 @@ include lib/CMakeFiles/metal-static.dir/progress.make
 include lib/CMakeFiles/metal-static.dir/flags.make
 
 lib/CMakeFiles/metal-static.dir/dma.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/dma.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/metal-static.dir/dma.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/dma.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c
+lib/CMakeFiles/metal-static.dir/dma.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/CMakeFiles/metal-static.dir/dma.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/dma.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c
 
 lib/CMakeFiles/metal-static.dir/dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/dma.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c > CMakeFiles/metal-static.dir/dma.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c > CMakeFiles/metal-static.dir/dma.c.i
 
 lib/CMakeFiles/metal-static.dir/dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/dma.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c -o CMakeFiles/metal-static.dir/dma.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/dma.c -o CMakeFiles/metal-static.dir/dma.c.s
 
 lib/CMakeFiles/metal-static.dir/dma.c.obj.requires:
 
@@ -85,17 +85,17 @@ lib/CMakeFiles/metal-static.dir/dma.c.obj.provides.build: lib/CMakeFiles/metal-s
 
 
 lib/CMakeFiles/metal-static.dir/device.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/device.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/CMakeFiles/metal-static.dir/device.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/device.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c
+lib/CMakeFiles/metal-static.dir/device.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/CMakeFiles/metal-static.dir/device.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/device.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c
 
 lib/CMakeFiles/metal-static.dir/device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/device.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c > CMakeFiles/metal-static.dir/device.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c > CMakeFiles/metal-static.dir/device.c.i
 
 lib/CMakeFiles/metal-static.dir/device.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/device.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c -o CMakeFiles/metal-static.dir/device.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/device.c -o CMakeFiles/metal-static.dir/device.c.s
 
 lib/CMakeFiles/metal-static.dir/device.c.obj.requires:
 
@@ -109,17 +109,17 @@ lib/CMakeFiles/metal-static.dir/device.c.obj.provides.build: lib/CMakeFiles/meta
 
 
 lib/CMakeFiles/metal-static.dir/init.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/init.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/metal-static.dir/init.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/init.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c
+lib/CMakeFiles/metal-static.dir/init.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/metal-static.dir/init.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/init.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c
 
 lib/CMakeFiles/metal-static.dir/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/init.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c > CMakeFiles/metal-static.dir/init.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c > CMakeFiles/metal-static.dir/init.c.i
 
 lib/CMakeFiles/metal-static.dir/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/init.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c -o CMakeFiles/metal-static.dir/init.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/init.c -o CMakeFiles/metal-static.dir/init.c.s
 
 lib/CMakeFiles/metal-static.dir/init.c.obj.requires:
 
@@ -133,17 +133,17 @@ lib/CMakeFiles/metal-static.dir/init.c.obj.provides.build: lib/CMakeFiles/metal-
 
 
 lib/CMakeFiles/metal-static.dir/io.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/io.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/metal-static.dir/io.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/io.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c
+lib/CMakeFiles/metal-static.dir/io.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/metal-static.dir/io.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/io.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c
 
 lib/CMakeFiles/metal-static.dir/io.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/io.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c > CMakeFiles/metal-static.dir/io.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c > CMakeFiles/metal-static.dir/io.c.i
 
 lib/CMakeFiles/metal-static.dir/io.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/io.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c -o CMakeFiles/metal-static.dir/io.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/io.c -o CMakeFiles/metal-static.dir/io.c.s
 
 lib/CMakeFiles/metal-static.dir/io.c.obj.requires:
 
@@ -157,17 +157,17 @@ lib/CMakeFiles/metal-static.dir/io.c.obj.provides.build: lib/CMakeFiles/metal-st
 
 
 lib/CMakeFiles/metal-static.dir/irq.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/irq.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/metal-static.dir/irq.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/irq.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c
+lib/CMakeFiles/metal-static.dir/irq.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/metal-static.dir/irq.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/irq.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c
 
 lib/CMakeFiles/metal-static.dir/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/irq.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c > CMakeFiles/metal-static.dir/irq.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c > CMakeFiles/metal-static.dir/irq.c.i
 
 lib/CMakeFiles/metal-static.dir/irq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/irq.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c -o CMakeFiles/metal-static.dir/irq.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/irq.c -o CMakeFiles/metal-static.dir/irq.c.s
 
 lib/CMakeFiles/metal-static.dir/irq.c.obj.requires:
 
@@ -181,17 +181,17 @@ lib/CMakeFiles/metal-static.dir/irq.c.obj.provides.build: lib/CMakeFiles/metal-s
 
 
 lib/CMakeFiles/metal-static.dir/log.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/log.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/CMakeFiles/metal-static.dir/log.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/log.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c
+lib/CMakeFiles/metal-static.dir/log.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/CMakeFiles/metal-static.dir/log.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/log.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c
 
 lib/CMakeFiles/metal-static.dir/log.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/log.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c > CMakeFiles/metal-static.dir/log.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c > CMakeFiles/metal-static.dir/log.c.i
 
 lib/CMakeFiles/metal-static.dir/log.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/log.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c -o CMakeFiles/metal-static.dir/log.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/log.c -o CMakeFiles/metal-static.dir/log.c.s
 
 lib/CMakeFiles/metal-static.dir/log.c.obj.requires:
 
@@ -205,17 +205,17 @@ lib/CMakeFiles/metal-static.dir/log.c.obj.provides.build: lib/CMakeFiles/metal-s
 
 
 lib/CMakeFiles/metal-static.dir/shmem.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/shmem.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/CMakeFiles/metal-static.dir/shmem.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/shmem.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c
+lib/CMakeFiles/metal-static.dir/shmem.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/CMakeFiles/metal-static.dir/shmem.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/shmem.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c
 
 lib/CMakeFiles/metal-static.dir/shmem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/shmem.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c > CMakeFiles/metal-static.dir/shmem.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c > CMakeFiles/metal-static.dir/shmem.c.i
 
 lib/CMakeFiles/metal-static.dir/shmem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/shmem.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c -o CMakeFiles/metal-static.dir/shmem.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem.c -o CMakeFiles/metal-static.dir/shmem.c.s
 
 lib/CMakeFiles/metal-static.dir/shmem.c.obj.requires:
 
@@ -229,17 +229,17 @@ lib/CMakeFiles/metal-static.dir/shmem.c.obj.provides.build: lib/CMakeFiles/metal
 
 
 lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/shmem-provider.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c
+lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/shmem-provider.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c
 
 lib/CMakeFiles/metal-static.dir/shmem-provider.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/shmem-provider.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c > CMakeFiles/metal-static.dir/shmem-provider.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c > CMakeFiles/metal-static.dir/shmem-provider.c.i
 
 lib/CMakeFiles/metal-static.dir/shmem-provider.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/shmem-provider.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c -o CMakeFiles/metal-static.dir/shmem-provider.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/shmem-provider.c -o CMakeFiles/metal-static.dir/shmem-provider.c.s
 
 lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj.requires:
 
@@ -253,17 +253,17 @@ lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj.provides.build: lib/CMakeFi
 
 
 lib/CMakeFiles/metal-static.dir/softirq.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/softirq.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/CMakeFiles/metal-static.dir/softirq.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/softirq.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c
+lib/CMakeFiles/metal-static.dir/softirq.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/CMakeFiles/metal-static.dir/softirq.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/softirq.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c
 
 lib/CMakeFiles/metal-static.dir/softirq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/softirq.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c > CMakeFiles/metal-static.dir/softirq.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c > CMakeFiles/metal-static.dir/softirq.c.i
 
 lib/CMakeFiles/metal-static.dir/softirq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/softirq.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c -o CMakeFiles/metal-static.dir/softirq.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/softirq.c -o CMakeFiles/metal-static.dir/softirq.c.s
 
 lib/CMakeFiles/metal-static.dir/softirq.c.obj.requires:
 
@@ -277,17 +277,17 @@ lib/CMakeFiles/metal-static.dir/softirq.c.obj.provides.build: lib/CMakeFiles/met
 
 
 lib/CMakeFiles/metal-static.dir/version.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/version.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/metal-static.dir/version.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/version.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c
+lib/CMakeFiles/metal-static.dir/version.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/metal-static.dir/version.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/version.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c
 
 lib/CMakeFiles/metal-static.dir/version.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/version.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c > CMakeFiles/metal-static.dir/version.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c > CMakeFiles/metal-static.dir/version.c.i
 
 lib/CMakeFiles/metal-static.dir/version.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/version.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c -o CMakeFiles/metal-static.dir/version.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/version.c -o CMakeFiles/metal-static.dir/version.c.s
 
 lib/CMakeFiles/metal-static.dir/version.c.obj.requires:
 
@@ -301,17 +301,17 @@ lib/CMakeFiles/metal-static.dir/version.c.obj.provides.build: lib/CMakeFiles/met
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/condition.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c
+lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/condition.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/condition.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/condition.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c > CMakeFiles/metal-static.dir/system/generic/condition.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c > CMakeFiles/metal-static.dir/system/generic/condition.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/condition.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/condition.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c -o CMakeFiles/metal-static.dir/system/generic/condition.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/condition.c -o CMakeFiles/metal-static.dir/system/generic/condition.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj.requires:
 
@@ -325,17 +325,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj.provides.build: l
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/device.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c
+lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/device.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/device.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/device.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c > CMakeFiles/metal-static.dir/system/generic/device.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c > CMakeFiles/metal-static.dir/system/generic/device.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/device.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/device.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c -o CMakeFiles/metal-static.dir/system/generic/device.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/device.c -o CMakeFiles/metal-static.dir/system/generic/device.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj.requires:
 
@@ -349,17 +349,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj.provides.build: lib/
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/init.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c
+lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/init.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/init.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c > CMakeFiles/metal-static.dir/system/generic/init.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c > CMakeFiles/metal-static.dir/system/generic/init.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/init.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c -o CMakeFiles/metal-static.dir/system/generic/init.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/init.c -o CMakeFiles/metal-static.dir/system/generic/init.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj.requires:
 
@@ -373,17 +373,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj.provides.build: lib/CM
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/io.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c
+lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/io.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/io.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/io.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c > CMakeFiles/metal-static.dir/system/generic/io.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c > CMakeFiles/metal-static.dir/system/generic/io.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/io.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/io.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c -o CMakeFiles/metal-static.dir/system/generic/io.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/io.c -o CMakeFiles/metal-static.dir/system/generic/io.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj.requires:
 
@@ -397,17 +397,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj.provides.build: lib/CMak
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/irq.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c
+lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/irq.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/irq.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c > CMakeFiles/metal-static.dir/system/generic/irq.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c > CMakeFiles/metal-static.dir/system/generic/irq.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/irq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/irq.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c -o CMakeFiles/metal-static.dir/system/generic/irq.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/irq.c -o CMakeFiles/metal-static.dir/system/generic/irq.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj.requires:
 
@@ -421,17 +421,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj.provides.build: lib/CMa
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/time.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c
+lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/time.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/time.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c > CMakeFiles/metal-static.dir/system/generic/time.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c > CMakeFiles/metal-static.dir/system/generic/time.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/time.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c -o CMakeFiles/metal-static.dir/system/generic/time.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/time.c -o CMakeFiles/metal-static.dir/system/generic/time.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj.requires:
 
@@ -445,17 +445,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj.provides.build: lib/CM
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c
+lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c > CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c > CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c -o CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/microblaze_generic/sys.c -o CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj.requires:
 
@@ -469,17 +469,17 @@ lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj.prov
 
 
 lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj: lib/CMakeFiles/metal-static.dir/flags.make
-lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj: C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj   -c C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c
+lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj   -c C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c
 
 lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.i"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c > CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.i
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -E C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c > CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.i
 
 lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.s"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c -o CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.s
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-gcc.exe  $(C_DEFINES) $(C_FLAGS) -S C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common/irq.c -o CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.s
 
 lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj.requires:
 
@@ -536,9 +536,9 @@ lib/libmetal.a: lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generi
 lib/libmetal.a: lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj
 lib/libmetal.a: lib/CMakeFiles/metal-static.dir/build.make
 lib/libmetal.a: lib/CMakeFiles/metal-static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C static library libmetal.a"
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -P CMakeFiles/metal-static.dir/cmake_clean_target.cmake
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/metal-static.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C static library libmetal.a"
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -P CMakeFiles/metal-static.dir/cmake_clean_target.cmake
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/metal-static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/CMakeFiles/metal-static.dir/build: lib/libmetal.a
@@ -567,10 +567,10 @@ lib/CMakeFiles/metal-static.dir/requires: lib/CMakeFiles/metal-static.dir/system
 .PHONY : lib/CMakeFiles/metal-static.dir/requires
 
 lib/CMakeFiles/metal-static.dir/clean:
-	cd C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -P CMakeFiles/metal-static.dir/cmake_clean.cmake
+	cd C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib && $(CMAKE_COMMAND) -P CMakeFiles/metal-static.dir/cmake_clean.cmake
 .PHONY : lib/CMakeFiles/metal-static.dir/clean
 
 lib/CMakeFiles/metal-static.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib C:/james/old_testing/repo/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/CMakeFiles/metal-static.dir/DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/CMakeFiles/metal-static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/CMakeFiles/metal-static.dir/depend
 

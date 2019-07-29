@@ -559,12 +559,6 @@
 /* Definitions for peripheral RFSOC_DATA_PIPELINE_1 */
 
 
-/* Definitions for peripheral RFSOC_DATA_PIPELINE_2 */
-
-
-/* Definitions for peripheral RFSOC_DATA_PIPELINE_3 */
-
-
 /* Definitions for peripheral RFSOC_DATA_PIPELINE_10 */
 
 
@@ -581,6 +575,12 @@
 
 
 /* Definitions for peripheral RFSOC_DATA_PIPELINE_15 */
+
+
+/* Definitions for peripheral RFSOC_DATA_PIPELINE_2 */
+
+
+/* Definitions for peripheral RFSOC_DATA_PIPELINE_3 */
 
 
 /* Definitions for peripheral RFSOC_DATA_PIPELINE_4 */

@@ -13,6 +13,10 @@
 #include "xuartlite.h"
 #include "xparameters.h"
 
+
+
+//Internal Defines
+#define UART_MAX_REC_COUNT 0x00FFFFFF
 #define UARTLITE_DEVICE_ID	XPAR_UARTLITE_0_DEVICE_ID
 
 XUartLite UartLite;		/* Instance of the UartLite Device */
@@ -20,7 +24,8 @@ XUartLite UartLite;		/* Instance of the UartLite Device */
 
 void debug_print(char* buff);
 int uart_init();
-void uart_recieve(u8* buff, u16 num_char);
+//returns 1 if receive timed out
+int uart_receive(u8* buff, u16 num_char);
 //returns 1 if cmd is availabe, also writes command to first position of buffer
 u8 uart_cmd_available(u8* cmd_buff);
 void uart_send_ack();

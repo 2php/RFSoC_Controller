@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/rfsoc_controller/src/drivers/cmd_handler.c" element2="/rfsoc_controller/src/drivers/cmd_handler.h" element3="/rfsoc_controller/src/drivers/gpio.c" element4="/rfsoc_controller/src/drivers/gpio.h" element5="/rfsoc_controller/src/drivers/rf.c" element6="/rfsoc_controller/src/drivers/rf.h" element7="/rfsoc_controller/src/drivers/uart.c" element8="/rfsoc_controller/src/drivers/uart.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1564420591529"/>
+</session>

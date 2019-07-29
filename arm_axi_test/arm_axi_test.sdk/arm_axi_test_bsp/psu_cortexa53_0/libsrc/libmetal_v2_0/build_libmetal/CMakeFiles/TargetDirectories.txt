@@ -1,1 +1,0 @@
-C:/james/fpga_projects/arm_axi_test/arm_axi_test.sdk/arm_axi_test_bsp/psu_cortexa53_0/libsrc/libmetal_v2_0/build_libmetal/lib/CMakeFiles/metal-static.dir

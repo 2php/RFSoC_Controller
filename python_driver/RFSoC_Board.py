@@ -14,7 +14,7 @@ import numpy as np
 #Parameters
 ENDIAN = 'big'#big endian
 SIZE_LEN = 4 #number of bytes sent when transmitting bytestream size
-DEFAULT_BAUD = 115200
+DEFAULT_BAUD = 230400#115200
 DAC_MAX_VALUE = 0x7FFF
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
 DAC_WORD_FREQ = 250250820
@@ -583,15 +583,14 @@ class RFSoC_Board:
             bs = self.receive_bytes(1)
             if(len(bs) != 1):
                 print("Error while receiving adc bytestream, timeout occured")
+                print("Warning, expected " + str(leng) + " bytes from board for ADC capture, received " + str(len(adc_bytestream)))
                 return None
+            
             adc_bytestream.append(bs[0])
         
         self.port.close()
         self.port.timeout = 1
-        
-        if(len(adc_bytestream) != leng):
-            print("Warning, expected " + str(leng) + " bytes from board for ADC capture, received " + str(len(adc_bytestream)))
-        
+
         #return the rebuilt samples
         return self.rebuild_adc_stream(adc_bytestream)
      

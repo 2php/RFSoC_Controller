@@ -24,7 +24,7 @@ try:
     wf_locking = rf.WaveFile("locking_waveform.txt", 4, 0, 1, 1, 0)
     wf_dummy_locking = rf.WaveFile("dummy_locking_file.txt", 4, 0, 1, 1, 0)
     #add a channel and set the period to 2 over the main frequency
-    wf0 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 0.5, 0, 0)
+    wf0 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 1, 1, 0, 0)
     wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 1, 0, 0)
     wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
@@ -55,7 +55,7 @@ try:
     board.set_loopback(rf.YES)
     
     #set the adc to collect 800 samples
-    board.set_adc_cycles(60000)
+    board.set_adc_cycles(8000)
     
     num_triggers = 1
     #trigger once
