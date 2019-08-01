@@ -759,3 +759,5 @@ dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: launch_sdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 2,517 MB. GUI used memory: 103 MB. Current time: 7/29/19, 10:16:21 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,517 MB. GUI used memory: 103 MB. Current time: 7/29/19, 10:46:21 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,517 MB. GUI used memory: 102 MB. Current time: 7/29/19, 11:16:22 AM PDT

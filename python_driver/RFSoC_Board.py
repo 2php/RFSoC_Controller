@@ -15,11 +15,15 @@ import numpy as np
 ENDIAN = 'big'#big endian
 SIZE_LEN = 4 #number of bytes sent when transmitting bytestream size
 DEFAULT_BAUD = 230400#115200
-DAC_MAX_VALUE = 0x7FFF
+DAC_MAX_VALUE = 32767#0x7FFF
+DAC_MIN_VALUE = -32768#0x8000
 DAC_WORD_PERIOD = 1/250250820 #in seconds, time taken to playback one 256-bit word
 DAC_WORD_FREQ = 250250820
 NANOSECONDS_PER_DAC_WORD = 4
 ADC_TIMEOUT = 1
+INPUT_WAVEFORM_MIN = -1
+INPUT_WAVEFORM_MAX = 1
+
 #Commands
 PING_BOARD = 0x00
 RF_LOAD_WAVEFORM = 0x01
@@ -54,10 +58,13 @@ def stream_scale(stream, old_min, old_max, new_min, new_max):
     
      new_stream = []
      
+     new_height = max(abs(old_min), abs(old_max))
+     
      #add the minimum value to everyrthing to eliminate the offset
      for i in range(0, len(stream)):
-         no_negative = stream[i]-old_min
-         new_stream.append((no_negative/(old_max-old_min))*(new_max-new_min))
+         pre_val = stream[i] / new_height
+         fin_val = pre_val * new_max
+         new_stream.append(fin_val)
          
 
      return new_stream
@@ -205,7 +212,7 @@ class WaveFile:
         
         #rescale the values into the word stream
         prescale_wordstream = np.interp(scaled_time, disc_time, vals)
-        final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), 0, DAC_MAX_VALUE)
+        final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), DAC_MIN_VALUE, DAC_MAX_VALUE)
         #if we need to adjust our amplitudes
         if(self.amp_factor != 1):
             for i in range(0,len(final_wordstream)):
@@ -214,7 +221,8 @@ class WaveFile:
         #if we're a locking waveform
         if(self.is_locking):
             #just shift the waveform and return
-            self.wordstream = stream_shift(final_wordstream, self.locking_shift)
+            #self.wordstream = stream_shift(final_wordstream, self.locking_shift)
+            self.wordstream = stream_shift(final_wordstream, self.locking_shift)            
             self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
             return
             
