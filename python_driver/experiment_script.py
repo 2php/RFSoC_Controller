@@ -21,11 +21,11 @@ try:
     board = ib.init_board_object("COM4")
     
     
-    wf_locking = rf.WaveFile("locking_waveform.txt", 4, 0, 1, 1, 0)
+    wf_locking = rf.WaveFile("locking_waveform.txt", 4, 0, 0.05, 1, 0)
     wf_dummy_locking = rf.WaveFile("dummy_locking_file.txt", 4, 0, 1, 1, 0)
     #add a channel and set the period to 2 over the main frequency
-    wf0 = rf.WaveFile("sawtooth.txt", 50*4, 0, 1, 0, 0)
-    wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 1, 0, 0)
+    wf0 = rf.WaveFile("sawtooth.txt", 50*4, 0, 0.05, 0, 0)
+    wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 0.75, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
     #wf4 = rf.WaveFile("2_dc_square_wave.txt", 50*rf.DAC_WORD_PERIOD, 0*4, 1)

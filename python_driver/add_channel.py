@@ -77,7 +77,7 @@ if(is_locking):
         print("Error, not enough arguments to parse locking channel.")
         sys.exit()
 
-    locking_amp_factor = int(sys.argv[9]) #between 0 and 1
+    locking_amp_factor = float(sys.argv[9]) #between 0 and 1
     if(locking_amp_factor < 0 or locking_amp_factor > 1):
         print("Error, locking amplitude multiplication factor must be between 0 and 1")
         sys.exit()
