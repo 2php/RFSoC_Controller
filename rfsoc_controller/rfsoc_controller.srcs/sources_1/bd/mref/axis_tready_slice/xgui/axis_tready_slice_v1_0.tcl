@@ -6,6 +6,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "buffer_flush_bit" -parent ${Page_0}
   ipgui::add_param $IPINST -name "cycles_sclk" -parent ${Page_0}
   ipgui::add_param $IPINST -name "locking_sclk" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "post_delay_sclk" -parent ${Page_0}
   ipgui::add_param $IPINST -name "pre_waveform_sclk" -parent ${Page_0}
   ipgui::add_param $IPINST -name "ready_bit" -parent ${Page_0}
   ipgui::add_param $IPINST -name "sdata" -parent ${Page_0}
@@ -39,6 +40,15 @@ proc update_PARAM_VALUE.locking_sclk { PARAM_VALUE.locking_sclk } {
 
 proc validate_PARAM_VALUE.locking_sclk { PARAM_VALUE.locking_sclk } {
 	# Procedure called to validate locking_sclk
+	return true
+}
+
+proc update_PARAM_VALUE.post_delay_sclk { PARAM_VALUE.post_delay_sclk } {
+	# Procedure called to update post_delay_sclk when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.post_delay_sclk { PARAM_VALUE.post_delay_sclk } {
+	# Procedure called to validate post_delay_sclk
 	return true
 }
 
@@ -126,5 +136,10 @@ proc update_MODELPARAM_VALUE.cycles_sclk { MODELPARAM_VALUE.cycles_sclk PARAM_VA
 proc update_MODELPARAM_VALUE.pre_waveform_sclk { MODELPARAM_VALUE.pre_waveform_sclk PARAM_VALUE.pre_waveform_sclk } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.pre_waveform_sclk}] ${MODELPARAM_VALUE.pre_waveform_sclk}
+}
+
+proc update_MODELPARAM_VALUE.post_delay_sclk { MODELPARAM_VALUE.post_delay_sclk PARAM_VALUE.post_delay_sclk } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.post_delay_sclk}] ${MODELPARAM_VALUE.post_delay_sclk}
 }
 

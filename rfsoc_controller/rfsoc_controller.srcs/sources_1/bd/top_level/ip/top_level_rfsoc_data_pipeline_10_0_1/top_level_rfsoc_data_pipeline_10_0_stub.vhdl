@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Jul 26 12:23:45 2019
+-- Date        : Tue Aug  6 10:24:18 2019
 -- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top top_level_rfsoc_data_pipeline_10_0 -prefix
---               top_level_rfsoc_data_pipeline_10_0_ top_level_rfsoc_data_pipeline_4_0_stub.vhdl
--- Design      : top_level_rfsoc_data_pipeline_4_0
+--               top_level_rfsoc_data_pipeline_10_0_ top_level_rfsoc_data_pipeline_1_0_stub.vhdl
+-- Design      : top_level_rfsoc_data_pipeline_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu29dr-ffvf1760-2-e
 -- --------------------------------------------------------------------------------

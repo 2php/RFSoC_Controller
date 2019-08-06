@@ -163,7 +163,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>351f9ca4</spirit:value>
+            <spirit:value>46e2f296</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -176,7 +176,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>351f9ca4</spirit:value>
+            <spirit:value>46e2f296</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -485,6 +485,11 @@
         <spirit:displayName>Pre Waveform Sclk</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.pre_waveform_sclk">10</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>post_delay_sclk</spirit:name>
+        <spirit:displayName>Post Delay Sclk</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.post_delay_sclk">13</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
@@ -493,7 +498,7 @@
       <spirit:file>
         <spirit:name>xgui/axis_tready_slice_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_012c7dd6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_569deea0</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -541,6 +546,11 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.pre_waveform_sclk">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>post_delay_sclk</spirit:name>
+      <spirit:displayName>Post Delay Sclk</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.post_delay_sclk">13</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">axis_tready_slice_v1_0</spirit:value>
     </spirit:parameter>
@@ -560,7 +570,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-07-16T16:23:33Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-08-06T17:19:31Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

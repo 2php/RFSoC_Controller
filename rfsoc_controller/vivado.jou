@@ -33,3 +33,89 @@ current_run [get_runs synth_lo_effort]
 open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd}
 open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd}
 open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd}
+update_module_reference rfsoc_data_pipeline_axis_tready_slice_0_0
+ipx::package_project -root_dir C:/james/fpga_projects/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_data_pipeline -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:rfsoc_adc_data_capture:1.0 [get_ips  top_level_rfsoc_adc_data_captu_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips top_level_rfsoc_adc_data_captu_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+wait_on_run impl_lo_effort
+reset_run impl_lo_effort
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+update_module_reference rfsoc_data_pipeline_axis_tready_slice_0_0
+ipx::package_project -root_dir C:/james/fpga_projects/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_data_pipeline -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/ip_repo
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+wait_on_run impl_lo_effort
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+current_bd_design [get_bd_designs rfsoc_adc_data_capture]
+open_run impl_lo_effort
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd}
+current_bd_design [get_bd_designs rfsoc_data_pipeline]
+close_bd_design [get_bd_designs rfsoc_data_pipeline]
+delete_bd_objs [get_bd_intf_nets s_axis_0_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0
+endgroup
+set_property location {1 196 216} [get_bd_cells axis_register_slice_0]
+connect_bd_intf_net [get_bd_intf_ports s_axis] [get_bd_intf_pins axis_register_slice_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_register_slice_0/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_register_slice_0/aclk]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_register_slice_0/aresetn]
+save_bd_design
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:rfsoc_adc_data_capture:1.0 [get_ips  top_level_rfsoc_adc_data_captu_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips top_level_rfsoc_adc_data_captu_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+wait_on_run impl_lo_effort
+file copy -force C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+

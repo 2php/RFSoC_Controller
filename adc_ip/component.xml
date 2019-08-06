@@ -500,12 +500,15 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_axis_data_fifo_2_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2b67210b</spirit:value>
+            <spirit:value>0635fe6f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -519,12 +522,15 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_data_fifo_2_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf02ae26</spirit:value>
+            <spirit:value>368315c5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -956,55 +962,142 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_7/rfsoc_adc_data_capture_axis_data_fifo_0_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_3/rfsoc_adc_data_capture_axis_data_fifo_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_3/rfsoc_adc_data_capture_axis_data_fifo_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_3/rfsoc_adc_data_capture_axis_data_fifo_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_4/rfsoc_adc_data_capture_axis_data_fifo_4_4.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_7/rfsoc_adc_data_capture_axis_data_fifo_5_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_6_2/rfsoc_adc_data_capture_axis_data_fifo_6_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_7_2/rfsoc_adc_data_capture_axis_data_fifo_7_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_8_2/rfsoc_adc_data_capture_axis_data_fifo_8_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_8/rfsoc_adc_data_capture_axis_data_fifo_0_8.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_4/rfsoc_adc_data_capture_axis_data_fifo_1_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_4/rfsoc_adc_data_capture_axis_data_fifo_2_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_4/rfsoc_adc_data_capture_axis_data_fifo_3_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_5/rfsoc_adc_data_capture_axis_data_fifo_4_5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_8/rfsoc_adc_data_capture_axis_data_fifo_5_8.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_6_3/rfsoc_adc_data_capture_axis_data_fifo_6_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_7_3/rfsoc_adc_data_capture_axis_data_fifo_7_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_8_3/rfsoc_adc_data_capture_axis_data_fifo_8_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_register_slice_0_0/rfsoc_adc_data_capture_axis_register_slice_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_ooc.xdc</spirit:name>
@@ -1016,8 +1109,12 @@
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e2e1e985</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_2e522634</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1025,6 +1122,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_data_fifo" xilinx:version="2.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_register_slice" xilinx:version="1.1">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1142,55 +1249,142 @@
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_7/rfsoc_adc_data_capture_axis_data_fifo_0_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_3/rfsoc_adc_data_capture_axis_data_fifo_1_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_3/rfsoc_adc_data_capture_axis_data_fifo_2_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_3/rfsoc_adc_data_capture_axis_data_fifo_3_3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_4/rfsoc_adc_data_capture_axis_data_fifo_4_4.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_7/rfsoc_adc_data_capture_axis_data_fifo_5_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_6_2/rfsoc_adc_data_capture_axis_data_fifo_6_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_7_2/rfsoc_adc_data_capture_axis_data_fifo_7_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_8_2/rfsoc_adc_data_capture_axis_data_fifo_8_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_0_8/rfsoc_adc_data_capture_axis_data_fifo_0_8.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_1_4/rfsoc_adc_data_capture_axis_data_fifo_1_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_2_4/rfsoc_adc_data_capture_axis_data_fifo_2_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_3_4/rfsoc_adc_data_capture_axis_data_fifo_3_4.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_4_5/rfsoc_adc_data_capture_axis_data_fifo_4_5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_5_8/rfsoc_adc_data_capture_axis_data_fifo_5_8.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_6_3/rfsoc_adc_data_capture_axis_data_fifo_6_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_7_3/rfsoc_adc_data_capture_axis_data_fifo_7_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_data_fifo_8_3/rfsoc_adc_data_capture_axis_data_fifo_8_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_adc_data_capture_axis_register_slice_0_0/rfsoc_adc_data_capture_axis_register_slice_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sim/rfsoc_adc_data_capture.protoinst</spirit:name>
@@ -1201,6 +1395,10 @@
         <spirit:name>sim/rfsoc_adc_data_capture.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1208,6 +1406,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_data_fifo" xilinx:version="2.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_register_slice" xilinx:version="1.1">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1241,13 +1449,13 @@
       <xilinx:displayName>rfsoc_adc_data_capture_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-07-26T20:03:12Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-08-06T18:02:54Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@327c4320_ARCHIVE_LOCATION">c:/james/old_testing/repo/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@74376e28_ARCHIVE_LOCATION">c:/james/old_testing/repo/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aa1cf35_ARCHIVE_LOCATION">c:/james/old_testing/repo/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b3062ea_ARCHIVE_LOCATION">c:/james/old_testing/repo/adc_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f81a82d_ARCHIVE_LOCATION">c:/james/old_testing/repo/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfcc779_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb2a470_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f976f27_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72f07ca3_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47628509_ARCHIVE_LOCATION">c:/james/fpga_projects/adc_ip</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.RF_CLK.ASSOCIATED_BUSIF" xilinx:valueSource="user"/>
@@ -1302,7 +1510,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="df4c7e76"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="344cad7c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f18f2cee"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="27aa338a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="75523bff"/>
     </xilinx:packagingInfo>

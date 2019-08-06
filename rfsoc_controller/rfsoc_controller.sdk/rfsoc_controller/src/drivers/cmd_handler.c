@@ -234,6 +234,16 @@ void cmd_load_waveform()
 	rf_set_pre_waveform(channel, waveform);
 	uart_send_ack();
 
+	//Receive 4 bytes from python as our post delay
+	u8 post_delay[4];
+	if(uart_receive(post_delay, 4))
+	{
+		return;
+	}
+	u32 final_post_delay = (post_delay[0] << 24) | (post_delay[1] << 16) | (post_delay[2] << 8) | post_delay[3];
+	rf_set_post_delay(channel, final_post_delay);
+	uart_send_ack();
+
 
 	//Get the bitstream length
 	u8 size[4] = {0x00, 0x00, 0x00, 0x00};

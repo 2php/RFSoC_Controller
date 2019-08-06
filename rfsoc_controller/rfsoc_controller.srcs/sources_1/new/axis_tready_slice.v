@@ -29,7 +29,8 @@ parameter sdata = 4,
 parameter buffer_flush_bit = 5,//Used for setting all outputs to 0
 parameter zeros_sclk = 7,
 parameter cycles_sclk = 8,
-parameter pre_waveform_sclk = 10
+parameter pre_waveform_sclk = 10,
+parameter post_delay_sclk = 13
 )
 (
 
@@ -74,7 +75,8 @@ parameter pre_waveform_sclk = 10
 		             state_zeros = 3'b001,
 		             state_pre_waveform = 3'b010,
 		             state_trigger = 3'b011,
-		             state_cleanup = 3'b100; 
+		             state_post_delay = 3'b100,
+		             state_cleanup = 3'b101; 
     
     wire [255:0] locking_waveform;
     shift_register #(256) sr_locking(.clk(clk), .sclk(gpio_in[locking_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(locking_waveform));
@@ -87,6 +89,9 @@ parameter pre_waveform_sclk = 10
     
     wire [31:0] count_val;
     shift_register #(32) sr_cycles(.clk(clk), .sclk(gpio_in[cycles_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(count_val));
+    
+    wire [31:0] post_delay;
+    shift_register #(32) sr_post_delay(.clk(clk), .sclk(gpio_in[post_delay_sclk] & is_selected), .reset(reset), .data_in(gpio_in[sdata]), .data_out(post_delay));
     
     initial begin
          s_axis_tready <= 1'b0;
@@ -163,18 +168,40 @@ parameter pre_waveform_sclk = 10
                 state_trigger: begin
                     //If we're done counting
                     if(count > count_val || count == count_val) begin
-                        //reset the count
-                        count <= 0;
+                        
                         //stop all transfers
                         s_axis_tready <= 1'b0;
                         mloop_axis_tvalid <= 1'b0;
                         //wait for the trigger signals to go low
-                        state <= state_cleanup;
+                        if(post_delay == 0) begin
+                            //reset the count
+                            count <= 0;
+                            state <= state_cleanup;
+                        end
+                        else begin
+                            //set the count
+                            count <= 1;
+                            //advance to the post delay state
+                            state <= state_post_delay;
+                        end
                     end
                     else begin
                         count = count + 1'b1;
                     end
                 
+                
+                end
+                
+                state_post_delay: begin
+                    if(count == post_delay || count > post_delay) begin
+                        //Reset the count and go to the cleanup state
+                        count <= 0;
+                        state <= state_cleanup;
+                    end
+                    else begin
+                        //Keep counting
+                       count <= count + 1'b1;
+                    end
                 
                 end
                 
@@ -202,7 +229,7 @@ parameter pre_waveform_sclk = 10
     end
     
     
-    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (state == state_pre_waveform ? pre_waveform : (state != state_zeros ? locking_waveform : 0)));
+    assign m_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : (s_axis_tready == 1'b1 ? s_axis_tdata : (state == state_pre_waveform ? pre_waveform : ( (state != state_zeros && state != state_post_delay) ? locking_waveform : 0)));
 	assign mloop_axis_tdata = gpio_in[buffer_flush_bit] ? 0 : s_axis_tdata; 
 	assign m_axis_tvalid = 1'b1;
     

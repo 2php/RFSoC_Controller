@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 13:45:40 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  6 11:04:15 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -734,11 +734,14 @@
         <PORT DIR="O" LEFT="15" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="channel_select_0" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="gpio_in"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="gpio_in"/>
@@ -748,9 +751,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="gpio_in"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="gpio_in"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="gpio_in"/>
           </CONNECTIONS>
         </PORT>
@@ -1898,11 +1898,14 @@
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_clk"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_clk"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="microblaze_clk"/>
@@ -1912,9 +1915,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_clk"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_clk"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -6578,11 +6578,11 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s0_axis_aresetn"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_reset"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="rf_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="rf_resetn"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9018,11 +9018,14 @@
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="channel_select_0" PORT="mb_reset"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_reset"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_10" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_11" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_12" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_13" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_resetn"/>
+            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="microblaze_resetn"/>
@@ -9032,9 +9035,6 @@
             <CONNECTION INSTANCE="rfsoc_data_pipeline_7" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_8" PORT="microblaze_resetn"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_9" PORT="microblaze_resetn"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_14" PORT="microblaze_resetn"/>
-            <CONNECTION INSTANCE="rfsoc_data_pipeline_15" PORT="microblaze_resetn"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="microblaze_reset"/>
             <CONNECTION INSTANCE="rfsoc_adc_data_captu_0" PORT="microblaze_reset"/>
           </CONNECTIONS>
         </PORT>
@@ -10695,11 +10695,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="usp_rf_data_converter_0" PORT="s0_axis_aclk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_clk"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_0" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_1" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_2" PORT="rf_clock"/>
             <CONNECTION INSTANCE="rfsoc_data_pipeline_3" PORT="rf_clock"/>
-            <CONNECTION INSTANCE="trigger_controller_0" PORT="rf_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="dac1_clk_p" SIGIS="clk" SIGNAME="usp_rf_data_converter_0_dac1_clk_p">

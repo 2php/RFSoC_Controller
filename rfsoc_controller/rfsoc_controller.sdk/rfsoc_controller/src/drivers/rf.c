@@ -268,6 +268,23 @@ void rf_flush_adc_buffer()
 	}
 }
 
+
+void rf_set_post_delay(u8 channel, u32 val)
+{
+	gpio_select_channel(channel);
+
+	for(int i = 0; i < 32; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (val & (1 << i)) == 0 ? 0 : 1;
+		gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+
+		//cycle the post clock
+		gpio_set_pin(RF_BANK, POST_DELAY, 0x01);
+		gpio_set_pin(RF_BANK, POST_DELAY, 0x00);
+	}
+}
+
 /////////////////////////////////////////////////////////////////////////
 //TESTING FUNCTIONS//////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////

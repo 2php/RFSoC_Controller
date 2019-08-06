@@ -39,7 +39,11 @@ def init_board_object(port = None):
     elif port != None:
         portname = port
     else:
-        portname = sys.argv[1]
+        try:
+            portname = sys.argv[1]
+        except:
+           print("Invalid port name! Check Device Manager for list of valid port names (ie COM4)")
+           sys.exit()
     
     
     #make sure the provided port name is correct

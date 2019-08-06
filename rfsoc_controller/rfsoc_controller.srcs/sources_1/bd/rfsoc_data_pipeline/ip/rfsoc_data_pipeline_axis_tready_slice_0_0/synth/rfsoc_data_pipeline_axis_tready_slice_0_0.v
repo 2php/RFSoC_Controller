@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axis_tready_slice,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{}" *)
-(* CORE_GENERATION_INFO = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=axis_tready_slice,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,trigger_override_bit=0,ready_bit=1,locking_sclk=3,sdata=4,buffer_flush_bit=5,zeros_sclk=7,cycles_sclk=8,pre_waveform_sclk=10}" *)
+(* CORE_GENERATION_INFO = "rfsoc_data_pipeline_axis_tready_slice_0_0,axis_tready_slice,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=axis_tready_slice,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,trigger_override_bit=0,ready_bit=1,locking_sclk=3,sdata=4,buffer_flush_bit=5,zeros_sclk=7,cycles_sclk=8,pre_waveform_sclk=10,post_delay_sclk=13}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module rfsoc_data_pipeline_axis_tready_slice_0_0 (
@@ -118,7 +118,8 @@ output wire [2 : 0] state_out;
     .buffer_flush_bit(5),
     .zeros_sclk(7),
     .cycles_sclk(8),
-    .pre_waveform_sclk(10)
+    .pre_waveform_sclk(10),
+    .post_delay_sclk(13)
   ) inst (
     .clk(clk),
     .reset(reset),

@@ -13,7 +13,7 @@ import RFSoC_Board as rf
 #1 channel number between 1 and 16
 #2 waveform filename
 #3 waveform period in nanoseconds, will be rounded to the nearest 4 nanoseconds
-#4 waveform phase, can be a float but will be rounded to nearest quarter nanosecond
+#4 delay after experiment in nanoseconds, will be rounded to nearest 4 nanoseconds
 #5 waveform amplitude multiplication factor, must be between 0 and 1
 #6 number of cycles to playback the waveform
 #7 delay before experiment in nanoseconds, will be rounded to the nearest quarter nanosecond
@@ -45,7 +45,7 @@ if(waveform_period%4 != 0):
     print("Error, waveform period must be a multiple of 4 nanoseconds!")
     sys.exit()
 
-waveform_phase = float(sys.argv[4]) #in nanoseconds, can be negative and a float
+post_delay = int(sys.argv[4]) #in nanoseconds, can be negative and a float
 
 amp_mul_factor = float(sys.argv[5]) #between 0 and 1
 if(amp_mul_factor < 0 or amp_mul_factor > 1):
@@ -98,7 +98,7 @@ if(board == None):
     sys.exit()
     
 #If the board is valid, add the channelw
-waveform_file = rf.WaveFile(waveform_filename, waveform_period, zero_delay, amp_mul_factor, 0, 0)
+waveform_file = rf.WaveFile(waveform_filename, waveform_period, zero_delay, post_delay, amp_mul_factor, 0, 0)
 locking_file = rf.WaveFile(locking_filename, 4, 0, locking_amp_factor, 1, round(locking_phase * 4)) 
 
 c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file)
@@ -111,11 +111,11 @@ if(ib.save_board(board)):
 else:
     print("Successfully added channel #" + str(channel_number+1))
     print("Waveform file: " + waveform_filename + 
-          "\nPeriod: " + str(waveform_period) + 
-          " (ns)\nPhase: " + str(waveform_phase) + 
+          "\nPeriod: " + str(waveform_period) +  
           " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
           "\nNumber of playback cycles: " + str(num_cycles) + 
           "\nDelay before experiment: " + str(zero_delay) + 
+          " (ns)\nDelay after experiment: " + str(post_delay) +
           " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
           "\nLocking file: " + locking_filename + 
           "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)")

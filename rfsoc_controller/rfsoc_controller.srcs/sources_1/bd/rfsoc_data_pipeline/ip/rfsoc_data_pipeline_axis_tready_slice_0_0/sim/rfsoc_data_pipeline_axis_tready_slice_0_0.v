@@ -117,7 +117,8 @@ output wire [2 : 0] state_out;
     .buffer_flush_bit(5),
     .zeros_sclk(7),
     .cycles_sclk(8),
-    .pre_waveform_sclk(10)
+    .pre_waveform_sclk(10),
+    .post_delay_sclk(13)
   ) inst (
     .clk(clk),
     .reset(reset),

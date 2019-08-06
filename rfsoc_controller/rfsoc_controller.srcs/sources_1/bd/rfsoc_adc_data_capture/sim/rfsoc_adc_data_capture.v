@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Jul 26 13:03:07 2019
+//Date        : Tue Aug  6 11:02:49 2019
 //Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_adc_data_capture.bd
 //Design      : rfsoc_adc_data_capture
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "rfsoc_adc_data_capture,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rfsoc_adc_data_capture,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rfsoc_adc_data_capture.hwdef" *) 
+(* CORE_GENERATION_INFO = "rfsoc_adc_data_capture,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=rfsoc_adc_data_capture,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "rfsoc_adc_data_capture.hwdef" *) 
 module rfsoc_adc_data_capture
    (M_AXIS_0_tdata,
     M_AXIS_0_tready,
@@ -94,6 +94,9 @@ module rfsoc_adc_data_capture
   wire [31:0]axis_data_fifo_8_M_AXIS_TDATA;
   wire axis_data_fifo_8_M_AXIS_TREADY;
   wire axis_data_fifo_8_M_AXIS_TVALID;
+  wire [127:0]axis_register_slice_0_M_AXIS_TDATA;
+  wire axis_register_slice_0_M_AXIS_TREADY;
+  wire axis_register_slice_0_M_AXIS_TVALID;
   wire ext_trigger_0_1;
   wire [15:0]gpio_buffer_0_gpio_out;
   wire [15:0]gpio_buffer_0_m_axis_TDATA;
@@ -102,9 +105,9 @@ module rfsoc_adc_data_capture
   wire [15:0]gpio_in_0_1;
   wire rf_clk_0_1;
   wire rf_reset_0_1;
-  wire [127:0]s_axis_0_1_TDATA;
-  wire s_axis_0_1_TREADY;
-  wire s_axis_0_1_TVALID;
+  wire [127:0]s_axis_1_TDATA;
+  wire s_axis_1_TREADY;
+  wire s_axis_1_TVALID;
   wire s_axis_aresetn_0_1;
 
   assign M_AXIS_0_tdata[31:0] = axis_data_fifo_0_M_AXIS_TDATA;
@@ -124,10 +127,10 @@ module rfsoc_adc_data_capture
   assign gpio_in_0_1 = gpio_in[15:0];
   assign rf_clk_0_1 = rf_clk;
   assign rf_reset_0_1 = rf_reset;
-  assign s_axis_0_1_TDATA = s_axis_tdata[127:0];
-  assign s_axis_0_1_TVALID = s_axis_tvalid;
+  assign s_axis_1_TDATA = s_axis_tdata[127:0];
+  assign s_axis_1_TVALID = s_axis_tvalid;
   assign s_axis_aresetn_0_1 = microblaze_reset;
-  assign s_axis_tready = s_axis_0_1_TREADY;
+  assign s_axis_tready = s_axis_1_TREADY;
   rfsoc_adc_data_capture_adc_controller_0_0 adc_controller_0
        (.ext_trigger(ext_trigger_0_1),
         .gpio_in(gpio_buffer_0_gpio_out),
@@ -145,10 +148,10 @@ module rfsoc_adc_data_capture
         .m_axis_tvalid_3(adc_controller_0_m_axis_3_TVALID),
         .rf_clk(rf_clk_0_1),
         .rf_reset(rf_reset_0_1),
-        .s_axis_tdata(s_axis_0_1_TDATA),
-        .s_axis_tready(s_axis_0_1_TREADY),
-        .s_axis_tvalid(s_axis_0_1_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_0_7 axis_data_fifo_0
+        .s_axis_tdata(axis_register_slice_0_M_AXIS_TDATA),
+        .s_axis_tready(axis_register_slice_0_M_AXIS_TREADY),
+        .s_axis_tvalid(axis_register_slice_0_M_AXIS_TVALID));
+  rfsoc_adc_data_capture_axis_data_fifo_0_8 axis_data_fifo_0
        (.m_axis_aclk(Net),
         .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
@@ -158,7 +161,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(axis_data_fifo_5_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_5_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_5_M_AXIS_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_1_3 axis_data_fifo_1
+  rfsoc_adc_data_capture_axis_data_fifo_1_4 axis_data_fifo_1
        (.m_axis_aclk(Net),
         .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
@@ -168,7 +171,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(axis_data_fifo_6_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_6_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_6_M_AXIS_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_2_3 axis_data_fifo_2
+  rfsoc_adc_data_capture_axis_data_fifo_2_4 axis_data_fifo_2
        (.m_axis_aclk(Net),
         .m_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
@@ -178,7 +181,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(axis_data_fifo_7_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_7_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_7_M_AXIS_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_3_3 axis_data_fifo_3
+  rfsoc_adc_data_capture_axis_data_fifo_3_4 axis_data_fifo_3
        (.m_axis_aclk(Net),
         .m_axis_tdata(axis_data_fifo_3_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_3_M_AXIS_TREADY),
@@ -188,7 +191,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(axis_data_fifo_8_M_AXIS_TDATA),
         .s_axis_tready(axis_data_fifo_8_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_fifo_8_M_AXIS_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_4_4 axis_data_fifo_4
+  rfsoc_adc_data_capture_axis_data_fifo_4_5 axis_data_fifo_4
        (.m_axis_aclk(rf_clk_0_1),
         .m_axis_tdata(axis_data_fifo_4_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_4_M_AXIS_TREADY),
@@ -198,7 +201,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(gpio_buffer_0_m_axis_TDATA),
         .s_axis_tready(gpio_buffer_0_m_axis_TREADY),
         .s_axis_tvalid(gpio_buffer_0_m_axis_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_5_7 axis_data_fifo_5
+  rfsoc_adc_data_capture_axis_data_fifo_5_8 axis_data_fifo_5
        (.m_axis_tdata(axis_data_fifo_5_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_5_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_5_M_AXIS_TVALID),
@@ -207,7 +210,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(adc_controller_0_m_axis_0_TDATA),
         .s_axis_tready(adc_controller_0_m_axis_0_TREADY),
         .s_axis_tvalid(adc_controller_0_m_axis_0_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_6_2 axis_data_fifo_6
+  rfsoc_adc_data_capture_axis_data_fifo_6_3 axis_data_fifo_6
        (.m_axis_tdata(axis_data_fifo_6_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_6_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_6_M_AXIS_TVALID),
@@ -216,7 +219,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(adc_controller_0_m_axis_1_TDATA),
         .s_axis_tready(adc_controller_0_m_axis_1_TREADY),
         .s_axis_tvalid(adc_controller_0_m_axis_1_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_7_2 axis_data_fifo_7
+  rfsoc_adc_data_capture_axis_data_fifo_7_3 axis_data_fifo_7
        (.m_axis_tdata(axis_data_fifo_7_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_7_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_7_M_AXIS_TVALID),
@@ -225,7 +228,7 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(adc_controller_0_m_axis_2_TDATA),
         .s_axis_tready(adc_controller_0_m_axis_2_TREADY),
         .s_axis_tvalid(adc_controller_0_m_axis_2_TVALID));
-  rfsoc_adc_data_capture_axis_data_fifo_8_2 axis_data_fifo_8
+  rfsoc_adc_data_capture_axis_data_fifo_8_3 axis_data_fifo_8
        (.m_axis_tdata(axis_data_fifo_8_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_8_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_8_M_AXIS_TVALID),
@@ -234,6 +237,15 @@ module rfsoc_adc_data_capture
         .s_axis_tdata(adc_controller_0_m_axis_3_TDATA),
         .s_axis_tready(adc_controller_0_m_axis_3_TREADY),
         .s_axis_tvalid(adc_controller_0_m_axis_3_TVALID));
+  rfsoc_adc_data_capture_axis_register_slice_0_0 axis_register_slice_0
+       (.aclk(rf_clk_0_1),
+        .aresetn(rf_reset_0_1),
+        .m_axis_tdata(axis_register_slice_0_M_AXIS_TDATA),
+        .m_axis_tready(axis_register_slice_0_M_AXIS_TREADY),
+        .m_axis_tvalid(axis_register_slice_0_M_AXIS_TVALID),
+        .s_axis_tdata(s_axis_1_TDATA),
+        .s_axis_tready(s_axis_1_TREADY),
+        .s_axis_tvalid(s_axis_1_TVALID));
   rfsoc_adc_data_capture_gpio_buffer_0_0 gpio_buffer_0
        (.gpio_in(gpio_in_0_1),
         .gpio_out(gpio_buffer_0_gpio_out),

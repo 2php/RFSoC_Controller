@@ -194,3 +194,17 @@ con
 ----------------End of Script----------------
 
 10:46:04 INFO  : Launch script is exported to file 'C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_rfsoc_controller.elf_on_local.tcl'
+11:31:30 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1565116160732,  Project:1564175425766
+11:31:30 INFO  : Project top_level_wrapper_hw_platform_0's source hardware specification located at C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+11:31:34 INFO  : Copied contents of C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf into \top_level_wrapper_hw_platform_0\system.hdf.
+11:31:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:31:50 INFO  : 
+11:31:50 INFO  : Updating hardware inferred compiler options for rfsoc_controller.
+11:31:51 INFO  : Clearing existing target manager status.
+11:31:51 INFO  : Closing and re-opening the MSS file of ther project rfsoc_controller_bsp
+11:31:51 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+11:32:03 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:00:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:00:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0} -index 0' command is executed.
+13:01:07 INFO  : FPGA configured successfully with bitstream "C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper_hw_platform_0/download.bit"

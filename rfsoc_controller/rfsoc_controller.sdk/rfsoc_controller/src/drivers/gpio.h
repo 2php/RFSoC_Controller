@@ -27,6 +27,7 @@
 #define PRE_WAVEFORM_SCLK 10
 #define INT_TRIGGER 11
 #define ADC_CYCLES 12
+#define POST_DELAY 13
 
 #define RF_BANK 2
 #define LED_BANK 1

@@ -176,10 +176,13 @@ class WaveFile:
     zero_delay_bytestream = []
     is_locking = 0
     locking_shift = 0
+    post_delay = 0
+    post_delay_bytestream = []
     
         
-    def __init__(self, fn, per, d, af, il, lshift):
+    def __init__(self, fn, per, d, pd, af, il, lshift):
         self.delay = round(d * 4) #to get to number of 16-bit samples
+        self.post_delay = round(pd / 4) #to get number of clock cycles
         self.period = per
         self.fileName = fn
         self.amp_factor = af
@@ -250,6 +253,8 @@ class WaveFile:
         #generate the zero delay bytestream
         self.zero_delay_bytestream = int_to_bytestream(round((self.delay - fine_delay)/16), 4)
         
+        #generate the post delay bytestream
+        self.post_delay_bytestream = int_to_bytestream(self.post_delay, 4)
         
         
         
@@ -418,6 +423,15 @@ class RFSoC_Board:
         if(ack_val != ACK_RESPONSE):
             print("Error, bad acknowledgement recieved from board while sending prewaveform bytes, ack error code was: " + str(ack_val) + "\n")
             return 1 
+        
+        #send the post delay bytes
+        ack_val = self.write_bytes(target_channel.experiment_wf.post_delay_bytestream)
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending post delay value, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        
         
         #send the length
         ack_val = self.write_bytes(int_to_bytestream(len(bs),4))

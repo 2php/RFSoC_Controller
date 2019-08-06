@@ -278,6 +278,9 @@ proc create_root_design { parentCell } {
    CONFIG.TDATA_NUM_BYTES {4} \
  ] $axis_data_fifo_8
 
+  # Create instance: axis_register_slice_0, and set properties
+  set axis_register_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0 ]
+
   # Create instance: gpio_buffer_0, and set properties
   set block_name gpio_buffer
   set block_cell_name gpio_buffer_0
@@ -303,16 +306,17 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axis_data_fifo_6_M_AXIS [get_bd_intf_pins axis_data_fifo_1/S_AXIS] [get_bd_intf_pins axis_data_fifo_6/M_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_7_M_AXIS [get_bd_intf_pins axis_data_fifo_2/S_AXIS] [get_bd_intf_pins axis_data_fifo_7/M_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_8_M_AXIS [get_bd_intf_pins axis_data_fifo_3/S_AXIS] [get_bd_intf_pins axis_data_fifo_8/M_AXIS]
+  connect_bd_intf_net -intf_net axis_register_slice_0_M_AXIS [get_bd_intf_pins adc_controller_0/s_axis] [get_bd_intf_pins axis_register_slice_0/M_AXIS]
   connect_bd_intf_net -intf_net gpio_buffer_0_m_axis [get_bd_intf_pins axis_data_fifo_4/S_AXIS] [get_bd_intf_pins gpio_buffer_0/m_axis]
-  connect_bd_intf_net -intf_net s_axis_0_1 [get_bd_intf_ports s_axis] [get_bd_intf_pins adc_controller_0/s_axis]
+  connect_bd_intf_net -intf_net s_axis_1 [get_bd_intf_ports s_axis] [get_bd_intf_pins axis_register_slice_0/S_AXIS]
 
   # Create port connections
   connect_bd_net -net Net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins axis_data_fifo_1/m_axis_aclk] [get_bd_pins axis_data_fifo_2/m_axis_aclk] [get_bd_pins axis_data_fifo_3/m_axis_aclk] [get_bd_pins axis_data_fifo_4/s_axis_aclk]
   connect_bd_net -net ext_trigger_0_1 [get_bd_ports ext_trigger] [get_bd_pins adc_controller_0/ext_trigger]
   connect_bd_net -net gpio_buffer_0_gpio_out [get_bd_pins adc_controller_0/gpio_in] [get_bd_pins gpio_buffer_0/gpio_out]
   connect_bd_net -net gpio_in_0_1 [get_bd_ports gpio_in] [get_bd_pins gpio_buffer_0/gpio_in]
-  connect_bd_net -net rf_clk_0_1 [get_bd_ports rf_clk] [get_bd_pins adc_controller_0/rf_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_data_fifo_2/s_axis_aclk] [get_bd_pins axis_data_fifo_3/s_axis_aclk] [get_bd_pins axis_data_fifo_4/m_axis_aclk] [get_bd_pins axis_data_fifo_5/s_axis_aclk] [get_bd_pins axis_data_fifo_6/s_axis_aclk] [get_bd_pins axis_data_fifo_7/s_axis_aclk] [get_bd_pins axis_data_fifo_8/s_axis_aclk]
-  connect_bd_net -net rf_reset_0_1 [get_bd_ports rf_reset] [get_bd_pins adc_controller_0/rf_reset] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_data_fifo_2/s_axis_aresetn] [get_bd_pins axis_data_fifo_3/s_axis_aresetn] [get_bd_pins axis_data_fifo_5/s_axis_aresetn] [get_bd_pins axis_data_fifo_6/s_axis_aresetn] [get_bd_pins axis_data_fifo_7/s_axis_aresetn] [get_bd_pins axis_data_fifo_8/s_axis_aresetn]
+  connect_bd_net -net rf_clk_0_1 [get_bd_ports rf_clk] [get_bd_pins adc_controller_0/rf_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_data_fifo_2/s_axis_aclk] [get_bd_pins axis_data_fifo_3/s_axis_aclk] [get_bd_pins axis_data_fifo_4/m_axis_aclk] [get_bd_pins axis_data_fifo_5/s_axis_aclk] [get_bd_pins axis_data_fifo_6/s_axis_aclk] [get_bd_pins axis_data_fifo_7/s_axis_aclk] [get_bd_pins axis_data_fifo_8/s_axis_aclk] [get_bd_pins axis_register_slice_0/aclk]
+  connect_bd_net -net rf_reset_0_1 [get_bd_ports rf_reset] [get_bd_pins adc_controller_0/rf_reset] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_data_fifo_2/s_axis_aresetn] [get_bd_pins axis_data_fifo_3/s_axis_aresetn] [get_bd_pins axis_data_fifo_5/s_axis_aresetn] [get_bd_pins axis_data_fifo_6/s_axis_aresetn] [get_bd_pins axis_data_fifo_7/s_axis_aresetn] [get_bd_pins axis_data_fifo_8/s_axis_aresetn] [get_bd_pins axis_register_slice_0/aresetn]
   connect_bd_net -net s_axis_aresetn_0_1 [get_bd_ports microblaze_reset] [get_bd_pins axis_data_fifo_4/s_axis_aresetn]
 
   # Create address segments

@@ -1,6 +1,6 @@
-10:46:02 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+13:02:12 **** Incremental Build of configuration Debug for project rfsoc_controller ****
 make all 
 make: Nothing to be done for 'all'.
 
-10:46:02 Build Finished (took 155ms)
+13:02:12 Build Finished (took 154ms)
 

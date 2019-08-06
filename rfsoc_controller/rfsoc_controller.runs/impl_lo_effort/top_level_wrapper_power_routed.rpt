@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Fri Jul 26 14:08:20 2019
+| Date             : Tue Aug  6 11:27:13 2019
 | Host             : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_wrapper_power_routed.rpt -pb top_level_wrapper_power_summary_routed.pb -rpx top_level_wrapper_power_routed.rpx
 | Design           : top_level_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.446        |
+| Total On-Chip Power (W)  | 6.541        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.282        |
-| Device Static (W)        | 1.165        |
+| Dynamic (W)              | 5.375        |
+| Device Static (W)        | 1.166        |
 | Effective TJA (C/W)      | 0.8          |
-| Max Ambient (C)          | 95.1         |
-| Junction Temperature (C) | 29.9         |
+| Max Ambient (C)          | 95.0         |
+| Junction Temperature (C) | 30.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,26 +52,26 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.288 |       31 |       --- |             --- |
-| CLB Logic                |     0.186 |    75209 |       --- |             --- |
-|   LUT as Logic           |     0.122 |    21961 |    425280 |            5.16 |
+| Clocks                   |     0.310 |       31 |       --- |             --- |
+| CLB Logic                |     0.196 |    76948 |       --- |             --- |
+|   LUT as Logic           |     0.131 |    22466 |    425280 |            5.28 |
 |   LUT as Distributed RAM |     0.046 |     3152 |    213600 |            1.48 |
-|   Register               |     0.016 |    40839 |    850560 |            4.80 |
-|   CARRY8                 |     0.001 |      298 |     53160 |            0.56 |
+|   Register               |     0.017 |    41684 |    850560 |            4.90 |
+|   CARRY8                 |     0.002 |      362 |     53160 |            0.68 |
 |   LUT as Shift Register  |    <0.001 |      106 |    213600 |            0.05 |
-|   Others                 |    <0.001 |     2345 |       --- |             --- |
-|   BUFG                   |    <0.001 |        2 |        64 |            3.13 |
+|   Others                 |    <0.001 |     2365 |       --- |             --- |
+|   BUFG                   |    <0.001 |        4 |        64 |            6.25 |
 |   F7/F8 Muxes            |     0.000 |      218 |    425280 |            0.05 |
-| Signals                  |     0.641 |    81564 |       --- |             --- |
+| Signals                  |     0.699 |    82553 |       --- |             --- |
 | Block RAM                |     0.223 |      384 |      1080 |           35.56 |
-| URAM                     |     0.558 |       64 |        80 |           80.00 |
+| URAM                     |     0.560 |       64 |        80 |           80.00 |
 | RFAMS                    |     3.282 |        8 |       --- |             --- |
 |   RFDAC                  |     2.983 |        4 |         4 |          100.00 |
 |   RFADC                  |     0.299 |        4 |         4 |          100.00 |
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.005 |       14 |       408 |            3.43 |
-| Static Power             |     1.165 |          |           |                 |
-| Total                    |     6.446 |          |           |                 |
+| Static Power             |     1.166 |          |           |                 |
+| Total                    |     6.541 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -81,10 +81,10 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     2.552 |       2.217 |      0.335 |
+| Vccint          |       0.850 |     2.663 |       2.327 |      0.336 |
 | Vccint_io       |       0.850 |     0.072 |       0.001 |      0.071 |
 | Vccbram         |       0.850 |     0.052 |       0.014 |      0.038 |
-| Vccaux          |       1.800 |     0.333 |       0.054 |      0.278 |
+| Vccaux          |       1.800 |     0.332 |       0.054 |      0.278 |
 | Vccaux_io       |       1.800 |     0.060 |       0.002 |      0.058 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -182,52 +182,56 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_level_wrapper             |     5.282 |
-|   top_level_i                 |     5.279 |
+| top_level_wrapper             |     5.375 |
+|   top_level_i                 |     5.373 |
 |     clk_wiz_1                 |     0.101 |
 |       inst                    |     0.101 |
 |     microblaze_0              |     0.024 |
 |       U0                      |     0.024 |
+|     microblaze_0_axi_periph   |     0.001 |
+|       xbar                    |     0.001 |
 |     microblaze_0_local_memory |     0.045 |
 |       lmb_bram                |     0.045 |
-|     rfsoc_adc_data_captu_0    |     0.256 |
-|       inst                    |     0.256 |
-|     rfsoc_data_pipeline_0     |     0.098 |
-|       inst                    |     0.098 |
-|     rfsoc_data_pipeline_1     |     0.096 |
+|     proc_sys_reset_4          |     0.001 |
+|       U0                      |     0.001 |
+|     rfsoc_adc_data_captu_0    |     0.281 |
+|       inst                    |     0.281 |
+|     rfsoc_data_pipeline_0     |     0.101 |
+|       inst                    |     0.101 |
+|     rfsoc_data_pipeline_1     |     0.101 |
+|       inst                    |     0.101 |
+|     rfsoc_data_pipeline_10    |     0.101 |
+|       inst                    |     0.101 |
+|     rfsoc_data_pipeline_11    |     0.096 |
 |       inst                    |     0.096 |
-|     rfsoc_data_pipeline_10    |     0.098 |
-|       inst                    |     0.098 |
-|     rfsoc_data_pipeline_11    |     0.100 |
-|       inst                    |     0.100 |
-|     rfsoc_data_pipeline_12    |     0.091 |
-|       inst                    |     0.091 |
-|     rfsoc_data_pipeline_13    |     0.094 |
-|       inst                    |     0.094 |
-|     rfsoc_data_pipeline_14    |     0.092 |
-|       inst                    |     0.092 |
-|     rfsoc_data_pipeline_15    |     0.093 |
-|       inst                    |     0.093 |
-|     rfsoc_data_pipeline_2     |     0.099 |
-|       inst                    |     0.099 |
-|     rfsoc_data_pipeline_3     |     0.092 |
-|       inst                    |     0.092 |
-|     rfsoc_data_pipeline_4     |     0.095 |
-|       inst                    |     0.095 |
-|     rfsoc_data_pipeline_5     |     0.092 |
-|       inst                    |     0.092 |
-|     rfsoc_data_pipeline_6     |     0.095 |
-|       inst                    |     0.095 |
-|     rfsoc_data_pipeline_7     |     0.097 |
+|     rfsoc_data_pipeline_12    |     0.097 |
 |       inst                    |     0.097 |
-|     rfsoc_data_pipeline_8     |     0.093 |
-|       inst                    |     0.093 |
-|     rfsoc_data_pipeline_9     |     0.092 |
-|       inst                    |     0.092 |
+|     rfsoc_data_pipeline_13    |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_14    |     0.101 |
+|       inst                    |     0.101 |
+|     rfsoc_data_pipeline_15    |     0.097 |
+|       inst                    |     0.097 |
+|     rfsoc_data_pipeline_2     |     0.097 |
+|       inst                    |     0.097 |
+|     rfsoc_data_pipeline_3     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_4     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_5     |     0.103 |
+|       inst                    |     0.103 |
+|     rfsoc_data_pipeline_6     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_7     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_8     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_9     |     0.099 |
+|       inst                    |     0.099 |
 |     trigger_controller_0      |     0.002 |
 |       inst                    |     0.002 |
-|     usp_rf_data_converter_0   |     3.330 |
-|       inst                    |     3.330 |
+|     usp_rf_data_converter_0   |     3.318 |
+|       inst                    |     3.318 |
 +-------------------------------+-----------+
 
 

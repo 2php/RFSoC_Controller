@@ -71,6 +71,6 @@ void rf_read_adc_buffer(u8* buffer, u32 num_samples);
 void rf_set_adc_cycles(u32 cycles);
 u32 rf_get_last_adc_cycles();
 void rf_flush_adc_buffer();
-
+void rf_set_post_delay(u8 channel, u32 val);
 
 #endif /* SRC_DRIVERS_RF_H_ */
