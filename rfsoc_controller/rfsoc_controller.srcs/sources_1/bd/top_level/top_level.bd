@@ -858,16 +858,16 @@
               "m01_couplers/S_AXI"
             ]
           },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
           "m03_couplers_to_microblaze_0_axi_periph": {
             "interface_ports": [
               "M03_AXI",
               "m03_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           },
           "xbar_to_m03_couplers": {
@@ -1174,6 +1174,9 @@
           },
           "DAC_Mixer_Type33": {
             "value": "0"
+          },
+          "DAC_Output_Current": {
+            "value": "1"
           },
           "DAC_Slice00_Enable": {
             "value": "true"

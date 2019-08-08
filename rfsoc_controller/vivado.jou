@@ -119,3 +119,21 @@ launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
 wait_on_run impl_lo_effort
 file copy -force C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
 
+startgroup
+set_property -dict [list CONFIG.DAC_Output_Current {1}] [get_bd_cells usp_rf_data_converter_0]
+endgroup
+save_bd_design
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+wait_on_run impl_lo_effort
+open_hw
+file copy -force C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+launch_sdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+file copy -force C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+launch_sdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+file mkdir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk
+file copy -force C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/top_level_wrapper.sysdef C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+
+launch_sdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf

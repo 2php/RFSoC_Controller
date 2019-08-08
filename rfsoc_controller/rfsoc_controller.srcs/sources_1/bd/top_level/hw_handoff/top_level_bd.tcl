@@ -534,6 +534,7 @@ proc create_root_design { parentCell } {
    CONFIG.DAC_Mixer_Type31 {0} \
    CONFIG.DAC_Mixer_Type32 {0} \
    CONFIG.DAC_Mixer_Type33 {0} \
+   CONFIG.DAC_Output_Current {1} \
    CONFIG.DAC_Slice00_Enable {true} \
    CONFIG.DAC_Slice01_Enable {true} \
    CONFIG.DAC_Slice02_Enable {true} \

@@ -322,7 +322,7 @@ class RFSoC_Board:
             return ret_val
         except:
             self.close()
-            return 0
+            return 28
         
     def add_channel(self, c):
         #look and see if we have the channel already

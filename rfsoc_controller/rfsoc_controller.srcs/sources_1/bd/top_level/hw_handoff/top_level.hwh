@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  6 11:04:15 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug  8 14:26:23 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -9256,7 +9256,7 @@
         <PARAMETER NAME="C_Converter_Setup" VALUE="1"/>
         <PARAMETER NAME="C_ADC_Debug" VALUE="false"/>
         <PARAMETER NAME="C_DAC_Debug" VALUE="false"/>
-        <PARAMETER NAME="C_DAC_Output_Current" VALUE="0"/>
+        <PARAMETER NAME="C_DAC_Output_Current" VALUE="1"/>
         <PARAMETER NAME="C_DAC_RTS" VALUE="false"/>
         <PARAMETER NAME="C_ADC_RTS" VALUE="false"/>
         <PARAMETER NAME="C_Analog_Detection" VALUE="1"/>
@@ -9927,7 +9927,7 @@
         <PARAMETER NAME="DAC231_En" VALUE="false"/>
         <PARAMETER NAME="ADC_Debug" VALUE="false"/>
         <PARAMETER NAME="DAC_Debug" VALUE="false"/>
-        <PARAMETER NAME="DAC_Output_Current" VALUE="0"/>
+        <PARAMETER NAME="DAC_Output_Current" VALUE="1"/>
         <PARAMETER NAME="ADC_RTS" VALUE="false"/>
         <PARAMETER NAME="DAC_RTS" VALUE="false"/>
         <PARAMETER NAME="Analog_Detection" VALUE="1"/>

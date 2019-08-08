@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Aug  6 11:27:13 2019
+| Date             : Thu Aug  8 14:50:56 2019
 | Host             : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_wrapper_power_routed.rpt -pb top_level_wrapper_power_summary_routed.pb -rpx top_level_wrapper_power_routed.rpx
 | Design           : top_level_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.541        |
+| Total On-Chip Power (W)  | 6.552        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.375        |
+| Dynamic (W)              | 5.387        |
 | Device Static (W)        | 1.166        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 95.0         |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.310 |       31 |       --- |             --- |
-| CLB Logic                |     0.196 |    76948 |       --- |             --- |
-|   LUT as Logic           |     0.131 |    22466 |    425280 |            5.28 |
+| Clocks                   |     0.333 |       31 |       --- |             --- |
+| CLB Logic                |     0.195 |    76975 |       --- |             --- |
+|   LUT as Logic           |     0.130 |    22464 |    425280 |            5.28 |
 |   LUT as Distributed RAM |     0.046 |     3152 |    213600 |            1.48 |
-|   Register               |     0.017 |    41684 |    850560 |            4.90 |
+|   Register               |     0.017 |    41720 |    850560 |            4.91 |
 |   CARRY8                 |     0.002 |      362 |     53160 |            0.68 |
 |   LUT as Shift Register  |    <0.001 |      106 |    213600 |            0.05 |
 |   Others                 |    <0.001 |     2365 |       --- |             --- |
-|   BUFG                   |    <0.001 |        4 |        64 |            6.25 |
-|   F7/F8 Muxes            |     0.000 |      218 |    425280 |            0.05 |
-| Signals                  |     0.699 |    82553 |       --- |             --- |
+|   BUFG                   |    <0.001 |        2 |        64 |            3.13 |
+|   F7/F8 Muxes            |     0.000 |      213 |    425280 |            0.05 |
+| Signals                  |     0.690 |    82585 |       --- |             --- |
 | Block RAM                |     0.223 |      384 |      1080 |           35.56 |
 | URAM                     |     0.560 |       64 |        80 |           80.00 |
 | RFAMS                    |     3.282 |        8 |       --- |             --- |
@@ -71,7 +71,7 @@ Table of Contents
 | MMCM                     |     0.098 |        0 |       --- |             --- |
 | I/O                      |     0.005 |       14 |       408 |            3.43 |
 | Static Power             |     1.166 |          |           |                 |
-| Total                    |     6.541 |          |           |                 |
+| Total                    |     6.552 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -81,7 +81,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     2.663 |       2.327 |      0.336 |
+| Vccint          |       0.850 |     2.677 |       2.340 |      0.336 |
 | Vccint_io       |       0.850 |     0.072 |       0.001 |      0.071 |
 | Vccbram         |       0.850 |     0.052 |       0.014 |      0.038 |
 | Vccaux          |       1.800 |     0.332 |       0.054 |      0.278 |
@@ -182,52 +182,50 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_level_wrapper             |     5.375 |
-|   top_level_i                 |     5.373 |
+| top_level_wrapper             |     5.387 |
+|   top_level_i                 |     5.384 |
 |     clk_wiz_1                 |     0.101 |
 |       inst                    |     0.101 |
-|     microblaze_0              |     0.024 |
-|       U0                      |     0.024 |
-|     microblaze_0_axi_periph   |     0.001 |
-|       xbar                    |     0.001 |
+|     microblaze_0              |     0.022 |
+|       U0                      |     0.022 |
 |     microblaze_0_local_memory |     0.045 |
 |       lmb_bram                |     0.045 |
 |     proc_sys_reset_4          |     0.001 |
 |       U0                      |     0.001 |
-|     rfsoc_adc_data_captu_0    |     0.281 |
-|       inst                    |     0.281 |
-|     rfsoc_data_pipeline_0     |     0.101 |
-|       inst                    |     0.101 |
-|     rfsoc_data_pipeline_1     |     0.101 |
-|       inst                    |     0.101 |
-|     rfsoc_data_pipeline_10    |     0.101 |
-|       inst                    |     0.101 |
+|     rfsoc_adc_data_captu_0    |     0.287 |
+|       inst                    |     0.287 |
+|     rfsoc_data_pipeline_0     |     0.096 |
+|       inst                    |     0.096 |
+|     rfsoc_data_pipeline_1     |     0.099 |
+|       inst                    |     0.099 |
+|     rfsoc_data_pipeline_10    |     0.100 |
+|       inst                    |     0.100 |
 |     rfsoc_data_pipeline_11    |     0.096 |
 |       inst                    |     0.096 |
-|     rfsoc_data_pipeline_12    |     0.097 |
-|       inst                    |     0.097 |
+|     rfsoc_data_pipeline_12    |     0.100 |
+|       inst                    |     0.100 |
 |     rfsoc_data_pipeline_13    |     0.100 |
 |       inst                    |     0.100 |
-|     rfsoc_data_pipeline_14    |     0.101 |
+|     rfsoc_data_pipeline_14    |     0.097 |
+|       inst                    |     0.097 |
+|     rfsoc_data_pipeline_15    |     0.099 |
+|       inst                    |     0.099 |
+|     rfsoc_data_pipeline_2     |     0.100 |
+|       inst                    |     0.100 |
+|     rfsoc_data_pipeline_3     |     0.102 |
+|       inst                    |     0.102 |
+|     rfsoc_data_pipeline_4     |     0.106 |
+|       inst                    |     0.106 |
+|     rfsoc_data_pipeline_5     |     0.101 |
 |       inst                    |     0.101 |
-|     rfsoc_data_pipeline_15    |     0.097 |
-|       inst                    |     0.097 |
-|     rfsoc_data_pipeline_2     |     0.097 |
-|       inst                    |     0.097 |
-|     rfsoc_data_pipeline_3     |     0.100 |
-|       inst                    |     0.100 |
-|     rfsoc_data_pipeline_4     |     0.100 |
-|       inst                    |     0.100 |
-|     rfsoc_data_pipeline_5     |     0.103 |
-|       inst                    |     0.103 |
 |     rfsoc_data_pipeline_6     |     0.100 |
 |       inst                    |     0.100 |
-|     rfsoc_data_pipeline_7     |     0.100 |
-|       inst                    |     0.100 |
-|     rfsoc_data_pipeline_8     |     0.100 |
-|       inst                    |     0.100 |
-|     rfsoc_data_pipeline_9     |     0.099 |
-|       inst                    |     0.099 |
+|     rfsoc_data_pipeline_7     |     0.107 |
+|       inst                    |     0.107 |
+|     rfsoc_data_pipeline_8     |     0.105 |
+|       inst                    |     0.105 |
+|     rfsoc_data_pipeline_9     |     0.095 |
+|       inst                    |     0.095 |
 |     trigger_controller_0      |     0.002 |
 |       inst                    |     0.002 |
 |     usp_rf_data_converter_0   |     3.318 |
