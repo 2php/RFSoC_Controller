@@ -99,7 +99,7 @@ if(board == None):
     
 #If the board is valid, add the channelw
 waveform_file = rf.WaveFile(waveform_filename, waveform_period, zero_delay, post_delay, amp_mul_factor, 0, 0)
-locking_file = rf.WaveFile(locking_filename, 4, 0, locking_amp_factor, 1, round(locking_phase * 4)) 
+locking_file = rf.WaveFile(locking_filename, 4, 0, 0, locking_amp_factor, 1, round(locking_phase * 4)) 
 
 c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file)
 
