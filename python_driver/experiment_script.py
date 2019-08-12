@@ -27,6 +27,7 @@ try:
     wf0 = rf.WaveFile("sawtooth.txt", 50*4, 0, 0, 0.05, 0, 0)
     wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 200, 0.75, 0, 0)
     wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 0, 0.75, 0, 0)
+    wf3 = rf.WaveFile("locking_waveform.txt", 4, 0, 0, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
     #wf4 = rf.WaveFile("2_dc_square_wave.txt", 50*rf.DAC_WORD_PERIOD, 0*4, 1)

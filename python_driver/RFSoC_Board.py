@@ -72,6 +72,11 @@ def stream_scale(stream, old_min, old_max, new_min, new_max):
 def stream_shift(stream, shift):
     new_stream = []
     index = shift*-1
+    
+    #if we're just shifting back to where we started
+    if(index >= len(stream)):
+        index = index % len(stream)
+    
     #fix the index
     if(index < 0):
         index += len(stream)
@@ -255,6 +260,9 @@ class WaveFile:
         
         #generate the post delay bytestream
         self.post_delay_bytestream = int_to_bytestream(self.post_delay, 4)
+        
+        if(len(self.wordstream) <= 16):
+            print("Warning, waveform period is equal to or less than 4ns, repeat cycles must be greater than 1 for this waveform to work correctly")
         
         
         
