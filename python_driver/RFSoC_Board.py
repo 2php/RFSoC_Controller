@@ -23,7 +23,8 @@ NANOSECONDS_PER_DAC_WORD = 4
 ADC_TIMEOUT = 1
 INPUT_WAVEFORM_MIN = -1
 INPUT_WAVEFORM_MAX = 1
-
+UART_TIMEOUT = 1
+MAX_BYTESTREAM_SIZE = 4096 * 16 * 2
 #Commands
 PING_BOARD = 0x00
 RF_LOAD_WAVEFORM = 0x01
@@ -150,6 +151,7 @@ class Channel:
         self.repeat_cycles = rc
         self.locking_wf = lf
         self.experiment_wf = ef
+        self.short_waveform_check()
         
     def get_byte_stream(self):
         return self.experiment_wf.bytestream
@@ -166,7 +168,17 @@ class Channel:
     def get_repeat_clock_cycle_bytes(self):
         return int_to_bytestream((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)), 4)
         
-   
+    def short_waveform_check(self):
+       #if we have a waveform that is 4ns long and has a single repeat cycle
+       if(self.experiment_wf.period == 4 and self. repeat_cycles == 1):
+           #figure out how much time at the end must be set to 0
+           samples_to_kill = 16 - self.experiment_wf.delay%16 #in number of samples
+           for i in range(0, samples_to_kill):
+               self.experiment_wf.wordstream[15-i] = 0x0000
+               self.experiment_wf.bytestream[31-(2*i)] = 0x00
+               self.experiment_wf.bytestream[31-(2*i) - 1] = 0x00
+           
+           
     
 class WaveFile:
     
@@ -177,6 +189,7 @@ class WaveFile:
     period = 0 #in nanoseconds
     delay = 0 #in number of DAC samples (16-bit samples), converted from nanoseconds
     amp_factor = 1
+    pre_waveform_wordstream = []
     pre_waveform_bytestream = []
     zero_delay_bytestream = []
     is_locking = 0
@@ -187,7 +200,7 @@ class WaveFile:
         
     def __init__(self, fn, per, d, pd, af, il, lshift):
         self.delay = round(d * 4) #to get to number of 16-bit samples
-        self.post_delay = round(pd / 4) #to get number of clock cycles
+        self.post_delay = round(pd / 4) #to get number of clock cycles, one cycle is 16 16-bit samples
         self.period = per
         self.fileName = fn
         self.amp_factor = af
@@ -234,26 +247,32 @@ class WaveFile:
             self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
             return
             
+        #if our period is too short
+        if(self.period%4 != 0):
+            print("Error, waveform period must be a multiple of 4ns.")
+            return
         
         #figure out the pre_waveform bytes
-        pre_waveform_wordstream = []
+        self.pre_waveform_wordstream = []
         pr_index = 0
         fine_delay = self.delay%16
         for i in range (0, 16):
             if(i >= fine_delay):
-                pre_waveform_wordstream.append(final_wordstream[pr_index])
+                self.pre_waveform_wordstream.append(final_wordstream[pr_index])
                 pr_index += 1
             else:
-                pre_waveform_wordstream.append(0x0000)
+                self.pre_waveform_wordstream.append(0x0000)
         
+
         #shift the final wordstream to match
         self.wordstream = stream_shift(final_wordstream, (16 - fine_delay)*-1)
+        
         
         #generate the bytestream
         self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
         
         #generate the prewaveform bytestream
-        self.pre_waveform_bytestream = self.gen_byte_stream_from_wordstream(pre_waveform_wordstream)
+        self.pre_waveform_bytestream = self.gen_byte_stream_from_wordstream(self.pre_waveform_wordstream)
         
         #generate the zero delay bytestream
         self.zero_delay_bytestream = int_to_bytestream(round((self.delay - fine_delay)/16), 4)
@@ -292,7 +311,7 @@ class RFSoC_Board:
         self.port = serial.Serial()
         self.port.baudrate = DEFAULT_BAUD
         self.port.port = portname
-        self.port.timeout = 1
+        self.port.timeout = UART_TIMEOUT
         
     def close(self):
         self.port.close()
@@ -383,6 +402,10 @@ class RFSoC_Board:
         
         #get the channel bytestream
         bs = target_channel.get_byte_stream();
+        
+        if(len(bs) >= MAX_BYTESTREAM_SIZE):
+            print("Error, bytestream size for channel " + str(channel_num) + " is " + len(bs) + ", max bytestream size is " + str(MAX_BYTESTREAM_SIZE) + ", please try a smaller waveform.")
+            return 1
         
         #send the write channel command
         ack_val = self.write_bytes([RF_LOAD_WAVEFORM])

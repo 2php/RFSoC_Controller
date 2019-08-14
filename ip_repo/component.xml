@@ -286,7 +286,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a20f7c05</spirit:value>
+            <spirit:value>9b90cc7a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -308,7 +308,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>77da5d8b</spirit:value>
+            <spirit:value>b3bc293e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -971,28 +971,73 @@
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_0_10/rfsoc_data_pipeline_axis_data_fifo_0_10.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_dwidth_converter_0_10/rfsoc_data_pipeline_axis_dwidth_converter_0_10.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_dwidth_converter_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_clock_crossing</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_waveform_9/rfsoc_data_pipeline_axis_data_fifo_waveform_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_waveform</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_gpio_5/rfsoc_data_pipeline_axis_data_fifo_gpio_5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_0_12/rfsoc_data_pipeline_axis_data_fifo_0_12.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_dwidth_converter_0_12/rfsoc_data_pipeline_axis_dwidth_converter_0_12.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_dwidth_converter_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_11/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_11.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_clock_crossing</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_waveform_11/rfsoc_data_pipeline_axis_data_fifo_waveform_11.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_waveform</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_gpio_7/rfsoc_data_pipeline_axis_data_fifo_gpio_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_gpio</spirit:userFileType>
@@ -1007,8 +1052,12 @@
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_30fa209e</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1b8867d7</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1477,28 +1526,73 @@
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_0_10/rfsoc_data_pipeline_axis_data_fifo_0_10.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_dwidth_converter_0_10/rfsoc_data_pipeline_axis_dwidth_converter_0_10.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_dwidth_converter_0</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_clock_crossing</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_waveform_9/rfsoc_data_pipeline_axis_data_fifo_waveform_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_axis_data_fifo_waveform</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_gpio_5/rfsoc_data_pipeline_axis_data_fifo_gpio_5.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_0_12/rfsoc_data_pipeline_axis_data_fifo_0_12.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_dwidth_converter_0_12/rfsoc_data_pipeline_axis_dwidth_converter_0_12.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_dwidth_converter_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_11/rfsoc_data_pipeline_axis_data_fifo_clock_crossing_11.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_clock_crossing</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_waveform_11/rfsoc_data_pipeline_axis_data_fifo_waveform_11.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_data_fifo_waveform</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/rfsoc_data_pipeline_axis_data_fifo_gpio_7/rfsoc_data_pipeline_axis_data_fifo_gpio_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_gpio</spirit:userFileType>
@@ -1512,6 +1606,10 @@
         <spirit:name>sim/rfsoc_data_pipeline.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1562,13 +1660,13 @@
       <xilinx:displayName>rfsoc_data_pipeline_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-08-06T17:20:48Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-08-13T23:39:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfdd327_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba69620_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@60fb1923_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@773e9c45_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff944a3_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@126c7803_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dbb4adc_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ce3fbab_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77db0d05_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a27f97b_ARCHIVE_LOCATION">c:/james/fpga_projects/ip_repo</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.MICROBLAZE_CLK.ASSOCIATED_BUSIF" xilinx:valueSource="user"/>
@@ -1600,7 +1698,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7328b8d6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="42fbb354"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="39e962a6"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b70ca310"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="7892fd4e"/>
     </xilinx:packagingInfo>

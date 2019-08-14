@@ -4,6 +4,7 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "adc_capture_count_sclk" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "adc_shift_sclk" -parent ${Page_0}
   ipgui::add_param $IPINST -name "buffer_flush_bit" -parent ${Page_0}
   ipgui::add_param $IPINST -name "cycles_sclk" -parent ${Page_0}
   ipgui::add_param $IPINST -name "locking_sclk" -parent ${Page_0}
@@ -22,6 +23,15 @@ proc update_PARAM_VALUE.adc_capture_count_sclk { PARAM_VALUE.adc_capture_count_s
 
 proc validate_PARAM_VALUE.adc_capture_count_sclk { PARAM_VALUE.adc_capture_count_sclk } {
 	# Procedure called to validate adc_capture_count_sclk
+	return true
+}
+
+proc update_PARAM_VALUE.adc_shift_sclk { PARAM_VALUE.adc_shift_sclk } {
+	# Procedure called to update adc_shift_sclk when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.adc_shift_sclk { PARAM_VALUE.adc_shift_sclk } {
+	# Procedure called to validate adc_shift_sclk
 	return true
 }
 
@@ -141,5 +151,10 @@ proc update_MODELPARAM_VALUE.pre_waveform_sclk { MODELPARAM_VALUE.pre_waveform_s
 proc update_MODELPARAM_VALUE.adc_capture_count_sclk { MODELPARAM_VALUE.adc_capture_count_sclk PARAM_VALUE.adc_capture_count_sclk } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.adc_capture_count_sclk}] ${MODELPARAM_VALUE.adc_capture_count_sclk}
+}
+
+proc update_MODELPARAM_VALUE.adc_shift_sclk { MODELPARAM_VALUE.adc_shift_sclk PARAM_VALUE.adc_shift_sclk } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.adc_shift_sclk}] ${MODELPARAM_VALUE.adc_shift_sclk}
 }
 

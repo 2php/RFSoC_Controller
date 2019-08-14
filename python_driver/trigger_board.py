@@ -15,6 +15,7 @@ import time
 #argument 1 is save waveform as csv?
 #argument 2 is plot waveform?
 
+
 def save_waveform(data):
     timestr = time.strftime("%Y-%m-%d--%H-%M-%S")
     numpy.savetxt(timestr + "_adc_data", data, delimiter=",")

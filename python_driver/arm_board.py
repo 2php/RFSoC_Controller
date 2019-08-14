@@ -7,6 +7,7 @@ Created on Fri Jul 12 09:36:43 2019
 import init_board_int as ib
 import sys
 import RFSoC_Board as rf
+import waveform_plotter as wp
 
 #First argument is nanoseconds to run ADC for
 
@@ -48,6 +49,11 @@ print("Board is armed, trigger using trigger_board.py")
 
 
 board.adc_capture_time = adc_cycles * 4
+
+if(len(sys.argv) > 2):
+    #if we're being told to plot everything
+    if(int(sys.argv[2]) == 1):
+        wp.plot_waveforms(board.channels)
 
 if(ib.save_board(board)):
     print("Error while saving board to disk")

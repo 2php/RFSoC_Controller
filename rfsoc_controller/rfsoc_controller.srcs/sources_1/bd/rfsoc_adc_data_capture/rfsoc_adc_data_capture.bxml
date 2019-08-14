@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="rfsoc_adc_data_capture" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1565114570"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1565114570"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1565114570"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1565114570"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1565750857"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1565750857"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1565750857"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1565750857"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\rfsoc_adc_data_capture_adc_controller_0_0\rfsoc_adc_data_capture_adc_controller_0_0.xci" Type="IP">
         <Instance HierarchyPath="adc_controller_0"/>
@@ -149,19 +149,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\rfsoc_adc_data_capture.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\rfsoc_adc_data_capture.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_0_8\rfsoc_adc_data_capture_axis_data_fifo_0_8.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -169,7 +157,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_1_4\rfsoc_adc_data_capture_axis_data_fifo_1_4.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -177,7 +164,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_2_4\rfsoc_adc_data_capture_axis_data_fifo_2_4.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -185,7 +171,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_3_4\rfsoc_adc_data_capture_axis_data_fifo_3_4.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_3"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -193,7 +178,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_4_5\rfsoc_adc_data_capture_axis_data_fifo_4_5.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_4"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -201,7 +185,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_5_8\rfsoc_adc_data_capture_axis_data_fifo_5_8.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_5"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -209,7 +192,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_6_3\rfsoc_adc_data_capture_axis_data_fifo_6_3.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_6"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -217,7 +199,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_7_3\rfsoc_adc_data_capture_axis_data_fifo_7_3.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_7"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -225,7 +206,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_8_3\rfsoc_adc_data_capture_axis_data_fifo_8_3.xci" Type="IP">
-        <Instance HierarchyPath="axis_data_fifo_8"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -233,6 +213,85 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\rfsoc_adc_data_capture_axis_register_slice_0_0\rfsoc_adc_data_capture_axis_register_slice_0_0.xci" Type="IP">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_0_9\rfsoc_adc_data_capture_axis_data_fifo_0_9.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_1_5\rfsoc_adc_data_capture_axis_data_fifo_1_5.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_2_5\rfsoc_adc_data_capture_axis_data_fifo_2_5.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_3_5\rfsoc_adc_data_capture_axis_data_fifo_3_5.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_4_6\rfsoc_adc_data_capture_axis_data_fifo_4_6.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_4"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_5_9\rfsoc_adc_data_capture_axis_data_fifo_5_9.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_5"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_6_4\rfsoc_adc_data_capture_axis_data_fifo_6_4.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_6"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_7_4\rfsoc_adc_data_capture_axis_data_fifo_7_4.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_7"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_8_4\rfsoc_adc_data_capture_axis_data_fifo_8_4.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_8"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\rfsoc_adc_data_capture_axis_register_slice_0_1\rfsoc_adc_data_capture_axis_register_slice_0_1.xci" Type="IP">
         <Instance HierarchyPath="axis_register_slice_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -240,31 +299,36 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="rfsoc_adc_data_capture_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_9_0\rfsoc_adc_data_capture_axis_data_fifo_9_0.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_9"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hw_handoff\rfsoc_adc_data_capture.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_9_1\rfsoc_adc_data_capture_axis_data_fifo_9_1.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_10"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hw_handoff\rfsoc_adc_data_capture_bd.tcl">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_9_2\rfsoc_adc_data_capture_axis_data_fifo_9_2.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_11"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\rfsoc_adc_data_capture.hwdef">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+      <File Name="ip\rfsoc_adc_data_capture_axis_data_fifo_9_3\rfsoc_adc_data_capture_axis_data_fifo_9_3.xci" Type="IP">
+        <Instance HierarchyPath="axis_data_fifo_12"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="sim\rfsoc_adc_data_capture.protoinst">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>

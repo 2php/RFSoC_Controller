@@ -4,5 +4,4 @@ targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag
 rst -processor
 targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
 dow C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller/Debug/rfsoc_controller.elf
-targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038"} -index 0
-con
+bpadd -addr &main

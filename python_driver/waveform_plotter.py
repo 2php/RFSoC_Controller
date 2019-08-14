@@ -36,3 +36,63 @@ def plot_waveform(data):
     #plt.close()
     
 #IF YOU'RE HAVING PROBLEMS< REMEMBER TO ADD THE PATH LIBRARY/BIN and ANACONDA TO SYSTEM PATH
+    
+#channels should be an array of channels    
+def plot_waveforms(channels):
+    
+    try:
+         fig, ax = plt.subplots()
+         
+         for c in channels:
+             #get the experimental waveform
+             w_ex = c.experiment_wf
+             pre_waveform = w_ex.pre_waveform_wordstream
+             #get the pre and post delays
+             pre_delay = w_ex.delay / 4 # in nanoseconds
+             post_delay = round(w_ex.post_delay * 4) # in nanoseconds
+             #get the period
+             period = w_ex.period # in nanoseconds
+             reps = c.repeat_cycles
+             #construct the time array
+             t = []
+             t_now = 0
+             t_final = pre_delay + (period * reps) + post_delay + 4
+             wave = []
+             while(t_now <= t_final):
+                 #figure out our current value
+                 
+                 #if we're in the pre_delay
+                 if(t_now < pre_delay):
+                     wave.append(0)
+                 #if we're in the pre-waveform
+                 elif(t_now < (pre_delay + (period * reps))):
+                     t_wave = (t_now - pre_delay) % 4
+                     wave.append(pre_waveform[round(t_wave * 4)])
+                 #if we're in the waveform
+                 elif(t_now < (pre_delay + 4 + (period * reps))):
+                     #figure our where in the waveform we are
+                     t_wave = (t_now - pre_delay) % period
+                     wave.append(w_ex.wordstream[round(t_wave * 4)])
+                 else:
+                     wave.append(0)
+                
+                 #increment our time
+                 t.append(t_now)
+                 t_now += 0.25
+                 
+             ax.plot(t, wave, label="channel " + str(c.number))
+             
+         
+         
+         ax.set(xlabel='Time (ns)', ylabel='Voltage (mV)', title='ADC Waveform')
+         ax.grid()
+         plt.legend(loc='upper left')
+        
+         #fig.savefig("test.png")
+         plt.show()
+        
+    except:
+       print("Error while attempting to plot waveform data.")
+        
+        
+        

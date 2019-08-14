@@ -153,3 +153,18 @@ mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
 15:21:00 **** Incremental Build of configuration Debug for project rfsoc_controller ****
 make all 
 make: Nothing to be done for 'all'.
+09:49:34 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+09:50:09 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+11:41:45 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+11:58:34 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+15:12:42 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
