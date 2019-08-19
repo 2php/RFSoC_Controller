@@ -51,6 +51,8 @@ adc_shift = 0
 if(len(sys.argv) > 3):
     import math
     adc_shift = round(math.log2(int(sys.argv[3])))
+    
+board.set_adc_shift(adc_shift)
 
 print("ADC capture time set to " + str(adc_cycles*4) + " ns")
 print("ADC averages set to " + str(pow(2,adc_shift)))
@@ -58,7 +60,6 @@ print("Board is armed, trigger using trigger_board.py")
 
 
 board.adc_capture_time = adc_cycles * 4
-board.adc_shift_val = adc_shift
 
 if(len(sys.argv) > 2):
     #if we're being told to plot everything
