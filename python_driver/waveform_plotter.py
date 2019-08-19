@@ -65,7 +65,7 @@ def plot_waveforms(channels):
                  if(t_now < pre_delay):
                      wave.append(0)
                  #if we're in the pre-waveform
-                 elif(t_now < (pre_delay + (period * reps))):
+                 elif(t_now < (pre_delay + 4)):
                      t_wave = (t_now - pre_delay) % 4
                      wave.append(pre_waveform[round(t_wave * 4)])
                  #if we're in the waveform

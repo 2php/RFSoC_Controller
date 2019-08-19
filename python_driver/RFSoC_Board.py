@@ -358,6 +358,7 @@ class RFSoC_Board:
         for i in range(0, len(self.channels)):
             if self.channels[i].number == c.number:
                 self.channels[i] = c
+                return
                 
         self.channels.append(c)
         

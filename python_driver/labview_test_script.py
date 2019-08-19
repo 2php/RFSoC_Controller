@@ -10,7 +10,7 @@ Created on Fri Jul 12 10:26:47 2019
 #1 channel number between 1 and 16
 #2 waveform filename
 #3 waveform period in nanoseconds, will be rounded to the nearest 4 nanoseconds
-#4 waveform phase, can be a float but will be rounded to nearest quarter nanosecond
+#4 delay after experiment in nanoseconds, will be rounded to nearest 4 nanoseconds
 #5 waveform amplitude multiplication factor, must be between 0 and 1
 #6 number of cycles to playback the waveform
 #7 delay before experiment in nanoseconds, will be rounded to the nearest quarter nanosecond
@@ -23,7 +23,7 @@ import os
 
 os.system("python init_board.py COM4 && PAUSE")
 
-os.system("python add_channel.py 1 locking_waveform.txt 200 0 1 1 0 1 1 0 locking_waveform.txt && PAUSE")
+os.system("python add_channel.py 1 2_dc_square_wave.txt 204 0 1 5 816 1 1 0 locking_waveform.txt && PAUSE")
 #os.system("python add_channel.py 2 sawtooth.txt 400 0 1 10 0 0 && PAUSE")
-os.system("python arm_board.py 100 1 1 && PAUSE")
+#os.system("python arm_board.py 100 1 1 && PAUSE")
 #os.system("python trigger_board.py 0 1 && PAUSE")
