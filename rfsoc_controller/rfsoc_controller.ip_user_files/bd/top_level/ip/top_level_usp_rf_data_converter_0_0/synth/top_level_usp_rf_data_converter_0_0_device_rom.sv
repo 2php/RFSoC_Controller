@@ -127,8 +127,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h20600001,  // DAC00 Decoder Control
        30'h20610001,  // DAC00 Decoder Clock Enable
        30'h20710000,  // DAC00 MC_CONFIG0
-       30'h20734858,  // DAC00 MC_CONFIG2
-       30'h207487c0,  // DAC00 MC_CONFIG3
+       30'h2073a0d8,  // DAC00 MC_CONFIG2
+       30'h2074ffc0,  // DAC00 MC_CONFIG3
        30'h2006000f,  // DAC00 FABRIC_IMR
        30'h200f0fff,  // DAC00 DATAPATH_IMR
        30'h20070008,  // DAC00 FABRIC_DEBUG
@@ -140,8 +140,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h21600001,  // DAC01 Decoder Control
        30'h21610001,  // DAC01 Decoder Clock Enable
        30'h21710000,  // DAC01 MC_CONFIG0
-       30'h21734858,  // DAC01 MC_CONFIG2
-       30'h217487c0,  // DAC01 MC_CONFIG3
+       30'h2173a0d8,  // DAC01 MC_CONFIG2
+       30'h2174ffc0,  // DAC01 MC_CONFIG3
        30'h2106000f,  // DAC01 FABRIC_IMR
        30'h210f0fff,  // DAC01 DATAPATH_IMR
        30'h21070008,  // DAC01 FABRIC_DEBUG
@@ -153,8 +153,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h22600001,  // DAC02 Decoder Control
        30'h22610001,  // DAC02 Decoder Clock Enable
        30'h22710000,  // DAC02 MC_CONFIG0
-       30'h22734858,  // DAC02 MC_CONFIG2
-       30'h227487c0,  // DAC02 MC_CONFIG3
+       30'h2273a0d8,  // DAC02 MC_CONFIG2
+       30'h2274ffc0,  // DAC02 MC_CONFIG3
        30'h2206000f,  // DAC02 FABRIC_IMR
        30'h220f0fff,  // DAC02 DATAPATH_IMR
        30'h22070008,  // DAC02 FABRIC_DEBUG
@@ -166,8 +166,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h23600001,  // DAC03 Decoder Control
        30'h23610001,  // DAC03 Decoder Clock Enable
        30'h23710000,  // DAC03 MC_CONFIG0
-       30'h23734858,  // DAC03 MC_CONFIG2
-       30'h237487c0,  // DAC03 MC_CONFIG3
+       30'h2373a0d8,  // DAC03 MC_CONFIG2
+       30'h2374ffc0,  // DAC03 MC_CONFIG3
        30'h2306000f,  // DAC03 FABRIC_IMR
        30'h230f0fff,  // DAC03 DATAPATH_IMR
        30'h23070008,  // DAC03 FABRIC_DEBUG
@@ -198,8 +198,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h28600001,  // DAC10 Decoder Control
        30'h28610001,  // DAC10 Decoder Clock Enable
        30'h28710000,  // DAC10 MC_CONFIG0
-       30'h28734858,  // DAC10 MC_CONFIG2
-       30'h287487c0,  // DAC10 MC_CONFIG3
+       30'h2873a0d8,  // DAC10 MC_CONFIG2
+       30'h2874ffc0,  // DAC10 MC_CONFIG3
        30'h2806000f,  // DAC10 FABRIC_IMR
        30'h280f0fff,  // DAC10 DATAPATH_IMR
        30'h28070008,  // DAC10 FABRIC_DEBUG
@@ -211,8 +211,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h29600001,  // DAC11 Decoder Control
        30'h29610001,  // DAC11 Decoder Clock Enable
        30'h29710000,  // DAC11 MC_CONFIG0
-       30'h29734858,  // DAC11 MC_CONFIG2
-       30'h297487c0,  // DAC11 MC_CONFIG3
+       30'h2973a0d8,  // DAC11 MC_CONFIG2
+       30'h2974ffc0,  // DAC11 MC_CONFIG3
        30'h2906000f,  // DAC11 FABRIC_IMR
        30'h290f0fff,  // DAC11 DATAPATH_IMR
        30'h29070008,  // DAC11 FABRIC_DEBUG
@@ -224,8 +224,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h2a600001,  // DAC12 Decoder Control
        30'h2a610001,  // DAC12 Decoder Clock Enable
        30'h2a710000,  // DAC12 MC_CONFIG0
-       30'h2a734858,  // DAC12 MC_CONFIG2
-       30'h2a7487c0,  // DAC12 MC_CONFIG3
+       30'h2a73a0d8,  // DAC12 MC_CONFIG2
+       30'h2a74ffc0,  // DAC12 MC_CONFIG3
        30'h2a06000f,  // DAC12 FABRIC_IMR
        30'h2a0f0fff,  // DAC12 DATAPATH_IMR
        30'h2a070008,  // DAC12 FABRIC_DEBUG
@@ -237,8 +237,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h2b600001,  // DAC13 Decoder Control
        30'h2b610001,  // DAC13 Decoder Clock Enable
        30'h2b710000,  // DAC13 MC_CONFIG0
-       30'h2b734858,  // DAC13 MC_CONFIG2
-       30'h2b7487c0,  // DAC13 MC_CONFIG3
+       30'h2b73a0d8,  // DAC13 MC_CONFIG2
+       30'h2b74ffc0,  // DAC13 MC_CONFIG3
        30'h2b06000f,  // DAC13 FABRIC_IMR
        30'h2b0f0fff,  // DAC13 DATAPATH_IMR
        30'h2b070008,  // DAC13 FABRIC_DEBUG
@@ -269,8 +269,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h30600001,  // DAC20 Decoder Control
        30'h30610001,  // DAC20 Decoder Clock Enable
        30'h30710000,  // DAC20 MC_CONFIG0
-       30'h30734858,  // DAC20 MC_CONFIG2
-       30'h307487c0,  // DAC20 MC_CONFIG3
+       30'h3073a0d8,  // DAC20 MC_CONFIG2
+       30'h3074ffc0,  // DAC20 MC_CONFIG3
        30'h3006000f,  // DAC20 FABRIC_IMR
        30'h300f0fff,  // DAC20 DATAPATH_IMR
        30'h30070008,  // DAC20 FABRIC_DEBUG
@@ -282,8 +282,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h31600001,  // DAC21 Decoder Control
        30'h31610001,  // DAC21 Decoder Clock Enable
        30'h31710000,  // DAC21 MC_CONFIG0
-       30'h31734858,  // DAC21 MC_CONFIG2
-       30'h317487c0,  // DAC21 MC_CONFIG3
+       30'h3173a0d8,  // DAC21 MC_CONFIG2
+       30'h3174ffc0,  // DAC21 MC_CONFIG3
        30'h3106000f,  // DAC21 FABRIC_IMR
        30'h310f0fff,  // DAC21 DATAPATH_IMR
        30'h31070008,  // DAC21 FABRIC_DEBUG
@@ -295,8 +295,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h32600001,  // DAC22 Decoder Control
        30'h32610001,  // DAC22 Decoder Clock Enable
        30'h32710000,  // DAC22 MC_CONFIG0
-       30'h32734858,  // DAC22 MC_CONFIG2
-       30'h327487c0,  // DAC22 MC_CONFIG3
+       30'h3273a0d8,  // DAC22 MC_CONFIG2
+       30'h3274ffc0,  // DAC22 MC_CONFIG3
        30'h3206000f,  // DAC22 FABRIC_IMR
        30'h320f0fff,  // DAC22 DATAPATH_IMR
        30'h32070008,  // DAC22 FABRIC_DEBUG
@@ -308,8 +308,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h33600001,  // DAC23 Decoder Control
        30'h33610001,  // DAC23 Decoder Clock Enable
        30'h33710000,  // DAC23 MC_CONFIG0
-       30'h33734858,  // DAC23 MC_CONFIG2
-       30'h337487c0,  // DAC23 MC_CONFIG3
+       30'h3373a0d8,  // DAC23 MC_CONFIG2
+       30'h3374ffc0,  // DAC23 MC_CONFIG3
        30'h3306000f,  // DAC23 FABRIC_IMR
        30'h330f0fff,  // DAC23 DATAPATH_IMR
        30'h33070008,  // DAC23 FABRIC_DEBUG
@@ -340,8 +340,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h38600001,  // DAC30 Decoder Control
        30'h38610001,  // DAC30 Decoder Clock Enable
        30'h38710000,  // DAC30 MC_CONFIG0
-       30'h38734858,  // DAC30 MC_CONFIG2
-       30'h387487c0,  // DAC30 MC_CONFIG3
+       30'h3873a0d8,  // DAC30 MC_CONFIG2
+       30'h3874ffc0,  // DAC30 MC_CONFIG3
        30'h3806000f,  // DAC30 FABRIC_IMR
        30'h380f0fff,  // DAC30 DATAPATH_IMR
        30'h38070008,  // DAC30 FABRIC_DEBUG
@@ -353,8 +353,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h39600001,  // DAC31 Decoder Control
        30'h39610001,  // DAC31 Decoder Clock Enable
        30'h39710000,  // DAC31 MC_CONFIG0
-       30'h39734858,  // DAC31 MC_CONFIG2
-       30'h397487c0,  // DAC31 MC_CONFIG3
+       30'h3973a0d8,  // DAC31 MC_CONFIG2
+       30'h3974ffc0,  // DAC31 MC_CONFIG3
        30'h3906000f,  // DAC31 FABRIC_IMR
        30'h390f0fff,  // DAC31 DATAPATH_IMR
        30'h39070008,  // DAC31 FABRIC_DEBUG
@@ -366,8 +366,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h3a600001,  // DAC32 Decoder Control
        30'h3a610001,  // DAC32 Decoder Clock Enable
        30'h3a710000,  // DAC32 MC_CONFIG0
-       30'h3a734858,  // DAC32 MC_CONFIG2
-       30'h3a7487c0,  // DAC32 MC_CONFIG3
+       30'h3a73a0d8,  // DAC32 MC_CONFIG2
+       30'h3a74ffc0,  // DAC32 MC_CONFIG3
        30'h3a06000f,  // DAC32 FABRIC_IMR
        30'h3a0f0fff,  // DAC32 DATAPATH_IMR
        30'h3a070008,  // DAC32 FABRIC_DEBUG
@@ -379,8 +379,8 @@ module top_level_usp_rf_data_converter_0_0_device_rom (
        30'h3b600001,  // DAC33 Decoder Control
        30'h3b610001,  // DAC33 Decoder Clock Enable
        30'h3b710000,  // DAC33 MC_CONFIG0
-       30'h3b734858,  // DAC33 MC_CONFIG2
-       30'h3b7487c0,  // DAC33 MC_CONFIG3
+       30'h3b73a0d8,  // DAC33 MC_CONFIG2
+       30'h3b74ffc0,  // DAC33 MC_CONFIG3
        30'h3b06000f,  // DAC33 FABRIC_IMR
        30'h3b0f0fff,  // DAC33 DATAPATH_IMR
        30'h3b070008,  // DAC33 FABRIC_DEBUG

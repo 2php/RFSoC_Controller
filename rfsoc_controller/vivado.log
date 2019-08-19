@@ -59,3 +59,1136 @@ top_level_rfsoc_data_pipeline_7_0
 top_level_rfsoc_data_pipeline_9_0
 
 open_project: Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1183.613 ; gain = 563.637
+update_compile_order -fileset sources_1
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+[Tue Aug 13 18:30:08 2019] Launched synth_lo_effort...
+Run output will be captured here: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Tue Aug 13 18:30:08 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd}
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_2
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_3
+Adding component instance block -- xilinx.com:module_ref:gpio_buffer:1.0 - gpio_buffer_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_4
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_5
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_6
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_7
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_8
+Adding component instance block -- xilinx.com:module_ref:adc_controller:1.0 - adc_controller_0
+Adding component instance block -- xilinx.com:ip:axis_register_slice:1.1 - axis_register_slice_0
+Successfully read diagram <rfsoc_adc_data_capture> from BD file <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+open_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1593.762 ; gain = 96.637
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_5' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_6' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_7' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_5': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_6': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_7': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 's_axis'
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'm_axis_4' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'm_axis_5' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'm_axis_6' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'm_axis_7' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 's_axis_0' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 's_axis_1' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 's_axis_2' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 's_axis_3' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 's_axis_4' (xilinx.com:interface:axis:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'rfsoc_adc_data_capture_adc_controller_0_0'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tdata'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tready'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tvalid'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tdata_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tdata_5'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tdata_6'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tdata_7'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tready_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tready_5'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tready_6'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tready_7'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tvalid_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tvalid_5'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tvalid_6'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm_axis_tvalid_7'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tdata_0'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tdata_1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tdata_2'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tdata_3'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tdata_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tready_0'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tready_1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tready_2'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tready_3'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tready_4'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tvalid_0'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tvalid_1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tvalid_2'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tvalid_3'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axis_tvalid_4'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'rfsoc_adc_data_capture_adc_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1165] The interface pin 's_axis' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'axis_register_slice_0_M_AXIS' has been removed. 
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'rfsoc_adc_data_capture_adc_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/s_axis_0] [get_bd_intf_pins axis_register_slice_0/M_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_1_M_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_3_M_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_2_M_AXIS]
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {0}] [get_bd_cells axis_data_fifo_0]
+WARNING: [BD 41-1684] Pin /axis_data_fifo_0/m_axis_aclk is now disabled. All connections to this pin have been removed. 
+endgroup
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {0}] [get_bd_cells axis_data_fifo_1]
+WARNING: [BD 41-1684] Pin /axis_data_fifo_1/m_axis_aclk is now disabled. All connections to this pin have been removed. 
+endgroup
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {0}] [get_bd_cells axis_data_fifo_3]
+WARNING: [BD 41-1684] Pin /axis_data_fifo_3/m_axis_aclk is now disabled. All connections to this pin have been removed. 
+endgroup
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {0}] [get_bd_cells axis_data_fifo_2]
+WARNING: [BD 41-1684] Pin /axis_data_fifo_2/m_axis_aclk is now disabled. All connections to this pin have been removed. 
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_1]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_2]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_3/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_3]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_2/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_4]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_9
+endgroup
+set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_data_fifo_9]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {4} CONFIG.FIFO_DEPTH {16} CONFIG.IS_ACLK_ASYNC {1}] [get_bd_cells axis_data_fifo_9]
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_9}]
+set_property location {3 796 805} [get_bd_cells axis_data_fifo_10]
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_9}]
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_9}]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_4] [get_bd_intf_pins axis_data_fifo_12/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_5] [get_bd_intf_pins axis_data_fifo_11/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_6] [get_bd_intf_pins axis_data_fifo_9/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_7] [get_bd_intf_pins axis_data_fifo_10/S_AXIS]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_10/s_axis_aclk]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_9/s_axis_aclk]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_11/s_axis_aclk]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_12/s_axis_aclk]
+connect_bd_net [get_bd_pins axis_data_fifo_12/s_axis_aresetn] [get_bd_pins axis_data_fifo_11/s_axis_aresetn]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axis_data_fifo_12/s_axis_aresetn] [get_bd_pins axis_data_fifo_11/s_axis_aresetn]'
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_12/s_axis_aresetn]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_11/s_axis_aresetn]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_9/s_axis_aresetn]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_10/s_axis_aresetn]
+connect_bd_net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_10/m_axis_aclk]
+connect_bd_net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_9/m_axis_aclk]
+connect_bd_net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_11/m_axis_aclk]
+connect_bd_net [get_bd_ports microblaze_clk] [get_bd_pins axis_data_fifo_12/m_axis_aclk]
+connect_bd_intf_net [get_bd_intf_ports M_AXIS_0] [get_bd_intf_pins axis_data_fifo_12/M_AXIS]
+connect_bd_intf_net [get_bd_intf_ports M_AXIS_1] [get_bd_intf_pins axis_data_fifo_11/M_AXIS]
+connect_bd_intf_net [get_bd_intf_ports M_AXIS_3] [get_bd_intf_pins axis_data_fifo_9/M_AXIS]
+connect_bd_intf_net [get_bd_intf_ports M_AXIS_2] [get_bd_intf_pins axis_data_fifo_10/M_AXIS]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_5' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_6' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_7' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_5': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_6': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_7': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1839.148 ; gain = 0.000
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_5' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_6' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_7' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_5': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_6': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_7': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1839.148 ; gain = 0.000
+CRITICAL WARNING: [HDL 9-806] Syntax error near "[". [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/new/adc_controller.v:103]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "[". [C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/new/adc_controller.v:103]
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'm_axis_5'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'm_axis_6'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'm_axis_7'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 's_axis_2'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 's_axis_3'
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 's_axis_4'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'rfsoc_adc_data_capture_adc_controller_0_0'.
+WARNING: [IP_Flow 19-4706] Upgraded port 'm_axis_tdata_0' width 128 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 's_axis_tdata_1' width 128 differs from original width 32
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tdata_5'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tdata_6'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tdata_7'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tready_5'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tready_6'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tready_7'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tvalid_5'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tvalid_6'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'm_axis_tvalid_7'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tdata_2'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tdata_3'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tdata_4'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tready_2'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tready_3'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tready_4'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tvalid_2'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tvalid_3'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's_axis_tvalid_4'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'rfsoc_adc_data_capture_adc_controller_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1165] The interface pin 'm_axis_5' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'adc_controller_0_m_axis_5' has been removed. 
+CRITICAL WARNING: [BD 41-1165] The interface pin 'm_axis_6' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'adc_controller_0_m_axis_6' has been removed. 
+CRITICAL WARNING: [BD 41-1165] The interface pin 'm_axis_7' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'adc_controller_0_m_axis_7' has been removed. 
+CRITICAL WARNING: [BD 41-1165] The interface pin 's_axis_2' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'axis_data_fifo_1_M_AXIS' has been removed. 
+CRITICAL WARNING: [BD 41-1165] The interface pin 's_axis_3' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'axis_data_fifo_3_M_AXIS' has been removed. 
+CRITICAL WARNING: [BD 41-1165] The interface pin 's_axis_4' with bus definition 'xilinx.com:interface:axis:1.0' is not found on the upgraded version of the cell '/adc_controller_0'. Its connection to the interface net 'axis_data_fifo_2_M_AXIS' has been removed. 
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'rfsoc_adc_data_capture_adc_controller_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1839.148 ; gain = 0.000
+delete_bd_objs [get_bd_intf_nets adc_controller_0_m_axis_0] [get_bd_intf_nets axis_data_fifo_5_M_AXIS] [get_bd_cells axis_data_fifo_5]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS] [get_bd_cells axis_data_fifo_0]
+delete_bd_objs [get_bd_intf_nets adc_controller_0_m_axis_3] [get_bd_intf_nets axis_data_fifo_8_M_AXIS] [get_bd_cells axis_data_fifo_8]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_3_M_AXIS] [get_bd_cells axis_data_fifo_3]
+delete_bd_objs [get_bd_intf_nets adc_controller_0_m_axis_1] [get_bd_intf_nets axis_data_fifo_6_M_AXIS] [get_bd_cells axis_data_fifo_6]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_1_M_AXIS] [get_bd_cells axis_data_fifo_1]
+delete_bd_objs [get_bd_intf_nets adc_controller_0_m_axis_4]
+delete_bd_objs [get_bd_intf_nets adc_controller_0_m_axis_2]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_7_M_AXIS] [get_bd_cells axis_data_fifo_7]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_2_M_AXIS] [get_bd_cells axis_data_fifo_2]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_1] [get_bd_intf_pins axis_data_fifo_11/S_AXIS]
+undo
+INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_1] [get_bd_intf_pins axis_data_fifo_11/S_AXIS]'
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_1] [get_bd_intf_pins axis_data_fifo_12/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_2] [get_bd_intf_pins axis_data_fifo_11/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_3] [get_bd_intf_pins axis_data_fifo_10/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_4] [get_bd_intf_pins axis_data_fifo_9/S_AXIS]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0
+endgroup
+set_property location {3 845 333} [get_bd_cells axis_data_fifo_0]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {16} CONFIG.FIFO_DEPTH {32768}] [get_bd_cells axis_data_fifo_0]
+set_property location {2 788 312} [get_bd_cells axis_data_fifo_0]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_1]
+connect_bd_intf_net [get_bd_intf_pins adc_controller_0/m_axis_0] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_0/s_axis_aclk]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
+regenerate_bd_layout
+copy_bd_objs /  [get_bd_cells {axis_data_fifo_0}]
+set_property location {1 205 -33} [get_bd_cells axis_data_fifo_1]
+delete_bd_objs [get_bd_intf_nets axis_data_fifo_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_1/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_1/M_AXIS] [get_bd_intf_pins adc_controller_0/s_axis_1]
+connect_bd_net [get_bd_ports rf_reset] [get_bd_pins axis_data_fifo_1/s_axis_aresetn]
+connect_bd_net [get_bd_ports rf_clk] [get_bd_pins axis_data_fifo_1/s_axis_aclk]
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+regenerate_bd_layout
+validate_bd_design
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_0 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_1 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_2 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_3 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_4 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/s_axis_0 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/s_axis_1 is not associated to any clock pin. It may not work correctly.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /adc_controller_0/s_axis_0(100000000) and /axis_register_slice_0/M_AXIS(250000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_0/S_AXIS(250000000) and /adc_controller_0/m_axis_0(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_12/S_AXIS(250000000) and /adc_controller_0/m_axis_1(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_11/S_AXIS(250000000) and /adc_controller_0/m_axis_2(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_10/S_AXIS(250000000) and /adc_controller_0/m_axis_3(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_9/S_AXIS(250000000) and /adc_controller_0/m_axis_4(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /adc_controller_0/s_axis_1(100000000) and /axis_data_fifo_1/M_AXIS(250000000)
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1839.148 ; gain = 0.000
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axis_register_slice_0_M_AXIS}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axis_data_fifo_1_M_AXIS}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {adc_controller_0_m_axis_0}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {adc_controller_0_m_axis_1}]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets axis_register_slice_0_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/rf_clk" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets adc_controller_0_m_axis_1] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/rf_clk" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets adc_controller_0_m_axis_0] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/rf_clk" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axis_data_fifo_1_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/rf_clk" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 4 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /rf_clk to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rf_reset to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /axis_register_slice_0_M_AXIS, to System ILA slot interface pin /system_ila_0/SLOT_0_AXIS for debug.
+Debug Automation : Connecting interface connection /adc_controller_0_m_axis_1, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+Debug Automation : Connecting interface connection /adc_controller_0_m_axis_0, to System ILA slot interface pin /system_ila_0/SLOT_2_AXIS for debug.
+Debug Automation : Connecting interface connection /axis_data_fifo_1_M_AXIS, to System ILA slot interface pin /system_ila_0/SLOT_3_AXIS for debug.
+endgroup
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_0]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/s_axis_0]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/s_axis_1]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_1]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_2]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_3]
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_4]
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+INFO: [BD 41-1662] The design 'rfsoc_adc_data_capture.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/sim/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hdl/rfsoc_adc_data_capture_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_register_slice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+Exporting to file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/synth/rfsoc_adc_data_capture_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+Exporting to file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture.hwh
+Generated Block Design Tcl file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture_bd.tcl
+Generated Hardware Definition File C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_2 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_3 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_4 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [IP_Flow 19-5175] IP 'rfsoc_adc_data_capture_system_ila_0_0' cannot be packaged with the 'XCI' option. IP will be packaged as generated HDL source files.
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Synthesis'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/bd_6b6e.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1955.918 ; gain = 116.770
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1955.918 ; gain = 0.000
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/adc_ip'
+ipx::unload_core c:/james/fpga_projects/adc_ip/component.xml
+startgroup
+set_property -dict [list CONFIG.FIFO_DEPTH {1024}] [get_bd_cells axis_data_fifo_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.FIFO_DEPTH {1024}] [get_bd_cells axis_data_fifo_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {190.5} CONFIG.C_DATA_DEPTH {16384}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/sim/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hdl/rfsoc_adc_data_capture_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_register_slice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+Exporting to file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/synth/rfsoc_adc_data_capture_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+Exporting to file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture.hwh
+Generated Block Design Tcl file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture_bd.tcl
+Generated Hardware Definition File C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_2 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_3 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_4 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [IP_Flow 19-5175] IP 'rfsoc_adc_data_capture_system_ila_0_0' cannot be packaged with the 'XCI' option. IP will be packaged as generated HDL source files.
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Synthesis'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/bd_6b6e.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2315.297 ; gain = 10.383
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2315.297 ; gain = 0.000
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/adc_ip'
+set_property core_revision 3 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2492.871 ; gain = 0.000
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/adc_ip'
+ipx::unload_core c:/james/fpga_projects/adc_ip/component.xml
+open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd}
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:usp_rf_data_converter:2.1 - usp_rf_data_converter_0
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'adc0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac0_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac1_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac2_clk' frequency is set to 250000000
+INFO: Ultrascale+ RF Data Converter instance: Clock port 'dac3_clk' frequency is set to 250000000
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+Adding component instance block -- xilinx.com:module_ref:channel_select:1.0 - channel_select_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_4
+Adding component instance block -- xilinx.com:user:trigger_controller:1.0 - trigger_controller_0
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_0
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_10
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_11
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_12
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_13
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_14
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_15
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_1
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_2
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_3
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_4
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_5
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_6
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_7
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_8
+Adding component instance block -- xilinx.com:user:rfsoc_data_pipeline:1.0 - rfsoc_data_pipeline_9
+Adding component instance block -- xilinx.com:user:rfsoc_adc_data_capture:1.0 - rfsoc_adc_data_captu_0
+Successfully read diagram <top_level> from BD file <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd>
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_adc_data_captu_0_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -log ip_upgrade.log
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3422] Upgraded top_level_rfsoc_adc_data_captu_0_0 (rfsoc_adc_data_capture_v1_0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_10_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_11_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_12_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_13_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_14_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_15_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_2_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_3_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_4_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_5_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_6_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_7_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_8_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_9_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/james/fpga_projects/rfsoc_controller/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2494.348 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips {top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_adc_data_captu_0_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_10_0 top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+open_bd_design {C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd}
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_clock_crossing
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_waveform
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_gpio
+Adding component instance block -- xilinx.com:module_ref:axis_mux:1.0 - axis_mux_0
+Adding component instance block -- xilinx.com:module_ref:gpio_and_select_buffer:1.0 - gpio_and_select_buff_0
+Adding component instance block -- xilinx.com:module_ref:axis_tready_slice:1.0 - axis_tready_slice_0
+Successfully read diagram <rfsoc_data_pipeline> from BD file <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_data_pipeline/rfsoc_data_pipeline.bd>
+ipx::package_project -root_dir C:/james/fpga_projects/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_data_pipeline -import_files -force
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'rfsoc_data_pipeline' - hence not re-generating.
+WARNING: [IP_Flow 19-4963] rfsoc_data_pipeline_axis_mux_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_data_pipeline.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_data_pipeline:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/ip_repo'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_10_0}] -log ip_upgrade.log
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_10_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_11_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_12_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_13_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_14_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_15_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_2_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_3_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_4_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_5_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_6_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_7_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_8_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated top_level_rfsoc_data_pipeline_9_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/james/fpga_projects/rfsoc_controller/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {top_level_rfsoc_data_pipeline_14_0 top_level_rfsoc_data_pipeline_2_0 top_level_rfsoc_data_pipeline_15_0 top_level_rfsoc_data_pipeline_12_0 top_level_rfsoc_data_pipeline_4_0 top_level_rfsoc_data_pipeline_13_0 top_level_rfsoc_data_pipeline_9_0 top_level_rfsoc_data_pipeline_7_0 top_level_rfsoc_data_pipeline_0_0 top_level_rfsoc_data_pipeline_1_0 top_level_rfsoc_data_pipeline_11_0 top_level_rfsoc_data_pipeline_5_0 top_level_rfsoc_data_pipeline_3_0 top_level_rfsoc_data_pipeline_8_0 top_level_rfsoc_data_pipeline_6_0 top_level_rfsoc_data_pipeline_10_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /channel_select_0/mb_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_adc0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/sim/top_level.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block usp_rf_data_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block channel_select_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block trigger_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_adc_data_captu_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_13 .
+Exporting to file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Block Design Tcl file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level_bd.tcl
+Generated Hardware Definition File C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.hwdef
+[Wed Aug 14 11:46:50 2019] Launched top_level_rfsoc_adc_data_captu_0_0_synth_1, top_level_rfsoc_data_pipeline_8_0_synth_1, top_level_rfsoc_data_pipeline_11_0_synth_1, top_level_rfsoc_data_pipeline_10_0_synth_1, top_level_rfsoc_data_pipeline_2_0_synth_1, top_level_rfsoc_data_pipeline_4_0_synth_1, top_level_rfsoc_data_pipeline_15_0_synth_1, top_level_rfsoc_data_pipeline_13_0_synth_1, top_level_rfsoc_data_pipeline_12_0_synth_1, top_level_rfsoc_data_pipeline_5_0_synth_1, top_level_rfsoc_data_pipeline_6_0_synth_1, top_level_rfsoc_data_pipeline_1_0_synth_1, top_level_rfsoc_data_pipeline_3_0_synth_1, top_level_rfsoc_data_pipeline_9_0_synth_1, top_level_rfsoc_data_pipeline_14_0_synth_1, top_level_rfsoc_data_pipeline_0_0_synth_1, top_level_rfsoc_data_pipeline_7_0_synth_1, synth_lo_effort...
+Run output will be captured here:
+top_level_rfsoc_adc_data_captu_0_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_8_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_8_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_11_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_11_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_10_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_10_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_2_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_2_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_4_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_4_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_15_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_15_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_13_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_13_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_12_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_12_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_5_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_5_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_6_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_6_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_1_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_1_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_3_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_3_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_9_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_9_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_14_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_14_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_0_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_0_0_synth_1/runme.log
+top_level_rfsoc_data_pipeline_7_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_data_pipeline_7_0_synth_1/runme.log
+synth_lo_effort: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Wed Aug 14 11:46:51 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 2494.348 ; gain = 0.000
+current_bd_design [get_bd_designs rfsoc_adc_data_capture]
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'rfsoc_adc_data_capture' - hence not re-generating.
+WARNING: [IP_Flow 19-5175] IP 'rfsoc_adc_data_capture_system_ila_0_0' cannot be packaged with the 'XCI' option. IP will be packaged as generated HDL source files.
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Synthesis'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/bd_6b6e.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2494.348 ; gain = 0.000
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2494.348 ; gain = 0.000
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/adc_ip'
+update_module_reference rfsoc_adc_data_capture_adc_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_2' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_3' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_4' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_0' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_1' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rf_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rf_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rf_reset'.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_2': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_3': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 'm_axis_4': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_0': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3158] Bus Interface 's_axis_1': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rf_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/adc_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/trigger_controller_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/james/fpga_projects/ip_repo'.
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd'
+INFO: [IP_Flow 19-3420] Updated rfsoc_adc_data_capture_adc_controller_0_0 to use current project options
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_0 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_1 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_2 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_3 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/m_axis_4 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/s_axis_0 is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /adc_controller_0/s_axis_1 is not associated to any clock pin. It may not work correctly.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /adc_controller_0/s_axis_0(100000000) and /axis_register_slice_0/M_AXIS(250000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /adc_controller_0/s_axis_1(100000000) and /axis_data_fifo_1/M_AXIS(250000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_0/S_AXIS(250000000) and /adc_controller_0/m_axis_0(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /system_ila_0/SLOT_2_AXIS(250000000) and /adc_controller_0/m_axis_0(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_12/S_AXIS(250000000) and /adc_controller_0/m_axis_1(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /system_ila_0/SLOT_1_AXIS(250000000) and /adc_controller_0/m_axis_1(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_11/S_AXIS(250000000) and /adc_controller_0/m_axis_2(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_10/S_AXIS(250000000) and /adc_controller_0/m_axis_3(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /axis_data_fifo_9/S_AXIS(250000000) and /adc_controller_0/m_axis_4(100000000)
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/rfsoc_adc_data_capture.bd 
+ERROR: [Ipptcl 7-1461] The block diagram rfsoc_adc_data_capture must be generated to package
+ERROR: [Common 17-39] 'ipx::package_project' failed due to earlier errors.
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/s_axis_0]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/s_axis_1]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_0]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_1]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_2]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_3]
+set_property CONFIG.FREQ_HZ 250000000 [get_bd_intf_pins /adc_controller_0/m_axis_4]
+save_bd_design
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-967] AXI interface pin /gpio_buffer_0/m_axis is not associated to any clock pin. It may not work correctly.
+WARNING: [BD 41-927] Following properties on pin /adc_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=rfsoc_adc_data_capture_rf_clk_0 
+ipx::package_project -root_dir C:/james/fpga_projects/adc_ip -vendor xilinx.com -library user -taxonomy /UserIP -module rfsoc_adc_data_capture -import_files -force
+INFO: [BD 41-1662] The design 'rfsoc_adc_data_capture.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\rfsoc_adc_data_capture\rfsoc_adc_data_capture.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ui/bd_1bce279c.ui> 
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/sim/rfsoc_adc_data_capture.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hdl/rfsoc_adc_data_capture_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_register_slice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_1 .
+Exporting to file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/hw_handoff/rfsoc_adc_data_capture_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/ip/rfsoc_adc_data_capture_system_ila_0_0/bd_0/synth/rfsoc_adc_data_capture_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+Exporting to file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture.hwh
+Generated Block Design Tcl file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/hw_handoff/rfsoc_adc_data_capture_bd.tcl
+Generated Hardware Definition File C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/rfsoc_adc_data_capture/synth/rfsoc_adc_data_capture.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /gpio_buffer_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_2 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_3 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin m_axis_4 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_0 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [BD 41-2265] Clock pin for protocol instance pin s_axis_1 could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /adc_controller_0
+WARNING: [IP_Flow 19-5175] IP 'rfsoc_adc_data_capture_system_ila_0_0' cannot be packaged with the 'XCI' option. IP will be packaged as generated HDL source files.
+WARNING: [IP_Flow 19-4963] rfsoc_adc_data_capture_adc_controller_0_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:zcu1275:part0:1.0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.RF_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'rf_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.MICROBLAZE_RESET': Bus parameter POLARITY is ACTIVE_LOW but port 'microblaze_reset' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Synthesis'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'src/mux_core.txt' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/bd_6b6e.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'sim/rfsoc_adc_data_capture.protoinst' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::package_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2494.348 ; gain = 0.000
+set_property core_revision 2 [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::create_xgui_files [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+ipx::update_checksums: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2494.348 ; gain = 0.000
+ipx::save_core [ipx::find_open_core xilinx.com:user:rfsoc_adc_data_capture:1.0]
+update_ip_catalog -rebuild -repo_path c:/james/fpga_projects/adc_ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/james/fpga_projects/adc_ip'
+ipx::current_core c:/james/fpga_projects/ip_repo/component.xml
+ipx::current_core c:/james/fpga_projects/adc_ip/component.xml
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:rfsoc_adc_data_capture:1.0 [get_ips  top_level_rfsoc_adc_data_captu_0_0] -log ip_upgrade.log
+Upgrading 'C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd'
+INFO: [IP_Flow 19-3422] Upgraded top_level_rfsoc_adc_data_captu_0_0 (rfsoc_adc_data_capture_v1_0 1.0) from revision 3 to revision 2
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+Wrote  : <C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ui/bd_39d0265a.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/james/fpga_projects/rfsoc_controller/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips top_level_rfsoc_adc_data_captu_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_lo_effort
+launch_runs impl_lo_effort -to_step write_bitstream -jobs 4
+WARNING: [BD 41-927] Following properties on pin /channel_select_0/mb_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /trigger_controller_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_0/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_10/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_11/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_12/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_13/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_14/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_15/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac3 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_1/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_2/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_3/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac0 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_4/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_5/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_6/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_7/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_8/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_data_pipeline_9/rf_clock have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_dac2 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/microblaze_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_clk_wiz_1_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /rfsoc_adc_data_captu_0/rf_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=top_level_usp_rf_data_converter_0_0_clk_adc0 
+Wrote  : <C:\james\fpga_projects\rfsoc_controller\rfsoc_controller.srcs\sources_1\bd\top_level\top_level.bd> 
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/sim/top_level.v
+VHDL Output written to : C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hdl/top_level_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block usp_rf_data_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block channel_select_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block trigger_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_adc_data_captu_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rfsoc_data_pipeline_13 .
+Exporting to file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level.hwh
+Generated Block Design Tcl file C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/hw_handoff/top_level_bd.tcl
+Generated Hardware Definition File C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/synth/top_level.hwdef
+[Wed Aug 14 13:21:12 2019] Launched top_level_rfsoc_adc_data_captu_0_0_synth_1, synth_lo_effort...
+Run output will be captured here:
+top_level_rfsoc_adc_data_captu_0_0_synth_1: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1/runme.log
+synth_lo_effort: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_lo_effort/runme.log
+[Wed Aug 14 13:21:12 2019] Launched impl_lo_effort...
+Run output will be captured here: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/impl_lo_effort/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2494.348 ; gain = 0.000
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk -hwspec C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/top_level_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

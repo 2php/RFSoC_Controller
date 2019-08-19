@@ -21,12 +21,43 @@ u8 zeros_bitstream[32] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 
 u32 last_adc_cycles;
 
-
+u32 num_trigs_before_adc_readout;
+u32 last_adc_shift;
 
 
 /////////////////////////////////////////////////////////////////////////
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
+
+u32 rf_get_adc_shift()
+{
+	return last_adc_shift;
+}
+
+//Returns 1 if adc data can be read successfully, 0 otherwise
+u8 adc_data_valid()
+{
+	u32 num_cycles_needed = 1 << last_adc_shift;
+	if(num_trigs_before_adc_readout < num_cycles_needed)
+	{
+		return 0;
+	}
+	return 1;
+}
+
+void rf_set_adc_shift(u32 value)
+{
+	last_adc_shift = value;
+	for(int i = 0; i < 32; i++)
+	{
+		//Set the output to the correct bit
+		u8 current_bit = (value & (1 << i)) == 0 ? 0 : 1;
+		gpio_set_pin(RF_BANK, LOCKING_SDATA, current_bit);
+		//cycle locking_sclk
+		gpio_set_pin(RF_BANK, ADC_SHIFT, 0x01);
+		gpio_set_pin(RF_BANK, ADC_SHIFT, 0x00);
+	}
+}
 
 void rf_set_pre_waveform(u8 channel, u8* stream)
 {
@@ -207,6 +238,7 @@ void rf_trigger()
 	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x01);
 	//usleep();
 	gpio_set_pin(RF_BANK, INT_TRIGGER, 0x00);
+	num_trigs_before_adc_readout++;
 }
 
 void rf_set_adc_cycles(u32 cycles)
@@ -234,6 +266,14 @@ u32 rf_get_last_adc_cycles()
 //Writes samples into buffer with MSB first
 void rf_read_adc_buffer(u8* buffer, u32 num_samples)
 {
+	//If our shift isnt 0
+	if(last_adc_shift != 0)
+	{
+		//Set it to 0 to facilitate the readout
+		rf_set_adc_shift(0);
+	}
+
+	num_trigs_before_adc_readout = 0;
 	//Each buffer will have 2 samples, and there are 4 buffers, so one loop through all buffers will read 8 samples
 	u32 num_loops = num_samples / 8;
 	u32 buffer_pos = 0;
@@ -255,6 +295,9 @@ void rf_read_adc_buffer(u8* buffer, u32 num_samples)
 
 void rf_flush_adc_buffer()
 {
+	u32 las = last_adc_shift;
+	rf_set_adc_shift(0);
+
 	for(int i = 0; i < ADC_BUFFER_DEPTH; i++)
 	{
 		register int a0;
@@ -266,6 +309,7 @@ void rf_flush_adc_buffer()
 		ngetfsl(a2,  2);
 		ngetfsl(a3,  3);
 	}
+	rf_set_adc_shift(las);
 }
 
 
@@ -549,6 +593,8 @@ void write_sample_stream(u16* samples, u16 length, u8 channel)
 
 void rf_init()
 {
+
+	num_trigs_before_adc_readout = 0;
 
 	waveform_buffer = malloc(WAVEFORM_BUFFER_SIZE);
 

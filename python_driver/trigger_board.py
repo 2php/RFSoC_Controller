@@ -24,24 +24,27 @@ def save_waveform(data):
 #load the board state
 board = ib.load_board()
 
+if(board == None):
+    print("Error, unable to load board state from disk.")
+    sys.exit()
+
 #flush the adc buffer
 if(board.flush_adc_buffer() != 0):
     print("Error while trying to flush adc buffer, is the connection up?")
     sys.exit()
 
-if(board == None):
-    print("Error, unable to load board state from disk.")
-    sys.exit()
     
 num_trigs = 1
-if(len(sys.argv) > 3):
-    num_trigs = int(sys.argv[3])
+if(board.adc_shift_val != 0):
+    num_trigs = pow(2,board.adc_shift_val)
     
 for i in range(0, num_trigs):
     if(board.trigger()):
         print("Error triggering board, is the connection up?")
     else:
-        print("Board triggered!")
+        print("Board triggered! Trigger number: " + str(i+1))
+    time.sleep(board.get_capture_time())
+    
     
 if(len(sys.argv) > 1):
     

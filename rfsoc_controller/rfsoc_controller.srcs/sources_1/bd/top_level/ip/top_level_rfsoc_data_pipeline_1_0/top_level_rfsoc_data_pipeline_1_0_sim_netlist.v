@@ -1,84 +1,17 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Aug  6 10:24:20 2019
+// Date        : Wed Aug 14 11:48:01 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_1_0/top_level_rfsoc_data_pipeline_1_0_sim_netlist.v
-// Design      : top_level_rfsoc_data_pipeline_1_0
+// Command     : write_verilog -force -mode funcsim -rename_top top_level_rfsoc_data_pipeline_1_0 -prefix
+//               top_level_rfsoc_data_pipeline_1_0_ top_level_rfsoc_data_pipeline_8_0_sim_netlist.v
+// Design      : top_level_rfsoc_data_pipeline_8_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu29dr-ffvf1760-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_1_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
-(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
-(* NotValidForBitStream *)
-module top_level_rfsoc_data_pipeline_1_0
-   (S_AXIS_tdata,
-    S_AXIS_tready,
-    S_AXIS_tvalid,
-    ext_trigger,
-    gpio_in,
-    is_selected,
-    m_axis_tdata,
-    m_axis_tready,
-    m_axis_tvalid,
-    microblaze_clk,
-    microblaze_resetn,
-    pipeline_active,
-    rf_clock,
-    rf_resetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]S_AXIS_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output S_AXIS_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_tvalid;
-  input ext_trigger;
-  input [15:0]gpio_in;
-  input is_selected;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [255:0]m_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) input m_axis_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
-  output pipeline_active;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *) input rf_clock;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
-
-  wire [31:0]S_AXIS_tdata;
-  wire S_AXIS_tready;
-  wire S_AXIS_tvalid;
-  wire ext_trigger;
-  wire [15:0]gpio_in;
-  wire is_selected;
-  wire [255:0]m_axis_tdata;
-  wire m_axis_tready;
-  wire m_axis_tvalid;
-  wire microblaze_clk;
-  wire microblaze_resetn;
-  wire pipeline_active;
-  wire rf_clock;
-  wire rf_resetn;
-
-  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
-  top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline inst
-       (.S_AXIS_tdata(S_AXIS_tdata),
-        .S_AXIS_tready(S_AXIS_tready),
-        .S_AXIS_tvalid(S_AXIS_tvalid),
-        .ext_trigger(ext_trigger),
-        .gpio_in(gpio_in),
-        .is_selected(is_selected),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tvalid(m_axis_tvalid),
-        .microblaze_clk(microblaze_clk),
-        .microblaze_resetn(microblaze_resetn),
-        .pipeline_active(pipeline_active),
-        .rf_clock(rf_clock),
-        .rf_resetn(rf_resetn));
-endmodule
-
-(* ORIG_REF_NAME = "axis_data_fifo_v2_0_1_top" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_data_fifo_v2_0_1_top
    (s_axis_tready,
     m_axis_tvalid,
@@ -592,7 +525,6 @@ module top_level_rfsoc_data_pipeline_1_0_axis_data_fifo_v2_0_1_top__parameterize
         .wr_data_count_axis({\gen_fifo.xpm_fifo_axis_inst_n_327 ,\gen_fifo.xpm_fifo_axis_inst_n_328 ,\gen_fifo.xpm_fifo_axis_inst_n_329 ,\gen_fifo.xpm_fifo_axis_inst_n_330 ,\gen_fifo.xpm_fifo_axis_inst_n_331 ,\gen_fifo.xpm_fifo_axis_inst_n_332 ,\gen_fifo.xpm_fifo_axis_inst_n_333 ,\gen_fifo.xpm_fifo_axis_inst_n_334 ,\gen_fifo.xpm_fifo_axis_inst_n_335 ,\gen_fifo.xpm_fifo_axis_inst_n_336 ,\gen_fifo.xpm_fifo_axis_inst_n_337 ,\gen_fifo.xpm_fifo_axis_inst_n_338 ,\gen_fifo.xpm_fifo_axis_inst_n_339 }));
 endmodule
 
-(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter
    (Q,
     m_axis_tdata,
@@ -642,7 +574,6 @@ module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axis_dwid
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axis_dwidth_converter_v1_1_18_axisc_upsizer" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axisc_upsizer
    (Q,
     m_axis_tdata,
@@ -2635,7 +2566,6 @@ module top_level_rfsoc_data_pipeline_1_0_axis_dwidth_converter_v1_1_18_axisc_ups
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axis_mux" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_mux
    (int_select_reg_rep__1_0,
     m_axis_tready,
@@ -4763,7 +4693,6 @@ module top_level_rfsoc_data_pipeline_1_0_axis_mux
         .Q(int_select_reg_rep__1_0));
 endmodule
 
-(* ORIG_REF_NAME = "axis_tready_slice" *) 
 module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
    (out,
     rf_resetn_0,
@@ -5764,7 +5693,7 @@ module top_level_rfsoc_data_pipeline_1_0_axis_tready_slice
         .S({1'b0,1'b0,1'b0,1'b0,1'b0,sr_post_delay_n_24,sr_post_delay_n_25,sr_post_delay_n_26}));
 endmodule
 
-(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline" *) 
+(* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
    (S_AXIS_tdata,
     S_AXIS_tready,
@@ -5921,8 +5850,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline
         .s_axis_tvalid(axis_mux_0_m_axis_TVALID));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_10,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_0_10" *) 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_0_10,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_0_10
    (s_axis_aresetn,
     s_axis_aclk,
@@ -5961,8 +5889,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_0_10
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9" *) 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6005,8 +5932,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_cloc
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_gpio_5,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_gpio_5" *) 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_gpio_5,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6049,8 +5975,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_gpio
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_9,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_data_fifo_waveform_9" *) 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_data_fifo_waveform_9,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9
    (s_axis_aresetn,
     s_axis_aclk,
@@ -6089,8 +6014,7 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_data_fifo_wave
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_10,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_dwidth_converter_0_10" *) 
-(* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "rfsoc_data_pipeline_axis_dwidth_converter_0_10,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10
    (aclk,
     aresetn,
@@ -6128,7 +6052,6 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_dwidth_convert
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_mux_0_0" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_mux_0_0
    (int_select_reg_rep__1,
     m_axis_tready,
@@ -6171,7 +6094,6 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_mux_0_0
         .s_axis_tready(s_axis_tready));
 endmodule
 
-(* ORIG_REF_NAME = "rfsoc_data_pipeline_axis_tready_slice_0_0" *) 
 module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0_0
    (out,
     rf_resetn_0,
@@ -6226,7 +6148,6 @@ module top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline_axis_tready_slice_0
         .s_axis_tvalid(s_axis_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "shift_register" *) 
 module top_level_rfsoc_data_pipeline_1_0_shift_register
    (m_axis_tdata,
     m_axis_tdata_0_sp_1,
@@ -15786,10 +15707,75 @@ module top_level_rfsoc_data_pipeline_1_0_shift_register__parameterized0_2
         .Q(state));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
-(* REG_OUTPUT = "0" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "GRAY" *) 
+(* CHECK_LICENSE_TYPE = "top_level_rfsoc_data_pipeline_8_0,rfsoc_data_pipeline,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "IPI" *) 
+(* X_CORE_INFO = "rfsoc_data_pipeline,Vivado 2019.1" *) 
+(* NotValidForBitStream *)
+module top_level_rfsoc_data_pipeline_1_0
+   (S_AXIS_tdata,
+    S_AXIS_tready,
+    S_AXIS_tvalid,
+    ext_trigger,
+    gpio_in,
+    is_selected,
+    m_axis_tdata,
+    m_axis_tready,
+    m_axis_tvalid,
+    microblaze_clk,
+    microblaze_resetn,
+    pipeline_active,
+    rf_clock,
+    rf_resetn);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *) input [31:0]S_AXIS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *) output S_AXIS_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input S_AXIS_tvalid;
+  input ext_trigger;
+  input [15:0]gpio_in;
+  input is_selected;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [255:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0" *) output m_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input microblaze_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input microblaze_resetn;
+  output pipeline_active;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0" *) input rf_clock;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rf_resetn;
+
+  wire [31:0]S_AXIS_tdata;
+  wire S_AXIS_tready;
+  wire S_AXIS_tvalid;
+  wire ext_trigger;
+  wire [15:0]gpio_in;
+  wire is_selected;
+  wire [255:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire microblaze_clk;
+  wire microblaze_resetn;
+  wire pipeline_active;
+  wire rf_clock;
+  wire rf_resetn;
+
+  (* HW_HANDOFF = "rfsoc_data_pipeline.hwdef" *) 
+  top_level_rfsoc_data_pipeline_1_0_rfsoc_data_pipeline inst
+       (.S_AXIS_tdata(S_AXIS_tdata),
+        .S_AXIS_tready(S_AXIS_tready),
+        .S_AXIS_tvalid(S_AXIS_tvalid),
+        .ext_trigger(ext_trigger),
+        .gpio_in(gpio_in),
+        .is_selected(is_selected),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tvalid(m_axis_tvalid),
+        .microblaze_clk(microblaze_clk),
+        .microblaze_resetn(microblaze_resetn),
+        .pipeline_active(pipeline_active),
+        .rf_clock(rf_clock),
+        .rf_resetn(rf_resetn));
+endmodule
+
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "1" *) (* REG_OUTPUT = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
+(* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -17779,8 +17765,8 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_gray__parameterized1__2
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "4" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "1" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "1" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -18208,7 +18194,6 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_cdc_sync_rst__parameterized0__9
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_counter_updn
    (Q,
     \count_value_i_reg[1]_0 ,
@@ -21333,16 +21318,15 @@ endmodule
 (* CLOCKING_MODE = "common_clock" *) (* ECC_MODE = "no_ecc" *) (* EN_ADV_FEATURE_AXIS = "16'b0001000000000000" *) 
 (* EN_ADV_FEATURE_AXIS_INT = "16'b0001000000000000" *) (* EN_ALMOST_EMPTY_INT = "1'b0" *) (* EN_ALMOST_FULL_INT = "1'b0" *) 
 (* EN_DATA_VALID_INT = "1'b1" *) (* FIFO_DEPTH = "16" *) (* FIFO_MEMORY_TYPE = "auto" *) 
-(* LOG_DEPTH_AXIS = "4" *) (* ORIG_REF_NAME = "xpm_fifo_axis" *) (* PACKET_FIFO = "false" *) 
-(* PKT_SIZE_LT8 = "1'b0" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
-(* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
-(* P_PKT_MODE = "0" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) 
-(* TDEST_OFFSET = "42" *) (* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) 
-(* TID_WIDTH = "1" *) (* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) 
-(* TUSER_MAX_WIDTH = "4053" *) (* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) 
-(* USE_ADV_FEATURES = "825241648" *) (* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
-(* XPM_MODULE = "TRUE" *) 
+(* LOG_DEPTH_AXIS = "4" *) (* PACKET_FIFO = "false" *) (* PKT_SIZE_LT8 = "1'b0" *) 
+(* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) (* P_COMMON_CLOCK = "1" *) 
+(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_PKT_MODE = "0" *) 
+(* RD_DATA_COUNT_WIDTH = "5" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* TDATA_OFFSET = "32" *) (* TDATA_WIDTH = "32" *) (* TDEST_OFFSET = "42" *) 
+(* TDEST_WIDTH = "1" *) (* TID_OFFSET = "41" *) (* TID_WIDTH = "1" *) 
+(* TKEEP_OFFSET = "40" *) (* TSTRB_OFFSET = "36" *) (* TUSER_MAX_WIDTH = "4053" *) 
+(* TUSER_OFFSET = "43" *) (* TUSER_WIDTH = "1" *) (* USE_ADV_FEATURES = "825241648" *) 
+(* USE_ADV_FEATURES_INT = "825241648" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_axis
    (s_aresetn,
     s_aclk,
@@ -22404,18 +22388,18 @@ endmodule
 (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) 
 (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) 
 (* FIFO_SIZE = "704" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "3" *) 
-(* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) 
-(* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) 
-(* PROG_FULL_THRESH = "11" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) 
-(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
-(* READ_DATA_WIDTH = "44" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
-(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
-(* WRITE_DATA_WIDTH = "44" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
-(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
-(* WR_WIDTH_LOG = "6" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
-(* invalid = "0" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "11" *) 
+(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "9" *) (* PF_THRESH_MAX = "11" *) 
+(* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "5" *) (* PROG_FULL_THRESH = "11" *) 
+(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
+(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "44" *) 
+(* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "825241648" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "44" *) 
+(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
+(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) 
+(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
+(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_base
    (sleep,
     rst,
@@ -24259,7 +24243,6 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_base__parameterized2
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -24403,7 +24386,6 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_bit_6
         .O(clr_full));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_vec" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_vec
    (\gen_pf_ic_rc.gen_full_rst_val.ram_full_i_reg ,
     \syncstages_ff_reg[2] ,
@@ -24825,7 +24807,6 @@ module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_reg_vec_9
         .R(wrst_busy));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_fifo_rst
    (ram_wr_en_i,
     Q,
@@ -25756,24 +25737,23 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "704" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
-(* P_MIN_WIDTH_DATA = "44" *) (* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) 
-(* P_MIN_WIDTH_DATA_ECC = "44" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
-(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "44" *) (* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) 
-(* READ_DATA_WIDTH_B = "44" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "44" *) (* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) 
-(* WRITE_MODE_B = "2" *) (* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) 
-(* rstb_loop_iter = "44" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "44" *) 
+(* P_MIN_WIDTH_DATA_A = "44" *) (* P_MIN_WIDTH_DATA_B = "44" *) (* P_MIN_WIDTH_DATA_ECC = "44" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "44" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
+(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "44" *) 
+(* P_WIDTH_COL_WRITE_B = "44" *) (* READ_DATA_WIDTH_A = "44" *) (* READ_DATA_WIDTH_B = "44" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "44" *) 
+(* WRITE_DATA_WIDTH_B = "44" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
+(* XPM_MODULE = "TRUE" *) (* rsta_loop_iter = "44" *) (* rstb_loop_iter = "44" *) 
 module top_level_rfsoc_data_pipeline_1_0_xpm_memory_base
    (sleep,
     clka,

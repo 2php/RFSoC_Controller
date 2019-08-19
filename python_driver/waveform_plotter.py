@@ -80,7 +80,7 @@ def plot_waveforms(channels):
                  t.append(t_now)
                  t_now += 0.25
                  
-             ax.plot(t, wave, label="channel " + str(c.number))
+             ax.plot(t, wave, label="channel " + str(c.number+1))
              
          
          

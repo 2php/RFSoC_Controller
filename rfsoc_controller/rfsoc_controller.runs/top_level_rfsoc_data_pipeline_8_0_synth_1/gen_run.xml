@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="top_level_rfsoc_data_pipeline_8_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1565112190">
+<GenRun Id="top_level_rfsoc_data_pipeline_8_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1565808402">
   <File Type="PA-TCL" Name="top_level_rfsoc_data_pipeline_8_0.tcl"/>
   <File Type="REPORTS-TCL" Name="top_level_rfsoc_data_pipeline_8_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_level_rfsoc_data_pipeline_8_0.vds"/>
+  <File Type="RDS-UTIL" Name="top_level_rfsoc_data_pipeline_8_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_level_rfsoc_data_pipeline_8_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_level_rfsoc_data_pipeline_8_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_level_rfsoc_data_pipeline_8_0">
     <File Path="$PSRCDIR/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0.xci">

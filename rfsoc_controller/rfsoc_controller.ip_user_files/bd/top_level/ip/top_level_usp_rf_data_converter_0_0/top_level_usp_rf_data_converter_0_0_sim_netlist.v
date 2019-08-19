@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Jul 19 14:32:11 2019
+// Date        : Thu Aug  8 14:29:15 2019
 // Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top top_level_usp_rf_data_converter_0_0 -prefix
-//               top_level_usp_rf_data_converter_0_0_ top_level_usp_rf_data_converter_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/top_level_usp_rf_data_converter_0_0_sim_netlist.v
 // Design      : top_level_usp_rf_data_converter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -976,6 +976,7 @@ module top_level_usp_rf_data_converter_0_0
         .vout33_p(vout33_p));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_address_decoder" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_address_decoder
    (cs_ce_ld_enable_i,
     \drp_addr_reg[2] ,
@@ -17963,6 +17964,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_a
         .O(bank0_write[0]));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_axi_lite_ipif" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_axi_lite_ipif
    (axi_timeout,
     s_axi_awready,
@@ -20054,6 +20056,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_a
         .user_drp_drdy_reg(user_drp_drdy_reg));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_bgt_fsm" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_bgt_fsm
    (\mem_data_adc0_reg[19] ,
     trim_code,
@@ -23289,55 +23292,55 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .O(\syncstages_ff_reg[3] ));
 endmodule
 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* adc00_data_type = "1'b0" *) (* adc00_decimation = "3'b001" *) 
-(* adc00_enable = "1'b1" *) (* adc00_mixer = "2'b10" *) (* adc01_data_type = "1'b0" *) 
-(* adc01_decimation = "3'b000" *) (* adc01_enable = "1'b0" *) (* adc01_mixer = "2'b10" *) 
-(* adc02_data_type = "1'b0" *) (* adc02_decimation = "3'b000" *) (* adc02_enable = "1'b0" *) 
-(* adc02_mixer = "2'b10" *) (* adc03_data_type = "1'b0" *) (* adc03_decimation = "3'b000" *) 
-(* adc03_enable = "1'b0" *) (* adc03_mixer = "2'b10" *) (* adc10_data_type = "1'b0" *) 
-(* adc10_decimation = "3'b000" *) (* adc10_enable = "1'b0" *) (* adc10_mixer = "2'b10" *) 
-(* adc11_data_type = "1'b0" *) (* adc11_decimation = "3'b000" *) (* adc11_enable = "1'b0" *) 
-(* adc11_mixer = "2'b10" *) (* adc12_data_type = "1'b0" *) (* adc12_decimation = "3'b000" *) 
-(* adc12_enable = "1'b0" *) (* adc12_mixer = "2'b10" *) (* adc13_data_type = "1'b0" *) 
-(* adc13_decimation = "3'b000" *) (* adc13_enable = "1'b0" *) (* adc13_mixer = "2'b10" *) 
-(* adc20_data_type = "1'b0" *) (* adc20_decimation = "3'b000" *) (* adc20_enable = "1'b0" *) 
-(* adc20_mixer = "2'b10" *) (* adc21_data_type = "1'b0" *) (* adc21_decimation = "3'b000" *) 
-(* adc21_enable = "1'b0" *) (* adc21_mixer = "2'b10" *) (* adc22_data_type = "1'b0" *) 
-(* adc22_decimation = "3'b000" *) (* adc22_enable = "1'b0" *) (* adc22_mixer = "2'b10" *) 
-(* adc23_data_type = "1'b0" *) (* adc23_decimation = "3'b000" *) (* adc23_enable = "1'b0" *) 
-(* adc23_mixer = "2'b10" *) (* adc30_data_type = "1'b0" *) (* adc30_decimation = "3'b000" *) 
-(* adc30_enable = "1'b0" *) (* adc30_mixer = "2'b10" *) (* adc31_data_type = "1'b0" *) 
-(* adc31_decimation = "3'b000" *) (* adc31_enable = "1'b0" *) (* adc31_mixer = "2'b10" *) 
-(* adc32_data_type = "1'b0" *) (* adc32_decimation = "3'b000" *) (* adc32_enable = "1'b0" *) 
-(* adc32_mixer = "2'b10" *) (* adc33_data_type = "1'b0" *) (* adc33_decimation = "3'b000" *) 
-(* adc33_enable = "1'b0" *) (* adc33_mixer = "2'b10" *) (* dac00_data_type = "1'b0" *) 
-(* dac00_enable = "1'b1" *) (* dac00_interpolation = "3'b001" *) (* dac00_mixer = "2'b10" *) 
-(* dac00_sinc = "1'b0" *) (* dac01_data_type = "1'b0" *) (* dac01_enable = "1'b1" *) 
-(* dac01_interpolation = "3'b001" *) (* dac01_mixer = "2'b10" *) (* dac01_sinc = "1'b0" *) 
-(* dac02_data_type = "1'b0" *) (* dac02_enable = "1'b1" *) (* dac02_interpolation = "3'b001" *) 
-(* dac02_mixer = "2'b10" *) (* dac02_sinc = "1'b0" *) (* dac03_data_type = "1'b0" *) 
-(* dac03_enable = "1'b1" *) (* dac03_interpolation = "3'b001" *) (* dac03_mixer = "2'b10" *) 
-(* dac03_sinc = "1'b0" *) (* dac10_data_type = "1'b0" *) (* dac10_enable = "1'b1" *) 
-(* dac10_interpolation = "3'b001" *) (* dac10_mixer = "2'b10" *) (* dac10_sinc = "1'b0" *) 
-(* dac11_data_type = "1'b0" *) (* dac11_enable = "1'b1" *) (* dac11_interpolation = "3'b001" *) 
-(* dac11_mixer = "2'b10" *) (* dac11_sinc = "1'b0" *) (* dac12_data_type = "1'b0" *) 
-(* dac12_enable = "1'b1" *) (* dac12_interpolation = "3'b001" *) (* dac12_mixer = "2'b10" *) 
-(* dac12_sinc = "1'b0" *) (* dac13_data_type = "1'b0" *) (* dac13_enable = "1'b1" *) 
-(* dac13_interpolation = "3'b001" *) (* dac13_mixer = "2'b10" *) (* dac13_sinc = "1'b0" *) 
-(* dac20_data_type = "1'b0" *) (* dac20_enable = "1'b1" *) (* dac20_interpolation = "3'b001" *) 
-(* dac20_mixer = "2'b10" *) (* dac20_sinc = "1'b0" *) (* dac21_data_type = "1'b0" *) 
-(* dac21_enable = "1'b1" *) (* dac21_interpolation = "3'b001" *) (* dac21_mixer = "2'b10" *) 
-(* dac21_sinc = "1'b0" *) (* dac22_data_type = "1'b0" *) (* dac22_enable = "1'b1" *) 
-(* dac22_interpolation = "3'b001" *) (* dac22_mixer = "2'b10" *) (* dac22_sinc = "1'b0" *) 
-(* dac23_data_type = "1'b0" *) (* dac23_enable = "1'b1" *) (* dac23_interpolation = "3'b001" *) 
-(* dac23_mixer = "2'b10" *) (* dac23_sinc = "1'b0" *) (* dac30_data_type = "1'b0" *) 
-(* dac30_enable = "1'b1" *) (* dac30_interpolation = "3'b001" *) (* dac30_mixer = "2'b10" *) 
-(* dac30_sinc = "1'b0" *) (* dac31_data_type = "1'b0" *) (* dac31_enable = "1'b1" *) 
-(* dac31_interpolation = "3'b001" *) (* dac31_mixer = "2'b10" *) (* dac31_sinc = "1'b0" *) 
-(* dac32_data_type = "1'b0" *) (* dac32_enable = "1'b1" *) (* dac32_interpolation = "3'b001" *) 
-(* dac32_mixer = "2'b10" *) (* dac32_sinc = "1'b0" *) (* dac33_data_type = "1'b0" *) 
-(* dac33_enable = "1'b1" *) (* dac33_interpolation = "3'b001" *) (* dac33_mixer = "2'b10" *) 
-(* dac33_sinc = "1'b0" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_block" *) (* adc00_data_type = "1'b0" *) 
+(* adc00_decimation = "3'b001" *) (* adc00_enable = "1'b1" *) (* adc00_mixer = "2'b10" *) 
+(* adc01_data_type = "1'b0" *) (* adc01_decimation = "3'b000" *) (* adc01_enable = "1'b0" *) 
+(* adc01_mixer = "2'b10" *) (* adc02_data_type = "1'b0" *) (* adc02_decimation = "3'b000" *) 
+(* adc02_enable = "1'b0" *) (* adc02_mixer = "2'b10" *) (* adc03_data_type = "1'b0" *) 
+(* adc03_decimation = "3'b000" *) (* adc03_enable = "1'b0" *) (* adc03_mixer = "2'b10" *) 
+(* adc10_data_type = "1'b0" *) (* adc10_decimation = "3'b000" *) (* adc10_enable = "1'b0" *) 
+(* adc10_mixer = "2'b10" *) (* adc11_data_type = "1'b0" *) (* adc11_decimation = "3'b000" *) 
+(* adc11_enable = "1'b0" *) (* adc11_mixer = "2'b10" *) (* adc12_data_type = "1'b0" *) 
+(* adc12_decimation = "3'b000" *) (* adc12_enable = "1'b0" *) (* adc12_mixer = "2'b10" *) 
+(* adc13_data_type = "1'b0" *) (* adc13_decimation = "3'b000" *) (* adc13_enable = "1'b0" *) 
+(* adc13_mixer = "2'b10" *) (* adc20_data_type = "1'b0" *) (* adc20_decimation = "3'b000" *) 
+(* adc20_enable = "1'b0" *) (* adc20_mixer = "2'b10" *) (* adc21_data_type = "1'b0" *) 
+(* adc21_decimation = "3'b000" *) (* adc21_enable = "1'b0" *) (* adc21_mixer = "2'b10" *) 
+(* adc22_data_type = "1'b0" *) (* adc22_decimation = "3'b000" *) (* adc22_enable = "1'b0" *) 
+(* adc22_mixer = "2'b10" *) (* adc23_data_type = "1'b0" *) (* adc23_decimation = "3'b000" *) 
+(* adc23_enable = "1'b0" *) (* adc23_mixer = "2'b10" *) (* adc30_data_type = "1'b0" *) 
+(* adc30_decimation = "3'b000" *) (* adc30_enable = "1'b0" *) (* adc30_mixer = "2'b10" *) 
+(* adc31_data_type = "1'b0" *) (* adc31_decimation = "3'b000" *) (* adc31_enable = "1'b0" *) 
+(* adc31_mixer = "2'b10" *) (* adc32_data_type = "1'b0" *) (* adc32_decimation = "3'b000" *) 
+(* adc32_enable = "1'b0" *) (* adc32_mixer = "2'b10" *) (* adc33_data_type = "1'b0" *) 
+(* adc33_decimation = "3'b000" *) (* adc33_enable = "1'b0" *) (* adc33_mixer = "2'b10" *) 
+(* dac00_data_type = "1'b0" *) (* dac00_enable = "1'b1" *) (* dac00_interpolation = "3'b001" *) 
+(* dac00_mixer = "2'b10" *) (* dac00_sinc = "1'b0" *) (* dac01_data_type = "1'b0" *) 
+(* dac01_enable = "1'b1" *) (* dac01_interpolation = "3'b001" *) (* dac01_mixer = "2'b10" *) 
+(* dac01_sinc = "1'b0" *) (* dac02_data_type = "1'b0" *) (* dac02_enable = "1'b1" *) 
+(* dac02_interpolation = "3'b001" *) (* dac02_mixer = "2'b10" *) (* dac02_sinc = "1'b0" *) 
+(* dac03_data_type = "1'b0" *) (* dac03_enable = "1'b1" *) (* dac03_interpolation = "3'b001" *) 
+(* dac03_mixer = "2'b10" *) (* dac03_sinc = "1'b0" *) (* dac10_data_type = "1'b0" *) 
+(* dac10_enable = "1'b1" *) (* dac10_interpolation = "3'b001" *) (* dac10_mixer = "2'b10" *) 
+(* dac10_sinc = "1'b0" *) (* dac11_data_type = "1'b0" *) (* dac11_enable = "1'b1" *) 
+(* dac11_interpolation = "3'b001" *) (* dac11_mixer = "2'b10" *) (* dac11_sinc = "1'b0" *) 
+(* dac12_data_type = "1'b0" *) (* dac12_enable = "1'b1" *) (* dac12_interpolation = "3'b001" *) 
+(* dac12_mixer = "2'b10" *) (* dac12_sinc = "1'b0" *) (* dac13_data_type = "1'b0" *) 
+(* dac13_enable = "1'b1" *) (* dac13_interpolation = "3'b001" *) (* dac13_mixer = "2'b10" *) 
+(* dac13_sinc = "1'b0" *) (* dac20_data_type = "1'b0" *) (* dac20_enable = "1'b1" *) 
+(* dac20_interpolation = "3'b001" *) (* dac20_mixer = "2'b10" *) (* dac20_sinc = "1'b0" *) 
+(* dac21_data_type = "1'b0" *) (* dac21_enable = "1'b1" *) (* dac21_interpolation = "3'b001" *) 
+(* dac21_mixer = "2'b10" *) (* dac21_sinc = "1'b0" *) (* dac22_data_type = "1'b0" *) 
+(* dac22_enable = "1'b1" *) (* dac22_interpolation = "3'b001" *) (* dac22_mixer = "2'b10" *) 
+(* dac22_sinc = "1'b0" *) (* dac23_data_type = "1'b0" *) (* dac23_enable = "1'b1" *) 
+(* dac23_interpolation = "3'b001" *) (* dac23_mixer = "2'b10" *) (* dac23_sinc = "1'b0" *) 
+(* dac30_data_type = "1'b0" *) (* dac30_enable = "1'b1" *) (* dac30_interpolation = "3'b001" *) 
+(* dac30_mixer = "2'b10" *) (* dac30_sinc = "1'b0" *) (* dac31_data_type = "1'b0" *) 
+(* dac31_enable = "1'b1" *) (* dac31_interpolation = "3'b001" *) (* dac31_mixer = "2'b10" *) 
+(* dac31_sinc = "1'b0" *) (* dac32_data_type = "1'b0" *) (* dac32_enable = "1'b1" *) 
+(* dac32_interpolation = "3'b001" *) (* dac32_mixer = "2'b10" *) (* dac32_sinc = "1'b0" *) 
+(* dac33_data_type = "1'b0" *) (* dac33_enable = "1'b1" *) (* dac33_interpolation = "3'b001" *) 
+(* dac33_mixer = "2'b10" *) (* dac33_sinc = "1'b0" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_block
    (s_axi_aclk,
     s_axi_aresetn,
@@ -32236,6 +32239,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .vout33_p(vout33_p));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_bufg_gt_ctrl
    (clk_dac0,
     clk_dac1,
@@ -32388,6 +32392,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_b
         .O(clk_dac3));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_constants_config" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_constants_config
    (reset_const_i,
     const_req_adc0,
@@ -34264,6 +34269,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_c
         .R(reset_const_i));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_counter_f" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_counter_f
    (\FSM_sequential_access_cs_reg[0] ,
     \FSM_sequential_access_cs_reg[1] ,
@@ -34784,6 +34790,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_c
         .O(\bus2ip_addr_reg_reg[15] ));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_device_rom" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_device_rom
    (\pll_state_machine.drpaddr_status_reg[6] ,
     \data_reg[26]_0 ,
@@ -34879,6 +34886,11 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
     \dac2_daddr_mon[1]_INST_0 ,
     \dac3_daddr_mon[8]_INST_0 ,
     \dac3_daddr_mon[1]_INST_0 ,
+    \data_reg[14]_0 ,
+    \data_reg[14]_1 ,
+    \data_reg[14]_2 ,
+    \data_reg[14]_3 ,
+    \data_reg[12]_0 ,
     \adc0_di_mon[14]_INST_0 ,
     \adc0_di_mon[0]_INST_0 ,
     \adc0_di_mon[15]_INST_0 ,
@@ -35014,6 +35026,11 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   input [0:0]\dac2_daddr_mon[1]_INST_0 ;
   input [2:0]\dac3_daddr_mon[8]_INST_0 ;
   input [0:0]\dac3_daddr_mon[1]_INST_0 ;
+  input [2:0]\data_reg[14]_0 ;
+  input \data_reg[14]_1 ;
+  input \data_reg[14]_2 ;
+  input \data_reg[14]_3 ;
+  input \data_reg[12]_0 ;
   input [14:0]\adc0_di_mon[14]_INST_0 ;
   input [1:0]\adc0_di_mon[0]_INST_0 ;
   input [15:0]\adc0_di_mon[15]_INST_0 ;
@@ -35053,7 +35070,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   input \FSM_onehot_tc_sm_state_reg[4]_i_2_5 ;
   input p_0_in;
   input \FSM_onehot_tc_sm_state_reg[4]_i_2_6 ;
-  input [28:0]\data_reg[29]_3 ;
+  input [26:0]\data_reg[29]_3 ;
   input s_axi_aclk;
 
   wire [2:0]D;
@@ -35155,10 +35172,17 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   wire [15:0]dac3_drpdi_tc;
   wire dac3_drpen_tc;
   wire dac3_drprdy_tc;
+  wire \data[12]_i_1_n_0 ;
+  wire \data[14]_i_1_n_0 ;
   wire \data_index[8]_i_5_n_0 ;
   wire \data_index[8]_i_6_n_0 ;
   wire \data_index_reg[8]_i_3_n_0 ;
   wire \data_index_reg_rep[0] ;
+  wire \data_reg[12]_0 ;
+  wire [2:0]\data_reg[14]_0 ;
+  wire \data_reg[14]_1 ;
+  wire \data_reg[14]_2 ;
+  wire \data_reg[14]_3 ;
   wire [25:0]\data_reg[26]_0 ;
   wire \data_reg[27]_0 ;
   wire \data_reg[27]_1 ;
@@ -35169,7 +35193,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   wire \data_reg[29]_0 ;
   wire \data_reg[29]_1 ;
   wire \data_reg[29]_2 ;
-  wire [28:0]\data_reg[29]_3 ;
+  wire [26:0]\data_reg[29]_3 ;
   wire drp_den_reg;
   wire dummy_read_den;
   wire p_0_in;
@@ -35213,7 +35237,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(\data_index_reg_rep[0] ),
         .I3(\FSM_onehot_tc_sm_state_reg[6]_0 [5]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair713" *) 
+  (* SOFT_HLUTNM = "soft_lutpair714" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_tc_sm_state[4]_i_1 
@@ -35269,7 +35293,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I3(\data_index_reg[8]_i_3_n_0 ),
         .I4(\FSM_onehot_tc_sm_state_reg[6]_0 [5]),
         .O(\FSM_onehot_tc_sm_state[6]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair713" *) 
+  (* SOFT_HLUTNM = "soft_lutpair714" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_onehot_tc_sm_state[6]_i_9 
@@ -35301,7 +35325,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(\adc0_daddr_mon[10]_INST_0_0 [8]),
         .I5(\adc0_di_mon[0]_INST_0 [0]),
         .O(\adc0_drpaddr_reg[10] ));
-  (* SOFT_HLUTNM = "soft_lutpair695" *) 
+  (* SOFT_HLUTNM = "soft_lutpair696" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \adc0_daddr_mon[10]_INST_0_i_3 
@@ -35638,7 +35662,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [14]),
         .O(adc1_drpdi_tc[14]));
-  (* SOFT_HLUTNM = "soft_lutpair693" *) 
+  (* SOFT_HLUTNM = "soft_lutpair694" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \adc1_di_mon[15]_INST_0_i_1 
@@ -35692,7 +35716,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [5]),
         .O(adc1_drpdi_tc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair663" *) 
+  (* SOFT_HLUTNM = "soft_lutpair692" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \adc1_di_mon[6]_INST_0_i_1 
@@ -35710,7 +35734,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [7]),
         .O(adc1_drpdi_tc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair694" *) 
+  (* SOFT_HLUTNM = "soft_lutpair695" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \adc1_di_mon[8]_INST_0_i_1 
@@ -35728,7 +35752,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [9]),
         .O(adc1_drpdi_tc[9]));
-  (* SOFT_HLUTNM = "soft_lutpair658" *) 
+  (* SOFT_HLUTNM = "soft_lutpair656" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     adc1_dwe_mon_INST_0_i_2
@@ -35773,7 +35797,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [10]),
         .O(adc2_drpdi_tc[10]));
-  (* SOFT_HLUTNM = "soft_lutpair660" *) 
+  (* SOFT_HLUTNM = "soft_lutpair659" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[11]_INST_0_i_1 
@@ -35782,7 +35806,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [11]),
         .O(adc2_drpdi_tc[11]));
-  (* SOFT_HLUTNM = "soft_lutpair696" *) 
+  (* SOFT_HLUTNM = "soft_lutpair697" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[12]_INST_0_i_1 
@@ -35845,7 +35869,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [3]),
         .O(adc2_drpdi_tc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair698" *) 
+  (* SOFT_HLUTNM = "soft_lutpair693" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[4]_INST_0_i_1 
@@ -35863,7 +35887,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [5]),
         .O(adc2_drpdi_tc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair672" *) 
+  (* SOFT_HLUTNM = "soft_lutpair692" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[6]_INST_0_i_1 
@@ -35881,7 +35905,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [7]),
         .O(adc2_drpdi_tc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair688" *) 
+  (* SOFT_HLUTNM = "soft_lutpair695" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[8]_INST_0_i_1 
@@ -35890,7 +35914,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [8]),
         .O(adc2_drpdi_tc[8]));
-  (* SOFT_HLUTNM = "soft_lutpair692" *) 
+  (* SOFT_HLUTNM = "soft_lutpair691" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \adc2_di_mon[9]_INST_0_i_1 
@@ -35899,7 +35923,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [9]),
         .O(adc2_drpdi_tc[9]));
-  (* SOFT_HLUTNM = "soft_lutpair658" *) 
+  (* SOFT_HLUTNM = "soft_lutpair656" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     adc2_dwe_mon_INST_0_i_2
@@ -35926,7 +35950,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(adc3_den_mon_INST_0_0),
         .I5(adc3_den_mon_INST_0_1),
         .O(\FSM_onehot_state_reg[1]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair714" *) 
+  (* SOFT_HLUTNM = "soft_lutpair713" *) 
   LUT2 #(
     .INIT(4'h7)) 
     adc3_den_mon_INST_0_i_2
@@ -35987,7 +36011,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [14]),
         .O(adc3_drpdi_tc[14]));
-  (* SOFT_HLUTNM = "soft_lutpair693" *) 
+  (* SOFT_HLUTNM = "soft_lutpair694" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \adc3_di_mon[15]_INST_0_i_1 
@@ -36014,7 +36038,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [2]),
         .O(adc3_drpdi_tc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair657" *) 
+  (* SOFT_HLUTNM = "soft_lutpair661" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \adc3_di_mon[3]_INST_0_i_1 
@@ -36023,7 +36047,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [3]),
         .O(adc3_drpdi_tc[3]));
-  (* SOFT_HLUTNM = "soft_lutpair698" *) 
+  (* SOFT_HLUTNM = "soft_lutpair693" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \adc3_di_mon[4]_INST_0_i_1 
@@ -36041,7 +36065,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [5]),
         .O(adc3_drpdi_tc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair686" *) 
+  (* SOFT_HLUTNM = "soft_lutpair663" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \adc3_di_mon[6]_INST_0_i_1 
@@ -36059,7 +36083,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [7]),
         .O(adc3_drpdi_tc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair694" *) 
+  (* SOFT_HLUTNM = "soft_lutpair672" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \adc3_di_mon[8]_INST_0_i_1 
@@ -36077,7 +36101,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [9]),
         .O(adc3_drpdi_tc[9]));
-  (* SOFT_HLUTNM = "soft_lutpair659" *) 
+  (* SOFT_HLUTNM = "soft_lutpair657" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     adc3_dwe_mon_INST_0_i_2
@@ -36116,7 +36140,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(tile_index[0]),
         .I5(\data_reg[26]_0 [18]),
         .O(\pll_state_machine.drpaddr_status_reg[5]_5 ));
-  (* SOFT_HLUTNM = "soft_lutpair690" *) 
+  (* SOFT_HLUTNM = "soft_lutpair689" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \dac0_daddr_mon[3]_INST_0_i_2 
@@ -36183,7 +36207,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(dac0_den_mon_INST_0_0[1]),
         .I5(dummy_read_den),
         .O(\data_reg[29]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair714" *) 
+  (* SOFT_HLUTNM = "soft_lutpair712" *) 
   LUT2 #(
     .INIT(4'h1)) 
     dac0_den_mon_INST_0_i_3
@@ -36200,7 +36224,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(dac0_den_mon_INST_0_0[1]),
         .I5(dac0_den_mon_INST_0_0[0]),
         .O(\data_reg[28]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair689" *) 
+  (* SOFT_HLUTNM = "soft_lutpair688" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \dac1_daddr_mon[0]_INST_0_i_1 
@@ -36239,7 +36263,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(tile_index[1]),
         .I5(\data_reg[26]_0 [18]),
         .O(\pll_state_machine.drpaddr_status_reg[5] ));
-  (* SOFT_HLUTNM = "soft_lutpair695" *) 
+  (* SOFT_HLUTNM = "soft_lutpair696" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \dac1_daddr_mon[3]_INST_0_i_1 
@@ -36248,7 +36272,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(\data_reg[26]_0 [19]),
         .O(dac1_drpaddr_tc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair697" *) 
+  (* SOFT_HLUTNM = "soft_lutpair698" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \dac1_daddr_mon[4]_INST_0_i_1 
@@ -36303,7 +36327,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
        (.I0(dac0_den_mon_INST_0),
         .I1(tile_index[2]),
         .O(drp_den_reg));
-  (* SOFT_HLUTNM = "soft_lutpair712" *) 
+  (* SOFT_HLUTNM = "soft_lutpair713" *) 
   LUT2 #(
     .INIT(4'h2)) 
     dac1_den_mon_INST_0_i_3
@@ -36328,7 +36352,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [10]),
         .O(dac1_drpdi_tc[10]));
-  (* SOFT_HLUTNM = "soft_lutpair660" *) 
+  (* SOFT_HLUTNM = "soft_lutpair659" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac1_di_mon[11]_INST_0_i_1 
@@ -36337,7 +36361,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [11]),
         .O(dac1_drpdi_tc[11]));
-  (* SOFT_HLUTNM = "soft_lutpair696" *) 
+  (* SOFT_HLUTNM = "soft_lutpair697" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac1_di_mon[12]_INST_0_i_1 
@@ -36391,7 +36415,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [2]),
         .O(dac1_drpdi_tc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair654" *) 
+  (* SOFT_HLUTNM = "soft_lutpair661" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac1_di_mon[3]_INST_0_i_1 
@@ -36436,7 +36460,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [7]),
         .O(dac1_drpdi_tc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair688" *) 
+  (* SOFT_HLUTNM = "soft_lutpair687" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac1_di_mon[8]_INST_0_i_1 
@@ -36445,7 +36469,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [8]),
         .O(dac1_drpdi_tc[8]));
-  (* SOFT_HLUTNM = "soft_lutpair692" *) 
+  (* SOFT_HLUTNM = "soft_lutpair691" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac1_di_mon[9]_INST_0_i_1 
@@ -36463,7 +36487,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(tile_index[0]),
         .O(dac1_drpen_tc));
-  (* SOFT_HLUTNM = "soft_lutpair690" *) 
+  (* SOFT_HLUTNM = "soft_lutpair689" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \dac2_daddr_mon[0]_INST_0_i_1 
@@ -36511,7 +36535,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[0]),
         .I3(\data_reg[26]_0 [19]),
         .O(dac2_drpaddr_tc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair697" *) 
+  (* SOFT_HLUTNM = "soft_lutpair698" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \dac2_daddr_mon[4]_INST_0_i_1 
@@ -36585,7 +36609,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [10]),
         .O(dac2_drpdi_tc[10]));
-  (* SOFT_HLUTNM = "soft_lutpair656" *) 
+  (* SOFT_HLUTNM = "soft_lutpair658" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac2_di_mon[11]_INST_0_i_1 
@@ -36594,7 +36618,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [11]),
         .O(dac2_drpdi_tc[11]));
-  (* SOFT_HLUTNM = "soft_lutpair661" *) 
+  (* SOFT_HLUTNM = "soft_lutpair660" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac2_di_mon[12]_INST_0_i_1 
@@ -36693,7 +36717,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [7]),
         .O(dac2_drpdi_tc[7]));
-  (* SOFT_HLUTNM = "soft_lutpair687" *) 
+  (* SOFT_HLUTNM = "soft_lutpair672" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac2_di_mon[8]_INST_0_i_1 
@@ -36702,7 +36726,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [8]),
         .O(dac2_drpdi_tc[8]));
-  (* SOFT_HLUTNM = "soft_lutpair691" *) 
+  (* SOFT_HLUTNM = "soft_lutpair690" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \dac2_di_mon[9]_INST_0_i_1 
@@ -36720,7 +36744,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[1]),
         .I3(tile_index[0]),
         .O(dac2_drpen_tc));
-  (* SOFT_HLUTNM = "soft_lutpair689" *) 
+  (* SOFT_HLUTNM = "soft_lutpair688" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_daddr_mon[0]_INST_0_i_1 
@@ -36817,7 +36841,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I4(tile_index[2]),
         .I5(\data_reg[26]_0 [24]),
         .O(\pll_state_machine.drpaddr_status_reg[10]_6 ));
-  (* SOFT_HLUTNM = "soft_lutpair659" *) 
+  (* SOFT_HLUTNM = "soft_lutpair657" *) 
   LUT3 #(
     .INIT(8'h80)) 
     dac3_den_mon_INST_0_i_2
@@ -36843,7 +36867,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [10]),
         .O(dac3_drpdi_tc[10]));
-  (* SOFT_HLUTNM = "soft_lutpair656" *) 
+  (* SOFT_HLUTNM = "soft_lutpair658" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_di_mon[11]_INST_0_i_1 
@@ -36852,7 +36876,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [11]),
         .O(dac3_drpdi_tc[11]));
-  (* SOFT_HLUTNM = "soft_lutpair661" *) 
+  (* SOFT_HLUTNM = "soft_lutpair660" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_di_mon[12]_INST_0_i_1 
@@ -36906,7 +36930,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [2]),
         .O(dac3_drpdi_tc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair657" *) 
+  (* SOFT_HLUTNM = "soft_lutpair654" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_di_mon[3]_INST_0_i_1 
@@ -36933,7 +36957,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [5]),
         .O(dac3_drpdi_tc[5]));
-  (* SOFT_HLUTNM = "soft_lutpair672" *) 
+  (* SOFT_HLUTNM = "soft_lutpair686" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_di_mon[6]_INST_0_i_1 
@@ -36960,7 +36984,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(\data_reg[26]_0 [8]),
         .O(dac3_drpdi_tc[8]));
-  (* SOFT_HLUTNM = "soft_lutpair691" *) 
+  (* SOFT_HLUTNM = "soft_lutpair690" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \dac3_di_mon[9]_INST_0_i_1 
@@ -36978,6 +37002,26 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .I2(tile_index[2]),
         .I3(dac0_den_mon_INST_0),
         .O(dac3_drpen_tc));
+  LUT6 #(
+    .INIT(64'h04FF040F04F00400)) 
+    \data[12]_i_1 
+       (.I0(\data_reg[14]_0 [1]),
+        .I1(\data_reg[14]_1 ),
+        .I2(\data_reg[14]_0 [0]),
+        .I3(\data_reg[14]_0 [2]),
+        .I4(\data_reg[14]_2 ),
+        .I5(\data_reg[12]_0 ),
+        .O(\data[12]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h04FF040F04F00400)) 
+    \data[14]_i_1 
+       (.I0(\data_reg[14]_0 [1]),
+        .I1(\data_reg[14]_1 ),
+        .I2(\data_reg[14]_0 [0]),
+        .I3(\data_reg[14]_0 [2]),
+        .I4(\data_reg[14]_2 ),
+        .I5(\data_reg[14]_3 ),
+        .O(\data[14]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFEEFEEEFEEEFEEE)) 
     \data_index[8]_i_1 
@@ -37034,49 +37078,49 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   FDRE \data_reg[12] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [12]),
+        .D(\data[12]_i_1_n_0 ),
         .Q(\data_reg[26]_0 [12]),
         .R(1'b0));
   FDRE \data_reg[13] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [13]),
+        .D(\data_reg[29]_3 [12]),
         .Q(\data_reg[26]_0 [13]),
         .R(1'b0));
   FDRE \data_reg[14] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [14]),
+        .D(\data[14]_i_1_n_0 ),
         .Q(\data_reg[26]_0 [14]),
         .R(1'b0));
   FDRE \data_reg[15] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [15]),
+        .D(\data_reg[29]_3 [13]),
         .Q(\data_reg[26]_0 [15]),
         .R(1'b0));
   FDRE \data_reg[16] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [16]),
+        .D(\data_reg[29]_3 [14]),
         .Q(\data_reg[26]_0 [16]),
         .R(1'b0));
   FDRE \data_reg[17] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [17]),
+        .D(\data_reg[29]_3 [15]),
         .Q(\data_reg[26]_0 [17]),
         .R(1'b0));
   FDRE \data_reg[18] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [18]),
+        .D(\data_reg[29]_3 [16]),
         .Q(\data_reg[26]_0 [18]),
         .R(1'b0));
   FDRE \data_reg[19] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [19]),
+        .D(\data_reg[29]_3 [17]),
         .Q(\data_reg[26]_0 [19]),
         .R(1'b0));
   FDRE \data_reg[1] 
@@ -37088,55 +37132,55 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
   FDRE \data_reg[20] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [20]),
+        .D(\data_reg[29]_3 [18]),
         .Q(\data_reg[26]_0 [20]),
         .R(1'b0));
   FDRE \data_reg[21] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [21]),
+        .D(\data_reg[29]_3 [19]),
         .Q(\data_reg[26]_0 [21]),
         .R(1'b0));
   FDRE \data_reg[22] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [22]),
+        .D(\data_reg[29]_3 [20]),
         .Q(\data_reg[26]_0 [22]),
         .R(1'b0));
   FDRE \data_reg[24] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [23]),
+        .D(\data_reg[29]_3 [21]),
         .Q(\data_reg[26]_0 [23]),
         .R(1'b0));
   FDRE \data_reg[25] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [24]),
+        .D(\data_reg[29]_3 [22]),
         .Q(\data_reg[26]_0 [24]),
         .R(1'b0));
   FDRE \data_reg[26] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [25]),
+        .D(\data_reg[29]_3 [23]),
         .Q(\data_reg[26]_0 [25]),
         .R(1'b0));
   FDRE \data_reg[27] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [26]),
+        .D(\data_reg[29]_3 [24]),
         .Q(tile_index[0]),
         .R(1'b0));
   FDRE \data_reg[28] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [27]),
+        .D(\data_reg[29]_3 [25]),
         .Q(tile_index[1]),
         .R(1'b0));
   FDRE \data_reg[29] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\data_reg[29]_3 [28]),
+        .D(\data_reg[29]_3 [26]),
         .Q(tile_index[2]),
         .R(1'b0));
   FDRE \data_reg[2] 
@@ -37189,6 +37233,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_arbiter" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_arbiter
    (user_drp_drdy_reg_0,
     tile_config_drp_arb_gnt,
@@ -43370,6 +43415,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(p_10_in));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_arbiter_adc" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_arbiter_adc
    (const_gnt_adc0,
     adc0_status_gnt,
@@ -44546,6 +44592,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(adc0_reset_i));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_control" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_control
    (access_type_reg_0,
     Q,
@@ -45817,6 +45864,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .R(access_type_reg_1));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_drp_control_top" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_drp_control_top
    (access_type_reg,
     access_type_reg_0,
@@ -46169,6 +46217,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_d
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_irq_req_ack" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_irq_req_ack
    (read_ack_tog,
     read_ack_tog_r,
@@ -48385,6 +48434,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_i
         .O(s_axi_aresetn_0));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_irq_sync" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_irq_sync
    (\adc0_slice0_irq_en_reg[14] ,
     adc00_irq_sync,
@@ -50965,6 +51015,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_i
         .src_in(dac33_status[1]));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_overvol_irq" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_overvol_irq
    (SS,
     adc00_overvol_irq,
@@ -51530,6 +51581,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_o
         .O(\adc1_slice3_irq_en_reg[2] ));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm
    (adc0_reset_i,
     adc0_signal_lost_out,
@@ -75908,6 +75960,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm_disabled" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm_disabled
    (adc1_drpen_por,
     p_4_in,
@@ -80029,6 +80082,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .R(p_6_in));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_por_fsm_top" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_por_fsm_top
    (user_drp_drdy_reg,
     dac1_dgnt_mon,
@@ -87205,6 +87259,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .tc_sm_state20_out(tc_sm_state20_out));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_powerup_state_irq" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_powerup_state_irq
    (adc0_powerup_state_irq,
     dac0_powerup_state_irq,
@@ -87448,6 +87503,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_p
         .s_axi_aresetn_0(i_dac3_powerup_state_ack_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_register_decode" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_register_decode
    (\bus2ip_addr_reg_reg[8] ,
     \bus2ip_addr_reg_reg[4] ,
@@ -88083,6 +88139,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .O(\bus2ip_addr_reg_reg[2]_4 ));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_reset_count" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_reset_count
    (sm_reset_r,
     read_ack_tog_r_reg_0,
@@ -89269,6 +89326,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .R(SS));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_rf_wrapper" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_rf_wrapper
    (s03_axis_tready,
     s13_axis_tready,
@@ -92112,6 +92170,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_r
         .VOUT3_P(vout33_p));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_slave_attachment" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_slave_attachment
    (\DATA_PHASE_WDT.data_timeout_reg_0 ,
     s_axi_awready,
@@ -95723,6 +95782,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_s
         .R(SS));
 endmodule
 
+(* ORIG_REF_NAME = "top_level_usp_rf_data_converter_0_0_tile_config" *) 
 module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_tile_config
    (drp_req_adc0,
     tc_req_adc1,
@@ -96261,32 +96321,27 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   wire \data[11]_i_6_n_0 ;
   wire \data[11]_i_7_n_0 ;
   wire \data[11]_i_8_n_0 ;
-  wire \data[12]_i_1_n_0 ;
   wire \data[12]_i_2_n_0 ;
   wire \data[12]_i_3_n_0 ;
-  wire \data[12]_i_5_n_0 ;
-  wire \data[12]_i_6_n_0 ;
-  wire \data[12]_i_7_n_0 ;
   wire \data[13]_i_1_n_0 ;
   wire \data[13]_i_2_n_0 ;
   wire \data[13]_i_3_n_0 ;
+  wire \data[13]_i_4_n_0 ;
   wire \data[13]_i_5_n_0 ;
   wire \data[13]_i_6_n_0 ;
-  wire \data[13]_i_7_n_0 ;
-  wire \data[13]_i_8_n_0 ;
-  wire \data[13]_i_9_n_0 ;
-  wire \data[14]_i_1_n_0 ;
   wire \data[14]_i_2_n_0 ;
+  wire \data[14]_i_4_n_0 ;
   wire \data[14]_i_5_n_0 ;
   wire \data[14]_i_6_n_0 ;
   wire \data[14]_i_7_n_0 ;
   wire \data[14]_i_8_n_0 ;
   wire \data[15]_i_1_n_0 ;
   wire \data[15]_i_2_n_0 ;
+  wire \data[15]_i_3_n_0 ;
+  wire \data[15]_i_4_n_0 ;
   wire \data[15]_i_5_n_0 ;
   wire \data[15]_i_6_n_0 ;
   wire \data[15]_i_7_n_0 ;
-  wire \data[15]_i_8_n_0 ;
   wire \data[16]_i_1_n_0 ;
   wire \data[16]_i_2_n_0 ;
   wire \data[16]_i_5_n_0 ;
@@ -96396,10 +96451,11 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   wire \data[6]_i_7_n_0 ;
   wire \data[6]_i_8_n_0 ;
   wire \data[7]_i_1_n_0 ;
-  wire \data[7]_i_4_n_0 ;
+  wire \data[7]_i_2_n_0 ;
   wire \data[7]_i_5_n_0 ;
   wire \data[7]_i_6_n_0 ;
   wire \data[7]_i_7_n_0 ;
+  wire \data[7]_i_8_n_0 ;
   wire \data[8]_i_1_n_0 ;
   wire \data[8]_i_2_n_0 ;
   wire \data[8]_i_5_n_0 ;
@@ -96440,12 +96496,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   wire \data_reg[10]_i_4_n_0 ;
   wire \data_reg[11]_i_3_n_0 ;
   wire \data_reg[11]_i_4_n_0 ;
-  wire \data_reg[12]_i_4_n_0 ;
-  wire \data_reg[13]_i_4_n_0 ;
   wire \data_reg[14]_i_3_n_0 ;
-  wire \data_reg[14]_i_4_n_0 ;
-  wire \data_reg[15]_i_3_n_0 ;
-  wire \data_reg[15]_i_4_n_0 ;
   wire \data_reg[16]_i_3_n_0 ;
   wire \data_reg[16]_i_4_n_0 ;
   wire \data_reg[17]_i_3_n_0 ;
@@ -96481,8 +96532,8 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   wire \data_reg[5]_i_4_n_0 ;
   wire \data_reg[6]_i_3_n_0 ;
   wire \data_reg[6]_i_4_n_0 ;
-  wire \data_reg[7]_i_2_n_0 ;
   wire \data_reg[7]_i_3_n_0 ;
+  wire \data_reg[7]_i_4_n_0 ;
   wire \data_reg[8]_i_3_n_0 ;
   wire \data_reg[8]_i_4_n_0 ;
   wire \data_reg[9]_i_3_n_0 ;
@@ -96562,7 +96613,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   wire tc_req_dac3;
   wire tc_sm_state20_out;
 
-  (* SOFT_HLUTNM = "soft_lutpair732" *) 
+  (* SOFT_HLUTNM = "soft_lutpair731" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_tc_sm_state[1]_i_1 
@@ -96578,7 +96629,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(p_11_in),
         .I4(p_10_in),
         .O(reset_i));
-  (* SOFT_HLUTNM = "soft_lutpair729" *) 
+  (* SOFT_HLUTNM = "soft_lutpair728" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \FSM_onehot_tc_sm_state[6]_i_10 
@@ -96675,7 +96726,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .D(ram_n_89),
         .Q(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .R(reset_i));
-  (* SOFT_HLUTNM = "soft_lutpair729" *) 
+  (* SOFT_HLUTNM = "soft_lutpair728" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FSM_sequential_pll_state_machine.status_sm_state[2]_i_5__0 
@@ -96689,7 +96740,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
        (.I0(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I1(drp_req_dac1_reg_0),
         .O(dac1_tile_config_done));
-  (* SOFT_HLUTNM = "soft_lutpair731" *) 
+  (* SOFT_HLUTNM = "soft_lutpair732" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FSM_sequential_pll_state_machine.status_sm_state[2]_i_5__2 
@@ -96703,14 +96754,14 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
        (.I0(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I1(drp_req_dac3_reg_0),
         .O(dac3_tile_config_done));
-  (* SOFT_HLUTNM = "soft_lutpair725" *) 
+  (* SOFT_HLUTNM = "soft_lutpair716" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FSM_sequential_pll_state_machine.status_sm_state[2]_i_6 
        (.I0(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I1(drp_req_adc0_reg_0),
         .O(adc0_tile_config_done));
-  (* SOFT_HLUTNM = "soft_lutpair718" *) 
+  (* SOFT_HLUTNM = "soft_lutpair720" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     adc0_restart_i_i_1
@@ -96720,7 +96771,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(adc0_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(adc0_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair718" *) 
+  (* SOFT_HLUTNM = "soft_lutpair720" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     adc0_restart_pending_i_1
@@ -96728,7 +96779,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(adc0_restart_pending_reg_0),
         .O(adc0_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair715" *) 
+  (* SOFT_HLUTNM = "soft_lutpair719" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     adc1_restart_i_i_1
@@ -96738,7 +96789,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(adc1_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(adc1_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair715" *) 
+  (* SOFT_HLUTNM = "soft_lutpair719" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     adc1_restart_pending_i_1
@@ -96746,7 +96797,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(adc1_restart_pending_reg_0),
         .O(adc1_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair716" *) 
+  (* SOFT_HLUTNM = "soft_lutpair721" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     adc2_restart_i_i_1
@@ -96756,7 +96807,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(adc2_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(adc2_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair716" *) 
+  (* SOFT_HLUTNM = "soft_lutpair721" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     adc2_restart_pending_i_1
@@ -96764,7 +96815,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(adc2_restart_pending_reg_0),
         .O(adc2_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair720" *) 
+  (* SOFT_HLUTNM = "soft_lutpair722" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     adc3_restart_i_i_1
@@ -96774,7 +96825,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(adc3_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(adc3_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair720" *) 
+  (* SOFT_HLUTNM = "soft_lutpair722" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     adc3_restart_pending_i_1
@@ -96782,7 +96833,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(adc3_restart_pending_reg_0),
         .O(adc3_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair721" *) 
+  (* SOFT_HLUTNM = "soft_lutpair723" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     dac0_restart_i_i_1
@@ -96792,7 +96843,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(dac0_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(dac0_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair721" *) 
+  (* SOFT_HLUTNM = "soft_lutpair723" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     dac0_restart_pending_i_1
@@ -96800,7 +96851,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(dac0_restart_pending_reg_0),
         .O(dac0_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair723" *) 
+  (* SOFT_HLUTNM = "soft_lutpair724" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     dac1_restart_i_i_1
@@ -96810,7 +96861,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(dac1_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(dac1_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair723" *) 
+  (* SOFT_HLUTNM = "soft_lutpair724" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     dac1_restart_pending_i_1
@@ -96818,7 +96869,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(dac1_restart_pending_reg_0),
         .O(dac1_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair722" *) 
+  (* SOFT_HLUTNM = "soft_lutpair725" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     dac2_restart_i_i_1
@@ -96828,7 +96879,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(dac2_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(dac2_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair722" *) 
+  (* SOFT_HLUTNM = "soft_lutpair725" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     dac2_restart_pending_i_1
@@ -96836,7 +96887,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I2(dac2_restart_pending_reg_0),
         .O(dac2_restart_pending_reg));
-  (* SOFT_HLUTNM = "soft_lutpair719" *) 
+  (* SOFT_HLUTNM = "soft_lutpair715" *) 
   LUT5 #(
     .INIT(32'h000000C8)) 
     dac3_restart_i_i_1
@@ -96846,7 +96897,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(dac3_restart_pending_reg_0),
         .I4(por_sm_reset),
         .O(dac3_restart_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair719" *) 
+  (* SOFT_HLUTNM = "soft_lutpair715" *) 
   LUT3 #(
     .INIT(8'hF2)) 
     dac3_restart_pending_i_1
@@ -96865,54 +96916,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[0]_i_4_n_0 ),
         .O(\data[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h12D2480A2580D24A)) 
+    .INIT(64'h1D40228A28D4502A)) 
     \data[0]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0016D2CA0D0EB412)) 
+    .INIT(64'h010006DEDCB12A42)) 
     \data[0]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hAD2C8B41B412A4A4)) 
+    .INIT(64'hA284B1AADCB14244)) 
     \data[0]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[0]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h938430124AC51DAC)) 
+    .INIT(64'h948C311A3A450D2C)) 
     \data[0]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[0]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'hE2302D58507A250B)) 
+    .INIT(64'hE357200A2520D85B)) 
     \data[0]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[0]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -96925,54 +96976,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[10]_i_4_n_0 ),
         .O(\data[10]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4088000201108805)) 
+    .INIT(64'h4800080201801085)) 
     \data[10]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[10]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h10020A040006E200)) 
+    .INIT(64'h100002060AE20400)) 
     \data[10]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[10]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h8820064002600410)) 
+    .INIT(64'h8802206006044010)) 
     \data[10]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[10]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h8400218C800000C6)) 
+    .INIT(64'h8480000021008CC6)) 
     \data[10]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[10]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0840252020058002)) 
+    .INIT(64'h0825208040200502)) 
     \data[10]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[10]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -96985,313 +97036,259 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[11]_i_4_n_0 ),
         .O(\data[11]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00510081810AA615)) 
+    .INIT(64'h4802080611811295)) 
     \data[11]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[11]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h00C6002532A06400)) 
+    .INIT(64'h1C0006012A642060)) 
     \data[11]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[11]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h9006604204200591)) 
+    .INIT(64'h8600066004610941)) 
     \data[11]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[11]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hC00F90B022009040)) 
+    .INIT(64'hC09082900FB00040)) 
     \data[11]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[11]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0D000810980910A6)) 
+    .INIT(64'h0999088040081126)) 
     \data[11]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[11]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F004F4F0F004040)) 
-    \data[12]_i_1 
-       (.I0(\data_index_reg_rep_n_0_[7] ),
-        .I1(\data[12]_i_2_n_0 ),
-        .I2(\data_index_reg_rep_n_0_[8] ),
-        .I3(\data[12]_i_3_n_0 ),
-        .I4(\data_index_reg_rep_n_0_[6] ),
-        .I5(\data_reg[12]_i_4_n_0 ),
-        .O(\data[12]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000010151)) 
+  (* SOFT_HLUTNM = "soft_lutpair729" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \data[12]_i_2 
-       (.I0(\data_index_reg_rep_n_0_[4] ),
-        .I1(\data_index_reg_rep_n_0_[0] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[3] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
+       (.I0(\data[14]_i_7_n_0 ),
+        .I1(\data_index_reg_rep_n_0_[7] ),
+        .I2(\data[12]_i_3_n_0 ),
         .O(\data[12]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h8830FFFF88300000)) 
+    .INIT(64'h0080C48421428C40)) 
     \data[12]_i_3 
-       (.I0(\data[13]_i_5_n_0 ),
-        .I1(\data_index_reg_rep_n_0_[5] ),
-        .I2(\data[13]_i_6_n_0 ),
-        .I3(\data_index_reg_rep_n_0_[3] ),
-        .I4(\data_index_reg_rep_n_0_[7] ),
-        .I5(\data[12]_i_5_n_0 ),
-        .O(\data[12]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h04008C4800000000)) 
-    \data[12]_i_5 
-       (.I0(\data_index_reg_rep_n_0_[2] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[3] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
-        .O(\data[12]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h00C4218C00844240)) 
-    \data[12]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
-        .O(\data[12]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h2800A20000000000)) 
-    \data[12]_i_7 
-       (.I0(\data_index_reg_rep_n_0_[3] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
-        .O(\data[12]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F004F4F0F004040)) 
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
+        .O(\data[12]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h04FF0400)) 
     \data[13]_i_1 
        (.I0(\data_index_reg_rep_n_0_[7] ),
         .I1(\data[13]_i_2_n_0 ),
-        .I2(\data_index_reg_rep_n_0_[8] ),
-        .I3(\data[13]_i_3_n_0 ),
-        .I4(\data_index_reg_rep_n_0_[6] ),
-        .I5(\data_reg[13]_i_4_n_0 ),
+        .I2(\data_index_reg_rep_n_0_[6] ),
+        .I3(\data_index_reg_rep_n_0_[8] ),
+        .I4(\data[13]_i_3_n_0 ),
         .O(\data[13]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000010045)) 
+    .INIT(64'h4041090808001095)) 
     \data[13]_i_2 
-       (.I0(\data_index_reg_rep_n_0_[1] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[3] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[13]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h8830FFFF88300000)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \data[13]_i_3 
-       (.I0(\data[13]_i_5_n_0 ),
-        .I1(\data_index_reg_rep_n_0_[5] ),
-        .I2(\data[13]_i_6_n_0 ),
-        .I3(\data_index_reg_rep_n_0_[3] ),
+       (.I0(\data[15]_i_4_n_0 ),
+        .I1(\data[13]_i_4_n_0 ),
+        .I2(\data_index_reg_rep_n_0_[6] ),
+        .I3(\data[13]_i_5_n_0 ),
         .I4(\data_index_reg_rep_n_0_[7] ),
-        .I5(\data[13]_i_7_n_0 ),
+        .I5(\data[13]_i_6_n_0 ),
         .O(\data[13]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair728" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
+  LUT6 #(
+    .INIT(64'h0F00000222188840)) 
+    \data[13]_i_4 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[3] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
+        .O(\data[13]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h00C00908C9090010)) 
     \data[13]_i_5 
-       (.I0(\data_index_reg_rep_n_0_[0] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[13]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair728" *) 
-  LUT4 #(
-    .INIT(16'h0002)) 
+  LUT6 #(
+    .INIT(64'h0088C40021028C40)) 
     \data[13]_i_6 
-       (.I0(\data_index_reg_rep_n_0_[0] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .O(\data[13]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h0408C40800000000)) 
-    \data[13]_i_7 
-       (.I0(\data_index_reg_rep_n_0_[0] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[3] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
-        .O(\data[13]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h00C4218C00000240)) 
-    \data[13]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
-        .O(\data[13]_i_8_n_0 ));
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
+        .O(\data[13]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h2800220000000000)) 
-    \data[13]_i_9 
-       (.I0(\data_index_reg_rep_n_0_[3] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
-        .O(\data[13]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F004F4F0F004040)) 
-    \data[14]_i_1 
-       (.I0(\data_index_reg_rep_n_0_[7] ),
-        .I1(\data[14]_i_2_n_0 ),
-        .I2(\data_index_reg_rep_n_0_[8] ),
-        .I3(\data_reg[14]_i_3_n_0 ),
-        .I4(\data_index_reg_rep_n_0_[6] ),
-        .I5(\data_reg[14]_i_4_n_0 ),
-        .O(\data[14]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001400801800115)) 
+    .INIT(64'h4000081001010095)) 
     \data[14]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[14]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair729" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \data[14]_i_4 
+       (.I0(\data[14]_i_7_n_0 ),
+        .I1(\data_index_reg_rep_n_0_[7] ),
+        .I2(\data[14]_i_8_n_0 ),
+        .O(\data[14]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h23000A2002002040)) 
+    .INIT(64'h320200020A200400)) 
     \data[14]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[14]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h9002000100000240)) 
+    .INIT(64'h8000002002044010)) 
     \data[14]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[14]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h00C4238C08840240)) 
+    .INIT(64'h08890800C0080010)) 
     \data[14]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[14]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0C88001080090080)) 
+    .INIT(64'h0080C48423028C40)) 
     \data[14]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[14]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F004F4F0F004040)) 
+  LUT5 #(
+    .INIT(32'h04FF0400)) 
     \data[15]_i_1 
        (.I0(\data_index_reg_rep_n_0_[7] ),
         .I1(\data[15]_i_2_n_0 ),
-        .I2(\data_index_reg_rep_n_0_[8] ),
-        .I3(\data_reg[15]_i_3_n_0 ),
-        .I4(\data_index_reg_rep_n_0_[6] ),
-        .I5(\data_reg[15]_i_4_n_0 ),
+        .I2(\data_index_reg_rep_n_0_[6] ),
+        .I3(\data_index_reg_rep_n_0_[8] ),
+        .I4(\data[15]_i_3_n_0 ),
         .O(\data[15]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4000010000088004)) 
+    .INIT(64'h4000400808901084)) 
     \data[15]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[15]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h1000080400022000)) 
-    \data[15]_i_5 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \data[15]_i_3 
+       (.I0(\data[15]_i_4_n_0 ),
+        .I1(\data[15]_i_5_n_0 ),
+        .I2(\data_index_reg_rep_n_0_[6] ),
+        .I3(\data[15]_i_6_n_0 ),
+        .I4(\data_index_reg_rep_n_0_[7] ),
+        .I5(\data[15]_i_7_n_0 ),
+        .O(\data[15]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h9004022102040420)) 
+    \data[15]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
+        .O(\data[15]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0500000220180840)) 
+    \data[15]_i_5 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[3] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[15]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h8000024000200410)) 
+    .INIT(64'h0040090841090010)) 
     \data[15]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
         .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[15]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h4000230880004440)) 
+    .INIT(64'h4088000023440840)) 
     \data[15]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[15]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h0008400000100180)) 
-    \data[15]_i_8 
-       (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[4] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
-        .O(\data[15]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
     \data[16]_i_1 
@@ -97303,53 +97300,53 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[16]_i_4_n_0 ),
         .O(\data[16]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h256FE790816DCAB5)) 
+    .INIT(64'h2866EC9B51FD7A05)) 
     \data[16]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[16]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hED13B52404F936AD)) 
+    .INIT(64'hE01FD439B32A564D)) 
     \data[16]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[16]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h1B72AC53534AA56E)) 
+    .INIT(64'h15B3AAC5742A563E)) 
     \data[16]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[16]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h91582C04E6A2DF59)) 
+    .INIT(64'h9158E6A22C04DF59)) 
     \data[16]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[16]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h94DEA501D81BF6DA)) 
+    .INIT(64'h9DA04E51D1FD8B6A)) 
     \data[16]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[16]_i_8_n_0 ));
   LUT6 #(
@@ -97363,52 +97360,52 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[17]_i_4_n_0 ),
         .O(\data[17]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0159918A8981B623)) 
+    .INIT(64'h09588B82119A9613)) 
     \data[17]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[17]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h2320AE64C6666859)) 
+    .INIT(64'h23C62066AE686459)) 
     \data[17]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[17]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h9660A465A648E868)) 
+    .INIT(64'h9660A648A465E868)) 
     \data[17]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[17]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h8450F4AE9A02D0DD)) 
+    .INIT(64'h854090A2FA4EDD0D)) 
     \data[17]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[17]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h6F1AA919991298A6)) 
+    .INIT(64'h61FAA19991929A86)) 
     \data[17]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[17]_i_8_n_0 ));
@@ -97423,54 +97420,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[18]_i_4_n_0 ),
         .O(\data[18]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4109888898901336)) 
+    .INIT(64'h4981098318839086)) 
     \data[18]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[18]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h1224A6C802C6A6C1)) 
+    .INIT(64'h12AC24680CAC2661)) 
     \data[18]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[18]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h28266640AA64CC18)) 
+    .INIT(64'h28AA266466CC4018)) 
     \data[18]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[18]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h8C643C7984509E3C)) 
+    .INIT(64'h86378593C4C940EC)) 
     \data[18]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[18]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h621969999382B202)) 
+    .INIT(64'h696B239218909292)) 
     \data[18]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[18]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -97483,53 +97480,53 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[19]_i_4_n_0 ),
         .O(\data[19]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0011018180020004)) 
+    .INIT(64'h0001118180000204)) 
     \data[19]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
         .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[19]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0038018088020800)) 
+    .INIT(64'h000128C0A2000020)) 
     \data[19]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[19]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h2010080002804005)) 
+    .INIT(64'h2008024010008005)) 
     \data[19]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[19]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hC061C01854324206)) 
+    .INIT(64'hC6530142C1400826)) 
     \data[19]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[19]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h2800200080480402)) 
+    .INIT(64'h2808000080106002)) 
     \data[19]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[19]_i_8_n_0 ));
   LUT5 #(
@@ -97542,13 +97539,13 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I4(\data[1]_i_3_n_0 ),
         .O(\data[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h2208008010000436)) 
+    .INIT(64'h0028A0000101400E)) 
     \data[1]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[1]_i_2_n_0 ));
   LUT6 #(
@@ -97562,34 +97559,34 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data[1]_i_6_n_0 ),
         .O(\data[1]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0102101420882820)) 
+    .INIT(64'h000114180288A020)) 
     \data[1]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[4] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[1]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h6809120000189802)) 
+    .INIT(64'h6019802801009802)) 
     \data[1]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[1]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h88844469040804C4)) 
+    .INIT(64'h88048408440469C4)) 
     \data[1]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[1]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -97602,54 +97599,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[20]_i_4_n_0 ),
         .O(\data[20]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h7423426E27DDFD11)) 
+    .INIT(64'h724F2D61472D3DE1)) 
     \data[20]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[20]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hDFDE410B233934F4)) 
+    .INIT(64'hD2D3430FF3E914B4)) 
     \data[20]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[20]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hD54001BB1B3FFC42)) 
+    .INIT(64'hD1435B0F0FB41CB2)) 
     \data[20]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[20]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h3B39860D0E8DE4D0)) 
+    .INIT(64'h380EB6E4308D9DD0)) 
     \data[20]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[20]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h945C4227AF8DFCD0)) 
+    .INIT(64'h95A84CFD42FD27C0)) 
     \data[20]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[20]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -97662,54 +97659,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[21]_i_4_n_0 ),
         .O(\data[21]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h6666764C65D9888C)) 
+    .INIT(64'h666D6569784868CC)) 
     \data[21]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[21]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hD111D113192E906E)) 
+    .INIT(64'hD111D113129E960E)) 
     \data[21]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[21]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h71319B9A12366767)) 
+    .INIT(64'h731311269966BA77)) 
     \data[21]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[21]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h78580000A9B80323)) 
+    .INIT(64'h7A5B898800020303)) 
     \data[21]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[21]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h04444547E665D999)) 
+    .INIT(64'h0444E6D944576599)) 
     \data[21]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[21]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -97722,54 +97719,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[22]_i_4_n_0 ),
         .O(\data[22]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h6664440841998888)) 
+    .INIT(64'h6464604848189898)) 
     \data[22]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[22]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h1111110210002666)) 
+    .INIT(64'h1112100610161026)) 
     \data[22]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[22]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h1111982202266664)) 
+    .INIT(64'h1918121206262664)) 
     \data[22]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[22]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h100088008800C400)) 
+    .INIT(64'h1088000088C40000)) 
     \data[22]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[22]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0444414164419999)) 
+    .INIT(64'h0444649944114199)) 
     \data[22]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[22]_i_8_n_0 ));
   LUT5 #(
     .INIT(32'h04FF0400)) 
@@ -97781,13 +97778,13 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I4(\data[24]_i_3_n_0 ),
         .O(\data[24]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h5FFA7AFA0507051F)) 
+    .INIT(64'h5F7AFAFA0505071F)) 
     \data[24]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[24]_i_2_n_0 ));
   LUT6 #(
@@ -97801,33 +97798,33 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data[26]_i_6_n_0 ),
         .O(\data[24]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hAFAFE0A0FFFFA085)) 
+    .INIT(64'hAFFFE0A0AFFFA085)) 
     \data[24]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[24]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h66666AAABFBFFFFE)) 
+    .INIT(64'h666A6A6ABFBFFFFE)) 
     \data[24]_i_5 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
+        .O(\data[24]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAABBBBBEEEEECEC)) 
+    \data[24]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
-        .O(\data[24]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hAABBABBBEEECEEEC)) 
-    \data[24]_i_6 
-       (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[24]_i_6_n_0 ));
   LUT6 #(
@@ -97841,12 +97838,12 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data[25]_i_4_n_0 ),
         .O(\data[25]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0A2AAAAAAAABFDF5)) 
+    .INIT(64'h02AAAAAAAAABFFD5)) 
     \data[25]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .I4(\data_index_reg_rep_n_0_[3] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[25]_i_2_n_0 ));
@@ -97861,31 +97858,32 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data[26]_i_6_n_0 ),
         .O(\data[25]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h373FFFFFFCCCCCCC)) 
+    .INIT(64'h337FFFFFFCCCCCCC)) 
     \data[25]_i_5 
        (.I0(\data_index_reg_rep_n_0_[0] ),
         .I1(\data_index_reg_rep_n_0_[5] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .I4(\data_index_reg_rep_n_0_[3] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[25]_i_5_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFC001)) 
+    .INIT(32'hFFFFA001)) 
     \data[25]_i_6 
-       (.I0(\data_index_reg_rep_n_0_[1] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
+       (.I0(\data_index_reg_rep_n_0_[2] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
         .I3(\data_index_reg_rep_n_0_[3] ),
         .I4(\data_index_reg_rep_n_0_[5] ),
         .O(\data[25]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair726" *) 
   LUT4 #(
-    .INIT(16'hC080)) 
+    .INIT(16'hA800)) 
     \data[25]_i_7 
-       (.I0(\data_index_reg_rep_n_0_[1] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
-        .I2(\data_index_reg_rep_n_0_[4] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
+       (.I0(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .O(\data[25]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -97908,42 +97906,42 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_index_reg_rep_n_0_[6] ),
         .O(\data[26]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'hA0A08001)) 
+    .INIT(32'hAA008001)) 
     \data[26]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[4] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
         .I4(\data_index_reg_rep_n_0_[3] ),
         .O(\data[26]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h666E6E6E00000000)) 
+    .INIT(64'h66666EEE00000000)) 
     \data[26]_i_5 
        (.I0(\data_index_reg_rep_n_0_[4] ),
-        .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[5] ),
-        .O(\data[26]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h44002333FFFFFFFF)) 
-    \data[26]_i_6 
-       (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
         .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[5] ),
+        .O(\data[26]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h4203FFFF4303FFFF)) 
+    \data[26]_i_6 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[26]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair727" *) 
+  (* SOFT_HLUTNM = "soft_lutpair726" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \data[26]_i_7 
        (.I0(\data_index_reg_rep_n_0_[0] ),
-        .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
         .O(\data[26]_i_7_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
@@ -97957,8 +97955,8 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
   LUT6 #(
     .INIT(64'hFF8F0F0000000000)) 
     \data[27]_i_2 
-       (.I0(\data_index_reg_rep_n_0_[1] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
+       (.I0(\data_index_reg_rep_n_0_[2] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[7] ),
         .I3(\data_index_reg_rep_n_0_[3] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
@@ -97968,9 +97966,9 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
     .INIT(64'h0000400000000002)) 
     \data[27]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[27]_i_4_n_0 ));
@@ -97979,9 +97977,9 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
     \data[27]_i_5 
        (.I0(\data_index_reg_rep_n_0_[4] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[5] ),
         .O(\data[27]_i_5_n_0 ));
   LUT6 #(
@@ -97999,18 +97997,18 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
     \data[28]_i_2 
        (.I0(\data_index_reg_rep_n_0_[4] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[5] ),
         .O(\data[28]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h4000000000000002)) 
     \data[28]_i_3 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[28]_i_3_n_0 ));
@@ -98023,33 +98021,32 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I3(\data[29]_i_3_n_0 ),
         .I4(\data_index_reg_rep_n_0_[6] ),
         .O(\data[29]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00005155)) 
+  LUT6 #(
+    .INIT(64'h0000000051555555)) 
     \data[29]_i_2 
        (.I0(\data_index_reg_rep_n_0_[7] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data[29]_i_4_n_0 ),
-        .I3(\data_index_reg_rep_n_0_[5] ),
-        .I4(\data_index_reg_rep_n_0_[6] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[5] ),
+        .I5(\data_index_reg_rep_n_0_[6] ),
         .O(\data[29]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000000)) 
     \data[29]_i_3 
        (.I0(\data_index_reg_rep_n_0_[3] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[5] ),
         .O(\data[29]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair727" *) 
-  LUT4 #(
-    .INIT(16'h3F7F)) 
+  LUT3 #(
+    .INIT(8'h37)) 
     \data[29]_i_4 
-       (.I0(\data_index_reg_rep_n_0_[1] ),
+       (.I0(\data_index_reg_rep_n_0_[0] ),
         .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
         .O(\data[29]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h04FF0400)) 
@@ -98061,13 +98058,13 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I4(\data[2]_i_3_n_0 ),
         .O(\data[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0828200004100353)) 
+    .INIT(64'h0220808000154303)) 
     \data[2]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[2]_i_2_n_0 ));
   LUT6 #(
@@ -98081,44 +98078,44 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data[2]_i_7_n_0 ),
         .O(\data[2]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h8084141828200080)) 
+    .INIT(64'h8181044820288000)) 
     \data[2]_i_4 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[4] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[2]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h0102103420A82820)) 
+    .INIT(64'h000114380288A0A0)) 
     \data[2]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[4] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[2]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hE8091A0000189802)) 
+    .INIT(64'hE01980A801009802)) 
     \data[2]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[2]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h805280EC844148D4)) 
+    .INIT(64'h880084485E2C4D14)) 
     \data[2]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[2]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -98131,52 +98128,52 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[3]_i_4_n_0 ),
         .O(\data[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0149918889919223)) 
+    .INIT(64'h0948899211989213)) 
     \data[3]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[3]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h22062664306C2481)) 
+    .INIT(64'h2026266436280C41)) 
     \data[3]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[3]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h9026640422466808)) 
+    .INIT(64'h9022264664680408)) 
     \data[3]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[3]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h8446C4A48C43C0D0)) 
+    .INIT(64'h884CCC404463AD40)) 
     \data[3]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[3]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'hCC1A891919129882)) 
+    .INIT(64'hC1CA819911929882)) 
     \data[3]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[3]_i_8_n_0 ));
@@ -98191,54 +98188,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[4]_i_4_n_0 ),
         .O(\data[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00510091810AA601)) 
+    .INIT(64'h0850011A0A900611)) 
     \data[4]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[4]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h00C680253028EC00)) 
+    .INIT(64'h0C82060532E008C0)) 
     \data[4]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[4]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h90600C058248E020)) 
+    .INIT(64'h906082480C05E020)) 
     \data[4]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[4]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h8042B2840E0151C8)) 
+    .INIT(64'h8402B82400E15C18)) 
     \data[4]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[4]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h8F200810380910A6)) 
+    .INIT(64'h8320011AF8098006)) 
     \data[4]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[4]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -98251,53 +98248,53 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[5]_i_4_n_0 ),
         .O(\data[5]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0800200000101018)) 
+    .INIT(64'h2000008000020444)) 
     \data[5]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[0] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
-        .I3(\data_index_reg_rep_n_0_[1] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0012010808200800)) 
+    .INIT(64'h0001026022000080)) 
     \data[5]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[5]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h8100024000802000)) 
+    .INIT(64'h8004120002800000)) 
     \data[5]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
-        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[5]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h9042802404014090)) 
+    .INIT(64'h9482020400494100)) 
     \data[5]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[5]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'hA002200000600402)) 
+    .INIT(64'h8808020000104802)) 
     \data[5]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I1(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[2] ),
         .I5(\data_index_reg_rep_n_0_[3] ),
         .O(\data[5]_i_8_n_0 ));
   LUT6 #(
@@ -98311,105 +98308,115 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[6]_i_4_n_0 ),
         .O(\data[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4043248889588204)) 
+    .INIT(64'h4845093828804284)) 
     \data[6]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hD001062410269040)) 
+    .INIT(64'hD002061419240060)) 
     \data[6]_i_5 
-       (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
-        .O(\data[6]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h90122E4102641242)) 
-    \data[6]_i_6 
-       (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
-        .O(\data[6]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h960101088404CC00)) 
-    \data[6]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
+        .O(\data[6]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h912402E106142422)) 
+    \data[6]_i_6 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
+        .O(\data[6]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h960184CC01080400)) 
+    \data[6]_i_7 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[6]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0440083515099082)) 
+    .INIT(64'h0140093845098052)) 
     \data[6]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
         .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[2] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
         .O(\data[6]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
     \data[7]_i_1 
        (.I0(\data_index_reg_rep_n_0_[7] ),
-        .I1(\data[10]_i_2_n_0 ),
+        .I1(\data[7]_i_2_n_0 ),
         .I2(\data_index_reg_rep_n_0_[8] ),
-        .I3(\data_reg[7]_i_2_n_0 ),
+        .I3(\data_reg[7]_i_3_n_0 ),
         .I4(\data_index_reg_rep_n_0_[6] ),
-        .I5(\data_reg[7]_i_3_n_0 ),
+        .I5(\data_reg[7]_i_4_n_0 ),
         .O(\data[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h10020A8400866000)) 
-    \data[7]_i_4 
+    .INIT(64'h4841091808800285)) 
+    \data[7]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
-        .O(\data[7]_i_4_n_0 ));
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
+        .O(\data[7]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h8092084002904805)) 
+    .INIT(64'h0502009222984840)) 
     \data[7]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[7]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hD8610194043022C0)) 
+    .INIT(64'h908602A420446211)) 
     \data[7]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[0] ),
         .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[7]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0042252820058002)) 
+    .INIT(64'hD60381C0092C1420)) 
     \data[7]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
-        .I1(\data_index_reg_rep_n_0_[1] ),
-        .I2(\data_index_reg_rep_n_0_[3] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[4] ),
         .O(\data[7]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h0142091849298012)) 
+    \data[7]_i_8 
+       (.I0(\data_index_reg_rep_n_0_[5] ),
+        .I1(\data_index_reg_rep_n_0_[3] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[0] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[1] ),
+        .O(\data[7]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
     \data[8]_i_1 
@@ -98421,54 +98428,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[8]_i_4_n_0 ),
         .O(\data[8]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4088100201108805)) 
+    .INIT(64'h4810080201801085)) 
     \data[8]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[8]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h100A0A0400066200)) 
+    .INIT(64'h10000A060A620400)) 
     \data[8]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[8]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hA012084022104805)) 
+    .INIT(64'hA008224812401005)) 
     \data[8]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[0] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[4] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[8]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h9228011C800C0006)) 
+    .INIT(64'h9228800C011C0006)) 
     \data[8]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[0] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[8]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0A40252020058002)) 
+    .INIT(64'h0A25208040200502)) 
     \data[8]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[8]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'h0F004F4F0F004040)) 
@@ -98481,54 +98488,54 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I5(\data_reg[9]_i_4_n_0 ),
         .O(\data[9]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4000880201891005)) 
+    .INIT(64'h4800080201801095)) 
     \data[9]_i_2 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
+        .I2(\data_index_reg_rep_n_0_[2] ),
         .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[1] ),
         .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[9]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h12020A0400066000)) 
+    .INIT(64'h120002060A600400)) 
     \data[9]_i_5 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[9]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h8020064002600410)) 
+    .INIT(64'h8002206006044010)) 
     \data[9]_i_6 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
         .I2(\data_index_reg_rep_n_0_[0] ),
-        .I3(\data_index_reg_rep_n_0_[4] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[1] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[9]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h88218084403440C2)) 
+    .INIT(64'h8880440028143C42)) 
     \data[9]_i_7 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[3] ),
-        .I2(\data_index_reg_rep_n_0_[1] ),
-        .I3(\data_index_reg_rep_n_0_[2] ),
-        .I4(\data_index_reg_rep_n_0_[4] ),
-        .I5(\data_index_reg_rep_n_0_[0] ),
+        .I2(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[1] ),
+        .I4(\data_index_reg_rep_n_0_[0] ),
+        .I5(\data_index_reg_rep_n_0_[2] ),
         .O(\data[9]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h2040252020058002)) 
+    .INIT(64'h2025208040200502)) 
     \data[9]_i_8 
        (.I0(\data_index_reg_rep_n_0_[5] ),
         .I1(\data_index_reg_rep_n_0_[1] ),
         .I2(\data_index_reg_rep_n_0_[3] ),
-        .I3(\data_index_reg_rep_n_0_[0] ),
-        .I4(\data_index_reg_rep_n_0_[2] ),
-        .I5(\data_index_reg_rep_n_0_[4] ),
+        .I3(\data_index_reg_rep_n_0_[2] ),
+        .I4(\data_index_reg_rep_n_0_[4] ),
+        .I5(\data_index_reg_rep_n_0_[0] ),
         .O(\data[9]_i_8_n_0 ));
   LUT3 #(
     .INIT(8'h0E)) 
@@ -98537,7 +98544,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\FSM_onehot_tc_sm_state_reg_n_0_[3] ),
         .I2(data_index[0]),
         .O(\data_index[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair724" *) 
+  (* SOFT_HLUTNM = "soft_lutpair718" *) 
   LUT4 #(
     .INIT(16'h0EE0)) 
     \data_index[1]_i_1 
@@ -98546,7 +98553,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I2(data_index[0]),
         .I3(data_index[1]),
         .O(\data_index[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair724" *) 
+  (* SOFT_HLUTNM = "soft_lutpair718" *) 
   LUT5 #(
     .INIT(32'h0EEEE000)) 
     \data_index[2]_i_1 
@@ -98576,14 +98583,14 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I4(\data_index[4]_i_2_n_0 ),
         .I5(data_index[4]),
         .O(\data_index[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair726" *) 
+  (* SOFT_HLUTNM = "soft_lutpair727" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \data_index[4]_i_2 
        (.I0(\FSM_onehot_tc_sm_state_reg_n_0_[3] ),
         .I1(\FSM_onehot_tc_sm_state_reg_n_0_[5] ),
         .O(\data_index[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair726" *) 
+  (* SOFT_HLUTNM = "soft_lutpair727" *) 
   LUT4 #(
     .INIT(16'h54A8)) 
     \data_index[5]_i_1 
@@ -98787,35 +98794,10 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\data[11]_i_8_n_0 ),
         .O(\data_reg[11]_i_4_n_0 ),
         .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[12]_i_4 
-       (.I0(\data[12]_i_6_n_0 ),
-        .I1(\data[12]_i_7_n_0 ),
-        .O(\data_reg[12]_i_4_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[13]_i_4 
-       (.I0(\data[13]_i_8_n_0 ),
-        .I1(\data[13]_i_9_n_0 ),
-        .O(\data_reg[13]_i_4_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
   MUXF7 \data_reg[14]_i_3 
        (.I0(\data[14]_i_5_n_0 ),
         .I1(\data[14]_i_6_n_0 ),
         .O(\data_reg[14]_i_3_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[14]_i_4 
-       (.I0(\data[14]_i_7_n_0 ),
-        .I1(\data[14]_i_8_n_0 ),
-        .O(\data_reg[14]_i_4_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[15]_i_3 
-       (.I0(\data[15]_i_5_n_0 ),
-        .I1(\data[15]_i_6_n_0 ),
-        .O(\data_reg[15]_i_3_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[15]_i_4 
-       (.I0(\data[15]_i_7_n_0 ),
-        .I1(\data[15]_i_8_n_0 ),
-        .O(\data_reg[15]_i_4_n_0 ),
         .S(\data_index_reg_rep_n_0_[7] ));
   MUXF7 \data_reg[16]_i_3 
        (.I0(\data[16]_i_5_n_0 ),
@@ -98942,15 +98924,15 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .I1(\data[6]_i_8_n_0 ),
         .O(\data_reg[6]_i_4_n_0 ),
         .S(\data_index_reg_rep_n_0_[7] ));
-  MUXF7 \data_reg[7]_i_2 
-       (.I0(\data[7]_i_4_n_0 ),
-        .I1(\data[7]_i_5_n_0 ),
-        .O(\data_reg[7]_i_2_n_0 ),
-        .S(\data_index_reg_rep_n_0_[7] ));
   MUXF7 \data_reg[7]_i_3 
-       (.I0(\data[7]_i_6_n_0 ),
-        .I1(\data[7]_i_7_n_0 ),
+       (.I0(\data[7]_i_5_n_0 ),
+        .I1(\data[7]_i_6_n_0 ),
         .O(\data_reg[7]_i_3_n_0 ),
+        .S(\data_index_reg_rep_n_0_[7] ));
+  MUXF7 \data_reg[7]_i_4 
+       (.I0(\data[7]_i_7_n_0 ),
+        .I1(\data[7]_i_8_n_0 ),
+        .O(\data_reg[7]_i_4_n_0 ),
         .S(\data_index_reg_rep_n_0_[7] ));
   MUXF7 \data_reg[8]_i_3 
        (.I0(\data[8]_i_5_n_0 ),
@@ -98994,7 +98976,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
        (.I0(\FSM_onehot_tc_sm_state_reg[6]_0 [1]),
         .I1(\FSM_onehot_tc_sm_state_reg_n_0_[0] ),
         .O(drp_req_adc0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair732" *) 
+  (* SOFT_HLUTNM = "soft_lutpair731" *) 
   LUT2 #(
     .INIT(4'h8)) 
     drp_req_adc0_i_2
@@ -99072,7 +99054,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .D(drp_req_dac1_i_1_n_0),
         .Q(tc_req_dac1),
         .R(reset_i));
-  (* SOFT_HLUTNM = "soft_lutpair731" *) 
+  (* SOFT_HLUTNM = "soft_lutpair732" *) 
   LUT2 #(
     .INIT(4'h8)) 
     drp_req_dac2_i_1
@@ -99190,6 +99172,11 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .dac3_drpen_tc(dac3_drpen_tc),
         .dac3_drprdy_tc(dac3_drprdy_tc),
         .\data_index_reg_rep[0] (\FSM_onehot_tc_sm_state[6]_i_8_n_0 ),
+        .\data_reg[12]_0 (\data[12]_i_2_n_0 ),
+        .\data_reg[14]_0 ({\data_index_reg_rep_n_0_[8] ,\data_index_reg_rep_n_0_[7] ,\data_index_reg_rep_n_0_[6] }),
+        .\data_reg[14]_1 (\data[14]_i_2_n_0 ),
+        .\data_reg[14]_2 (\data_reg[14]_i_3_n_0 ),
+        .\data_reg[14]_3 (\data[14]_i_4_n_0 ),
         .\data_reg[26]_0 (\data_reg[26] ),
         .\data_reg[27]_0 (\data_reg[27] ),
         .\data_reg[27]_1 (\data_reg[27]_0 ),
@@ -99200,7 +99187,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .\data_reg[29]_0 (\data_reg[29] ),
         .\data_reg[29]_1 (\data_reg[29]_0 ),
         .\data_reg[29]_2 (\data_reg[29]_1 ),
-        .\data_reg[29]_3 ({\data[29]_i_1_n_0 ,\data[28]_i_1_n_0 ,\data[27]_i_1_n_0 ,\data_reg[26]_i_1_n_0 ,\data[25]_i_1_n_0 ,\data[24]_i_1_n_0 ,\data[22]_i_1_n_0 ,\data[21]_i_1_n_0 ,\data[20]_i_1_n_0 ,\data[19]_i_1_n_0 ,\data[18]_i_1_n_0 ,\data[17]_i_1_n_0 ,\data[16]_i_1_n_0 ,\data[15]_i_1_n_0 ,\data[14]_i_1_n_0 ,\data[13]_i_1_n_0 ,\data[12]_i_1_n_0 ,\data[11]_i_1_n_0 ,\data[10]_i_1_n_0 ,\data[9]_i_1_n_0 ,\data[8]_i_1_n_0 ,\data[7]_i_1_n_0 ,\data[6]_i_1_n_0 ,\data[5]_i_1_n_0 ,\data[4]_i_1_n_0 ,\data[3]_i_1_n_0 ,\data[2]_i_1_n_0 ,\data[1]_i_1_n_0 ,\data[0]_i_1_n_0 }),
+        .\data_reg[29]_3 ({\data[29]_i_1_n_0 ,\data[28]_i_1_n_0 ,\data[27]_i_1_n_0 ,\data_reg[26]_i_1_n_0 ,\data[25]_i_1_n_0 ,\data[24]_i_1_n_0 ,\data[22]_i_1_n_0 ,\data[21]_i_1_n_0 ,\data[20]_i_1_n_0 ,\data[19]_i_1_n_0 ,\data[18]_i_1_n_0 ,\data[17]_i_1_n_0 ,\data[16]_i_1_n_0 ,\data[15]_i_1_n_0 ,\data[13]_i_1_n_0 ,\data[11]_i_1_n_0 ,\data[10]_i_1_n_0 ,\data[9]_i_1_n_0 ,\data[8]_i_1_n_0 ,\data[7]_i_1_n_0 ,\data[6]_i_1_n_0 ,\data[5]_i_1_n_0 ,\data[4]_i_1_n_0 ,\data[3]_i_1_n_0 ,\data[2]_i_1_n_0 ,\data[1]_i_1_n_0 ,\data[0]_i_1_n_0 }),
         .drp_den_reg(drp_den_reg_0),
         .dummy_read_den(dummy_read_den),
         .p_0_in(p_0_in),
@@ -99234,7 +99221,7 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .\pll_state_machine.drpaddr_status_reg[6]_6 (\pll_state_machine.drpaddr_status_reg[6]_6 ),
         .s_axi_aclk(s_axi_aclk),
         .tc_sm_state20_out(tc_sm_state20_out));
-  (* SOFT_HLUTNM = "soft_lutpair725" *) 
+  (* SOFT_HLUTNM = "soft_lutpair716" *) 
   LUT5 #(
     .INIT(32'h808F8080)) 
     \tc_enable[0]_i_1 
@@ -99246,9 +99233,9 @@ module top_level_usp_rf_data_converter_0_0_top_level_usp_rf_data_converter_0_0_t
         .O(\FSM_onehot_tc_sm_state_reg[6]_1 ));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
 module top_level_usp_rf_data_converter_0_0_xpm_cdc_single
    (src_clk,
     src_in,

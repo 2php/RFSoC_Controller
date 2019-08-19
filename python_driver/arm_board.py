@@ -10,6 +10,9 @@ import RFSoC_Board as rf
 import waveform_plotter as wp
 
 #First argument is nanoseconds to run ADC for
+#second argument is 1 for display uploaded waveforms
+#third argument is number of adc averages
+
 
 #load the board state
 board = ib.load_board()
@@ -43,12 +46,19 @@ if(len(sys.argv) > 1):
 if board.set_adc_cycles(adc_cycles) != 0:
     print("Error while setting ADC trigger time, check to make sure board connection is up")
     sys.exit()
+    
+adc_shift = 0
+if(len(sys.argv) > 3):
+    import math
+    adc_shift = round(math.log2(int(sys.argv[3])))
 
 print("ADC capture time set to " + str(adc_cycles*4) + " ns")
+print("ADC averages set to " + str(pow(2,adc_shift)))
 print("Board is armed, trigger using trigger_board.py")
 
 
 board.adc_capture_time = adc_cycles * 4
+board.adc_shift_val = adc_shift
 
 if(len(sys.argv) > 2):
     #if we're being told to plot everything

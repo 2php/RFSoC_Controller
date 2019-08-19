@@ -40,6 +40,7 @@ RF_SET_ZERO_DELAY = 0x0A
 RF_SET_ADC_CYCLES = 0x10
 RF_READ_ADC = 0x11
 RF_FLUSH_ADC = 0x12
+RF_SET_ADC_SHIFT = 0x13
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -305,6 +306,7 @@ class RFSoC_Board:
     channels = []
     locking_waveform = None
     adc_capture_time = 0 #in nanoseconds
+    adc_shift_val = 0
     
     def __init__(self, portname):
         self.channels = []
@@ -617,6 +619,8 @@ class RFSoC_Board:
         ack_val = self.port.read(1)
         #if we get a bad acknowledgement back
         if(len(ack_val) != 1 or ack_val[0] != ACK_RESPONSE):
+            if(ack_val[0] == 0xFF):
+                print("Error, the board has not been triggered enough times to read the adc, trigger more times and try again.")
             print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
            
         #read the length of the bytestream
@@ -659,6 +663,28 @@ class RFSoC_Board:
         
         return 0
     
+    def set_adc_shift(self, val):
+        
+        #send the set adc shift command
+        ack_val = self.write_bytes([RF_SET_ADC_SHIFT])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending set adc shift command, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        
+        #send 4 bytes as the value
+        bs = int_to_bytestream(val, 4)
+        
+        ack_val = self.write_bytes(bs)
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending adc shift bytes, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        
+        self.adc_shift_val = val
+    
     def get_locking_bytes(self):
         
         locking_val = 0x0000
@@ -686,3 +712,10 @@ class RFSoC_Board:
     
     def s16(self, value):
         return -(value & 0x8000) | (value & 0x7fff)
+    
+    #returns the estimated ADC capture time in seconds
+    def get_capture_time(self):
+        
+        return self.adc_capture_time * 2 * pow(10, -9);
+    
+    

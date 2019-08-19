@@ -88,9 +88,137 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_0/rfsoc_adc_data_capture_axis_register_slice_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_0} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_ooc.xdc
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_6/rfsoc_adc_data_capture_axis_data_fifo_4_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_1/rfsoc_adc_data_capture_axis_register_slice_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_0/rfsoc_adc_data_capture_axis_data_fifo_9_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_1/rfsoc_adc_data_capture_axis_data_fifo_9_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_2/rfsoc_adc_data_capture_axis_data_fifo_9_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_3/rfsoc_adc_data_capture_axis_data_fifo_9_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_10/rfsoc_adc_data_capture_axis_data_fifo_0_10.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_10 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_10} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_11/rfsoc_adc_data_capture_axis_data_fifo_0_11.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_11 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_11} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_7/rfsoc_adc_data_capture_axis_data_fifo_4_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_2/rfsoc_adc_data_capture_axis_register_slice_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_4/rfsoc_adc_data_capture_axis_data_fifo_9_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_0/rfsoc_adc_data_capture_axis_data_fifo_10_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_0/rfsoc_adc_data_capture_axis_data_fifo_11_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_0/rfsoc_adc_data_capture_axis_data_fifo_12_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_12/rfsoc_adc_data_capture_axis_data_fifo_0_12.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_12 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_12} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_5/rfsoc_adc_data_capture_axis_data_fifo_1_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_8/rfsoc_adc_data_capture_axis_data_fifo_4_8.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_8} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_3/rfsoc_adc_data_capture_axis_register_slice_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_5/rfsoc_adc_data_capture_axis_data_fifo_9_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_1/rfsoc_adc_data_capture_axis_data_fifo_10_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_1/rfsoc_adc_data_capture_axis_data_fifo_11_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_1/rfsoc_adc_data_capture_axis_data_fifo_12_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_13/rfsoc_adc_data_capture_axis_data_fifo_0_13.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_13 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_13} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_6/rfsoc_adc_data_capture_axis_data_fifo_1_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_4/rfsoc_adc_data_capture_axis_register_slice_0_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_6/rfsoc_adc_data_capture_axis_data_fifo_9_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_2/rfsoc_adc_data_capture_axis_data_fifo_10_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_2/rfsoc_adc_data_capture_axis_data_fifo_11_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_2/rfsoc_adc_data_capture_axis_data_fifo_12_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_14/rfsoc_adc_data_capture_axis_data_fifo_0_14.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_14 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_14} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_7/rfsoc_adc_data_capture_axis_data_fifo_1_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_5/rfsoc_adc_data_capture_axis_register_slice_0_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_7/rfsoc_adc_data_capture_axis_data_fifo_9_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_3/rfsoc_adc_data_capture_axis_data_fifo_10_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_3/rfsoc_adc_data_capture_axis_data_fifo_11_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_3/rfsoc_adc_data_capture_axis_data_fifo_12_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_15/rfsoc_adc_data_capture_axis_data_fifo_0_15.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_15 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_15} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_8/rfsoc_adc_data_capture_axis_data_fifo_1_8.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8} -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/ila.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
 set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ila_lib_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ooc.xdc
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_system_ila_0_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0.xci
 # IP: The module: 'top_level_rfsoc_adc_data_captu_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
@@ -178,6 +306,134 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_0/rfsoc_adc_data_capture_axis_register_slice_0_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_6/rfsoc_adc_data_capture_axis_data_fifo_4_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_1/rfsoc_adc_data_capture_axis_register_slice_0_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_0/rfsoc_adc_data_capture_axis_data_fifo_9_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_1/rfsoc_adc_data_capture_axis_data_fifo_9_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_2/rfsoc_adc_data_capture_axis_data_fifo_9_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_3/rfsoc_adc_data_capture_axis_data_fifo_9_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_10/rfsoc_adc_data_capture_axis_data_fifo_0_10.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_10 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_10} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_11/rfsoc_adc_data_capture_axis_data_fifo_0_11.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_11 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_11} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_7/rfsoc_adc_data_capture_axis_data_fifo_4_7.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_2/rfsoc_adc_data_capture_axis_register_slice_0_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_4/rfsoc_adc_data_capture_axis_data_fifo_9_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_0/rfsoc_adc_data_capture_axis_data_fifo_10_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_0/rfsoc_adc_data_capture_axis_data_fifo_11_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_0/rfsoc_adc_data_capture_axis_data_fifo_12_0.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_0 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_0} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_12/rfsoc_adc_data_capture_axis_data_fifo_0_12.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_12 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_12} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_5/rfsoc_adc_data_capture_axis_data_fifo_1_5.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_4_8/rfsoc_adc_data_capture_axis_data_fifo_4_8.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_4_8} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_3/rfsoc_adc_data_capture_axis_register_slice_0_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_5/rfsoc_adc_data_capture_axis_data_fifo_9_5.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_1/rfsoc_adc_data_capture_axis_data_fifo_10_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_1/rfsoc_adc_data_capture_axis_data_fifo_11_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_1/rfsoc_adc_data_capture_axis_data_fifo_12_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_1 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_1} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_13/rfsoc_adc_data_capture_axis_data_fifo_0_13.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_13 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_13} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_6/rfsoc_adc_data_capture_axis_data_fifo_1_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_4/rfsoc_adc_data_capture_axis_register_slice_0_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_6/rfsoc_adc_data_capture_axis_data_fifo_9_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_6} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_2/rfsoc_adc_data_capture_axis_data_fifo_10_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_2/rfsoc_adc_data_capture_axis_data_fifo_11_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_2/rfsoc_adc_data_capture_axis_data_fifo_12_2.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_2 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_2} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_14/rfsoc_adc_data_capture_axis_data_fifo_0_14.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_14 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_14} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_7/rfsoc_adc_data_capture_axis_data_fifo_1_7.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_5/rfsoc_adc_data_capture_axis_register_slice_0_5.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_5 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_5} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_7/rfsoc_adc_data_capture_axis_data_fifo_9_7.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_7 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_7} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_3/rfsoc_adc_data_capture_axis_data_fifo_10_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_3/rfsoc_adc_data_capture_axis_data_fifo_11_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_3/rfsoc_adc_data_capture_axis_data_fifo_12_3.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_3 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_3} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_15/rfsoc_adc_data_capture_axis_data_fifo_0_15.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_15 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_15} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_8/rfsoc_adc_data_capture_axis_data_fifo_1_8.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8} -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/ila.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ila_lib_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ooc.xdc
+
+# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_system_ila_0_0_ooc.xdc
+# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
+#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.

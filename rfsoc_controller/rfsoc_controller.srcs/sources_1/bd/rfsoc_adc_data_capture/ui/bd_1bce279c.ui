@@ -2,66 +2,52 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port s_axis -pg 1 -lvl 0 -x -20 -y 550 -defaultsOSRD
-preplace port M_AXIS_0 -pg 1 -lvl 5 -x 1310 -y 640 -defaultsOSRD
-preplace port M_AXIS_1 -pg 1 -lvl 5 -x 1310 -y 480 -defaultsOSRD
-preplace port M_AXIS_2 -pg 1 -lvl 5 -x 1310 -y 960 -defaultsOSRD
-preplace port M_AXIS_3 -pg 1 -lvl 5 -x 1310 -y 800 -defaultsOSRD
-preplace port rf_clk -pg 1 -lvl 0 -x -20 -y 110 -defaultsOSRD
-preplace port rf_reset -pg 1 -lvl 0 -x -20 -y 90 -defaultsOSRD
-preplace port ext_trigger -pg 1 -lvl 0 -x -20 -y 820 -defaultsOSRD
-preplace port microblaze_clk -pg 1 -lvl 0 -x -20 -y 980 -defaultsOSRD
-preplace port microblaze_reset -pg 1 -lvl 0 -x -20 -y 960 -defaultsOSRD
-preplace portBus gpio_in -pg 1 -lvl 0 -x -20 -y 900 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 470 -y 110 -defaultsOSRD
-preplace inst axis_data_fifo_1 -pg 1 -lvl 2 -x 470 -y 430 -defaultsOSRD
-preplace inst axis_data_fifo_2 -pg 1 -lvl 2 -x 470 -y 760 -defaultsOSRD
-preplace inst axis_data_fifo_3 -pg 1 -lvl 2 -x 470 -y 270 -defaultsOSRD
-preplace inst gpio_buffer_0 -pg 1 -lvl 2 -x 470 -y 890 -defaultsOSRD
-preplace inst axis_data_fifo_4 -pg 1 -lvl 3 -x 840 -y 910 -defaultsOSRD
-preplace inst axis_data_fifo_5 -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
-preplace inst axis_data_fifo_6 -pg 1 -lvl 1 -x 160 -y 430 -defaultsOSRD
-preplace inst axis_data_fifo_7 -pg 1 -lvl 1 -x 160 -y 740 -defaultsOSRD
-preplace inst axis_data_fifo_8 -pg 1 -lvl 1 -x 160 -y 270 -defaultsOSRD
-preplace inst axis_register_slice_0 -pg 1 -lvl 2 -x 470 -y 570 -defaultsOSRD
-preplace inst axis_data_fifo_9 -pg 1 -lvl 4 -x 1170 -y 800 -defaultsOSRD
-preplace inst axis_data_fifo_10 -pg 1 -lvl 4 -x 1170 -y 960 -defaultsOSRD
-preplace inst axis_data_fifo_11 -pg 1 -lvl 4 -x 1170 -y 480 -defaultsOSRD
-preplace inst axis_data_fifo_12 -pg 1 -lvl 4 -x 1170 -y 640 -defaultsOSRD
-preplace inst adc_controller_0 -pg 1 -lvl 3 -x 840 -y 600 -defaultsOSRD
-preplace netloc rf_clk_0_1 1 0 4 0 540 310 980 660 780 1040
-preplace netloc rf_reset_0_1 1 0 4 10 640 300 990 690 790 1030
-preplace netloc ext_trigger_0_1 1 0 3 NJ 820 290J 960 670J
-preplace netloc Net 1 0 4 NJ 980 280J 1010 710 1010 1050
-preplace netloc gpio_buffer_0_gpio_out 1 2 1 680 680n
-preplace netloc s_axis_aresetn_0_1 1 0 3 NJ 960 280J 970 700J
-preplace netloc gpio_in_0_1 1 0 2 NJ 900 NJ
-preplace netloc axis_data_fifo_6_M_AXIS 1 1 1 280 410n
-preplace netloc axis_data_fifo_4_M_AXIS 1 1 3 330 1000 NJ 1000 970
-preplace netloc adc_controller_0_m_axis_1 1 0 4 40 630 320J 670 630J 750 990
-preplace netloc axis_data_fifo_7_M_AXIS 1 1 1 N 740
-preplace netloc adc_controller_0_m_axis_2 1 0 4 40 660 NJ 660 640J 760 980
-preplace netloc adc_controller_0_m_axis_3 1 0 4 30 530 330J 680 610J 770 970
-preplace netloc gpio_buffer_0_m_axis 1 2 1 N 880
-preplace netloc adc_controller_0_m_axis_0 1 0 4 20 650 NJ 650 650J 740 1000
-preplace netloc axis_data_fifo_5_M_AXIS 1 1 1 N 90
-preplace netloc axis_data_fifo_8_M_AXIS 1 1 1 280 250n
-preplace netloc s_axis_1 1 0 2 NJ 550 NJ
-preplace netloc axis_register_slice_0_M_AXIS 1 2 1 620 520n
-preplace netloc axis_data_fifo_0_M_AXIS 1 2 1 690 110n
-preplace netloc axis_data_fifo_1_M_AXIS 1 2 1 630 430n
-preplace netloc axis_data_fifo_3_M_AXIS 1 2 1 660 270n
-preplace netloc axis_data_fifo_2_M_AXIS 1 2 1 620 600n
-preplace netloc adc_controller_0_m_axis_4 1 3 1 N 610
-preplace netloc adc_controller_0_m_axis_5 1 3 1 1020 450n
-preplace netloc adc_controller_0_m_axis_6 1 3 1 1020 650n
-preplace netloc adc_controller_0_m_axis_7 1 3 1 1010 670n
-preplace netloc axis_data_fifo_12_M_AXIS 1 4 1 NJ 640
-preplace netloc axis_data_fifo_11_M_AXIS 1 4 1 NJ 480
-preplace netloc axis_data_fifo_9_M_AXIS 1 4 1 NJ 800
-preplace netloc axis_data_fifo_10_M_AXIS 1 4 1 NJ 960
-levelinfo -pg 1 -20 160 470 840 1170 1310
-pagesize -pg 1 -db -bbox -sgen -180 0 1430 1050
+preplace port s_axis -pg 1 -lvl 0 -x -30 -y 600 -defaultsOSRD
+preplace port M_AXIS_0 -pg 1 -lvl 5 -x 1270 -y 360 -defaultsOSRD
+preplace port M_AXIS_1 -pg 1 -lvl 5 -x 1270 -y 200 -defaultsOSRD
+preplace port M_AXIS_2 -pg 1 -lvl 5 -x 1270 -y 520 -defaultsOSRD
+preplace port M_AXIS_3 -pg 1 -lvl 5 -x 1270 -y 680 -defaultsOSRD
+preplace port rf_clk -pg 1 -lvl 0 -x -30 -y 440 -defaultsOSRD
+preplace port rf_reset -pg 1 -lvl 0 -x -30 -y 420 -defaultsOSRD
+preplace port ext_trigger -pg 1 -lvl 0 -x -30 -y 540 -defaultsOSRD
+preplace port microblaze_clk -pg 1 -lvl 0 -x -30 -y 110 -defaultsOSRD
+preplace port microblaze_reset -pg 1 -lvl 0 -x -30 -y 90 -defaultsOSRD
+preplace portBus gpio_in -pg 1 -lvl 0 -x -30 -y 280 -defaultsOSRD
+preplace inst gpio_buffer_0 -pg 1 -lvl 2 -x 430 -y 270 -defaultsOSRD
+preplace inst axis_data_fifo_4 -pg 1 -lvl 3 -x 770 -y 100 -defaultsOSRD
+preplace inst axis_register_slice_0 -pg 1 -lvl 2 -x 430 -y 620 -defaultsOSRD
+preplace inst axis_data_fifo_9 -pg 1 -lvl 4 -x 1130 -y 680 -defaultsOSRD
+preplace inst axis_data_fifo_10 -pg 1 -lvl 4 -x 1130 -y 520 -defaultsOSRD
+preplace inst axis_data_fifo_11 -pg 1 -lvl 4 -x 1130 -y 200 -defaultsOSRD
+preplace inst axis_data_fifo_12 -pg 1 -lvl 4 -x 1130 -y 360 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 150 -y 420 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 2 -x 430 -y 440 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 4 -x 1130 -y 860 -defaultsOSRD
+preplace inst adc_controller_0 -pg 1 -lvl 3 -x 770 -y 470 -defaultsOSRD
+preplace netloc rf_clk_0_1 1 0 4 -10 320 280 350 580 210 950
+preplace netloc rf_reset_0_1 1 0 4 0 330 270 360 590 350 970
+preplace netloc ext_trigger_0_1 1 0 3 NJ 540 NJ 540 590J
+preplace netloc Net 1 0 4 NJ 110 NJ 110 580 10 980
+preplace netloc gpio_buffer_0_gpio_out 1 2 1 570 280n
+preplace netloc s_axis_aresetn_0_1 1 0 3 NJ 90 NJ 90 NJ
+preplace netloc gpio_in_0_1 1 0 2 NJ 280 NJ
+preplace netloc axis_data_fifo_11_M_AXIS 1 4 1 NJ 200
+preplace netloc adc_controller_0_m_axis_1 1 3 1 990 330n
+preplace netloc axis_data_fifo_1_M_AXIS 1 2 2 600 360 920
+preplace netloc s_axis_1 1 0 2 NJ 600 NJ
+preplace netloc axis_data_fifo_10_M_AXIS 1 4 1 NJ 520
+preplace netloc adc_controller_0_m_axis_5 1 3 1 930 170n
+preplace netloc axis_register_slice_0_M_AXIS 1 2 2 610 810 N
+preplace netloc adc_controller_0_m_axis_7 1 3 1 N 490
+preplace netloc gpio_buffer_0_m_axis 1 2 1 570 70n
+preplace netloc adc_controller_0_m_axis_0 1 0 4 10 340 NJ 340 NJ 340 940
+preplace netloc axis_data_fifo_4_M_AXIS 1 1 3 280 190 NJ 190 920
+preplace netloc axis_data_fifo_12_M_AXIS 1 4 1 NJ 360
+preplace netloc adc_controller_0_m_axis_6 1 3 1 960 510n
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 N 420
+preplace netloc axis_data_fifo_9_M_AXIS 1 4 1 NJ 680
+levelinfo -pg 1 -30 150 430 770 1130 1270
+pagesize -pg 1 -db -bbox -sgen -190 0 1390 970
 "
 }
 0
