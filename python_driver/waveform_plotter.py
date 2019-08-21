@@ -40,6 +40,8 @@ def plot_waveform(data):
 #channels should be an array of channels    
 def plot_waveforms(channels):
     
+    scale = 1800/32767
+    
     try:
          fig, ax = plt.subplots()
          
@@ -67,12 +69,12 @@ def plot_waveforms(channels):
                  #if we're in the pre-waveform
                  elif(t_now < (pre_delay + 4)):
                      t_wave = (t_now - pre_delay) % 4
-                     wave.append(pre_waveform[round(t_wave * 4)])
+                     wave.append((pre_waveform[round(t_wave * 4)]) * scale)
                  #if we're in the waveform
                  elif(t_now < (pre_delay + 4 + (period * reps))):
                      #figure our where in the waveform we are
                      t_wave = (t_now - pre_delay) % period
-                     wave.append(w_ex.wordstream[round(t_wave * 4)])
+                     wave.append((w_ex.wordstream[round(t_wave * 4)]) * scale)
                  else:
                      wave.append(0)
                 

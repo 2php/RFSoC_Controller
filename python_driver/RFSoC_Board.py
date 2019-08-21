@@ -282,7 +282,7 @@ class WaveFile:
         self.post_delay_bytestream = int_to_bytestream(self.post_delay, 4)
         
         if(len(self.wordstream) <= 16):
-            print("Warning, waveform period is equal to or less than 4ns, repeat cycles must be greater than 1 for this waveform to work correctly")
+            print("Warning, waveform period is equal to or less than 4ns, this may cause issues with waveform playback")
         
         
         

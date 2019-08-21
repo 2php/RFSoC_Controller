@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Aug 19 11:45:41 2019">
+<application name="pa" timeStamp="Mon Aug 19 14:57:29 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="c7570168fe6544ec8223510a6fe2e6c1" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -21,7 +21,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddModuleToBlockDesign" value="7" type="JavaHandler"/>
 <property name="AddSources" value="14" type="JavaHandler"/>
 <property name="AutoConnectPort" value="57" type="JavaHandler"/>
-<property name="AutoConnectTarget" value="14" type="JavaHandler"/>
+<property name="AutoConnectTarget" value="15" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="4" type="JavaHandler"/>
 <property name="CreateInterfaceDefinitionHandler" value="1" type="JavaHandler"/>
@@ -38,15 +38,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="GenerateOutputForBDFile" value="1" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="64" type="JavaHandler"/>
 <property name="IPPackagerWizardHandler" value="74" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="40" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="41" type="JavaHandler"/>
 <property name="ManageCompositeTargets" value="12" type="JavaHandler"/>
 <property name="NewExportHardware" value="31" type="JavaHandler"/>
 <property name="NewLaunchHardware" value="29" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="82" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="65" type="JavaHandler"/>
-<property name="OpenRecentTarget" value="16" type="JavaHandler"/>
-<property name="ProgramDevice" value="26" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="83" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="67" type="JavaHandler"/>
+<property name="OpenRecentTarget" value="17" type="JavaHandler"/>
+<property name="ProgramDevice" value="27" type="JavaHandler"/>
 <property name="RecustomizeCore" value="1" type="JavaHandler"/>
 <property name="RefreshDevice" value="14" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="29" type="JavaHandler"/>
@@ -113,12 +113,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExpRunMenu_MAKE_ACTIVE" value="7" type="GuiHandlerData"/>
 <property name="ExpRunMenu_RESET_AND_GENERATE_OUTPUT_PRODUCTS" value="3" type="GuiHandlerData"/>
 <property name="ExpRunPropPanels_NAME" value="6" type="GuiHandlerData"/>
-<property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="309" type="GuiHandlerData"/>
+<property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="313" type="GuiHandlerData"/>
 <property name="FileGroupFacetTable_FILE_GROUP_FACET_TABLE" value="10" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="172" type="GuiHandlerData"/>
 <property name="FilterToolBar_HIDE_ALL" value="7" type="GuiHandlerData"/>
 <property name="FilterToolBar_SHOW_ALL" value="5" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="313" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="316" type="GuiHandlerData"/>
 <property name="FlowNavigatorView_COLLAPSE_NEXT_LEVEL" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_IN" value="229" type="GuiHandlerData"/>
@@ -178,7 +178,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_ADD_MODULE_TO_BD" value="7" type="GuiHandlerData"/>
 <property name="PACommandNames_ADD_SOURCES" value="14" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_CONNECT_PORTS" value="27" type="GuiHandlerData"/>
-<property name="PACommandNames_AUTO_CONNECT_TARGET" value="14" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_CONNECT_TARGET" value="15" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_UPDATE_HIER" value="15" type="GuiHandlerData"/>
 <property name="PACommandNames_CLOSE_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_CREATE_TOP_HDL" value="2" type="GuiHandlerData"/>
@@ -205,7 +205,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_STOP_TRIGGER" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_TOGGLE_VIEW_NAV" value="12" type="GuiHandlerData"/>
 <property name="PACommandNames_VALIDATE_RSB_DESIGN" value="63" type="GuiHandlerData"/>
-<property name="PAViews_CODE" value="20" type="GuiHandlerData"/>
+<property name="PAViews_CODE" value="22" type="GuiHandlerData"/>
 <property name="PAViews_DASHBOARD" value="88" type="GuiHandlerData"/>
 <property name="PAViews_DEVICE" value="17" type="GuiHandlerData"/>
 <property name="PAViews_PACKAGE_IP" value="50" type="GuiHandlerData"/>
@@ -221,7 +221,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProgramDebugTab_OPEN_TARGET" value="6" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_PROGRAM_DEVICE" value="15" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_REFRESH_DEVICE" value="14" type="GuiHandlerData"/>
-<property name="ProgramFpgaDialog_PROGRAM" value="38" type="GuiHandlerData"/>
+<property name="ProgramFpgaDialog_PROGRAM" value="39" type="GuiHandlerData"/>
 <property name="ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE" value="8" type="GuiHandlerData"/>
 <property name="ProgramFpgaDialog_SPECIFY_DEBUG_PROBES_FILE" value="8" type="GuiHandlerData"/>
 <property name="ProgramOptionsPanelImpl_STRATEGY" value="6" type="GuiHandlerData"/>
