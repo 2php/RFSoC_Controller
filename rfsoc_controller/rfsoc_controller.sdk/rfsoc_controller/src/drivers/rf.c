@@ -24,10 +24,29 @@ u32 last_adc_cycles;
 u32 num_trigs_before_adc_readout;
 u32 last_adc_shift;
 
+u8 adc_available;
+
 
 /////////////////////////////////////////////////////////////////////////
 //CORE FUNCTIONS/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
+
+//Returns 1 if available (clock is running)
+u8 rf_adc_available()
+{
+
+	u8 Tile = 0x0;
+	XRFdc *RFdcInstPtr = &RFdcInst;
+
+	u8 Status = XRFdc_Reset(RFdcInstPtr, XRFDC_ADC_TILE, Tile);
+	if (Status != XRFDC_SUCCESS) {
+		//return XRFDC_FAILURE;
+		adc_available = 0;
+		return 0;
+	}
+	adc_available = 1;
+	return 1;
+}
 
 u32 rf_get_adc_shift()
 {
@@ -624,11 +643,21 @@ void rf_init()
 
 	if(XRFdc_IsDACDigitalPathEnabled(&RFdcInst, 0, 0))
 	{
-		debug_print("Data path enabled!");
+		debug_print("DAC data path enabled!");
 	}
 	else
 	{
-		debug_print("Data path not available!");
+		debug_print("DAC data path not available!");
+	}
+
+	//Check the ADC path
+	if(XRFdc_IsADCDigitalPathEnabled(&RFdcInst, 0, 0))
+	{
+		debug_print("ADC data path enabled!");
+	}
+	else
+	{
+		debug_print("ADC data path not available!");
 	}
 
 	gpio_init();
@@ -744,6 +773,11 @@ int rf_self_test()
 	if (Status != XRFDC_SUCCESS) {
 		//return XRFDC_FAILURE;
 		debug_print("Failed to reset ADC tile");
+		adc_available = 0;
+	}
+	else
+	{
+		adc_available = 1;
 	}
 	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_DAC_TILE, Tile);
 	if (Status != XRFDC_SUCCESS) {

@@ -33,6 +33,8 @@
 #define RF_READ_ADC 0x11
 #define RF_FLUSH_ADC 0x12
 #define RF_SET_ADC_SHIFT 0x13
+#define RF_CHECK_CHANNEL 0x14
+#define RF_CHECK_ADC 0x15
 
 
 //Python commands
@@ -47,6 +49,8 @@ void cmd_set_zero_delay();
 void cmd_set_adc_cycles();
 void cmd_read_adc();
 void cmd_set_adc_shift();
+void cmd_check_channel();
+void cmd_check_adc();
 
 //Test case commands
 void cmd_pulse_test();

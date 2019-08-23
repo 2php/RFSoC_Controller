@@ -38,24 +38,34 @@ if board.set_loopback(rf.YES) != 0:
 if board.set_trigger_mode(rf.TRIGGER_CYCLES) != 0:
     print("Error while setting buffer trigger mode, check to make sure board connection is up")
     sys.exit()
-
+ 
 adc_cycles = 0
-if(len(sys.argv) > 1):
-    adc_cycles = round(int(sys.argv[1])/4)
+if(board.check_adc() == 0):
 
-if board.set_adc_cycles(adc_cycles) != 0:
-    print("Error while setting ADC trigger time, check to make sure board connection is up")
-    sys.exit()
+    if(len(sys.argv) > 1):
+        adc_cycles = round(int(sys.argv[1])/4)
     
-adc_shift = 0
-if(len(sys.argv) > 3):
-    import math
-    adc_shift = round(math.log2(int(sys.argv[3])))
+    if board.set_adc_cycles(adc_cycles) != 0:
+        print("Error while setting ADC trigger time, check to make sure board connection is up")
+        sys.exit()
+        
+    adc_shift = 0
+    if(len(sys.argv) > 3):
+        import math
+        try:
+            adc_shift = round(math.log2(int(sys.argv[3])))
+        except:
+            print("ADC averages input was invalid.")
+        
+    board.set_adc_shift(adc_shift)
     
-board.set_adc_shift(adc_shift)
-
-print("ADC capture time set to " + str(adc_cycles*4) + " ns")
-print("ADC averages set to " + str(pow(2,adc_shift)))
+    print("ADC capture time set to " + str(adc_cycles*4) + " ns")
+    print("ADC averages set to " + str(pow(2,adc_shift)))
+    
+    
+else:
+    print("ADC clock is not connected.")
+    
 print("Board is armed, trigger using trigger_board.py")
 
 

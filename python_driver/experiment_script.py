@@ -32,7 +32,7 @@ try:
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
     #wf4 = rf.WaveFile("2_dc_square_wave.txt", 50*rf.DAC_WORD_PERIOD, 0*4, 1)
-    c0 = rf.Channel(0, 5, wf_locking, wf2)
+    c0 = rf.Channel(4, 5, wf_locking, wf2)
     #c1 = rf.Channel(1, 5, wf_locking, wf2)
     #c2 = rf.Channel(4, 10, wf_dummy_locking, wf2)
     #c2 = rf.Channel(2, 500, 200*50, wf_locking, wf2, 0)
@@ -58,12 +58,12 @@ try:
     board.set_loopback(rf.YES)
     
     #set the adc to collect 800 samples
-    board.set_adc_cycles(100)
+    #board.set_adc_cycles(100)
     
-    adc_shift = 8
-    board.set_adc_shift(adc_shift)
+    #adc_shift = 4
+    #board.set_adc_shift(adc_shift)
     
-    board.flush_adc_buffer()
+    #board.flush_adc_buffer()
     
     #num_triggers = 1
     #trigger once
@@ -80,12 +80,12 @@ try:
 #        #wp.plot_waveform(samples)
         
     #board.trigger()
-    for i in range(0,pow(2,adc_shift)):
-        board.trigger()
-        time.sleep(0.1)
+    #for i in range(0,pow(2,adc_shift)):
+    board.trigger()
+        #time.sleep(0.1)
     
-    samples = board.read_adc()
-    wp.plot_waveform(samples)
+    #samples = board.read_adc()
+    #wp.plot_waveform(samples)
     board.flush_buffer()
     
     print("Buffer flushed")

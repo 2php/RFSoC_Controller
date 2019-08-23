@@ -74,7 +74,6 @@ void handle_cmd()
 		break;
 
 	case RF_SET_ADC_CYCLES:
-		uart_send_ack();
 		cmd_set_adc_cycles();
 		break;
 
@@ -88,8 +87,15 @@ void handle_cmd()
 		break;
 
 	case RF_SET_ADC_SHIFT:
-		uart_send_ack();
 		cmd_set_adc_shift();
+		break;
+
+	case RF_CHECK_CHANNEL:
+		cmd_check_channel();
+		break;
+
+	case RF_CHECK_ADC:
+		cmd_check_adc();
 		break;
 
 		//Test command cases
@@ -120,8 +126,61 @@ void handle_cmd()
 //Python command implementations////////////
 ////////////////////////////////////////////
 
+void cmd_check_adc()
+{
+	//If the ADC is not available
+	if(rf_adc_available() == 0)
+	{
+		u8 bytes[1];
+		bytes[0] = 0xFF;
+		uart_send(bytes, 1);
+		return;
+	}
+
+	uart_send_ack();
+}
+
+void cmd_check_channel()
+{
+	//Send the ack that we got the command
+	uart_send_ack();
+
+
+	//Recieve 1 bytes from python as our channel
+	u8 bytes[1];
+	if(uart_receive(bytes, 1))
+	{
+		return;
+	}
+
+
+	//If the channel is enabled, return 0
+	if(bytes[0] < NUM_CHANNELS)
+	{
+		uart_send_ack();
+		return;
+	}
+
+	//Otherwise send 0xFF
+
+	bytes[0] = 0xFF;
+	uart_send(bytes, 1);
+	return;
+}
+
 void cmd_set_adc_shift()
 {
+	//If the ADC is not available
+	if(rf_adc_available() == 0)
+	{
+		u8 bytes[1];
+		bytes[0] = 0xFF;
+		uart_send(bytes, 1);
+		return;
+	}
+
+	uart_send_ack();
+
 	//get 4 bytes from python denoting the value
 	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
 	if(uart_receive(repeat, 4))
@@ -136,6 +195,15 @@ void cmd_set_adc_shift()
 
 void cmd_read_adc()
 {
+
+	//If the ADC is not available
+	if(rf_adc_available() == 0)
+	{
+		u8 bytes[1];
+		bytes[0] = 0xEE;
+		uart_send(bytes, 1);
+		return;
+	}
 
 	u32 old_adc_shift = rf_get_adc_shift();
 	//if the ADC can't be read
@@ -182,6 +250,19 @@ void cmd_read_adc()
 
 void cmd_set_adc_cycles()
 {
+
+	//If the ADC is not available
+	if(rf_adc_available() == 0)
+	{
+		u8 bytes[1];
+		bytes[0] = 0xFF;
+		uart_send(bytes, 1);
+		return;
+	}
+
+	//Otherwise send the ack
+	uart_send_ack();
+
 	//Recieve the repeat cycles in 4 bytes with MSB first
 	u8 repeat[4] = {0x00, 0x00, 0x00, 0x00};
 	if(uart_receive(repeat, 4))

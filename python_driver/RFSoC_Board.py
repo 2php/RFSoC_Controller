@@ -41,6 +41,8 @@ RF_SET_ADC_CYCLES = 0x10
 RF_READ_ADC = 0x11
 RF_FLUSH_ADC = 0x12
 RF_SET_ADC_SHIFT = 0x13
+RF_CHECK_CHANNEL = 0x14
+RF_CHECK_ADC = 0x15
 
 #Board responses
 ACK_RESPONSE = 0x00
@@ -307,6 +309,7 @@ class RFSoC_Board:
     locking_waveform = None
     adc_capture_time = 0 #in nanoseconds
     adc_shift_val = 0
+    adc_available = 0
     
     def __init__(self, portname):
         self.channels = []
@@ -353,14 +356,20 @@ class RFSoC_Board:
             self.close()
             return 28
         
+    #returns 0 on success, 1 otherwise    
     def add_channel(self, c):
+        #make sure the board supports the channel
+        if(self.check_channel_available(c.number)):
+            return 1
+        
         #look and see if we have the channel already
         for i in range(0, len(self.channels)):
             if self.channels[i].number == c.number:
                 self.channels[i] = c
-                return
+                return 0
                 
         self.channels.append(c)
+        return 0
         
         
     def write_all_channels(self):
@@ -569,27 +578,11 @@ class RFSoC_Board:
     
         print("Error, bad acknowledgement recieved from board while sending locking waveform bytes, ack error code was: " + str(ack_val) + "\n")
             
-    def set_locking_select(self):
-        
-        #depreciated function
-        return
-#        bs = self.get_locking_bytes()
-#        
-#        #send the set lockign waveform command
-#        ack_val = self.write_bytes([RF_SET_LOCKING_SELECT])
-#        
-#        #if we get a bad acknowledgement back
-#        if(ack_val != ACK_RESPONSE):
-#            print("Error, bad acknowledgement recieved from board while sending set locking select command, ack error code was: " + str(ack_val) + "\n")
-#            
-#        #send the locking bytes
-#        ack_val = self.write_bytes(bs)
-#        
-#        #if we get a bad acknowledgement back
-#        if(ack_val != ACK_RESPONSE):
-#            print("Error, bad acknowledgement recieved from board while sending locking select bytes, ack error code was: " + str(ack_val) + "\n")
-
     def set_adc_cycles(self, cycles):
+        
+        if(self.check_adc()):
+            print("Cannot set adc cycles, adc is unavailable")
+            return;
         
         #send the set adc cycles command
         ack_val = self.write_bytes([RF_SET_ADC_CYCLES])
@@ -607,11 +600,18 @@ class RFSoC_Board:
             print("Error, bad acknowledgement recieved from board while sending adc cycles, ack error code was: " + str(ack_val) + "\n")
             return 1
         
+        self.adc_available = 1
         return 0
     
     
      #Returns an array of adc samples       
     def read_adc(self):
+        
+        #if the adc is not available
+        if(self.check_adc()):
+            print("Error, the ADC is not operational, check to ensure that the ADC clock is connected and reset the board.")
+            return None
+        
         self.port.timeout = ADC_TIMEOUT
          #send the read command
         #ack_val = self.write_bytes([RF_READ_ADC])
@@ -622,8 +622,11 @@ class RFSoC_Board:
         if(len(ack_val) != 1 or ack_val[0] != ACK_RESPONSE):
             if(ack_val[0] == 0xFF):
                 print("Error, the board has not been triggered enough times to read the adc, trigger more times and try again.")
-            print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
-           
+            elif(ack_val[0] == 0xEE):
+                print("Error, the ADC is not operational, check to ensure that the ADC clock is connected and reset the board.")
+            else:
+                print("Error, bad acknowledgement recieved from board while sending set adc cycles command, ack error code was: " + str(ack_val) + "\n")
+            return None
         #read the length of the bytestream
         len_bytes = self.receive_bytes(4)
         
@@ -666,11 +669,15 @@ class RFSoC_Board:
     
     def set_adc_shift(self, val):
         
+        
         #send the set adc shift command
         ack_val = self.write_bytes([RF_SET_ADC_SHIFT])
         
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
+            if(ack_val[0] == 0xFF):
+                print("Error, cannot set adc shift, adc is unavailable, check to make sure the clock is connected.")
+                return 1
             print("Error, bad acknowledgement recieved from board while sending set adc shift command, ack error code was: " + str(ack_val) + "\n")
             return 1
         
@@ -685,15 +692,8 @@ class RFSoC_Board:
             return 1
         
         self.adc_shift_val = val
+        self.adc_available = 1
     
-    def get_locking_bytes(self):
-        
-        locking_val = 0x0000
-        for c in self.channels:
-            if(c.is_locking):
-                locking_val = locking_val | (1 << c.number)
-                
-        return int_to_bytestream(locking_val, 2)
     
     def rebuild_adc_stream(self, stream):
         
@@ -719,4 +719,44 @@ class RFSoC_Board:
         
         return self.adc_capture_time * 2 * pow(10, -9);
     
+    #checks if the board supports a particular channel
+    #returns 0 if yes, otherwise returns 1
+    def check_channel_available(self, channel):
+        
+         #send the check channel command
+        ack_val = self.write_bytes([RF_CHECK_CHANNEL])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            print("Error, bad acknowledgement recieved from board while sending check channe; command, ack error code was: " + str(ack_val) + "\n")
+            return 1
     
+    
+       #send the channel number 
+        ack_val = self.write_bytes([channel & 0xFF])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            if(ack_val == 0xFF):
+                print("Error, board does not support channel #" + str(channel + 1) + ", please increase the number of available channels in rf.h of the board firmware. Be sure to see the doccumentation section \"Changing the number of available channels\" for instructions on how to connect the clock inputs.")
+            else:
+                print("Error, bad acknowledgement recieved from board while sending check channel command, ack error code was: " + str(ack_val) + "\n")
+            return 1
+        return 0
+        
+    
+    #returns 0 if available, 1 otherwise
+    def check_adc(self):
+        #send the check channel command
+        ack_val = self.write_bytes([RF_CHECK_ADC])
+        
+        #if we get a bad acknowledgement back
+        if(ack_val != ACK_RESPONSE):
+            
+            if(ack_val != 0xFF):
+                print("Error, bad acknowledgement recieved from board while sending check channe; command, ack error code was: " + str(ack_val) + "\n")
+            self.adc_available = 0
+            return 1
+        
+        self.adc_available = 1
+        return 0

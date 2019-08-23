@@ -75,5 +75,6 @@ void rf_set_post_delay(u8 channel, u32 val);
 void rf_set_adc_shift(u32 value);
 u8 adc_data_valid();
 u32 rf_get_adc_shift();
+u8 rf_adc_available();
 
 #endif /* SRC_DRIVERS_RF_H_ */

@@ -202,23 +202,30 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_8/rfsoc_adc_data_capture_axis_data_fifo_1_8.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/ila.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_6/rfsoc_adc_data_capture_axis_register_slice_0_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_6} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_8/rfsoc_adc_data_capture_axis_data_fifo_9_8.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_8} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ooc.xdc
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_4/rfsoc_adc_data_capture_axis_data_fifo_10_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_4} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_system_ila_0_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_4/rfsoc_adc_data_capture_axis_data_fifo_11_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_4/rfsoc_adc_data_capture_axis_data_fifo_12_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_16/rfsoc_adc_data_capture_axis_data_fifo_0_16.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_16 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_16} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_9/rfsoc_adc_data_capture_axis_data_fifo_1_9.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_9 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_9} -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
 # IP: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/top_level_rfsoc_adc_data_captu_0_0.xci
 # IP: The module: 'top_level_rfsoc_adc_data_captu_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
@@ -421,19 +428,26 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_8/rfsoc_adc_data_capture_axis_data_fifo_1_8.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_8} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/ila.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_register_slice_0_6/rfsoc_adc_data_capture_axis_register_slice_0_6.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_6 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_register_slice_0_6} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ila_lib_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_9_8/rfsoc_adc_data_capture_axis_data_fifo_9_8.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_8 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_9_8} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/bd_6b6e_ooc.xdc
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_10_4/rfsoc_adc_data_capture_axis_data_fifo_10_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_10_4} -quiet] -quiet
 
-# XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_system_ila_0_0_ooc.xdc
-# XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_11_4/rfsoc_adc_data_capture_axis_data_fifo_11_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_11_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_12_4/rfsoc_adc_data_capture_axis_data_fifo_12_4.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_4 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_12_4} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_0_16/rfsoc_adc_data_capture_axis_data_fifo_0_16.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_16 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_0_16} -quiet] -quiet
+
+# IP: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_axis_data_fifo_1_9/rfsoc_adc_data_capture_axis_data_fifo_1_9.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_9 || ORIG_REF_NAME==rfsoc_adc_data_capture_axis_data_fifo_1_9} -quiet] -quiet
 
 # XDC: c:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_adc_data_captu_0_0/src/rfsoc_adc_data_capture_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'top_level_rfsoc_adc_data_captu_0_0'. Do not add the DONT_TOUCH constraint.

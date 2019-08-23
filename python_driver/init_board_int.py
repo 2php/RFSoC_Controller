@@ -48,7 +48,7 @@ def init_board_object(port = None):
     
     #make sure the provided port name is correct
     if portname not in gp.get_port_list():
-        print("Invalid port name: " + sys.argv[1])
+        print("Invalid port name: " + portname)
         gp.print_port_list()
         return None
     

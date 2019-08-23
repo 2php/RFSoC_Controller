@@ -48,8 +48,8 @@ for i in range(0, num_trigs):
     
 if(len(sys.argv) > 1):
     
-    if(board.adc_capture_time == 0 and (int(sys.argv[1]) == 1 or int(sys.argv[2]) == 1)):
-        print("Cannot save or display waveform, capture time was set to 0 ns")
+    if(board.adc_capture_time == 0 and (int(sys.argv[1]) == 1 or int(sys.argv[2]) == 1) and board.check_adc == 0):
+        print("Cannot save or display waveform, capture time was set to 0 ns or adc clock is not connected.")
         sys.exit()
     
     #If we need to save the waveform as a csv or plot it

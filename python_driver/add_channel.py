@@ -104,7 +104,8 @@ locking_file = rf.WaveFile(locking_filename, 4, 0, 0, locking_amp_factor, 1, rou
 c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file)
 
 
-board.add_channel(c)
+if(board.add_channel(c)):
+    print("Error while adding channel")
 
 if(ib.save_board(board)):
     print("Error while saving board to disk")

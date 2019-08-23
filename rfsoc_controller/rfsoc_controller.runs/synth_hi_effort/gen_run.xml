@@ -191,30 +191,30 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design">
+      <Option Id="FsmExtraction">1</Option>
       <Option Id="ResourceSharing">2</Option>
       <Option Id="NoCombineLuts">1</Option>
-      <Option Id="RepFanoutThreshold">400</Option>
-      <Option Id="KeepEquivalentRegisters">1</Option>
-      <Option Id="FsmExtraction">1</Option>
       <Option Id="ShregMinSize">5</Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
+      <Option Id="RepFanoutThreshold">400</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_11_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_9_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_9_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_14_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_12_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_12_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_adc_data_captu_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_15_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_8_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_6_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_13_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_15_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_13_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_7_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
