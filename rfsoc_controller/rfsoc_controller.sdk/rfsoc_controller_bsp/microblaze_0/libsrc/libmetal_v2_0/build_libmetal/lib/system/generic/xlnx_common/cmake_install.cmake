@@ -1,4 +1,4 @@
-# Install script for directory: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common
+# Install script for directory: C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal/lib/system/generic/xlnx_common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

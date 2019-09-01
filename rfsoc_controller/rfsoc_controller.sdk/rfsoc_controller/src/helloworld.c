@@ -74,7 +74,6 @@ int main()
 	while(1)
 	{
 		handle_cmd();
-
 	}
 
 	cleanup_platform();

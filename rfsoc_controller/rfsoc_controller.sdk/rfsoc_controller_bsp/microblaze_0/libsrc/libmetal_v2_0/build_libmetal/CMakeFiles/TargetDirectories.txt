@@ -1,1 +1,1 @@
-C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/CMakeFiles/metal-static.dir
+C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/CMakeFiles/metal-static.dir

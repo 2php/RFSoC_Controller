@@ -5,8 +5,8 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\james\fpga_projects\rfsoc_controller\sdk_bacup\rfsoc_controller_bsp"/>
-			<item value="C:\james\fpga_projects\rfsoc_controller\sdk_bacup\rfsoc_controller"/>
+			<item value="C:\james\current_repo\RFSoC_Controller\rfsoc_controller\sdk_backup_9_1_19\rfsoc_controller_bsp"/>
+			<item value="C:\james\current_repo\RFSoC_Controller\rfsoc_controller\sdk_backup_9_1_19\rfsoc_controller"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

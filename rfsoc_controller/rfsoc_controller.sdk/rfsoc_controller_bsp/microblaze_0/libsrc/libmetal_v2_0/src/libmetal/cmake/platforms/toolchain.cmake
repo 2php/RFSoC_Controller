@@ -1,7 +1,7 @@
 set (CMAKE_SYSTEM_PROCESSOR "microblaze" CACHE STRING "")
 set (MACHINE "microblaze_generic")
 set (CROSS_PREFIX "mb-" CACHE STRING "")
-set (CMAKE_C_FLAGS " -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include" CACHE STRING "")
+set (CMAKE_C_FLAGS " -mlittle-endian -mxl-soft-mul -mcpu=v11.0  -mlittle-endian -ffunction-sections -fdata-sections -Wall -Wextra -IC:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/include" CACHE STRING "")
 set (CMAKE_SYSTEM_NAME "Generic" CACHE STRING "")
 include (CMakeForceCompiler)
 CMAKE_FORCE_C_COMPILER ("${CROSS_PREFIX}gcc" GNU)
