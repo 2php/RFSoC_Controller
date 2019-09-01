@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Jul 26 12:09:20 2019
-//Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+//Date        : Fri Aug 23 11:10:18 2019
+//Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 //Command     : generate_target trigger_controller_wrapper.bd
 //Design      : trigger_controller_wrapper
 //Purpose     : IP block netlist

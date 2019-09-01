@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Aug  6 10:20:41 2019
-//Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+//Date        : Fri Aug 23 11:07:44 2019
+//Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 //Command     : generate_target rfsoc_data_pipeline.bd
 //Design      : rfsoc_data_pipeline
 //Purpose     : IP block netlist
@@ -96,7 +96,7 @@ module rfsoc_data_pipeline
   assign pipeline_active = axis_tready_slice_0_pipeline_active;
   assign rf_clock_1 = rf_clock;
   assign rf_reset_1 = rf_resetn;
-  rfsoc_data_pipeline_axis_data_fifo_0_10 axis_data_fifo_0
+  rfsoc_data_pipeline_axis_data_fifo_0_11 axis_data_fifo_0
        (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
@@ -105,7 +105,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(S_AXIS_0_1_TDATA),
         .s_axis_tready(S_AXIS_0_1_TREADY),
         .s_axis_tvalid(S_AXIS_0_1_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 axis_data_fifo_clock_crossing
+  rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 axis_data_fifo_clock_crossing
        (.m_axis_aclk(rf_clock_1),
         .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
@@ -115,7 +115,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
         .s_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
         .s_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_gpio_5 axis_data_fifo_gpio
+  rfsoc_data_pipeline_axis_data_fifo_gpio_6 axis_data_fifo_gpio
        (.m_axis_aclk(rf_clock_1),
         .m_axis_tdata(axis_data_fifo_gpio_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_gpio_M_AXIS_TREADY),
@@ -125,7 +125,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(gpio_and_select_buff_0_m_axis_TDATA),
         .s_axis_tready(gpio_and_select_buff_0_m_axis_TREADY),
         .s_axis_tvalid(gpio_and_select_buff_0_m_axis_TVALID));
-  rfsoc_data_pipeline_axis_data_fifo_waveform_9 axis_data_fifo_waveform
+  rfsoc_data_pipeline_axis_data_fifo_waveform_10 axis_data_fifo_waveform
        (.m_axis_tdata(axis_data_fifo_2_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
@@ -134,7 +134,7 @@ module rfsoc_data_pipeline
         .s_axis_tdata(axis_mux_0_m_axis_TDATA),
         .s_axis_tready(axis_mux_0_m_axis_TREADY),
         .s_axis_tvalid(axis_mux_0_m_axis_TVALID));
-  rfsoc_data_pipeline_axis_dwidth_converter_0_10 axis_dwidth_converter_0
+  rfsoc_data_pipeline_axis_dwidth_converter_0_11 axis_dwidth_converter_0
        (.aclk(microblaze_clk_1),
         .aresetn(microblaze_reset_1),
         .m_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),

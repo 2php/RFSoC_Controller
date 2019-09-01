@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="top_level_channel_select_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1564173960">
+<GenRun Id="top_level_channel_select_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1566584401">
   <File Type="PA-TCL" Name="top_level_channel_select_0_0.tcl"/>
   <File Type="REPORTS-TCL" Name="top_level_channel_select_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_level_channel_select_0_0.vds"/>

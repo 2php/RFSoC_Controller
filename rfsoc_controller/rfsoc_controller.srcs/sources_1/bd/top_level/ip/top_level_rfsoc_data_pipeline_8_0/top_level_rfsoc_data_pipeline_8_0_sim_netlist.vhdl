@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Aug 14 11:48:04 2019
--- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_data_pipeline_8_0/top_level_rfsoc_data_pipeline_8_0_sim_netlist.vhdl
--- Design      : top_level_rfsoc_data_pipeline_8_0
+-- Date        : Fri Aug 23 11:14:52 2019
+-- Host        : MB241LABVIEW running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top top_level_rfsoc_data_pipeline_8_0 -prefix
+--               top_level_rfsoc_data_pipeline_8_0_ top_level_rfsoc_data_pipeline_0_0_sim_netlist.vhdl
+-- Design      : top_level_rfsoc_data_pipeline_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu29dr-ffvf1760-2-e
@@ -24,8 +24,6 @@ entity top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axisc_ups
     s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axis_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axisc_upsizer : entity is "axis_dwidth_converter_v1_1_18_axisc_upsizer";
 end top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axisc_upsizer;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axisc_upsizer is
@@ -2670,8 +2668,6 @@ entity top_level_rfsoc_data_pipeline_8_0_axis_mux is
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][255]\ : in STD_LOGIC_VECTOR ( 255 downto 0 );
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][255]_0\ : in STD_LOGIC_VECTOR ( 255 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_axis_mux : entity is "axis_mux";
 end top_level_rfsoc_data_pipeline_8_0_axis_mux;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_axis_mux is
@@ -5575,8 +5571,6 @@ entity top_level_rfsoc_data_pipeline_8_0_shift_register is
     rf_clock : in STD_LOGIC;
     \data_out_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_shift_register : entity is "shift_register";
 end top_level_rfsoc_data_pipeline_8_0_shift_register;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_shift_register is
@@ -18239,8 +18233,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -20982,8 +20974,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_cdc_sync_rst is
   attribute INIT of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of top_level_rfsoc_data_pipeline_8_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -21677,8 +21667,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_counter_updn is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end top_level_rfsoc_data_pipeline_8_0_xpm_counter_updn;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_xpm_counter_updn is
@@ -25584,8 +25572,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_bit is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_bit is
@@ -25759,8 +25745,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_reg_vec is
@@ -26222,8 +26206,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_fifo_rst is
     rst_d1 : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end top_level_rfsoc_data_pipeline_8_0_xpm_fifo_rst;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_rst is
@@ -26478,8 +26460,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of top_level_rfsoc_data_pipeline_8_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of top_level_rfsoc_data_pipeline_8_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of top_level_rfsoc_data_pipeline_8_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -43650,8 +43630,6 @@ entity top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axis_dwid
     s_axis_tvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter : entity is "axis_dwidth_converter_v1_1_18_axis_dwidth_converter";
 end top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_axis_dwidth_converter_v1_1_18_axis_dwidth_converter is
@@ -43707,8 +43685,6 @@ entity top_level_rfsoc_data_pipeline_8_0_axis_tready_slice is
     \data_out_reg[31]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ext_trigger : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_axis_tready_slice : entity is "axis_tready_slice";
 end top_level_rfsoc_data_pipeline_8_0_axis_tready_slice;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_axis_tready_slice is
@@ -45391,8 +45367,6 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_mux_0_0 is
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][255]\ : in STD_LOGIC_VECTOR ( 255 downto 0 );
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][255]_0\ : in STD_LOGIC_VECTOR ( 255 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_mux_0_0 : entity is "rfsoc_data_pipeline_axis_mux_0_0";
 end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_mux_0_0;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_mux_0_0 is
@@ -45494,8 +45468,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -47650,7 +47622,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 is
+entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -47662,16 +47634,14 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_convert
     m_axis_tdata : out STD_LOGIC_VECTOR ( 255 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 : entity is "rfsoc_data_pipeline_axis_dwidth_converter_0_10,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11 : entity is "rfsoc_data_pipeline_axis_dwidth_converter_0_11,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 : entity is "rfsoc_data_pipeline_axis_dwidth_converter_0_10";
+  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 : entity is "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1";
-end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10;
+  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11 : entity is "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1";
+end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11;
 
-architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10 is
+architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -47718,8 +47688,6 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_tready_slice_0
     \data_out_reg[31]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     ext_trigger : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_tready_slice_0_0 : entity is "rfsoc_data_pipeline_axis_tready_slice_0_0";
 end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_tready_slice_0_0;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_tready_slice_0_0 is
@@ -47804,8 +47772,6 @@ entity top_level_rfsoc_data_pipeline_8_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_axis : entity is "auto";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_axis : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of top_level_rfsoc_data_pipeline_8_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -49980,8 +49946,6 @@ entity top_level_rfsoc_data_pipeline_8_0_axis_data_fifo_v2_0_1_top is
     s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axis_tready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_axis_data_fifo_v2_0_1_top : entity is "axis_data_fifo_v2_0_1_top";
 end top_level_rfsoc_data_pipeline_8_0_axis_data_fifo_v2_0_1_top;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_axis_data_fifo_v2_0_1_top is
@@ -51363,7 +51327,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 is
+entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -51375,16 +51339,14 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10
     m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 : entity is "rfsoc_data_pipeline_axis_data_fifo_0_10,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11 : entity is "rfsoc_data_pipeline_axis_data_fifo_0_11,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 : entity is "rfsoc_data_pipeline_axis_data_fifo_0_10";
+  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10;
+  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11;
 
-architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10 is
+architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
@@ -51416,7 +51378,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 is
+entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -51428,16 +51390,14 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_wave
     m_axis_tdata : out STD_LOGIC_VECTOR ( 255 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 : entity is "rfsoc_data_pipeline_axis_data_fifo_waveform_9,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10 : entity is "rfsoc_data_pipeline_axis_data_fifo_waveform_10,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 : entity is "rfsoc_data_pipeline_axis_data_fifo_waveform_9";
+  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9;
+  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10;
 
-architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9 is
+architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
@@ -51469,7 +51429,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 is
+entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -51482,16 +51442,14 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_cloc
     m_axis_tdata : out STD_LOGIC_VECTOR ( 255 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 : entity is "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 : entity is "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 : entity is "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9";
+  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9;
+  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10;
 
-architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9 is
+architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -51526,7 +51484,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 is
+entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -51539,16 +51497,14 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio
     m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 : entity is "rfsoc_data_pipeline_axis_data_fifo_gpio_5,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6 : entity is "rfsoc_data_pipeline_axis_data_fifo_gpio_6,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 : entity is "rfsoc_data_pipeline_axis_data_fifo_gpio_5";
+  attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5;
+  attribute X_CORE_INFO of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6;
 
-architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5 is
+architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -51602,8 +51558,6 @@ entity top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline : entity is "rfsoc_data_pipeline.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline : entity is "rfsoc_data_pipeline";
 end top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline;
 
 architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline is
@@ -51629,21 +51583,21 @@ architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline 
   signal axis_tready_slice_0_n_1 : STD_LOGIC;
   signal gpio_and_select_buff_0_m_axis_TREADY : STD_LOGIC;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "rfsoc_data_pipeline_axis_data_fifo_0_10,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "rfsoc_data_pipeline_axis_data_fifo_0_11,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_0 : label is "yes";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of axis_data_fifo_0 : label is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_clock_crossing : label is "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_clock_crossing : label is "rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_clock_crossing : label is "yes";
   attribute X_CORE_INFO of axis_data_fifo_clock_crossing : label is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_gpio : label is "rfsoc_data_pipeline_axis_data_fifo_gpio_5,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_gpio : label is "rfsoc_data_pipeline_axis_data_fifo_gpio_6,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_gpio : label is "yes";
   attribute X_CORE_INFO of axis_data_fifo_gpio : label is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_waveform : label is "rfsoc_data_pipeline_axis_data_fifo_waveform_9,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_waveform : label is "rfsoc_data_pipeline_axis_data_fifo_waveform_10,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_waveform : label is "yes";
   attribute X_CORE_INFO of axis_data_fifo_waveform : label is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-  attribute CHECK_LICENSE_TYPE of axis_dwidth_converter_0 : label is "rfsoc_data_pipeline_axis_dwidth_converter_0_10,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}";
+  attribute CHECK_LICENSE_TYPE of axis_dwidth_converter_0 : label is "rfsoc_data_pipeline_axis_dwidth_converter_0_11,axis_dwidth_converter_v1_1_18_axis_dwidth_converter,{}";
   attribute DowngradeIPIdentifiedWarnings of axis_dwidth_converter_0 : label is "yes";
   attribute X_CORE_INFO of axis_dwidth_converter_0 : label is "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1";
   attribute X_CORE_INFO of axis_mux_0 : label is "axis_mux,Vivado 2019.1";
@@ -51673,7 +51627,7 @@ VCC: unisim.vcomponents.VCC
      port map (
       P => \<const1>\
     );
-axis_data_fifo_0: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_10
+axis_data_fifo_0: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_0_11
      port map (
       m_axis_tdata(31 downto 0) => axis_data_fifo_0_M_AXIS_TDATA(31 downto 0),
       m_axis_tready => axis_data_fifo_0_M_AXIS_TREADY,
@@ -51684,7 +51638,7 @@ axis_data_fifo_0: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipel
       s_axis_tready => S_AXIS_tready,
       s_axis_tvalid => S_AXIS_tvalid
     );
-axis_data_fifo_clock_crossing: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9
+axis_data_fifo_clock_crossing: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10
      port map (
       m_axis_aclk => rf_clock,
       m_axis_tdata(255 downto 0) => axis_data_fifo_1_M_AXIS_TDATA(255 downto 0),
@@ -51696,7 +51650,7 @@ axis_data_fifo_clock_crossing: entity work.top_level_rfsoc_data_pipeline_8_0_rfs
       s_axis_tready => axis_dwidth_converter_0_M_AXIS_TREADY,
       s_axis_tvalid => axis_dwidth_converter_0_M_AXIS_TVALID
     );
-axis_data_fifo_gpio: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_5
+axis_data_fifo_gpio: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_gpio_6
      port map (
       m_axis_aclk => rf_clock,
       m_axis_tdata(31 downto 0) => axis_data_fifo_gpio_M_AXIS_TDATA(31 downto 0),
@@ -51711,7 +51665,7 @@ axis_data_fifo_gpio: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pi
       s_axis_tready => gpio_and_select_buff_0_m_axis_TREADY,
       s_axis_tvalid => '1'
     );
-axis_data_fifo_waveform: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_9
+axis_data_fifo_waveform: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_data_fifo_waveform_10
      port map (
       m_axis_tdata(255 downto 0) => axis_data_fifo_2_M_AXIS_TDATA(255 downto 0),
       m_axis_tready => axis_data_fifo_2_M_AXIS_TREADY,
@@ -51722,7 +51676,7 @@ axis_data_fifo_waveform: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_dat
       s_axis_tready => axis_mux_0_m_axis_TREADY,
       s_axis_tvalid => axis_mux_0_m_axis_TVALID
     );
-axis_dwidth_converter_0: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_10
+axis_dwidth_converter_0: entity work.top_level_rfsoc_data_pipeline_8_0_rfsoc_data_pipeline_axis_dwidth_converter_0_11
      port map (
       aclk => microblaze_clk,
       aresetn => microblaze_resetn,
@@ -51791,7 +51745,7 @@ entity top_level_rfsoc_data_pipeline_8_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of top_level_rfsoc_data_pipeline_8_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0 : entity is "top_level_rfsoc_data_pipeline_8_0,rfsoc_data_pipeline,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_rfsoc_data_pipeline_8_0 : entity is "top_level_rfsoc_data_pipeline_0_0,rfsoc_data_pipeline,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of top_level_rfsoc_data_pipeline_8_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -51810,13 +51764,13 @@ architecture STRUCTURE of top_level_rfsoc_data_pipeline_8_0 is
   attribute X_INTERFACE_PARAMETER of S_AXIS_tvalid : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 m_axis TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 m_axis TVALID";
-  attribute X_INTERFACE_PARAMETER of m_axis_tvalid : signal is "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_tvalid : signal is "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of microblaze_clk : signal is "xilinx.com:signal:clock:1.0 CLK.MICROBLAZE_CLK CLK";
   attribute X_INTERFACE_PARAMETER of microblaze_clk : signal is "XIL_INTERFACENAME CLK.MICROBLAZE_CLK, FREQ_HZ 100000000, PHASE 0.000, ASSOCIATED_BUSIF S_AXIS, ASSOCIATED_RESET microblaze_resetn, CLK_DOMAIN top_level_clk_wiz_1_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of microblaze_resetn : signal is "xilinx.com:signal:reset:1.0 RST.MICROBLAZE_RESETN RST";
   attribute X_INTERFACE_PARAMETER of microblaze_resetn : signal is "XIL_INTERFACENAME RST.MICROBLAZE_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rf_clock : signal is "xilinx.com:signal:clock:1.0 CLK.RF_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of rf_clock : signal is "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac2, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of rf_clock : signal is "XIL_INTERFACENAME CLK.RF_CLOCK, FREQ_HZ 250000000, PHASE 0.000, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET rf_resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rf_resetn : signal is "xilinx.com:signal:reset:1.0 RST.RF_RESETN RST";
   attribute X_INTERFACE_PARAMETER of rf_resetn : signal is "XIL_INTERFACENAME RST.RF_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of S_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 S_AXIS TDATA";

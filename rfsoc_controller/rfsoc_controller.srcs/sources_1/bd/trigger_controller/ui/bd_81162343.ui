@@ -2,49 +2,49 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port rf_clk -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
-preplace port rf_reset -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
-preplace port microblaze_clk -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
-preplace port microblaze_reset -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
-preplace port ext_trigger_in -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
-preplace port pipeline_active_in_0 -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
-preplace port pipeline_active_in_1 -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
-preplace port pipeline_active_in_2 -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
-preplace port pipeline_active_in_3 -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
-preplace port trigger_c3 -pg 1 -lvl 3 -x 640 -y 340 -defaultsOSRD
-preplace port trigger_c2 -pg 1 -lvl 3 -x 640 -y 320 -defaultsOSRD
-preplace port trigger_c1 -pg 1 -lvl 3 -x 640 -y 300 -defaultsOSRD
-preplace port trigger_c0 -pg 1 -lvl 3 -x 640 -y 280 -defaultsOSRD
-preplace port pipeline_active_in_4 -pg 1 -lvl 0 -x -10 -y 380 -defaultsOSRD
-preplace port pipeline_active_in_5 -pg 1 -lvl 0 -x -10 -y 400 -defaultsOSRD
-preplace port pipeline_active_in_6 -pg 1 -lvl 0 -x -10 -y 420 -defaultsOSRD
-preplace port pipeline_active_in_7 -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
-preplace port pipeline_active_in_8 -pg 1 -lvl 0 -x -10 -y 460 -defaultsOSRD
-preplace port pipeline_active_in_9 -pg 1 -lvl 0 -x -10 -y 480 -defaultsOSRD
-preplace port pipeline_active_in_10 -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
-preplace port pipeline_active_in_11 -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
-preplace port pipeline_active_in_12 -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
-preplace port pipeline_active_in_13 -pg 1 -lvl 0 -x -10 -y 560 -defaultsOSRD
-preplace port pipeline_active_in_14 -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
-preplace port pipeline_active_in_15 -pg 1 -lvl 0 -x -10 -y 600 -defaultsOSRD
-preplace port trigger_c15 -pg 1 -lvl 3 -x 640 -y 580 -defaultsOSRD
-preplace port trigger_c14 -pg 1 -lvl 3 -x 640 -y 560 -defaultsOSRD
-preplace port trigger_c13 -pg 1 -lvl 3 -x 640 -y 540 -defaultsOSRD
-preplace port trigger_c12 -pg 1 -lvl 3 -x 640 -y 520 -defaultsOSRD
-preplace port trigger_c10 -pg 1 -lvl 3 -x 640 -y 480 -defaultsOSRD
-preplace port trigger_c11 -pg 1 -lvl 3 -x 640 -y 500 -defaultsOSRD
-preplace port trigger_c4 -pg 1 -lvl 3 -x 640 -y 360 -defaultsOSRD
-preplace port trigger_c5 -pg 1 -lvl 3 -x 640 -y 380 -defaultsOSRD
-preplace port trigger_c6 -pg 1 -lvl 3 -x 640 -y 400 -defaultsOSRD
-preplace port trigger_c7 -pg 1 -lvl 3 -x 640 -y 420 -defaultsOSRD
-preplace port trigger_c8 -pg 1 -lvl 3 -x 640 -y 440 -defaultsOSRD
-preplace port trigger_c9 -pg 1 -lvl 3 -x 640 -y 460 -defaultsOSRD
-preplace portBus gpio_in -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port rf_clk -pg 1 -lvl 0 -x -20 -y 180 -defaultsOSRD
+preplace port rf_reset -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
+preplace port microblaze_clk -pg 1 -lvl 0 -x -20 -y 160 -defaultsOSRD
+preplace port microblaze_reset -pg 1 -lvl 0 -x -20 -y 20 -defaultsOSRD
+preplace port ext_trigger_in -pg 1 -lvl 0 -x -20 -y 280 -defaultsOSRD
+preplace port pipeline_active_in_0 -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
+preplace port pipeline_active_in_1 -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
+preplace port pipeline_active_in_2 -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD
+preplace port pipeline_active_in_3 -pg 1 -lvl 0 -x -20 -y 360 -defaultsOSRD
+preplace port trigger_c3 -pg 1 -lvl 3 -x 670 -y 340 -defaultsOSRD
+preplace port trigger_c2 -pg 1 -lvl 3 -x 670 -y 320 -defaultsOSRD
+preplace port trigger_c1 -pg 1 -lvl 3 -x 670 -y 300 -defaultsOSRD
+preplace port trigger_c0 -pg 1 -lvl 3 -x 670 -y 280 -defaultsOSRD
+preplace port pipeline_active_in_4 -pg 1 -lvl 0 -x -20 -y 380 -defaultsOSRD
+preplace port pipeline_active_in_5 -pg 1 -lvl 0 -x -20 -y 400 -defaultsOSRD
+preplace port pipeline_active_in_6 -pg 1 -lvl 0 -x -20 -y 420 -defaultsOSRD
+preplace port pipeline_active_in_7 -pg 1 -lvl 0 -x -20 -y 440 -defaultsOSRD
+preplace port pipeline_active_in_8 -pg 1 -lvl 0 -x -20 -y 460 -defaultsOSRD
+preplace port pipeline_active_in_9 -pg 1 -lvl 0 -x -20 -y 480 -defaultsOSRD
+preplace port pipeline_active_in_10 -pg 1 -lvl 0 -x -20 -y 500 -defaultsOSRD
+preplace port pipeline_active_in_11 -pg 1 -lvl 0 -x -20 -y 520 -defaultsOSRD
+preplace port pipeline_active_in_12 -pg 1 -lvl 0 -x -20 -y 540 -defaultsOSRD
+preplace port pipeline_active_in_13 -pg 1 -lvl 0 -x -20 -y 560 -defaultsOSRD
+preplace port pipeline_active_in_14 -pg 1 -lvl 0 -x -20 -y 580 -defaultsOSRD
+preplace port pipeline_active_in_15 -pg 1 -lvl 0 -x -20 -y 600 -defaultsOSRD
+preplace port trigger_c15 -pg 1 -lvl 3 -x 670 -y 580 -defaultsOSRD
+preplace port trigger_c14 -pg 1 -lvl 3 -x 670 -y 560 -defaultsOSRD
+preplace port trigger_c13 -pg 1 -lvl 3 -x 670 -y 540 -defaultsOSRD
+preplace port trigger_c12 -pg 1 -lvl 3 -x 670 -y 520 -defaultsOSRD
+preplace port trigger_c10 -pg 1 -lvl 3 -x 670 -y 480 -defaultsOSRD
+preplace port trigger_c11 -pg 1 -lvl 3 -x 670 -y 500 -defaultsOSRD
+preplace port trigger_c4 -pg 1 -lvl 3 -x 670 -y 360 -defaultsOSRD
+preplace port trigger_c5 -pg 1 -lvl 3 -x 670 -y 380 -defaultsOSRD
+preplace port trigger_c6 -pg 1 -lvl 3 -x 670 -y 400 -defaultsOSRD
+preplace port trigger_c7 -pg 1 -lvl 3 -x 670 -y 420 -defaultsOSRD
+preplace port trigger_c8 -pg 1 -lvl 3 -x 670 -y 440 -defaultsOSRD
+preplace port trigger_c9 -pg 1 -lvl 3 -x 670 -y 460 -defaultsOSRD
+preplace portBus gpio_in -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 490 -y 110 -defaultsOSRD
+preplace inst trigger_module_0 -pg 1 -lvl 2 -x 490 -y 430 -defaultsOSRD
 preplace inst gpio_buffer_0 -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 470 -y 110 -defaultsOSRD
-preplace inst trigger_module_0 -pg 1 -lvl 2 -x 470 -y 430 -defaultsOSRD
 preplace netloc rf_reset_1 1 0 2 NJ 260 NJ
-preplace netloc microblaze_reset_1 1 0 2 10J 10 320J
+preplace netloc microblaze_reset_1 1 0 2 0J 10 320J
 preplace netloc microblaze_clk_1 1 0 2 NJ 160 310J
 preplace netloc rf_clk_1 1 0 2 NJ 180 320
 preplace netloc gpio_in_1 1 0 1 NJ 100
@@ -82,10 +82,10 @@ preplace netloc trigger_module_0_trigger_c6 1 2 1 NJ 400
 preplace netloc trigger_module_0_trigger_c7 1 2 1 NJ 420
 preplace netloc trigger_module_0_trigger_c8 1 2 1 NJ 440
 preplace netloc trigger_module_0_trigger_c9 1 2 1 NJ 460
-preplace netloc axis_data_fifo_0_M_AXIS 1 0 3 20 20 NJ 20 620
+preplace netloc axis_data_fifo_0_M_AXIS 1 0 3 10 20 NJ 20 640
 preplace netloc gpio_buffer_0_m_axis 1 1 1 N 80
-levelinfo -pg 1 -10 160 470 640
-pagesize -pg 1 -db -bbox -sgen -200 0 760 680
+levelinfo -pg 1 -20 160 490 670
+pagesize -pg 1 -db -bbox -sgen -210 0 790 680
 "
 }
-
+0

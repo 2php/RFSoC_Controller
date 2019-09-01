@@ -68,29 +68,32 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 3
-  set_param xicom.use_bs_reader 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
   create_project -in_memory -part xczu29dr-ffvf1760-2-e
   set_property board_part xilinx.com:zcu1275:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/wt [current_project]
-  set_property parent.project_path C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.xpr [current_project]
+  set_property webtalk.parent_dir C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.cache/wt [current_project]
+  set_property parent.project_path C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.xpr [current_project]
   set_property ip_repo_paths {
-  C:/james/fpga_projects/adc_ip
-  C:/james/fpga_projects/trigger_controller_ip
-  C:/james/fpga_projects/ip_repo
+  C:/james/current_repo/RFSoC_Controller/adc_ip
+  C:/james/current_repo/RFSoC_Controller/trigger_controller_ip
+  C:/james/current_repo/RFSoC_Controller/ip_repo
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.cache/ip [current_project]
+  set_property ip_output_repo C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/synth_hi_effort/top_level_wrapper.dcp
+  add_files -quiet C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.runs/synth_hi_effort/top_level_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd
+  add_files C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/top_level.bd
   set_param project.isImplRun false
-  read_xdc C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/constrs_1/new/elab_design.xdc
+  read_xdc C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.srcs/constrs_1/new/elab_design.xdc
   set_param project.isImplRun true
   link_design -top top_level_wrapper -part xczu29dr-ffvf1760-2-e
   set_param project.isImplRun false

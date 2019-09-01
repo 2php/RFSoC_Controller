@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Jul 26 13:46:44 2019
--- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+-- Date        : Fri Aug 23 11:21:26 2019
+-- Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_channel_select_0_0/top_level_channel_select_0_0_sim_netlist.vhdl
+--               C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.srcs/sources_1/bd/top_level/ip/top_level_channel_select_0_0/top_level_channel_select_0_0_sim_netlist.vhdl
 -- Design      : top_level_channel_select_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

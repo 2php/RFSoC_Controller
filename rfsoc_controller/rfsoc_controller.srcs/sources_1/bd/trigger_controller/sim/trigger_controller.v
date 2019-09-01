@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Jul 26 12:09:20 2019
-//Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+//Date        : Fri Aug 23 11:10:18 2019
+//Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 //Command     : generate_target trigger_controller.bd
 //Design      : trigger_controller
 //Purpose     : IP block netlist
@@ -172,7 +172,7 @@ module trigger_controller
   assign trigger_c8 = trigger_module_0_trigger_c8;
   assign trigger_c9 = trigger_module_0_trigger_c9;
   assign trigger_in_0_1 = ext_trigger_in;
-  trigger_controller_axis_data_fifo_0_2 axis_data_fifo_0
+  trigger_controller_axis_data_fifo_0_3 axis_data_fifo_0
        (.m_axis_aclk(rf_clk_1),
         .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),

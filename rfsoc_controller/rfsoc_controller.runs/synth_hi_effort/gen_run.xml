@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_hi_effort" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1563908880">
+<GenRun Id="synth_hi_effort" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1567376780">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_level_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="top_level_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_level_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_level_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_level_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/shift_register.v">
@@ -191,31 +194,17 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design">
+      <Option Id="RepFanoutThreshold">400</Option>
       <Option Id="FsmExtraction">1</Option>
       <Option Id="ResourceSharing">2</Option>
-      <Option Id="NoCombineLuts">1</Option>
       <Option Id="ShregMinSize">5</Option>
+      <Option Id="NoCombineLuts">1</Option>
       <Option Id="KeepEquivalentRegisters">1</Option>
-      <Option Id="RepFanoutThreshold">400</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_11_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_9_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_14_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_12_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_adc_data_captu_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_8_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_6_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_15_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_13_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_7_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_adc_data_captu_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_data_pipeline_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_channel_select_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_trigger_controller_0_0"/>
 </GenRun>

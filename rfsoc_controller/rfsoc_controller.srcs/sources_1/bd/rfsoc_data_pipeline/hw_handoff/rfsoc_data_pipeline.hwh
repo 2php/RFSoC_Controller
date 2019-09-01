@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  6 10:20:42 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug 23 11:07:45 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="rfsoc_data_pipeline" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -177,7 +177,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_10"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_0_11"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -310,7 +310,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_9"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_clock_crossing_10"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -448,7 +448,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_gpio_5"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_gpio_6"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -586,7 +586,7 @@
         <PARAMETER NAME="ENABLE_ECC" VALUE="0"/>
         <PARAMETER NAME="HAS_ECC_ERR_INJECT" VALUE="0"/>
         <PARAMETER NAME="FIFO_MEMORY_TYPE" VALUE="auto"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_9"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_data_fifo_waveform_10"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -698,7 +698,7 @@
         <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
         <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
         <PARAMETER NAME="HAS_MI_TKEEP" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_10"/>
+        <PARAMETER NAME="Component_Name" VALUE="rfsoc_data_pipeline_axis_dwidth_converter_0_11"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>

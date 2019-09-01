@@ -149,7 +149,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0da721fe</spirit:value>
+            <spirit:value>8c2cff0f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -168,7 +168,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>62f23db4</spirit:value>
+            <spirit:value>2d309777</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -715,6 +715,15 @@
         <spirit:name>src/trigger_controller_axis_data_fifo_0_2/trigger_controller_axis_data_fifo_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trigger_controller_axis_data_fifo_0_3/trigger_controller_axis_data_fifo_0_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -727,12 +736,8 @@
       <spirit:file>
         <spirit:name>src/trigger_controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_82903436</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_95f95567</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -771,6 +776,15 @@
         <spirit:name>src/trigger_controller_axis_data_fifo_0_2/trigger_controller_axis_data_fifo_0_2.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
+        <spirit:define>
+          <spirit:name>processing_order</spirit:name>
+          <spirit:value>early</spirit:value>
+        </spirit:define>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trigger_controller_axis_data_fifo_0_3/trigger_controller_axis_data_fifo_0_3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_axis_data_fifo_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -782,10 +796,6 @@
         <spirit:name>sim/trigger_controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -826,13 +836,13 @@
       <xilinx:displayName>trigger_controller_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-07-26T19:12:57Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-08-23T18:10:21Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@24a670d_ARCHIVE_LOCATION">c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@433e05c1_ARCHIVE_LOCATION">c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7958c0bf_ARCHIVE_LOCATION">c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@656ab5d5_ARCHIVE_LOCATION">c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ab252dd_ARCHIVE_LOCATION">c:/james/old_testing/RFSoC_Controller-master/trigger_controller_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6949f5d9_ARCHIVE_LOCATION">c:/james/current_repo/RFSoC_Controller/trigger_controller_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50eac3ff_ARCHIVE_LOCATION">c:/james/current_repo/RFSoC_Controller/trigger_controller_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@545395e8_ARCHIVE_LOCATION">c:/james/current_repo/RFSoC_Controller/trigger_controller_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c54e3_ARCHIVE_LOCATION">c:/james/current_repo/RFSoC_Controller/trigger_controller_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@131b6c5e_ARCHIVE_LOCATION">c:/james/current_repo/RFSoC_Controller/trigger_controller_ip</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.MICROBLAZE_CLK.FREQ_HZ" xilinx:valueSource="user"/>
@@ -842,7 +852,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bf7f9b7f"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b287e5a7"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4a31e46c"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d0f4c8ee"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="41f27b5a"/>
     </xilinx:packagingInfo>

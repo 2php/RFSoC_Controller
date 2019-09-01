@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1'
+HD_PWD='C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.runs/top_level_rfsoc_adc_data_captu_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Jul 26 12:19:34 2019
-// Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+// Date        : Fri Aug 23 11:14:49 2019
+// Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
 //               top_level_trigger_controller_0_0_ top_level_trigger_controller_0_0_sim_netlist.v
 // Design      : top_level_trigger_controller_0_0
@@ -420,10 +420,10 @@ module top_level_trigger_controller_0_0_trigger_controller
   wire trigger_c8;
   wire trigger_c9;
 
-  (* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}" *) 
+  (* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
-  top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 axis_data_fifo_0
+  top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 axis_data_fifo_0
        (.m_axis_aclk(rf_clk),
         .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tready(1'b1),
@@ -473,8 +473,8 @@ module top_level_trigger_controller_0_0_trigger_controller
         .trigger_c9(trigger_c9));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
-module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2
+(* CHECK_LICENSE_TYPE = "trigger_controller_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_1_top,Vivado 2019.1" *) 
+module top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3
    (s_axis_aresetn,
     s_axis_aclk,
     s_axis_tvalid,

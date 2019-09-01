@@ -1,8 +1,8 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Jul 26 12:19:34 2019
--- Host        : DESKTOP-6ILET8A running 64-bit major release  (build 9200)
+-- Date        : Fri Aug 23 11:14:50 2019
+-- Host        : MB241LABVIEW running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top top_level_trigger_controller_0_0 -prefix
 --               top_level_trigger_controller_0_0_ top_level_trigger_controller_0_0_sim_netlist.vhdl
 -- Design      : top_level_trigger_controller_0_0
@@ -6168,7 +6168,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 is
+entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 is
   port (
     s_axis_aresetn : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
@@ -6181,14 +6181,14 @@ entity top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 is
     m_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 : entity is "trigger_controller_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
-end top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2;
+  attribute X_CORE_INFO of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 : entity is "axis_data_fifo_v2_0_1_top,Vivado 2019.1";
+end top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3;
 
-architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2 is
+architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -6273,7 +6273,7 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
   signal axis_data_fifo_0_M_AXIS_TVALID : STD_LOGIC;
   signal gpio_buffer_0_m_axis_TREADY : STD_LOGIC;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "trigger_controller_axis_data_fifo_0_2,axis_data_fifo_v2_0_1_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : label is "trigger_controller_axis_data_fifo_0_3,axis_data_fifo_v2_0_1_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_0 : label is "yes";
   attribute X_CORE_INFO : string;
@@ -6292,7 +6292,7 @@ architecture STRUCTURE of top_level_trigger_controller_0_0_trigger_controller is
   attribute X_INTERFACE_INFO of gpio_in : signal is "xilinx.com:signal:data:1.0 DATA.GPIO_IN DATA";
   attribute X_INTERFACE_PARAMETER of gpio_in : signal is "XIL_INTERFACENAME DATA.GPIO_IN, LAYERED_METADATA undef";
 begin
-axis_data_fifo_0: entity work.top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_2
+axis_data_fifo_0: entity work.top_level_trigger_controller_0_0_trigger_controller_axis_data_fifo_0_3
      port map (
       m_axis_aclk => rf_clk,
       m_axis_tdata(15 downto 0) => axis_data_fifo_0_M_AXIS_TDATA(15 downto 0),
