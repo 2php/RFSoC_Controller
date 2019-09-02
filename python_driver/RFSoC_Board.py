@@ -728,7 +728,7 @@ class RFSoC_Board:
         
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
-            print("Error, bad acknowledgement recieved from board while sending check channe; command, ack error code was: " + str(ack_val) + "\n")
+            print("Error, bad acknowledgement recieved from board while sending check channel command, ack error code was: " + str(ack_val) + "\n")
             return 1
     
     
@@ -747,14 +747,19 @@ class RFSoC_Board:
     
     #returns 0 if available, 1 otherwise
     def check_adc(self):
+        
+        self.port.timeout = 5
+        
         #send the check channel command
         ack_val = self.write_bytes([RF_CHECK_ADC])
+        
+        self.port.timeout = 1
         
         #if we get a bad acknowledgement back
         if(ack_val != ACK_RESPONSE):
             
             if(ack_val != 0xFF):
-                print("Error, bad acknowledgement recieved from board while sending check channe; command, ack error code was: " + str(ack_val) + "\n")
+                print("Error, bad acknowledgement recieved from board while sending check adc command, ack error code was: " + str(ack_val) + "\n")
             self.adc_available = 0
             return 1
         

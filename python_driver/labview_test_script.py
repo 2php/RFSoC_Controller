@@ -25,5 +25,5 @@ os.system("python init_board.py COM4 && PAUSE")
 
 os.system("python add_channel.py 1 2_dc_square_wave.txt 204 0 1 5 816 1 1 0 locking_waveform.txt && PAUSE")
 os.system("python add_channel.py 2 sawtooth.txt 400 0 1 10 0 0 && PAUSE")
-os.system("python arm_board.py 100 1 0 && PAUSE")
+os.system("python arm_board.py 0 1 1 && PAUSE")
 os.system("python trigger_board.py 0 1 && PAUSE")

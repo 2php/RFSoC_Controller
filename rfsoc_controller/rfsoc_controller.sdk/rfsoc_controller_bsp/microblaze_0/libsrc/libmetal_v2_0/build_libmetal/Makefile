@@ -51,10 +51,10 @@ RM = C:/Xilinx/SDK/2019.1/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
+CMAKE_SOURCE_DIR = C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal
+CMAKE_BINARY_DIR = C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,9 +138,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

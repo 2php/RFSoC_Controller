@@ -1,4 +1,4 @@
-# Install script for directory: C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
+# Install script for directory: C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/cmake_install.cmake")
+  include("C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/lib/cmake_install.cmake")
 
 endif()
 
@@ -41,5 +41,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/james/fpga_projects/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/build_libmetal/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -64,7 +64,7 @@ if(board.check_adc() == 0):
     
     
 else:
-    print("ADC clock is not connected.")
+    print("ADC clock is not connected or an internal problem with the ADC tile has occured.")
     
 print("Board is armed, trigger using trigger_board.py")
 

@@ -1,21 +1,6 @@
-16:37:49 **** Auto Build of configuration Debug for project rfsoc_controller ****
+16:46:38 **** Incremental Build of configuration Debug for project rfsoc_controller ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: rfsoc_controller.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
-'Finished building target: rfsoc_controller.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  87818	   3504	 207998	 299320	  49138	rfsoc_controller.elf
-'Finished building: rfsoc_controller.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-16:37:50 Build Finished (took 1s.213ms)
+16:46:39 Build Finished (took 158ms)
 

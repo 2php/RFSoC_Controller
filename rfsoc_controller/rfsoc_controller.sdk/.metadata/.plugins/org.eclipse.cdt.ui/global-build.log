@@ -375,3 +375,365 @@ mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
   87818	   3504	 207998	 299320	  49138	rfsoc_controller.elf
 'Finished building: rfsoc_controller.elf.size'
 ' '
+16:42:30 **** Auto Build of project rfsoc_controller_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+CMake Error: The source directory "C:/james/current_repo/RFSoC_Controller/rfsoc_controller/rfsoc_controller.sdk/rfsoc_controller_bsp/microblaze_0/libsrc/libmetal_v2_0/src/libmetal" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+make[1]: *** [Makefile:9: libs] Error 2
+make[2]: *** [Makefile:209: cmake_check_build_system] Error 1
+make: *** [Makefile:30: microblaze_0/libsrc/libmetal_v2_0/src/make.libs] Error 2
+make[2]: Target 'install' not remade because of errors.
+"Running Make libs in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling rfdc"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+make: Target 'all' not remade because of errors.
+16:42:43 **** Clean-only build of configuration Debug for project rfsoc_controller ****
+make clean 
+rm -rf  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o  ./src/drivers/cmd_handler.d ./src/drivers/gpio.d ./src/drivers/rf.d ./src/drivers/uart.d  ./src/helloworld.d ./src/platform.d  rfsoc_controller.elf.size  rfsoc_controller.elf
+' '
+16:42:43 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:112:3: warning: implicit declaration of function 'cmd_flush_buffer_test'; did you mean 'rf_flush_buffer'? [-Wimplicit-function-declaration]
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+   rf_flush_buffer
+../src/drivers/cmd_handler.c: In function 'cmd_pulse_test':
+../src/drivers/cmd_handler.c:459:3: warning: implicit declaration of function 'rf_single_pulse_test'; did you mean 'rf_pulse_test'? [-Wimplicit-function-declaration]
+   rf_single_pulse_test();
+   ^~~~~~~~~~~~~~~~~~~~
+   rf_pulse_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:484:6: warning: conflicting types for 'cmd_flush_buffer_test'
+ void cmd_flush_buffer_test()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:112:3: note: previous implicit declaration of 'cmd_flush_buffer_test' was here
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building file: ../src/drivers/gpio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/gpio.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/gpio.d" -MT"src/drivers/gpio.o" -o "src/drivers/gpio.o" "../src/drivers/gpio.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/gpio.c:8:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/gpio.c: In function 'gpio_init':
+../src/drivers/gpio.c:17:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+'Finished building: ../src/drivers/gpio.c'
+' '
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building file: ../src/drivers/uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/uart.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/uart.d" -MT"src/drivers/uart.o" -o "src/drivers/uart.o" "../src/drivers/uart.c"
+../src/drivers/uart.c: In function 'debug_print':
+../src/drivers/uart.c:12:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print(buff);
+  ^~~~~
+../src/drivers/uart.c: In function 'uart_receive':
+../src/drivers/uart.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/drivers/uart.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87818	   3504	 207998	 299320	  49138	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:43:27 **** Auto Build of project rfsoc_controller_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/libmetal_v2_0/src"
+make -C microblaze_0/libsrc/libmetal_v2_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Scanning dependencies of target metal-static
+[  5%] Building C object lib/CMakeFiles/metal-static.dir/dma.c.obj
+[ 10%] Building C object lib/CMakeFiles/metal-static.dir/device.c.obj
+[ 15%] Building C object lib/CMakeFiles/metal-static.dir/init.c.obj
+[ 21%] Building C object lib/CMakeFiles/metal-static.dir/io.c.obj
+[ 26%] Building C object lib/CMakeFiles/metal-static.dir/irq.c.obj
+[ 31%] Building C object lib/CMakeFiles/metal-static.dir/log.c.obj
+[ 36%] Building C object lib/CMakeFiles/metal-static.dir/shmem.c.obj
+[ 42%] Building C object lib/CMakeFiles/metal-static.dir/shmem-provider.c.obj
+[ 47%] Building C object lib/CMakeFiles/metal-static.dir/softirq.c.obj
+[ 52%] Building C object lib/CMakeFiles/metal-static.dir/version.c.obj
+[ 57%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/condition.c.obj
+[ 63%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/device.c.obj
+[ 68%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/init.c.obj
+[ 73%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/io.c.obj
+[ 78%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/irq.c.obj
+[ 84%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/time.c.obj
+[ 89%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj
+[ 94%] Building C object lib/CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj
+[100%] Linking C static library libmetal.a
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-ar.exe cq libmetal.a  CMakeFiles/metal-static.dir/dma.c.obj CMakeFiles/metal-static.dir/device.c.obj CMakeFiles/metal-static.dir/init.c.obj CMakeFiles/metal-static.dir/io.c.obj CMakeFiles/metal-static.dir/irq.c.obj CMakeFiles/metal-static.dir/log.c.obj CMakeFiles/metal-static.dir/shmem.c.obj CMakeFiles/metal-static.dir/shmem-provider.c.obj CMakeFiles/metal-static.dir/softirq.c.obj CMakeFiles/metal-static.dir/version.c.obj CMakeFiles/metal-static.dir/system/generic/condition.c.obj CMakeFiles/metal-static.dir/system/generic/device.c.obj CMakeFiles/metal-static.dir/system/generic/init.c.obj CMakeFiles/metal-static.dir/system/generic/io.c.obj CMakeFiles/metal-static.dir/system/generic/irq.c.obj CMakeFiles/metal-static.dir/system/generic/time.c.obj CMakeFiles/metal-static.dir/system/generic/microblaze_generic/sys.c.obj CMakeFiles/metal-static.dir/system/generic/xlnx_common/irq.c.obj
+C:/Xilinx/SDK/2019.1/gnu/microblaze/nt/bin/mb-ranlib.exe libmetal.a
+[100%] Built target metal-static
+Install the project...
+-- Install configuration: "Debug"
+-- Installing: ../../../include/metal/alloc.h
+-- Installing: ../../../include/metal/assert.h
+-- Installing: ../../../include/metal/atomic.h
+-- Installing: ../../../include/metal/cache.h
+-- Installing: ../../../include/metal/compiler.h
+-- Installing: ../../../include/metal/condition.h
+-- Installing: ../../../include/metal/config.h
+-- Installing: ../../../include/metal/cpu.h
+-- Installing: ../../../include/metal/device.h
+-- Installing: ../../../include/metal/dma.h
+-- Installing: ../../../include/metal/io.h
+-- Installing: ../../../include/metal/irq.h
+-- Installing: ../../../include/metal/irq_controller.h
+-- Installing: ../../../include/metal/list.h
+-- Installing: ../../../include/metal/log.h
+-- Installing: ../../../include/metal/mutex.h
+-- Installing: ../../../include/metal/scatterlist.h
+-- Installing: ../../../include/metal/shmem.h
+-- Installing: ../../../include/metal/shmem-provider.h
+-- Installing: ../../../include/metal/sleep.h
+-- Installing: ../../../include/metal/softirq.h
+-- Installing: ../../../include/metal/spinlock.h
+-- Installing: ../../../include/metal/sys.h
+-- Installing: ../../../include/metal/time.h
+-- Installing: ../../../include/metal/utilities.h
+-- Installing: ../../../include/metal/version.h
+-- Installing: ../../../include/metal/compiler/gcc/atomic.h
+-- Installing: ../../../include/metal/compiler/gcc/compiler.h
+-- Installing: ../../../include/metal/compiler/iar/compiler.h
+-- Installing: ../../../include/metal/processor/microblaze/atomic.h
+-- Installing: ../../../include/metal/processor/microblaze/cpu.h
+-- Installing: ../../../include/metal/system/generic/alloc.h
+-- Installing: ../../../include/metal/system/generic/assert.h
+-- Installing: ../../../include/metal/system/generic/cache.h
+-- Installing: ../../../include/metal/system/generic/condition.h
+-- Installing: ../../../include/metal/system/generic/io.h
+-- Installing: ../../../include/metal/system/generic/irq.h
+-- Installing: ../../../include/metal/system/generic/log.h
+-- Installing: ../../../include/metal/system/generic/mutex.h
+-- Installing: ../../../include/metal/system/generic/sleep.h
+-- Installing: ../../../include/metal/system/generic/sys.h
+-- Installing: ../../../include/metal/system/generic/microblaze_generic/sys.h
+-- Installing: ../../../include/metal/system/generic/xlnx_common/sys.h
+-- Installing: ../../../lib/libmetal.a
+"Running Make libs in microblaze_0/libsrc/rfdc_v6_0/src"
+make -C microblaze_0/libsrc/rfdc_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling rfdc"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+16:43:38 **** Clean-only build of configuration Debug for project rfsoc_controller ****
+make clean 
+rm -rf  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o  ./src/drivers/cmd_handler.d ./src/drivers/gpio.d ./src/drivers/rf.d ./src/drivers/uart.d  ./src/helloworld.d ./src/platform.d  rfsoc_controller.elf.size  rfsoc_controller.elf
+' '
+16:43:38 **** Auto Build of configuration Debug for project rfsoc_controller ****
+make all 
+'Building file: ../src/drivers/cmd_handler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/cmd_handler.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/cmd_handler.d" -MT"src/drivers/cmd_handler.o" -o "src/drivers/cmd_handler.o" "../src/drivers/cmd_handler.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/cmd_handler.c:10:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/cmd_handler.c: In function 'handle_cmd':
+../src/drivers/cmd_handler.c:112:3: warning: implicit declaration of function 'cmd_flush_buffer_test'; did you mean 'rf_flush_buffer'? [-Wimplicit-function-declaration]
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+   rf_flush_buffer
+../src/drivers/cmd_handler.c: In function 'cmd_pulse_test':
+../src/drivers/cmd_handler.c:459:3: warning: implicit declaration of function 'rf_single_pulse_test'; did you mean 'rf_pulse_test'? [-Wimplicit-function-declaration]
+   rf_single_pulse_test();
+   ^~~~~~~~~~~~~~~~~~~~
+   rf_pulse_test
+../src/drivers/cmd_handler.c: At top level:
+../src/drivers/cmd_handler.c:484:6: warning: conflicting types for 'cmd_flush_buffer_test'
+ void cmd_flush_buffer_test()
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/drivers/cmd_handler.c:112:3: note: previous implicit declaration of 'cmd_flush_buffer_test' was here
+   cmd_flush_buffer_test();
+   ^~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/drivers/cmd_handler.c'
+' '
+'Building file: ../src/drivers/gpio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/gpio.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/gpio.d" -MT"src/drivers/gpio.o" -o "src/drivers/gpio.o" "../src/drivers/gpio.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/gpio.c:8:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/drivers/gpio.c: In function 'gpio_init':
+../src/drivers/gpio.c:17:3: warning: implicit declaration of function 'debug_print' [-Wimplicit-function-declaration]
+   debug_print("GPIO init success!");
+   ^~~~~~~~~~~
+'Finished building: ../src/drivers/gpio.c'
+' '
+'Building file: ../src/drivers/rf.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/rf.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/rf.d" -MT"src/drivers/rf.o" -o "src/drivers/rf.o" "../src/drivers/rf.c"
+In file included from ../src/drivers/gpio.h:12,
+                 from ../src/drivers/rf.c:9:
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:120:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../rfsoc_controller_bsp/microblaze_0/include/xbasic_types.h:121:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/drivers/rf.c'
+' '
+'Building file: ../src/drivers/uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drivers/uart.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drivers/uart.d" -MT"src/drivers/uart.o" -o "src/drivers/uart.o" "../src/drivers/uart.c"
+../src/drivers/uart.c: In function 'debug_print':
+../src/drivers/uart.c:12:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+  print(buff);
+  ^~~~~
+../src/drivers/uart.c: In function 'uart_receive':
+../src/drivers/uart.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/drivers/uart.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -D __BAREMETAL__ -I../../rfsoc_controller_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rfsoc_controller.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rfsoc_controller_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rfsoc_controller.elf"  ./src/drivers/cmd_handler.o ./src/drivers/gpio.o ./src/drivers/rf.o ./src/drivers/uart.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+'Finished building target: rfsoc_controller.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rfsoc_controller.elf  |tee "rfsoc_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87802	   3504	 207998	 299304	  49128	rfsoc_controller.elf
+'Finished building: rfsoc_controller.elf.size'
+' '
+16:44:46 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
+16:46:38 **** Incremental Build of configuration Debug for project rfsoc_controller ****
+make all 
+make: Nothing to be done for 'all'.
