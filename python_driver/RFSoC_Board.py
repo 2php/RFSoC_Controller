@@ -169,11 +169,16 @@ class Channel:
         return self.experiment_wf.zero_delay_bytestream
     
     def get_repeat_clock_cycle_bytes(self):
-        return int_to_bytestream((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)), 4)
+        #Subtract 1 to accomidate prewaveform
+        return int_to_bytestream(((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 1), 4)
+    
+    #Returns the exact time the playback state machine will be running the buffer in nanoseconds
+    def get_total_period(self):
+       return ((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 1) * 4
         
     def short_waveform_check(self):
        #if we have a waveform that is 4ns long and has a single repeat cycle
-       if(self.experiment_wf.period == 4 and self. repeat_cycles == 1):
+       if(self.experiment_wf.period == 4 and self.repeat_cycles == 1):
            #figure out how much time at the end must be set to 0
            samples_to_kill = 16 - self.experiment_wf.delay%16 #in number of samples
            for i in range(0, samples_to_kill):

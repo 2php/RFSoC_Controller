@@ -54,6 +54,7 @@ def plot_waveforms(channels):
              post_delay = round(w_ex.post_delay * 4) # in nanoseconds
              #get the period
              period = w_ex.period # in nanoseconds
+             total_period = c.get_total_period()
              reps = c.repeat_cycles
              #construct the time array
              t = []
@@ -71,9 +72,9 @@ def plot_waveforms(channels):
                      t_wave = (t_now - pre_delay) % 4
                      wave.append((pre_waveform[round(t_wave * 4)]) * scale)
                  #if we're in the waveform
-                 elif(t_now < (pre_delay + 4 + (period * reps))):
+                 elif(t_now < (pre_delay + 4 + total_period)):
                      #figure our where in the waveform we are
-                     t_wave = (t_now - pre_delay) % period
+                     t_wave = (t_now - pre_delay - 4) % period
                      wave.append((w_ex.wordstream[round(t_wave * 4)]) * scale)
                  else:
                      wave.append(0)
