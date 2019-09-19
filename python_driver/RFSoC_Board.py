@@ -148,19 +148,54 @@ class Channel:
     repeat_clock_cycles = 0
     locking_wf = None
     experiment_wf = None
+    pre_waveform_fix = 0
+    #If set to 0, waveform will be duplicated as many times as neccissary instead of using repeat cycles counter
+    use_loopback = 0
 
-    def __init__(self, n, rc, lf, ef):
+    def __init__(self, n, rc, lf, ef, pff, ul):
         self.number = n
         self.repeat_cycles = rc
         self.locking_wf = lf
         self.experiment_wf = ef
+        self.pre_waveform_fix = pff
+        self.use_loopback = ul
+        if(pff == 1 and ul == 0):
+            print("Warning, using the prewaveform fix and turning off the loopback to create one large bitstream may cause unexpected problems")
+        
         self.short_waveform_check()
+        self.loopback_check()
+        
+    def loopback_check(self):
+        if(self.use_loopback == 0):
+            #create a new wordstream
+            new_ws = []
+            #for every repeat cycle
+            for i in range(self.repeat_cycles):
+                #append the wordstream with our current wordstream
+                new_ws += self.experiment_wf.wordstream
+                
+                
+            #if the wordstream is too long
+            if(len(new_ws) > (MAX_BYTESTREAM_SIZE / 2)):
+                print("Error, wordstream was too long! Wordstream length: " + str(len(new_ws)) + ", Max len: " + str((MAX_BYTESTREAM_SIZE / 2)))
+                return
+            #Figure out how many bytes need to be set to 0
+            time_to_0 = self.experiment_wf.delay%16  #in number of clock cycles
+            
+            #Zero out those samples
+            for i in range(time_to_0):
+                new_ws[len(new_ws) - i - 1] = 0x0000
+                
+            #update the worstream and bytestream
+            self.experiment_wf.wordstream = new_ws
+            self.experiment_wf.bytestream = self.gen_byte_stream_from_wordstream(new_ws)
         
     def get_byte_stream(self):
         return self.experiment_wf.bytestream
     
     def get_word_stream(self):
         return self.experiment_wf.wordstream
+            
     
     def get_pre_waveform_byte_stream(self):
         return self.experiment_wf.pre_waveform_bytestream
@@ -170,11 +205,19 @@ class Channel:
     
     def get_repeat_clock_cycle_bytes(self):
         #Subtract 1 to accomidate prewaveform
-        return int_to_bytestream(((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 1), 4)
+        return int_to_bytestream((round(self.get_total_period() * 0.25)), 4)
     
     #Returns the exact time the playback state machine will be running the buffer in nanoseconds
     def get_total_period(self):
-       return ((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 1) * 4
+        #If we're using loopback then this calculation works
+        if(self.use_loopback == 1):
+            if(self.pre_waveform_fix == 1):
+                return ((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 1) * 4
+            else:
+                return ((self.repeat_cycles * (len(self.experiment_wf.wordstream)/16)) - 0) * 4
+        #Otherwise its just the length of the wordstream    
+        else:
+            return (len(self.experiment_wf.wordstream)/16) * 4
         
     def short_waveform_check(self):
        #if we have a waveform that is 4ns long and has a single repeat cycle
@@ -185,6 +228,18 @@ class Channel:
                self.experiment_wf.wordstream[15-i] = 0x0000
                self.experiment_wf.bytestream[31-(2*i)] = 0x00
                self.experiment_wf.bytestream[31-(2*i) - 1] = 0x00
+               
+    def gen_byte_stream_from_wordstream(self, wordstream):
+        bytestream = []
+        #loop throuhg all the words
+        for i in range (0, len(wordstream)):
+            #get the bytes
+            bytes = int_to_bytestream(wordstream[i], 2)
+            #append the two bytes to the bytestream
+            bytestream.append(bytes[0])
+            bytestream.append(bytes[1])
+            
+        return bytestream
            
            
     
@@ -195,6 +250,7 @@ class WaveFile:
     wordstream = []
     bytestream = []
     period = 0 #in nanoseconds
+    #delay before experiment
     delay = 0 #in number of DAC samples (16-bit samples), converted from nanoseconds
     amp_factor = 1
     pre_waveform_wordstream = []
@@ -204,6 +260,7 @@ class WaveFile:
     locking_shift = 0
     post_delay = 0
     post_delay_bytestream = []
+    
     
         
     def __init__(self, fn, per, d, pd, af, il, lshift):
@@ -279,6 +336,7 @@ class WaveFile:
         #generate the bytestream
         self.bytestream = self.gen_byte_stream_from_wordstream(self.wordstream)
         
+        self.pre_waveform_wordstream.reverse()
         #generate the prewaveform bytestream
         self.pre_waveform_bytestream = self.gen_byte_stream_from_wordstream(self.pre_waveform_wordstream)
         

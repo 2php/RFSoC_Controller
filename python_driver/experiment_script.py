@@ -27,12 +27,14 @@ try:
     #add a channel and set the period to 2 over the main frequency
     #wf0 = rf.WaveFile("sawtooth.txt", 50*4, 0, 0, 0.05, 0, 0)
     #wf1 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 200, 0.75, 0, 0)
-    wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0, 0, 0.75, 0, 0)
+    wf2 = rf.WaveFile("intensity.txt", 50*4, 6.25, 10000, 1, 0, 0)
+    wf3 = rf.WaveFile("intensity.txt", 50*4, 6.25, 10000, 1, 0, 0)
     #wf3 = rf.WaveFile("locking_waveform.txt", 4, 0, 0, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 50*4, 0.75, 1, 0, 0)
     #wf2 = rf.WaveFile("2_dc_square_wave.txt", 4*rf.DAC_WORD_PERIOD, 0, 1)
     #wf4 = rf.WaveFile("2_dc_square_wave.txt", 50*rf.DAC_WORD_PERIOD, 0*4, 1)
-    c0 = rf.Channel(4, 5, wf_locking, wf2)
+    c0 = rf.Channel(0, 2, wf_dummy_locking, wf2, 0, 0)
+    c1 = rf.Channel(6, 1, wf_dummy_locking, wf3, 0, 1)
     #c1 = rf.Channel(1, 5, wf_locking, wf2)
     #c2 = rf.Channel(4, 10, wf_dummy_locking, wf2)
     #c2 = rf.Channel(2, 500, 200*50, wf_locking, wf2, 0)
@@ -45,7 +47,7 @@ try:
     
     #upload the waveform
     board.add_channel(c0)
-    #board.add_channel(c1)
+    board.add_channel(c1)
     #board.add_channel(c2)
     #board.add_channel(c4)
     
@@ -58,7 +60,7 @@ try:
     board.set_loopback(rf.YES)
     
     #set the adc to collect 800 samples
-    #board.set_adc_cycles(100)
+    board.set_adc_cycles(0)
     
     #adc_shift = 4
     #board.set_adc_shift(adc_shift)

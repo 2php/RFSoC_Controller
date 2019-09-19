@@ -21,6 +21,8 @@ import RFSoC_Board as rf
 #9 locking waveform amplitude factor, must be between 0 and 1
 #10 locking phase in nanoseconds, can be a float but will be rounded to nearest quarter nanosecond
 #11 is the locking file name
+#12 is pre_waveform_fix
+#13 is use one long waveform?
 
 if(len(sys.argv) < 9):
     print("Error, not enough arguments, please see top of script for list of arguments.")
@@ -97,11 +99,24 @@ if(board == None):
     print("Error, unable to load board.")
     sys.exit()
     
+use_loopback = 1
+pre_waveform_fix = 0
+try:
+    use_loopback = int(sys.argv[13])
+    pre_waveform_fix = int(sys.argv[12])
+except:
+    print("No arguments provided for use_loopback (one long waveform) and pre_waveform fix")
+    
+if(use_loopback == 1):
+    use_loopback = 0
+else:
+    use_loopback = 1
+    
 #If the board is valid, add the channelw
 waveform_file = rf.WaveFile(waveform_filename, waveform_period, zero_delay, post_delay, amp_mul_factor, 0, 0)
 locking_file = rf.WaveFile(locking_filename, 4, 0, 0, locking_amp_factor, 1, round(locking_phase * 4)) 
 
-c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file)
+c = rf.Channel(channel_number, num_cycles, locking_file, waveform_file, pre_waveform_fix, use_loopback)
 
 
 if(board.add_channel(c)):
@@ -119,6 +134,8 @@ else:
           " (ns)\nDelay after experiment: " + str(post_delay) +
           " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
           "\nLocking file: " + locking_filename + 
-          "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)")
+          "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)" + 
+          "\nPre-waveform fix (subtract 4ns from total period): " + ("YES" if pre_waveform_fix == 1 else "NO") + 
+          "\nOne long waveform: " + ("YES" if use_loopback == 0 else "NO") + "\n")
 
 
