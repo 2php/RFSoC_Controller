@@ -1,1 +1,1 @@
-RFSoC Controller for the Marandi Group. Journal paper and doccumentation will be uploaded by the end of August.
+RFSoC Controller for the Marandi Group. Please see the readme and report file for more information.
